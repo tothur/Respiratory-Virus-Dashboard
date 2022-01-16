@@ -1,0 +1,25 @@
+Példátlan megfigyeléseket végzett a távoli Kuiper-övben a New Horizons űrszonda
+
+Először sikerült egy űrszondának olyan távolról megfigyelni csillagokat, hogy azok más pozícióban látszanak az égbolton, mint a Földről nézve. A [múlt héten bejelentett](http://pluto.jhuapl.edu/News-Center/News-Article.php?page=20200611) példátlan vizsgálatokat az amerikai űrügynökség, a NASA New Horizons űrszondája végezte, amely 2015-ben [felderítette](https://sciencemeetup.444.hu/2015/07/14/megerkezett-a-plutohoz-a-new-horizons) a Plútót és holdjait, majd pedig 2019 januárjában a csupán 5 évvel korábban felfedezett Arrokoth ősi bolygókezdeményt [vette közelről szemügyre](https://qubit.hu/2019/02/26/bravurral-er-fel-a-foto-amelyet-a-legtavolabbi-vizsgalt-egitestrol-keszitettek-hat-meg-ami-kiderul-belole).
+
+A 2006-ban indított szonda a Naprendszer Neptunuszon túli, Kuiper-övnek nevezett, jeges objektumokat tömörítő [zónájában halad](https://qubit.hu/2018/12/31/soha-olyan-tavoli-egitestet-nem-vizsgaltunk-meg-urszondaval-mint-az-ultima-thule), jelenleg több mint 7.1 milliárd kilométerre a Naptól, amely a Nap-Föld átlagos távolságának 47.5-szerese. Ez különleges perspektívát a kutatók számára a szonda csillagközi tér felé tartó utazása során.
+
+Április 22-23 között az űrszonda LORRI teleszkópos kamerája két, Naphoz közeli csillagot figyelt meg. Az egyik ezek közül a hozzánk legközelebbi csillag, a [Proxima Centauri](https://en.wikipedia.org/wiki/Proxima_Centauri), a másik pedig a Naptól 7.9 fényévre található [Wolf 359](https://en.wikipedia.org/wiki/Wolf_359) volt. Utóbbi popkultúrális jelentőséggel is bír a Star Treknek [köszönhetően](https://en.wikipedia.org/wiki/The_Best_of_Both_Worlds_(Star_Trek:_The_Next_Generation)). 
+
+Ugyanebben az időpontban az ausztráliai Siding Springben, valamint az arizoniai Mount Lemmon hegyen található távcsövek segítségével John Kielkopf csillagász és Karen Collins asztrofizikus megörökítette a Földről a Proxima Centaurit és a Wolf 359 csillagot. 
+
+"Kimondhatjuk, hogy a New Horizons egy idegen égboltot figyel meg, ellentétben azzal, amit a Földről látunk. Ez pedig lehetővé tett számunkra olyan megfigyeléseket, amelyeket senki korábban nem végzett - megfigyelni a legközelebbi csillagokat, ahogy azok más pozícióban látszanak, mint a Földről."
+
+- mondta el Alan Stern, a New Horizons küldetésének vezetője.
+
+A szakemberek által alkalmazott "látószög elhajlás" (parallax) [módszer](https://en.wikipedia.org/wiki/Stellar_parallax), amikor a megfigyelt csillag a háttérhez képest különöző helyről nézve kissé elmozdul, bevett dolog a csillagászatban, segítségével trigonometriás módszerrel meg lehet állapítani a csillagok Földtől, vagy Naprendszerünktől mért távolságát. A Föld Nap-körüli pályáján különböző pozíciókból végzett megfigyelések viszont csak parányi eltéréseket okoznak csak a csillagok pozíciójában. Ezek szabad szemmel nem kivehetők és csak precíz műszerek képesek őket kimutatni, illetve belőle hasznos adatokat kinyerni - azt is földi megfigyelések esetén leginkább csak 300 [fényév távolságig](https://en.wikipedia.org/wiki/Stellar_parallax). Ezen ugyanakkor olyan új generációs űrteleszkópok, mint a [Gaia](https://en.wikipedia.org/wiki/Gaia_(spacecraft)) rengeteget tudtak javítani, értékelhető precízitást adva közel 30 ezer fényév távolságig - nagyjából ennyire messze van a [galaxisunk középpontja](https://en.wikipedia.org/wiki/Galactic_Center) Naprendszerünktől. 
+
+Ha a New Horizons által készített felvételeket ugyan azokról a csillagokról összevetjük az ugyanakkor végzett földi megfigyelésekkel, a látszólagos helyzetük eltérése rögtön egyértelmű. A háttérben lévő csillagok azért tűnnek mozdulatlannak, mert sokkal távolabb vannak Naprendszerünktől, mint a Proxima Centauri, vagy a Wolf 359 - előbbi esetén a képen kivehető második legközelebbi csillag a Proxima Centaurihoz képest 120x-szor messzebb található. A New Horizons felvételén kissé eltorzult körként megjelenő csillagok a szonda teleszkópos kamerájának működésének melléktermékei, mivel a kamera a halvány Kuiper-övbeli objektumok felszínének felderítésére lett optimalizálva.
+
+"A New Horizons több mint 7.1 milliárd kilométerről végzett vizsgálatai a legnagyobb ilyen parallax mérést jelentik a csillagászat történetében."
+
+- értékelte a megfigyeléseket az azokat koordináló Tod Lauer, aki a New Horizons tudományos csapatának csillagászati vizsgálatokkal foglalkozó résztvevője.
+
+További különlegesség, hogy a rekorddöntő sztereo-képek elkészítésében Brian May, a Queen gitárosa, asztrofizikus is részt vett - aki már többször kollaborált a New Horizonson dolgozó kutatócsoporttal.
+
+A New Horizons által készített felvételek utat nyitnak egy látszólag sci-fibe tartozó lehetőség előtt is - mert a technológia felhasználható csillagközi navigációra is, a szonda tejútrendszeren belüli pontos pozíciójának feltárásával. A New Horizons esetén ezt a NASA rádióteleszkóprendszere, a Deep Space Network rádiós követése jelenleg pontosabban el tudja végezni, de a jövőben a Naptól távolabb merészkedő szondák számára a most kipróbált módszer egy új navigációs alternatívát kínál.

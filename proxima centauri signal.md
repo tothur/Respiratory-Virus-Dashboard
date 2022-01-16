@@ -1,0 +1,25 @@
+# Embargó Hétfő 17:00 - Idegen civilizáció jelei helyett földi zajt fogtak, de erőfeszítésük nem volt hiába való
+
+## Egy ausztráliai rádióteleszkóp 2019-ben olyan jelet észlelt a Naprendszerünkhöz legközelebbi csillag irányából, amit akár egy másik technikai civilizáció is kibocsáthatott volna. Az eset most közzétett részletes elemzése a jelet földi zajként azonosítja és fontos javaslatokat fogalmaz meg jövőbeli kutatásokhoz.
+
+Nem földönkívüli civilizációtól érkező jeleket, hanem egy földi zajforrást észleltek kutatók 2019 tavaszán, a Földhöz legközelebbi csillag, a [Proxima Centauri](https://en.wikipedia.org/wiki/Proxima_Centauri) egy ausztráliai rádióteleszkóppal folytatott vizsgálata során.
+
+A jel [észlelését](https://www.nature.com/articles/s41550-021-01479-w) és [elemzését](https://www.nature.com/articles/s41550-021-01508-8) két különálló, ma délután a Nature Astronomy folyóiratban megjelenő tanulmány mutatja be. Ezek felhívják a figyelmet a földönkívüli intelligens élet keresése jelentette kihívásra és hasznos tapasztalatokkal szolgálnak a területtel foglalkozó kutatóknak.
+
+Az Ausztrália Új-Dél-Wales szövetségi államában található Parkes rádióteleszkóp. Forrás: CSIRO/A. Cherney
+
+A [64 méteres Parkes rádióteleszkóp](https://en.wikipedia.org/wiki/Parkes_Observatory) alacsony frekvenciájú, szélessávú vevőjével végzett megfigyelés alapvető célja nem idegen civilizációk detektálása, hanem a Proxima Centauri csillag viselkedésének, konkrétabban [csillagkitöréseinek vizsgálata](https://arxiv.org/abs/1804.02001) volt. A 2019 április 29-e és május 4-e közt gyűjtött adatokat azonban a három évvel korábban indult, földönkívüli civilizációk rádió- és lézerkommunikációs jeleit kereső, [Breakthrough Listen kezdeményezés](https://en.wikipedia.org/wiki/Breakthrough_Listen) kutatói is átvizsgálták.
+
+Mindenki meglepetésére a keresőalgoritmus fel is dobott egy technikai civilizáció által sugárzottra emlékeztető, látszólag a 4,2 fényévre lévő Proxima Centauri irányából érkező jelet. Ez a BLC1 névre keresztelt, 982 MHz-es, keskenysávú, 5 órán át rögzített rádiójel tulajdonságai miatt annyira izgalmasnak bizonyult, hogy miután az algoritmus rátalált, a kutatók nagyon részletes elemzésnek vetették alá. Ennek jelentőségét mutatja, hogy ilyenre először került sor a Breakthrough Listen program során.
+
+A jel egy időben egyenletesen változó, úgynevezett [sodródás jelenséget](https://arxiv.org/pdf/1910.01148.pdf) is mutatott, ami még érdekesebbé tette. Ilyesmi akkor történik, amikor a jel kiindulási forrása a vevőhöz képest egy forgásban lévő rádióforrás. Bár ezt elektronikus jelgenerátorok is eredményezhetik, a jelenség hasonló ahhoz, amit egy távoli égitestről származó jel esetén várnánk.
+
+A kutatók ezután elsőként ellenőrizték a teleszkóp és adatrögzítők működését, majd pedig elkezdtek utána járni, hogy a megfigyelést földi, műholdaktól vagy űrszondáktól származó zaj okozhatta-e. Emellett, mivel a tudományban a mérések és eredmények megismételhetősége kulcsfontosságú követelmény, a csillagászatok egy 2020 novemberi és egy 2021 április végétől május elejéig tartó ablakban ismét a Proxima Centauri felé fordították a teleszkópot. 
+
+A megismételt megfigyelések során azonban már nem észleletek hasonlóan érdekes jelet. Azt viszont időközben kiderítették, hogy a BLC1 szinte teljesen egybevágott, más, a teleszkóp által a Proxima Centauri, valamint kulcsfontosságúan, más célpontok megfigyelése közben talált, egyértelműen földi zajforrásokkal. A hosszú elemezgetés után világos lett, hogy a BLC1 jel egy időben változó földi zajforrás, aminek sugárzása pont egybeesett a 2019-es teleszkópos megfigyelésekkel.
+
+A BLC1 kiindulása az elemzés szerint egy állandó frekvenciájú, 2 MHz-es kristályoszcillátor lehetett. Az ebből származó jel a földi rádióforrás elektronikai berendezéseiben ezután úgynevezett [intermodulációs torzításon](https://en.wikipedia.org/wiki/Intermodulation) ment keresztül, amely a várthoz képest eltérő frekvenciájú, nem harmónikus összetevőket is hozzáadott, létrehozva így a 982 MHz-es frekvenciájú, a Parkes teleszkóp által észlelt jelet.Az adó helyzetét és így az interferencia forrását nem sikerült azonosítani, de a szakembereknek kizárólag az volt a célja, hogy megerősítsék vagy kizárják annak földi eredetét.
+
+A kutatók tapasztalataik alapján egy teljesen új ellenőrző protokollt javasolnak az ilyen, technikai civilizációk által kibocsátottra hajazó jelek ellenőrzéséhez. Ezek együttes célja, hogy a lehető legjobban ki lehessen zárni a nem a megfigyelt célponttól érkező információkat és zajforrásokat, melynek részét képezik további, megerősítő mérések. A kutatók emellett javaslatot tesznek arra nézve, hogy lehetőleg a jövőbeli próbálkozások több, egymástól távoli teleszkópok bevonásával történjenek, a helyi zajforrások kiszűrése érdekében.
+
+Bár a Breakthrough Listen által észlelt első érdekesnek tűnő jel története kudarcként is felfogható, nem véletlenül foglalkozik vele két tanulmány erejéig a Nature Astronomy folyóirat. Az ugyanis fontos tanulságokkal szolgál jövőbeli kutatások számára és jobb kereső algoritmusok, valamint protokollok kifejlesztéséhez vezetett.

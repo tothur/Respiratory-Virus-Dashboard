@@ -1,0 +1,41 @@
+# Kezdjük megérteni miért a madarak a ma élő egyetlen dinoszauruszok
+
+## A dinoszauruszok közül egyedül csak a madarak élték túl a Kréta-végi kihalást. Egy új kutatás szerint ennek átalakult agyukhoz és jobb látásukhoz lehet köze.
+
+A 66 millió évvel ezelőtti [nagy kihalás](https://qubit.hu/2020/01/24/a-foldbe-csapodo-kisbolygo-vegzett-a-dinoszauruszokkal-66-millio-evvel-ezelott) elsöpörte bolygónkról a fajok háromnegyedét, köztük a madarak kivételével minden dinoszauruszt. Évtizedek óta rejtély, hogy miért csak ez az egyetlen, a kréta időszak végén megjelent dinoszaurusz csoport vészelte át a kataklizmát.
+
+Egy nemrég, a Science Advances folyóiratban [megjelent kutatás](https://www.science.org/doi/10.1126/sciadv.abg7099) lényegesen közelebb visz a kérdés megválaszolásához egy újonnan feltárt, egy korai madárhoz tartozó koponya lelet segítségével. Christopher Torres, az austini texasi egyetem kutatója és kollégái a fosszília vizsgálata alapján újraírták, hogy mi különbözteti meg a mai madarakat legközelebbi rokonaiktól.
+
+Bár a kutatók által összerakott a kép új fosszíliákkal változhat és  bizonytalanságoktól terhelt, úgy tűnik, nem a kréta végi madarak kis testmérete volt a döntő faktor túlélésükben és nem is [csőrük szerkezete](https://qubit.hu/2020/11/26/68-millio-eves-madar-koponyaja-tarta-fel-a-csorfejlodes-titkait). Az új eredmények szerint a többi dinoszaurusztól a madarakat agyuk nagyobb mérete és az agy megváltozott szerkezete különbözteti meg, amely az állatok vizuális érzékelésére hathatott ki.
+
+Eszerint a madarak fejlettebb látásának döntő szerepe lehetett a túlélésben a Chicxulub-kisbolygó [becsapódása után](https://qubit.hu/2019/09/13/lefurtak-a-kraterbe-es-leirtak-a-foldi-elovilag-legsotetebb-napjanak-pontos-forgatokonyvet), amelynek közvetlen és időben később jelentkező hatásai a földtörténetben szinte példátlan kihívás elé állították az élővilágot.
+
+## A júrában alakultak ki az első madárszerű dinoszauruszok
+
+Annak megértéséhez, hogy miért lehettek ennyire kivételesek a modern madarak rokonaikhoz képest, először bele kell ásnunk magunkat a dinoszauruszok családfájába. A történet a késő triász időszakban kezdődik, a [Pangaea szuperkontinensen](https://en.wikipedia.org/wiki/Pangaea), nem sokkal az első dinoszauruszok megjelenése után.
+
+Közel 230 millió évvel ezelőtt két lábon járó, üreges csontokkal és végtagjaikon három ujjal rendelkező ragadozó dinoszauruszok alakultak ki, akik egy nagyon jelentős csoportnak, a **[theropodáknak](https://en.wikipedia.org/wiki/Theropoda)** az első képviselői voltak. Több tízmillió évvel később, már a Pangaea felbomlását követően, nagyobb agymérettel és keskenyebb lábakkal rendelkező theropodák, a **[coelurosauriák](https://en.wikipedia.org/wiki/Coelurosauria)** jelentek meg, akik közül került ki később a legismertebb dinoszaurusz, a Tyrannosaurus rex is.
+
+A coelurosauriák egyik ágából hamar létrejöttek a viszonylag kisebb termetű **[Maniraptora](https://en.wikipedia.org/wiki/Maniraptora)** dinoszauruszok, amelyek mellső végtagjai meghosszabbodtak, kialakult a mellcsontjuk és legtöbbjük testét tollak borították. Ezután eltelt egy-két millió év és a maniraptorák közt feltűntek a testükön már madártollakhoz hasonló tollazattal, még hosszabb mellső végtagokkal és kezekkel rendelkező **[Paraves](https://en.wikipedia.org/wiki/Paraves)** dinoszauruszok.
+
+Ez a társaság magában foglalja a raptorokat (Dromaeosauridae), így a dinoszauruszokról alkotott képünket [John Ostrom](https://en.wikipedia.org/wiki/John_Ostrom) paleontológusnak köszönhetően forradalmasító [Deinonychust](https://en.wikipedia.org/wiki/Deinonychus), melyről a Jurassic Park filmek [Velociraptorát](https://en.wikipedia.org/wiki/Velociraptor) mintázták. Másrészt minden madárszerű dinoszaurusz a Paraves alá kerül besorolásra, az **[Avialae](https://en.wikipedia.org/wiki/Avialae)** csoportba, amelynek első tagjai 155 millió éve, a késő júrában jelentek meg.
+
+Sok millió évnyi evolúciót előreugorva az Avialaen belül, megérkezünk a madarakhoz és legközelebbi rokonaikat felölelő ([Ornithurae](https://en.wikipedia.org/wiki/Ornithurae)) csoporthoz, ahova a Christopher Torres és munkatársai által vizsgált [Ichthyornis](https://en.wikipedia.org/wiki/Ichthyornis) is tartozott. A "modern" madarak (Aves) alatt egy úgynevezett "crown group"-ot [értünk](https://qubit.hu/2021/09/05/eszak-amerikabol-szarmaznak-a-kajmanok-deritette-ki-egy-magyar-szakember-altal-vezetett-kutatas), ami a mai madarakat, a kréta időszakban élt utolsó közös ősüket és a köztes fajokat öleli fel. A madarak két nagy csoportra oszthatók, a struccot, emut és rokonaikat tartalmazó Palaeognathae-ra és az összes többi, közel 10 ezer madárfajt felölelő Neognathae-ra.
+
+## Egy új fosszília segít feltárni a kréta végén élt madarak jellemzőit
+
+Torres és kollégái egy majdnem teljesen megőrződött, a késő kréta időszaki észak-amerikából származó Ichthyornis koponyát tanulmányoztak, annak feltárása érdekében, hogy mi választja el a madarakat legközelebbi ismert rokonaiktól. A 70 millió éves, fogakkal rendelkező korai madár koponyáját számítógépes tomográfiás (CT) eljárással, háromdimenzióban digitalizálták.
+
+Ezután részletesen vizsgálták a koponya szerkezetét és összehasonlították azt ismert Avialae dinoszauruszok (korai és modern madarak) alkatani jellegeivel. Ez lehetővé teszi az élőlények evolúciós rokonsági (filogenetikai) kapcsolatainak viszonylag pontos feltárását algoritmusok segítségével, genetikai információ hiányában is.
+
+A madarakkal ellentétben az Ichthyornisnak nem volt megnövekedett előagya és a látás egyik központjának, a középagy látótelepeinek formája is ősibb jellegű. Az állat agya így inkább a neves [Archaeopteryx](https://en.wikipedia.org/wiki/Archaeopteryx)-ére hasonlít, mint a modern madarakéra. Az Archaeopteryx is madárszerű dinoszaurusz volt, de rendszertani helyezete a Paravesen belül bizonytalan. Egyes kutatások szerint közelebb áll a raptorokhoz, mások szerint viszont az Avialae korai tagja.
+
+Érdekes azonban, hogy az Ichthyornis két olyan jelleggel is rendelkezik, amelyeket korábban csak a madarakra jellemzőnek gondoltak kutatók. Az egyik ilyen a kezdetleges, úgynevezett wulst régió megléte az állat előagyában, amely a vizuális információk feldolgozásában és a mozgás, így a repülés szabályozásában játszik szerepet. A másik a csőr formájára és változatosságára kiható szájpadtéjéki csontok szerkezetét érinti, ami nem csak a madarakhoz, hanem azon belül is a Neognathaekhoz hasonló a kutatók szerint. Ez persze rögtön felveti annak a lehetőségét, hogy a Palaeognathae madarak állcsont szerkezete, ami az egyik legfontosabb, eddig ősinek gondolt bélyegük, valójában egy modern (vissza)módosulás.
+
+A kutatók ezután a korábban említett evolúciós rokonsági vizsgálatot kiterjeszették az ismert adatok és becslések alapján a korai és modern madarak testtömegének és agyméretének időbeni változására. Ebből kiderült, hogy a legelső modern madarak 2,4-7 kilogram tömegűek lehettek, amely nem utal arra, hogy a kréta végi kihalást kifejezetten kis testtömegűk miatt élhették volna túl. Ezzel ellentétben azonban úgy tűnik, hogy közeli rokonaiknál testméret arányosan nagyobb agymérettel és módosult agyszerkezettel (pl. megnövekedett előagy) rendelkeztek, amely valószínűleg jobb látási képességgel ruházhatta fel ezeket az állatokat.
+
+Fontos hozzátenni, hogy a testtömeg és agyméret becslések az agy szerkezeti változásaival ellentétben lényegesen bizonytalanabbak, ahogy ezt maguk a kutatók is hangsúlyozzák tanulmányukban. Ennek alapvetően az az oka, hogy hiányos információkkal rendelkezünk a különböző madárszerű dinoszauruszok testméretére és agyméretére vonatkozóan, így az is torzíthatja az analízist, hogy melyik fajokat és mennyit vizsgálnak. Ezeken a problémákon igazán csak újabb, jól megmaradt fosszíliák felfedezése segíthet.
+
+Az élővilág történetének egyik legérdekesebb kérdése, hogy a miért pont a tollas theropoda dinoszaruruszok egy apró csoportja, a madarak élték túl a 66 millió évvel ezelőtti nagy kihalást. Torres és munkatársainak mostani eredményei fontos előrelépések ahhoz, hogy meg tudjuk ezt válaszolni, de minden bizonnyal nem az utolsó fordulatot jelentik a témában.
+
+*A tárgyalt dinoszaurusz csoportokra jellemző jellegek forrása David B. Weishampel és David E. Fastovsky "Dinosaurs: A Concise Natural History" tankönyve.*

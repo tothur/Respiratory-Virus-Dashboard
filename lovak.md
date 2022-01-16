@@ -1,0 +1,21 @@
+# Embargó Szerda 17:00 - A nyugat eurázsiai sztyeppéről származnak a modern háziasított lovak, egy magyar kutatók részvételével végzett kutatás szerint
+
+## A modern házi ló megjelenése forradalmasította a bronzkori népek életét. Most végre kiderült, honnan származnak ezek az állatok és az is, hogy milyen genetikai változások vezettek előnyös tulajdonságaik kialakulásához.
+
+A modern házi lovak a nyugat eurázsiai sztyeppén alakultak ki, a Volga és Don folyók régiójában, több mint négy ezer évvel ezelőtt, derül ki egy nemzetközi kutatócsoport által végzett genetikai vizsgálatból.
+
+A ma délután a Nature folyóiratban [megjelenő kutatás](https://www.nature.com/articles/s41586-021-04018-9) több mint 250, néhány ezer vagy tízezer éve, az Ibériai-félszigettől Közép-Ázsiáig élt ló genetikai állományának vizsgálatát mutatja be. A maradványokból kinyert ősi DNS minták összehasonlítása a [házi ló](https://en.wikipedia.org/wiki/Horse) (*Equus caballus*) populációk évezredek alatti genetikai és földrajzi elterjedtségük változásáról árulkodik.
+
+A lovak háziásítása igen jelentős hatással volt a bronzkori népekre, forradalmasítva a harcászatot és leküzdhetővé téve nagyobb távolságokat. Ennek ellenére eddig nem volt egyértelmű, hogy a modern házi lovak földrajzilag honnan származnak és genetikailag miként alakultak ki.
+
+Ludovic Orlando, a toulouse-i CAGT [archeogenetikai laboratórium](https://cagt.cnrs.fr/) vezetője és több mint száz kollégája, köztük nyolc magyar genetikus és régész összesen 273, ősi házi ló genom feltérképezését, elemzését és tágabb, bronzkori kontextusba illesztését végezte el. Ezek a minták az Ibériai-félszigetről, Anatóliából (mai Törökország), a nyugat-eurázsiai sztyeppéről (Ukrajna és Oroszország), valamint Közép-Ázsiából származnak.
+
+Az ősi genomokat az élőlények és populációk közti evolúciós kapcsolatot feltáró, úgynevezett filogenetikai módszerrel vizsgálták először a szakemberek. Ebből kiderült, hogy négy, jól elkülönülő ló populációval van dolguk, melyek eurázsia szerte eltérő időben és helyeken éltek. Ezek közül az utolsó, DOM2-nek elnevezett társaság foglalja magában a modern házi lovakat is.
+
+A genomikai adatok alapján a kutatók le tudták földrajzilag szűkíteni eredetüket - így egyértelművé vált, hogy a modern házi lovak elődei a nyugat-eurázsiai sztyeppéről, a Volga és Don folyók régiójának déli részéről származnak és közel 4200 éve jelentek meg. A szakemberek vizsgálataik során két olyan, lovagláshoz való alkalmazkodásra utaló genomi változást is azonosítottak a modern házi lovaknál, amely elősegíthette a nyugat-eurázsiai sztyeppéről való elterjedésüket.
+
+Az első ilyen módosulás a GSDMC gént érinti, aminek egy mobilis genetikai elem ([transzpozon](https://en.wikipedia.org/wiki/Transposable_element)) megváltoztatta szerkezetét, ezzel pontenciálisan növelve a lovak teherbíró képességét és kitartását. A második a ZFPM1 gént érintette, amely az állatok agytörzsében található úgynevezett szerotonergikus neuronok kialakulására van hatással az egyedfejlődés során. A kutatók szerint valószínű, hogy ez a lovak viselkedésére hatott ki, valószínűleg engedelmessebbé és stressztűrőbbé téve őket.
+
+A DOM2 populációhoz tartozó házi lovak elterjedésének ezután már semmi sem szabhatott gátat. Előbb a mai Törökország területére, a Kárpát-medence környékére és Közép-Ázsiába jutottak el, közel 4 ezer évvel ezelőtt, majd a következő pár száz évben Nyugat-Európába és Mongóliába is, hogy végül 3 ezer éve felváltsák az összes helyi populációt. A kezdeti elterjedésük még lovaglás útján történt, később azonban, a technológiai fejlődéssel már a [harci szekerek](https://en.wikipedia.org/wiki/Chariot) alkalmazása is megjelent, tovább növelve a kedvezőbb tulajdonságokkal rendelkező lovak népszerűségét.
+
+A kutatók két nyelvcsalád földrajzi elterjedésére is tudtak következtetni, az ekkoriban, különböző területen élt kultúrákhoz köthető lómaradványok és belőlük nyert genetikai adatok alapján. Úgy vélekednek, hogy korábbi elgondolásokkal ellentében az indo-európai nyelvcsalád Európán belüli elterjedéséhez nem elsősorban a modern házi lovak járultak hozzá. Ezzel ellentétben arra viszont találtak bizonyítékot, hogy ázsiai elterjedésük összekapcsolható az indo-iráni nyelvek és a harci szekerek ázsiai térnyerésével.

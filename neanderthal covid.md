@@ -1,0 +1,14 @@
+# Befolyásolhatják neandervölgyiektől örökölt gének a Covid megbetegedés súlyosságát?
+
+Egy pénteken, a Hugo Zeberg és Svante Paabo evolúciógenetikusok által a bioRxiv-on közzétett preprint tanulmányban a kutatók arra utaló bizonyítékot találtak, hogy egy, neandervölgyiekből származó génváltozat potenciálisan növelheti az új koronavírus által okozott Covid-19 megbetegedés súlyosságát.
+
+Paabo és munkatársai a németországi Max Planck intézetben az ősi emberi genomok vizsgálatának úttörői. Ők határozták meg a neandervölgyi ember teljes genomját 2013-ban, illetve fedezték fel a gyenisovai-embert 2010-ben, majd pedig apró maradványokból több gyenisovai-ember teljes genomját derítették fel 2015-ben. A szakemberek legfontosabb felfedezése talán az volt, hogy az ősi Homo sapiens és a neandervölgyi ember közti keveredés következtében, a legtöbb mai ember 1.5-2.1 százaléknyi neandervölgyiektől származó genom-szekvenciával rendelkezik.
+
+Ezt a 1.5-2.1 százaléknyi génállomány a bőr és haj tulajdonságaival és betegségekre mutatott hajlamok közti különbségekkel hozták összefüggésbe a genetikai kutatások.
+
+A szakemberek kiindulópontja egy, a New England Journal of Medicine (NEJM) folyóiratban június közepén [közölt tanulmány](https://www.nejm.org/doi/full/10.1056/NEJMoa2020283) volt, melyről már Varga Máté [írt a Qubiton](https://qubit.hu/2020/06/29/5-eletbe-vago-kerdes-a-koronavirusrol-amikre-meg-mindig-nem-tudjuk-a-valaszt). Ez a súlyos lefolyású Covid-19 megbetegedés humán genomikai összefüggéseit kereste - azaz azt, hogy milyen genetikai faktorok lehetnek felelősek azért, ha valakinél sajnos rosszabb kimenetelű a SARS-CoV-2-vel való megfertőződés. Ez az eredeti kutatás egy genomi összefüggéseket elemző (GWAS, Genome-Wide Association Study) vizsgálat volt, ahol több mint 8.5 millió [egypontos nukleotid-polimorfizmus](https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism) (SNP) jelentőségét vizsgálták a szakemberek. Az SNP-k olyan egy nukleotid bázist érintő változások a genomjainkban, amelyek az emberi populáció legalább 1 százalékában jelen vannak.
+
+Fontos ugyanakkor, hogy ezek a GWAS-vizsgálatok sokszor [komoly limitációkkal](https://en.wikipedia.org/wiki/Genome-wide_association_study#Limitations) rendelkeznek. Egy tavaly decemberben, a PLOS ONE nyílt hozzáférésű tudományos folyóiratban [megjelent tanulmány](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0220215) például arra hívta fel a figyelmet, hogy a genomunkban egy-egy nukleotid bázist érintő változások (SNP) és betegségek kialakulása közti összefüggés feltárásakor a GWAS-vizsgálatok nagy részének alacsony előrejelző ereje van az egyéni kockázatra nézve.
+
+
+Az, hogy valójában mekkora kockázat-különbséget jelenthet egy ilyen génváltozat egyes emberek közt, nagyon nehéz megállapítani. Sokkal valószínűbbnek tűnik, hogy társadalmi és kulturális faktorok 
