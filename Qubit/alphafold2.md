@@ -1,0 +1,3 @@
+# Forradalmi áttörést fog hozni az AlphaFold2 a biológiában
+
+## A gépi tanuláson alapuló algoritmus...
