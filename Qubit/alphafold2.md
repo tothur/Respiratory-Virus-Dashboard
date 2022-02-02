@@ -10,9 +10,13 @@ A fehérjékről meglévő struktúrális, genetikai, evolúciós információt 
 
 Ezzel egy csapásra több százezer fehérjéhez tartozó, AlphaFold2 által meghatározott térszerkezet [vált elérhetővé](https://insideuniprot.blogspot.com/2021/07/alphafold-structure-predictions-freely.html) a biológusoknak, a részben az EBI által létrehozott nemzetközi fehérje [adatbázisban](https://www.uniprot.org/help/about), a UniProtban. Az azóta eltelt több mint 6 hónap elegendő volt ahhoz, hogy a tudományos közösség a gyakorlatban is kipróbálhassa, mennyiben segíti a molekuláris biológiai, genetikai és biotechnológiai kutatásokat az új módszer, és beváltotta-e a kezdeti hozzá fűzött reményeket.
 
-## Nagy reményeks
+## Jelenleg elsősorban a kísérleti térszerkezet meghatározást segíti az AlphaFold2
 
 Ezeket jól érzékelteti Patrick Cramer német biokémikus a Nature Structural & Molecular Biology folyóiratban tavaly augusztusban [publikált véleménycikke](https://www.nature.com/articles/s41594-021-00650-1), amiben áttörő eredménynek nevezte az AlphaFold2-t, ami szerinte praktikusan megoldja a fehérje feltekeredési problémát, még akkor is, ha elméleti szinten továbbra sem igazán értjük, hogyan kódolja az aminosav sorrend a fehérjék háromdimenziós szerkezetét. Cramer ugyanakkor arra is felhívta a figyelmet, hogy a módszer nem kiváltja a jelenleg használt kísérleti térszerkezet meghatározó módszereket, hanem kiegészíti és segíti majd azokat.
+
+Joe Greener, a cambridgei MRC laboratóriumban molekuláris szimulációkkal foglalkozó bioinformatikus decemberben a Twitteren [fejtette ki a véleményét](https://twitter.com/jgreener64/status/1468666603252457472?t=PKfJS9H6gT9AIebyTwc-Jw&s=19) az AlphaFold2-ről, kiemelve, hogy a módszer már most segít a kísérleti térszerkezet megállapításban, és az a tény, hogy az AlphaFold2-t nyílt forráskóddal közölték, nagyobb impaktúvá tette.
+
+Az AlphaFold2 alkalmazási lehetőségeit jól mutatja az európai bioinformatikai intézet által idén január 28-án [közölt](https://www.ebi.ac.uk/about/news/updates-from-data-resources/alphafold-update-neglected-tropical-diseases/), 17 elhanyagolt trópusi betegségeket okozó élőlény és 10 antibiotikumok elleni rezisztencia szempontjából releváns baktérium 190 ezer fehérje struktúrája. Ezzel az EBI AlphaFold adatbáziásban megtalálható fehérjék száma majdnem elérte az 1 milliót.
 
 ## De hogyan működik az AlphaFold2?
 
