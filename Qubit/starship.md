@@ -14,9 +14,9 @@ A Starship űrhajó részének első jelentős, több mint 10 kilométeres magas
 
 https://twitter.com/elonmusk/status/1423830326665650179
 
-Nem megy persze minden ennyire simán, hiszen Musk egyszerre küzd a Raptor [hajtóművek gyártásának csúszásával](https://qubit.hu/2021/11/30/elon-musk-emailben-figyelmeztette-a-spacex-dolgozoit-hogy-jovore-konnyen-csodbe-mehet-a-ceg), valamint a Starship tesztjei
+Nem megy persze minden ennyire simán, hiszen Musk egyszerre küzd a Raptor [hajtóművek gyártásának csúszásával](https://qubit.hu/2021/11/30/elon-musk-emailben-figyelmeztette-a-spacex-dolgozoit-hogy-jovore-konnyen-csodbe-mehet-a-ceg), valamint a Starship tesztjeit nem túl jó szemmel néző amerikai légügyi hivatallal, az FAA-vel, amely társadalmi konzultációt indított a Starship texasi teszteléséről, és február végén egy környezeti tanulmányt is [kiad majd a kérdésben](https://www.faa.gov/space/stakeholder_engagement/spacex_starship/).
 
-Ha az Egyesült Államok légügyi hivatala, az FAA [jóváhagyja azt](https://www.theverge.com/2021/10/21/22738106/spacex-boca-chica-starship-launch-site-faa-town-hall-environmental-assessment), akkor Boca Chicából még 2022 első felében elvégezheti a Superheavy hordozórakétával kiegészült Starship űrhajó első, Föld-körüli pályát célzó repülését. Közel két év után, február 10-én fog [először hosszabban beszélni](https://www.theverge.com/2022/2/3/22916863/elon-musk-spacex-starship-presentation-update) Musk a Starship fejlesztéséről, ahol valószínűleg többek közt ennek a tesztnek az előkészítése is szóba kerül majd.
+Ha ezekután az FAA [jóváhagyja azt](https://www.theverge.com/2021/10/21/22738106/spacex-boca-chica-starship-launch-site-faa-town-hall-environmental-assessment), akkor Boca Chicából még 2022 első felében elvégezheti a Superheavy hordozórakétával kiegészült Starship űrhajó első, Föld-körüli pályát célzó repülését. Közel két év után, február 10-én fog [először hosszabban beszélni](https://www.theverge.com/2022/2/3/22916863/elon-musk-spacex-starship-presentation-update) Musk a Starship fejlesztéséről, ahol valószínűleg többek közt ennek a tesztnek az előkészítése is szóba kerül majd.
 
 ## Jelentős spórolást hozhat a Starship, és ehhez nem kell Musk becslésével számolnunk
 
