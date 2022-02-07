@@ -1,8 +1,8 @@
-# KÉSZÜL - Nem kell a Marsig mennie, hogy hatalmas lépés legyen Elon Musk Starship űrhajója
+# Nem kell a Marsig mennie, hogy hatalmas lépés legyen Elon Musk Starship űrhajója
 
 ## A SpaceX által fejlesztett, teljesen újrahasznosítható Starship rengeteg terhet lesz majd képes Föld-körüli pályára állítani, a mai rakétákhoz képest hihetetlen olcsón. Bár a marsraszállása még messze van, a Holdhoz való visszatérés kulcs eleme lesz.
 
-Ábrára és kis kiegészítésekre vár - Elon Musk, a SpaceX alapítója és vezérigazgatója [azt szeretné](https://www.bbc.com/news/science-environment-55564448), ha az emberiség több bolygón élne a Naprendszerben, amelyre a realitások határain belül a Földön kívül a Mars lehet alkalmas. Musk az első marsi települések megalapításának kulcsát a vállalata által fejlesztett Starship űrrakéta-rendszerben látja, amelynek idén, az év első felében lehet az első, Föld-körüli pályát elérő tesztrepülése.
+Elon Musk, a SpaceX alapítója és vezérigazgatója [azt szeretné](https://www.bbc.com/news/science-environment-55564448), ha az emberiség több bolygón élne a Naprendszerben, amelyre a realitások határain belül a Földön kívül a Mars lehet alkalmas. Musk az első marsi települések megalapításának kulcsát a vállalata által fejlesztett Starship űrrakéta-rendszerben látja, amelynek idén, az év első felében lehet az első, Föld-körüli pályát elérő tesztrepülése.
 
 A Starship egy teljesen újrahasználható, Super Heavynek nevezett hordozórakétából és a Starship űrhajóból álló rendszer, ami nevével ellentétben nem csillagok közti, hanem a Föld és a Hold környékén, és később a Marshoz való utazásra készül. A Musk által 2016 őszén [bejelentett](https://arstechnica.com/science/2016/09/musks-mars-moment-audacity-madness-brilliance-or-maybe-all-three/), nagy falcon rakéta (BFR, Big Falcon Rocket) többszörös, éveken át tartó újratervezés után alakult ki 2019-2020 között a minden szempontból realisztikusabb, de a létező rakétákhoz és űrhajókoz képest így is ambiciózus Starship koncepció.
 
