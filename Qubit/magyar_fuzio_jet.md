@@ -1,23 +1,10 @@
 # Embargó Szerda 13:00 - Magyar kutatók is részt vettek az európai fúziós rekord elérésében
 
-- Eurofusion 30 kutatószerveztből álló konzorcium, 25 EU tagállam + UK, Svájc, Ukrajna
-- mérföldkő eredmény az oxfordi Joint European Torusnál (JET)
-- 59 megajoule energia felszabadítás, hosszan fenntartott fúziós körülmények
-- megerősíti az ITER tervezési alapjait és két évtized fúziós kutatásainak eredményeit teszteli
-- Energiatudományi Kutatóközpont kutatói vettek részt magyar részéről
-- JET legnagyobb, deutérium-trícium fúziós üzemanyaggal működő tokamak berendezés, 150 millió fokos plazma. az 1997-es 21,7 megajoule-os fúziós rekord kétszeresét érték most el.
-- 59 megajoule hőenergia szabadult fel a fúzióból 5 másodpercnyi kísérlet alatt - a fűtőberendezések és a mágneses teret előállító tekercsek eddig tudták fenntartani a plazmát. ITER-nél az a terv, hogy akár 16 percig is üzemeljen.
-- 1997-ben nagyon rövid időre 16 MW fúziós teljesítmény, ezt most nem múlták felül
-- A közlemény szerint magyar kutatók és vállalatok fejlesztenek ki egy biztonságvédelmi rendszert az ITER számára. A tört jég belövő úgy lesz kialakítva, hogy gyorsan leállítsa a fúziós reakciót, mielőtt az károsíthatja a berendezés belső falát. A forró anyagba puskagolyó gyorsaságú, mínusz 260 °C-os hidrogénjég lövedéket, másnéven pelletet lőnek. Ez, egy sörétes puskához hasonlóan, kis méretű jégdarabokkal szórja meg a célpontot, funkcióját tekintve, úgy, mint egyfajta poroltó. Az elmúlt évtized kutatásainak eredményeképpen Budapesten épülhet meg a belövő berendezés prototípusa. Az EK kutatói a pellet előállításának, gyorsításának és törésének tesztelésével, a kilövőszerkezet mérnöki tervezésével, illetve a szükséges kísérleti és megfigyelési módszerek kifejlesztésével jelentős mértékben hozzájárulnak az ITER későbbi biztonságos üzemeltetéséhez.
+Minden korábbinál több fúziós energia szabadult fel az oxfordi Joint European Torus (JET) kísérleti berendezésének tesztje során, melyhez magyar kutatók is hozzájárultak, derül ki a EUROfusion európai fúziós kutatási konzorcium mai bejelentéséből.
 
-https://ek-cer.hu/fuzios-plazmafizika-laboratorium
+Az energiatermelésre használható fúziós energia tett újabb fontos lépésben a berendezés korábbi, 1997-es, 21,7 megajouleos rekordját több mint kétszeresen túlszárnyalva, 59 megajoule hőenergiát szabadított fel a relatíve hosszan fenntartott fúziós reakcióból. A JET a legnagyobb jelenleg működő tokamak típusú kísérleti reaktor, amely a Nap magjának tízszeres hőmérsékletét, 150 millió fokot elérő fúziós plazmát elektromágnesek segítségével kontrollálja.
 
-Az ITER főigazgatója, Bernard Bigot az eredményre reagálva elmondta, a JET által elért "hosszan fenntartott deutérium-trícium fúzió jelentős megerősítés mindazoknak, akik részt vesznek a fúziós kutatásokban, és az eredméynek igazolják, hogy az ITER kísérlettel jó úton haladunk a fúziós energiatermelés megvalósítása felé.
-
-“A sustained pulse of deuterium-tritium fusion at this power level – nearly industrial 
-scale – delivers a resounding confirmation to all of those involved in the global fusion 
-quest. For the ITER Project, the JET results are a strong confidence builder that we 
-are on the right track as we move forward toward demonstrating full fusion power.”
+A EUROfusion szerint az 5 másodpercnyi, a hidrogén deutérium-trícium izotópjainak héliummá való fúziójából nyert kísérleti adatok teljesen egybevágnak az előrejelzésekkel, ismét megerősítve a tokamak-típusú reaktorok koncepciójának működőképességét, amilyen a Franciországban nemzetközi együttműködésben épülő ITER is. Emellett úgy vélik, a kísérleti kampány, amelynek ez a teszt a részét képezte, segít igazolni az elmúlt két évtized fúziós fejlesztéseit, és előkészíteni az ITER indítását. 
 
 Tony Donné, az Eurofusion vezetője úgy véli, hogy "ha fenn tudjuk tartani a fúziót öt másodpercig, akkor megtehetjük öt percig, majd öt órán keresztül is, ha fejlesztjük jövőbeli berendezéseinket. Hozzátette, hogy a kísérlet során tapasztaltak "teljes mértékben egybeesnek előrejelzéseinkkel, ami azt mutatja, hogy jó úton járunk a fúziós energia jövője felé."
 
@@ -28,5 +15,14 @@ show that we are on the right path to a future world of fusion energy. If we can
 maintain fusion for five seconds, we can do it for five minutes and then five hours as 
 we scale up our operations in future machines"
 
-https://surfdrive.surf.nl/files/index.php/s/43HKvUVCgEfA8vv?path=%2F
+A fúziós reakció fenntarthatóságának korlátját a JET esetén a fűtőberendezés és a mágneses teret előállító tekercsek kapacitása jelenti. Az ITER-nél a tervek szerint a fúziós reakció nem néhány másodpercig, hanem akár 16 percig is fenntartható lesz.
+
+Az ITER főigazgatója, Bernard Bigot az eredményre reagálva elmondta, a JET által elért "hosszan fenntartott deutérium-trícium fúzió jelentős megerősítés mindazoknak, akik részt vesznek a fúziós kutatásokban, és az eredméynek igazolják, hogy az ITER kísérlettel jó úton haladunk a fúziós energiatermelés megvalósítása felé. “A sustained pulse of deuterium-tritium fusion at this power level – nearly industrial 
+scale – delivers a resounding confirmation to all of those involved in the global fusion 
+quest. For the ITER Project, the JET results are a strong confidence builder that we 
+are on the right track as we move forward toward demonstrating full fusion power.”
+
+A mostani kísérlet lényege a hosszabban fenntartható, stabil fúziós reakció elérése volt, és nem a maximális csúcsteljesítmény elérése, amelynek rekordját pillanatnyi, 16 megawattal még mindig a JET 1997-es kísérlete tartja. 
+
+A EUROfusion konzorcium 30 kutatószervezetből áll, melyek 25 EU tagállamban, az Egyesült Királyságban, Svájcban és Ukrajnában dolgoznak. A JET kísérleteiben magyar részről az ELKH Energiatudományi Kutatóközpont szakemberei vettek részt. [A Fúziós Plazmafizika Laboratóriumban](https://ek-cer.hu/fuzios-plazmafizika-laboratorium) dolgizó magyar kutatók és mérnökök a következő években egy, az ITER-hez fejlesztett biztonságvédelmi rendszeren dolgoznak majd, amely -260 fokos hidrogénjég bejuttatásával még azelőtt megállítja majd a fúziós reakciót, hogy az károsítaná az ITER reaktorának falát. Ennek a prototípusa a közlemény szerint az elmúlt évtized hazai kutatásainak eredményeként Budapesten épülhet meg.
 
