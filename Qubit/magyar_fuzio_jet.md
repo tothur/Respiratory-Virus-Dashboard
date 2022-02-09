@@ -18,3 +18,7 @@ A mostani JET kísérlet lényege a hosszabban fenntartható, stabil fúziós re
 
 A EUROfusion konzorcium 30 kutatószervezetből áll, melyek 25 EU tagállamban, az Egyesült Királyságban, Svájcban és Ukrajnában dolgoznak. A JET kísérleteiben magyar részről az ELKH Energiatudományi Kutatóközpont szakemberei vettek részt. [A Fúziós Plazmafizika Laboratóriumban](https://ek-cer.hu/fuzios-plazmafizika-laboratorium) dolgizó magyar kutatók és mérnökök a következő években egy, az ITER-hez fejlesztett biztonságvédelmi rendszeren dolgoznak majd, amely -260 fokos hidrogénjég bejuttatásával még azelőtt megállítja majd a fúziós reakciót, hogy az károsítaná az ITER reaktorának falát. Ennek a prototípusa a közlemény szerint az elmúlt évtized hazai kutatásainak eredményeként Budapesten épülhet meg.
 
+Kapcsolódó cikkek a Qubiten:
+
+https://qubit.hu/2022/01/26/itt-a-fantasztikus-ego-plazma-amivel-vegre-belathato-tavolsagba-kerult-a-fuzios-energia
+
