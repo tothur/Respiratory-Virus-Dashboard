@@ -2,29 +2,22 @@
 
 ##
 
-A Vénusz melletti elhaladásai során elkészítette a bolygó sűrű felhőzete által általában eltakart felszínéről valaha a világűrből készült első látható tartományú felvételeket Parker Solar Probe napkutató űrszonda, [jelentette be múlt héten](https://www.nasa.gov/feature/goddard/2022/sun/parker-solar-probe-captures-its-first-images-of-venus-surface-in-visible-light-confirmed/) az amerikai űrügynökség.
+A Vénusz melletti elhaladásai során elkészítette a bolygó sűrű felhőzete által általában eltakart felszínéről első látható tartományú felvételeit a Parker Solar Probe napkutató űrszonda, [jelentette be múlt héten](https://www.nasa.gov/feature/goddard/2022/sun/parker-solar-probe-captures-its-first-images-of-venus-surface-in-visible-light-confirmed/) az amerikai űrügynökség.
 
 A szonda a harmadik, 2020 júliusi és negyedik, 2021 februári Vénusz melletti elhaladásakor páratlan, látható fény és közeli infravörös tartományú felvételeit WISPR képalkotójával készítette, melyet normál esetben a napszél és a napkorona vizsgálatára használ. A WISPR segítségével a Parker Solar Probe meg tudta figyelni a Vénusz teljes éjszakai, árnyékban lévő oldalát a kedvező pályájú 2021 februári elhaladás során, mely képekből a NASA egy videót is készített.
+
+When flying past Venus in July 2020, Parker Solar Probe’s WISPR instrument, short for Wide-field Imager for Parker Solar Probe, detected a bright rim around the edge of the planet that may be nightglow — light emitted by oxygen atoms high in the atmosphere that recombine into molecules in the nightside. The prominent dark feature in the center of the image is Aphrodite Terra, the largest highland region on the Venusian surface. Bright streaks in WISPR, such as the ones seen here, are typically caused by a combination of charged particles — called cosmic rays — sunlight reflected by grains of space dust, and particles of material expelled from the spacecraft’s structures after impact with those dust grains. The number of streaks varies along the orbit or when the spacecraft is traveling at different speeds, and scientists are still in discussion about the specific origins of the streaks here. The dark spot appearing on the lower portion of Venus is an artifact from the WISPR instrument.
+Credits: NASA/Johns Hopkins APL/Naval Research Laboratory/Guillermo Stenborg and Brendan Gallagher
 
 A felvételek kontinentális méretű régiókat, síkságokat és felföldeket tárnak fel. Tudományos elemzésüket a NASA kutatói a Geophysical Research Letters folyóiratban közölték. A felvételeken egy bolygó körüli halo is kivehető, melyet a Vénusz légkörében lévő oxigén okoz. A képek a NASA szerint segíthetnek a kutatóknak megérteni a Vénusz geológiáját, például a felszínt alkotó kőzeteket, illetve a bolygó évmilliárdok alatti változását.
 
 A kutatók eredeti célja, mint a tanulmány társszerzője, Angelos Vourlidas, a Johns Hopkins Egyetem Applied Physics Laboratory (APL) kutatóintézetének kutatója elmondta, nem a Vénusz felszínének megörökítése, hanem a felhőzet sebességének mérése volt. Kiderült azonban, hogy a Parker Solar Probe nem csak a felhőket, hanem a Vénusz felszínét is látja.
 
-A Vénusz felszínét részben a szovjet Venera leszállóegységek által készítítt képeknek, részben pedig a NASA Magellan űrszondájának köszönhetően ismerjük, mely radarja segítségével feltérképezte a bolygót.
-
-"Nagyon meg vagyunk elégedve a Parker Solar Probe által gyűjtött tudományos adatokkal. A szonda a vártnál jobban teljesít, és izgatottak vagyunk, hogy ezek az elhaladások során gyűjtött adatok váratlan módokon segíthetik a Vénusz kutatásának előbbrevitelét." - mondta el Nicola Fox, a NASA napkutatási részlegének vezetője.
-
-Glowing like an Iron from the Forge
-
 Clouds obstruct most of the visible light coming from Venus’ surface, but the very longest visible wavelengths, which border the near-infrared wavelengths, make it through. On the dayside, this red light gets lost amid the bright sunshine reflected off Venus’ cloud tops, but in the darkness of night, the WISPR cameras were able to pick up this faint glow caused by the incredible heat emanating from the surface.
 
 “The surface of Venus, even on the nightside, is about 860 degrees,” Wood said. “It's so hot that the rocky surface of Venus is visibly glowing, like a piece of iron pulled from a forge.”
 
-As it passed by Venus, WISPR picked up a range of wavelengths from 470 nanometers to 800 nanometers. Some of that light is the near-infrared – wavelengths that we cannot see, but sense as heat – and some is in the visible range, between 380 nanometers and about 750 nanometers.  
-
-Venus in a New Light
-
-In 1975, the Venera 9 lander sent the first tantalizing glimpses of the surface after landing on Venus. Since then, Venus’ surface has been revealed further with radar and infrared instruments, which can peer through the thick clouds by using wavelengths of light invisible to the human eye. NASA’s Magellan mission created the first maps in the 1990s using radar and JAXA’s Akatsuki spacecraft gathered infrared images after reaching orbit around Venus in 2016. The new images from Parker add to these findings by extending the observations to red wavelengths at the edge of what we can see.
+As it passed by Venus, WISPR picked up a range of wavelengths from 470 nanometers to 800 nanometers. Some of that light is the near-infrared – wavelengths that we cannot see, but sense as heat – and some is in the visible range, between 380 nanometers and about 750 nanometers.
 
 The WISPR images show features on the Venusian surface, such as the continental region Aphrodite Terra, the Tellus Regio plateau, and the Aino Planitia plains. Since higher altitude regions are about 85 degrees Fahrenheit cooler than lower areas, they show up as dark patches amidst the brighter lowlands. These features can also be seen in previous radar images, such as those taken by Magellan.
 
@@ -34,7 +27,19 @@ This information could also help scientists understand the planet’s evolution.
 
 In addition to the surface glow, the new images show a bright ring around the edge of the planet caused by oxygen atoms emitting light in the atmosphere. Called airglow, this type of light is also present in Earth’s atmosphere, where it’s visible from space and sometimes from the ground at night.
 
-Flyby Science
+As Parker Solar Probe flew by Venus on its fourth flyby, its WISPR instrument captured these images, strung into a video, showing the nightside surface of the planet.
+Credits: NASA/APL/NRL
+
+## Venera és Magellan szondák miatt ismerjük a Vénusz felszínét
+
+A Vénusz felszínét részben a szovjet Venera leszállóegységek által készítítt képeknek, részben pedig a NASA Magellan űrszondájának köszönhetően ismerjük, mely radarja segítségével feltérképezte a bolygót.
+
+In 1975, the Venera 9 lander sent the first tantalizing glimpses of the surface after landing on Venus. Since then, Venus’ surface has been revealed further with radar and infrared instruments, which can peer through the thick clouds by using wavelengths of light invisible to the human eye. NASA’s Magellan mission created the first maps in the 1990s using radar and JAXA’s Akatsuki spacecraft gathered infrared images after reaching orbit around Venus in 2016. The new images from Parker add to these findings by extending the observations to red wavelengths at the edge of what we can see.
+
+Surface features seen in the WISPR images (left) match ones seen in those from the Magellan mission (right).
+Credits: NASA/APL/NRL (left), Magellan Team/JPL/USGS (right)
+
+## Más érdekességeket is talált a Vénusznál a Parker
 
 While Parker Solar Probe’s primary goal is solar science, the Venusian flybys are providing exciting opportunities for bonus data that wasn’t expected at the mission’s launch.
 
@@ -44,7 +49,9 @@ In December 2021, researchers published new findings about the rediscovery of th
 
 While the geometry of the next two flybys likely won’t allow Parker to image the nightside, scientists will continue to use Parker’s other instruments to study Venus’ space environment. In November 2024, the spacecraft will have a final chance to image the surface on its seventh and final flyby.
 
-The Future of Venus Research
+"Nagyon meg vagyunk elégedve a Parker Solar Probe által gyűjtött tudományos adatokkal. A szonda a vártnál jobban teljesít, és izgatottak vagyunk, hogy ezek az elhaladások során gyűjtött adatok váratlan módokon segíthetik a Vénusz kutatásának előbbrevitelét." - mondta el Nicola Fox, a NASA napkutatási részlegének vezetője.
+
+## Harminc év után újra foglalkozik a bolygóval a NASA
 
 Parker Solar Probe, which is built and operated by the Johns Hopkins Applied Physics Laboratory in Laurel, Maryland, isn’t the first mission to gather bonus data on flybys, but its recent successes have inspired other missions to turn on their instruments as they pass Venus. In addition to Parker, the ESA (European Space Agency) BepiColombo mission and the ESA and NASA Solar Orbiter mission have decided to gather data during their flybys in the coming years.
 
