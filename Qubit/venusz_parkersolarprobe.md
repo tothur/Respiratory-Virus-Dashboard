@@ -1,5 +1,7 @@
 # Soha nem láttunk még úgy a Vénusz felszínét, mint a NASA rekordokat döntő napszondjának képein
 
+# Kontinens méretű régiók és síkságok rajzolódnak ki a Parker Solar Probe felvételein, amitől senki nem várta, hogy meg fogja tudni örökíteni a sűrű felhőzete által eltakart bolygó felszínét.
+
 Lenyűgöző felvételeket készített a Vénusz barátságtalan, a bolygó sűrű felhőzete által nagyrészt eltakart felszínéről a Parker Solar Probe szonda, [jelentette be múlt héten](https://www.nasa.gov/feature/goddard/2022/sun/parker-solar-probe-captures-its-first-images-of-venus-surface-in-visible-light-confirmed/) az amerikai űrügynökség.
 
 Az első látható fény tartományban, teleszkóppal a vénuszi felszínről készült képek tudományos vizsgálatát ismertető tanulmányt a Geophysical Research Letters folyóiratban [közölték](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021GL096302) Brian E. Wood és kollégái február 9-én.
