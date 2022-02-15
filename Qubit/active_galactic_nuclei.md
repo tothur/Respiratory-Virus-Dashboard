@@ -1,6 +1,10 @@
 # Meglepő dolgok derültek ki egy közeli galaxis központi fekete lyukának megfigyeléséből
 
-https://www.nature.com/articles/s41586-021-04311-7
+Egy közeli spirálgalaxis megfigyelése igazolta, hogy a galaxisok egy részének középpontjában lévő aktív régiók mögött ugyan az a kozmikus jelenség, szupernehéz fekete lyukak állnak.
+
+A ma délután a Natureben [megjelenő kutatás](https://www.nature.com/articles/s41586-021-04311-7) 
+
+Violeta Gámez Rosas és kollégái a tőlünk 47 millió fényévre található tintahal galaxis (NGC 1068) központi fekete lyukát körülvevő sűrű port figyelték meg, az európai déli obszervatórium chilei [VLT teleszkóprendszerével](https://en.wikipedia.org/wiki/Very_Large_Telescope).
 
 Observations of the dense, obscuring dust surrounding a central black hole in a nearby galaxy provide confirmation of the unified model of active galactic nuclei. This conclusion is made through the analysis of high-resolution images of the galaxy, published in Nature this week. The images offer new opportunities to study active galactic nuclei.
 
