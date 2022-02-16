@@ -1,15 +1,13 @@
 # Meglepő dolgok derültek ki egy közeli galaxis központi fekete lyukának megfigyeléséből
 
-Egy közeli spirálgalaxis megfigyelése igazolta, hogy a galaxisok egy részének középpontjában lévő aktív régiók mögött ugyan az a kozmikus jelenség, szupernehéz fekete lyukak állnak.
+Egy közeli spirálgalaxis megfigyelése igazolta, hogy a galaxisok egy részének középpontjában lévő szuper fényes, aktív régiók mögött ugyan az a kozmikus jelenség, szupernehéz fekete lyukak állnak.
 
-A ma délután a Natureben [megjelenő kutatás](https://www.nature.com/articles/s41586-021-04311-7) 
+A szupernehéz fekete lyukak által hajtott régiókat a kutatók egyes és kettes típusba sorolják, aszerint, hogy a belőlük kibocsátott fény spektruma milyen. Az egyesített modell szerint ezeket a különbségeket a fekete lyukat körülvevő és tápláló porfelhők okozzák, eltakarva előlünk a fekete lyukat. 
 
-Violeta Gámez Rosas és kollégái a tőlünk 47 millió fényévre található tintahal galaxis (NGC 1068) központi fekete lyukát körülvevő sűrű port figyelték meg, az európai déli obszervatórium chilei [VLT teleszkóprendszerével](https://en.wikipedia.org/wiki/Very_Large_Telescope).
+A ma délután a Natureben [közölt eredmények](https://www.nature.com/articles/s41586-021-04311-7) igazolják az egyesített modellt, feltárják 
 
-Observations of the dense, obscuring dust surrounding a central black hole in a nearby galaxy provide confirmation of the unified model of active galactic nuclei. This conclusion is made through the analysis of high-resolution images of the galaxy, published in Nature this week. The images offer new opportunities to study active galactic nuclei.
+Violeta Gámez Rosas és ötvenegy másik kutató erre a tőlünk 47 millió fényévre található tintahal galaxis (NGC 1068) infravörös megfigyelésével jutott. Az európai déli obszervatórium chilei [VLT teleszkóprendszerének](https://en.wikipedia.org/wiki/Very_Large_Telescope) új, a teleszkópok felbontását egyesítő MATISSE detektorával a csillagászok soha nem látott részletességgel tárták fel a központi fekete lyukát körülvevő sűrű port és gázfelhőket.
 
-Active galactic nuclei are energetic regions at the centre of some galaxies, thought to be powered by supermassive black holes. The light emitted by such nuclei produces spectral features relating to the region from which the light is emitted; distinct spectra have been used to split active galactic nuclei into two categories: type 1 or type 2 objects. However, the unified model suggests that this distinction arises because the line of sight may sometimes be obscured by a dusty torus-shaped cloud surrounding and feeding the central black hole.
+Emellett adatokat gyűjtöttek még az ALMA rádióteleszkóp-rendszerrel is. Az infravörös és rádiótartományú mérések elemzése egy tórusz alakú porfelhőt tárt fel a tintahal galaxis központi fekete lyuka körül, amelynek tulajdonságai megegyeznek az egyesített modell által előrejelzettel. A kombinált megfigyelésekből az is kiderült, hogy a fekete lyuk a tórusz alatt található, ami szintén egybevág az egyesített modellel.
 
-Violeta Gámez Rosas and colleagues report observations that support this unified model. They obtain high-resolution images of the archetypal galaxy NGC 1068, from which the unified model was first established. They use an instrument called MATISSE, which combines the light of four European Southern Observatory telescopes, to get the best view of the active galactic nuclei. The analysis of the images and radio maps reveal the torus-shaped dust cloud and help to define its properties, which match those expected by the unified model. The authors also pinpoint the location of the black hole below the torus, which also fits the model.
-
-Robert Antonucci, who helped to create the unified model, writes, “we can celebrate the fact that Gámez Rosas and colleagues’ study is the best proof yet that the unified model is correct,” in an accompanying News & Views article.
+Robert Antonucci, az egyesített modell egyik kidolgozója a Nature-ben a tanulmánnyal megjelenő véleménycikkében kifejtette, hogy "Gámez Rosas-ék eredményei az eddigi legjobb bizonyítékot jelentik arra, hogy a modell helyes." A modell kidolgozását ugyan ez, a Gámez Rosas és kollégái által vizsgált tintahal galaxis inspirálta.
