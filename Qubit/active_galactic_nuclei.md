@@ -1,4 +1,4 @@
-# Fánk alakú porfelhőt találtak egy hatalmas fekete lyuk körül
+# Fánk alakú porfelhők eddig összezavarták a csillagászokat, de most kiderült, mitől nagyon fényes egyes galaxisok központja
 
 ## A felfedezés igazolja, hogy a galaxisok egy részének közepén található szuper fényes, aktív régiókat a Napnál milliószor nehezebb fekete lyukak működtetik, és látszólagos eltéréseikért hatalmas porfelhők felelnek.
 
