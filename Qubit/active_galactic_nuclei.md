@@ -18,7 +18,7 @@ Az M77 galaxis színképe alapján egy kettes típusú aktív galaxismagot rejt,
 
 Gámez Rosas és kutatótársai 2018-2019 közt infravörös, majd később rádiótartományú méréseikkel megvizsgálták a galaxis magjában található por hőmérsékletét és összetételét. Kiderült, hogy az infravörös jel forrása 410-440 celsius fokos, azaz szinte biztosan nem a fekete lyuk körül keringő forró gázokból, hanem viszonylag hidegebb porszemcsékből származik. Az adatokból az is egyértelmű lett a kutatóknak, hogy a por összetétele jelentősen eltér a saját galaxisunkból tapasztalttól, azok többnyire magnéziumban gazdag, valamennyi szént is tartalmazó olivin szilikátásványokból állnak. 
 
-Az infravörös megfigyeléseket a chilei ALMA és amerikai [VLBA](https://en.wikipedia.org/wiki/Very_Long_Baseline_Array) rádióteleszkóp-rendszerekkel végzett mérésekkel kombinálták, amelyeken az objektumok a kutatók szerint feltűnően egybevágtak. Ezáltal azonosítani tudták a galaxis központi fekete lyukának helyzetét, melyet egy Földről nézve lapos, néhány fényév átmérőjű, tórusz alakú porkorong takar el előlünk, mely megfelel az aktív galaxismagok egyesített modelljének előrejelzéseinek.
+Az infravörös megfigyeléseket a chilei [ALMA](https://en.wikipedia.org/wiki/Atacama_Large_Millimeter_Array) és amerikai [VLBA](https://en.wikipedia.org/wiki/Very_Long_Baseline_Array) rádióteleszkóp-rendszerekkel végzett mérésekkel kombinálták, amelyeken az objektumok a kutatók szerint feltűnően egybevágtak. Ezáltal azonosítani tudták a galaxis központi fekete lyukának helyzetét, melyet egy Földről nézve lapos, néhány fényév átmérőjű, tórusz alakú porkorong takar el előlünk, mely megfelel az aktív galaxismagok egyesített modelljének előrejelzéseinek.
 
 Az M77 galaxis a VLT látható tartományú felvételén (bal oldalt) és a galaxis központi régiója a MATISSE műszer által készített infravörös képen
 
@@ -26,5 +26,4 @@ Forrás: ESO/Jaffe, Gámez-Rosas et al.
 
 Antonucci a Natureben a tanulmánnyal együtt megjelenő véleménycikkében kifejtette, hogy  Gámez Rosas és kollégái egyértelműen megerősítették a fekete lyuk helyzetét az infravörös felvételeken, majd ezt későbbi rádiótartományú mérésekkel még biztosabban igazolták. A kutatók munkáját kiválónak nevezte, mert úgy véli, a fekete lyuk körül azonosított, infravörösben látszó objektum megfelel a modelljük által előrejelzett fánk alakú porfelhőnek.
 
-
-
+Kapcsolódó cikkek a Qubiten:
