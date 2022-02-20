@@ -4,6 +4,12 @@ A dinoszauruszok bolygónk feletti 150 millió éves uralma a Chicxulub-kisbolyg
 
 A ma délután a Natureben [közölt áttörő eredmények](https://www.nature.com/articles/s41586-022-04446-1) segítenek megmagyarázni a kihalás földrajzi mintázatát, és hozzásegítenek a földi élet történetében az egyik legdrámaibb nap megértéséhez.
 
+k-pg1
+
+k-pg2
+
+Melanie During és kollégái...
+
 The Chicxulub asteroid impact that ended the Mesozoic era, the age of the dinosaurs, occurred at springtime in the Northern Hemisphere, a Nature study suggests. The finding helps to explain the pattern of extinctions that ensued, and adds to our understanding of this pivotal moment in the Earth’s history.
 
 Around 66 million years ago, a large asteroid crashed into what is now the Yucatán Peninsula in Mexico, creating a mass extinction event that killed 76% of all species, including non-avian dinosaurs, pterosaurs and ammonites. Studies looking at the timing of this event have focused on millennial timescales, leaving the season of the impact unknown. To resolve this issue, Melanie During and colleagues studied the remains of filter-feeding sturgeons and paddlefishes that died en masse that day. Distinct three-dimensional growth patterns were observed inside the well-preserved fossil bones, providing a record of seasonal change. Combined with carbon isotope data, these results suggest that the fish died in the Northern Hemisphere spring.
