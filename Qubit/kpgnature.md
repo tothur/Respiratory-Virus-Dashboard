@@ -13,3 +13,13 @@ The fish were found at a Late Cretaceous deposit in North Dakota. They had impac
 **Please note that an online press briefing for the paper below will take place UNDER STRICT EMBARGO on Tuesday 22nd February at 3pm London time (GMT) / 10am US Eastern Time**
 
 Authors Melanie During, Jeroen van der Lubbe and Dennis Voeten will discuss the research. This will be followed by a Q&A session.
+
+Science 1980 https://www.science.org/doi/10.1126/science.208.4448.1095
+Nature 1980 https://www.nature.com/articles/285198a0
+Time scale of events 2013 Science https://www.science.org/doi/abs/10.1126/science.1230492
+Tanis PNAS paper 2019 https://qubit.hu/2019/04/03/rekonstrualtak-a-foldi-elet-tortenetenek-legsotetebb-napjat-felbolydult-a-paleontologustarsadalom
+Crater PNAS paper 2019 https://qubit.hu/2019/09/13/lefurtak-a-kraterbe-es-leirtak-a-foldi-elovilag-legsotetebb-napjanak-pontos-forgatokonyvet
+Science 2020 https://qubit.hu/2020/01/24/a-foldbe-csapodo-kisbolygo-vegzett-a-dinoszauruszokkal-66-millio-evvel-ezelott
+Science Advances 2021 https://qubit.hu/2021/03/12/ed-egy-kraterben-felfedezett-iridium-bizonyitja-hogy-kisbolygo-becsapodasa-okozta-a-dinoszauruszokat-elsopro-nagy-kihalast
+Madarak túlélése 2021 https://qubit.hu/2021/09/21/agyanak-es-latasanak-is-koszonheti-a-madar-hogy-o-az-egyetlen-ma-elo-dinoszaurusz
+Óceán savasodás PNAS + emlős fauna helyreállása/evo Science https://qubit.hu/2019/11/04/igy-szuletett-ujja-a-fold-a-66-millio-evvel-ezelotti-nagy-kihalas-utan
