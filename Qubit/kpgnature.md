@@ -18,4 +18,8 @@ A kutatók szerint eredményeik segíthetnek elkülöníteni a kihalás közvetl
 
 Kapcsolódó cikkek a Qubiten:
 
+https://qubit.hu/2019/04/03/rekonstrualtak-a-foldi-elet-tortenetenek-legsotetebb-napjat-felbolydult-a-paleontologustarsadalom
 
+https://qubit.hu/2020/01/24/a-foldbe-csapodo-kisbolygo-vegzett-a-dinoszauruszokkal-66-millio-evvel-ezelott
+
+https://qubit.hu/2021/09/21/agyanak-es-latasanak-is-koszonheti-a-madar-hogy-o-az-egyetlen-ma-elo-dinoszaurusz
