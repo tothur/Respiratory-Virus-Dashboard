@@ -1,4 +1,6 @@
-## EMBARGÓ SZERDA 17:00 - Tavasz volt az északi féltekén, amikor kihaltak a dinoszauruszok
+# EMBARGÓ SZERDA 17:00 - Tavasz volt az északi féltekén, amikor kihaltak a dinoszauruszok
+
+## 
 
 A dinoszauruszok 150 millió éves uralma a Chicxulub-kisbolygó becsapódásával az északi félteke egy tavaszi napján ért véget, derül ki egy új kutatásból, ami a földtörténeti középidő (mezozoikum) utolsó óráit rögzítő hal fosszíliákat vizsgálta. A ma délután a Natureben [közölt szenzációs eredmények](https://www.nature.com/articles/s41586-022-04446-1) segítenek megmagyarázni a Kréta-Paleogén (K-Pg) kihalás földrajzi mintázatát, jelentősen hozzásegítve a földi élet történetében az egyik legdrámaibb nap megértéséhez.
 
