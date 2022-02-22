@@ -1,4 +1,4 @@
-# EMBARGÓ SZERDA 17:00 - Tavasz volt az északi féltekén, amikor kihaltak a dinoszauruszok
+# EMBARGÓ SZERDA 17:00 - Tavasz volt a Föld északi féltekén, amikor kihaltak a dinoszauruszok
 
 ## A szenzációs amerikai Tanis lelőhely rögzíti azt a napot, amikor 66 millió éve egy hatalmas kisbolygó eltalálta a Földet. Most a helyszínen talált halcsontokból kiderült, hogy a katasztrófa tavasszal érte az északi féltekét, tovább fokozva a végül a fajok 76 százalékát eltörlő becsapódás hatását. 
 
