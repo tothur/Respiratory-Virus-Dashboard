@@ -1,6 +1,10 @@
-# Ezek a műholdak észlelnék először a világvégét
+# A bámulatos műholdak, amelyek először észlelnék a világvégét
 
-35 ezer kilométerre a Föld felszínétől kering négy műhold, amelyek feladata az Egyesült Államok figyelmeztetése rakéta-indításokra, bárhol is történjenek azok a bolygón. Ezek az SBIRS (Space Based Infrared Reconaissance and Surveillance) rendszer fő komponensét jelentő műholdak fejlett infravörös szenzorokkal vannak felszerelve, melyek a ballisztikus rakéták által kibocsátott hőt detektálják, azonosítva annak forrását és a rakéta lehetséges célpontját.
+##
+
+A felszíntől 35 ezer kilométerre kering öt csúcstechnológiás műhold, amelyek elsődleges feladata az Egyesült Államok figyelmeztetése nukleáris töltetekkel rendelkező ballisztikus rakéták indítására.
+
+A SBIRS (Space Based Infrared System) figyelmeztető rendszer öt geostacionárius pályán található fejlett infravörös szenzorokkal felszerelt műholdból és két, poláris pályán lévő titkos műholdra szerelt szenzorokból áll, melyek a rakéták által kibocsátott hőt detektálják.
 
 A SBRIS műholdak néhány éve váltották le a hidegháború alatt kiépített és többször fejlesztett DSP műholdas rendszert, amely egy esetleges szovjet nukleáris támadásra figyelmeztette volna annak megkezdődése után az amerikai hadserget és döntéshozókat. A DSP-hez képest a SBRIS sokkal fejlettebb képességekkel rendelkezik, támogatást adva hadszintéren lévő csapatok és rakéta-védelmi rendszerek számára.
 
