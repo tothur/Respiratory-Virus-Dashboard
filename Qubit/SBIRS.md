@@ -2,15 +2,20 @@
 
 ##
 
-A felszíntől 35 ezer kilométerre kering öt csúcstechnológiás műhold, amelyek elsődleges feladata az Egyesült Államok figyelmeztetése nukleáris töltetekkel rendelkező ballisztikus rakéták indítására.
+Vlagyimir Putyin orosz elnök Ukrajna megszállása után, vasárnap magasabb [készültségbe helyezte](https://444.hu/2022/02/27/putyin-fokozott-keszultsegre-utasitotta-az-orosz-nuklearis-elrettento-eroket) országa nukleáris erőit. A lépés nem járt a NATO szerint [lényegi következményekkel](https://www.reuters.com/world/europe/no-russian-muscle-movements-after-putins-nuclear-readiness-alert-us-says-2022-02-28/), de ráirányította a figyelmet a konfliktus további eszkalálódásának kockázataira.
 
-A SBIRS (Space Based Infrared System) figyelmeztető rendszer öt geostacionárius pályán található fejlett infravörös szenzorokkal felszerelt műholdból és két, poláris pályán lévő titkos műholdra szerelt szenzorokból áll, melyek a rakéták által kibocsátott hőt detektálják.
+A Föld felszínétől 35 ezer kilométerre keringve öt csúcstechnológiás műhold garantálja, hogy az Egyesült Államok és szövetségesei azonnal értesülnek arról, ha valahol a bolygón nukleáris fegyvereket hordozó ballisztikus rakéták indítására kerülne sor, garantálva ezzel a NATO [elrettentő erőinek hitelességét](https://qubit.hu/2022/02/28/igy-allnak-most-a-vilag-atomarzenaljai).
 
-A SBRIS műholdak néhány éve váltották le a hidegháború alatt kiépített és többször fejlesztett DSP műholdas rendszert, amely egy esetleges szovjet nukleáris támadásra figyelmeztette volna annak megkezdődése után az amerikai hadserget és döntéshozókat. A DSP-hez képest a SBRIS sokkal fejlettebb képességekkel rendelkezik, támogatást adva hadszintéren lévő csapatok és rakéta-védelmi rendszerek számára.
+A SBIRS (Space Based Infrared System) figyelmeztető rendszer geostacionárius pályán található, rendkívül érzékeny infravörös szenzorokkal felszerelt műholdakból, és pólusok felett keringő műholdakra szerelt detektorokból áll. Ezek képesek a rakétahajtóművek által kibocsátott hő észlelésére és követésére, meghatározva így a rakéták célpontját, illetve segítve a rakétavédelmi rendszerek munkáját.
 
-Bár a SBRIS-nek lényegében nincs párja, az amerikai légierő a 2020-as évek közepére mégis le szeretné cserélni. 
+https://youtu.be/mDTnl4E9FiY
 
-FA https://jalopnik.com/these-are-the-doomsday-satellites-that-detected-the-exp-1737434876
+A SBIRS a 2010-es években [váltotta le](https://jalopnik.com/these-are-the-doomsday-satellites-that-detected-the-exp-1737434876) a hidegháború alatt kiépített, többszörös fejlesztésen átesett DSP (Defense Support Program) [műholdakat](https://en.wikipedia.org/wiki/Defense_Support_Program). A hatalmas infravörös teleszkópok köré épített, 10 méter hosszú és 6 méter átmérőjű űreszközök eredetileg egy szovjet nukleáris támadásra figyelmeztették volna az amerikai hadsereget és döntéshozókat, ugyanakkor az 1991-es [öbölháború](https://en.wikipedia.org/wiki/Gulf_War) során fontos szerepet játszottak az iraki Scud rakéták indításának követésében is.
+
+A korábbi rendszerhez képest a 2014-ben műholdanként hozzávetőleg 1,1 milliárd [dolláros költségű](https://spacenews.com/42887lockheed-martin-examines-cost-cutting-options-for-sbirs/) SBIRS a rendelkezésre álló nyílvános információk alapján sokkal érzékenyebb és fejlettebb szenzorokkal rendelkezik, amelyek regionális szintű konfliktusok esetén is sokkal precízebb adatokat szolgáltatnak, [feltehetően nem csak](https://jalopnik.com/these-are-the-doomsday-satellites-that-detected-the-exp-1737434876) ballisztikus rakétákról.
+
+Annak ellenére, hogy a SBIRS az egyetlen globális lefedettséget biztosító műholdas figyelmeztető rendszer 
+
 
 AF https://spacenews.com/the-end-of-sbirs-air-force-says-its-time-to-move-on/
 
