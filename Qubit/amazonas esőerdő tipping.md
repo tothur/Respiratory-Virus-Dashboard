@@ -1,4 +1,4 @@
-# Fordulóponthoz közelít az amazonasi esőerdő nagy része
+# Embargó Hétfő 17:00 - Fordulóponthoz közelít az amazonasi esőerdő nagy része
 
 The Amazon rainforest may be nearing a tipping point of rainforest dieback —the point where rainforest will turn to savannah — with signs of resilience loss being found in over 75% of its area since the early 2000s, according to observational evidence presented in Nature Climate Change.
 
