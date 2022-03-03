@@ -1,53 +1,29 @@
-# Ezek a műholdak észlelnék először a világvégét
+# A bámulatos műholdak, amelyek először észlelnék a világvégét
 
-35 ezer kilométerre a Föld felszínétől kering négy műhold, amelyek feladata az Egyesült Államok figyelmeztetése rakéta-indításokra, bárhol is történjenek azok a bolygón. Ezek az SBIRS (Space Based Infrared Reconaissance and Surveillance) rendszer fő komponensét jelentő műholdak fejlett infravörös szenzorokkal vannak felszerelve, melyek a ballisztikus rakéták által kibocsátott hőt detektálják, azonosítva annak forrását és a rakéta lehetséges célpontját.
+##
 
-A SBRIS műholdak néhány éve váltották le a hidegháború alatt kiépített és többször fejlesztett DSP műholdas rendszert, amely egy esetleges szovjet nukleáris támadásra figyelmeztette volna annak megkezdődése után az amerikai hadserget és döntéshozókat. A DSP-hez képest a SBRIS sokkal fejlettebb képességekkel rendelkezik, támogatást adva hadszintéren lévő csapatok és rakéta-védelmi rendszerek számára.
+Vlagyimir Putyin orosz elnök Ukrajna megszállása után, vasárnap magasabb [készültségbe helyezte](https://444.hu/2022/02/27/putyin-fokozott-keszultsegre-utasitotta-az-orosz-nuklearis-elrettento-eroket) országa nukleáris erőit. A lépés nem járt a NATO szerint [lényegi következményekkel](https://www.reuters.com/world/europe/no-russian-muscle-movements-after-putins-nuclear-readiness-alert-us-says-2022-02-28/), de ráirányította a figyelmet a konfliktus további eszkalálódásának kockázataira.
 
-Bár a SBRIS-nek lényegében nincs párja, az amerikai légierő a 2020-as évek közepére mégis le szeretné cserélni. 
+A Föld felszínétől 35 ezer kilométerre keringve öt csúcstechnológiás műhold garantálja, hogy az Egyesült Államok és szövetségesei azonnal értesülnek arról, ha valahol a bolygón nukleáris fegyvereket hordozó ballisztikus rakéták indítására kerülne sor, garantálva ezzel a NATO [elrettentő erőinek hitelességét](https://qubit.hu/2022/02/28/igy-allnak-most-a-vilag-atomarzenaljai).
 
-FA https://jalopnik.com/these-are-the-doomsday-satellites-that-detected-the-exp-1737434876
+Az [amerikai űrparancsnokság](https://en.wikipedia.org/wiki/United_States_Space_Force) SBIRS (Space Based Infrared System) űrbeli [figyelmeztető rendszere](https://www.lockheedmartin.com/en-us/products/sbirs.html) geostacionárius pályán található, rendkívül érzékeny infravörös szenzorokkal felszerelt műholdakból, és pólusok felett elliptikus pályákon keringő műholdakra szerelt detektorokból áll. Ezek képesek a rakétahajtóművek által kibocsátott hő észlelésére és követésére, meghatározva így a rakéták célpontját, segítve a rakétavédelmi rendszerek munkáját és adatokat gyűjtve országok rakétatesztjeiről.
 
-AF https://spacenews.com/the-end-of-sbirs-air-force-says-its-time-to-move-on/
+https://youtu.be/mDTnl4E9FiY
 
-CSIS https://missilethreat.csis.org/defsys/sbirs/
+A 2011 és 2018 közt geostacionárius pályára felbocsátott négy SBIRS műhold a Lockheed Martin A2100-as alapműholdjának katonai változatára épül. A [fejlett teleszkópok](https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104549/space-based-infrared-system/) közeli és közép infravörös tartományban mérnek, és két külön műszerre oszthatók. Az egyik 0-24 órában folyamatos képet biztosít a Földről, rakéta indításokra figyelmeztetve, míg a másik nagy-felbontású, gyorsan reagáló képalkotást biztosít, lehetővé téve pontosabb adatok gyűjtését kisebb, regionális területekről is, például ha egy rakéta tesztindításának megfigyelése a cél.
 
-Lockheed SBIRS https://www.lockheedmartin.com/en-us/products/sbirs.html
+A SBIRS a 2010-es években [váltotta le](https://jalopnik.com/these-are-the-doomsday-satellites-that-detected-the-exp-1737434876) a hidegháború alatt kiépített, többszörös fejlesztésen átesett DSP (Defense Support Program) [műholdakat](https://en.wikipedia.org/wiki/Defense_Support_Program). A hatalmas infravörös teleszkópok köré épített, 10 méter hosszú és 6 méter átmérőjű űreszközök eredetileg egy szovjet nukleáris támadásra figyelmeztették volna az amerikai hadsereget és döntéshozókat, ugyanakkor az 1991-es [öbölháború](https://en.wikipedia.org/wiki/Gulf_War) során fontos szerepet játszottak az iraki Scud rakéták indításának követésében is.
 
-USAF https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104549/space-based-infrared-system/
+A korábbi rendszerhez képest a 2014-ben műholdanként hozzávetőleg 1,1 milliárd [dolláros költségű](https://spacenews.com/42887lockheed-martin-examines-cost-cutting-options-for-sbirs/) SBIRS a rendelkezésre álló nyílvános információk alapján sokkal érzékenyebb és fejlettebb szenzorokkal rendelkezik, amelyek regionális szintű konfliktusok esetén is sokkal precízebb adatokat szolgáltatnak. Erre jó példát jelent az Irán által 2020 januárjában az USA iraki Al Assad légibázisa ellen rövid hatótávú ballisztikus rakétákkal intézett támadás, ahol a SBIRS [figyelmeztetésének köszönhetően](https://www.c4isrnet.com/battlefield-tech/space/2021/01/07/exclusive-how-the-space-force-foiled-an-iranian-missile-attack-with-a-critical-early-warning/) a katonák időben óvóhelyekre tudtak húzódni.
 
-new early warning satellites https://www.thedrive.com/the-war-zone/41383/space-force-plans-to-place-new-early-warning-satellites-into-non-traditional-orbits-closer-to-earth
+A SBIRS 2020 óta üzemelő [orosz megfelelője](https://en.wikipedia.org/wiki/EKS_(satellite_system)), a Kupol/EKS [Molnyija-pályákon](https://en.wikipedia.org/wiki/Molniya_orbit) keringő műholdakból áll, amelyek a bolygó orosz szempontból releváns területeit [képesek](https://russianforces.org/sprn/#:~:text=Early-warning%20satellites,-2541%20-%20in%20September%202019.) figyelemmel követni.
 
-iranian missile attack https://www.thedrive.com/the-war-zone/39527/everything-new-we-just-learned-about-the-iranian-missile-attack-on-al-asad-air-base
+Jelenleg a SBIRS az egyetlen teljesen globális lefedettséget biztosító műholdas figyelmeztető rendszer, ennek ellenére a fejlesztése, és utódjának tervezése nagy erőkkel folyik. A négy eredeti, geostacionárius pályán keringő műholdhoz [néhány hete csatlakozott](https://www.lockheedmartin.com/en-us/news/features/2022/sbirs-geo-5-operationally-accepted.html) a tavaly májusban indított, külső beavatkozások ellen védettebb, továbbfejlesztett GEO-5 műhold, amelyet a [következő hónapokban induló](https://www.lockheedmartin.com/en-us/news/features/2021/enhanced-missile-warning-satellite-ready-early-for-launch.html) GEO-6 követ majd.
 
-Mission
-The Space Based Infrared System program is the follow-on capability to the highly successful Defense Support Program. The SBIRS program was designed to provide a seamless operational transition from DSP to SBIRS and meet jointly-defined requirements of the defense and intelligence communities in support of the missile early warning, missile defense, battlespace awareness and technical intelligence mission areas.
+2018-ban az amerikai légierő, az akkor még általa menedzselt SBIRS jövőjéről döntve [elhatározta](https://spacenews.com/the-end-of-sbirs-air-force-says-its-time-to-move-on/), hogy a 2020-as évek közepétől egy támadásokkal szemben ellenállóbb, egyszerűbb műholdas rendszer válthatja azt fel. A "következő generációs űrbeli állandó infravörös rendszer" (Next Gen OPIR) első műholdja 2025-ben [indulhat el](https://spacenews.com/gao-flags-concerns-about-procurement-of-dods-early-warning-satellites/). Ezen új generációs műholdak egy része a Földtől távoli geostacionárius és az alacsony Föld-körüli pálya [között kering majd](https://www.thedrive.com/the-war-zone/41383/space-force-plans-to-place-new-early-warning-satellites-into-non-traditional-orbits-closer-to-earth), hogy a SBIRS-nél is jobban legyen képes detektálni nem ballisztikus pályán mozgó hiperszónikus fegyvereket is.
 
-Description
-The SBIRS program consists of the space segment of Geosynchronous Earth Orbit satellites, Highly Elliptical Orbit sensors riding on host satellites, legacy DSP satellites and the associated world-wide deployed ground systems. Air Force Space Command's 460th Operations Group is responsible for conducting HEO, GEO and DSP operations at all fixed ground sites. The 233rd Space Group, an Air National Guard unit, operates the Mobile Ground System, which processes data from DSP satellites currently, providing survivable and endurable mission support. The SBIRS program is managed by the Remote Sensing Systems Directorate at the U.S. Air Force Space and Missile Systems Center. Lockheed Martin Space Systems Company is the prime contractor responsible for program development, systems engineering and spacecraft development, while Lockheed Martin Information Systems and Global Solutions is the ground systems developer. Northrop Grumman Electronic Systems is the payload subcontractor for the infrared sensors.
+Kapcsolódó cikkek a Qubiten:
 
-Two HEO sensors and four GEO satellites have launched. All four GEO satellites were launched on United Launch Alliance's Atlas V rocket from Space Launch Complex 41 at Cape Canaveral Air Force Station, Florida. The SBIRS Mission Control Station manages the constellation of HEO sensors, GEO satellites and the legacy DSP satellites. The SBIRS Block 10 ground system consolidates the legacy DSP, HEO and GEO ground systems from three locations into one primary and one backup ground station. This consolidation provides a significant reduction in manpower requirements, allows for improved mission processing capabilities and greatly increases performance across all four SBIRS mission areas. The SBIRS Survivable/Endurable Evolution program will replace the aging MGS, initially designed for support of DSP operations in the 1960s, supporting SBIRS survivability and endurability requirements.
 
-System Features
-The SBIRS sensors are designed to provide greater flexibility and sensitivity than the DSP infrared sensor and detect short-wave and mid-wave infrared signals, allowing SBIRS to perform a broader set of missions. These enhanced capabilities result in improved prediction accuracy for global strategic and tactical warfighters. The on-going evolution of the ground system uses improved mission processing software, resulting in increased event message accuracy and reduced manpower for support and operations of the DSP and SBIRS portfolio.
 
-The GEO spacecraft bus consists of a militarized, radiation-hardened version of the Lockheed Martin A2100 spacecraft, providing power, attitude control, command and control and a communications subsystem with five separate mission data downlinks to meet mission requirements, including system survivability and endurability requirements. The GEO infrared payload consists of two sensors; a scanner and a step-starer. The scanning sensor continuously scans the earth to provide 24/7 global strategic missile warning capability. Data from the scanner also contributes to theater and intelligence missions. The step-staring sensor, with its highly-agile and highly-accurate pointing and control system, provides coverage for theater missions and intelligence areas of interest with its fast revisit rates and high sensitivity. Similar to the GEO scanning sensor, the HEO sensor is a scanning sensor, with sensor pointing performed by slewing the full telescope on a gimbal. Both the GEO and HEO infrared sensors gather raw, unprocessed data that are down-linked to the ground, so the same radiometric scene observed in space will be available on the ground for processing. The GEO sensors also perform on-board signal processing and transmit detected events to the ground, in addition to the unprocessed raw data.
 
-Features
-- Dimension
-HEO sensor: approximately 7 feet x 4 feet x 3 feet
-GEO satellite: approximately 49 feet x 22 feet x 20 feet with all appendages deployed on-orbit
-
-- Weight (all weights approximate)
-HEO sensor: 530 lbs.
-GEO satellite: on-orbit, 5,525 lbs., including a 1,100 lb. two-sensor payload and 430 lbs. of fuel
-
-- GEO power source: 2 deployable, sun-tracking solar arrays
-
-- First GEO satellite launch on May 7, 2011
-
-- Second GEO satellite launch on March 19, 2013
-
-- Third GEO satellite launch on Jan. 20, 2017
-
-- Fourth GEO satellite launch on Jan. 19, 2018
