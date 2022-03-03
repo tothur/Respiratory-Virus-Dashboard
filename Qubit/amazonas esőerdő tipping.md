@@ -1,5 +1,7 @@
 # Embargó Hétfő 17:00 - Fordulóponthoz közelít az amazonasi esőerdő nagy része
 
+https://www.nature.com/articles/s41558-022-01287-8
+
 The Amazon rainforest may be nearing a tipping point of rainforest dieback —the point where rainforest will turn to savannah — with signs of resilience loss being found in over 75% of its area since the early 2000s, according to observational evidence presented in Nature Climate Change.
 
 Tropical forests such as the Amazon play a critical role in climate regulation. Climate change and human-induced activities such as deforestation, however, have been putting increasing pressure on the Amazon rainforest in recent decades. 
