@@ -1,6 +1,8 @@
-# Embargó Hétfő 17:00 - Fordulóponthoz közelít az amazonasi esőerdő nagy része
+# Embargó Hétfő 17:00 - Az amazonasi esőerdő 77 százaléka veszélyben van a klímaváltozás és erdőírtás következtében
 
-https://www.nature.com/articles/s41558-022-01287-8
+A 2000-es évek eleje óta az amazonasi esőerdő háromnegyede veszített ellenállóképességéből, amely azt jelzi, hogy az esőerdő jelentős részét pusztulás fenyegeti, derül ki egy új kutatásból.
+
+A ma délután a Nature Climate Change folyóiratban [közölt eredmények](https://www.nature.com/articles/s41558-022-01287-8) arra utalnak, hogy az Amazonas az erdőírtás és az emberi tevékenység által okozott globális felmelegedés miatt kritikus fordulóponthoz közelít.
 
 The Amazon rainforest may be nearing a tipping point of rainforest dieback —the point where rainforest will turn to savannah — with signs of resilience loss being found in over 75% of its area since the early 2000s, according to observational evidence presented in Nature Climate Change.
 
