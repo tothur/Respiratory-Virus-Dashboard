@@ -18,3 +18,8 @@ A fordulópont átlépése szerintük akár 3-4 évtized alatt egy új stabil á
 
 *Kapcsolódó cikkek a Qubiten:*
 
+https://qubit.hu/2022/01/31/tele-vannak-az-aranyasok-altal-kibocsatott-higannyal-az-amazoniai-esoerdok
+
+https://qubit.hu/2021/05/05/a-fold-tudejebol-lassan-a-fold-tudorakjava-valik-az-amazoniai-esoerdo
+
+https://qubit.hu/2021/05/06/egyre-nagyobb-mertekben-olvadnak-a-gleccserek-de-meg-van-eselyunk-a-jegtakarok-megmentesere
