@@ -1,6 +1,6 @@
 # KÉSZÜL - Megfejtették miért öregszenek lassabban a mormoták
 
-## Kutatók 14 évig vizsgáltak coloradoi sárgahasú mormotákat.
+## Kutatók 14 évig vizsgáltak coloradoi sárgahasú mormotákat, és arra jutottak, hogy hibernációjuk során sokkal lassabban öregszenek.
 
 Jelentősen lassabban öregednek a sárgahasú mormoták hibernációjuk során, mint aktív időszakukban, derült ki egy, az állatok öregedésének genetikai nyomait több mint egy évtizeden át követő új kutatásból.
 
