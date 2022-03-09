@@ -16,4 +16,9 @@ A mormoták epigenetikai életkorát a DNS-ük metilációs állapota jellemzi, 
 
 Arra jutottak, hogy az állatok epigenetikai kora az első két évben gyorsabban növekedett, ameddig a nőstény sárgahasú mormoták elérik kifejlett korukat. Az öregedés ezután lelassult, és évszakos változásokat mutatott. Az állatok elsősorban a késő tavasztól-kora őszig tartó aktív periódusukban öregedtek, míg a hosszú hibernációs periódus alatt szinte alig. A kutatók közel 12-szeres eltérést figyeltek meg a két időszak között az egy napra vetített epigenetikai öregedés mértékében.
 
-Ez alapján úgy vélik, az adataik egybevágnak a "hibernációs öregedés" hipotézissel.
+A kutatók az epigenetikai öregedés lelassulása alapján úgy vélik, az adataik egybevágnak a "hibernációs öregedés" hipotézissel, azaz a hibernációban résztvevő biológiai folyamatok fontos részei lehetnek a hibernáló emlősök élethosszának meghatározásában. Pinhoék szerint az öregedést gátló hatás mechanizmusának megértéséhez a hibernáció fajon belüli és fajok közti változatosságát kell majd vizsgálni, illetve más,m az anyagcsere ráta csökkentésével összefüggő túlélési stratégiákat - amelyek sejtszintű és molekuláris alapjai az egész élővilágban hasonlóak.
+
+*Kapcsolódó cikkek a Qubiten:*
+
+
+
