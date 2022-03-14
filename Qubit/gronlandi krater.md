@@ -16,7 +16,9 @@ A becsapódás során keletkezett kavicsokat 4 kilométerre a gleccser végétő
 
 Ez egyrészt kizárja azt, hogy a becsapódásnak bármilyen köze legyen a Younger Dryas lehűléshez, emellett arra utal, hogy a jégtakaró alatti eróziós folyamatok sokkal lassabbak a várntál, amely más grönlandi struktúrák korát is korábbra tolhatja. Ilyenek lehetnek a jégtakaró alatti folyóvölgyek is, amelyek eredetileg még a kráternél is régebben, a földtörténeti [középidőben](https://en.wikipedia.org/wiki/Mesozoic) keletkezhettek.
 
-A Hiawata becsapódás Kenny és munkatársai szerint jóval Grönland eljegesedése előtt történt, és az esemény nem vág egybe az 56 millió évvel ezelőtti paleocén-eocén hőmérsékleti maximummal (PETM), és a kelet grönlandon 56 millió éve zajló bazaltos vulkanizmussal sem. A becsapódás a paleocén szén izotóp maximummal vág időben egybe, de a kettő közti ok-okozati összefüggésre egyelőre nincs bizonyíték.
+A Hiawatha becsapódás Kenny és munkatársai szerint nem vág egybe az 55,5-56 millió évvel ezelőtti [paleocén-eocén hőmérsékleti maximummal](https://en.wikipedia.org/wiki/Uranium_lead_dating) (PETM), és a kelet grönlandon 56 millió éve zajló bazaltos vulkanizmussal sem. Ugyanakkor a paleocén [szén izotóp maximummal](https://ui.adsabs.harvard.edu/abs/2017AGUFMPP23B1307P/abstract) igen, amely a szén ciklus zavarát jelzi, és jelenlegi elképzelések szerint egy viszonylag hűvősebb, 63-59 millió évvel ezelőtti időszak következménye, amely alatt viszonylag sok légköri szén-dioxid kötődött meg. Ok-okozati összefüggést nem lehet fölállítani a kutatók szerint jelenleg a becsapódás és bármilyen ekkor zajló esemény között, nagyrészt azért, mert a Hiawatha becsapódás során a kráterből kivájt anyagot eddig nem sikerült geológiai rétegekben azonosítani.
+
+Kennyék szerint korábbi kutatások arra mutatnak, hogy a 66 millió évvel ezelőttinél jelentősen kisebb becsapódások is jelentős károkat tudnak okozni, így fenn áll az esélye, hogy a Hiawatha regionális vagy akár globális szinten is kihatott az éghajlatra és az élővilágra, ennek megállapításához azonban további vizsgálatokra lesz szükség.
 
 *Kapcsolódó cikkek a Qubiten:*
 
