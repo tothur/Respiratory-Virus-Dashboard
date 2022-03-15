@@ -1,5 +1,19 @@
 # Pluhár Gábor interjú - műholdak
 
-A témákat tekintve beszélhetnénk hosszabban arról, hogy egy műhold tervezésénél milyen szempontoknak kell megfelelni, melyek a fontosabb rendszerek, hogyan zajlik ezek tesztelése - és itt hosszabban kitérnénk a szakterületedre, a thermal rendszerekre. Ezután a FORUM műhold tudományos programjáról ejthetnénk szót, a technikai kihívásokról, illetve a projektben való szerepvállalásodról. A PLATO űrtávcsőről is beszélhetünk röviden, szerintem az is érdekes lenne. Emellett persze arról is kérdeznélek, hogy kerültél erre a területre, és akkor itt a TUM-os tapasztalatok is szóba kerülhetnek.
+## Hogyan kezdett el műholdak rendszereinek tervezésével foglalkozni?
 
-Mühold tervezés egy szép nagy téma, sokat lehet róla beszélni. A PLATO rol mindenkeppen beszeljunk, mert fajdalmasan kevés szó esik róla. Biztos vagyok benne, hogy nagy felfedezések fognak kapcsolodni hozza. Amugy is keszülok belöle, mert aprilisban fogjuk tesztelni az ESA-nal az ugynevezett STM modelt. Viszont akkor addig atnezem a red book-ot, hogy pontosan hogyan is fog mukodni, meg kollegaktol begyujtok meg par funfactet.
+## Hol folytatja jelenleg ezt a munkát? (OHB System AG)
+
+## Mik a legfontosabb dolgok, amikre egy műhold tervezésénél oda kell figyelni, és melyek a legfontosabb rendszerek, amik elengedhetetlenek az űreszköz működéséhez?
+
+## Miért fontos a műholdaknál a hőmérséklet szabályozó rendszer?
+
+## Hogyan zajlik a rendszerek tervezése, építése és tesztelése? Mennyi időt szoktak ezek a fázisok átlagosan igénybe venni?
+
+## Dolgozott korábban az európai űrügynökség földmegfigyelő műholdján, a FORUM-on. Mi ennek a küldetésnek a célja, és milyen kihívásokat kellett megoldani a FORUM rendszereinek tervezés során?
+
+## Szintén szerepet vállalat a PLATO űrtávcső tervezésében, amely Földhöz hasonló exobolygókat fog keresni távoli csillagok körül 2026-tól. Hogyan fogja ezt a PLATO véghez vinni?
+
+## Mivel foglalkozott a PLATO tervezése során?
+
+## Az ESA-nál néhány hét múlva, áprilisban tesztelik majd az űrtávcső struktúrális és hőmérséklet-eloszlási modelljét. Miért fontos ez?
