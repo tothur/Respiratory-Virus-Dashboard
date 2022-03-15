@@ -1,0 +1,5 @@
+# Pluhár Gábor interjú - műholdak
+
+A témákat tekintve beszélhetnénk hosszabban arról, hogy egy műhold tervezésénél milyen szempontoknak kell megfelelni, melyek a fontosabb rendszerek, hogyan zajlik ezek tesztelése - és itt hosszabban kitérnénk a szakterületedre, a thermal rendszerekre. Ezután a FORUM műhold tudományos programjáról ejthetnénk szót, a technikai kihívásokról, illetve a projektben való szerepvállalásodról. A PLATO űrtávcsőről is beszélhetünk röviden, szerintem az is érdekes lenne. Emellett persze arról is kérdeznélek, hogy kerültél erre a területre, és akkor itt a TUM-os tapasztalatok is szóba kerülhetnek.
+
+Mühold tervezés egy szép nagy téma, sokat lehet róla beszélni. A PLATO rol mindenkeppen beszeljunk, mert fajdalmasan kevés szó esik róla. Biztos vagyok benne, hogy nagy felfedezések fognak kapcsolodni hozza. Amugy is keszülok belöle, mert aprilisban fogjuk tesztelni az ESA-nal az ugynevezett STM modelt. Viszont akkor addig atnezem a red book-ot, hogy pontosan hogyan is fog mukodni, meg kollegaktol begyujtok meg par funfactet.
