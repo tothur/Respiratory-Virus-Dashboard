@@ -1,14 +1,16 @@
 # Pluhár Gábor interjú - műholdak
 
-Hogyan kezdett el műholdak rendszereinek tervezésével foglalkozni?
+Hogyan kezdtél el műholdak rendszereinek tervezésével foglalkozni?
 
-Jelenleg a német OHB System AG-nál folytatja ezt a munkát. Mit kell erről a vállalatról tudni?
+Jelenleg a német OHB System AG-nál folytatod ezt a munkát. Mit kell erről a vállalatról tudni?
 
 Mik a legfontosabb dolgok, amikre egy műhold tervezésénél oda kell figyelni, és melyek a legfontosabb rendszerek, amik elengedhetetlenek az űreszköz működéséhez?
 
-Miért fontos a műholdaknál a hőmérséklet szabályozó rendszer?
+Hogyan kell elképzelni azt, amikor egy műhold rendszereit tervezed? Milyen eszközöket használsz ehhez?
 
-Hogyan zajlik a rendszerek tervezése, építése és tesztelése? Mennyi időt szoktak ezek a fázisok átlagosan igénybe venni?
+Miért fontos a műholdaknál a hőmérséklet szabályozó rendszer, aminek tervezésével foglalkozol?
+
+Mennyi időt szokott a tervezési fázis átlagosan igénybe venni, az űreszköz építéséhez és teszteléséhez képest?
 
 Dolgozott korábban az európai űrügynökség földmegfigyelő műholdján, a [FORUM](https://www.esa.int/Applications/Observing_the_Earth/FutureEO/A_new_satellite_to_understand_how_Earth_is_losing_its_cool)-on. Mi ennek a küldetésnek a célja?
 
