@@ -1,8 +1,10 @@
 # Pluhár Gábor interjú - műholdak
 
+https://www.linkedin.com/in/gaborpluhar/
+
 Hogyan kezdtél el műholdak rendszereinek tervezésével foglalkozni?
 
-Jelenleg a német OHB System AG-nál folytatod ezt a munkát. Mit kell erről a vállalatról tudni?
+Jelenleg a német [OHB System AG](https://www.ohb-system.de/main-company.html)-nál folytatod ezt a munkát. Mit kell erről a vállalatról tudni?
 
 Mik a legfontosabb dolgok, amikre egy műhold tervezésénél oda kell figyelni, és melyek a legfontosabb rendszerek, amik elengedhetetlenek az űreszköz működéséhez?
 
