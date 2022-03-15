@@ -10,7 +10,9 @@
 
 ## Hogyan zajlik a rendszerek tervezése, építése és tesztelése? Mennyi időt szoktak ezek a fázisok átlagosan igénybe venni?
 
-## Dolgozott korábban az európai űrügynökség földmegfigyelő műholdján, a FORUM-on. Mi ennek a küldetésnek a célja, és milyen kihívásokat kellett megoldani a FORUM rendszereinek tervezés során?
+## Dolgozott korábban az európai űrügynökség földmegfigyelő műholdján, a FORUM-on. Mi ennek a küldetésnek a célja?
+
+## Hogyan méri a FORUM a Föld távoli-infravörös tartományú sugárzását? Milyen kihívásokat jelentettek a szenzitív infravörös detektorok a műhold tervezésénél?
 
 ## Szintén szerepet vállalat a PLATO űrtávcső tervezésében, amely Földhöz hasonló exobolygókat fog keresni távoli csillagok körül 2026-tól. Hogyan fogja ezt a PLATO véghez vinni?
 
