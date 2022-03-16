@@ -4,7 +4,7 @@ https://www.linkedin.com/in/gaborpluhar/
 
 Hogyan kezd valaki műholdak rendszereinek tervezésével foglalkozni?
 
-Jelenleg a német [OHB System AG](https://www.ohb-system.de/main-company.html)-nál folytatod ezt a munkát. Mivel foglalkozik a vállalat?
+Jelenleg a német [OHB System AG](https://www.ohb-system.de/main-company.html)-nál dolgozol. Milyen űrtevékenységekkel foglalkozik a vállalat (Galileo, ISS, földmegfigyelés, Mars, ISR)
 
 Mik a legfontosabb dolgok, amikre egy műhold tervezésénél oda kell figyelni, és melyek a legfontosabb rendszerek, amik elengedhetetlenek az űreszköz működéséhez?
 
