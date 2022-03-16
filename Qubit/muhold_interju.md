@@ -14,11 +14,11 @@ Hogyan kell elképzelni azt, amikor a műhold rendszereit tervezed? Milyen eszk�
 
 Mennyi időt szokott a tervezési fázis átlagosan igénybe venni, az űreszköz építéséhez és teszteléséhez képest?
 
-Dolgozott korábban az európai űrügynökség földmegfigyelő műholdján, a [FORUM](https://www.esa.int/Applications/Observing_the_Earth/FutureEO/A_new_satellite_to_understand_how_Earth_is_losing_its_cool)-on. Mi ennek a küldetésnek a célja?
+Dolgoztál az európai űrügynökség földmegfigyelő műholdján, a [FORUM](https://www.esa.int/Applications/Observing_the_Earth/FutureEO/A_new_satellite_to_understand_how_Earth_is_losing_its_cool)-on. Mi ennek a jelenlegi tervek szerint 2026-2027-ben induló küldetésnek a célja? (Föld sugárzási büdzséjének megállapítás, mérése, jobb klímamodellek)
 
-Hogyan méri a [FORUM](https://www.forum-ee9.eu/) a Föld távoli-infravörös tartományú sugárzását? Milyen kihívásokat jelentettek a szenzitív infravörös detektorok a műhold tervezésénél és miért volt fontos a thermal rendszeren folytatott?
+Hogyan méri a [FORUM](https://en.wikipedia.org/wiki/Far-infrared_Outgoing_Radiation_Understanding_and_Monitoring) a Földről távozó hősugárzást amelyet eddig nem mértek meg pontosan? Milyen kihívásokat jelentettek a szenzitív távoli infravörös tartományú detektorok a műhold tervezésénél és miért volt fontos a thermal rendszeren folytatott?
 
-Szintén szerepet vállalat a [PLATO](https://en.wikipedia.org/wiki/PLATO_(spacecraft)) űrtávcső tervezésében, amely Földhöz hasonló exobolygókat fog keresni távoli csillagok körül 2026-tól. Hogyan fogja ezt a PLATO véghez vinni?
+Szintén szerepet vállaltál a [PLATO](https://en.wikipedia.org/wiki/PLATO_(spacecraft)) űrtávcső tervezésében, amely többek közt Földhöz hasonló exobolygókat fog keresni Naphoz hasonló csillagok lakhatósági zónájában, 2026-tól. Hogyan fogja ezt a PLATO véghez vinni? (26 20 cm-es teleszkópos kamerából álló rendszer, 24 normál és 2 gyors kamerával, teliholdnál 10.000x nagyobb terület, L2-ből mér majd, Naphoz hasonló és vöröstörpe csillagok, Szuperföldek-Földhöz hasonló bolygók, bolygók karakterizációja, lakhatósági zónákban lévő bolygók felfedezése)
 
 Mivel foglalkoztál a PLATO tervezése során?
 
