@@ -18,7 +18,7 @@ Dolgoztál az európai űrügynökség földmegfigyelő műholdján, a [FORUM](h
 
 Hogyan méri a [FORUM](https://en.wikipedia.org/wiki/Far-infrared_Outgoing_Radiation_Understanding_and_Monitoring) a Földről távozó hősugárzást amelyet eddig nem mértek meg pontosan? Milyen kihívásokat jelentettek a szenzitív távoli infravörös tartományú detektorok a műhold tervezésénél és miért volt fontos a thermal rendszeren folytatott?
 
-Szintén szerepet vállaltál a [PLATO](https://en.wikipedia.org/wiki/PLATO_(spacecraft)) űrtávcső tervezésében, amely többek közt Földhöz hasonló exobolygókat fog keresni Naphoz hasonló csillagok lakhatósági zónájában, 2026-tól. Hogyan fogja ezt a PLATO véghez vinni? (26 20 cm-es teleszkópos kamerából álló rendszer, 24 normál és 2 gyors kamerával, teliholdnál 10.000x nagyobb terület, L2-ből mér majd, Naphoz hasonló és vöröstörpe csillagok, Szuperföldek-Földhöz hasonló bolygók, bolygók karakterizációja, lakhatósági zónákban lévő bolygók felfedezése)
+Szintén szerepet vállaltál a [PLATO](https://en.wikipedia.org/wiki/PLATO_(spacecraft)) [űrtávcső](https://platomission.com/) tervezésében, amely többek közt Földhöz hasonló exobolygókat fog keresni Naphoz hasonló csillagok lakhatósági zónájában, 2026-tól. Hogyan fogja ezt a PLATO véghez vinni? (26 20 cm-es teleszkópos kamerából álló rendszer, 24 normál és 2 gyors kamerával, teliholdnál 10.000x nagyobb terület, L2-ből mér majd, Naphoz hasonló és vöröstörpe csillagok, Szuperföldek-Földhöz hasonló bolygók, bolygók karakterizációja, lakhatósági zónákban lévő bolygók felfedezése)
 
 Mivel foglalkoztál a PLATO tervezése során?
 
