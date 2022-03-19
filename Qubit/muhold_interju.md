@@ -1,4 +1,10 @@
-# Pluhár Gábor interjú - műholdak
+#
+
+## 
+
+A műholdak alapvető részei modern civilizációnknak. Nélkülük nem tudnánk egyszerűen navigálni, sokkal nehezebb lenne a telekommunikáció, pontatlanabb az időjárás előrejelzés, nehezebben értenénk meg a klímaváltozást, és a világegyetemről is sokkal kevesebbet tudnánk.
+
+Arról viszont kevesebbet esik szó, hogyan jutnak el ezek a műholdak a kilövésig, és milyen mérnöki munkának köszönhető az, hogy küldetésüket a legtöbb esetben sikerrel teljesítik. A Qubit múlt héten Pluhár Gáborral, az OHB System AG német űripari vállalat műholdak tervezésében résztvevő mérnökével beszélgetett, hogy ezekre választ kapjunk. A hőszabályozó (thermal) rendszerek tervezéséért felelős mérnökkel emellett a FORUM éghajlatváltozás kutató műholdról és a PLATO exobolygó kereső űrtávcsőről is beszéltünk.
 
 “Véletlenek sorozata folytán keveredtem bele, nem volt fiatalon ilyen elképzelésem, hogy ezzel szeretnék foglalkozni" - magyarázta Pluhár Gábor, hogyan került bele a műholdak tervezésébe. "Amikor befejeztem a BME gépészmérnöki alapképzését, kiköltöztem Németországba, elkezdtem ott dolgozni. Már a BME-n hallottam arról, hogy Münchenben van aerospace engineering szak, ezt megpróbáltam, és Münchenben fölvettek. Bár későn jött döntés volt, mindig lenyűgözőnek találtam a világűrt, és nagyon megfogott a képzésnek ezen része. Majd mivel Münchenben elég drága az élet, elkezdtem ismét munkát keresni, és így kötöttem ki az OHB-nál, először diákként, majd miután elvégeztem az egyetemet, megkértek, hogy maradjak, így összességében 2016 óta vagyok a cégnél."
 
