@@ -1,6 +1,6 @@
-#
+# Hibátlan hőmérséklet szabályozás nélkül nem működnének a modern civilizációnkhoz nélkülözhetetlen műholdak
 
-## A Qubit Pluhár Gábor műholdak tervezésével foglalkozó mérnökkel beszélt...
+## Pluhár Gábor, az OHB System AG műholdak hőmérsékletszabályozó rendszereinek tervezésével foglalkozó mérnök a Qubitnek elmondta, hogyan zajlik egy műhold tervezése, miért jó a fekete hőszigetelő fólia a világűrben, és azt is, miért forradalmasíthatja a tudományt a PLATO exobolygó kereső űrtávcső.
 
 A műholdak alapvető részei modern civilizációnknak. Nélkülük nem tudnánk egyszerűen navigálni, sokkal nehezebb lenne a telekommunikáció, pontatlanabb az időjárás előrejelzés, nehezebben értenénk meg a klímaváltozást, és a világegyetemről is sokkal kevesebbet tudnánk. Arról viszont keveset esik szó, hogyan jutnak el ezek a műholdak a kilövésig, és milyen mérnöki munkának köszönhető az, hogy küldetésüket a legtöbb esetben sikerrel teljesítik. A Qubit múlt héten Pluhár Gáborral, az OHB System AG német űripari vállalat műholdak tervezésében résztvevő mérnökével beszélgetett, hogy ezekre választ kapjunk. A hőszabályozó (thermal) rendszerek tervezéséért felelős mérnökkel emellett a FORUM éghajlatváltozás kutató műholdról és a PLATO exobolygó kereső űrtávcsőről is beszéltünk.
 
@@ -47,3 +47,7 @@ Bár Pluhár a PLATO tervezésében nem, csak tesztelésében vett részt, elmon
 Egy PLATO méretű műhold esetén a lehető legnagyobb tesztkamrára van szükség Pluhár szerint, "ehhez pedig el kell menni Hollandiába az ESTEC-hez, az ESA egyik központjába, ahol Európában a legnagyobb vákumkamra található. Ez akkora, hogy nem ajtaja van, hanem egy hatalmas fedél van rajta, amit daruval kell leemelni, majd belehelyezni a műholdat, illetve működetési költsége is hatalmas, napi szinten több tízezer euró. Ennek egy hónapig, éjjel-nappal üzemelnie kell a tesztelés során, hogy bizonyítani lehessen, hogy a műhold megfelel az ESA által előírt standardoknak." Pluhár a tesztelés során főként bármilyen hiba esetén annak megszakításáért és a thermal rendszer szabályozásáért felel, ugyanakkor arra is felhívta a figyelmet, hogy a teszt során nyert adatok a thermal modellek pontosítására is hasznosak szoktak lenni. "Ha egy kész műhold teszeléséről beszélünk, annak vannak kritikus részei, például a műhold lítium ion akkumulátorai, amiket 5-35 fok között kell tartani, különben tönkremennek. Ha azt látom, hogy elkezdene túlmelegedni, vagy nagyon lehűlni, közbe kell avatkoznom a hőszabályozó rendszerben, meg kell óvnom a műholdat, ami stresszes folyamat tud lenni."
 
 *Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2021/12/25/sikeresen-elindult-a-james-webb-minden-idok-legfejlettebb-urteleszkopja
+
+https://qubit.hu/2022/01/17/hogyan-fedez-fel-egy-magyar-csillagasz-egy-ustokost
