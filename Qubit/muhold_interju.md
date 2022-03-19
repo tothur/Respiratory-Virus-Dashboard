@@ -51,3 +51,7 @@ Egy PLATO méretű műhold esetén a lehető legnagyobb tesztkamrára van szüks
 https://qubit.hu/2021/12/25/sikeresen-elindult-a-james-webb-minden-idok-legfejlettebb-urteleszkopja
 
 https://qubit.hu/2022/01/17/hogyan-fedez-fel-egy-magyar-csillagasz-egy-ustokost
+
+https://qubit.hu/2021/11/17/sikeres-volt-a-joddal-mukodo-ionhajtomu-tesztje-johetnek-az-olcsobb-furgebb-muholdak
+
+https://qubit.hu/2021/10/17/na-de-draga-akademikus-ur-minek-adjak-en-neked-penzt
