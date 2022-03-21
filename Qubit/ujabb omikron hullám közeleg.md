@@ -8,7 +8,7 @@ BA.2
 
 Deltacron
 
-## EU
+## EU és Egyesült Álla
 
 ## Kína és HK
 
