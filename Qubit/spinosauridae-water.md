@@ -2,7 +2,7 @@
 
 ## Új bizonyítékok alapján a Spinosaurusokhoz tartozó, korai kréta időszakban élt dinoszauruszok nagyrészt vízben éltek.
 
-Vízi életmódhoz való adaptációkkal rendelkeztek a Spinosaurusok, derül ki egy új kutatásból.
+Vízi életmódhoz való adaptációkkal rendelkeztek a [Spinosaurusok](https://en.wikipedia.org/wiki/Spinosauridae), derül ki egy új kutatásból.
 
 A ma délután a Nature folyóiratban [közölt kutatás](https://www.nature.com/articles/s41586-022-04528-0) átírja azt a korábbi vélekedést, hogy a legtöbb nem-madár dinoszaurusz kizárólag szárazföldi környezetben élt volna.
 
