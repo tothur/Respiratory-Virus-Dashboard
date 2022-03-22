@@ -1,4 +1,4 @@
-# Embargó Szerda 17:00 - Vízben éltek a Spinosauruszok
+# Embargó Szerda 17:00 - Vízben vadásztak a krétában élt Spinosauruszok
 
 ## Új bizonyítékok alapján a Spinosaurusokhoz tartozó, korai kréta időszakban élt dinoszauruszok nagyrészt vízben éltek.
 
