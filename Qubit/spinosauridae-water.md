@@ -18,18 +18,7 @@ A kutatók egy úgynevezett összehasonlító filogenetikai vizsgálatot végezt
 
 A csontsűrűségi filogenetikai vizsgálat számtalan dinoszauruszt tartalmazott, amelybe a Spinosaurusokhoz tartozó *Baryonyx*, *Suchomimus* és *Spinosaurus* dinoszauruszoktól vett, új csontszövettani adatokat is bevettek a szakemberek. Ez feltárta, hogy a Spinosaurusok az egyetlen nem-madár dinoszaurusz csoport, amely szignifikánsan magasabb csontsűrűségük alapján jól alkalmazkodtak a vízi életmódhoz, konkrétabban a sekély vízi vadászathoz. 
 
-
-Az egyes Spinosaur
-
-
-
-
-Míg a Spinosaurusnál és a Baryonyxnál vízfelszín alatti vadászó életmód valószínű, addig a Suchomimus nem merült a vízfelszín alá. A vízi környezethez való alkalmazkodás a korai kréta időszakban jelent meg a Spinosaurusoknál, miután a korai jura időszakban elválltak más tetanuran theropod dinoszauruszoktól.
-
-
-
-
-Matteo Fabbri, a chicagoi Field természettudományi múzeum kutatója és kollégái a dinoszauruszok vízi életmódhoz való alkalmazkodását ma élő, vagy kihalt magzatburkos állatok (Amniota),  csontsűrűségének összehasonlításával vizsgálták. A 380 vizsgált csontból kiderült, hogy a Spinosauridae csoport sűrű csontokkal rendelkezett, arra utalva, hogy jól alkalmazkodtak vízi életmódhoz. Ez segíthetett az állatoknak a vízben a felhajtóerő szabályozásában, könnyebbé téve a Spinosaurus vagy a Baryonyx dinoszauruszoknak a víz alatti táplálékkeresést, míg a Suchomimus dinoszaurusznál inkább a szárazföldi környezettekkel való megküzdést segíthette. Az eredmények alapján a Spinosauridaek vízi adaptációi a korai krétában jelentek meg, miután a csoport elvállt a Carnosauria ragadozó dinoszauruszoktól a jura időszakban.
+Az egyes Spinosaurusok közt azonban különbségek mutatkoztak. Míg a Spinosaurusnál és a Baryonyxnál vízfelszín alatti vadászó életmód valószínű, addig a Suchomimus nem merült a vízfelszín alá. A vízi környezethez való alkalmazkodás a korai kréta időszakban jelent meg a Spinosaurusoknál, miután a korai jura időszakban elválltak más tetanuran theropod dinoszauruszoktól.
 
 *Kapcsolódó cikkek a Qubiten:*
 
