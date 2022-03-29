@@ -4,33 +4,17 @@ A mély tanuláson alapuló mesterséges intelligencia hamarosan a genetika delp
 
 A március 9-én a Natureben [közölt kutatás eredményei](https://www.nature.com/articles/s41586-022-04506-6) jelentős áttörtést jelentenek evolúciós genetikai kérdések megválaszolásában, és forradalmasíthatják a szintetikus biológiát is. A kutatás fő fókusza a génszabályozás evolúciója.
 
-A DNS nem kódoló, szabályozó szekvenciáin bekövetkező mutációk befolyásolni tudják a gének kifejeződését, ezzel pedig befolyásolni az élőlény fenotípusát és fitnessét. A teljes fitness mező összeállítása, ahol a DNS szekvencia a fitnesshez van párosítva, egy régi cél a biológiában, ugyanakkor nehezen elérhető maradt, mert a hatalmas szekvencia térre való általánosítás kihívásokkal jár.
+A genomjaink nagy része nem kódoló régiókból áll, amelyek nem közvetlenül fehérjék legyártásához szükségesek. Ezek egy része a géneket szabályozza, azaz azt befolyásolja, hogy egy adott fehérjéből mikor-mennyi termelődjön. A DNS nem kódoló, szabályozó szekvenciáin bekövetkező mutációk befolyásolni tudják a gének kifejeződését, ezzel pedig kihatnak az élőlény fenotípusára és fitnessére. A teljes fitness mező összeállítása, ahol a DNS szekvencia a fitnesshez van párosítva, egy régi cél a biológiában, ugyanakkor nehezen elérhető maradt, mert a hatalmas szekvencia térre való általánosítás kihívásokkal jár.
 
-Eeshit Dhaval Vaishnav, az MIT kutatója és kollégái szekvenciából-génkifejeződés modelleket építettek, hogy leírják ezt a fitness tájképet, és feltárják a genetikai szabályozás evolúciójának elveit. Ehhez vettek több millió, véletlenszerűen kiválasztott promóter DNS szekvenciát, és megmérték a génkifejeződésük szintjét egysejtű élesztőgombákban (*Saccharomyces cerevisiae*), amellyel mély neurális hálózati algoritmusokat tréneltek, amelyek ezekből általános következtetéseket vontak le, lehetővé téve a génkifejeződés mérnöki változtatását célzó szekvencia tervezést.
+To better understand the repercussions of such mutations, researchers have been hard at work on mathematical maps that allow them to look at an organism’s genome, predict which genes will be expressed, and determine how that expression will affect the organism’s observable traits. These maps, called fitness landscapes, were conceptualized roughly a century ago to understand how genetic makeup influences one common measure of organismal fitness in particular: reproductive success. Early fitness landscapes were very simple, often focusing on a limited number of mutations. Much richer datasets are now available, but researchers still require additional tools to characterize and visualize such complex data. This ability would not only facilitate a better understanding of how individual genes have evolved over time, but would also help to predict what sequence and expression changes might occur in the future. They also devised a unique way of representing the landscapes in two dimensions, making it easy to understand the past and forecast the future evolution of non-coding sequences in organisms beyond yeast — and even design custom gene expression patterns for gene therapies and industrial applications.
+
+Eeshit Dhaval Vaishnav, az MIT kutatója és kollégái szekvenciából-génkifejeződés modelleket építettek, hogy leírják ezt a fitness tájképet, és feltárják a genetikai szabályozás evolúciójának elveit. Ehhez vettek több millió, véletlenszerűen kiválasztott promóter DNS szekvenciát, és megmérték a génkifejeződésük szintjét egysejtű élesztőgombákban (*Saccharomyces cerevisiae*). Az összegyűjtött több száz millió méréssel mély neurális hálózati algoritmusokat tréneltek, amelyek ezekből általános következtetéseket vontak le, előrejelezve, hogyan befolyásolják a mutációk ezekben a nem-kódoló szekvenciákban a génkifejeződést és lehetővé téve a génkifejeződés mérnöki változtatását célzó szekvencia tervezést.
 
 A modellek segítségével tanulmányozták a génkifejeződés eltéréseit genetikai sodródás, illetve erős-szelekciós és gyenge mutációs szituáció alatt, azt találva, hogy a szabályozó szakaszok evolúciója gyors és ki van téve a csökkenő hozaték episztázis elvének. Emellett arra jutottak, hogy az egymásnak ellentmondó génkifejezpdési célok különbööző környezetekben korlátozzák a génkifejeződés adaptációját, és hogy a stabiliáló szelekció génkifejeződésre mért hatása a szabályozás komplexitásának mérsékléséhez vezet.
 
 Ilyen modelleket használva a kutatók képesek észlelni a szelekció jeleit a génkifejeződésen, a szabályozó szekvenciák természetes változásából, annak érdekében, hogy megtaláéják egy konvergens szabályozási evolúció példáját. A kutatók megvizsgálják a mutációs robosztusságot, azt találva, hogy a szabályozó szakaszok változásainak effect mérete a power lawt követi. Emellett karakterizálják a szabályozó szakaszok evolválhatóságát, vizualizálják a promóter fitness tájképet, felfedeznek evolválhatósági archetípusokat, és illusztrálják  a természetes szabályozó szekvenciák mutációs robosztusságát. Úgy vélik, a munkájuk egy általános keretrendszert állít föl szabályozó szekvencák tervezésére és alapvető kérdésekre ad választ a genetikai szabályozás evolúcióját tekintve.
 
 ## Újabb áttörést okoznak a mély tanulás alapú neurális hálók
-
-kísérlet+AI+validáció+egyszerűbb AI modell
-
-https://qubit.hu/2022/02/04/attorest-hoz-a-biologiaba-a-minden-eddiginel-pontosabb-feherjekutato-algoritmus-az-alphafold2
-
-## Mit mond a mesterséges intelligencia a génkifejeződés szabályozásának evolúciójáról?
-
-https://www.nature.com/articles/d41586-022-00384-0
-
-https://news.mit.edu/2022/oracle-predicting-evolution-gene-regulation-0311
-
-Despite the sheer number of genes that each human cell contains, these so-called “coding” DNA sequences comprise just 1 percent of our entire genome. The remaining 99 percent is made up of “non-coding” DNA — which, unlike coding DNA, does not carry the instructions to build proteins.
-
-One vital function of this non-coding DNA, also called “regulatory” DNA, is to help turn genes on and off, controlling how much (if any) of a protein is made. Over time, as cells replicate their DNA to grow and divide, mutations often crop up in these non-coding regions — sometimes tweaking their function and changing the way they control gene expression. Many of these mutations are trivial, and some are even beneficial. Occasionally, though, they can be associated with increased risk of common diseases, such as Type 2 diabetes, or more life-threatening ones, including cancer.
-
-To better understand the repercussions of such mutations, researchers have been hard at work on mathematical maps that allow them to look at an organism’s genome, predict which genes will be expressed, and determine how that expression will affect the organism’s observable traits. These maps, called fitness landscapes, were conceptualized roughly a century ago to understand how genetic makeup influences one common measure of organismal fitness in particular: reproductive success. Early fitness landscapes were very simple, often focusing on a limited number of mutations. Much richer datasets are now available, but researchers still require additional tools to characterize and visualize such complex data. This ability would not only facilitate a better understanding of how individual genes have evolved over time, but would also help to predict what sequence and expression changes might occur in the future.
-
-In a new study published on March 9 in Nature, a team of scientists has developed a framework for studying the fitness landscapes of regulatory DNA. They created a neural network model that, when trained on hundreds of millions of experimental measurements, was capable of predicting how changes to these non-coding sequences in yeast affected gene expression. They also devised a unique way of representing the landscapes in two dimensions, making it easy to understand the past and forecast the future evolution of non-coding sequences in organisms beyond yeast — and even design custom gene expression patterns for gene therapies and industrial applications.
 
 “We now have an 'oracle' that can be queried to ask: What if we tried all possible mutations of this sequence? Or, what new sequence should we design to give us a desired expression?” says Aviv Regev, a professor of biology at MIT (on leave), core member of the Broad Institute of Harvard and MIT (on leave), head of Genentech Research and Early Development, and the study’s senior author. “Scientists can now use the model for their own evolutionary question or scenario, and for other problems like making sequences that control gene expression in desired ways. I am also excited about the possibilities for machine learning researchers interested in interpretability; they can ask their questions in reverse, to better understand the underlying biology."
 
@@ -43,6 +27,16 @@ To accomplish this goal, Eeshit Dhaval Vaishnav, a graduate student at MIT; co-f
 Regev, Vaishnav, de Boer, and their coauthors went on to test their model’s predictive abilities in a variety of ways, in order to show how it could help demystify the evolutionary past — and possible future — of certain promoters. “Creating an accurate model was certainly an accomplishment, but, to me, it was really just a starting point,” Vaishnav explains.
 
 First, to determine whether their model could help with synthetic biology applications like producing antibiotics, enzymes, and food, the researchers practiced using it to design promoters that could generate desired expression levels for any gene of interest. They then scoured other scientific papers to identify fundamental evolutionary questions, in order to see if their model could help answer them. The team even went so far as to feed their model a real-world population dataset from one existing study, which contained genetic information from yeast strains around the world. In doing so, they were able to delineate thousands of years of past selection pressures that sculpted the genomes of today’s yeast.
+
+kísérlet+AI+validáció+egyszerűbb AI modell
+
+https://qubit.hu/2022/02/04/attorest-hoz-a-biologiaba-a-minden-eddiginel-pontosabb-feherjekutato-algoritmus-az-alphafold2
+
+## Mit mond a mesterséges intelligencia a génkifejeződés szabályozásának evolúciójáról?
+
+https://www.nature.com/articles/d41586-022-00384-0
+
+https://news.mit.edu/2022/oracle-predicting-evolution-gene-regulation-0311
 
 But, in order to create a powerful tool that could probe any genome, the researchers knew they’d need to find a way to forecast the evolution of non-coding sequences even without such a comprehensive population dataset. To address this goal, Vaishnav and his colleagues devised a computational technique that allowed them to plot the predictions from their framework onto a two-dimensional graph. This helped them show, in a remarkably simple manner, how any non-coding DNA sequence would affect gene expression and fitness, without needing to conduct any time-consuming experiments at the lab bench.
 
@@ -57,3 +51,5 @@ Despite the fact that the model was trained on just a fraction of yeast regulato
 Even before the study was formally published, Vaishnav began receiving queries from other researchers hoping to use the model to devise non-coding DNA sequences for use in gene therapies.
 
 “People have been studying regulatory evolution and fitness landscapes for decades now,” Vaishnav says. “I think our framework will go a long way in answering fundamental, open questions about the evolution and evolvability of gene regulatory DNA — and even help us design biological sequences for exciting new applications.”
+
+*Kapcsolódó cikkek a Qubiten:*
