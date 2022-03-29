@@ -2,9 +2,23 @@
 
 A mély tanuláson alapuló mesterséges intelligencia hamarosan a genetika delphoi orákulumává válhat, megjósolva, hogyan alakítja mutációk megjelenése gének kifejeződését és evolúcióját, legalábbis ha egysejtű élesztőgombákban nemrég elért áttörések más élőlényekre is kiterjeszthetők.
 
-A március 9-én a Natureben [közölt kutatás eredményei](https://www.nature.com/articles/s41586-022-04506-6) jelentős áttörtést jelentenek evolúciós genetikai kérdések megválaszolásában, és forradalmasíthatják a szintetikus biológiát is.
+A március 9-én a Natureben [közölt kutatás eredményei](https://www.nature.com/articles/s41586-022-04506-6) jelentős áttörtést jelentenek evolúciós genetikai kérdések megválaszolásában, és forradalmasíthatják a szintetikus biológiát is. A kutatás fő fókusza a génszabályozás evolúciója.
 
-Az egysejtű élesztőgombák (*Saccharomyces cerevisiae*)
+A DNS nem kódoló, szabályozó szekvenciáin bekövetkező mutációk befolyásolni tudják a gének kifejeződését, ezzel pedig befolyásolni az élőlény fenotípusát és fitnessét. A teljes fitness mező összeállítása, ahol a DNS szekvencia a fitnesshez van párosítva, egy régi cél a biológiában, ugyanakkor nehezen elérhető maradt, mert a hatalmas szekvencia térre való általánosítás kihívásokkal jár.
+
+Eeshit Dhaval Vaishnav, az MIT kutatója és kollégái szekvenciából-génkifejeződés modelleket építettek, hogy leírják ezt a fitness tájképet, és feltárják a genetikai szabályozás evolúciójának elveit. Ehhez vettek több millió, véletlenszerűen kiválasztott promóter DNS szekvenciát, és megmérték a génkifejeződésük szintjét egysejtű élesztőgombákban (*Saccharomyces cerevisiae*), amellyel mély neurális hálózati algoritmusokat tréneltek, amelyek ezekből általános következtetéseket vontak le, lehetővé téve a génkifejeződés mérnöki változtatását célzó szekvencia tervezést.
+
+A modellek segítségével tanulmányozták a génkifejeződés eltéréseit genetikai sodródás, illetve erős-szelekciós és gyenge mutációs szituáció alatt, azt találva, hogy a szabályozó szakaszok evolúciója gyors és ki van téve a csökkenő hozaték episztázis elvének. Emellett arra jutottak, hogy az egymásnak ellentmondó génkifejezpdési célok különbööző környezetekben korlátozzák a génkifejeződés adaptációját, és hogy a stabiliáló szelekció génkifejeződésre mért hatása a szabályozás komplexitásának mérsékléséhez vezet.
+
+Ilyen modelleket használva a kutatók képesek észlelni a szelekció jeleit a génkifejeződésen, a szabályozó szekvenciák természetes változásából, annak érdekében, hogy megtaláéják egy konvergens szabályozási evolúció példáját. A kutatók megvizsgálják a mutációs robosztusságot, azt találva, hogy a szabályozó szakaszok változásainak effect mérete a power lawt követi. Emellett karakterizálják a szabályozó szakaszok evolválhatóságát, vizualizálják a promóter fitness tájképet, felfedeznek evolválhatósági archetípusokat, és illusztrálják  a természetes szabályozó szekvenciák mutációs robosztusságát. Úgy vélik, a munkájuk egy általános keretrendszert állít föl szabályozó szekvencák tervezésére és alapvető kérdésekre ad választ a genetikai szabályozás evolúcióját tekintve.
+
+## Újabb áttörést okoznak a mély tanulás alapú neurális hálók
+
+kísérlet+AI+validáció+egyszerűbb AI modell
+
+https://qubit.hu/2022/02/04/attorest-hoz-a-biologiaba-a-minden-eddiginel-pontosabb-feherjekutato-algoritmus-az-alphafold2
+
+## Mit mond a mesterséges intelligencia a génkifejeződés szabályozásának evolúciójáról?
 
 https://www.nature.com/articles/d41586-022-00384-0
 
