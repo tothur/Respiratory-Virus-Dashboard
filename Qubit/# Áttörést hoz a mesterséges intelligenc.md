@@ -4,6 +4,8 @@ A mély tanuláson alapuló mesterséges intelligencia hamarosan a genetika delp
 
 A március 9-én a Natureben [közölt kutatás eredményei](https://www.nature.com/articles/s41586-022-04506-6) jelentős áttörtést jelentenek evolúciós genetikai kérdések megválaszolásában, és forradalmasíthatják a szintetikus biológiát is.
 
+Az egysejtű élesztőgombák (*Saccharomyces cerevisiae*)
+
 https://www.nature.com/articles/d41586-022-00384-0
 
 https://news.mit.edu/2022/oracle-predicting-evolution-gene-regulation-0311
