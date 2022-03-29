@@ -1,0 +1,1 @@
+# Áttörést hoz a mesterséges intelligencia a génszabályozás megértésében
