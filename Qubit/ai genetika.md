@@ -43,3 +43,11 @@ Kiderült az is, hogy a szabályozó szekvenciákra nehezedő szelekciós nyomá
 A kutatók összességében egy olyan keretrendszert hoztak létre, amely a genetikai szabályozó szekvenciák evolúciójának alapvető kérdéseire ad választ, nagy szekvencia könyvtárak, értékeny assay mérések és mély neurális hálózati algoritmusok segítségével, amely szerintük jelentős előrelépésekhez vezethet a szintetikus biológiában, a sejt és génterápiában, valamint az evolúció vizsgálatában. Egyelőre azonban a kutatók modelljei szabályozó régióra, fajra nézve is limitáltak, illetve nem tudnak más, nem transzkripcióra genetikai szabályozó mechanizmusokat érintő mutációkkal számolni. Emellett többsejtű élőlényeknél a szelekció egyszerre hat a génkifejeződésre több sejttípusban és környezetben is.
 
 *Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2022/02/04/attorest-hoz-a-biologiaba-a-minden-eddiginel-pontosabb-feherjekutato-algoritmus-az-alphafold2
+
+https://qubit.hu/2022/02/11/ime-a-gt-sophy-a-mesterseges-intelligencia-amely-a-legjobb-esportolokat-is-legyozte-a-virtualis-autoversenypalyan
+
+https://qubit.hu/2022/01/20/a-deepmind-mesterseges-intelligenciaja-mar-egy-kozepiskolas-szintjen-teljesit-szovegertesben
+
+https://qubit.hu/2021/09/17/tiz-even-belul-jon-a-mesterseges-matematikus-amit-a-google-magyar-kutatoja-fejleszt
