@@ -4,7 +4,7 @@
 
 A Kréta-végi kihalás után az emlősök sikerének kulcsa a megnövekedett testméretükben, és nem agyuk méretének és kognitív képességeik fejlődésében rejlett, amely hozzásegítette őket a nem-madár dinoszauruszok által hátrahagyott űr betöltéséhez, derül ki egy újonnan feltárt fosszíliákat vizsgáló kutatásból.
 
-A múlt héten a Science folyóiratban [közölt eredmények](https://www.science.org/doi/10.1126/science.abl5584) azt sugallják, hogy közel 50 millió évvel ezelőttig kellett várni, hogy az emlősök agymérete is jelentős növekedésnek induljon, megalapozva a mai emlősök, így az ember kognitív képességeit is.
+A múlt héten a Science folyóiratban [közölt eredmények](https://www.science.org/doi/10.1126/science.abl5584) azt sugallják, hogy közel 50 millió évvel ezelőttig kellett várni, hogy az emlősök agymérete is jelentős növekedésnek induljon, megalapozva a mai emlősök, így az ember kognitív képességeit is...
 
 Ornella Bertrand az Edinburghi Egyetem kutatója és kollégái, [Stephen Brusatte](https://sites.google.com/site/brusatte/) amerikai paleontológus vezetésével az emlős evolúció egy kulcsfontosságú, a 66 millió évvel ezelőtti nagy kihalást követő pillanatát vizsgálták, a méhlepényes emlősök agyának evolúciójára fókuszálva. Ebben az időszakban a Kréta-kori emlősök ősibb jelegű agyait fokozatosan felváltották az Eocénben megjelent, modernebb agyakkal rendelkező emlősök.
 
