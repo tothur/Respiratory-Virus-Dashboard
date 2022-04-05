@@ -1,16 +1,18 @@
 # Előbb lettek nagyobbak az emlősök, mint okosabbak a kisbolygó által 66 millió éve átformált világban
 
-## A korai méhlepényesek testméretük növekedésével töltötték be a nem-madár dinoszauruszok által hátrahagyott űrt, agyuk csak tíz millió évvel később zárkózott fel ehhez, és lett egyre bonyolultabb...
+## A korai méhlepényesek testméretük növekedésével töltötték be a nem-madár dinoszauruszok által hátrahagyott űrt, agyuk csak tíz millió évvel később zárkózott fel ehhez, és lett egyre bonyolultabb.
 
 A Kréta-végi kihalás után az emlősök sikerének kulcsa a megnövekedett testméretükben, és nem agyuk méretének és kognitív képességeik fejlődésében rejlett, amely hozzásegítette őket a nem-madár dinoszauruszok által hátrahagyott űr betöltéséhez, derül ki egy újonnan feltárt fosszíliákat vizsgáló kutatásból.
 
 A múlt héten a Science folyóiratban [közölt eredmények](https://www.science.org/doi/10.1126/science.abl5584) azt sugallják, hogy közel 50 millió évvel ezelőttig kellett várni, hogy az emlősök agymérete is jelentős növekedésnek induljon, megalapozva a mai emlősök, így az ember kognitív képességeit is.
 
-Ornella Bertrand az Edinburghi Egyetem kutatója és kollégái, [Stephen Brusatte](https://sites.google.com/site/brusatte/) amerikai paleontológus vezetésével az emlős evolúció egy kulcsfontosságú, a 66 millió évvel ezelőtti nagy kihalást követő pillanatát vizsgálták, a méhlepényes emlősök agyának evolúciójára fókuszálva. Ebben az időszakban a Kréta-kori emlősök ősibb jelegű agyait fokozatosan felváltották az Eocénben megjelent, modernebb agyakkal rendelkező emlősök.
+A triászban megjelent emlősszerűekből a jura időszak közepére kialakult emlősök testméretükhöz viszonyítva a legnagyobb agymérettel rendelkeznek a gerincesek között. Az emlősagy [először a jurában indult](https://www.science.org/doi/abs/10.1126/science.1203117) növekedésnek, két fázisban, a szaglóérzékelést érintő területeken, illetve a neocortex létrejöttével, amely magasabb kognitív feladatok ellátásáért, és a szenzoros érzékelés összehangolásáért felelős. A késő krétában, [egy januári kutatás alapján](https://qubit.hu/2022/01/05/forradalmian-preciz-modszerrel-tartak-fel-az-emlosok-evolucios-csaladfajat) nagyjából 80 millió éve megjelent méhlepényes emlősök agymérete még a többi emlősénél is nagyobb. Azt azonban eddig homály fedte, hogyan alakult ki a méhlepényesek agya, és mikor kezdte mérete és struktúrája a modern méhlepényesekét elérni.
 
-A gerincesek közt testméretükhöz viszonyítva az emlősök rendelkeznek a legnagyobb aggyal, ami a kutatók szerint különösen igaz a méhlepényes emlősökre. Az emlősök a jura időszakban alakultak ki a triászban megjelent emlősszerűekből, a méhlepényesek pedig egy [januárban közölt kutatás szerint](https://qubit.hu/2022/01/05/forradalmian-preciz-modszerrel-tartak-fel-az-emlosok-evolucios-csaladfajat) a késő krétában, 77-83 millió éve.
+Ornella Bertrand, az Edinburghi Egyetem kutatója és kollégái, [Stephen Brusatte](https://sites.google.com/site/brusatte/) amerikai paleontológus vezetésével erre kívántak válaszolni, egy kulcsfontosságú, a 66 millió évvel ezelőtti nagy kihalást követő periódus vizsgálatával.
 
-A gerincesek közt az emlősök rendelkeznek testméretükhöz képest a legnagyobb aggyal (enkefelizáció), és ez a kutatók szerint különösen igaz a méhlepényes emlősökre, amelyek kifejezetten nagy agyméretük mellett a szenzori integrációt szolgáló kiterjedt neocortexel rendelkeznek. Korábbi elképzelések szerint ez az összefüggés az emlős evolúció korai szakaszában alakult ki, és a növekvő agyméret elősegítette az emlősök diverzifikációját.
+Ebben az időszakban a Kréta-kori emlősök ősibb jelegű agyait fokozatosan felváltották az Eocénben megjelent, modernebb agyakkal rendelkező emlősök.
+
+Korábbi elképzelések szerint ez az összefüggés az emlős evolúció korai szakaszában alakult ki, és a növekvő agyméret elősegítette az emlősök diverzifikációját.
 
 Bertrand és kollégái számítógépes tomográfiával (CT) vizsgáltak újonnan felfedezett Paleocén korú emlősfosszíliákat.
 
