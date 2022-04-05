@@ -12,9 +12,9 @@ A gerincesek közt az emlősök rendelkeznek testméretükhöz képest a legnagy
 
 Bertrand és kollégái számítógépes tomográfiával (CT) vizsgáltak újonnan felfedezett Paleocén korú emlősfosszíliákat. 
 
-Meglepetésükre eredményeik nem a korábban elterjedt nézetet látszottak igazolni, ami az emlősök agyméretének évmilliók alatti fokozatos növekedését feltételezte. Ehelyett azt találták, hogy a korai méhlepényesek testméretéhez viszonyított agymérete egyenesen csökkent a 66 millió évvel ezelőtti kihalás árnyékában, a paleocén korban.
+Meglepetésükre eredményeik nem a korábban elterjedt nézetet látszottak igazolni, ami az emlősök agyméretének évmilliók alatti fokozatos növekedését feltételezte. Ehelyett azt találták, hogy egy [januári kutatás szerint](https://qubit.hu/2022/01/05/forradalmian-preciz-modszerrel-tartak-fel-az-emlosok-evolucios-csaladfajat) a késő krétában, 77-83 millió éve megjelenő  méhlepényesek korai testméretéhez viszonyított agymérete egyenesen csökkent a 66 millió évvel ezelőtti kihalás árnyékában, a paleocén korban.
 
-Később, az 56 millió éve kezdődő és 35 millió éve véget érő [eocén korban](https://en.wikipedia.org/wiki/Eocene) a méhlepényesek "crown group"-jai egyre enkefalizáltabb agyakat fejlesztettek ki, melyeket a szenzoros régiók jelentős növekedése jellemzett. A kutatók szerint ahogy az ökoszisztémák egyre bonyolutabbá váltak, és egyre kompetitívek lettek, a kihalás utáni néhány tízmillió évben, az emlősök agya is egyre nagyobb és komplexebb lett, megalapozva a mai emlősök agyait, így az emberét is.
+Később, az 56 millió éve kezdődő és 35 millió éve véget érő [eocén korban](https://en.wikipedia.org/wiki/Eocene) a méhlepényesek "[crown group](https://qubit.hu/2021/09/05/eszak-amerikabol-szarmaznak-a-kajmanok-deritette-ki-egy-magyar-szakember-altal-vezetett-kutatas#:~:text=%E2%80%9Ecrown%20group%E2%80%9D%2Dj%C3%A1ba,Avialae%C2%A0csoport%20r%C3%A9szei.)"-jai egyre enkefalizáltabb agyakat fejlesztettek ki, melyeket a szenzoros régiók jelentős növekedése jellemzett. A kutatók szerint ahogy az ökoszisztémák egyre bonyolutabbá váltak, és egyre kompetitívek lettek, a kihalás utáni néhány tízmillió évben, az emlősök agya is egyre nagyobb és komplexebb lett, megalapozva a mai emlősök agyait, így az emberét is.
 
 *Kapcsolódó cikkek a Qubiten:*
 
