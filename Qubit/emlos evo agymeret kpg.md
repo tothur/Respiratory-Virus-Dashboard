@@ -1,6 +1,6 @@
 # Előbb lettek nagyobbak az emlősök, mint okosabbak a kisbolygó által 66 millió éve átformált világban
 
-## A korai méhlepényesek testméretük növekedésével töltötték be a nem-madár dinoszauruszok által hátrahagyott űrt, agyuk csak tíz millió évvel később zárkózott fel ehhez, és lett egyre bonyolultabb.
+## A korai méhlepényesek testméretük növekedésével töltötték be a nem-madár dinoszauruszok által hátrahagyott űrt, agyuk csak tíz millió évvel később zárkózott fel ehhez, és lett egyre bonyolultabb...
 
 A Kréta-végi kihalás után az emlősök sikerének kulcsa a megnövekedett testméretükben, és nem agyuk méretének és kognitív képességeik fejlődésében rejlett, amely hozzásegítette őket a nem-madár dinoszauruszok által hátrahagyott űr betöltéséhez, derül ki egy újonnan feltárt fosszíliákat vizsgáló kutatásból.
 
