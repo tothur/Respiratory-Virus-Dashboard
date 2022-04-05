@@ -4,7 +4,7 @@
 
 A Kréta-végi kihalás után az emlősök sikerének kulcsa a megnövekedett testméretükben, és nem agyuk méretének és kognitív képességeik fejlődésében rejlett, amely hozzásegítette őket a nem-madár dinoszauruszok által hátrahagyott űr betöltéséhez, derül ki egy újonnan feltárt fosszíliákat vizsgáló kutatásból.
 
-A múlt héten a Science folyóiratban [közölt eredmények](https://www.science.org/doi/10.1126/science.abl5584) azt sugallják, hogy közel 50 millió évvel ezelőttig kellett várni, hogy az emlősök agymérete is jelentős növekedésnek induljon, megalapozva a mai emlősök, így az ember kognitív képességeit is.
+A múlt héten a Science folyóiratban [közölt eredmények](https://www.science.org/doi/10.1126/science.abl5584) azt sugallják, hogy közel 50 millió évvel ezelőttig kellett várni, hogy az emlősök agymérete is jelentős növekedésnek induljon, megalapozva a mai emlősök, így az ember kognitív képességeit is...
 
 Ornella Bertrand az Edinburghi Egyetem kutatója és kollégái, [Stephen Brusatte](https://sites.google.com/site/brusatte/) amerikai paleontológus vezetésével az emlős evolúció egy kulcsfontosságú, a 66 millió évvel ezelőtti nagy kihalást követő pillanatát vizsgálták, a méhlepényes emlősök agyának evolúciójára fókuszálva. Ebben az időszakban a Kréta-kori emlősök ősibb jelegű agyait fokozatosan felváltották az Eocénben megjelent, modernebb agyakkal rendelkező emlősök.
 
@@ -12,6 +12,7 @@ A gerincesek közt az emlősök rendelkeznek testméretükhöz képest a legnagy
 
 Bertrand és kollégái számítógépes tomográfiával (CT) vizsgáltak újonnan felfedezett Paleocén korú emlősfosszíliákat. 
 
+<<<<<<< HEAD
 Meglepetésükre eredményeik nem a korábban elterjedt nézetet látszottak igazolni, ami az emlősök agyméretének évmilliók alatti fokozatos növekedését feltételezte. Ehelyett azt találták, hogy a korai méhlepényesek testméretéhez viszonyított agymérete egyenesen csökkent a 66 millió évvel ezelőtti kihalás árnyékában, a paleocén korban.
 
 Később, az 56 millió éve kezdődő és 35 millió éve véget érő [eocén korban](https://en.wikipedia.org/wiki/Eocene) a méhlepényesek "crown group"-jai egyre enkefalizáltabb agyakat fejlesztettek ki, melyeket a szenzoros régiók jelentős növekedése jellemzett. A kutatók szerint ahogy az ökoszisztémák egyre bonyolutabbá váltak, és egyre kompetitívek lettek, a kihalás utáni néhány tízmillió évben, az emlősök agya is egyre nagyobb lett.
@@ -21,6 +22,13 @@ Később, az 56 millió éve kezdődő és 35 millió éve véget érő [eocén 
  azonban most azt találták, hogy nem hogy növekedett volna az agyméret a Kréta-végi kihalás után, hanem a kihalást követő Paleocénben csökkent is, legalábbis relatíven a növekevő testmérethez képest. Az agyméret csak az eocénben kezdett növekedni, valószínűleg a nagyobb kogniciós képességek érdekében az egyre komplexebb környezetekben. Ez alapozta meg az erősen enkefalizált mai emlős agyakat, így az emberét is.
 
 Kapcsolódó cikkek a Qubiten:
+=======
+Meglepetésükre eredményeik nem a korábban elterjedt nézetet látszottak igazolni, ami az emlősök agyméretének évmilliók alatti fokozatos növekedését feltételezte. Ehelyett azt találták, hogy egy [januári kutatás szerint](https://qubit.hu/2022/01/05/forradalmian-preciz-modszerrel-tartak-fel-az-emlosok-evolucios-csaladfajat) a késő krétában, 77-83 millió éve megjelenő  méhlepényesek korai testméretéhez viszonyított agymérete egyenesen csökkent a 66 millió évvel ezelőtti kihalás árnyékában, a paleocén korban.
+
+Később, az 56 millió éve kezdődő és 35 millió éve véget érő [eocén korban](https://en.wikipedia.org/wiki/Eocene) a méhlepényesek "[crown group](https://qubit.hu/2021/09/05/eszak-amerikabol-szarmaznak-a-kajmanok-deritette-ki-egy-magyar-szakember-altal-vezetett-kutatas#:~:text=%E2%80%9Ecrown%20group%E2%80%9D%2Dj%C3%A1ba,Avialae%C2%A0csoport%20r%C3%A9szei.)"-jai egyre enkefalizáltabb agyakat fejlesztettek ki, melyeket a szenzoros régiók jelentős növekedése jellemzett. A kutatók szerint ahogy az ökoszisztémák egyre bonyolutabbá váltak, és egyre kompetitívek lettek, a kihalás utáni néhány tízmillió évben, az emlősök agya is egyre nagyobb és komplexebb lett, megalapozva a mai emlősök agyait, így az emberét is.
+
+*Kapcsolódó cikkek a Qubiten:*
+>>>>>>> be04d4cc785d174d0678d328b03daed8c910c4b2
 
 https://qubit.hu/2022/03/02/hosszabb-ideig-elunk-magasabbak-leszunk-es-tovabb-zsugorodik-az-agyunk-ide-vezethet-az-evolucio-a-kovetkezo-tizezer-evben
 
