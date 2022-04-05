@@ -16,7 +16,7 @@ Meglepetésükre eredményeik nem a korábban elterjedt nézetet látszottak iga
 
 Később, az 56 millió éve kezdődő és 35 millió éve véget érő [eocén korban](https://en.wikipedia.org/wiki/Eocene) a méhlepényesek "crown group"-jai egyre enkefalizáltabb agyakat fejlesztettek ki, melyeket a szenzoros régiók jelentős növekedése jellemzett. A kutatók szerint ahogy az ökoszisztémák egyre bonyolutabbá váltak, és egyre kompetitívek lettek, a kihalás utáni néhány tízmillió évben, az emlősök agya is egyre nagyobb és komplexebb lett, megalapozva a mai emlősök agyait, így az emberét is.
 
-Kapcsolódó cikkek a Qubiten:
+*Kapcsolódó cikkek a Qubiten:*
 
 https://qubit.hu/2022/03/02/hosszabb-ideig-elunk-magasabbak-leszunk-es-tovabb-zsugorodik-az-agyunk-ide-vezethet-az-evolucio-a-kovetkezo-tizezer-evben
 
