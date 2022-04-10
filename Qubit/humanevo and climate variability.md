@@ -1,0 +1,11 @@
+# Embargó Szerda 17:00 - Az éghajlati változások döntően befolyásolták az emberi evolúciót
+
+## 
+
+A *Homo sapiens* létrejöttét egy éghajlati diszrupció segíthette elő 3-400 ezer éve, és fajunk volt képes legjobban megküzdeni száraz éghajlati viszonyokkal az emberelődök közül, derül ki egy új kutatásból.
+
+A ma délután Axel Timmermann és kollégái által a Nature folyóiratban [közölt tanulmány](https://www.nature.com/articles/s41586-022-04600-9) arra utal, hogy az elmúlt 2 millió év éghajlati változásai jelentős hatást gyakoroltak az emberi evolúcióra, és és a Homo nem fajainak elterjedésére.
+
+Over the past five million years, the Earth transitioned from the warmer, wetter climate of the Pliocene (5.3–2.6 million years ago) to the colder, drier climate of the Pleistocene (2.6–0.01 million years ago). Within this time frame, changes in the Earth’s orbit around the Sun — so-called Milankovitch cycles — influenced the climate, prompting modern-day scientists to make the link between astronomically forced climate change and ancestral human migrations. However, comprehensive palaeo-climate datasets needed to prove this link are lacking.
+
+Axel Timmermann and colleagues combined novel modelling data with fossil and archaeological analyses to study the movements of five hominin species, including Homo heidelbergensis, Homo sapiens and Homo erectus over the past two million years. They show that astronomically forced changes in temperature, rainfall and terrestrial net primary production (a measure of the net amount of carbon captured by plants every year) had a major impact on hominin distributions, dispersal and, potentially, diversification. During the early Pleistocene, hominins settled in environments with weak climate variability. However, towards the end of the Pleistocene, they became global wanderers and adapted to a wide range of climatic conditions. In addition, the climate disruptions in southern Africa and Eurasia from 300–400 thousand years ago are thought to have contributed to the evolutionary transformation of H. heidelbergensis populations into H. sapiens and Neanderthals, respectively.
