@@ -2,13 +2,17 @@
 
 ## 
 
-A *Homo sapiens* létrejöttét egy éghajlati diszrupció segíthette elő 3-400 ezer éve, és fajunk volt képes legjobban megküzdeni száraz éghajlati viszonyokkal az emberelődök közül, derül ki egy új kutatásból.
+A *Homo sapiens* létrejöttét egy éghajlatváltozás segíthette elő 3-400 ezer éve, és emberelőd rokonaink közül saját fajunk volt képes legjobban megküzdeni a száraz éghajlati viszonyokkal, derül ki egy új kutatásból.
 
-A ma délután Axel Timmermann és kollégái által a Nature folyóiratban [közölt tanulmány](https://www.nature.com/articles/s41586-022-04600-9) arra utal, hogy az elmúlt 2 millió év éghajlati változásai jelentős hatást gyakoroltak az emberi evolúcióra, és és a Homo nem fajainak elterjedésére.
+A ma délután Axel Timmermann és kollégái által a Nature folyóiratban [közölt tanulmány](https://www.nature.com/articles/s41586-022-04600-9) arra utal, hogy az elmúlt 2 millió év éghajlati változásai jelentős hatást gyakoroltak az emberi evolúcióra, és a [*Homo*](https://en.wikipedia.org/wiki/Homo) nembe tartozó emberelődök földrajzi elterjedésére.
 
-A Föld...
+Bolygónk mai éghajlatát egy 34 millió évvel ezelőtt, a szén-dioxid szint csökkenése által okozott [lehűlés](https://qubit.hu/2021/08/03/a-szen-dioxid-szint-csokkenese-okozhatta-az-elmult-66-millio-ev-legnagyobb-eghajlatvaltozasat) alapozta meg, előbb a kelet-antarktiszi, később a [nyugat-antarktiszi jégtakaró](https://qubit.hu/2022/01/06/teljesen-atirta-a-nyugat-antarktiszi-jegtakaro-tortenetet-a-friss-kutatas-ami-ravilagit-miert-kell-2-fok-alatt-tartani-a-felmelegedest) kialakulásához vezetve. Ezt az elmúlt 16 millió évben további, a miocénben kezdődő lehűlés követte, ami a melegebb és nedvesebb 5,3-2,6 millió évvel ezelőtti [pliocénen](https://en.wikipedia.org/wiki/Pliocene) keresztül a máig tartó, hidegebb és szárazabb  [negyedidőszaki jégkorszakhoz vezetett](https://www.nature.com/articles/s41586-022-04553-z). A 2,6 millió évvel ezelőtt a pleisztocénben kezdődő jégkorszakban hidegebb glaciális és melegebb interglaciális időszakok váltják egymást.
 
-Timmermann, a dél-koreai Pusan Egyetem kutatója és munkatársai...
+A Timmermann, a dél-koreai Pusan Egyetem kutatója és munkatársai által vizsgált elmúlt 2 millió éves időszak ezáltal lefedi a pleisztocén jégkorszak és a 2,8 millió éve megjelent *Homo* nem evolúciójának jelentős részét. 
+
+Egy másik, szintén ma a Natureben [megjelenő](https://www.nature.com/articles/s41586-022-04553-z) tanulmány szerint
+
+
 
 Over the past five million years, the Earth transitioned from the warmer, wetter climate of the Pliocene (5.3–2.6 million years ago) to the colder, drier climate of the Pleistocene (2.6–0.01 million years ago). Within this time frame, changes in the Earth’s orbit around the Sun — so-called Milankovitch cycles — influenced the climate, prompting modern-day scientists to make the link between astronomically forced climate change and ancestral human migrations. However, comprehensive palaeo-climate datasets needed to prove this link are lacking.
 
