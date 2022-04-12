@@ -13,3 +13,5 @@ Az Ingenuityt Marsra juttató Perseverance marsjáró eközben nagyon közel ker
 https://qubit.hu/2021/12/16/szerves-molekulakra-bukkant-a-marson-a-sherloc
 https://qubit.hu/2021/09/13/egykor-lakhato-kornyezetre-talalt-bizonyitekot-a-marson-a-perseverance
 https://qubit.hu/2021/02/19/sikeres-volt-az-eddigi-legnehezebb-landolas-a-marson-megerkezett-a-perseverance
+
+*Kapcsolódó cikkek a Qubiten:*
