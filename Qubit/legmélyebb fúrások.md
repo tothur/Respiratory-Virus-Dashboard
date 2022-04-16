@@ -10,11 +10,12 @@ Hess úgy vélte, hogy a Mohole-al megvalósított mintavétel [segíthet teszte
 
 A projekt azonban súlyos menedzsment problémák, a tudományos célokat és a fúrás helyszínét érintő viták, technikai kihívások és növekvő költségek miatt nem tudott folytatódni, és végül 1966-ban a kongresszus megvonta tőle a támogatását. A Mohole kudarca ellenére a tesztfúrások megalapozták a következő évtizedek mélytengeri fúrási programjait, és a munka 1968-ban folytatódhatott is a DSDP [programmal](https://en.wikipedia.org/wiki/Deep_Sea_Drilling_Project). Ez más geológiai és geofizikai kutatásokkal együtt az óceáni kéregből való mintavétellel fontos szerepet játszott az addigra már elfogadottá váló [lemeztektonika elméletet](https://en.wikipedia.org/wiki/Plate_tectonics) végső igazolásában az 1960-as évek vége és az 1970-es évek eleje között, lényegében teljesítve a Mohole tudományos célkitűzését. A sikeres DSDP programot a nemzetközi együttműködésben végzett integrált óceán fúrási program (IODP) követte 2003-2013 közt, majd a máig tartó [nemzetközi óceán felfedezési program](https://en.wikipedia.org/wiki/International_Ocean_Discovery_Program) (IODP). Ez utóbbi [2016-ban](https://www.ecord.org/expedition364/), a Chicxulub-kráterbe való lefúrással [lehetővé tette](https://qubit.hu/2019/09/13/lefurtak-a-kraterbe-es-leirtak-a-foldi-elovilag-legsotetebb-napjanak-pontos-forgatokonyvet) a Kréta-végi [kihalást](https://qubit.hu/2022/02/23/tavasz-volt-a-fold-eszaki-felteken-amikor-kihaltak-a-dinoszauruszok) okozó becsapódás forgatókönyvének rekonstruálását.
 
-A legmélyebbre jutó fúrások rekordját azonban nem az óceáni programok, hanem a szárazföldi fúrások érték el. 
+A legmélyebbre jutó fúrások rekordját azonban nem az óceáni programok, hanem a szárazföldi fúrások érték el. Az Oklahoma államban található Washita megyében 1974-ben fejezték be a [Bertha Rogers](https://en.wikipedia.org/wiki/Bertha_Rogers) olajfúrást, amely 9583 méteres rekord mélységbe jutott le. A fúrást a hatalmas nyomás, és a fúrócsövek körül megszilárduló folyékony kénlerakódás miatt nem lehetett tovább folytatni. Öt évvel később, a Kola-félszigeten zajló szovjet tudományos fúrási program megdöntötte a Bertha Rogers rekordját. Az 1970-ben kezdődőtt [Kola szupermély fúrással](https://en.wikipedia.org/wiki/Kola_Superdeep_Borehole) a szovjetek célja az volt, hogy a lehető legmélyebbre fúrjanak a területen közel 35 kilométer mély földkéregben. 13 évnyi munka után 1983-ban egy második, 23 centiméter széles furatlyukkal 12 kilométeres mélységet értek el, majd 1989-ben a harmadik furatlyukkal az azóta is rekordnak számító 12,262 métert.
 
-Piccard és Walsh 11 ezer méteres mélységbe leereszkedő expedíció után majdnem három évtizednek kellett eltelnie, míg a szovjetek a Kola-félszigeten végzett fúrással ennél is mélyebbre jutottak.
+Kola...
 
-és a Szovjetunió is ambiciózus mélyfúrási programokat indított a [földköpeny elérésére](https://www.bbc.com/future/article/20190503-the-deepest-hole-we-have-ever-dug). 
+Német kontinentális fúrási program... https://en.wikipedia.org/wiki/German_Continental_Deep_Drilling_Programme
 
-lehetővé téve a kontinentális kéreg mélyének vizsgálatát.
+A fúrás jövője... https://www.bbc.com/future/article/20190503-the-deepest-hole-we-have-ever-dug
 
+*Kapcsolódó cikkek a Qubiten:*
