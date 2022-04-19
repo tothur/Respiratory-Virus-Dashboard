@@ -2,6 +2,10 @@
 
 https://www.nature.com/articles/s41586-022-04622-3
 
+Színes, vizuális kommunikációra alkalmas tollakat találtak kutatók egy pteroszaurusz fosszílián, ami felforgatja mindazt, amit a tollak evolúciójáról gondoltunk.
+
+A ma délután a Natureben ismertetett repülő hüllő lelet vizsgálata arra utal, hogy a 
+
 Some pterosaurs possessed feathers with varied pigmentation that were used for both thermoregulation and display, a Nature study suggests. The finds shed light on the early evolutionary history of feathers.
 
 It is known that pterosaurs had fluffy coats consisting of hair-like fibres called pycnofibres, but whether or not these structures were true feathers has been debated. In this study, Maria McNamara, Aude Cincotta and colleagues analysed the partial skull of Tupandactylus imperator, a pterosaur from the Early Cretaceous of Brazil (dated to approximately 113 million years ago). Two types of feathers were observed on the cranial crest; smaller, unbranched monofilaments, and larger, branching structures that are more like modern-day bird feathers. 
