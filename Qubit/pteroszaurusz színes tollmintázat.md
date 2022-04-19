@@ -1,12 +1,23 @@
-# pteroszaurusz színes tollak
+# A Tupandactylus repülő hüllő fosszíliája átírja mindazt, amit a tollak evolúciójáról gondoltunk
 
-https://www.nature.com/articles/s41586-022-04622-3
+## 
 
-Színes, vizuális kommunikációra alkalmas tollakat találtak kutatók egy pteroszaurusz fosszílián, ami felforgatja mindazt, amit a tollak evolúciójáról gondoltunk.
+Színes, madarakéra emlékeztető tollai voltak a *Tupandactylus*-nak, egy, a kréta időszak elején élt pteroszaurusznak, derül ki egy szenzációs fosszília vizsgálatából, ami felforgathatja mindazt, amit a tollak korai evolúciójáról gondoltunk.
 
-A ma délután a Natureben ismertetett repülő hüllő lelet vizsgálata arra utal, hogy a 
+A ma délután a Nature folyóiratban [közölt kutatás](https://www.nature.com/articles/s41586-022-04622-3) alapján egyes pteroszauruszok hőszabályozás mellett vizuális kommunikációra is alkalmas, változatos pigmentű tollakkal rendelkeztek. Ez arra utalhat, hogy a vizuális kommunikációra alkalmas tollaknak nagyon régi, a dinoszauruszok és pteroszauruszok több mint 230 millió éve élt közös őseire visszavezethető evolúciós eredete van.
 
-Some pterosaurs possessed feathers with varied pigmentation that were used for both thermoregulation and display, a Nature study suggests. The finds shed light on the early evolutionary history of feathers.
+A [pteroszauruszok](https://en.wikipedia.org/wiki/Pterosaur) a földtörténeti középidő ikonikus hüllői voltak, és az első gerincesek, amelyek [képesek voltak](https://qubit.hu/2020/10/28/150-millio-even-at-tokeletesedett-a-pteroszauruszok-repulesi-kepessege) aktív repülésre. A [késő triászban](https://en.wikipedia.org/wiki/Late_Triassic) megjelent állatok, amint [arról korábban részletesen írtunk](https://qubit.hu/2020/12/09/jokora-szarnycsapassal-kozelebb-kerultunk-ahhoz-hogy-megertsuk-hogyan-tanultak-meg-repulni-a-hullok), a dinoszauruszok közeli rokonai voltak, velük együtt alkotva az [Avemetatarsalia](https://en.wikipedia.org/wiki/Avemetatarsalia) csoportot, és kis méretű, dinoszauruszokra emlékeztető hüllőkből alakultak ki. Az új eredmények egy 2019-es [kutatással együtt](https://www.nature.com/articles/s41559-018-0728-7), amely komplexebb, elágazó szerkezetű tollakat azonosított pteroszaurusz fosszíliákon, azt mutatják, hogy a tollak az avemetatarsalia hüllőkben alakultak ki, még a késő triászban, és nem 
+
+Egy 2019-es kutatással együtt, amely elágazó szerkezetű tollakat azonosított pteroszauruszoknál, az új eredményekből az következik, hogy a [tollak](https://en.wikipedia.org/wiki/Feather), a bőr keratin fehérjéből felépülő, komplex szaruképletei, a dinoszauruszok és a pteroszauruszok közös őseiben alakultak ki a [kora triászban](https://en.wikipedia.org/wiki/Early_Triassic).
+
+
+
+A kutatók által *Tupandactylus imperator*-nak elnevezett pteroszaurusz a [kora krétában élt](https://en.wikipedia.org/wiki/Early_Cretaceous), 113 millió éve, a mai Brazília területén.
+
+
+
+
+Az eddig is ismert volt, hogy membrános szárnyakkal rendelkező pteroszauruszok fejét és testét apró, struktúrájukban hajra emlékeztető szálak (pycnofibers) borították. A most azono
 
 It is known that pterosaurs had fluffy coats consisting of hair-like fibres called pycnofibres, but whether or not these structures were true feathers has been debated. In this study, Maria McNamara, Aude Cincotta and colleagues analysed the partial skull of Tupandactylus imperator, a pterosaur from the Early Cretaceous of Brazil (dated to approximately 113 million years ago). Two types of feathers were observed on the cranial crest; smaller, unbranched monofilaments, and larger, branching structures that are more like modern-day bird feathers. 
 
