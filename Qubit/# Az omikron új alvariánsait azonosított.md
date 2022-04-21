@@ -1,0 +1,17 @@
+# Az omikron új alvariánsait azonosították Európában és Afrikában, de egyelőre nincs ok aggodalomra
+
+## A BA.4 és a BA.5 kutatók szerint egy olyan mutációval rendelkezik, ami miatt jobban ki tudja majd kerülni a fertőzés és enyhe megbetegedés ellen az oltások és korábbi fertőzés által biztosított védettséget.
+
+Az elmúlt hetekben jelentős [növekedésnek indult](https://twitter.com/Tuliodna/status/1513529930046648326?t=6NYokO2akEvokin3gRXUGw&s=19) Dél-Afrikában az omikron két új altípusának gyakorisága más covidvariánsokhoz képest, [hívja fel a figyelmet](https://www.nature.com/articles/d41586-022-01069-4) a Nature.
+
+A Tulio de Oliveira által vezetett Epidemiológiai reagálás és innováció intézet vírusgenom szekvenálási és követési progjamának köszönhetően azonosított BA.4 és a BA.5 egyelőre nem jár az esetszámok növekedésével Dél-Afrikában, és a kórházi kezelések, vagy halálozások rekord alacsony [szinten vannak](https://twitter.com/Tuliodna/status/1513529943245967366?t=XpxrmLER0ic7b2qS_5htrw&s=19). Ugyanakkor a mutációi, melyek megkülönböztetik az omikron korábbi alvariánsaitól, kutatók szerint csökkenthetik a korábbi fertőzés, vagy oltások által generált, nem súlyos megbetegedés elleni védettség mértékét.
+
+Még március végén [írtunk arról](https://qubit.hu/2022/03/28/ujabb-jarvanyhullam-kozeleg-de-nem-lesz-olyan-sulyos-mint-az-eddigiek), hogy Európa szerte megnövekedett a covidos esetek száma, részben a BA.2 változat következtében, aminek az omikron eredeti, BA.1-es változatához viszonyítva rövidebb a lappangási ideje.
+
+A BA.4 és a BA.5 alapvetően a BA.2-höz hasonlóak, de három, őket attól megkülönböztető [mutációval rendelkeznek](https://twitter.com/Tuliodna/status/1513529950082588673?t=XpxrmLER0ic7b2qS_5htrw&s=19) a tüskefehérjén. Ezek két aminosav változás az L452R és F486 pozíciókban, a sejtbe jutáshoz kulcsfontosságú receptor-kötő helyen. A harmadik egy deléciós változás, a 69-70del, ami két aminosav eltávolításával jár. A BA.4 és a BA.5 egymástól három aminosav változásban különböznek, a vírus tüskefehérjéjén kívüli régiókban.
+
+Jesse Bloom, vírusok evolúciójával foglalkozó biokémikus szerint az F486V mutáció segítségével a BA.4 és BA.5 vírusok [jobban ki tudják kerülni](https://twitter.com/jbloom_lab/status/1513537998314356736?s=19) az oltások és korábbi fertőzés által létrehozott antitesteket. Erre a következetésre Bloom olyan korábbi kutatások [alapján jutott](https://twitter.com/jbloom_lab/status/1513538000432472069?s=19), melyek azt vizsgálták, hogy az antitestek az omikron variáns mely részeit célozzák, és képesek felismerni, így pedig neutralizálni a vírust. A tüskefehérje receptorkötő helyének 486-os helye az [egyik legfontosabb ilyen régiója](https://twitter.com/jbloom_lab/status/1473089135288233993?s=19) az omikron esetén.
+
+Bloom ugyanakkor azt is [hozzátette](https://twitter.com/jbloom_lab/status/1513538004165423106?s=19), hogy sokan az elmúlt hónapokban megfertőződtek az omikron BA.1 és BA.2 variánsai által, és az így létrejövő antitestek jobban képesek neutralizálni a BA.4-et és BA.5-öt. Emellett úgy véli, [semmi sem garantálja](https://twitter.com/jbloom_lab/status/1513538005545336838?s=19), hogy ez a két alvariáns széles körben el fog terjedni, vagy hogy több kórházi kezeléshez vezetne. Bloom szerint az omikron [további evolúciója megmutatja](https://twitter.com/jbloom_lab/status/1513538008124825605?s=19), hogy miért lenne fontos a jelenlegi vakcinák frissítése olyanokra, melyek jobban lefedik a jelenleg cirkuláló omikront.
+
+Kapcsolódó cikkek a Qubiten:
