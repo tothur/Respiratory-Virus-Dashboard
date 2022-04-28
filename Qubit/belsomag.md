@@ -1,4 +1,4 @@
-# Készül - 500 millió éve kialakult a Föld belső magja, és ez megmentette az életet 
+# 500 millió éve kialakult a Föld belső magja, és ez megmentette az életet 
 
 ## Hihetetlen dolgokat csinál a Föld magja, de kutatók kezdik megérteni a működését
 
