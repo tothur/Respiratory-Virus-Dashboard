@@ -1,6 +1,6 @@
 # Videóajánló: Egy nukleáris áramforrás által hajtott hatalmas drónnal készül felderíteni a Szaturnusz holdjának, a Titánnak a titkait a NASA
 
-## Douglas Adams, a Dragonfly szonda rendszermérnöke közel fél órás előadásban magyarázza el, 
+## Douglas Adams, a Dragonfly szonda rendszermérnöke közel fél órás előadásban magyarázza el, hogyan fog az amerikai űrügynökség által valaha tervezett legambiciózusabb szonda repülni a Titán légkörében, és miként adhat választ az élet keletkezésére.
 
 ## Ki?
 
