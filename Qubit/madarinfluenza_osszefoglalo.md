@@ -61,6 +61,8 @@ https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H1N1
 https://en.wikipedia.org/wiki/1918_flu_pandemic
 https://en.wikipedia.org/wiki/2009_swine_flu_pandemic
 
+"Azzal, hogy eredendően állati kórokozónak emberek közt terjedő variánsa alakult ki, az idei új influenzavírus már a tavasszal olyan jelentős mutáción esett keresztül, ami minimálisra csökkentette az esélyt, hogy ismét hasonló mértékben változzon. Már csak azért is, mert a H1N1-es vírustörzs életében a tavaszihoz hasonló metamorfózisra 1968 óta nem volt példa." - nyilatkozta 2009. május elején (HVG 2009/19) Balázs Zsuzsannának Jankovics István klinikai mikrobiológus, aki ekkor a Nemzeti Biztonsági Laboratóriumot vezette az Országos Epidemiológiai Központban, és a H5N1 elleni hazai oltóanyag kifejlesztését irányította 2005-ben.
+
 ### A(H2N2) és A(H3N2)
 
 https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H2N2
