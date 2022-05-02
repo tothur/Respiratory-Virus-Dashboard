@@ -1,14 +1,23 @@
 # Feszegetik a határaikat az influenzavírusok
 
-h3n8, h5n6, h5n1 bevezetőbe.
-avian influenza = influenza A https://en.wikipedia.org/wiki/Influenza_A_virus
+Múlt héten Kínában [először muttattak ki](https://www.reuters.com/business/healthcare-pharmaceuticals/china-reports-first-human-case-h3n8-bird-flu-2022-04-26/) embernél A(H3N8) madárinfluenzát, míg az Egyesült Államokban egy A(H5N1) [által okozott megbetegedést](https://www.cdc.gov/media/releases/2022/s0428-avian-flu.html) regisztráltak. Mindkét fertőzés madarakkal való közvetlen kapcsolat révén történt, és a vírusok további terjedésének kockázata alacsony. Az esetek, illetve a tavaly és idén év elején Kínában [számos megbetegedést](https://qubit.hu/2021/11/11/mar-az-amerikai-jarvanyugy-is-figyelemmel-kiseri-a-h5n6-madarinfluenza-virus-altal-okozott-kinai-megbetegedeseket) okozó A(H5N6) ugyanakkor felhívják a figyelmet a madárinfluenza, és általánosabban az influenzavírusok pandémiás kockázatára.
+
+Az említett kórokozók az elmúlt közel 100 évben [öt világjárványért](https://en.wikipedia.org/wiki/Influenza_pandemic) felelős [influenza A](https://en.wikipedia.org/wiki/Influenza_A_virus) vírusok közé tartoznak, a [negatív-szálú](https://en.wikipedia.org/wiki/Negative-strand_RNA_virus) RNS vírusok *Orthomyxoviridae* családjába. Nagy részük madarakban keringő, és hozzájuk adaptálódott [madárinfluenza vírus](https://en.wikipedia.org/wiki/Avian_influenza), míg néhány emlősöknél, köztük embereknél okoz megbetegedést. A megszokott téli-tavaszi szezonális influenzát nagyrészt két influenza A vírus, az A(H1N1) és az A(H3N2), illetve [influenza B](https://en.wikipedia.org/wiki/Influenza_B_virus) vírusok okozzák, évente globálisan hozzávetőleg 400 ezer [áldozatot követelve](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6815659/) közösségi védettség, oltások és antivirális gyógyszerek mellett.
+
+
+
+
 
 ## Magas patogenitású madárinfluenza
 
 ### A(H3N8)
 
+https://www.reuters.com/business/healthcare-pharmaceuticals/china-reports-first-human-case-h3n8-bird-flu-2022-04-26/
+
 Első emberi fertőzés.
 https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H3N8
+
+More recently, H3N8 viruses from horses have crossed over and caused outbreaks in dogs
 
 ### A(H5N6) és A(H7N9) és A(H7N7) és A(H7N9)
 
@@ -34,7 +43,7 @@ seals 10% mortality https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H10N
 2000-es évek doomsday veszélye. Oltások!
 https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H5N1
 
-https://interestingengineering.com/us-first-human-case-bird-flu-colorado
+https://www.cdc.gov/media/releases/2022/s0428-avian-flu.html
 https://www.theguardian.com/world/2022/jan/07/first-uk-person-to-catch-h5n1-bird-flu-strain-is-named
 
 ## Emberekben enyhébb megbetegedést okozó madárinfluenza vírusok
