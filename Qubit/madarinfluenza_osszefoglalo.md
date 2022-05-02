@@ -34,6 +34,9 @@ seals 10% mortality https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H10N
 2000-es évek doomsday veszélye. Oltások!
 https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H5N1
 
+https://interestingengineering.com/us-first-human-case-bird-flu-colorado
+https://www.theguardian.com/world/2022/jan/07/first-uk-person-to-catch-h5n1-bird-flu-strain-is-named
+
 ## Emberekben enyhébb megbetegedést okozó madárinfluenza vírusok
 
 ### A(H5N8) és A(H10N3) és A(H5N2) és A(H7N2) és A(H7N3)
@@ -71,5 +74,7 @@ https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H2N2
 
 https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H3N2
 1968-69-es influenza pandémia https://en.wikipedia.org/wiki/Hong_Kong_flu
+
+utolsó bekezdés más vírusok https://www.nytimes.com/2022/04/27/science/pandemic-viruses-machine-learning.html
 
 *Kapcsolódó cikkek a Qubiten:*
