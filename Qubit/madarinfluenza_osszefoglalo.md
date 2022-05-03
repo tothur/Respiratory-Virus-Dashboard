@@ -20,53 +20,40 @@ S. J. Anthony, a Columbia Egyetem kutatója és kollégái azt is feltárták, h
 
 ## A leghalálosabb vírusok toplistája nagyrészt madárinfluenzából áll
 
-Még tavaly novemberben [írtunk arról](https://qubit.hu/2021/11/11/mar-az-amerikai-jarvanyugy-is-figyelemmel-kiseri-a-h5n6-madarinfluenza-virus-altal-okozott-kinai-megbetegedeseket), hogy egy másik madárinfluenza törzs, az A(H5N6) a korábbiakhoz képest jelentős számú emberi megbetegedést okozott nagyrészt baromfikkal dolgozó, vagy velük érintkező emberek körében Kínában és Laoszban. Az Egészségügyi Világszervezet (WHO) legfrissebb adatai szerint 2014-es felbukkanása óta eddig 78 A(H5N6)-as esetet regisztráltak, melyekből mostanáig 2 volt halálos kimenetelű, 41 százalékos hozzávetőleges halálozási rátát eredményezve. Jelenleg a vírus nem képes tartósan emberek közt terjedni.
+Még tavaly novemberben [írtunk arról](https://qubit.hu/2021/11/11/mar-az-amerikai-jarvanyugy-is-figyelemmel-kiseri-a-h5n6-madarinfluenza-virus-altal-okozott-kinai-megbetegedeseket), hogy egy másik madárinfluenza törzs, az először 2013-ban észlelt, magas-patogenitású [A(H5N6)](https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H5N6) egyre több megbetegedést okoz embereknél Kelet-Ázsiában. Az Egészségügyi Világszervezet (WHO) [legfrissebb adatai szerint](https://www.who.int/docs/default-source/wpro---documents/emergency/surveillance/avian-influenza/ai_20220429.pdf?Status=Master&sfvrsn=22ea0816_6) a vírus felbukkanása óta eddig 78 A(H5N6)-as esetet regisztráltak, melyekből mostanáig 32 volt halálos kimenetelű, hozzávetőlegesen 41 százalékos halálozási rátát (CFR) eredményezve. A 78-ból közel 52 esetet 2021-ben és 2022-ben észleltek. Jelenleg a vírus nem képes emberek közt terjedni, de egyes kutatók körében tavaly [aggodalmat okozott](https://qubit.hu/2021/11/11/mar-az-amerikai-jarvanyugy-is-figyelemmel-kiseri-a-h5n6-madarinfluenza-virus-altal-okozott-kinai-megbetegedeseket) az esetszám növekedés.
 
-### A(H5N6) és A(H7N9) és A(H7N7) és A(H7N9)
+A WHO [szerint](https://www.who.int/docs/default-source/wpro---documents/emergency/surveillance/avian-influenza/ai_20220429.pdf?Status=Master&sfvrsn=22ea0816_6) "The rise in numbers of reported human cases of A(H5N6) infection may reflect the continued circulation 
+of the virus in birds, and enhanced surveillance system and diagnostic capacity as a direct outcome from 
+the response to the COVID-19 pandemic. The zoonotic threat remains elevated due to the spread of the 
+viruses among birds. However, the overall pandemic risk associated with A(H5) is considered not 
+significantly changed in comparison to previous years"
 
-Sok eset tavaly és idén.
-https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H5N6
+Mindez nem példa nélküli ugyanakkor, mert még 2016-2017 között, az [A(H7N9)](https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H7N9) okozott [több száz megbetegedést](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5689040/) Kínában, 759 fertőzött körében 281 áldozatot követelve, közel 37 százalékos halálozási rátát eredményezve. Nem is csoda, hogy [amint 2018-ban beszámoltunk róla](https://qubit.hu/2018/06/25/egy-influenzavirusbol-lehet-a-rettegett-disease-x-a-21-szazad-spanyolnathaja), a Notthinghami Egyetem kutatója, Van-Tam, ekkor egy világjárvány legesélyesebb kiváltójának akkor az A(H7N9)-et tartotta.
 
-Sok eset, aztán elmúlt.
-https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H7N9
+A legismertebb, és legsúlyosabb megbetegedéseket okozó madárinfluenza az 199x-ben felbukkant [A(H5N1)](https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H5N1), 
 
-H7N9 2018 https://qubit.hu/2018/06/25/egy-influenzavirusbol-lehet-a-rettegett-disease-x-a-21-szazad-spanyolnathaja "A gyilkos világjárvány legesélyesebb kiváltójának a Notthinghami Egyetemen tanszékvezető Van-Tam a H7N9 kódnéven futó influenzavírust tartja."
+2003-tól idén áprilisig Ázsiából az Egészségügyi Világszervezet 239 A(H5N1) fertőzésről tud, melyek túlnyomó többsége 2003-2014 közt történt. Ezekből 134 megbetegedés volt végzetes, 56 százalékos halálozási rátát eredményezve.
 
-Sok eset hollandiában 2003-ban.
-https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H7N7
+H5N1
 
-### A(H9N2)
+A most amerikában és az Egyesült Királyságban detektált változatok...
 
-https://www.ecdc.europa.eu/sites/default/files/documents/Communicable-disease-threats-report-24-april-2021-all-users.pdf
-
-### A(H10N7)
-
-seals 10% mortality https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H10N7
-
-### A(H5N1)
-
-2000-es évek doomsday veszélye. Oltások!
-https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H5N1
-
+amerikai eset
+brit eset
 https://www.cdc.gov/media/releases/2022/s0428-avian-flu.html
 https://www.theguardian.com/world/2022/jan/07/first-uk-person-to-catch-h5n1-bird-flu-strain-is-named
 
-## Emberekben enyhébb megbetegedést okozó madárinfluenza vírusok
+OLTÁSOK!!!! 2020!
 
-### A(H5N8) és A(H10N3) és A(H5N2) és A(H7N2) és A(H7N3)
 
-Oroszországi esetek, embereknél enyhe megbetegedések. 
+Európában 2003-ban az [A(H7N7)](https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H7N7) okozott járványt Hollandiában
 
-https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H5N8
 
-első emberi eset 2021
-https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H10N3
+Potenciális kockázatot jelenthetnek még az A(H9N2) és A(H10N7) madárinfluenza vírusok is.
 
-h5n2 enyhe esetek https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H5N2
+https://www.ecdc.europa.eu/sites/default/files/documents/Communicable-disease-threats-report-24-april-2021-all-users.pdf
 
-https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H7N2
-
-https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H7N3
+seals 10% mortality https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H10N7
 
 ## A huszadik század három nagy influenza pandémiááért felelős vírusok
 
@@ -91,6 +78,23 @@ https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H3N2
 1968-69-es influenza pandémia https://en.wikipedia.org/wiki/Hong_Kong_flu
 
 utolsó bekezdés más vírusok https://www.nytimes.com/2022/04/27/science/pandemic-viruses-machine-learning.html
+
+## Emberekben enyhébb megbetegedést okozó madárinfluenza vírusok
+
+### A(H5N8) és A(H10N3) és A(H5N2) és A(H7N2) és A(H7N3)
+
+Oroszországi esetek, embereknél enyhe megbetegedések. 
+
+https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H5N8
+
+első emberi eset 2021
+https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H10N3
+
+h5n2 enyhe esetek https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H5N2
+
+https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H7N2
+
+https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H7N3
 
 *Kapcsolódó cikkek a Qubiten:*
 
