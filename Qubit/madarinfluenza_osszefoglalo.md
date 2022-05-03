@@ -28,7 +28,9 @@ the response to the COVID-19 pandemic. The zoonotic threat remains elevated due 
 viruses among birds. However, the overall pandemic risk associated with A(H5) is considered not 
 significantly changed in comparison to previous years"
 
-Mindez nem példa nélküli ugyanakkor, mert még 2016-2017 között, a szintén magas patogenitású [A(H7N9)](https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H7N9) okozott [több száz megbetegedést](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5689040/) Kínában, 759 fertőzött körében 281 áldozatot követelve, közel 37 százalékos halálozási rátát eredményezve. Nem is csoda, hogy [amint 2018-ban beszámoltunk róla](https://qubit.hu/2018/06/25/egy-influenzavirusbol-lehet-a-rettegett-disease-x-a-21-szazad-spanyolnathaja), a Notthinghami Egyetem kutatója, Van-Tam, ekkor egy világjárvány legesélyesebb kiváltójának akkor az A(H7N9)-et tartotta.
+Mindez nem példa nélküli ugyanakkor, mert még 2016-2017 között, a szintén magas patogenitású [A(H7N9)](https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H7N9) okozott [több száz megbetegedést](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5689040/) Kínában, 759 fertőzött körében 281 áldozatot követelve, közel 37 százalékos halálozási rátát eredményezve. Nem is csoda, hogy [amint 2018-ban beszámoltunk róla](https://qubit.hu/2018/06/25/egy-influenzavirusbol-lehet-a-rettegett-disease-x-a-21-szazad-spanyolnathaja), a Notthinghami Egyetem kutatója, Van-Tam, ekkor egy világjárvány legesélyesebb kiváltójának akkor az A(H7N9)-et tartotta. 
+
+Európában 2003-ban magas patogenitású [A(H7N7)](https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H7N7) okozott járványt Hollandiában... illetve a szintén magas patogenitású A(H7N3) is fertőzött már meg embereket https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H7N3
 
 A legismertebb, és legsúlyosabb megbetegedéseket okozó madárinfluenza az 199x-ben felbukkant [A(H5N1)](https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H5N1), 
 
@@ -42,11 +44,7 @@ https://www.cdc.gov/media/releases/2022/s0428-avian-flu.html
 
 https://www.theguardian.com/world/2022/jan/07/first-uk-person-to-catch-h5n1-bird-flu-strain-is-named
 
-OLTÁSOK!!!! 2020!
-
-
-Európában 2003-ban magas patogenitású [A(H7N7)](https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H7N7) okozott járványt Hollandiában... illetve a szintén magas patogenitású A(H7N3) is fertőzött már meg embereket https://en.wikipedia.org/wiki/Influenza_A_virus_subtype_H7N3
-
+OLTÁSOK!!!! 2020
 
 Potenciális kockázatot jelenthetnek még az A(H9N2) és A(H10N7) madárinfluenza vírusok is.
 https://www.ecdc.europa.eu/sites/default/files/documents/Communicable-disease-threats-report-24-april-2021-all-users.pdf
