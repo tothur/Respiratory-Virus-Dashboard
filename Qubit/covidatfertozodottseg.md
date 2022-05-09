@@ -8,18 +8,8 @@ Más európai országokra, köztük a magyarországi covidos átfertőzöttségr
 
 Az MRC biostatisztikusainak 2022. április 29-én frissített [modellje szerint](https://www.mrc-bsu.cam.ac.uk/now-casting/nowcasting-and-forecasting-29th-april-2022/) a járvány kezdetétől az Angol lakosság 77 százaléka eshetett át legalább egyszer a covidon. Regionálisan lebontva a legnagyobb átfertőződöttség az észak-keleti régióban lehet 87,2 százalékkal, a legkisebb pedig Dél Keleten 72,2 százalékkal. Londonban 81,8 százalékos átfertőződöttséget becsül a modell. Az életkori eloszlást tekintve a modell alapján az 5-14 éves korosztályból fertőződtek meg legtöbben a koronavírussal Angliában, 96,2 százalékuk, míg a legkevesebben a 65-74 évesek közül, nekik csupán 56,6 százalékuk. Az MRC modell a járvány kezdetétől április végéig az újrafertőződésekkel együtt összesen 60,5 millió fertőzéssel számol Angliában.
 
-Ezekből 27,4 millió a modell alapján azelőtt történt, hogy az Egészségügyi Világszervezet (WHO) aggodalomra okot adó variánsnak nyilvánította a  
-
 A Financial Times által május 4-én [publikált grafikon](https://www.ft.com/content/fe03bc3b-a381-462d-b373-87dabde0a9ab) 88-97 százalék közé becsülte azok arányát az Angol lakosságon belül, akik legalább egyszer elkapták a covidot 2020 elejétől 2022 áprilisáig. A vezető nemzetközi gazdasági lap az MRC Biostatisztikai csoport modellje és a brit nemzeti statisztikai hivatal (ONS, Office of National Statistics) heti fertőzési [számokra vonatkozó](https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/datasets/coronaviruscovid19infectionsurveydata) becsléseit [vette alapul](https://www.ft.com/content/fe03bc3b-a381-462d-b373-87dabde0a9ab) elemzéséhez, ugyanakkor nem derül ki, hogy azt milyen metodológiával végezték. 
 
-Ha az átfertőződöttség pontos értékén lehet is vitázni, az FT és az MRC biostatisztikai csoportjának [grafikonjain](https://joshuablake.github.io/public-RTM-reports/iframe.html) egy dolog nagyon szembetűnik, mégpedig az, hogy a fertőzések majdnem fele az elmúlt néhány hónapban, az omikron és alvariánsainak decemberi megjelenése után történt. Amint [arról](https://qubit.hu/2022/04/22/a-korabbiaknal-jobban-kikerulhetik-a-vedettseget-az-omikron-uj-valtozatai) többször [írtunk](https://qubit.hu/2021/12/20/elkepesztoen-gyorsan-kepes-terjedni-az-omikron-de-az-astrazeneca-a-moderna-es-a-pfizer-felveszi-vele-a-harcot), ezek a korábbi variánsoknál jobban kikerülik az oltások által fertőzés vagy enyhe megbetegedés ellen biztosított védettséget.
-
-
-
-https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2022.27.1.2101038
-https://www.mrc-bsu.cam.ac.uk/now-casting/nowcasting-and-forecasting-29th-april-2022/
-https://www.ft.com/content/fe03bc3b-a381-462d-b373-87dabde0a9ab
-
-
+Ha az átfertőződöttség pontos értékén lehet is vitázni, az FT és az MRC biostatisztikai csoportjának [grafikonjain](https://joshuablake.github.io/public-RTM-reports/iframe.html) egy dolog nagyon szembetűnik, mégpedig az, hogy a fertőzések közel fele az elmúlt néhány hónapban, az omikron és alvariánsainak decemberi megjelenése után történt. Amint [arról](https://qubit.hu/2022/04/22/a-korabbiaknal-jobban-kikerulhetik-a-vedettseget-az-omikron-uj-valtozatai) többször [írtunk](https://qubit.hu/2021/12/20/elkepesztoen-gyorsan-kepes-terjedni-az-omikron-de-az-astrazeneca-a-moderna-es-a-pfizer-felveszi-vele-a-harcot), ezek a korábbi variánsoknál jobban kikerülik az oltások által fertőzés vagy enyhe megbetegedés ellen biztosított védettséget. Az MRC modellje alapján a 60,5 millió Angliai fertőzésből 27,4 millió azelőtt történt, hogy az Egészségügyi Világszervezet (WHO) tavaly november 26-án aggodalomra okot adó variánsnak nyilvánította volna az omikront, és 33,1 millió utána.
 
 **Kapcsolódó cikkek a Qubiten:**
