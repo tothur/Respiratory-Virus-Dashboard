@@ -25,3 +25,7 @@ https://qubit.hu/2019/04/10/ime-a-kep-amire-evtizedek-ota-var-a-tudomany-az-elso
 https://qubit.hu/2022/02/16/hatalmas-fekete-lyukakat-takarnak-el-elolunk-fankalaku-porfelhok-de-csillagaszok-most-atlattak-rajtuk
 
 https://qubit.hu/2022/01/19/eloszor-figyeltek-meg-ahogy-csillagok-szuleteset-inditja-be-egy-fekete-lyuk
+
+There are different categories of black holes. The smallest are so-called stellar-mass black holes formed by the collapse of massive individual stars at the ends of their life cycles. There also are intermediate-mass black holes, a step up in mass. And finally there are the supermassive black holes that inhabit the center of most galaxies. These are thought to arise relatively soon after their galaxies are formed, devouring enormous amounts of material to achieve colossal size.
+
+Known as a spiral galaxy, the Milky Way viewed from above or below resembles a spinning pinwheel, with our sun situated on one of the spiral arms and Sagittarius A* located at the center. The galaxy contains at least 100 billion stars.
