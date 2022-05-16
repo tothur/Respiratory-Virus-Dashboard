@@ -1,12 +1,14 @@
 # Készül - Máig hordozhatja bolygónk belseje a Holdat létrehozó becsapódás nyomait
 
-## Ha igaz egy 
+## Két hatalmas buborékszerű struktúra található a földköpeny mélyén, amelyek eredete egy tavaly közölt hipotézis szerint akár a Holdat 4,5 milliárd éve létrehozó 
 
 Két hatalmas, kontinens méretű buborék található több ezer kilométerrel a lábunk alatt a földköpenyben. A furcsa struktúrák, mint a New Scientist [nemrég összefoglalta](https://www.newscientist.com/article/mg25433852-000-what-are-the-mysterious-continent-sized-lumps-deep-inside-earth/), bolygónk hajnalán, a Holdat létrehozó becsapódással jöhettek létre.
 
+A buborékokkal érintőlegesen korábbi, a földi életet vélhetően megmentő belső mag kialakulásáról [szóló cikkünkben foglalkoztunk](https://qubit.hu/2022/04/26/550-millio-eve-alakult-ki-bolygonk-belso-magja-es-ugy-tunik-ez-mentette-meg-az-eletet-a-foldon). Egyes kutatók szerint ugyanis a struktúrák a belső mag forgását szabályozhatják, és annak a bolygónk többi részéhez képesti változó sebességű forgásááért felelhetnek. 
+
 Az egyenetlen buborékok, melyeket először az 1980-as években azonosítottak, összességében a földköpeny 8 százalékát teszik ki, és területüket tekintve majdnem a harmadát lefedik a köpeny és a külső mag közti határvonalnak. Az egyik buborék a Csendes-óceán alatt található, a másik pedig Afrika alatt, és függőlegesen akár ezer kilométeresek lehetnek.
 
-A felfedezésük azért volt lehetséges, mert a Föld belsején áthaladó rengéshullámok, melyek felhasználhatók bolygónk szerkezetének kutatására, lassabban haladnak át rajtuk. Erről a tulajdonságukról "low-shear velocity provinces"-nek nevezték el őket a kutatók. A buborékok valószínűleg forróbbak a földköpeny többi részénél, és az is elképzelhető, hogy összetételükben is eltérnek. 
+A felfedezésük azért volt lehetséges, mert a Föld belsején áthaladó rengéshullámok, melyek felhasználhatók bolygónk szerkezetének kutatására, lassabban haladnak át rajtuk. Erről a tulajdonságukról "low-shear velocity provinces"-nek (LLSVP) nevezték el őket a kutatók. A buborékok valószínűleg forróbbak a földköpeny többi részénél, és az is elképzelhető, hogy összetételükben is eltérnek. 
 
 ## A sűrűségük megfejtése elvezet az összetételük, és így az eredetük kiderítéséhez
 
