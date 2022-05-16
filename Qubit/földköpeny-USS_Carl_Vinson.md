@@ -1,28 +1,29 @@
-# Készül - Máig hordozza bolygónk belseje a Holdat létrehozó becsapódás nyomait
+# Máig hordozza bolygónk belseje a Holdat létrehozó becsapódás nyomait
 
 Két hatalmas, kontinens méretű buborék található több ezer kilométerrel a lábunk alatt a földköpenyben. A furcsa struktúrák, mint a New Scientist [nemrég összefoglalta](https://www.newscientist.com/article/mg25433852-000-what-are-the-mysterious-continent-sized-lumps-deep-inside-earth/), bolygónk hajnalán, a Holdat létrehozó becsapódással jöhettek létre.
 
 Az egyenetlen buborékok, melyeket először az 1980-as években azonosítottak, összességében a földköpeny 8 százalékát teszik ki, és területüket tekintve majdnem a harmadát lefedik a köpeny és a külső mag közti határvonalnak. Az egyik buborék a Csendes-óceán alatt található, a másik pedig Afrika alatt, és függőlegesen akár ezer kilométeresek lehetnek.
 
-A felfedezésük azért volt lehetséges, mert a Föld belsején áthaladó rengéshullámok, melyek felhasználhatók bolygónk szerkezetének kutatására, lassabban haladnak át rajtuk. Erről a tulajdonságukról "low-shear velocity provinces"-nek nevezték el őket a kutatók. A buborékok valószínűleg forróbbak a földköpeny többi részénél, és az is elképzelhető, hogy összetételükben is eltérnek. 
+A felfedezésük azért volt lehetséges, mert a Föld belsején áthaladó rengéshullámok, melyek felhasználhatók bolygónk szerkezetének kutatására, lassabban haladnak át rajtuk. Erről a tulajdonságukról "low-shear velocity provinces"-nek nevezték el őket a kutatók. A buborékok valószínűleg forróbbak a földköpeny többi részénél, és az is elképzelhető, hogy összetételükben is eltérnek - de ezeket az információkat csak szeizmikus mérésekkel nyertük, 
 
-## A sűrűségük megfejtése 
+Ha a köpeny többi részével egyezik az összetételük, de annál forróbbak, akkor elképzelhető, hogy közvetve a Pangea szuperkontinens Triász időszakban [kezdődő széttöredeződésének](https://en.wikipedia.org/wiki/Pangaea#Rifting_and_break-up) következtében jöttek létre. Ebben az esetben az elmúlt 230 millió évben létrejött szubdukciós zónákból az alsó köpenyig merültek a kőzetlemezek kisebb darabjai (slabs), lehűtve a köpeny egyes részeit. Ezen hipotézis szerint azok a területek hozzák létre a buborékokat, ahova nem esnek le a kőzetlemez darabkák.
 
-A 2900 kilométer vastag köpeny mélységtől függően [változó](https://en.wikipedia.org/wiki/Earth%27s_mantle#Mineralogical_structure) összetételű, főként szilikátos kőzetekből áll. A köpeny-kéreg határánál 200 fokos hőmérsékletű, míg a külső mag-alsó köpenynél akár a 4 ezer fokot is [elérheti](https://en.wikipedia.org/wiki/Earth%27s_mantle#Temperature_and_pressure).
+Elképzelhető viszont, hogy a buborékok nem csak forróbbak, hanem összetételükben is eltérnek a köpenytől, amely felveti a kérdést, honnan származnak. Ugyan ilyen fontos az, hogy mikor jöttek létre. "Ha ezek tényleg ősi struktúrák, akkor az elmond valamit arról, hogyan keletkezett a bolygónk." - nyilatkozta el a New Scientistnek Sujoy Mukhopadhyay, a davisi Kaliforniai Egyetem kutatója. A rejtély megfejtésének kulcsa a struktúrák sűrűségében rejtőzhet, amely információval szolgál a hőmérsékletükről és kémiai összetételükről is.
 
-A buborékokról meglévő tudásunk nagy része szeizmikus mérésekre alapul, ezekkel viszont nehéz azonban különbséget tenni a hőmérséklet és összetétel között, mint Harriet Lau, a Kaliforniai Egyetem geofizikusa a New Scientistnek elmondta. Ha a köpeny többi részével egyezik az összetételük, de annál forróbbak, akkor elképzelhető, hogy közvetve a Pangea szuperkontinens Triász időszakban [kezdődő széttöredeződésének](https://en.wikipedia.org/wiki/Pangaea#Rifting_and_break-up) következtében jöttek létre. Ebben az esetben az elmúlt 230 millió évben létrejött szubdukciós zónákból az alsó köpenyig merültek a kőzetlemezek kisebb darabjai (slabs), lehűtve a köpeny egyes részeit. Ezen hipotézis szerint azok a területek hozzák létre a buborékokat, ahova nem esnek le a kőzetlemez darabkák.
 
-Elképzelhető viszont, hogy a buborékok nem csak forróbbak, hanem összetételükben is eltérnek a köpenytől, amely felveti a kérdést, honnan származnak. "A sűrűség ennek a vitának a szent grálja" - magyarázta Paula Koelemeijer, a Londoni Egyetem szeizmológusa a New Scientistnek, amely információval szolgálhat a buborékok hőmérsékletéről és kémiai összetételéről is.
 
-Harriet Lau és Paula Koelemeijer egymástól függetlenül dolgoztak a buborékok sűrűségének kiderítésén. 2017-ben Lau és kollégái a buborékok által a kéregben az árapállyal okozott változásokat mérték GPS szenzorok segítségével, amivel arra jutottak, hogy a buborékok elég sűrűek. Koelemeijer és munkatársai azonban ugyanekkor szeizmikus mérésekkel a buborékok köpenyen belüli elhelyezkedését vizsgálták, megállapítva, hogy a buborékok a külső magtól kissé megemelkedve helyezkednek el, arra utalva, hogy környezetüknél kevésbé sűrűek. Koelemeijer szerint "a két módszer ellentétes eredményt adott", ezért a kutatók úgy döntöttek, hogy közös erőfeszítéssel fejtik meg a problémát. A New Scientisttel megosztott kezdeti eredményeik, melyek még nem kerültek publikálásra, arra mutatnak, hogy bár a buborékok többnyire alacsony sűrűségűek, és forró magama, egyes részeik mélyebbre merülnek a köpenyben és sűrűbbek.
+“Density is kind of the holy grail in this debate,” says Paula Koelemeijer, a seismologist at Royal Holloway, University of London.
 
-## Mikor keletkeztek a buborékok?
+Working separately, Lau and Koelemeijer have both been trying to figure how dense these blobs are. In 2017, using GPS sensors to measure tidal changes to the shape of the crust caused by the blobs, Lau and her colleagues estimated the blobs to be fairly dense. But that same year, Koelemeijer and her colleagues used a type of seismic wave sensitive to deep mantle structures, to study where the blobs sit in relation to the core. They were always elevated above the rest of the core, hinting that they were less dense than the surroundings.
 
-Ugyan ilyen fontos kérdés az, hogy mikor jöttek létre. "Ha ezek tényleg ősi struktúrák, akkor az elmond valamit arról, hogyan keletkezett a bolygónk." - nyilatkozta a New Scientistnek [Sujoy Mukhopadhyay](https://eps.ucdavis.edu/people/faculty/mukhopadhyay), a davisi Kaliforniai Egyetem bolygókutatója.
+The two approaches “were showing us conflicting results”, says Koelemeijer. To crack the case, the researchers decided to team up. Early results from their new work indicating that the blobs may be mostly light – perhaps bundles of hot, buoyant mantle plumes – but with dense plant-like roots. But until the results are published, they don’t want to speculate about what this could mean for the blobs’ origins.
 
-...
- 
-Scientists examined lava spewed by oceanic volcanoes powered by the blobs (see “Shaping Earth”), finding odd chemistry. Some of this volcanic material seems like it “hasn’t ever erupted at the surface of the planet”, says Lau. This includes radioactive elements dating back to the first 50 to 100 million years of Earth’s life, stuff you won’t find in younger rocks. “That’s a very strong argument to say there’s something really ancient down there,” says Mukhopadhyay.
+Another important conundrum is the age of these blobs. Scientists examined lava spewed by oceanic volcanoes powered by the blobs (see “Shaping Earth”), finding odd chemistry. Some of this volcanic material seems like it “hasn’t ever erupted at the surface of the planet”, says Lau. This includes radioactive elements dating back to the first 50 to 100 million years of Earth’s life, stuff you won’t find in younger rocks. “That’s a very strong argument to say there’s something really ancient down there,” says Mukhopadhyay.
+
+Blob4
+Strangely shaped entities inside Earth rise out of the crust and into the mantle
+
+Dr. Hiroki Ichikawa (http://dagik.org/misc/gst/index.html)
 
 If so, that would go against the idea that plate tectonics caused the blobs. Plate tectonics began at least 3 billion years ago, but we don’t know exactly when it started. If the blob matter is truly primordial, even older than the advent of plate tectonics, then where else could it have come from? One option is that this material crystallised deep within the molten soup that was the very young Earth, remaining there since.
 
@@ -44,6 +45,8 @@ According to Yuan, samples of the moon’s crust offer additional clues. A team 
 
 If so, that may explain why they still exist today: instead of being swept up by the mantle’s currents and blended into it, their high density let them sink to the base of the mantle and become stubbornly stuck there, to this day. Subducting plates may be influencing the location and composition of the blobs today, but perhaps Theia gave birth to them. That would have been a sight to behold, says Yuan. “It’s beyond my imagination.”
 
+
+Shaping Earth
 Two vast blobs of anomalous material in Earth’s mantle (see main story) are, geologically speaking, alive. This layer of our planet is populated by towering streaks of superheated material that rise to inflict prolonged, island-making, continent-tearing and occasionally climate-changing volcanism on the surface.
 
 Plume-driven volcanism is unlike any other. It has created chains of islands like the Hawaiian archipelago, home to by far the largest volcanoes on the planet. It played a key role in the dismantling of supercontinents and the creation of ocean basins. And it even contributed to the chaos that unfolded 65 million years ago, unleashing climate-changing volcanic gases while the world reeled from a major asteroid impact.
