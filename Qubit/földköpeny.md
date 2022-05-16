@@ -47,3 +47,7 @@ A buborékok, bárhogy is keletkeztek, alapvetően befolyásolhatják a földi �
 **Kapcsolódó cikkek a Qubiten:**
 
 https://qubit.hu/2022/04/26/550-millio-eve-alakult-ki-bolygonk-belso-magja-es-ugy-tunik-ez-mentette-meg-az-eletet-a-foldon
+
+https://qubit.hu/2022/04/20/a-foldkereg-harmadaig-mar-sikerult-lefurnunk-a-cel-a-fold-magjat-burkolo-kopeny-elerese
+
+https://qubit.hu/2022/03/11/50-ev-utan-elkezdtek-kibontani-a-holdon-gyujtott-utolso-kozetmintakat
