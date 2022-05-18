@@ -2,9 +2,13 @@
 
 ## Két furcsa, elképesztő méretű buborékszerű struktúra van a földköpeny mélyén, amelyek egy tavaly közölt hipotézis szerint lehetséges, hogy a Holdat 4,5 milliárd éve létrehozó becsapódásból jöttek létre, egy másik bolygó maradékából.
 
-Két hatalmas, kontinens méretű buborék található több ezer kilométerrel a lábunk alatt a földköpenyben. A furcsa struktúrák, mint a New Scientist [nemrég összefoglalta](https://www.newscientist.com/article/mg25433852-000-what-are-the-mysterious-continent-sized-lumps-deep-inside-earth/), új eredmények alapján elképzelhető, hogy bolygónk hajnalán, a Holdat létrehozó becsapódással keletkeztek.
+Több ezer kilométerrel lábunk alatt, a földköpeny mélyén, két hatalmas, kontinensekkel vetekedő méretű struktúra terül el. Új, a New Scientist [által nemrég összefoglalt](https://www.newscientist.com/article/mg25433852-000-what-are-the-mysterious-continent-sized-lumps-deep-inside-earth/) kutatások alapján elképzelhetőnek tűnik, hogy a furcsa képződmények bolygónk történetének legnagyobb kataklizmája, a Holdat 4,5 milliárd éve létrehozó becsapódás során jöttek létre, és azóta fennmaradtak.
 
-A buborékokkal érintőlegesen korábbi, a földi életet vélhetően megmentő belső mag kialakulásáról [szóló cikkünkben foglalkoztunk](https://qubit.hu/2022/04/26/550-millio-eve-alakult-ki-bolygonk-belso-magja-es-ugy-tunik-ez-mentette-meg-az-eletet-a-foldon). Egyes kutatók szerint ugyanis a struktúrák a belső mag forgását szabályozhatják, és annak a bolygónk többi részéhez képesti változó sebességű forgásáért felelhetnek.
+Egy korábbi, bolygónk belső magjának kialakulásával [foglalkozó cikkünkben](https://qubit.hu/2022/04/26/550-millio-eve-alakult-ki-bolygonk-belso-magja-es-ugy-tunik-ez-mentette-meg-az-eletet-a-foldon) már érintettük az alakzatokat, amelyek egyes kutatók szerint hatással lehetnek a belső mag a Föld többi részétől eltérő sebességű forgására, és akár annak ciklikus változásáért is felelhetnek.
+
+A struktúrákkal érintőlegesen korábbi, a földi életet vélhetően megmentő belső mag kialakulásáról [szóló cikkünkben foglalkoztunk](). Egyes kutatók szerint ugyanis a struktúrák a belső mag forgását szabályozhatják, és annak a bolygónk többi részéhez képesti változó sebességű forgásáért felelhetnek.
+
+A kutatók által LLSVP-nek, vagyis "nagy
 
 Az egyenetlen buborékok, melyeket először az 1980-as években azonosítottak, összességében a [földköpeny](https://en.wikipedia.org/wiki/Earth%27s_mantle) 8 százalékát teszik ki, és területüket tekintve majdnem a harmadát lefedik a köpeny és a külső mag közti határvonalnak. Az egyik buborék a Csendes-óceán alatt található, a másik pedig Afrika alatt, és függőlegesen akár ezer kilométeresek lehetnek.
 
