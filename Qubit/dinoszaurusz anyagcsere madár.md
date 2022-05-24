@@ -1,9 +1,27 @@
-# Már a legkorábbi dinoszauruszoknak is a madarakéhoz hasonló anyagcseréjük volt
+# Embargó Szerda 17:00 - Már a legkorábbi dinoszauruszoknak is a madarakéhoz hasonló anyagcseréjük volt
 
-Már a legkorábbi dinoszauruszok is "melegvérűek", azaz endotermek lehettek - derül ki egy új kutatásból.
+## A legtöbb dinoszaurusz a madarakhoz hasonlóan melegvérű volt, és amik nem, azok is csak utólag vesztették el ezt evolúciójuk során. A melegvérűség a dinoszauruszok és pteroszauruszok közös őseiben alakult ki, illetve tőlük függetlenül egy tengeri hüllő csoportban és az emlősökben.  
 
-A ma délután a Natureben [közölt eredmények](https://www.nature.com/articles/s41586-022-04770-6)
+Az első dinoszauruszok és pteroszauruszok is [melegvérűek](https://en.wikipedia.org/wiki/Warm-blooded) voltak, vagyis fokozott anyagcseréjük következtében a madarakhoz és emlősökhöz hasonlóan környezetüknél magasabb testhőmérsékletet tudtak fenntartani, derül ki egy új kutatásból.
 
+A ma délután a Natureben [közölt eredmények](https://www.nature.com/articles/s41586-022-04770-6) alapján a hatalmas növényevő sauropodák, illetve a theropoda ragadozó dinoszauruszok, melyekhez a madarak [is tartoznak](https://qubit.hu/2021/09/21/agyanak-es-latasanak-is-koszonheti-a-madar-hogy-o-az-egyetlen-ma-elo-dinoszaurusz), valódi melegvérűek ([endoterm](https://en.wikipedia.org/wiki/Endotherm)) voltak, míg a madármedencéjű dinoszauruszok többsége, így a késő jura kori [Stegosaurus](https://en.wikipedia.org/wiki/Stegosaurus), vagy késő krétában élt [Triceratops](https://en.wikipedia.org/wiki/Triceratops) őseikkel ellentétben hidegvérűek ([ektoterm](https://en.wikipedia.org/wiki/Ectotherm)).
 
-A [Raman spektroszkópia](http://www2.sci.u-szeged.hu/inorg/MOMA/ch07s02.html) egy elterjedt, nem roncsoló módszer molekulák összetételének meghatározására, amely a lézerrel megvilágított mintában detektálja azok rezgési spektrumát a [Raman-szórás](https://en.wikipedia.org/wiki/Raman_scattering) jelenségét kihasználva. A NASA tavaly landolt Perseverance marsjárójának két lézeres spektrométere [is képes így mérni](https://qubit.hu/2020/07/30/ma-delutan-utnak-indul-a-perseverance-ami-vegre-kideritheti-hogy-volt-e-valaha-elet-a-marson), meghatározva ásványok és szerves molekulák kémiai összetételét.
+További két csoportban, az emlősöknél és a [plezioszauruszoknak](https://en.wikipedia.org/wiki/Plesiosaur) nevezett tengeri hüllőknél a dinoszauruszoktól és pteroszauruszoktól függetlenül is kialakult a melegvérűség. Mindez a kutatók szerint arra utal, hogy a kréta időszak végén a madarak és emlősök mellett számos csoport melegvérű volt, ezért nem anyagcseréjük volt a döntő abban, melyikük élte túl a 66 millió évvel [ezelőtti nagy kihalást](https://qubit.hu/2022/02/23/tavasz-volt-a-fold-eszaki-felteken-amikor-kihaltak-a-dinoszauruszok).
 
+[Jasmina Wiemann](https://www.jasminawiemann.com/), molekuláris paleontológus és kollégái erre egy általuk kifejlesztett, áttörő módszer segítségével jutottak. Ez most először lehetővé teszi, hogy fosszíliákból direktben következtetni lehessen őslények anyagcseréjének rátájára, ami alapvetően határozza meg az állatok életmódját, viselkedését, és a környezeti változásokhoz való alkalmazkodási képességüket.
+
+Kutatásukhoz csúcstechnológiás vizsgálatoknak vetettek alá 55 ma élő és kihalt, hüllőszerűek és emlősszerűek közé tartozó, [magzatburkos](https://en.wikipedia.org/wiki/Amniote) faj csontjait, olyan molekulákat azonosítva, amelyek az állatok anyagcseréjének erősségéről árulkodnak. Ezt az egy gramm testtömegre jutó, óránként belélegzett levegő térfogataként definiálják, amelyre a sejtekben az oxidatív foszforiláció melléktermékeként keletkező úgynevezett ALE (advanced lipoxidation end-products) molekuláknak a csontokban megmaradt mennyiségéből következtetni lehet.
+
+A kutatók a molekulák Raman lézeres spektroszkópiai és ATR-FTIR infravörös spektroszkópiai megfigyelésével nem találtak összefüggést a légkör geológiai időskálán változó oxigén tartalma és az anyagcsere ráták közt, sem más olyan vizsgálati módszerükből adódó tényezőt, amely jelentősen befolyásolná következtetéseiket. 
+
+A [Raman spektroszkópia](http://www2.sci.u-szeged.hu/inorg/MOMA/ch07s02.html) egy elterjedt, nem roncsoló módszer molekulák összetételének meghatározására, amely a lézerrel megvilágított mintában detektálja azok rezgési spektrumát a [Raman-szórás](https://en.wikipedia.org/wiki/Raman_scattering) jelenségét kihasználva. A NASA tavaly landolt Perseverance marsjárójának két lézeres spektrométere [is képes így mérni](https://qubit.hu/2020/07/30/ma-delutan-utnak-indul-a-perseverance-ami-vegre-kideritheti-hogy-volt-e-valaha-elet-a-marson), meghatározva ásványok és szerves molekulák kémiai összetételét. A kutatók a Raman méréseket egy másik fejlett módszerrel, a minták felszínének összetételét infravörös fény és egy azt szóró kristály segítségével feltáró, úgynevezett [ATR-FTIR](https://en.wikipedia.org/wiki/Fourier-transform_infrared_spectroscopy)infravörös spektroszkópiával erősítették meg.
+
+Az anyagcsere ráta változásának az élőlények rokonsági kapcsolatait feltáró evolúciós törzsfán való ábrázolása megmutatta, hogy a melegvérűség (endotermia) a dinoszauruszok és a pteroszauruszok (repülő hüllők) közös őseiben, az [Ornithodirans](https://en.wikipedia.org/wiki/Avemetatarsalia) csoportban alakulhatott ki, közel 170 millió évvel a madarak [megjelenése](https://en.wikipedia.org/wiki/Bird#Early_evolution) előtt. Arra is fény derült, hogy a hüllőmedencéjű dinoszauruszok már a kezdetektől magas anyagcsere rátával rendelkeztek. Ez csak tovább nőtt a nagy növényevő dinoszauruszok diplodocid csoportjában, valamint a ragadozó theropodák közt az Allosaurusoknál, és a maniraptora dinoszauruszoknál, melyeknek a madarak is tagjai.
+
+*Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2020/02/18/felejtsd-el-a-jurassic-parkot-a-dinoszauruszok-melegveruek-voltak
+
+https://qubit.hu/2021/09/21/agyanak-es-latasanak-is-koszonheti-a-madar-hogy-o-az-egyetlen-ma-elo-dinoszaurusz
+
+https://qubit.hu/2019/01/19/az-ichthyoszauruszok-a-mai-delfinekhez-hasonlitottak-derul-ki-egy-szenzacios-lelet-vizsgalatabol
