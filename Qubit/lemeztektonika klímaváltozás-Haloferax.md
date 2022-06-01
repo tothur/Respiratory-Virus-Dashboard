@@ -6,14 +6,5 @@ A Föld mélyében zajló folyamatoknak több száz millió éven át meghatáro
 
 A május végén a Natureben [publikált tanulmányukban](https://www.nature.com/articles/s41586-022-04420-x) Dietmar Müller, a Sydney-i Egyetem geofizikusa és kollégái feltárták, miként befolyásolta a [kőzetlemezek mozgása](https://en.wikipedia.org/wiki/Plate_tectonics) a Föld klímájának alakulását az elmúlt 250 millió évben, a triász időszak kezdetétől egészen napjainkig.
 
-A dinoszaruszok által uralt földtörténeti középidőben a kutatók szerint a lemeztektonika kulcsfontosságú hajtóereje volt az éghajlati változásoknak. A triász és jura időszakokban a fokozatosan csökkenő átlaghőmérséklet egybeesett azzal, hogy a földköpenyből egyre kevesebb szén-dioxid került a felszínre, míg a kréta időszaki üvegház éghajlat (greenhouse) kialakulása a felmelegedést okozó gáz felszabadulásának megduplázódásához köthető. Az ezt kiváltó felgyorsult lemeztektonika nem csak a Föld hőmérsékletére hatott ki, hanem nagy mennyiségű szenet juttatott a köpenybe, jelentős észak-amerikai gyémántlerakódások létrejöttéhez vezetve.
+A dinoszaruszok által uralt földtörténeti középidőben a kutatók szerint a lemeztektonika kulcsfontosságú hajtóereje volt az éghajlati változásoknak. A triász és jura időszakokban a fokozatosan csökkenő átlaghőmérséklet egybeesett azzal, hogy a földköpenyből egyre kevesebb szén-dioxid került a felszínre, míg a kréta időszaki üvegház éghajlat (greenhouse) kialakulása a felmelegedést okozó gáz felszabadulásának megduplázódásához köthető. Az ezt kiváltó felgyorsult lemeztektonika nem csak a hőméréskletre hatott ki, hanem nagy mennyiségű szenet juttatott a köpenybe, hatalmas gyémántlerakódásokat hagyva hátra Észak-Amerikában.
 
-
-felszabaduló szén-dioxid mértékének csökkenésével
-
-
-Az Antarktisz eljegesedése után 
-
-
-
-A kutatók által tektonikus szén futószallagnak nevezett mechanizmus 
