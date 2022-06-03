@@ -1,5 +1,7 @@
 # Távoli álom még a mesterséges élet létrehozása
 
+## Az elmúlt 20 év tudományos és technológiai áttöréseinek hála ma már a szintetikus biológia korában élünk, és lehetővé vált élőlények és az ember genomjának néha etikai problémákkal tűzdelt szerkesztése is. Az első teljesen laboratóriumban előállított sejttől azonban még nagyon messze vagyunk.
+
 két-három bevezető bekezdés
 
 https://qubit.hu/2019/09/18/hol-tart-ma-a-klonozas-mire-jo-a-genszerkesztes-es-mire-kepesek-a-biohackerek-ilyen-volt-a-qubit-live-2
@@ -72,15 +74,19 @@ ami még hiányzik, a legodarabok - registry of standard biological parts, DNS d
 
 ## De nagyon messze vagyunk az első teljesen mesterséges sejtektől
 
-Egy genom néhány helyen való szerkesztésétől jelentős lépés
+Egy genom néhány helyen való szerkesztéséhez képest egészen más kihívás egy teljes genom újonnan való létrehozása.
 
-Az első, szintetizált genommal rendelkező sejtet 
+Az első, szintetizált genommal rendelkező sejtet Craig Venter amerikai genetikus vezetésével Daniel Gibson és kollégái hozták létre, eredményeiket 2010-ben a Science-ben [publikálva](https://www.science.org/doi/10.1126/science.1190719). A kutatók egy *Mycoplasma mycoides* baktérium korábban nagy pontossággal megszekvenált genomján digitálisan apró módosításokat végeztek, törölve nem esszenciális géneket, és watermark szekvenciákat elhelyezve, szintetizálták, majd összeállították, és elhelyezték *Mycoplasma capricolum* sejtekbe, melyeket utána már a szintetikus genom DNS-e irányított. Az új *Mycoplasma mycoides*-ként viselkedő baktérium ezután a várt fenotípusos jellemzőket mutatta, és képes maradt önreplikációra.
 
-Craig Venterék 2010-es szintetizált genommal rendelkező Mycoplasma baktériuma, vagy Jason Chinék E.coli-ja mekkora lépést jelentenek valójában a "mesterséges élet" létrehozása felé?
+Négy évvel később Flyod Romesberg és munkatársai még nagyobb lépést tettek, természetben nem előforduló DNS bázisokat felhasználó plazmid létrehozásával, kiegészítve egy *Escherichia coli* baktérium genetikai információját egy kibővített [genetikai kódszótárral](https://en.wikipedia.org/wiki/Genetic_code). 2019-ben aztán Jason Chin és kollégái a Natureben [közölték](https://www.nature.com/articles/s41586-019-1192-5) az első teljesen átkódolt, szintetizált genommal rendelkező *E. coli*-t.
 
 Varga úgy látja, ezek a kutatások a nagy méretű genom-szintézis szempontjából minenképpen előre lépést jelentettek, ugyanakkor még mindig nem tudunk teljesen a semmiből - *de novo* - genomot tervezni. Ennek szerinte az az alapvető oka, hogy a kísérletekben használt baktériumok minimálgenomjai is tartalmaznak meglepetéseket és olyan fehérjéket, szabályozó DNS- és RNS-motívumokat, amelyeknek nem értjük a valódi funkcióját.
 
-Mint a genetikus a Qubitnek elmagyarázta, belátható időn belül laboratóriumban csak úgy tudnánk egy teljes sejtet összerakni, ahogy azt Craig Venterék tették, azaz kellene hozzá egy "béranya" sejt, ami biztosítaná, hogy a sejtbe vitt genom elkezd működni és replikálódni.
+Érdemes még itt Sebestyén Endre egy 2018-as, a Budapest Science Meetupon tartott előadására kitérni, amelyben a kutató arra hívta fel a figyelmet, hogy a természetes sejtek normál esetben is tele vannak zajos és hibázó mechanizmusokkal, hiszen 4 milliárd évnyi evolúció eredményei, és nem precíz gépekről van szó.
+
+Az ilyen kísérletek így valódi mesterséges élet létrehozása helyett a gyakorlatban inkább a lehető legkisebb funkcionális genommal elműködő élőlény létrehozására vállalkoztak, és nem egy teljesen szintetikus sejtére, ahol a sejt molekuláris apparátusainak, és környezettől elhatáról membránjának létrehozáshoz sem rendelkezünk 
+
+Mint Varga a Qubitnek elmagyarázta, belátható időn belül laboratóriumban csak úgy tudnánk egy teljes sejtet összerakni, ahogy azt Craig Venterék tették, azaz kellene hozzá egy "béranya" sejt, ami biztosítaná, hogy a sejtbe vitt genom elkezd működni és replikálódni.
 
 *Kapcsolódó cikkek a Qubiten:*
 
