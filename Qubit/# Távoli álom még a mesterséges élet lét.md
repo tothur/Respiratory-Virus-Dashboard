@@ -6,12 +6,15 @@ https://qubit.hu/2019/09/18/hol-tart-ma-a-klonozas-mire-jo-a-genszerkesztes-es-m
 
 ## Terápiás baktériumok és világító növények
 
+A szintetikus biológiáról a Jurassic Park vagy GATTACA után legtöbbeknek valószínűleg világító baktériumok és világító növények ugranak be.
+
 Belenyúlunk a genetikai kódba...
 
-Világító növények, GFP, bioszenzorok, látványosság
-Terápiás baktériumok
+Világító növények, GFP, bioszenzorok, látványosság, terápiás baktériumok
 	
 ## Forradalom a genetikában
+
+Az elmúlt 20 évben 
 
 Megfizethetőbb szekvenálás, DNS szintézis... ez már nagyobb belenyúlást tesz lehetővé...új generációs szekvenálási technológiák, mini szekvenátorok, környezeti és metagenomika
 
@@ -21,7 +24,7 @@ DNS szintézis
 
 ÁBRA 2
 
-A DNS szekvenálás és szintézis mellett a szintetikus biológia arzenáljának megkerülhetetlen része a genomszerkesztés is. A korábban nehézkes és pontatlan megoldásokat a 2010-es évek közepén egy áttörő 
+A DNS szekvenálás és szintézis mellett a szintetikus biológia arzenáljának megkerülhetetlen része a genomszerkesztés is. A korábban nehézkes és pontatlan megoldásokat a 2010-es évek közepén egy áttörő módszer, a [CRISPR](https://en.wikipedia.org/wiki/CRISPR) váltotta fel. 
 
 ## CRISPR babák és gene driveok
 
@@ -33,11 +36,13 @@ Varga Máté, az ELTE TTK Genetikai tanszékének docense a Qubit emailben küld
 
 A gén terápiaként ismert, emberi genomban végzett, nem örökölhető, terápiás célú változtatások... https://www.nature.com/articles/d41586-022-01518-0
 
-A genomszerkesztés alkalmazása nem csak akkor vezet nagy vitákhoz, ha emberi genomokról van szó.
-
-Egy alkalmazási lehetősége a CRISPR-nek a gene driveok... részletesen mik ezek, alkalmazásaik, trialok, következményeik https://qubit.hu/2021/07/05/drasztikus-modszerrel-irnak-at-a-deneverek-genomjat-hogy-ne-legyenek-tobbe-koronavirus-jarvanyok
+A genomszerkesztés alkalmazása nem csak akkor vezet nagy vitákhoz, ha emberi genomokról van szó...gene driveok... részletesen mik ezek, alkalmazásaik, trialok, következményeik https://qubit.hu/2021/07/05/drasztikus-modszerrel-irnak-at-a-deneverek-genomjat-hogy-ne-legyenek-tobbe-koronavirus-jarvanyok
 
 Fontos, hogy a gene driveok ne keverjük össze a genetikailag módosított organizmusokkal (GMO)
+
+Varga szerint főként a szúnyogok terén ígéretes eredmények vannak. Bár ez nem gene drive, a Wolbachia baktériumokkal fertőzött, steril szúnyogok kiengedése
+
+Itt (főleg szúnyogok terén) ígéretes laboreredmények vannak, de nem tudom, hogy nagyléptékű field trial is lenne igazi gene-drive-val (ennek utána kellene nézni). Amit most sok helyen felkaptak, az a Wolbachiával fertőzött, steril szúnyogok kiengedése (https://qz.com/640394/a-chinese-mosquito-factory-releases-20-million-of-the-little-buggers-into-the-wild-every-week/). Illetve több helyen szó van róla, hogy főleg óceániai szigeteken, a betelepített károkozókat valahogy gene-drive-val lehetne kipusztítani. Konkrétumokról itt sem tudok, de a járvány előtt Új Zéland nagyon köpte a tenyerét: https://www.technologyreview.com/2017/02/10/5666/first-gene-drive-in-mammals-could-aid-vast-new-zealand-eradication-plan/.
 
 ## Eljött a biohacking kora
 
@@ -67,7 +72,17 @@ ami még hiányzik, a legodarabok - registry of standard biological parts, DNS d
 
 ## De nagyon messze vagyunk az első teljesen mesterséges sejtektől
 
-synthetic life, Craig Venter Mycoplasma, eColi...
+Egy genom néhány helyen való szerkesztésétől jelentős lépés
 
-•	Craig Venterék 2010-es szintetizált genommal rendelkező Mycoplasma baktériuma, vagy Jason Chinék E.coli-ja mekkora lépést jelentenek valójában a "mesterséges élet" létrehozása felé? Egyáltalán belátható időn belül lehetségessé válhat-e in vitro összerakni egy élő sejtet?
-Nagy méretű genom-szintézis szempontjából mindenképpen előre lépés. De még mindig nem tudunk de novo genomot tervezni, hiszen a minimálgenomok is tartalmaznak meglepetéseket és olyan fehérjéket, szabályozó DNS- és RNS-motívumokat, amelyeknek nem értjük a valódi funkcióját. Teljes sejtet csak úgy, ahogy Venterék: lenne egy "béranya" sejt, ami biztosítaná, hogy a bevitt genom elkezd működni és replikálódni.
+Az első, szintetizált genommal rendelkező sejtet 
+
+Craig Venterék 2010-es szintetizált genommal rendelkező Mycoplasma baktériuma, vagy Jason Chinék E.coli-ja mekkora lépést jelentenek valójában a "mesterséges élet" létrehozása felé?
+
+Varga úgy látja, ezek a kutatások a nagy méretű genom-szintézis szempontjából minenképpen előre lépést jelentettek, ugyanakkor még mindig nem tudunk teljesen a semmiből - *de novo* - genomot tervezni. Ennek szerinte az az alapvető oka, hogy a kísérletekben használt baktériumok minimálgenomjai is tartalmaznak meglepetéseket és olyan fehérjéket, szabályozó DNS- és RNS-motívumokat, amelyeknek nem értjük a valódi funkcióját.
+
+Mint a genetikus a Qubitnek elmagyarázta, belátható időn belül laboratóriumban csak úgy tudnánk egy teljes sejtet összerakni, ahogy azt Craig Venterék tették, azaz kellene hozzá egy "béranya" sejt, ami biztosítaná, hogy a sejtbe vitt genom elkezd működni és replikálódni.
+
+*Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2019/09/18/hol-tart-ma-a-klonozas-mire-jo-a-genszerkesztes-es-mire-kepesek-a-biohackerek-ilyen-volt-a-qubit-live-2
+
