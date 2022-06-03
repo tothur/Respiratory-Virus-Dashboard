@@ -13,23 +13,31 @@ Terápiás baktériumok
 	
 ## Forradalom a genetikában
 
-Megfizethetőbb szekvenálás, DNS szintézis... ez már nagyobb belenyúlást tesz lehetővé
+Megfizethetőbb szekvenálás, DNS szintézis... ez már nagyobb belenyúlást tesz lehetővé...új generációs szekvenálási technológiák, mini szekvenátorok, környezeti és metagenomika
 
-új generációs szekvenálási technológiák, mini szekvenátorok, környezeti és metagenomika
+ÁBRA 1
 
-GRAFIKON
+DNS szintézis
 
-CRISPR...
+ÁBRA 2
 
-## Gene Driveok és CRISPR babák
+A DNS szekvenálás és szintézis mellett a szintetikus biológia arzenáljának megkerülhetetlen része a genomszerkesztés is. A korábban nehézkes és pontatlan megoldásokat a 2010-es évek közepén egy áttörő 
 
-CRISPR babák...
+## CRISPR babák és gene driveok
 
-https://qubit.hu/2019/09/25/a-genetikai-forradalom-heveben-kell-e-tartanunk-a-dizajnerbebik-eljoveteletol-ez-is-kiderult-a-qubit-live-2-n
+Ahogy az új, forradalmi technológiákkal időnként előfordul, a genomszerkesztést forradalmasító CRISPR felhasználásának is gyorsan megjelentek az árnyoldalai. Erre kevés erősebb példa van, mint Ho Csian-kuj kínai kutató esete, aki örökölhető változtatásokat eszközölt a CRISPR segítségével egy ikerpár, és egy [harmadik gyermek](https://www.nature.com/articles/s41587-021-01138-5.epdf) genomjában.
 
-Gén terápia... https://www.nature.com/articles/d41586-022-01518-0
+Csian-kuj 2018-as bejelentése - akkor még csak - az ikerpár CCR5 génjeinek örökölhető módosításáról, melyek az AIDS-et okozó HIV vírus elleni rezisztenciát befolyásolhatják, hatalmas nemzetközi botrányt kavart.
 
-Egy alkalmazási lehetősége a CRISPR-nek a gene driveok... részletesen mik ezek, alkalmazásaik, trialok, következményeik https://qubit.hu/2021/07/05/drasztikus-modszerrel-irnak-at-a-deneverek-genomjat-hogy-ne-legyenek-tobbe-koronavirus-jarvanyok - és miben különbözik ez a GMO-tól.
+Varga Máté, az ELTE TTK Genetikai tanszékének docense a Qubit emailben küldött kérdésére elmondta, hogy "korábban sem tekintették magukra adó kutatók sehol realisztikusnak a közeljövőben az ivarvonalvonal-szerkesztést és ez azóta még inkább így lett, hiszen ez az egész egy nagyon hosszú és sötét árnyat vet minden ilyen típusú törekvésre." A genetikus, aki a Qubit [rendszeres szerzője](https://qubit.hu/author/dolphin) is, 2019-ben, a második Qubit Live-on [beszélt](https://qubit.hu/2019/09/25/a-genetikai-forradalom-heveben-kell-e-tartanunk-a-dizajnerbebik-eljoveteletol-ez-is-kiderult-a-qubit-live-2-n) 
+
+A gén terápiaként ismert, emberi genomban végzett, nem örökölhető, terápiás célú változtatások... https://www.nature.com/articles/d41586-022-01518-0
+
+A genomszerkesztés alkalmazása nem csak akkor vezet nagy vitákhoz, ha emberi genomokról van szó.
+
+Egy alkalmazási lehetősége a CRISPR-nek a gene driveok... részletesen mik ezek, alkalmazásaik, trialok, következményeik https://qubit.hu/2021/07/05/drasztikus-modszerrel-irnak-at-a-deneverek-genomjat-hogy-ne-legyenek-tobbe-koronavirus-jarvanyok
+
+Fontos, hogy a gene driveok ne keverjük össze a genetikailag módosított organizmusokkal (GMO)
 
 ## Eljött a biohacking kora
 
@@ -61,3 +69,5 @@ ami még hiányzik, a legodarabok - registry of standard biological parts, DNS d
 
 synthetic life, Craig Venter Mycoplasma, eColi...
 
+•	Craig Venterék 2010-es szintetizált genommal rendelkező Mycoplasma baktériuma, vagy Jason Chinék E.coli-ja mekkora lépést jelentenek valójában a "mesterséges élet" létrehozása felé? Egyáltalán belátható időn belül lehetségessé válhat-e in vitro összerakni egy élő sejtet?
+Nagy méretű genom-szintézis szempontjából mindenképpen előre lépés. De még mindig nem tudunk de novo genomot tervezni, hiszen a minimálgenomok is tartalmaznak meglepetéseket és olyan fehérjéket, szabályozó DNS- és RNS-motívumokat, amelyeknek nem értjük a valódi funkcióját. Teljes sejtet csak úgy, ahogy Venterék: lenne egy "béranya" sejt, ami biztosítaná, hogy a bevitt genom elkezd működni és replikálódni.
