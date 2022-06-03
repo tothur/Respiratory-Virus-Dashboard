@@ -28,6 +28,12 @@ DNS szintézis
 
 A DNS szekvenálás és szintézis mellett a szintetikus biológia arzenáljának megkerülhetetlen része a genomszerkesztés is. A korábban nehézkes és pontatlan megoldásokat a 2010-es évek közepén egy áttörő módszer, a [CRISPR](https://en.wikipedia.org/wiki/CRISPR) váltotta fel. 
 
+A CRISPR ezen túl nem csak genom szerkesztésre, hanem az élőlény  génexpresszió 
+
+A mesterséges intelligencia is... alphafold, génkifejeződés 
+https://qubit.hu/2022/04/05/forradalmi-attores-a-mesterseges-intelligencia-a-dns-bol-megmondja-hogyan-fognak-kifejezodni-a-genek
+https://qubit.hu/2022/02/04/attorest-hoz-a-biologiaba-a-minden-eddiginel-pontosabb-feherjekutato-algoritmus-az-alphafold2
+
 ## CRISPR babák és gene driveok
 
 Ahogy az új, forradalmi technológiákkal időnként előfordul, a genomszerkesztést forradalmasító CRISPR felhasználásának is gyorsan megjelentek az árnyoldalai. Erre kevés erősebb példa van, mint Ho Csian-kuj kínai kutató esete, aki örökölhető változtatásokat eszközölt a CRISPR segítségével egy ikerpár, és egy [harmadik gyermek](https://www.nature.com/articles/s41587-021-01138-5.epdf) genomjában.
@@ -78,7 +84,7 @@ Egy genom néhány helyen való szerkesztéséhez képest egészen más kihívá
 
 Az első, szintetizált genommal rendelkező sejtet Craig Venter amerikai genetikus vezetésével Daniel Gibson és kollégái hozták létre, eredményeiket 2010-ben a Science-ben [publikálva](https://www.science.org/doi/10.1126/science.1190719). A kutatók egy *Mycoplasma mycoides* baktérium korábban nagy pontossággal megszekvenált genomján digitálisan apró módosításokat végeztek, törölve nem esszenciális géneket, és watermark szekvenciákat elhelyezve, szintetizálták, majd összeállították, és elhelyezték *Mycoplasma capricolum* sejtekbe, melyeket utána már a szintetikus genom DNS-e irányított. Az új *Mycoplasma mycoides*-ként viselkedő baktérium ezután a várt fenotípusos jellemzőket mutatta, és képes maradt önreplikációra.
 
-Négy évvel később Flyod Romesberg és munkatársai még nagyobb lépést tettek, természetben nem előforduló DNS bázisokat felhasználó plazmid létrehozásával, kiegészítve egy *Escherichia coli* baktérium genetikai információját egy kibővített [genetikai kódszótárral](https://en.wikipedia.org/wiki/Genetic_code). 2019-ben aztán Jason Chin és kollégái a Natureben [közölték](https://www.nature.com/articles/s41586-019-1192-5) az első teljesen átkódolt, szintetizált genommal rendelkező *E. coli*-t.
+Négy évvel később Flyod Romesberg és munkatársai még nagyobb [lépést tettek](https://www.nature.com/articles/nature13314), természetben nem előforduló DNS bázisokat felhasználó plazmid létrehozásával, kiegészítve egy *Escherichia coli* baktérium genetikai információját egy kibővített [genetikai kódszótárral](https://en.wikipedia.org/wiki/Genetic_code). 2019-ben aztán Jason Chin és kollégái a Natureben [közölték](https://www.nature.com/articles/s41586-019-1192-5) az első teljesen átkódolt, szintetizált genommal rendelkező *E. coli*-t.
 
 Varga úgy látja, ezek a kutatások a nagy méretű genom-szintézis szempontjából minenképpen előre lépést jelentettek, ugyanakkor még mindig nem tudunk teljesen a semmiből - *de novo* - genomot tervezni. Ennek szerinte az az alapvető oka, hogy a kísérletekben használt baktériumok minimálgenomjai is tartalmaznak meglepetéseket és olyan fehérjéket, szabályozó DNS- és RNS-motívumokat, amelyeknek nem értjük a valódi funkcióját.
 
