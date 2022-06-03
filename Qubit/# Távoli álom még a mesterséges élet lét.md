@@ -51,6 +51,12 @@ ami még hiányzik, a legodarabok - registry of standard biological parts, DNS d
 
 23andMe etc... saját genom szekvenálás/snp/betegségek/adatvédelmi és etikai kockázatok 
 
+- Mi szerinted az az 1-2 legfontosabb faktor/technológia, ami az elmúlt 10 évben segítette a szintetikus biológia fejlődését?
+
+- Melyik a legizgalmasabb DIYbio projekt, amiről eddig olvastál/hallottál?
+
+- Mennyire lehet összeegyeztetni a reálisabb biobiztonsági elvárásokat a DIYbio-val/biohackinggel, van-e esetleg erre valahol a világon bevált megoldás, ami nem lehetetleníti el az egészet?
+
 ## De nagyon messze vagyunk az első teljesen mesterséges sejtektől
 
 synthetic life, Craig Venter Mycoplasma, eColi...
