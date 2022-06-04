@@ -1,4 +1,4 @@
-# Távoli álom még a mesterséges élet létrehozása
+# Távoli álom még a mesterséges élet létrehozása, de már a szintetikus biológia korszakában élünk
 
 ## Az elmúlt 20 év tudományos és technológiai áttöréseinek hála ma már a szintetikus biológia korában élünk, és lehetővé vált élőlények és az ember genomjának néha etikai problémákkal tűzdelt szerkesztése is. Az első teljesen laboratóriumban előállított sejttől azonban még nagyon messze vagyunk.
 
@@ -55,13 +55,14 @@ A DNS kód meghatározása mellett a [DNS szintézis](https://en.wikipedia.org/w
 
 A DNS szekvenálás és szintézis mellett a szintetikus biológia arzenáljának megkerülhetetlen része a [gén- és genomszerkesztés](https://en.wikipedia.org/wiki/Genome_editing) is, amikor a DNS egy része törlésre vagy módosításra kerül, vagy egy új DNS szakaszt illesztenek be az élőlény genetikai kódjába. A korábban  és pontatlan megoldásokat a 2010-es évek közepén egy áttörő módszer váltotta fel. A [CRISPR](https://en.wikipedia.org/wiki/CRISPR) rendszert baktériumok és archeák vírusok elleni védekezésre használják, melyet több évtizednyi kutatásuk után a 2000-es évek végére állapítottak meg a kutatók. A CRISPR olyan DNS szekvenciákat takar, melyek a sejtet korábban megfertőző bakteriofág vírusokból származnak, és a prokarióták segítségükkel újabb fertőzések ellen védekeznek. A szekvenciák mellett a rendszer része a Cas9 enzim, amely a CRISPR DNS-t templátként felhasználva irányítja az ahhoz hasonló DNS szálak felismerését és kivágását.
 
-2012-ben Jennifer Doudnanak és Emmanuelle Charpentiernek hála kiderült, hogy a CRISPR-t RNS segítségével a gyakorlatban is [lehet alkalmazni](https://en.wikipedia.org/wiki/CRISPR_gene_editing) genomok szerkesztésére, akik ezért az áttörő felfedezésért 2020-ban meg is kapták a kémiai Nobel-díjat. A 2010-es évek közepére így a CRISPR már a genetikai és szintetikus biológiai kutatások meghatározó eszközévé vált.
-
-
- A CRISPR ezen túl nem csak genom szerkesztésre, hanem az élőlény génexpressziójának szabályozására használható.
-
+2012-ben Jennifer Doudnanak és Emmanuelle Charpentiernek hála kiderült, hogy a CRISPR-t RNS segítségével a gyakorlatban is [lehet alkalmazni](https://en.wikipedia.org/wiki/CRISPR_gene_editing) genomok szerkesztésére, akik ezért az áttörő felfedezésért 2020-ban meg is kapták a kémiai Nobel-díjat. A 2010-es évek közepére így a CRISPR már a genetikai és szintetikus biológiai kutatások meghatározó eszközévé vált. A CRISPR ezen túl nem csak genom szerkesztésre, hanem élőlények [génexpressziójának szabályozására](https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkac470/6596855?login=false#.YpkYjO7WSYA.twitter) is használhatónak tűnik.
 
 Idővel a mély tanuláson alapuló mesterséges intelligencia is majdnem ennyire fontossá válhat a szintetikus biológiában.
+
+https://qubit.hu/2022/04/05/forradalmi-attores-a-mesterseges-intelligencia-a-dns-bol-megmondja-hogyan-fognak-kifejezodni-a-genek
+
+https://qubit.hu/2022/02/04/attorest-hoz-a-biologiaba-a-minden-eddiginel-pontosabb-feherjekutato-algoritmus-az-alphafold2
+
 
 ## CRISPR babák és gene driveok
 
@@ -73,7 +74,7 @@ Varga Máté, az ELTE TTK Genetikai tanszékének docense a Qubit emailben küld
 
 A gén terápiaként ismert, emberi genomban végzett, nem örökölhető, terápiás célú változtatások... https://www.nature.com/articles/d41586-022-01518-0
 
-https://en.wikipedia.org/wiki/Gene_drive#Disease_vector_species
+https://en.wikipedia.org/wiki/Gene_drive
 
 A genomszerkesztés alkalmazása nem csak akkor vezet nagy vitákhoz, ha emberi genomokról van szó...gene driveok... részletesen mik ezek, alkalmazásaik, trialok, következményeik https://qubit.hu/2021/07/05/drasztikus-modszerrel-irnak-at-a-deneverek-genomjat-hogy-ne-legyenek-tobbe-koronavirus-jarvanyok
 
@@ -93,7 +94,7 @@ Négy évvel később Flyod Romesberg és munkatársai még nagyobb [lépést te
 
 Varga úgy látja, ezek a kutatások a nagy méretű genom-szintézis szempontjából minenképpen előre lépést jelentettek, ugyanakkor még mindig nem tudunk teljesen a semmiből - *de novo* - genomot tervezni. Ennek szerinte az az alapvető oka, hogy a kísérletekben használt baktériumok minimálgenomjai is tartalmaznak meglepetéseket és olyan fehérjéket, szabályozó DNS- és RNS-motívumokat, amelyeknek nem értjük a valódi funkcióját.
 
-Érdemes még itt Sebestyén Endre egy 2018-as, a Budapest Science Meetupon tartott előadására kitérni, amelyben a kutató arra hívta fel a figyelmet, hogy a természetes sejtek normál esetben is tele vannak zajos és hibázó mechanizmusokkal, hiszen 4 milliárd évnyi evolúció eredményei, és nem precíz gépekről van szó.
+Érdemes még itt Sebestyén Endre egy 2018-as, a Budapest Science Meetupon tartott [előadására kitérni](https://www.youtube.com/watch?v=q9CZaNk_32o&ab_channel=BpScienceMeetup), amelyben a kutató arra hívta fel a figyelmet, hogy a természetes sejtek normál esetben is tele vannak zajos és hibázó mechanizmusokkal, hiszen 4 milliárd évnyi evolúció eredményei, és nem precíz gépekről van szó.
 
 Az ilyen kísérletek így valódi mesterséges élet létrehozása helyett a gyakorlatban inkább a lehető legkisebb funkcionális genommal elműködő élőlény létrehozására vállalkoztak, és nem egy teljesen szintetikus sejtére, ahol a sejt molekuláris apparátusainak, és környezettől elhatáról membránjának létrehozáshoz sem rendelkezünk 
 
