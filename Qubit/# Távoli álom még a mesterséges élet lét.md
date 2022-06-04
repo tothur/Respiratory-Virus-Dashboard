@@ -26,13 +26,14 @@ DNS szintézis
 
 ÁBRA 2
 
-A DNS szekvenálás és szintézis mellett a szintetikus biológia arzenáljának megkerülhetetlen része a genomszerkesztés is. A korábban nehézkes és pontatlan megoldásokat a 2010-es évek közepén egy áttörő módszer, a [CRISPR](https://en.wikipedia.org/wiki/CRISPR) váltotta fel. 
+A DNS szekvenálás és szintézis mellett a szintetikus biológia arzenáljának megkerülhetetlen része a [gén- és genomszerkesztés](https://en.wikipedia.org/wiki/Genome_editing) is, amikor a DNS egy része törlésre vagy módosításra kerül, vagy egy új DNS szakaszt illesztenek be az élőlény genetikai kódjába. A korábban nehézkes és pontatlan megoldásokat a 2010-es évek közepén egy áttörő módszer váltotta fel. A [CRISPR](https://en.wikipedia.org/wiki/CRISPR)-t, amelyet baktériumok és archeák vírusok elleni védekezésre használnak, a 2000-es évek végén fedezték fel. Ezek olyan DNS szekvenciák, melyek a sejtet korábban megfertőző bakteriofág vírusokból származnak, és a prokarióták segítségükkel újabb fertőzések ellen védekeznek. A szekvenciák mellett a rendszer része a Cas9 enzim, amely a CRISPR DNS-t templátként felhasználva irányítja az ahhoz hasonló DNS szálak felismerését és kivágását. A CRISPR ezen túl nem csak genom szerkesztésre, hanem az élőlény génexpressziójára .
 
-A CRISPR ezen túl nem csak genom szerkesztésre, hanem az élőlény  génexpresszió 
+A 2010-es években a CRISPR 
 
-A mesterséges intelligencia is... alphafold, génkifejeződés 
-https://qubit.hu/2022/04/05/forradalmi-attores-a-mesterseges-intelligencia-a-dns-bol-megmondja-hogyan-fognak-kifejezodni-a-genek
-https://qubit.hu/2022/02/04/attorest-hoz-a-biologiaba-a-minden-eddiginel-pontosabb-feherjekutato-algoritmus-az-alphafold2
+
+Idővel a mély tanuláson alapuló mesterséges intelligencia is majdnem ennyire fontossá válhat a szintetikus biológiában.
+
+
 
 ## CRISPR babák és gene driveok
 
