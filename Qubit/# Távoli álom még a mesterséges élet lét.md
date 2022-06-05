@@ -12,11 +12,9 @@ A szintetikus biológiáról a Jurassic Park genomszerkesztéssel létrehozott d
 
 A világító élőlényeket a [zöld fluoreszcens fehérjének](https://en.wikipedia.org/wiki/Green_fluorescent_protein) (GFP) és különböző színű változatainak köszönhetjük, amiket molekuláris biológiai kutatásokban általában a génkifejeződés jelzésére alkalmaznak. A fehérjét eredetileg az *Aequorea victoria* medúzából izolálták Osamu Shimomura szerves kémikus és tengerbiológus, illetve kollégái, akik felfedezésükért a 2008-as kémiai Nobel-díjban részesültek.
 
-A GFP-t vagy [sárga színű YFP](https://en.wikipedia.org/wiki/Yellow_fluorescent_protein) változatát kódoló gént szakemberek egy kutatóintézetben, illetve biohackerek egy közösségi laborban rekombináns DNS technikával be tudják vinni egy baktérium, állat, vagy [növény genomjába](https://pubmed.ncbi.nlm.nih.gov/9383559/), ahol azokat a sejt vagy sejtek ki fogják tudni fejezni.
+A GFP-t vagy [sárga színű YFP](https://en.wikipedia.org/wiki/Yellow_fluorescent_protein) változatát kódoló gént szakemberek egy kutatóintézetben, illetve biohackerek egy közösségi laborban rekombináns DNS technikával be tudják vinni egy baktérium, állat, vagy [növény genomjába](https://pubmed.ncbi.nlm.nih.gov/9383559/), ahol azokat a sejt vagy sejtek ki fogják tudni fejezni. Ezek nem csak kutatási segédletek, vagy művészi látványosságok lehetnek, hanem biológiai szenzorok létrehozásához is elvezethetnek.
 
-bioszenzorok
-
-A biohacking jelenlegi állásáról Sebestyén Endre beszélt a második Qubit liveon,
+A biohacking céljairól, és a hozzá szükséges elérhető árú molekuláris biológiai eszközökről Sebestyén Endre beszélt hosszabban a második Qubit liveon tartott előadásában.
 
 DNA structure
 Human Genome Project
@@ -38,7 +36,7 @@ Az elmúlt 20 évben több, a szintetikus biológiához, és tágabb értelemben
 
 ÁBRA 1
 
-A legfontosabb ezek közül az élőlények DNS bázissorendjének meghatározására szolgáló szekvenálás, aminek költsége az elmúlt 20 évben meredeken zuhant, miközben egyre nagyobb genomok felderítése vált lehetségessé, egyre gyorsabban. Az amerikai egészségügyi intézet (NIH) [adatai szerint](https://www.genome.gov/about-genomics/fact-sheets/Sequencing-Human-Genome-cost) 2001-ben még majdnem 100 millió dollár volt egy emberi genom szekvenálási költsége, ami 2021-re 1000 dollár környékére zuhant. Ehhez nagyrészt az [új generációs szekvenálási](https://en.wikipedia.org/wiki/Massive_parallel_sequencing) technológiák (NGS) megjelenése vezetett, melyek párhuzamosan képesek rengeteg apró DNS szakasz (short read) bázissorendjének feltárásra, melyeket számítási módszerekkel összeillesztve rekonstruálható egy élőlény teljes genetikai információja.
+A legfontosabb ezek közül az élőlények DNS bázissorendjének meghatározására szolgáló szekvenálás, aminek költsége az elmúlt 20 évben meredeken zuhant, miközben egyre nagyobb genomok felderítése vált lehetségessé, egyre gyorsabban. Az amerikai egészségügyi intézet (NIH) [adatai szerint](https://www.genome.gov/about-genomics/fact-sheets/Sequencing-Human-Genome-cost) 2001-ben még majdnem 100 millió dollár volt egy emberi genom szekvenálási költsége, ami 2021-re 1000 dollár környékére zuhant. Ehhez nagyrészt az [új generációs szekvenálási](https://en.wikipedia.org/wiki/Massive_parallel_sequencing) technológiák (NGS) megjelenése vezetett, melyek párhuzamosan képesek rengeteg apró DNS szakasz (short read) bázissorendjének feltárásra, melyeket számítási módszerekkel összeillesztve rekonstruálható egy élőlény teljes genetikai információja. Kutatók közben már dolgoznak [harmadik generációs](https://en.wikipedia.org/wiki/Third-generation_sequencing)szekvenálási technológiákon, melyek hosszabb szakaszokat (long reads) képesek megszekvenálni, csökkentve a hibák lehetőségét.
 
 ÁBRA 2
 
