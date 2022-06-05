@@ -37,42 +37,33 @@ ami még hiányzik, a legodarabok - registry of standard biological parts, DNS d
 
 23andMe etc... saját genom szekvenálás/snp/betegségek/adatvédelmi és etikai kockázatok 
 	
-## Forradalom a genetikában
+## Technológiai forradalmak ágyaznak meg a szintetikus biológiának
 
-Az elmúlt 20 évben több, a szintetikus biológiához, és tágabb értelemben a genetikai és molekuláris biológiai kutatásokhoz kulcsfontosságú technológia a korábbiaknál sokkal elérhetőbbé és hatékonyabbá vált. 
-
-A legfontosabb ezek közül a DNS bázissorendjének meghatározására szolgáló szekvenálás, aminek költsége az elmúlt 20 évben meredeken zuhant, miközben egyre nagyobb genomok felderítése vált lehetségessé, egyre gyorsabban.
-
-Megfizethetőbb szekvenálás, DNS szintézis... ez már nagyobb belenyúlást tesz lehetővé...új generációs szekvenálási technológiák, mini szekvenátorok, környezeti és metagenomika
+Az elmúlt 20 évben több, a szintetikus biológiához, és tágabb értelemben a genetikai és molekuláris biológiai kutatásokhoz kulcsfontosságú technológia a korábbiaknál sokkal megfizethetőbbé, hatékonyabbá és pontosabbá vált.
 
 ÁBRA 1
 
-A DNS kód meghatározása mellett a [DNS szintézis](https://en.wikipedia.org/wiki/Artificial_gene_synthesis), azaz gének vagy más DNS szekvenciák laboratóriumi létrehozása is 
+A legfontosabb ezek közül az élőlények DNS bázissorendjének meghatározására szolgáló szekvenálás, aminek költsége az elmúlt 20 évben meredeken zuhant, miközben egyre nagyobb genomok felderítése vált lehetségessé, egyre gyorsabban. Az amerikai egészségügyi intézet (NIH) [adatai szerint](https://www.genome.gov/about-genomics/fact-sheets/Sequencing-Human-Genome-cost) 2001-ben még majdnem 100 millió dollár volt egy emberi genom szekvenálási költsége, ami 2021-re 1000 dollár környékére zuhant. Ehhez nagyrészt az [új generációs szekvenálási](https://en.wikipedia.org/wiki/Massive_parallel_sequencing) technológiák (NGS) megjelenése vezetett, melyek párhuzamosan képesek rengeteg apró DNS szakasz (short read) bázissorendjének feltárásra, melyeket számítási módszerekkel összeillesztve rekonstruálható egy élőlény teljes genetikai információja.
 
- molekulák laboratóriumi létrehozása 
+A DNS kód meghatározása mellett a [DNS szintézis](https://en.wikipedia.org/wiki/Artificial_gene_synthesis), azaz gének vagy más DNS szekvenciák laboratóriumi létrehozása is
 
 ÁBRA 2
 
 A DNS szekvenálás és szintézis mellett a szintetikus biológia arzenáljának megkerülhetetlen része a [gén- és genomszerkesztés](https://en.wikipedia.org/wiki/Genome_editing) is, amikor a DNS egy része törlésre vagy módosításra kerül, vagy egy új DNS szakaszt illesztenek be az élőlény genetikai kódjába. A korábban  és pontatlan megoldásokat a 2010-es évek közepén egy áttörő módszer váltotta fel. A [CRISPR](https://en.wikipedia.org/wiki/CRISPR) rendszert baktériumok és archeák vírusok elleni védekezésre használják, melyet több évtizednyi kutatásuk után a 2000-es évek végére állapítottak meg a kutatók. A CRISPR olyan DNS szekvenciákat takar, melyek a sejtet korábban megfertőző bakteriofág vírusokból származnak, és a prokarióták segítségükkel újabb fertőzések ellen védekeznek. A szekvenciák mellett a rendszer része a Cas9 enzim, amely a CRISPR DNS-t templátként felhasználva irányítja az ahhoz hasonló DNS szálak felismerését és kivágását.
 
-2012-ben Jennifer Doudnanak és Emmanuelle Charpentiernek hála kiderült, hogy a CRISPR-t RNS segítségével a gyakorlatban is [lehet alkalmazni](https://en.wikipedia.org/wiki/CRISPR_gene_editing) genomok szerkesztésére, akik ezért az áttörő felfedezésért 2020-ban meg is kapták a kémiai Nobel-díjat. A 2010-es évek közepére így a CRISPR már a genetikai és szintetikus biológiai kutatások meghatározó eszközévé vált. A CRISPR ezen túl nem csak genom szerkesztésre, hanem élőlények [génexpressziójának szabályozására](https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkac470/6596855?login=false#.YpkYjO7WSYA.twitter) is használhatónak tűnik.
+2012-ben Jennifer Doudnanak és Emmanuelle Charpentiernek hála kiderült, hogy a CRISPR-t RNS segítségével a gyakorlatban is [lehet alkalmazni](https://en.wikipedia.org/wiki/CRISPR_gene_editing) genomok szerkesztésére, akik ezért az áttörő felfedezésért 2020-ban meg is kapták a kémiai Nobel-díjat. A 2010-es évek közepére így a CRISPR már a genetikai és szintetikus biológiai kutatások meghatározó eszközévé vált. A CRISPR ezen túl nem csak genom szerkesztésre, hanem élőlények [génexpressziójának szabályozására](https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkac470/6596855?login=false#.YpkYjO7WSYA.twitter) is használható lehet.
 
-Idővel a mély tanuláson alapuló mesterséges intelligencia is majdnem ennyire fontossá válhat a szintetikus biológiában.
+Idővel a mélytanuláson alapuló mesterséges intelligencia is fontos része lehet a szintetikus biológiai eszköztárnak. Amint [arról beszámoltunk](https://qubit.hu/2022/04/05/forradalmi-attores-a-mesterseges-intelligencia-a-dns-bol-megmondja-hogyan-fognak-kifejezodni-a-genek), két hónapja kutatók egy olyan algoritmust közöltek, amely képes a DNS bázissorend alapján előrejelezni gének kifejeződésének intenzitását, legalábbis élesztőgombák esetén. Tavaly pedig kutatók a fehérjék térszerkezetét aminosavsorrendjükből minden korábbi számítási módszernél pontosabban megfejtő Alphafold2 leírását közölték a Natureben, illetve nyíltan elérhetővé tették az algoritmust GitHubon, ahogy arról [korábban részletesen írtunk](https://qubit.hu/2022/02/04/attorest-hoz-a-biologiaba-a-minden-eddiginel-pontosabb-feherjekutato-algoritmus-az-alphafold2).
 
-https://qubit.hu/2022/04/05/forradalmi-attores-a-mesterseges-intelligencia-a-dns-bol-megmondja-hogyan-fognak-kifejezodni-a-genek
+## CRISPR babák és a gene driveok
 
-https://qubit.hu/2022/02/04/attorest-hoz-a-biologiaba-a-minden-eddiginel-pontosabb-feherjekutato-algoritmus-az-alphafold2
+Ahogy az új, forradalmi technológiákkal időnként előfordul, a CRISPR felhasználásának is gyorsan megjelentek az árnyoldalai. Erre kevés erősebb példa van, mint Ho Csian-kuj kínai kutató esete, aki örökölhető változtatásokat eszközölt a CRISPR segítségével egy ikerpár, és egy [harmadik gyermek](https://www.nature.com/articles/s41587-021-01138-5.epdf) genomjában.
+
+Csian-kuj 2018-as bejelentése, akkor még csak az ikerpár CCR5 génjeinek örökölhető módosításáról, melyeket a kutató az AIDS-et okozó HIV vírussal szembeni rezisztencia létrehozásával indokolt, hatalmas nemzetközi botrányt kavart. 
+
+A kínai kutató tettének következményeiről Varga Máté, az ELTE TTK Genetikai tanszékének docense a Qubit emailben küldött kérdésére elmondta, hogy "korábban sem tekintették magukra adó kutatók sehol realisztikusnak a közeljövőben az ivarvonalvonal-szerkesztést és ez azóta még inkább így lett, hiszen ez az egész egy nagyon hosszú és sötét árnyat vet minden ilyen típusú törekvésre." A genetikus, aki a Qubit [rendszeres szerzője](https://qubit.hu/author/dolphin) is, 2019-ben, a második Qubit Live-on [beszélt](https://qubit.hu/2019/09/25/a-genetikai-forradalom-heveben-kell-e-tartanunk-a-dizajnerbebik-eljoveteletol-ez-is-kiderult-a-qubit-live-2-n) részletesebben az esetről.
 
 
-## CRISPR babák és gene driveok
-
-Ahogy az új, forradalmi technológiákkal időnként előfordul, a genomszerkesztést forradalmasító CRISPR felhasználásának is gyorsan megjelentek az árnyoldalai. Erre kevés erősebb példa van, mint Ho Csian-kuj kínai kutató esete, aki örökölhető változtatásokat eszközölt a CRISPR segítségével egy ikerpár, és egy [harmadik gyermek](https://www.nature.com/articles/s41587-021-01138-5.epdf) genomjában.
-
-Csian-kuj 2018-as bejelentése - akkor még csak - az ikerpár CCR5 génjeinek örökölhető módosításáról, melyek az AIDS-et okozó HIV vírus elleni rezisztenciát befolyásolhatják, hatalmas nemzetközi botrányt kavart.
-
-Varga Máté, az ELTE TTK Genetikai tanszékének docense a Qubit emailben küldött kérdésére elmondta, hogy "korábban sem tekintették magukra adó kutatók sehol realisztikusnak a közeljövőben az ivarvonalvonal-szerkesztést és ez azóta még inkább így lett, hiszen ez az egész egy nagyon hosszú és sötét árnyat vet minden ilyen típusú törekvésre." A genetikus, aki a Qubit [rendszeres szerzője](https://qubit.hu/author/dolphin) is, 2019-ben, a második Qubit Live-on [beszélt](https://qubit.hu/2019/09/25/a-genetikai-forradalom-heveben-kell-e-tartanunk-a-dizajnerbebik-eljoveteletol-ez-is-kiderult-a-qubit-live-2-n) 
-
-A gén terápiaként ismert, emberi genomban végzett, nem örökölhető, terápiás célú változtatások... https://www.nature.com/articles/d41586-022-01518-0
 
 https://en.wikipedia.org/wiki/Gene_drive
 
