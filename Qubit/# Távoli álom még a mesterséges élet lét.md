@@ -6,22 +6,17 @@ Ma rendelkezésünkre áll a technológia baktériumok teljes genetikai informá
 
 Nem kérdés tehát, hogy a [szintetikus biológia](https://en.wikipedia.org/wiki/Synthetic_biology) korát éljük, és sosem voltunk még olyan közel ahhoz, hogy laboratóriumban teljesen új élőlényeket hozzunk létre, és különböző betegségeket kezeljünk hatásos génterápiával. Ugyanakkor a tudományos és technológiai áttörések az elmúlt 10-20 évben súlyos etikai kérdéseket is felszínre hoztak, talán legerőteljesebben az emberi genom örökölhető megváltoztatása körül, és fenn áll a veszélye, hogy egyes alkalmazások akár katasztrófális következményekkel is járhatnak.
 
-## A biohacking a világító növényektől a 
+## Biohacking a világító növényektől a bioszenzorokig
 
-A szintetikus biológiáról a Jurassic Park vagy GATTACA után legtöbbeknek valószínűleg világító baktériumok és világító növények jutnak eszükbe, amelyek alapját adó felfedezésért három kutató kapta meg a 2008-as kémiai Nobel-díjat.
+A szintetikus biológiáról a Jurassic Park genomszerkesztéssel létrehozott dinoszauruszai, vagy a disztópikus [biopunk](https://en.wikipedia.org/wiki/Biopunk) jövőt megjelenítő GATTACA után leginkább valószínűleg világító baktériumok és növények juthatnak eszünkbe. Ezek viszonylag könnyen létrehozhatók komplex laboratóriumi eszközök nélkül, így közkedvelt projekteknek számítanak a [csináld magad biológiával](https://en.wikipedia.org/wiki/Do-it-yourself_biology) (DIYbio) vagy biohackinggel foglalkozók körében.
 
-https://en.wikipedia.org/wiki/Green_fluorescent_protein
+A világító élőlényeket a [zöld fluoreszcens fehérjének](https://en.wikipedia.org/wiki/Green_fluorescent_protein) (GFP) és különböző színű változatainak köszönhetjük, amiket molekuláris biológiai kutatásokban általában a génkifejeződés jelzésére alkalmaznak. A fehérjét eredetileg az *Aequorea victoria* medúzából izolálták Osamu Shimomura szerves kémikus és tengerbiológus, illetve kollégái, akik felfedezésükért a 2008-as kémiai Nobel-díjban részesültek.
 
-Belenyúlunk a genetikai kódba...
+A GFP-t vagy [sárga színű YFP](https://en.wikipedia.org/wiki/Yellow_fluorescent_protein) változatát kódoló gént szakemberek egy kutatóintézetben, illetve biohackerek egy közösségi laborban rekombináns DNS technikával be tudják vinni egy baktérium, állat, vagy [növény genomjába](https://pubmed.ncbi.nlm.nih.gov/9383559/), ahol azokat a sejt vagy sejtek ki fogják tudni fejezni.
 
-Világító növények, GFP, bioszenzorok, látványosság, terápiás baktériumok
+bioszenzorok
 
-https://en.wikipedia.org/wiki/Do-it-yourself_biology
-https://en.wikipedia.org/wiki/Biopunk
-
-DIYbio, biohacking, a világító növényektől gén terápiáig
-
-https://qubit.hu/2019/10/21/mi-az-a-biohacking-es-mire-lehet-vele-menni-otthon-a-konyhaban
+A biohacking jelenlegi állásáról Sebestyén Endre beszélt a második Qubit liveon,
 
 DNA structure
 Human Genome Project
@@ -45,11 +40,11 @@ Az elmúlt 20 évben több, a szintetikus biológiához, és tágabb értelemben
 
 A legfontosabb ezek közül az élőlények DNS bázissorendjének meghatározására szolgáló szekvenálás, aminek költsége az elmúlt 20 évben meredeken zuhant, miközben egyre nagyobb genomok felderítése vált lehetségessé, egyre gyorsabban. Az amerikai egészségügyi intézet (NIH) [adatai szerint](https://www.genome.gov/about-genomics/fact-sheets/Sequencing-Human-Genome-cost) 2001-ben még majdnem 100 millió dollár volt egy emberi genom szekvenálási költsége, ami 2021-re 1000 dollár környékére zuhant. Ehhez nagyrészt az [új generációs szekvenálási](https://en.wikipedia.org/wiki/Massive_parallel_sequencing) technológiák (NGS) megjelenése vezetett, melyek párhuzamosan képesek rengeteg apró DNS szakasz (short read) bázissorendjének feltárásra, melyeket számítási módszerekkel összeillesztve rekonstruálható egy élőlény teljes genetikai információja.
 
-A DNS kód meghatározása mellett a [DNS szintézis](https://en.wikipedia.org/wiki/Artificial_gene_synthesis), azaz gének vagy más DNS szekvenciák laboratóriumi létrehozása is
-
 ÁBRA 2
 
-A DNS szekvenálás és szintézis mellett a szintetikus biológia arzenáljának megkerülhetetlen része a [gén- és genomszerkesztés](https://en.wikipedia.org/wiki/Genome_editing) is, amikor a DNS egy része törlésre vagy módosításra kerül, vagy egy új DNS szakaszt illesztenek be az élőlény genetikai kódjába. A korábban  és pontatlan megoldásokat a 2010-es évek közepén egy áttörő módszer váltotta fel. A [CRISPR](https://en.wikipedia.org/wiki/CRISPR) rendszert baktériumok és archeák vírusok elleni védekezésre használják, melyet több évtizednyi kutatásuk után a 2000-es évek végére állapítottak meg a kutatók. A CRISPR olyan DNS szekvenciákat takar, melyek a sejtet korábban megfertőző bakteriofág vírusokból származnak, és a prokarióták segítségükkel újabb fertőzések ellen védekeznek. A szekvenciák mellett a rendszer része a Cas9 enzim, amely a CRISPR DNS-t templátként felhasználva irányítja az ahhoz hasonló DNS szálak felismerését és kivágását.
+A DNS kód meghatározása mellett a [DNS szintézis](https://en.wikipedia.org/wiki/Artificial_gene_synthesis), azaz gének vagy más DNS szekvenciák laboratóriumi létrehozása is sokkal megfizethetőbbé vált az elmúlt pár évben. A technológia, melynek eredete az 1970-es évekre nyúlik vissza, legtöbbször 200 bázispárból álló oligonukleotidok kémiailag való létrehozásából, és a darabkák összeillesztéséből tevődik össze. Egy idén februárban a Scientific Reportsban [közölt tanulmány](https://www.nature.com/articles/s41598-022-06723-5.pdf) szerint egy szintetizált gén költsége és piaci ára is meredeken zuhant az elmúlt két évtizedben. Míg 2000-ben bázispáronként az ezzel foglalkozó cégek több mint 10 dollárt számoltak fel (egy humán gén teljes hosszúsága [átlagosan](https://academic.oup.com/database/article/doi/10.1093/database/baw153/2730089) 67 ezer bázispár), manapság ez inkább 0,05 dollár körül vagy alatta alakul.
+
+A DNS szekvenáláson és szintézisen túl a szintetikus biológia arzenáljának megkerülhetetlen része a [gén- és genomszerkesztés](https://en.wikipedia.org/wiki/Genome_editing) is, amikor a DNS egy része törlésre, illetve módosításra kerül, vagy egy új DNS szakasz kerül beillesztésre az élőlény genetikai kódjába. A korábban  és pontatlan megoldásokat a 2010-es évek közepén egy áttörő módszer váltotta fel. A [CRISPR](https://en.wikipedia.org/wiki/CRISPR) rendszert baktériumok és archeák vírusok elleni védekezésre használják, melyet több évtizednyi kutatásuk után a 2000-es évek végére állapítottak meg a kutatók. A CRISPR olyan DNS szekvenciákat takar, melyek a sejtet korábban megfertőző bakteriofág vírusokból származnak, és a prokarióták segítségükkel újabb fertőzések ellen védekeznek. A szekvenciák mellett a rendszer része a Cas9 enzim, amely a CRISPR DNS-t templátként felhasználva irányítja az ahhoz hasonló DNS szálak felismerését és kivágását.
 
 2012-ben Jennifer Doudnanak és Emmanuelle Charpentiernek hála kiderült, hogy a CRISPR-t RNS segítségével a gyakorlatban is [lehet alkalmazni](https://en.wikipedia.org/wiki/CRISPR_gene_editing) genomok szerkesztésére, akik ezért az áttörő felfedezésért 2020-ban meg is kapták a kémiai Nobel-díjat. A 2010-es évek közepére így a CRISPR már a genetikai és szintetikus biológiai kutatások meghatározó eszközévé vált. A CRISPR ezen túl nem csak genom szerkesztésre, hanem élőlények [génexpressziójának szabályozására](https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkac470/6596855?login=false#.YpkYjO7WSYA.twitter) is használható lehet.
 
