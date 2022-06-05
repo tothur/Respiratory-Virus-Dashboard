@@ -1,4 +1,4 @@
-# Távoli álom még a mesterséges élet létrehozása, de már a szintetikus biológia korszakában élünk
+# KÉSZÜL - Távoli álom még a mesterséges élet létrehozása, de már a szintetikus biológia korszakában élünk
 
 ## Az elmúlt 20 év tudományos és technológiai áttöréseinek hála ma már a szintetikus biológia korában élünk, és lehetővé vált élőlények és az ember genomjának néha etikai problémákkal tűzdelt szerkesztése is. Az első teljesen laboratóriumban előállított sejttől azonban még nagyon messze vagyunk.
 
@@ -14,21 +14,7 @@ A világító élőlényeket a [zöld fluoreszcens fehérjének](https://en.wiki
 
 A GFP-t vagy [sárga színű YFP](https://en.wikipedia.org/wiki/Yellow_fluorescent_protein) változatát kódoló gént szakemberek egy kutatóintézetben, illetve biohackerek egy közösségi laborban rekombináns DNS technikával be tudják vinni egy baktérium, állat, vagy [növény genomjába](https://pubmed.ncbi.nlm.nih.gov/9383559/), ahol azokat a sejt vagy sejtek ki fogják tudni fejezni. Ezek nem csak kutatási segédletek, vagy művészi látványosságok lehetnek, hanem biológiai szenzorok létrehozásához is elvezethetnek.
 
-A biohacking céljairól, és a hozzá szükséges elérhető árú molekuláris biológiai eszközökről Sebestyén Endre beszélt hosszabban a második Qubit liveon tartott előadásában.
-
-DNA structure
-Human Genome Project
-Genome editing (CRISPR)
-
-Otthon molbio - csináld magad biológia
-
-korábban hackerkultúra, elektronikai alkatrészekből próbáltak új dolgokat csinálni, programozás... biológiával megcsinálni? 
-
-pénz kell műszerekhez - vannak-e olcsó műszerek, amikkel otthon bütykölhetünk? 85-500 dolláros PCR. 3D nyomtatott eszközök - sejtek kiszedegetése, génkifejeződési mintázatok meghatározására. arduino dns detektáló szenzorok. cd-dvd lézerek bioszenzorként. hackerspace közegben összegyűjthető, koordinálható, biocurious... fluoreszkáló baktérium a konyhában... hogy lépjünk túl a fluoreszkáló baktériumokon?
-
-ami még hiányzik, a legodarabok - registry of standard biological parts, DNS darabok leírása/meghatározása, ami x hatására bekapcsolja/kikapcsolja a génexpressziót - kombináció, legohoz hasonlóan összerakható génkifejeződésváltozások irányítása, moduláris történhet, iGem nemzetközi projekt - baktériumok, élesztők manipulálása, CRISPR fertőzések detekciója
-
-23andMe etc... saját genom szekvenálás/snp/betegségek/adatvédelmi és etikai kockázatok 
+A biohacking céljairól, és a hozzá szükséges, elérhető árú molekuláris biológiai műszerekről Sebestyén Endre bioinformatikus [beszélt hosszabban](https://qubit.hu/2019/10/21/mi-az-a-biohacking-es-mire-lehet-vele-menni-otthon-a-konyhaban) a 2019-ben a második Qubit liveon tartott előadásában, amiből az is kiderül, hogy a csináld magad biológia génexpressziót szabályozó legoszerű DNS darabkák, és a genomszerkesztés elérhetőbbé válásával már a közeljövőben jelentősen túlléphet a világító életformák létrehozásán.
 	
 ## Technológiai forradalmak ágyaznak meg a szintetikus biológiának
 
@@ -58,15 +44,11 @@ A kínai kutató tettének következményeiről Varga Máté, az ELTE TTK Geneti
 
 
 
-https://en.wikipedia.org/wiki/Gene_drive
 
-A genomszerkesztés alkalmazása nem csak akkor vezet nagy vitákhoz, ha emberi genomokról van szó...gene driveok... részletesen mik ezek, alkalmazásaik, trialok, következményeik https://qubit.hu/2021/07/05/drasztikus-modszerrel-irnak-at-a-deneverek-genomjat-hogy-ne-legyenek-tobbe-koronavirus-jarvanyok
 
-A gene driveokkal ellentétben a [növénytermesztésben alkalmazott](https://en.wikipedia.org/wiki/Genetically_modified_crops) genetikailag módosított organizmusok (GMO) megváltoztatott genetikai szakaszai nem képesek önmaguktól való terjedésre.
+A genomszerkesztés nem csak akkor vezethet nagy vitákhoz, ha emberi genomokról van szó. Erre legjobb példát a [gene driveok](https://en.wikipedia.org/wiki/Gene_drive) jelentik, melyek olyan mesterségesen egy állati genomba beillesztett, valamilyen kívánt genetikai változást előidéző DNS szakaszok, melyek rövid idő alatt maguktól elterjednek az adott populációban. Támogatóik szerint a technológia lehetővé teheti tömeges emberi megbetegedésekért felelős gazdaállatok, például maláriát terjesztő szúnyogok populációinak módosítását, kontrollálását, vagy extrém esetben megszüntetését, éves szinten akár több millió életet megmentve. Ellenzői szerint a gene driveok akár katasztrofális, és számtalan előre nem látható következményekkel is járhatnak.  
 
-Varga szerint főként a szúnyogok terén ígéretes eredmények vannak. Bár ez nem gene drive, a Wolbachia baktériumokkal fertőzött, steril szúnyogok kiengedése
-
-Itt (főleg szúnyogok terén) ígéretes laboreredmények vannak, de nem tudom, hogy nagyléptékű field trial is lenne igazi gene-drive-val (ennek utána kellene nézni). Amit most sok helyen felkaptak, az a Wolbachiával fertőzött, steril szúnyogok kiengedése (https://qz.com/640394/a-chinese-mosquito-factory-releases-20-million-of-the-little-buggers-into-the-wild-every-week/). Illetve több helyen szó van róla, hogy főleg óceániai szigeteken, a betelepített károkozókat valahogy gene-drive-val lehetne kipusztítani. Konkrétumokról itt sem tudok, de a járvány előtt Új Zéland nagyon köpte a tenyerét: https://www.technologyreview.com/2017/02/10/5666/first-gene-drive-in-mammals-could-aid-vast-new-zealand-eradication-plan/.
+Varga szerint főleg szúnyogoknál ígéretes laboratóriumi eredmények vannak gene driveokkal, de népszerűek a nem gene driveokat alkalmazó megoldások is, például Wolbachia baktériumokkal fertőzött szúnyogok természetbe való kiengedése.  Azt is hozzá kell tenni, hogy a gene driveok fejlesztésével foglalkozó kutatók dolgoznak azon, hogy a technológia kontrollálható, ezáltal biztonságosabb legyen. Fontos emellett azt is leszögezni, hogy a gene driveokkal ellentétben a növénytermesztésben alkalmazott genetikailag módosított organizmusok (GMO) megváltoztatott genetikai szakaszai nem képesek önmaguktól való terjedésre.
 
 ## De nagyon messze vagyunk az első teljesen mesterséges sejtektől
 
