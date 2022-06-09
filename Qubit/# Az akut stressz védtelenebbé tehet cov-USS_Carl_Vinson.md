@@ -6,7 +6,7 @@ Már a rövid távú stressz is jelentős hatással lehet a vírusos fertőzése
 
 A múlt hét elején a Natureben [megjelent tanulmány](https://www.nature.com/articles/s41586-022-04890-z) feltárta, hogy az agy egyes régióinak, stressz által indukált, immunsejtek testen belüli helyzetére és funkciójára mért hatása jelentős, ami befolyásolja a fertőzéseknek való kitettséget.
 
-Wolfram C. Poller, és [Kiss Máté](https://scholar.google.hu/citations?user=4MGTsEEAAAAJ&hl=hu), a new york-i Icahn School of Medicine at Mount Sinai szív és érrendszeri intézetének kutatói, illetve kollégáik szerint az eddig is ismert volt, hogy a pszichológiai stressz kihat az immunválaszra, ugyanakkor az agyi stresszhálókat a perifériás leukocitákkal összekötő útvonalak eddig nem igazán voltak feltárva.
+Wolfram C. Poller, és [Kiss Máté](https://scholar.google.hu/citations?user=4MGTsEEAAAAJ&hl=hu), a new york-i Icahn School of Mediciine at Mount Sinai szív és érrendszeri intézetének kutatói, illetve kollégáik szerint az eddig is ismert volt, hogy a pszichológiai stressz kihat az immunválaszra, ugyanakkor az agyi stresszhálókat a perifériás leukocitákkal összekötő útvonalak eddig nem igazán voltak feltárva.
 
 A szakemberek optogenetikai és kemogenetikai módszerekkel igazolták, hogy a motorhálók gyors neutrofil mobilizációt váltanak ki a csontvelőből a perifériás szövetekbe, a vázizomzatból származó, neutrofil vonzó kemokinek révén. Ezzel párhuzamosan, a paraventricular hypothalamus kontrollálja a monociták, és limfociták 
 átáramlását a másodlagos lymphoid szervekből és vérből a csontvelőbe, direkt glükokortikoid rendszeren keresztül. 
