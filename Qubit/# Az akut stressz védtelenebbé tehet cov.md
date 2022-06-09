@@ -1,12 +1,12 @@
 # KÉSZÜL - Az akut stressz védtelenebbé tehet coviddal és influenzával szemben
 
-## Egerekben csúcstechnológiás módszerekkel és egy magyar kutató részvételével végzett kutatás tárta fel, hogyan hat a stressz különböző agyterületeken keresztül az immunsejtek testen belüli helyzetére, funkciójukra, és a vírusos fertőzésekkel szembeni immunválasz eredményességére. 
+## Egerekben fejlett módszerekkel és egy magyar kutató részvételével végzett kutatás tárta fel, hogyan hat a stressz különböző agyterületeken keresztül az immunsejtek viselkedésére, és a vírusos fertőzésekkel szembeni adaptív immunválasz hatásosságára.
 
-Már a rövid távú stressz is jelentős hatással lehet a vírusos fertőzésekkel szembeni immunválaszra - derül ki egy egerekben csúcstechnológiás módszerekkel végett kutatásból, melyben egy magyar szakember is részt vett.
+Már a rövid távú stressz is jelentős hatással lehet a vírusos fertőzésekkel szembeni [adaptív](https://en.wikipedia.org/wiki/Adaptive_immune_system) (szerzett) immunválaszra - derül ki egy egerekben csúcstechnológiás módszerekkel végzett kutatásból, melyben egy magyar szakember is részt vett.
 
-A múlt hét elején a Natureben [megjelent tanulmány](https://www.nature.com/articles/s41586-022-04890-z) feltárta, hogy az agy egyes régióinak stressz által indukált, immunsejtek testen belüli helyzetére és funkciójára mért hatása jelentős, ami befolyásolja a fertőzéseknek való kitettséget.
+A múlt hét elején a Natureben [közölt eredmények](https://www.nature.com/articles/s41586-022-04890-z) feltárták, hogyan hatnak az agy egyes, stressz által indukált régiói immunsejtek szervezeten belüli elhelyezkedésére és funkciójára, melyek befolyásolják, mennyire képesek az egerek vírusos fertőzésekkel, influenzával és coviddal, megbírkózni.
 
-Wolfram C. Poller, és [Kiss Máté](https://scholar.google.hu/citations?user=4MGTsEEAAAAJ&hl=hu), a new york-i Icahn School of Medicine at Mount Sinai szív és érrendszeri intézetének kutatói, illetve kollégáik szerint az eddig is ismert volt, hogy a pszichológiai stressz kihat az immunválaszra, ugyanakkor az agyi stresszhálókat a perifériás leukocitákkal összekötő útvonalak eddig nem igazán voltak feltárva.
+Wolfram C. Poller, [Kiss Máté](https://scholar.google.hu/citations?user=4MGTsEEAAAAJ&hl=hu), a New York-i Icahn School of Medicine at Mount Sinai szív és érrendszeri intézetének kutatói, illetve kollégáik szerint az eddig is ismert volt, hogy a pszichológiai stressz kihat az immunválaszra, ugyanakkor az agyi stresszhálókat a perifériás leukocitákkal összekötő útvonalak eddig nem igazán voltak feltárva.
 
 ## Már tudjuk, hogy szabályozza az idegrendszer az immunsejteket
 
