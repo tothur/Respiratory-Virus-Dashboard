@@ -6,7 +6,7 @@ Már a rövid távú stressz is jelentős hatással lehet a vírusos fertőzése
 
 A múlt hét elején a Natureben [közölt eredmények](https://www.nature.com/articles/s41586-022-04890-z) feltárták, hogyan hatnak az agy egyes, stressz által indukált régiói immunsejtek szervezeten belüli elhelyezkedésére és funkciójára, melyek befolyásolják, mennyire képesek az egerek vírusos fertőzésekkel, influenzával és coviddal, megbírkózni.
 
-Wolfram C. Poller, [Kiss Máté](https://scholar.google.hu/citations?user=4MGTsEEAAAAJ&hl=hu), a New York-i Icahn School of Medicine at Mount Sinai szív és érrendszeri intézetének kutatói, illetve kollégáik szerint az eddig is ismert volt, hogy a pszichológiai stressz kihat az immunválaszra, ugyanakkor az agyi stresszhálókat a perifériás leukocitákkal összekötő útvonalak eddig nem igazán voltak feltárva.
+Wolfram C. Poller, [Kiss Máté](https://scholar.google.hu/citations?user=4MGTsEEAAAAJ&hl=hu), a New York-i Icahn School of Medicine at Mount Sinai szív- és érrendszeri intézetének kutatói, illetve kollégáik szerint az eddig is ismert volt, hogy a pszichológiai stressz kihat az immunválaszra, de azt homály fedte, hogy miként kapcsolódnak össze az agyi stressz hálózatok és a fehérvérsejtek.
 
 ## Már tudjuk, hogy szabályozza az idegrendszer az immunsejteket
 
