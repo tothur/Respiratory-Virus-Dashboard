@@ -9,7 +9,7 @@ Theropoda: Allosaurus (LJ), Baryonyx (EK), Carnotaurus (LK), Compsognathus (LJ),
 Ornitischia: Ankylosaurus (LC), Iguanodon (EC), Microceratus (LC), Nasutoceratops (LC), Parasaurolophus (LC), Sinoceratops (LC), Stegosaurus (LJ), Pachycephalosaurus (LC), Triceratops (LC)
 Sauropoda: Apatosaurus (LJ), Brachiosaurus (LJ), Dreadnoughtus (LC)
 
-Nem dinoszaurusz: Dimetrodon (permi (!) Synapsida), Lystrosaurus (permi (!) Synapsida) Dimorphodon (pteroszaurusz), Mosasaurus (Mososaurs), Pteranodon (pteroszaurusz), Quetzalcoatlus (pteroszaurusz)
+Nem dinoszaurusz: Dimetrodon (permi (!) Synapsida), Lystrosaurus (permi (!) Synapsida) Dimorphodon EJ (pteroszaurusz), Mosasaurus LC (Mososaurs), Pteranodon LC (pteroszaurusz), Quetzalcoatlus LC (pteroszaurusz)
 
 Atrociraptor prominens
 
