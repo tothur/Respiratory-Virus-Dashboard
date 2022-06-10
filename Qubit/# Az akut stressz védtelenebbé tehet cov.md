@@ -1,4 +1,4 @@
-# KÉSZÜL - Az akut stressz védtelenebbé tehet coviddal és influenzával szemben
+# Az akut stressz védtelenebbé tehet coviddal és influenzával szemben
 
 ## Egerekben fejlett módszerekkel és egy magyar kutató részvételével végzett kutatás tárta fel, hogyan hat a stressz különböző agyterületeken keresztül az immunsejtek viselkedésére, és a vírusos fertőzésekkel szembeni adaptív immunválasz hatásosságára.
 
