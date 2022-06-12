@@ -19,7 +19,18 @@ A dinoszauruszokat közelről mutató jeleneteknél, különösen a Velociraptor
 
 a One World Trade Center tetején fészkelő Quetztaclus pteroszaurusz, a valaha élt legnagyobb repülésre képes állat 
 
-Túl sok karakterfejlődést nem látunk a Jurassic Worldben. A Chris Pratt által alakított Owen Grady raptorbűvölése a harmadik filmre már eléggé elfáradt, és a forgatókönyvíróknak nem sikerült túl meggyőző történetet írni Sam Neillnek (Alan Grant) és Laura Dernnek (Ellie Sattler), így a szereplésük inkább tűnt erőltetettnek, mint ami valójában hozzátett a filmhez. Campbell Scott (Lewis Dodgson) 
+A *T. rex* 
+
+trailer 1: szarvas dino csorda, sauropoda epitkezes, velociraptor blue beta, 
+
+mososaurus hajo nem dinoszaurusz
+
+Therizinosaurus nagy karmok es tollak
+Oviraptor gát
+Quetzacotlus pteroszaurusz repülo
+ijeszto dinoszaurusz
+
+Ha jól kidolgozott karakterfejlődést várunk a filmben, csalódni fogunk. A Chris Pratt által alakított Owen Grady raptorbűvölése a harmadik filmre már eléggé elfáradt, és a forgatókönyvíróknak nem sikerült túl meggyőző történetet írni Sam Neillnek (Alan Grant) és Laura Dernnek (Ellie Sattler), így a szereplésük inkább tűnt erőltetettnek, mint ami valójában hozzátett a filmhez. Campbell Scott (Lewis Dodgson) 
 
 Jeff Goldblum (Ian Malcolm) dinoszaurusz és bioetikai popfilozófusként viszont hozza a kötelezőt, DeWanda Wise (Kayla Watts) alakítása miatt zsoldos pilóta karakterének pedig drukkolni is lehet az akciójelenetek során.
 
