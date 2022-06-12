@@ -1,52 +1,23 @@
-# Megérkeztek a tollas dinoszauruszok a Jurassic World-el
+# Soha nem gondoltad volna, hogy tollas dinoszaurusz lehet ennyire ijesztő
 
-A Jurassic World: Dominionnak 
+## A Jurassic World: Világuralom 
 
-Az 1990-es Jurassic Park filmmel kezdődő 6 filmen kersztüli univerzumot lezáró Jurassic World: Dominiontól
+Az 1993-as Jurassic Park filmmel kezdődő széria legújabb része, a Jurassic World: Világuralom négy év után veszi fel a fonalat a korábbi filmtől, egy olyan világban, ahol a Nublar szigetről kimentett, 66 millió év kihagyás után feltámasztott őshüllők emberekkel élnek együtt a világ minden pontján. A filmre beülve így alapvetően annyi várakozásom volt, hogy várhatóan ennek a kísérletnek a következményeibe kapunk betekintést. Nem teljesen így lett.
 
-Ha csak dinoszauruszokat szeretne valaki látni, a közel 150 perces játékidőben sokkalani fogja az akciójeleneteket
+A Jurassic World: Világuralomban, ahogy a korábbi filmekben is, a kiemelt szerep a [theropoda](https://en.wikipedia.org/wiki/Theropoda) ragadozó dinoszauruszoknak jut, és a nagy csúcsragadozók, illetve a [raptorok](https://en.wikipedia.org/wiki/Dromaeosauridae) mellett néhány különleges képviselőjükkel is találkozunk. A kolosszálási [Sauropoda](https://en.wikipedia.org/wiki/Sauropoda) növényevők inkább csak díszletként mutatkoznak meg, a változatos [madármedencéjűek](https://en.wikipedia.org/wiki/Ornithischia) közül pedig a fejdíszéről könnyen megismerhető *[Parasaurolophus](https://en.wikipedia.org/wiki/Parasaurolophus)*, illetve a *[Nasutoceratops](https://en.wikipedia.org/wiki/Nasutoceratops)* kap hosszabb jeleneteket. Míg a Mosasaurus tengeri hüllő alakítása kevésbé volt emlékezetes, a pteroszauruszok időnként a dinoszauruszokat is túlszárnyalták. Az emberek közé keveredő őslények nagy része a késő krétában élt eredetileg, de néhol közvetlenül a [mezozoikum](https://en.wikipedia.org/wiki/Mesozoic) előtti állatok is előkerülnek.
 
-Dominion takes place four years after Isla Nublar has been destroyed. Dinosaurs now live—and hunt—alongside humans all over the world. This fragile balance will reshape the future and determine, once and for all, whether human beings are to remain the apex predators on a planet they now share with history's most fearsome creatures.
+A CGI azoknál a részeknél, ahol távolban vonuló dinoszauruszokat látunk, nagyon jól működik, de amint az állatok a szereplők közelébe kerültek, megmutatkoznak problémái. Különösen igaz ez a Jurassic World szériában prominens szerepet betöltő "Kék" velociraptor és "Beta" kicsinyének jeleneteire, ahol nem volt túlságosan átélhető, hogy valódi állatok mozognak a vásznon a havas Sierra Navada hegységben. Ezzel ellentétben a valaha élt egyik legnagyobb repülésre képes állat, a *[Quetzalcoatlus](https://en.wikipedia.org/wiki/Quetzalcoatlus)* nevű pteroszaurusz repülőgéppel való küzdelme talán a film legizgalmasabb jelenetét adta.
 
-A filmben a két korábbihoz hasonlóan kiemelt szerep jut a theropoda ragadozó dinoszauruszoknak, 
+Az mindenképpen pozitív előjel volt, hogy a Jurassic World Világuralom tudományos [tanácsadójaként](https://twitter.com/colintrevorrow/status/1229894503064010753) a 38 éves [Stephen Brusatte](https://www.research.ed.ac.uk/en/persons/steve-brusatte) amerikai paleontológust kérték fel, aki a theropoda dinoszauruszok antómiájának és evolúciójának egyik vezető szakértője. Brusatte munkájának eredményét a film legimpresszívebb dinoszauruszai dícsérik, ahol a ragadozók testét a valóságnak megfelelően tollak borítják, ami sokkal inkább hozzáad az élményhez, mint hogy elvenne belőle.
 
-A film legszebb jelenetei távolban vonuló dinoszauruszok
+Ilyen a mellső végtagjain lévő hatalmas karmok miatt összetéveszthetetlen, tollas [maniraptora](https://qubit.hu/2021/09/21/agyanak-es-latasanak-is-koszonheti-a-madar-hogy-o-az-egyetlen-ma-elo-dinoszaurusz) dinoszaurusz, a *[Therizinosaurus](https://en.wikipedia.org/wiki/Therizinosaurus)*, amellyel a Bryce Dallas Howard által alakított Claire Dearinggel találkozik össze. A vörös-szürke színű *[Pyroraptor](https://en.wikipedia.org/wiki/Pyroraptor)* pedig végképp bizonyítja, hogy egy tollakkal borított [raptor](https://en.wikipedia.org/wiki/Dromaeosauridae) is kellően félelmetes lehet. A filmben szereplő másik két raptornál, a *[Deinonychus-ról](https://en.wikipedia.org/wiki/Deinonychus)* mintázott Velociraptor és a prominens akciójelenetben szereplő *[Atrociraptor](https://en.wikipedia.org/wiki/Atrociraptor)* esetén továbbra sincsenek tollak, nagyjából a filmben megmagyarázott okokból.
+
+Ha a tollas dinoszauruszok és többnyire felejthető akciójelenetek mellé jól kidolgozott történetet és mély karakterfejlődést várunk, biztosan csalódni fogunk. A Chris Pratt által alakított Owen Grady raptorbűvölése a harmadik filmre már elfáradt, és a forgatókönyvíróknak nem sikerült meggyőző történetet írni Sam Neillnek (Alan Grant) és Laura Dernnek (Ellie Sattler), így a szereplésük inkább tűnt erőltetettnek, a melléktörténet pedig inkább elvette a film fókuszát. Jeff Goldblum (Ian Malcolm) karaktere viszont bioetikai popfilozófus matematikusként hozza a kötelezőt, DeWanda Wise (Kayla Watts) alakítása miatt zsoldos pilóta karakterének pedig még drukkolni is lehet az akciójelenetek során.
+
+Sajnos Campbell Scott (Lewis Dodgson) biotech vállalatvezetőjének a felszínes főgonosz karakternél nem jutott több, de azt meglepően jó volt látni, hogy a kihalt őslényeket életrekeltő [szintetikus biológia](https://qubit.hu/2022/06/08/a-szintetikus-biologia-koraban-elunk-de-a-mesterseges-elet-letrehozasa-meg-mindig-csak-alom) nem csak vérszomjas ragadozókhoz és sorozatos katasztrófákhoz vezető tudományágként lett ábrázolva, hanem egy kockázatokkal rendelkező, de az emberiség által értelmes célokra is alkalmazható területként, ami közelebb áll a realitáshoz. 
+
+Szerencsére a Jurassic World triológiát lezáró film elég szórakoztató tud lenni ahhoz, és a tollas dinoszauruszok jól sikerültek, hogy ne csak a legnagyobb dinoszaurusz rajongóknak lehessen ajánlani. A Jurassic World: Világuralom mindenképpen érdekesebb lett volna, ha kísérletet tesz a kréta végi és a mai élővilág mesterséges összekeveredése által okozott káosz, az emberre és civilizációnkra mért következmények, és az emiatt felmerülő etikai kérdések minimálisnál mélyebb bemutatására.
 
 
-A CGI problémái
-
-A dinoszauruszokat közelről mutató jeleneteknél, különösen a Velociraptoroknál, a számítógépes grafika (CGI) nem kifejezetten képes valódi élőlényekként visszaadni őket.
-
-a One World Trade Center tetején fészkelő Quetztaclus pteroszaurusz, a valaha élt legnagyobb repülésre képes állat 
-
-A *T. rex* 
-
-trailer 1: szarvas dino csorda, sauropoda epitkezes, velociraptor blue beta, 
-
-mososaurus hajo nem dinoszaurusz
-
-Therizinosaurus nagy karmok es tollak
-Oviraptor gát
-Quetzacotlus pteroszaurusz repülo
-ijeszto dinoszaurusz
-
-Ha jól kidolgozott karakterfejlődést várunk a filmben, csalódni fogunk. A Chris Pratt által alakított Owen Grady raptorbűvölése a harmadik filmre már eléggé elfáradt, és a forgatókönyvíróknak nem sikerült túl meggyőző történetet írni Sam Neillnek (Alan Grant) és Laura Dernnek (Ellie Sattler), így a szereplésük inkább tűnt erőltetettnek, mint ami valójában hozzátett a filmhez. Campbell Scott (Lewis Dodgson) 
-
-Jeff Goldblum (Ian Malcolm) dinoszaurusz és bioetikai popfilozófusként viszont hozza a kötelezőt, DeWanda Wise (Kayla Watts) alakítása miatt zsoldos pilóta karakterének pedig drukkolni is lehet az akciójelenetek során.
-
-Azt meglepően jó volt látni, hogy a szintetikus biológia nem csak vérszomjas ragadozókhoz és sorozatos katasztrófákhoz vezető tudományként lett ábrázolva, hanem egy kockázatokkal rendelkező, de az emberiség által jó célokra is alkalmazható tudományként, ami közelebb áll a realitáshoz. Így a BD Wong (Dr. Henry Wu) genetikus karaktere és a tudomány is nagyjából pozitívan zárja a filmet.
-
-A Jurassic World: Dominion érdekesebb lett volna, ha kísérletet tesz a kréta végi és a mai élővilág összekeveredése által okozott hatások, az emberre és civilizációnkra mért következméynek minimálisnál mélyebb bemutatására.
-
-Theropoda: Allosaurus (LJ), Baryonyx (EK), Carnotaurus (LK), Compsognathus (LJ), Dilophosaurus (EJ), Gallimimus (LC), Giganotosaurus (LC), Moros (LC), Oviraptor (LC), Therizinosaurus (LC), Tyrannosaurus rex (LC) - Rexy
-    Dromaeosauridae: Atrociraptor (LC) - Ghost, Panthera, Red, Tiger, Velociraptor (LC) - Blue, Beta, Pyroraptor
-Ornitischia: Ankylosaurus (LC), Iguanodon (EC), Microceratus (LC), Nasutoceratops (LC), Parasaurolophus (LC), Sinoceratops (LC), Stegosaurus (LJ), Pachycephalosaurus (LC), Triceratops (LC)
-Sauropoda: Apatosaurus (LJ), Brachiosaurus (LJ), Dreadnoughtus (LC)
-
-Nem dinoszaurusz: Dimetrodon (permi (!) Synapsida), Lystrosaurus (permi (!) Synapsida) Dimorphodon EJ (pteroszaurusz), Mosasaurus LC (Mososaurs), Pteranodon LC (pteroszaurusz), Quetzalcoatlus LC (pteroszaurusz)
-
-Atrociraptor prominens
 
 Az igazság p ersze az, hogy ma is a dinoszauruszok bolygóján élünk.
-
-stephen brusatte paleontológus tudományos tanácsadó https://twitter.com/SteveBrusatte, https://www.heraldscotland.com/business_hq/20186752.jurassic-parks-dinosaur-consultant-steve-brusatte-thinks-scotland-paleontologys-new-frontier/ és https://twitter.com/colintrevorrow/status/1229894503064010753
