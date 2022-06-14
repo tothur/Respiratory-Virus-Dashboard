@@ -1,14 +1,16 @@
 # Embargó Szerda 17:00 - Leletekből vett DNS mintákkal megfejtették, honnan indult a nagy pestisjárvány
 
-## A 14-ik században több tízmillió áldozatot követelő pestis Kirgizisztánból érkezett Európába, egy új régészeti és genetikai módszereket ötvöző kutatás szerint.
+## A 14-ik században több tízmillió áldozatot követelő pestis Kirgizisztánból érkezett Európába, egy új régészeti, történeti és genetikai módszereket ötvöző kutatás szerint.
 
-A 14-ik századi nagy pestisjárvány ("fekete halál") a mai Kirgizisztánból
+A 14-ik századi nagy pestisjárvány ("fekete halál") közép-eurázsiából, a mai Kirgizisztánból érkezhetett Európába és Észak-Afrikába, derül ki egy új, régészeti, történeti és genetikai adatokon alapuló kutatásból.
 
-A szerda délután a Natureben [közölt eredmények](https://www.nature.com/articles/s41586-022-04800-3) az emberi történelem legsúlyosabb járványának eredetét tisztázzák,
+A szerda délután a Natureben [közölt eredmények](https://www.nature.com/articles/s41586-022-04800-3) az emberi történelem legsúlyosabb, 1346-1353 közti járványának földrajzi eredetét tisztázzák.
 
-Maria Spyrou, a Max Planck Evolúciós Antropológiai intézet archeogenetikai tanszékének kutatója és kollégái 
+Maria Spyrou, a Max Planck Evolúciós Antropológiai intézet archeogenetikai tanszékének kutatója és kollégái ősi DNS mintákat vettek hét eltemetett embertől két, Kara-Djigach és Burana temetőből. A kutatók történeti, régészeti és genetikai adatok segítségével bizonyították, hogy a helyi járványban a pestist okozó *Yersinia pestis* baktérium játszott szerepet.
 
-Eddig a járvány kezdetével összefüggésbe hozott és kutatók által legtöbbet vitatott régészeti eredmények a Lake Issyk-Kul közelében található temetőkhöz kötődött, a mai Kirgizisztánban.
+A kutatók két ősi *Y. pestis* genomot is rekonstruáltak, melyek egyetlen törzset reprezentálna, és a legutolsó közös őse lehet a baktérium későbbi diverzifikációjának, amely a járvány kitörésével függ össze, a 14-ik század első felében. A mai, a kirgizisztáni Tian Shan régióban megtalálható *Y. pestis* genetikai diverzitásával való összehasonlítása a kutatók szerint támogatja, hogy a ősi baktérium törzs a régióban alakult ki. Ezért a több különböző forrású bizonyíték szerintük támogatja, hogy a nagy pestisjárvány eredete Eurázsia köztponti régiójában volt megtalálható.
+
+Eddig a járvány kezdetével összefüggésbe hozott és kutatók által legtöbbet vitatott régészeti eredmények a Lake Issyk-Kul közelében található temetőkhöz kötődött, a mai Kirgizisztánban. Ezekre a területek egy 14-ik századi járvány áldozatait temették el, ahol a sírkőfeliratok 1338-1339-ről származnak, és direktben dögvészt vagy búvópestist jelölik meg, mint az eltemetett áldozatok halálának okát.
 
 DNA analysis of seven individuals who died in the 14th century suggests that the Black Death may have originated in central Eurasia. The research is published in Nature.
 
