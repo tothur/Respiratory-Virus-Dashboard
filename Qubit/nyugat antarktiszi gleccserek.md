@@ -1,11 +1,27 @@
 # Az elmúlt 5 ezer évben példátlan mértékben olvadnak a nyugat-antarktiszi gleccserek
 
+## Ha a jelenleg a nyugat-antarktiszi jégtakaró stabilitását garantáló gleccserek visszahúzódása 
 
-A nyugat-antarktiszi Thwaites és Pine Island gleccserek
+Az elmúlt 5500 évben példátlan ütemben olvad a nyugat-antarktiszi jégtakaró két jelentős gleccsere, amely megállíthatatlan visszahúzódásukhoz és a jégtakaró nagy részének destabilizációjához vezethet - derül ki egy új, a gleccserekhez közeli szigetek vizsgálatán alapuló kutatásból.
 
-- derül ki a gleccserekhez közeli szigetek vizsgálatából.
+A Nature Geoscience folyóiratban múlt héten [publikált eredmények](https://www.nature.com/articles/s41561-022-00961-y) szerint a Thwaites és Pine Island gleccserek az ipari forradalmat megelőző néhány ezer évben viszonylag stabilak voltak, és kiterjedésük nem változott jelentősen.
 
+A ma 2,2 millió négyzetkilométert beborító [nyugat-antarktiszi jégtakaró](https://en.wikipedia.org/wiki/West_Antarctic_Ice_Sheet) (WAIS, West Antarctic Ice Sheet) nagy része, így a [Thwaites](https://en.wikipedia.org/wiki/Thwaites_Glacier) és [Pine Island](https://en.wikipedia.org/wiki/Pine_Island_Glacier) gleccserek is tengerszint alatti területeken fekszenek, melyek a kontinens belseje felé lejtenek. A régió belsejébe hatoló gleccserek az aljzatukat erodáló [melegebb tengervíz](https://en.wikipedia.org/wiki/Circumpolar_deep_water) miatt így ki vannak téve a tengeri jégtakarókat [fenyegető destabilizáció](https://en.wikipedia.org/wiki/Marine_ice_sheet_instability) (MISI, Marine Ice-Sheet Instability) jelenségének, amely a kutatók szerint elszabaduló olvadásukhoz, és a nyugat-antarktiszi jégtakaró jelentős részének elvesztéséhez vezethet évszázadok alatt, akár 3,4 méterrel megnövelve a globális tengerszintet. A forgatókönyv realisztikusságát jól mutatja, hogy a jelenlegi bizonyítékok szerint a WAIS az előző interglaciális időszakban, az [eemianban](https://en.wikipedia.org/wiki/Eemian) szinte [eltűnt](https://qubit.hu/2022/01/06/teljesen-atirta-a-nyugat-antarktiszi-jegtakaro-tortenetet-a-friss-kutatas-ami-ravilagit-miert-kell-2-fok-alatt-tartani-a-felmelegedest), hozzájárulva a mainál 6-9 méterrel magasabb tengerszinthez.
 
+Scott Braddock, a Maine-i Egyetem [éghajlatkutatója](https://climatechange.umaine.edu/people/scott-braddock/) és kollégái arra voltak kíváncsiak, hogy ezek a hatalmas jégfolyamok a jelenlegi geológiai időszak, a holocén közepén lényegesen kisebbek voltak-e mint ma, ahogy azt egyes hipotézisek feltételezik. Ez ugyanis azt jelentené, hogy a Thwaites és a Pine Island gleccserek az elmúlt néhány ezer évben növekedve nyerték vissza a ma elfoglalt területüket, így a jelenlegi olvadásuk is visszafordítható. Ennek kiderítéséhez a szakemberek három, az Amundsen-tengeröbölben található apró szigetet látogattak meg, ahol rekonstruálták az elmúlt 5500 év [relatív tengerszint változását](https://en.wikipedia.org/wiki/Relative_sea_level), megállapítva ezzel a helyi alapkőzet deformációjának, és így a rájuk nehezedő gleccserek méretének alakulását.
 
+A relatív tengerszint meghatározásához a Lindsey, Schaefer és Edwards szigetek partjain, megemelkedett, a hullámok által el nem ért [abráziós teraszok](https://en.wikipedia.org/wiki/Raised_beach) keletkezésének idejét állapították meg, az üledékben talált kagylóhéjak radiokarbonos kormeghatározásával. Emellett megnézték a [nagy energiájú kozmikus sugárzás](https://en.wikipedia.org/wiki/Galactic_cosmic_ray) révén bolygónk légkörében keletkező berillium-10-es izotóp mennyiségét az alapkőzetből vett mintákból, amivel meghatározták, hogy a gleccserjég alól közel 8 ezer éve szabadultak fel a Lindsey és Schaffer szigetek, míg az Edwards sziget valószínűleg 3900 éve.
 
-A következő évszázadok tengerszint emelkedését meghatározó 
+Arra jutottak, hogy a területen a relatív tengerszint folytonosan csökkent (tehát az alapkőzet magassága nőtt) az elmúlt 5,5 ezer évben, nagyobb változások nélkül, amelyet szerintük az [utolsó glaciális periódus](https://qubit.hu/2021/11/10/az-ember-altal-okozott-globalis-felmelegedes-merteke-szinte-peldatlan-az-utolso-jegkorszak-ota) 12 ezer évvel ezelőtti lezárulta után visszahúzódó Thwaites és Pine Island gleccsereket alkotó jég súlyának az alapkőzetről való távozása okozott. Ez valószínűtlenné teszi, hogy a gleccserek jelentősen visszahúzódtak, majd újra megnövekedtek volna a holocén közepe óta, de kisebb változásokat nem zár ki.
+
+Annyi viszont biztos, hogy az alapkőzet emelkedésének mértéke példátlan az elmúlt 5,5 ezer évben. Míg a kutatók által vizsgált régióban a más tényezők mellett alapkőzet megemelkedésére is utaló relatív tengerszint évente nagyjából 3,5 milliméterrel csökkent, 5500-tól 300 évvel ezelőttig, az alapkőzet megemelkedése ma évi 15 milliméter, egyes területeken az Amundsen-tengeröbölben pedig a 41 millimétert is eléri. A kutatók szerint ez a különbség olyannyira nagy, hogy csak a gyorsuló jégolvadás magyarázhatja, amely emiatt példátlan sebességűnek tűnik az elmúlt 5500 évben.
+
+A [következő években](https://www.sciencedaily.com/releases/2022/06/220609131852.htm) a brit és amerikai kutatókból álló Nemzetközi Thwaites gleccser kollaboráció a jég alá fúrva a gleccser alatti kőzetekből vesz majd mintákat, hogy megállapítsák, valóban visszafordíthatatlan-e az olvadása, vagy sem. A jelenlegi tudományos [konszenzus szerint](https://www.carbonbrief.org/guest-post-how-close-is-the-west-antarctic-ice-sheet-to-a-tipping-point/) a globális felmelegedés 1,5-2 fok alatt tartása a minimum feltétele annak, hogy elkerülhető legyen a nyugat-antarktiszi jégtakaró összeomlása, és így a tengerszint több méteres emelkedése az előttünk álló évszázadokban.
+
+*Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2022/01/06/teljesen-atirta-a-nyugat-antarktiszi-jegtakaro-tortenetet-a-friss-kutatas-ami-ravilagit-miert-kell-2-fok-alatt-tartani-a-felmelegedest
+
+https://qubit.hu/2021/11/10/az-ember-altal-okozott-globalis-felmelegedes-merteke-szinte-peldatlan-az-utolso-jegkorszak-ota
+
+https://qubit.hu/2021/08/03/a-szen-dioxid-szint-csokkenese-okozhatta-az-elmult-66-millio-ev-legnagyobb-eghajlatvaltozasat
