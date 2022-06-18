@@ -1,7 +1,21 @@
 # Egy különleges technika DNS és fehérjék nélkül is segít feltárni az élőlények közti evolúciós rokonságot
 
+Ha az élőlények alakja vagy anatómiája alapján tárjuk fel a köztük lévő evolúciós rokonságot, pontatlanabb eredményt kapunk, mintha genetikai információ alapján tennék ugyan ezt, mutat rá egy nemrég megjelent kutatás, ami 
 
-A Nature Communications Biology folyóiratban június elején közölt eredmények
+
+A Nature Communications Biology folyóiratban [május végén közölt](https://www.nature.com/articles/s42003-022-03482-x) eredmények 
+
+
+48 molekuláris és morfológiai alapú törzsfa pár vizsgálatán alapultak
+
+
+A genetikai információn alapuló vizsgálatok pontosabban tárják fel az élőlények közti evolúciós rokonságot, mint az anatómiai 
+
+
+
+Az élőlények közötti evolúciós rokonságot pontosabban mutatják meg a molekuláris , mint az anatómiai 
+
+
 
 Két vezető magyar paleontológust kérdeztünk meg arról, hogyan 
 
