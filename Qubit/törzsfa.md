@@ -1,9 +1,10 @@
 # Egy különleges technika DNS és fehérjék nélkül is segít feltárni az élőlények közti evolúciós rokonságot
 
-Ha az élőlények alakja vagy anatómiája alapján tárjuk fel a köztük lévő evolúciós rokonságot, pontatlanabb eredményt kapunk, mintha genetikai információ alapján tennék ugyan ezt, mutat rá egy nemrég megjelent kutatás, ami 
+Genetikai információ segítségével pontosabban feltárható az élőlények evolúciós rokonsága, mint alakjuk vagy anatómiájuk alapján, mutat rá egy nemrég megjelent kutatás, igazolva az elmúlt évtizedekben a klasszikus rendszertan molekuláris módszerekkel való felülvizsgálatáért tett erőfeszítéseket.
 
+Jack Oyston, az angliai Bath Egyetem evolúcióbiológusa és kollégái által a Nature Communications Biology folyóiratban [május végén közölt](https://www.nature.com/articles/s42003-022-03482-x) eredmények szerint a molekuláris adatokon nyugvó filogenetikai vizsgálatok pontosabban visszaadják az élőlények valós földrajzi elterjedését. Ezt a módszert viszont fosszíliák esetén, ahol [általában](https://www.science.org/content/article/i-don-t-care-what-they-say-about-me-paleontologist-stares-down-critics-her-hunt) semmilyen molekuláris információ nem őrződik meg, nem lehet bevetni, felvetve a kérdést, milyen megoldások segíthetnek őslények evolúciós kapcsolatait a lehető legprecízebben feltárni.
 
-A Nature Communications Biology folyóiratban [május végén közölt](https://www.nature.com/articles/s42003-022-03482-x) eredmények 
+Ennek megválaszolására két vezető magyar paleontológussal 
 
 
 48 molekuláris és morfológiai alapú törzsfa pár vizsgálatán alapultak
