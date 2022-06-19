@@ -6,23 +6,29 @@ Jack Oyston, az angliai Bath Egyetem evolúcióbiológusa és kollégái által 
 
 Ennek megválaszolásához két magyar paleontológust, Ősi Attilát, az ELTE TTK Őslénytani Tanszékének vezetőjét és Rabi Mártont, a Tübingeni Egyetem Őslénytani tanszékének kutatóját kerestük meg, akik vagy már végeztek, vagy jelenleg is végeznek fosszíliák morfológiai jellemzőin alapuló filogenetikai vizsgálatokat, megvilágítva ezzel evolúciós történetüket.
 
-ÁBRA1
+ÁBRA1-ToL
 
-## Általában jobb a molekuláris törzsfa
+## Általában jobb a molekuláris törzsfa, de azért nem mindig
 
-A 20. század második felének molekuláris biológiai forradalma lehetővé tette élőlények genetikai információjának, fehérjéik aminosavsorrendjének, RNS molekuláik, és az összes sejtes élőlénynél örökítőanyagul szolgáló DNS bázissorendjének megismerését. 1977-ben Carl Woese és George Fox riboszómális RNS szekvenciák vizsgálatával jelentős [áttörést ért el](https://www.pnas.org/doi/10.1073/pnas.74.11.5088), azonosítva az archeákat, a baktériumok és az eukarióták után a földi élet harmadik nagy csoportját, amiről már korábban [részletesen írtunk](https://qubit.hu/2020/01/10/titokzatos-mikroorganizmusok-probalnak-tulelni-a-fold-egyik-legelhetetlenebb-pontjan). Az 1990-es évektől az első baktérium, majd állati genomok megszekvenálásával nagy lendületet kapott a molekuláris filogenetika, és hol kisebb, hol nagyobb módosításokkal átíródott az élet törzsfája.
+A 20. század második felének molekuláris biológiai forradalma lehetővé tette élőlények genetikai információjának, fehérjéik aminosavsorrendjének, RNS molekuláik, és az összes sejtes élőlénynél örökítőanyagul szolgáló DNS bázissorendjének megismerését. 1977-ben Carl Woese és George Fox riboszómális RNS szekvenciák vizsgálatával jelentős [áttörést ért el](https://www.pnas.org/doi/10.1073/pnas.74.11.5088), azonosítva az archeákat, a baktériumok és az eukarióták után a földi élet harmadik nagy csoportját, amikkel korábban [már részletesen foglalkoztunk](https://qubit.hu/2020/01/10/titokzatos-mikroorganizmusok-probalnak-tulelni-a-fold-egyik-legelhetetlenebb-pontjan). 
 
-Oyston munkatársaival 48 pár molekuláris és morfológiai adatokon alapuló törzsfát hasonlított össze, és pontosságukat két független módszerrel határozta meg. Egyrészt élőlények valós földrajzi elterjedésével, másrészt fosszíliáik első megjelenésével. A kutatók szerint korábban is utaltak arra szimulációk, hogy a molekuláris fák - melyeket ma már a ma élő állatok esetén legtöbbször alkalmaznak a kutatók - jobbak, de kevés statisztikai vizsgálat foglalkozott a kérdéssel.
+Az 1990-es évektől az első baktérium, majd állati genomok megszekvenálásával nagy lendületet kapott a molekuláris filogenetika, és hol kisebb, hol nagyobb módosításokkal átíródott az élet törzsfája. A kutatók szerint erre jó példát jelentenek a méhlepényes emlősök, ahol a molekuláris fák által azonosított emlőscsoportok, az Afrotheria, Atlantogenata, Boreoeutheria és Laurasiatheria jobban visszaadta ezen emlősök mai földrajzi elterjedését. Egyes esetekben, mint az ízeltlábúak, hüllők, és madarak, viszont a morfológiai és molekuláris alapú vizsgálatok jól kiegészítik egymást. A kutatók szerint korábban is utaltak arra szimulációk, hogy a molekuláris fák - melyeket a ma élő állatok esetén már legtöbbször alkalmaznak - jobbak, de kevés statisztikai vizsgálat foglalkozott a kérdéssel.
 
-Ehhez képest nem találtak szignifikáns eltérést a stratigráfiai módszerrel a molekuláris és a morfológiai fák közt.
+ÁBRA2-PLACENTALIA TREE
 
-Kiderült az is, hogy a molekuláris fák földrajzi elterejdésre vetített pontossága az elmúlt években nőtt, aminek okát a kutatók a növekvő genetikai adatmennyiségben látják.
+Oyston munkatársaival 48 pár molekuláris és morfológiai adatokon alapuló állati és növényi törzsfát hasonlított össze, melyeket 1981-2015 közt publikáltak, és pontosságukat két független kritériummal szemben határozta meg. Egyrészt azt nézték meg, hogy mennyire passzolnak az élőlények földrajzi elterjedéséhez, melyeket az IUCN Red Listhez hasonló adatbázisokból vettek a kutatók, másrészt a fosszílis rekordhoz, konkrétabban a vizsgált élőlényeknél az első fosszíliáik megjelenéséhez. 
 
-Oystonék tanulmányuk végén hangsúlyozzák, mindez nem jelenti, hogy el kellene dobnunk a morfológiai módszert, hiszen kihalt élőlények esetén legtöbbször kizárólag ilyen adatok állnak rendelkezésünkre.
+A vizsgált morfológiai törzsfák 54, és a molekulárisak 65 százaléka jobban illeszkedett a földrajzi elterjedéshez, mint azt véletlenszerű adatoknál várnánk, és összességében a molekuláris fák szignifikánsan jobban teljesítettek a földrajzi elterjedés vonatkozásában. Ehhez képest a kutatók nem találtak szignifikáns eltérést 23 molekuláris és a morfológiai fa közt a fosszilis rekorddal összehasonlítva. 
 
-## Mi a megoldás akkor az őslénytanban?
+Kiderült az is, hogy a molekuláris és morfológiai fák földrajzi elterjedésre vetített pontossága az elmúlt években nőtt, aminek okát a kutatók a növekvő adatmennyiségben, a fejlődő vizsgálati módszerekben és jobb evolúciós modellekben látják. A filogenetikai fák pontosságának időbeli növekedési trendje azonban önmagában nem magyarázza, hogy miért jobbak a molekuláris fák a morfológiai fáknál a földrajzi elterjedés visszaadásában. A kutatók azonban azt találták, hogy vannak ez alól kivételek is, például a denevérek, kenguruk, vagy fenyők, ahol a morfológiai fák jobban teljesítettek.
+
+Oystonék tanulmányuk végén hangsúlyozzák, mindez nem jelenti, hogy nyugdíjazni kellen a morfológiai módszert, hiszen egyes esetekben kritikusak maradnak az élőlények közti kapcsolatok feltárásban, illetve kihalt élőlények esetén legtöbbször kizárólag ilyen adatok állnak rendelkezésünkre. Ugyanakkor statisztikai vizsgálatuk azt jelzi, hogy a konvergens evolúció által létrehozott élőlények közti alaktani hasonlóságok félrevezethetnek a valós evolúciós kapcsolatok.
+
+## Mi akkor a megoldás az őslénytanban?
 
 "Jó pár évvel ezelőtt mi is csináltunk filogenetikai elemzéseket. Ezeknél egész egyszerűen a csontokon megfigyelhető morfológiai karaktereket kódoltuk - azt, hogy megvan, vagy nincs meg a csonton például egy adott bütyök, vagy taréj, illetve hogy a csontok arányai hosszabbak-e, mint szélesebbek, vagy egy adott nyílás ovális vagy kör alakú" - magyarázta a Qubit emailben küldött kérdésére Ősi Attila.
+
+ÁBRA - DÍNÓ FA
 
 Rabi Márton szerint ha muszáj kizárólag morfológiai információval törzsfát építeni, akkor a tip-dating módszert érdemes használni.
 
