@@ -10,13 +10,7 @@ Ennek megválaszolásához két magyar paleontológust, Ősi Attilát, az ELTE T
 
 ## Általában jobb a molekuláris törzsfa
 
-A 20. század második felének molekuláris biológiai forradalma lehetővé tette élőlények genetikai információjának, fehérjéik aminosavsorrendjének, RNS molekuláik, és az összes sejtes élőlénynél örökítőanyagul szolgáló DNS bázissorendjének megismerését. 1977-ben Carl Woese és George Fox riboszómális RNS szekvenciák vizsgálatával jelentős [áttörést ért el](https://www.pnas.org/doi/10.1073/pnas.74.11.5088), azonosítva az archeákat, a baktériumok és az eukarióták után a földi élet harmadik nagy csoportját, amiről már korábban [részletesen írtunk](https://qubit.hu/2020/01/10/titokzatos-mikroorganizmusok-probalnak-tulelni-a-fold-egyik-legelhetetlenebb-pontjan).
-
-
-Az 1990-es évektől az első baktérium, majd állati genomok megszekvenálásával 
-
-
-a genetikai információ elérhetővé válásával egyre inkább élőlények 
+A 20. század második felének molekuláris biológiai forradalma lehetővé tette élőlények genetikai információjának, fehérjéik aminosavsorrendjének, RNS molekuláik, és az összes sejtes élőlénynél örökítőanyagul szolgáló DNS bázissorendjének megismerését. 1977-ben Carl Woese és George Fox riboszómális RNS szekvenciák vizsgálatával jelentős [áttörést ért el](https://www.pnas.org/doi/10.1073/pnas.74.11.5088), azonosítva az archeákat, a baktériumok és az eukarióták után a földi élet harmadik nagy csoportját, amiről már korábban [részletesen írtunk](https://qubit.hu/2020/01/10/titokzatos-mikroorganizmusok-probalnak-tulelni-a-fold-egyik-legelhetetlenebb-pontjan). Az 1990-es évektől az első baktérium, majd állati genomok megszekvenálásával nagy lendületet kapott a molekuláris filogenetika, és hol kisebb, hol nagyobb módosításokkal átíródott az élet törzsfája.
 
 Oyston munkatársaival 48 pár molekuláris és morfológiai adatokon alapuló törzsfát hasonlított össze, és pontosságukat két független módszerrel határozta meg. Egyrészt élőlények valós földrajzi elterjedésével, másrészt fosszíliáik első megjelenésével. A kutatók szerint korábban is utaltak arra szimulációk, hogy a molekuláris fák - melyeket ma már a ma élő állatok esetén legtöbbször alkalmaznak a kutatók - jobbak, de kevés statisztikai vizsgálat foglalkozott a kérdéssel.
 
