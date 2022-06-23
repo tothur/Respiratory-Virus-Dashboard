@@ -17,7 +17,7 @@ Múlt hét elején a Science folyóiratban Catherine Reynolds és kollégái [á
 
 A tanulmány legnagyobb vihart kavaró állítása arra vonatkozott, hogy három mRNS oltásban részesülő embereknél egy korábbi, alfa variáns (B.1.1.7) által okozott fertőzés kevésbé hatásos antitest választ eredményez az omikron (B.1.1.529/BA.1) ellen. 
 
-A szerzők és független szakértők, mint Kristian Andersen amerikai virológus szeirnt ez egy immunológiában imprinting vagy original antigenic sinnek nevezett jelenségre utalhat. Ez...
+A szerzők és független szakértők, mint Kristian Andersen amerikai virológus szeirnt ez egy immunológiában imprinting vagy original antigenic sinnek nevezett jelenségre utalhat. Ez... https://en.wikipedia.org/wiki/Original_antigenic_sin
 
 Francois Balloux szerint az eredmények korábbi studyknak ellentmondanak, illetve a valóságnak is, hiszen a BA.1 és BA.2 hullámok visszahúzódtak. Ezt a véleményt osztja Jasnah Kholin hongkongi virológus is.
 
