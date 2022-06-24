@@ -1,0 +1,44 @@
+# 8 lenyűgöző jégkorszaki állat lelet, ami az örök fagyból került elő
+
+https://www.accuweather.com/en/weather-news/melting-permafrost-best-ice-age-discoveries-extinct-prehistoric-animals/1153645
+https://www.bbvaopenmind.com/en/science/research/permafrost-mummies-cientific-boom/
+https://www.rferl.org/a/siberia-permafrost-thaw-mammoth/31342051.html
+
+## Yuka mamut 
+
+https://www.sciencealert.com/scientists-have-reawakened-nuclei-from-an-extinct-mammoth-who-died-28-000-years-ago
+
+## Zhur, a kanadai szürke farkas
+
+https://www.cell.com/current-biology/fulltext/S0960-9822(20)31686-9
+
+https://www.smithsonianmag.com/science-nature/five-fascinating-ice-age-finds-discovered-in-yukon-permafrost-180979521/
+
+## Sparta és Boris szibériai barlangi oroszlánok 
+
+https://www.mdpi.com/2571-550X/4/3/24/htm
+
+https://www.accuweather.com/en/weather-news/28000-year-old-lion-cub-best-preserved-ice-age-animal-ever-found/995878
+
+## Szibériai barlangi medve 
+
+https://siberiantimes.com/other/others/news/first-ever-preserved-grown-up-cave-bear-even-its-nose-is-intact-unearthed-on-the-arctic-island/
+
+## Szibériai foal
+
+https://www.accuweather.com/en/weather-news/42000-year-old-specimen-believed-to-be-best-preserved-ice-age-animal-ever-found-in-the-world/2418
+
+## Szibériai gyapjas rinocérosz
+
+https://www.accuweather.com/en/weather-news/20000-year-old-woolly-rhino-uncovered-in-melting-permafrost/877430#:~:text=Permafrost%20is%20a%20permanently%20frozen,believed%20to%20have%20gone%20extinct.
+https://www.theguardian.com/science/2020/dec/30/siberia-permafrost-yields-well-preserved-ice-age-woolly-rhino
+
+## Alaszkai bölény 
+
+https://www.alaska.edu/uajourney/history-and-trivia/blue-babe-a-messenger-fro/
+
+## Jégkorszaki madár 
+
+https://www.accuweather.com/en/weather-news/researchers-unearth-46000-year-old-bird-in-one-of-earths-coldest-locations/686645
+
+*Kapcsolódó cikkek a Qubiten:*
