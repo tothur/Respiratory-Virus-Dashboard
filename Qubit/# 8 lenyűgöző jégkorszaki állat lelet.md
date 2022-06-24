@@ -1,7 +1,11 @@
 # 8 lenyűgöző jégkorszaki állat lelet, ami az örök fagyból került elő
 
-https://www.accuweather.com/en/weather-news/melting-permafrost-best-ice-age-discoveries-extinct-prehistoric-animals/1153645
-https://www.bbvaopenmind.com/en/science/research/permafrost-mummies-cientific-boom/
+Nem is annyira régen még gyapjas mamutokkal, gyapjas orrszarvúakkal, barlangi oroszlánokkal és kardfogú macskákkal éltünk együtt. Az [elmúlt](
+https://www.accuweather.com/en/weather-news/melting-permafrost-best-ice-age-discoveries-extinct-prehistoric-animals/1153645) években [szenzációs](https://www.bbvaopenmind.com/en/science/research/permafrost-mummies-cientific-boom/) leletek kerültek elő, feltárva az utolsó eljegesedési időszak ikonikus nagyemlőseinek titkait, melyek az éghajlati változások és túlvadászat miatt az elmúlt 20 ezer évben eltűntek bolygónkról.
+
+A szibériai, alaszkai, és kanadai permafrosztból[https://en.wikipedia.org/wiki/Permafrost] - azaz két vagy több évig fagyott talajból - kiásott, az utolsó glaciális periódus óta szinte tökéletesen megőrződött állatok segítségével a kutatók leírták az állatok megjelenését, és rekonstruálták életmódjukat, valamint életük történetét.
+
+
 https://www.rferl.org/a/siberia-permafrost-thaw-mammoth/31342051.html
 
 ## Yuka mamut 
