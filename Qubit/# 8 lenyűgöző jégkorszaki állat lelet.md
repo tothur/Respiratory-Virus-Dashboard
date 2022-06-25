@@ -11,9 +11,13 @@ A szibériai, alaszkai, és kanadai permafrosztból[https://en.wikipedia.org/wik
 
 A Yukonban június 21-én [felfedezett](https://yukon.ca/en/news/mummified-baby-woolly-mammoth-found-gold-miner-klondike) mumifilkálódott mamutbébit az alaszkai határ közelében, a tradícionálisan a [Trʼondëk Hwëchʼin](https://en.wikipedia.org/wiki/Trʼondëk_Hwëchʼin_First_Nation) őslakosok területén elhelyezkedő Klondike aranybányászati találták meg, miközben a bányászok a fagyott permafroszton keresztül ástak. Az őslakosokból álló vének tanácsa a nőstény mamutbébit "Nun cho ga"-nak nevezte el, amely Hän nyelvükön "nagy állatbébi"-t jelent.
 
+A gyapjas mamutok (Mammuthus primigenius), a kétségkívül legikonikusabb jégkorszaki állatok jóval az utolsó glaciális periódus 115 ezer évvel ezelőtti kezdete előtt, közel 400 ezer éve jelentek meg. Ahogy már [hosszabban beszámoltunk](https://qubit.hu/2021/02/17/tobb-mint-egymillio-eves-zapfogakbol-nyert-dns-mintak-tarjak-fel-a-mamutok-evoluciojat) egy ősi DNS mintákat elemző tavalyi kutatásról, már egy millió éve élt őseik is rendelkeztek a fagyos körülményekhez és a mamut sztyeppén való élethez szükséges genetikai adaptációkkal.
+
 "Jégkorszaki paleontológusként egyik élethosszig tartó álmom volt, hogy egy valódi gyapjas mamutot lássak. Ez ma sikerült. Nun cho ga csodálatos, és az egyik leglenyűgözőbb mumifikálódott jégkorszaki állat, amelyet valaha felfedeztek." - mondta el Dr. Grant Zazula, yukoni paleontológus. A leletet sikeresen kiásó geológus kollégáival együtt a kutatók megállapították, hogy Nun cho ga az utolsó eljegesedési maximum előtt, több mint 30 ezer éve élhetett.
 
 ## Yuka mamut 
+
+A valaha legjobb állapotban megtalált gyapjas mamutra 12 évvel korábban, 2010-ben bukkantak Szibériában, a Laptyev-tenger partvonalának közelében. A Yuka-nak elnevezett fiatal nőstény mamut 
 
 https://www.sciencealert.com/scientists-have-reawakened-nuclei-from-an-extinct-mammoth-who-died-28-000-years-ago
 
