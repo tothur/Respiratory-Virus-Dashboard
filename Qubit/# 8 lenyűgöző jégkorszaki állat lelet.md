@@ -1,9 +1,11 @@
-# 8 lenyűgöző jégkorszaki állat lelet, ami az örök fagyból került elő
+# 9 lenyűgöző jégkorszaki állat lelet, ami az örök fagyból került elő
 
-Nem is annyira régen még gyapjas mamutokkal, gyapjas orrszarvúakkal, barlangi oroszlánokkal és kardfogú macskákkal éltünk együtt. Az [elmúlt](
-https://www.accuweather.com/en/weather-news/melting-permafrost-best-ice-age-discoveries-extinct-prehistoric-animals/1153645) években [szenzációs](https://www.bbvaopenmind.com/en/science/research/permafrost-mummies-cientific-boom/) leletek kerültek elő, feltárva az utolsó eljegesedési időszak ikonikus nagyemlőseinek titkait, melyek az éghajlati változások és túlvadászat miatt az elmúlt 20 ezer évben eltűntek bolygónkról.
+Múlt héten az észak-kanadai Yukon territóriumban bányászok egy 30 ezer éves gyapjas mamutbébit találtak, amely az eddigi legjobban megőrződött észak-amerikai mamutlelet lehet.
 
-A szibériai, alaszkai, és kanadai permafrosztból[https://en.wikipedia.org/wiki/Permafrost] - azaz két vagy több évig fagyott talajból - kiásott, az utolsó glaciális periódus óta szinte tökéletesen megőrződött állatok segítségével a kutatók leírták az állatok megjelenését, és rekonstruálták életmódjukat, valamint életük történetét.
+Az [elmúlt](
+https://www.accuweather.com/en/weather-news/melting-permafrost-best-ice-age-discoveries-extinct-prehistoric-animals/1153645) években több hasonlóan [szenzációs](https://www.bbvaopenmind.com/en/science/research/permafrost-mummies-cientific-boom/) lelet került elő, feltárva az utolsó eljegesedési időszak ikonikus nagyemlőseinek titkait, melyek valószínűleg az éghajlati változások és túlvadászat együttes hatása miatt az elmúlt 20 ezer évben eltűntek bolygónkról.
+
+A szibériai, alaszkai, és kanadai permafrosztból[https://en.wikipedia.org/wiki/Permafrost] - azaz két vagy több évig fagyott talajból - kiásott, az utolsó glaciális periódus óta szinte tökéletesen megőrződött állatok segítségével a kutatók leírták az állatok megjelenését, és rekonstruálták életmódjukat, valamint életük történetét. A páratlan leletek emellett arra is emlékeztetnek, hogy nem is annyira régen még gyapjas mamutokkal, gyapjas orrszarvúakkal, barlangi oroszlánokkal és kardfogú macskákkal éltünk együtt.
 
 
 https://www.rferl.org/a/siberia-permafrost-thaw-mammoth/31342051.html
