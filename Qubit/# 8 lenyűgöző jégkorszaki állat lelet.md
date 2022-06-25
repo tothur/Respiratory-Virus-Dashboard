@@ -1,14 +1,17 @@
 # 9 lenyűgöző jégkorszaki állat lelet, ami az örök fagyból került elő
 
-Múlt héten az észak-kanadai Yukon territóriumban bányászok egy több mint 30 ezer éves gyapjas mamutbébit [találtak](https://yukon.ca/en/news/mummified-baby-woolly-mammoth-found-gold-miner-klondike), amely az eddigi legjobban megőrződött észak-amerikai mamutlelet lehet.
+Múlt héten a kanadai Yukon territóriumban bányászok egy több tízezer éves gyapjas mamutbébit [találtak](https://yukon.ca/en/news/mummified-baby-woolly-mammoth-found-gold-miner-klondike), amely az eddigi legjobban megőrződött észak-amerikai mamutlelet lehet.
 
 Az [elmúlt](
 https://www.accuweather.com/en/weather-news/melting-permafrost-best-ice-age-discoveries-extinct-prehistoric-animals/1153645) években több hasonlóan [szenzációs](https://www.bbvaopenmind.com/en/science/research/permafrost-mummies-cientific-boom/) lelet került elő, feltárva az utolsó eljegesedési időszak ikonikus nagyemlőseinek titkait, melyek valószínűleg az éghajlati változások és túlvadászat együttes hatása miatt az elmúlt 20 ezer évben eltűntek bolygónkról.
 
 A szibériai, alaszkai, és kanadai permafrosztból[https://en.wikipedia.org/wiki/Permafrost] - azaz két vagy több évig fagyott talajból - kiásott, az utolsó glaciális periódus óta néhány esetben lényegében tökéletesen megmaradt állatok segítségével a kutatók leírták az állatok megjelenését, és rekonstruálták életmódjukat, valamint életük történetét. A páratlan leletek emellett arra is emlékeztetnek, hogy nem is annyira régen még gyapjas mamutokkal, gyapjas orrszarvúakkal, barlangi oroszlánokkal és kardfogú macskákkal éltünk együtt.
 
+## Nun cho ga mamutbébi
 
-https://www.rferl.org/a/siberia-permafrost-thaw-mammoth/31342051.html
+A Yukonban június 21-én [felfedezett](https://yukon.ca/en/news/mummified-baby-woolly-mammoth-found-gold-miner-klondike) mumifilkálódott mamutbébit az alaszkai határ közelében, a tradícionálisan a [Trʼondëk Hwëchʼin](https://en.wikipedia.org/wiki/Trʼondëk_Hwëchʼin_First_Nation) őslakosok területén elhelyezkedő Klondike aranybányászati találták meg, miközben a bányászok a fagyott permafroszton keresztül ástak. Az őslakosokból álló vének tanácsa a nőstény mamutbébit "Nun cho ga"-nak nevezte el, amely Hän nyelvükön "nagy állatbébi"-t jelent.
+
+"Jégkorszaki paleontológusként egyik élethosszig tartó álmom volt, hogy egy valódi gyapjas mamutot lássak. Ez ma sikerült. Nun cho ga csodálatos, és az egyik leglenyűgözőbb mumifikálódott jégkorszaki állat, amelyet valaha felfedeztek." - mondta el Dr. Grant Zazula, yukoni paleontológus. A leletet sikeresen kiásó geológus kollégáival együtt a kutatók megállapították, hogy Nun cho ga az utolsó eljegesedési maximum előtt, több mint 30 ezer éve élhetett.
 
 ## Yuka mamut 
 
