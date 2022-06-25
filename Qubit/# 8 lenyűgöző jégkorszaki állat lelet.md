@@ -1,11 +1,11 @@
 # 9 lenyűgöző jégkorszaki állat lelet, ami az örök fagyból került elő
 
-Múlt héten az észak-kanadai Yukon territóriumban bányászok egy 30 ezer éves gyapjas mamutbébit találtak, amely az eddigi legjobban megőrződött észak-amerikai mamutlelet lehet.
+Múlt héten az észak-kanadai Yukon territóriumban bányászok egy több mint 30 ezer éves gyapjas mamutbébit [találtak](https://yukon.ca/en/news/mummified-baby-woolly-mammoth-found-gold-miner-klondike), amely az eddigi legjobban megőrződött észak-amerikai mamutlelet lehet.
 
 Az [elmúlt](
 https://www.accuweather.com/en/weather-news/melting-permafrost-best-ice-age-discoveries-extinct-prehistoric-animals/1153645) években több hasonlóan [szenzációs](https://www.bbvaopenmind.com/en/science/research/permafrost-mummies-cientific-boom/) lelet került elő, feltárva az utolsó eljegesedési időszak ikonikus nagyemlőseinek titkait, melyek valószínűleg az éghajlati változások és túlvadászat együttes hatása miatt az elmúlt 20 ezer évben eltűntek bolygónkról.
 
-A szibériai, alaszkai, és kanadai permafrosztból[https://en.wikipedia.org/wiki/Permafrost] - azaz két vagy több évig fagyott talajból - kiásott, az utolsó glaciális periódus óta szinte tökéletesen megőrződött állatok segítségével a kutatók leírták az állatok megjelenését, és rekonstruálták életmódjukat, valamint életük történetét. A páratlan leletek emellett arra is emlékeztetnek, hogy nem is annyira régen még gyapjas mamutokkal, gyapjas orrszarvúakkal, barlangi oroszlánokkal és kardfogú macskákkal éltünk együtt.
+A szibériai, alaszkai, és kanadai permafrosztból[https://en.wikipedia.org/wiki/Permafrost] - azaz két vagy több évig fagyott talajból - kiásott, az utolsó glaciális periódus óta néhány esetben lényegében tökéletesen megmaradt állatok segítségével a kutatók leírták az állatok megjelenését, és rekonstruálták életmódjukat, valamint életük történetét. A páratlan leletek emellett arra is emlékeztetnek, hogy nem is annyira régen még gyapjas mamutokkal, gyapjas orrszarvúakkal, barlangi oroszlánokkal és kardfogú macskákkal éltünk együtt.
 
 
 https://www.rferl.org/a/siberia-permafrost-thaw-mammoth/31342051.html
