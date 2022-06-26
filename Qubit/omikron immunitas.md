@@ -2,13 +2,17 @@
 
 ##
 
-Közel másfél hónapnyi csökkenés után [ismét emelkedik](https://444.hu/2022/06/22/ujra-emelkedni-kezdett-a-koronavirus-fertozottek-szama-magyarorszagon) az egy héttel ezelőttihez képest a Magyarországon regisztrált covid fertőzöttek száma, néhány héttel követve az esetszámok több nyugat-európai országban, köztük Ausztriában, Németországban, és az Egyesült Királyságban észlelt növekedését.
+Közel másfél hónapnyi csökkenés után [ismét emelkedik](https://444.hu/2022/06/22/ujra-emelkedni-kezdett-a-koronavirus-fertozottek-szama-magyarorszagon) az egy héttel ezelőttihez képest a Magyarországon regisztrált covid fertőzöttek száma, néhány héttel követve az esetszámok több nyugat-európai országban, köztük Ausztriában, [Németországban](https://www.dw.com/en/omicron-ba5-no-one-is-fully-protected/a-62094786), és az Egyesült Királyságban észlelt növekedését.
 
 A brit egészségügyi biztonsági hivatal (UKHSA) még pénteken [hívta fel arra a figyelmet](https://www.gov.uk/government/news/covid-19-variants-identified-in-the-uk-latest-updates), hogy a BA.4 és BA.5 variánsok már az új angliai covidos fertőzések több mint felét teszik ki, és részben ezek felelősek a növekvő brit és európai esetszámokért. A legújabb számításaik szerint a BA.5 esetszámok 35 százalékkal, míg a BA.4-é 19 százalékkal gyorsabban növekednek az omikron korábbi, [BA.2 variánsánál](https://qubit.hu/2022/03/28/ujabb-jarvanyhullam-kozeleg-de-nem-lesz-olyan-sulyos-mint-az-eddigiek), ami alapján a BA.5 valószínűleg domináns variánssá fog válni az Egyesült Királyságban. Arra viszont [nem találtak](ttps://www.gov.uk/government/news/covid-19-variants-identified-in-the-uk-latest-updates) bizonyítékot, hogy a BA.4 és BA.5 a korábbiaknál súlyosabb megbetegedést okoznának.
 
 A BA.4 és BA.5 variánsokat először április [elején azonosítottak](https://qubit.hu/2022/04/22/a-korabbiaknal-jobban-kikerulhetik-a-vedettseget-az-omikron-uj-valtozatai) dél-afrikai kutatók. Ezek az elmúlt hetekben közzétett eredmények szerint minden korábbinál jobban kikerülik az újrafertőződés vagy megbetegedés ellen az oltások, vagy korábbi fertőzés által biztosított védelmet, de nem érintik jelentősen [az oltások](https://www.science.org/doi/10.1126/science.abm0829) vagy [fertőzés](https://www.thelancet.com/journals/lanmic/article/PIIS2666-5247(22)00036-2/fulltext) hatására [létrejövő](https://www.nature.com/articles/s41423-021-00743-3), az adaptív immunrendszer T-sejtjei által súlyos megbetegedés ellen biztosított [tartós](https://www.science.org/doi/10.1126/science.abm0829) védettséget. Ezt igazolja, hogy az esetszámok növekedése az UKHSA adatai szerint [nem jár](https://www.gov.uk/government/news/covid-19-variants-identified-in-the-uk-latest-updates) a nagyon súlyos, intenzívosztályi kezelést igénylő megbetegedések és halálozások növekedésével, az egészségügyi biztonsági hivatal kutatói így továbbra is mindenkinek az oltások és az emlékeztető boosterek felvételét javasolják.
 
 Bár ez alapján úgy tűnhet, mintha mindent tudnánk az omikronos immunitás kérdésköréről, nemrég két, vezető tudományos folyóiratokban megjelent, a BA.4 és BA.5 variánsokkal és védettséggel foglalkozó tanulmány fontos kérdéseket vetett fel arról, hogy egy korábbi covidos fertőzés meghatározhatja-e egy későbbi után kialakuló védettség mértékét, vagy hogy milyen nehézségekkel kell szembenézni az omikronspecifikus oltások fejlesztésénél.
+https://www.biorxiv.org/content/10.1101/2022.05.26.493539v1
+https://www.biorxiv.org/content/10.1101/2022.05.25.493397v1
+
+Két kutatás azonban az elmúlt napokban érdekes kérdéseket vetett fel arról, hogy egy korábbi covidos fertőzés meghatározhatja-e egy későbbi után kialakuló védettség mértékét, vagy hogy mennyire van értelme a rendelkezésre állók mellett omikronra specifikus oltásokat fejleszteni. Ezekről Kemenesi Gábor virológust, a Pécsi Tudományegyetem adjunktusát, illetve Francois Balloux-t, a University College London Genetikai Intézetének [vezetőjét](https://www.ucl.ac.uk/biosciences/people/francois-balloux) és fertőző betegségeket genomikai módszerekkel [vizsgáló kutatót](https://scholar.google.co.uk/citations?user=AwppHXYAAAAJ&hl=en) kérdeztük.
 
 ## Gyengébb-e a védettség az omikronnal szemben, ha már korábban voltam covidos?
 
@@ -16,7 +20,7 @@ Múlt hét elején a Science folyóiratban Catherine Reynolds és kollégái [á
 
 A tanulmány legnagyobb vihart kavaró állítása arra vonatkozott, hogy három mRNS oltásban részesülő embereknél egy korábbi, alfa variáns (B.1.1.7) által okozott fertőzés kevésbé hatásos antitest választ eredményez az omikron (B.1.1.529/BA.1) ellen. 
 
-A szerzők és független szakértők, mint Kristian Andersen amerikai virológus szeirnt ez egy immunológiában imprinting vagy original antigenic sinnek nevezett jelenségre utalhat. Ez...
+A szerzők és független szakértők, mint Kristian Andersen amerikai virológus szeirnt ez egy immunológiában imprinting vagy original antigenic sinnek nevezett jelenségre utalhat. Ez... https://en.wikipedia.org/wiki/Original_antigenic_sin
 
 Francois Balloux, a University College London Genetikai Intézetének [vezetője](https://www.ucl.ac.uk/biosciences/people/francois-balloux) és fertőző betegségeket genomikai módszerekkel [vizsgáló kutató](https://scholar.google.co.uk/citations?user=AwppHXYAAAAJ&hl=en) Twitteren megosztott véleménye szerint az eredmények ellentmondanak korábbi vizsgálatoknak, és a valóságnak is, hiszen a korábbi omikron hullámok (BA.1 és BA.2) visszahúzódtak. Ugyanezt hangsúlyozta Jasnah Kholin hongkongi virológus is.
 
