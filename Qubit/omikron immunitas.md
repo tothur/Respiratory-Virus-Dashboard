@@ -1,4 +1,4 @@
-# KÉSZÜL - Mennyire leszek védett, ha elkapom az omikront?
+# Majdnem kész - Mennyire leszek védett, ha elkapom az omikront?
 
 ##
 
