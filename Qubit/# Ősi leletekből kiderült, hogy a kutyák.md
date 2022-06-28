@@ -1,9 +1,13 @@
-# Ősi leletekből kiderült, hogy a kutyák nagy része kelet-eurázsiai farkasokból származik
+# Embargó Szerda 17:00 - Ősi leletekből kiderült, hogy a kutyák nagy része kelet-eurázsiai farkasokból származik
+
+A kutyák legközelebbi rokonai ősi kelet-ázsiai és nem európai farkasok - állítja egy az utóbbi 100 ezer évben élt ősi farkasok genomjait vizsgáló új kutatás.
+
+A szerda délután a Nature folyóiratban [publikált eredmények](https://www.nature.com/articles/s41586-022-04824-9) minden eddiginél pontosabb képet adnak a kutyák eredetéről és betekintést nyújtanak a szürke farkasok elmúlt néhány tízezer éves evolúciójába, köztük abba, hogy milyen hatással volt az állatokra a 20-23 ezer évvel ezelőtti [utolsó eljegesedési maximum](https://en.wikipedia.org/wiki/Last_Glacial_Maximum), amikor Észak-Amerika és Eurázsia jelentős részét jégtakaró borította.
+
+Anders Bergström, a londoni Francis Crick intézet ősi genomikai laboratóriumának kutatója és kollégái, köztük [Gasparik Mihály](http://www.nhmus.hu/hu/munkatars/gasparik_mihaly), a Magyar Természettudományi Múzeum főmuzeológusa 66 ősi szürke farkas genomot szekvenáltak meg Európából, Szibériából és Észak-Amerikából, melyek az elmúlt 100 ezer évben élt farkasok leleteiből vett ősi DNS mintákból származnak. A 66 és további 5 farkasgenom alapos vizsgálata természetes szelekció jeleit is feltárta a farkasok az [utolsó eljegesedés](https://en.wikipedia.org/wiki/Last_Glacial_Period) (115,000-11,700 évvel ezelőtt) során élt farkaspopulációkban.
 
 
-https://www.nature.com/articles/s41586-022-04824-9
-
-Dogs are more closely related to ancient wolves from eastern Eurasia than to those in the west, according to an analysis of ancient wolf genomes spanning the last 100,000 years from Europe, Siberia and North America. In this analysis, published this week in Nature, researchers were able to detect natural selection throughout the Late Pleistocene (between around 129,000 and 11,700 years ago).
+In this analysis, published this week in Nature, researchers were able to detect natural selection throughout the Late Pleistocene (between around 129,000 and 11,700 years ago).
 
 The gray wolf (Canis lupus) was the first species to give rise to a domestic population and was present across most of the northern hemisphere throughout the last Ice Age when many other large mammals went extinct. Although it is clear that dogs came from gray wolves, there is no consensus regarding when, where and how this happened.
 
