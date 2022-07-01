@@ -1,0 +1,7 @@
+# Tavaly még hatalmas volt az ózonlyuk, de 20-30 év múlva végleg eltűnhet
+
+## Az ózonréteg Antarktisz feletti elvékonyodása a köznyelvben freonoknak nevezett szénhidrogének betiltása után 33 évvel is jelentős, 
+
+24,8 millió négyzetkilométert [borított be](https://earthobservatory.nasa.gov/world-of-change/Ozone) tavaly október 7-én, 2021-es maximumakor az Antarktisz feletti ózonlyuk, amely szinte pontosan Észak-Amerika [területének](https://en.wikipedia.org/wiki/North_America) felel meg. Ez volt a valaha megfigyelt 13-ik legnagyobb ózonlyuk, mely alatt a kutatók azt a régiót értik, ahol a 15-35 kilométer magasan elterülő ózonrétegben a gáz koncentrációját kifejező Dobson mérőszám 220 alá esik.
+
+A Napból érkező UV sugárzás jelentős részét [elnyelő](https://qubit.hu/2021/02/10/jo-hir-minden-foldi-elolenynek-ujra-csokken-az-ozonreteget-karosito-cfc-11-kibocsatasa), ózon (O3) molekulákat tartalmazó réteg 600 millió évvel ezelőtti kialakulása nagyjából 200 millió évvel megelőzte a gerinces állatok első szárazföldi lépéseit. Az 1970-es években a tudományos közösség felismerte, hogy a rétegben évről évre csökken az ózon koncentrációja és ezt összekötötte a köznyelvben az akkori DuPont vállalat márkanevéről [freonokként](https://en.wikipedia.org/wiki/Freon) ismert halogénezett szénhidrogének, CFC (chlorofluorocarbon) alkalmazásával. A végül a Montreali Egyezmény által kivezetett CFC-ket a HFC-k (hydroflurocarbon) váltották fel
