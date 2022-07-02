@@ -9,3 +9,7 @@ The two collaborations present an analysis of data produced within Run 2 of the 
 The progress made over the past decade is predicted to continue over the next one. Some of the key properties of the Higgs boson, such as coupling to itself or to lighter particles, remain to be measured and potentially reveal deviations from theory. However, the current dataset is expected to more than double during the next decade of research, which will help to improve our understanding of Higgs boson physics.
 
 The progress made in the past decade, what remains to be established, and potential future explorations are discussed in a Perspective by Giulia Zanderighi and colleagues.
+
+ATLAS: https://www.nature.com/articles/s41586-022-04893-w
+CMS: https://www.nature.com/articles/s41586-022-04892-x
+Perspective: https://www.nature.com/articles/s41586-022-04899-4
