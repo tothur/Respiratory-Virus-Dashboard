@@ -1,4 +1,4 @@
-# Tíz éve fedezték fel a Higgs bozont
+# EMBARGÓ HÉTFŐ 11:00- Tíz éve fedezték fel a Higgs bozont
 
 A Higgs-bozon 10 évvel ezelőtti felfedezése óta a nagy hadronütköztető (LHC) gyorsítóban végzett összes mérés megerősíti a részecskefizika standard modelljét - derül ki két, az LHC harmadik kísérleti fázisának kezdetét megelőző napon közölt tanulmányból.
 
