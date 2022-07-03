@@ -2,15 +2,15 @@
 
 ## 
 
-A Higgs-bozon 10 évvel ezelőtti felfedezése óta a nagy hadronütköztető (Large Hadron Collider, LHC) gyorsítóban végzett összes mérés megerősíti a részecskefizika standard modelljét - derül ki két, az LHC harmadik kísérleti fázisának kezdetét megelőző napon közölt tanulmányból.
+A Higgs-bozon 10 évvel ezelőtti felfedezése óta a nagy hadronütköztető (Large Hadron Collider, LHC) gyorsítóban legátfogóbb méréssorozat megerősíti a részecskefizika standard modelljét - derül ki két, az LHC harmadik kísérleti fázisának kezdetét megelőző napon közölt tanulmányból.
 
-A hétfő délelőtt a Natureben közölt eredmények az LHC két detektorának, az [ATLAS-nak](https://www.nature.com/articles/s41586-022-04893-w), illetve a [CMS-nek](https://www.nature.com/articles/s41586-022-04892-x) a Higgs-bozonra vonatkozó legújabb, 2015-2018 között végzett megfigyeléseit mutatják be.
+A hétfő délelőtt a Natureben közölt eredmények az LHC két detektorának, az [ATLAS-nak](https://www.nature.com/articles/s41586-022-04893-w), illetve a [CMS-nek](https://www.nature.com/articles/s41586-022-04892-x) a Higgs-bozonra vonatkozó legújabb, 2015-2018 között 10 ezer billió proton-proton ütközésből és 8 millió Higgs-bozon megfigyelével végzett megfigyeléseit mutatják be.
 
-A [Higgs-bozon](https://en.wikipedia.org/wiki/Higgs_boson) 2012 júliusában bejelentett felfedezése a [CERN](https://home.cern/) (Európai Nukleáris Kutatási Szervezet) részecskegyorsítójában az ismert elemi részecskéket és a gravitáción kívül az [alapvető kölcsönhatásokat](https://en.wikipedia.org/wiki/Fundamental_interaction) leíró standard modell egyik kulcselemének, a Higgs-térnek a létezését igazolta, amely az egész univerzumot betölti és a részecskék tömegét biztosítja.
+A [Higgs-bozon](https://en.wikipedia.org/wiki/Higgs_boson) 2012 július 4-én bejelentett felfedezése a [CERN](https://home.cern/) (Európai Nukleáris Kutatási Szervezet) részecskegyorsítójában az ismert elemi részecskéket és a gravitáción kívül az [alapvető kölcsönhatásokat](https://en.wikipedia.org/wiki/Fundamental_interaction) leíró standard modell egyik kulcselemének, a Higgs-térnek a létezését igazolta, amely az egész univerzumot betölti és többek közt az atommagot felépítő protont és neutront alkotó kvarkok, illetve az elektronok tömegét biztosítja.
 
-Az azóta eltelt években a kutatók 30-szor annyi Higgs-bozont figyeltek meg, lehetővé téve a viselkedésének és tulajdonságainak sokkal precízebb mérését, melyek eddig mind egyetértettek a standard modell előrejelzéseivel.
+"A Higgs-bozon felfedezése monumentális mérföldkő volt a részecskefizikában. Lezárt egy több évtizedes felfedezési időszakot, és megnyitott egy új érát ennek a nagyon különleges részecskének a vizsgálatával. Érezelmekkel töltve emlékszem vissza a bejelentés napjára, amely nap mérhetetlen örömöt adott a nemzetközi részecskefizikai közösségnek és mindenkinek, akik évtizedeken át azon dolgoztak, hogy ezt a felfedezést lehetővé tegyék. - mondta el a CERN vezetője, Fabiola Gianotti.
 
-A CERN a tanulmányokkal párhuzamosan megjelenő közleménye alapján...
+Az elmúlt 10 évben a kutatók a felfedezéshez képest 30-szor annyi Higgs-bozont figyeltek meg, lehetővé téve a viselkedésének és tulajdonságainak sokkal precízebb mérését, melyek eddig mind egyetértettek a standard modell előrejelzéseivel. Három évnyi fejlesztés és kabrantartás után a CERN hétfői közleménye szerint július 5-én kezdődik az LHC harmadik adatgyűjtési periódusa, miután a részecskegyorsító áprilisban [újraindításra került](https://qubit.hu/2022/04/22/harom-ev-utan-ujraindul-a-nagy-hadronutkozteto-hogy-bizonyitsa-az-otodik-alapveto-ero-letezeset).
 
 ## Eddig minden stimmel a standard modellel
 
@@ -22,7 +22,7 @@ Az [ATLAS kollaboráció](https://www.nature.com/articles/s41586-022-04893-w) a 
 
 Az ATLAS kutatói különösen részletesen vizsgálták a Higgs glüonokkal, fotonokkal, W és Z bozonokkal való interakcióját, melyek ebben a sorrendben a három alapvető kölcsönhatás, az [erős](https://en.wikipedia.org/wiki/Strong_interaction), [elektromágneses](https://en.wikipedia.org/wiki/Electromagnetism) és [gyenge](https://en.wikipedia.org/wiki/Weak_interaction) közvetítéséért felelősek. A negyedik alapvető kölcsönhatás a gravitáció, melynek az általános relativitáselméletet és kvantummechanikát egyesítő leírása jelenleg is [aktív kutatási terület](https://en.wikipedia.org/wiki/Quantum_gravity).
 
-A szakemberek a Higgs-bozon harmadik-generációs, legnehezebb ismert anyagi részecskékkel (bottom és top kvarkok, tau leptonok) való interakcióját is sikeresen megmérték, 7-12 százalékos pontatlansággal, míg a második generációs részecskékkel (müonok) való intearkciójának jelei most kezdenek felbukkanni. A szintén legnehezebb részecskék közé tartozó W és Z bozonok esetén a mérések pontatlansága 5 százalékos volt. Emellett vizsgálták a Higgs-bozon képződésének kinematikáját is. 
+A szakemberek a Higgs-bozon harmadik-generációs, legnehezebb ismert anyagi részecskékkel (bottom és top kvarkok, tau leptonok) való interakcióját is sikeresen megmérték, 7-12 százalékos pontatlansággal, míg a második generációs részecskékkel (müonok) való intearkciójának jelei most kezdenek felbukkanni. A szintén legnehezebb részecskék közé tartozó W és Z bozonok esetén a mérések pontatlansága 5 százalékos volt, míg korábban még 15 százalékos. Emellett vizsgálták a Higgs-bozon képződésének kinematikáját is. 
 
 Ezek mind összességében arra vezettek, hogy a Higgs-bozon figyelemre méltóan egybevág az elméleti előrejelzésekkel, és szigorú határokat szab a standard modellen túlmutató modelleknek. Az ATLAS kutatói szerint azonban hátra van még Higgs-bozon kulcsfontosságú tulajdonságainak, így önmagához való kapcsolódásának mérése, illetve egyes ritkább bomlási módjainak megfigyelése. Az LHC következő években való fejlesztésének hála a mérések pontatlansága tovább fog csökkenni a kutatók szerint, míg az adatmennyiség 20-szorosára nő majd, lehetővé téve az előrehaladást ezeken a területeken.
 
@@ -30,10 +30,20 @@ A [CMS kollaboráció](https://www.nature.com/articles/s41586-022-04892-x) a Hig
 
 A 10 százalékos, vagy alacsonyabb bizonytalanságok figyelembevételével a kutatók szerint az eredmények kompatbilisek a standard modellel, annak ellenére, hogy számos bizonyíték mutat arra, hogy a standard modell csak egy alacsony-energiájú megközelítése egy átfogóbb elméletnek. Egyes ilyen, standard modellel felmerülő problémák az univerzum nagy skálájú, kozmológiai megfigyelésével, mások a Higgs-bozon fizikájával függnek össze, arra motiválva a kutatókat, hogy mélyebbre ássanak ebben. Ehhez még több mérésre lesz szükség, amire a CMS-en dolgozó szakemberek szerint a jelenlegi adathalmaz 2025-ig való megduplázódásával nem kell már sokat várni.
 
+"Egy ilyen Higgs-bozon portré elkészítése az LHC beüzemelése előtt teljesen elképzelhetetlen volt. Ennek az eredménynek sokrétű okai vannak, beleértve az LHC, az ATLAS és CMS detektorok páratlan teljesítményét, és az alkalmazott leleményes adatfeldolgozási technikákat." - mondta el a CMS szóvívője, Luca Malgeri.
+
 Egy, a tanulmányokkal azonos időben a Natureben [közölt](https://www.nature.com/articles/s41586-022-04899-4), Giulia Zanderighi, a münichi Max Planck Fzikai Intézet kutatója és kollégái által írt összefoglaló cikk pedig a Higgs-bozon jelentőségét, az elmúlt 10 év kutatómunkáját, és a Higgs standard modellen túlmutató fizikával való összefüggését elemzi.
 
 ## Holnap kezdődik a harmadik LHC kísérleti program
 
 A "high luminosity LHC" fejlesztés a CMS kollaboráció kutatói szerint lehetővé teszi majd a 2030-as években 10-szer több adat generálását, lehetővé téve a Higgs-bozon párok képződésének még pontosabb vizsgálatát, valamint a charm kvarokokkal való kapcsolódás tanulmányozását, és egzotikus bomlási csatornák keresését, ezzel potenciálisan betekintést engedve a standard modell utáni fizikába.
+
+While answers to some of these questions might be provided by data from the imminent third 
+run of the LHC or from the collider’s major upgrade, the high-luminosity LHC, from 2029
+onwards, answers to other enigmas are thought to be beyond the reach of the LHC, requiring 
+a future ‘Higgs factory’. For this reason, CERN and its international partners are investigating 
+the technical and financial feasibility of a much larger and more powerful machine, the Future 
+Circular Collider, in response to a recommendation made in the latest update of the European 
+Strategy for Particle Physics.
 
 *Kapcsolódó cikkek a Qubiten:*
