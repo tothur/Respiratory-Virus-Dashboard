@@ -8,11 +8,12 @@ A múlt héten a Science Advances folyóiratban [publikált tanulmány](https://
 
 A földi élet történetének [harmadik](https://en.wikipedia.org/wiki/Extinction_event), a triász és jura időszakokat elválasztó nagy kihalási eseményét bolygónk legnagyobb területű, úgynevezett [nagy magmás tartománya](https://en.wikipedia.org/wiki/Large_igneous_province) (LIP, large igneous province), a Pangea szuperkontinens szétválásával később kialakuló Észak-Atlanti-óceán környékén elterülő [CAMP](https://en.wikipedia.org/wiki/Central_Atlantic_magmatic_province) okozta. A CAMP megsokszorozta a légkör eleve magas szén-dioxid tartalmát, felmelegedéshez, és a tengerek elsavasodásához vezetve, miközben a felszabaduló kén-dioxid és kéntartalmú aeroszolok időszakosan vulkáni teleket okoztak.
 
-Paul Olsen, a Columbia Egyetem és Jingeng Sha, a nankingi geológiai és paleontológia intézet kutatója, illetve kollégáik az Északnyugat-Kínában található Junggar medence késő triász és kora jura kori formációit vizsgálták, melyek lefedik a kihalást megelőző és követő néhány millió évet. Ez a terület 201 millió éve, az északi szélesség 71-ik fokán helyezkedett el, azaz az északi sarkkör felett. Ekkor a Föld sarkvidékeit a légkör maihoz képest 2,5-5-szörös szén-dioxid tartalma miatt nem jégtakarók, hanem erdők borították. A kutatók ugyanakkor tavakat borító jég által hátrahagyott törmelékre bukkantak, arra utalva, hogy egyes periódusokban a téli hőmérséklet fagypont alá esett a területen.
+Paul Olsen, a Columbia Egyetem és Jingeng Sha, a nanjingi geológiai és paleontológia intézet kutatója, illetve kollégáik 
 
-A CAMP kitörései 201 millió éve négy fázisban zajlottak, összességében 600 ezer évig, amely alatt 2-3 millió köbkilométer magma került láva formájában a felszínre, nem sokkal kevesebb mint perm végén a földtörténet [legsúlyosabb kihalását okozó](https://qubit.hu/2019/04/29/a-felmelegedes-okozhatta-a-foldtortenet-legsulyosabb-kihalasat) Szibériai trapp-bazalt vulkanizmus során. Eközben a CAMP megduplázta vagy megtriplázta a triász végi 2000 ppm körüli légköri szén-dioxid szintet egyes esetekben 4-5000 ppm-es koncentrációkat elérve, amely a mai több mint tízszerese.
+Az ekkor sarki jégtakaróktól mentes
 
-míg a felszabaduló kéntartalmú aeroszolok időszakos vulkáni telekhez vezettek.
+
+A CAMP kitörései 201 millió éve négy fázisban zajlottak, összességében 600 ezer évig, amely alatt 2-3 millió köbkilométer magma került láva formájában a felszínre, nem sokkal kevesbb mint perm végén a földtörténet [legsúlyosabb kihalását okozó](https://qubit.hu/2019/04/29/a-felmelegedes-okozhatta-a-foldtortenet-legsulyosabb-kihalasat) Szibériai trapp-bazalt vulkanizmus során. Eközben a CAMP megtriplázta az eleve magas légköri szén-dioxid szintet, míg a felszabaduló kéntartalmú aeroszolok időszakos vulkáni telekhez vezettek.
 
 *Kapcsolódó cikkek a Qubiten:*
 
