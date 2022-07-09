@@ -2,19 +2,23 @@
 
 ## Itt a Qubit távcsővásárlási kalauza, ami a kezdőktől haladókig, a Holdat kémlelőktől a távoli galaxisokat asztrofotózó profikig mindenkinek kínál valamit.
 
-2 bevezető bekezdés
+Az univerzum csodáiba...
 
-Ezt a vásárlási kalauzt kizárólag kiindulópontnak szánjuk. A távcső vásárlás jelentős, sok évre szóló befektetés, ezért nagyon fontos, hogy a döntést alapos utánanézés előzze meg, érdemes évek vagy évtizedek óta észlelő amatőrcsillagászok véleményét is kikérni, és a gyakorlatban is kipróbálni távcsöveket látogatható csillagvizsgálókban (ahol távcsöveket is érintő kérdéseinkre is hasznos válaszokat fogunk kapni).
+Ezt a vásárlási kalauzt kizárólag kiindulópontnak szánjuk. A távcső vásárlás jelentős, sok évre szóló befektetés, ezért nagyon fontos, hogy a döntést alapos utánanézés előzze meg, érdemes évek vagy évtizedek óta észlelő amatőrcsillagászok véleményét is kikérni, és a gyakorlatban is kipróbálni távcsöveket bemutató csillagvizsgálókban (ahol távcsöveket is érintő kérdéseinkre is hasznos válaszokat fogunk kapni).
 
 ## A legfontosabb kérdés, hogy mire szeretnénk használnánk a távcsövet
 
-A távcsőhasználat legfontosabb szabálya, hogy sose irányítsuk a teleszkópot a Nap felé, 
+Ezt pedig a távcsöveknél nem lehet mással kezdeni, mint hogy mire ne. Egy 
 
-Természetmegfigyelés + Hold, Bolygók
+Érdemes rögtön arra kitérni, hogy mire ne használjuk. Semmi esetre se irányítsunk egy távcsövet a Nap felé, mert azzal súlyos szemkárosodást okozhatunk magunknak, vagy másoknak. Ezért nappal kiemelt óvatossággal járjunk el a távcső kezelésekor, és ne hagyjuk azt észlelésre kész állapotban, felügyelet nélkül. A Nap megfigyelésére léteznek biztonságos megoldások, ezek ugyanakkor speciális eszközöket, például sérülékeny napfóliákat vagy különleges naptávcsöveket, illetve gyakorlatot, és szakszerű kezelést  igényelnek, így azt kezdőknek semmiképpen nem ajánljuk.
+
+Hold, Bolygók
 
 Kettőscsillagok, fényesebb galaxisok
 
 Mély ég objektumok
+
+
 
 ## Szabad szemes észlelés vagy asztrofotózás
 
