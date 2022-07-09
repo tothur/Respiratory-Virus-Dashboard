@@ -8,6 +8,8 @@ Ezt a vásárlási kalauzt kizárólag kiindulópontnak szánjuk. A távcső vá
 
 ## A legfontosabb kérdés, hogy mire szeretnénk használnánk a távcsövet
 
+A távcsőhasználat legfontosabb szabálya, hogy sose irányítsuk a teleszkópot a Nap felé, 
+
 Természetmegfigyelés + Hold, Bolygók
 
 Kettőscsillagok, fényesebb galaxisok
@@ -34,7 +36,7 @@ SC/MC
 Fókuszállítás
 Okulárok
 
-## Az állvány sokszor fontosabb mint a távcső
+## A mechanika sokszor fontosabb mint maga a távcső
 
 Az amatőrcsillagászattal foglalkozó Facebook csoportokban és fórumokon a legtöbb javaslat nem a távcsövekre, hanem az azokat tartó, és megfelelő irányba pozíciónáló mechanikákra érkezik. Ez elsőre meglepőnek is tűnhet.
 
