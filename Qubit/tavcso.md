@@ -31,6 +31,7 @@ Newton - jusztírozás
 Dobson - állvány asztrofotózást lényegében kizárja
 SC/MC
 
+Fókuszállítás
 Okulárok
 
 ## Az állvány sokszor fontosabb mint a távcső
@@ -45,9 +46,13 @@ Asztrofotózás távcső tömege fényképezőgéppel, kiegészítőkkel, stabil
 
 Ez mind fantasztikusan hangzik, de rengetegen még kezdő távcsöveket sem engedhetnek meg maguknak.
 
-## Nagyon kezdő távcső Hold és bolygók megfigyelésére
+## Kezdő távcső Hold és bolygók megfigyelésére
 
-https://tavcso.hu/termek/SWR705az2
+https://www.tavcso-mikroszkop.hu/termek/skywatcher-90-900-refraktor/p:288
+
+vagy ha szeretnénk galaxisokat, ködöket is nézni:
+
+https://www.tavcso-mikroszkop.hu/termek/skywatcher-130-900-newton/p:270 és 
 
 ## Könnyen hordozható, bolygós kezdő távcső
 
