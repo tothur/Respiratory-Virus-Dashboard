@@ -48,40 +48,31 @@ Go To állvány
 
 Asztrofotózás távcső tömege fényképezőgéppel, kiegészítőkkel, stabilitás
 
-## Mit csináljak, ha nem tudok távcsövet venni
+## Mit csináljak, ha nem tudok távcsövet venni?
 
-Ez mind fantasztikusan hangzik, de rengetegen még kezdő távcsöveket sem engedhetnek meg maguknak.
+Ez mind fantasztikusan hangzik, de rengetegen még kezdő távcsöveket sem engedhetnek meg maguknak. Nekik időszakos csillagászati bemutatók, vagy bemutató csillagvizsgálók, mint a Magyar Csillagászati Egyesült által működtetett óbudai Polaris csillagvizsgáló felkeresését javasoljuk, ahol alkalmas időjárás esetén lehetőség van távcsövekkel bolygók, kettőscsillagok, vagy fényesebb galaxisok megpillantására.
 
 ## Kezdő távcső Hold és bolygók megfigyelésére
 
-https://www.tavcso-mikroszkop.hu/termek/skywatcher-90-900-refraktor/p:288
+A 90/900-as lencsés távcső már alkalmas a Hold krátereinek és Naprendszerünk gázóriásainak észlelésére, így feltárulnak vele a Jupiter légkörének sávjai, vagy a Szaturnusz gyűrűi. A távcsőhöz két, maximum 180-szoros nagyítást adó okulárt, alapesetben EQ-2 mechanikát kapunk. Megvásárolható a [Makszutovnál](https://www.tavcso-mikroszkop.hu/termek/skywatcher-90-900-refraktor/p:288) és a [Távcsőboltban](https://tavcso.hu/termekcsoport/SWR909eq2).
 
-vagy ha szeretnénk galaxisokat, ködöket is nézni:
+Ha a Hold és bolygók mellett néhány legfényesebb galaxist, például az Andromédát is meg szeretnénk figyelni, a Skywatcher 130/900-as Newton távcsöve lehet jó választás. A tükrös távcsőhöz szintén EQ2 mechanikát kapunk. Megvásárolható a [Távcsőboltban](https://tavcso.hu/termekcsoport/SWN1309eq2) és a [Makszutovnál](https://www.tavcso-mikroszkop.hu/termek/skywatcher-130-900-newton/p:270).
 
-https://www.tavcso-mikroszkop.hu/termek/skywatcher-130-900-newton/p:270 és 
-
-## Könnyen hordozható, bolygós kezdő távcső
-
-https://tavcso.hu/termekcsoport/SWM102eq2
+Egy harmadik, kissé drágább megoldás elsősorban a Hold és bolygók észlelésére azoknak, akiknek a hordozhatóság és a távcső kompaktsága a legfontosabb szempont, a Sky-Watcher 102/1300-as Makszutov-Cassegrain távcsöve. Ez EQ-2-es állványa nélkül egy 20x20x40 centiméteres helyen is elfér. Megvásárolható a [Makszutovnál](https://www.tavcso-mikroszkop.hu/termek/skywatcher-travelmax-102-mc-tavcso/p:1388) és a [Távcsőboltban](https://tavcso.hu/termekcsoport/SWM102eq2).
 
 ## Mély égre is alkalmas, kezdő-haladó távcsövek
 
-https://tavcso.hu/termekcsoport/SWN1507eq3
+Jelentősen komolyabb kategóriát képvisel a SkyWatcher 150P 150/750-es Newtonja, amely precíz élességállítójával és viszonylag nagy fényerejével jól feltárja a Marsot, Jupitert és Szaturnuszt, illetve fényszennyezéstől mentesebb helyen alkalmas fényesebb galaxisok, valamint planetáris ködök megfigyelésére is. Az EQ3-as mechanikával érkező távcső megvásárolható a [Távcsőboltban](https://tavcso.hu/termekcsoport/SWN1507eq3) és a Makszutovnál.
 
-nehezebben hordozható alternatíva:
+Ha a saját kertünkből szeretnénk csak észlelni és nem nagyon hordoznánk a távcsövet, a kedvezőbb árú, Dobson kialakítású SkyWatcher 150P, 150/700-as Newton távcsövet is érdemes megfontolni. Megvásárolható a [Távcsőboltban](https://tavcso.hu/termekcsoport/flex150).
 
-https://tavcso.hu/termekcsoport/flex150
-
-asztrofotós alternatíva EQ5-GOTO
-
-https://tavcso.hu/termek/SWN1507eq5GT
+Ha asztrofotózásra is használnánk a SkyWatcher 150P távcsövet, egy nagyobb stabilitást nyújtó, a Föld forgását kompenzáló, és objektumokra automatikusan a távcsövet ráállító EQ5-GOTO mechanikával ellátott változata a jó választás. Megvásárolható a [Távcsővoltban](https://tavcso.hu/termek/SWN1507eq5GT) és a Makszutovnál.
 
 ## Könnyebben hordozható haladó távcső - 200 Newton + EQ5 mechanika
 
-https://tavcso.hu/termekcsoport/swn2001mf
+Egy újabb jelentős ugrást képvisel a 200 mm-es átmérőjű Skywatcher Explorer 200PDS Newton távcső, amellyel a Hold és bolygók mellett már halványabb galaxisok és planetáris ködöket is megpillanthatunk, és azokat a korábban ismertetett távcsöveknél több részlettel tárja fel nekünk a műszer. A távcső alapesetben EQ5 mechanikával érkezik. Megvásárolható a Makszutovnál és a [Távcsőboltban](https://tavcso.hu/termekcsoport/swn2001mf).
 
-könnyebben hordozható alternatíva: 
-https://tavcso.hu/termek/Nex8evo
+Egy sokkal drágább, de kompaktabb alternatíva a Celestron NexStar8 Evolution távcsöve, amely egy 203 mm-es, 2032-es fókusztávolságú Schmidt Cassegrain típusú teleszkóp egy okostelefonról is vezérelhető egyedi NexStar GOTO mechanikára rögzítve. Ez fényerejében hasonló az előbbi Newton távcsőhöz. Megvásárolható a [Távcsőboltban](https://tavcso.hu/termek/Nex8evo).
 
 ## Nehezen hordozható haladó távcső - 250 FLEX DOBSON
 
@@ -100,7 +91,7 @@ https://tavcso.hu/termekcsoport/eq8-r
 
 ## +1: itt a 3D nyomtatott távcsövek kora
 
-Bár profi műszert Ha van 3D nyomtatónk és szeretünk barkácsolni, az optikai elemek kivételével egy Dobson Newton távcsövet szinte teljes egészében ki tudunk nyomtatni. Mielőtt ebbe az irányba kezdünk gondolkodni, érdemes a tükörelemek beszerzéséről gondoskodni, akár online rendeléssel, vagy amatőrcsillagász tükörcsiszolókhoz fordulva.
+Bár profi műszert nem így fogunk készíteni, de ha van 3D nyomtatónk és szeretünk barkácsolni, az optikai elemek kivételével egy Dobson Newton távcsövet szinte teljes egészében ki tudunk nyomtatni. Mielőtt ebbe az irányba kezdünk gondolkodni, érdemes a tükörelemek beszerzéséről gondoskodni, akár online rendeléssel, vagy amatőrcsillagász tükörcsiszolókhoz fordulva.
 
 https://www.thingiverse.com/thing:5408737
 
