@@ -8,8 +8,6 @@ Ezt a vásárlási kalauzt kizárólag kiindulópontnak szánjuk. A távcső vá
 
 ## A legfontosabb kérdés, hogy mire szeretnénk használnánk a távcsövet
 
-
-
 Ezt pedig a távcsöveknél nem lehet mással kezdeni, mint hogy mire ne. Egy 
 
 Érdemes rögtön arra kitérni, hogy mire ne használjuk. Semmi esetre se irányítsunk egy távcsövet a Nap felé, mert azzal súlyos szemkárosodást okozhatunk magunknak, vagy másoknak. Ezért nappal kiemelt óvatossággal járjunk el a távcső kezelésekor, és ne hagyjuk azt észlelésre kész állapotban, felügyelet nélkül. A Nap megfigyelésére léteznek biztonságos megoldások, ezek ugyanakkor speciális eszközöket, például sérülékeny napfóliákat vagy különleges naptávcsöveket, illetve gyakorlatot, és szakszerű kezelést  igényelnek, így azt kezdőknek semmiképpen nem ajánljuk.
