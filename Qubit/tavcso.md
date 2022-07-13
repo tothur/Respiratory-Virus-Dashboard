@@ -36,7 +36,7 @@ A Newton távcsövek jó teljesítményük miatt nagyon kedveltek amatőrcsillag
 
 A Newton távcsövek egy zsámolyszerű állványra és nem speciális mechanikára szerelt változata a Dobson kialakítású Newton távcsövek. Ezek általában adott átmérőnél lényegesen olcsóbbak az ekvatoriális mechanikára szerelt Newton teleszkópoknál, viszont asztrofotózásra csak nagyon drága kiegészítővel tehetők valamennyire alkalmassá.
 
-SC/MC
+A Newton távcsöveknél drágább, de kompaktabb megoldást kínálnak a Cassegrain teleszkópok, melyeknek elsősorban két típusa terjedt el az amatőrök körében, a Schmidt-Cassegrain és Makszutov-Cassegrain teleszkópok. A Cassegrain teleszkópok egy speciális változata a [Ritchey-Chrétien](https://en.wikipedia.org/wiki/Ritchey%E2%80%93Chr%C3%A9tien_telescope) teleszkópok. Ilyen konfigurációt használ a Hubble űrtávcső, valamint az Európai Déli obszervatórium chilei nagyon nagy teleszkópjai.
 
 Fókuszállítás
 Barlow kihuzat
@@ -86,7 +86,7 @@ Előbbi távcső mélyég objektumok megfigyelésére kiválóan alkalmas optika
 
 A Celestron Schmidt-Cassegrain típusú teleszkópjai ennél is profibb képalkotást ígérnek, a 250PDS Newtonhoz és mechnikájának összköltségének több mint duplájáért. A CPC925 egy 235 mm-es, 2350-es fókusztávolságú teleszkóp saját GOTO mechanikával. Megvásárolható a [Budapesti Távcső Centrumban](https://tavcso.hu/termek/CPC925) és a Maksztuvonál. A mechanika nélküli Celestron EDGE HD925 ugyan ezekkel a paraméterekkel pedig olyan speciális korrekciót alkalmaz, amely a látómező szélén is jó minőségű képet ad, és jól használható a korábban említett HEQ5 és NEQ-6 mechanikákkal. Megvásárolható a Makszutovnál és a [Budapesti Távcső Centrumban](https://tavcso.hu/termek/EdgeHD110).
 
-Még extrémebb ár és teljesítmény kategóriát képvisel a Ritchey-Chrétien asztrográf 406 mm-es tükörrel és a hozzá szükséges nagy teherbírású EQ8-R GOTO mechanika. A [teleszkóp](https://tavcso.hu/termek/GSRC16Truss) és a [mechanika](https://tavcso.hu/termekcsoport/eq8-r) megvásárolható a Budapesti Távcső Centrumban.
+Még extrémebb ár és teljesítmény kategóriát képvisel a Ritchey-Chrétien asztrográf 406 mm-es tükörrel és a 37 kilogrammos műszerhez szükséges 50 kilogramm [teherbírású](http://www.skywatcher.com/product/eq8-synscan/), precíziós EQ8 GOTO mechanikával. A kifejezetten asztrofotózáshoz tervezett teleszkóp szénszálas vázból készült, f/8-as fényerejű, és a Schmidt-Cassegrain teleszkópokhoz képest nyitott kialakítású, így a teleszkóp gyorsan átveszi a környezet hőmérsékletét. Emellett asztrofotózáshoz egyenletes, kómamentes képet ad korrektor nélkül. A [teleszkóp](https://tavcso.hu/termek/GSRC16Truss) és a [mechanika](https://tavcso.hu/termekcsoport/eq8-r) megvásárolható a Budapesti Távcső Centrumban.
 
 ## +1: itt a 3D nyomtatott távcsövek kora
 
