@@ -2,9 +2,12 @@
 
 ## Itt a Qubit távcsővásárlási kalauza, ami a kezdőktől haladókig, a Holdat kémlelőktől a távoli galaxisokat asztrofotózó profikig mindenkinek kínál valamit.
 
-Az ember sok tízezer éve kémleli az égboltot, de a feljegyzések szerint csak az elmúlt 4 évszázadban tette ezt lencséket vagy más optikai elemeket kombináló távcsövek segítségével. A tudományt forradalmasító műszerrel Galileo Galilei olasz csillagász 1609-ben először leírta a Hold hegyvonulatait és krátereit, majd egy évvel később [Simon Marius](https://en.wikipedia.org/wiki/Simon_Marius) német csillagásszal nagyjából egyidőben felfedezte a Jupiter [négy legnagyobb holdját](https://en.wikipedia.org/wiki/Moons_of_Jupiter).
+Az ember sok tízezer éve kémleli az égboltot, de a feljegyzések szerint csak az elmúlt 413 évben 
 
-Galilei első, háromszoros nagyítású lencsés távcsövétől ez idő alatt eljutottunk a Földtől 1,5 millió kilométerre keringő, 6,5 méteres átmérőjű főtükörrel felszerelt James Webb űrtávcsőig, amely 13 milliárd éves galaxisok fényét észleli.
+
+a feljegyzések szerint csak 414 éve teszi ezt lencsék (vagy később tükrök) különböző kombinálásából álló műszerekkel.
+
+Ha 
 
 Ezt a vásárlási kalauzt kizárólag kiindulópontnak szánjuk. A távcső vásárlás jelentős, sok évre szóló befektetés, ezért nagyon fontos, hogy a döntést alapos utánanézés előzze meg, érdemes évek vagy évtizedek óta észlelő amatőrcsillagászok véleményét is kikérni, és a gyakorlatban is kipróbálni távcsöveket bemutató csillagvizsgálókban (ahol távcsöveket is érintő kérdéseinkre is hasznos válaszokat fogunk kapni).
 
