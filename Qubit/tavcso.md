@@ -2,16 +2,15 @@
 
 ## Itt a Qubit távcsővásárlási kalauza, ami a kezdőktől haladókig, a Holdat kémlelőktől a távoli galaxisokat asztrofotózó profikig mindenkinek kínál valamit.
 
-Az ember sok tízezer éve kémleli az égboltot, de a feljegyzések szerint csak az elmúlt 413 évben 
+Az ember sok tízezer éve kémleli az égboltot, de a feljegyzések szerint csak az elmúlt 4 évszázadban tette ezt lencséket vagy más optikai elemeket kombináló távcsövek segítségével. A tudományt forradalmasító műszerrel Galileo Galilei olasz csillagász 1609-ben először a Hold hegyvonulatait és krátereit bűvölte, majd egy évvel később [Simon Marius](https://en.wikipedia.org/wiki/Simon_Marius) német csillagásszal nagyjából egyidőben felfedezte a Jupiter [négy legnagyobb holdját](https://en.wikipedia.org/wiki/Moons_of_Jupiter), melynek egyikén, az Europán [akár élet is lehet](https://sciencemeetup.444.hu/2018/09/09/a-multban-a-venusz-a-fold-es-a-mars-is-kek-bolygok-voltak).
 
+Galilei első, háromszoros nagyítású lencsés távcsövétől ez idő alatt eljutottunk a Földtől 1,5 millió kilométerre keringő, 6,5 méteres átmérőjű főtükörrel felszerelt James Webb űrtávcsőig, amely 13 milliárd éves galaxisok fényét észleli. A JWST-ben és a ma amatőrök által megvásárolható teleszkópokban egy közös biztosan van. Elsőre az átlagos érdeklődőnek nagyon komplexnek tűnnek, és könnyű elveszni az új, nehezen érthető fogalmak közt.
 
-a feljegyzések szerint csak 414 éve teszi ezt lencsék (vagy később tükrök) különböző kombinálásából álló műszerekkel.
-
-Ha 
-
-Ezt a vásárlási kalauzt kizárólag kiindulópontnak szánjuk. A távcső vásárlás jelentős, sok évre szóló befektetés, ezért nagyon fontos, hogy a döntést alapos utánanézés előzze meg, érdemes évek vagy évtizedek óta észlelő amatőrcsillagászok véleményét is kikérni, és a gyakorlatban is kipróbálni távcsöveket bemutató csillagvizsgálókban (ahol távcsöveket is érintő kérdéseinkre is hasznos válaszokat fogunk kapni).
+Ezért összeraktunk egy ajánlót, ami (hangsúlyozottan) kiindulópontként szolgálhat, függetlenül attól, hogy valaki csak a Hold krátereit szeretné időnként nézegetni egy olcsó teleszkóppal, vagy profi asztrofotózásba kezdene. A távcső vásárlás egy jelentős, sok évre szóló befektetés, így nem érdemes kapkodni vele. A döntés előtt kérjük ki online, vagy csillagászati bemutatókon amatőrök véleményét, akiknek általában több éves vagy évtizedes távcsöves tapasztaltuk van, és próbáljunk ki távcsöveket bemutató csillagvizsgálókban.
 
 ## Mire szeretnénk használnánk a távcsövet?
+
+Galileihez hasonlóan 
 
 Ezt pedig a távcsöveknél nem lehet mással kezdeni, mint hogy mire ne. Egy 
 
