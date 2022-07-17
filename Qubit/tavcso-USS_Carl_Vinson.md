@@ -4,23 +4,23 @@
 
 Az ember sok tízezer éve kémleli az égboltot, de a feljegyzések szerint csak az elmúlt 4 évszázadban tette ezt lencséket vagy más optikai elemeket kombináló távcsövek segítségével. A tudományt forradalmasító műszerrel Galileo Galilei olasz csillagász 1609-ben először a Hold hegyvonulatait és krátereit bűvölte, majd egy évvel később [Simon Marius](https://en.wikipedia.org/wiki/Simon_Marius) német csillagásszal nagyjából egyidőben felfedezte a Jupiter [négy legnagyobb holdját](https://en.wikipedia.org/wiki/Moons_of_Jupiter), melynek egyikén, az Europán [akár élet is lehet](https://sciencemeetup.444.hu/2018/09/09/a-multban-a-venusz-a-fold-es-a-mars-is-kek-bolygok-voltak).
 
-Galilei első, háromszoros nagyítású lencsés távcsövétől ez idő alatt eljutottunk a Földtől 1,5 millió kilométerre keringő, 6,5 méteres átmérőjű főtükörrel felszerelt James Webb űrtávcsőig, amely 13 milliárd éves galaxisok vöröseltolódott fényét észleli. A JWST-ben és a ma amatőrök által megvásárolható teleszkópokban egy közös biztosan van. Elsőre az átlagos érdeklődőnek nagyon komplexnek tűnnek, és könnyű elveszni új, nehezen érthető fogalmak közt.
+Galilei első, háromszoros nagyítású lencsés távcsövétől ez idő alatt eljutottunk a Földtől 1,5 millió kilométerre keringő, 6,5 méteres átmérőjű főtükörrel felszerelt James Webb űrtávcsőig, amely 13 milliárd éves galaxisok fényét észleli. A JWST-ben és a ma amatőrök által megvásárolható teleszkópokban egy közös biztosan van. Elsőre az átlagos érdeklődőnek nagyon komplexnek tűnnek, és könnyű elveszni az új, nehezen érthető fogalmak közt.
 
 Ezért összeraktunk egy ajánlót, ami (hangsúlyozottan) kiindulópontként szolgálhat, függetlenül attól, hogy valaki csak a Hold krátereit szeretné időnként nézegetni egy olcsó teleszkóppal, vagy profi asztrofotózásba kezdene. A távcső vásárlás egy jelentős, sok évre szóló befektetés, így nem érdemes kapkodni vele. A döntés előtt kérjük ki online, vagy csillagászati bemutatókon amatőrök véleményét, akiknek általában több éves vagy évtizedes távcsöves tapasztaltuk van, és próbáljunk ki távcsöveket bemutató csillagvizsgálókban.
 
-## Hold, bolygók, galaxisok, határ a csillagos ég
+## Mire szeretnénk használnánk a távcsövet?
 
-Galileihez hasonlóan a legtöbben közeli szomszédunkat, a Holdat szeretnék először megtekinteni. Szerencsére erre már a kezdő távcsövek is alkalmasak, megmutatva a holdtengereknek nevezett sötét lávasíkságokat, a nagyobb kráterek részleteit, és esetleg még [hegyvonulatokat is](https://www.space.com/31048-how-to-observe-the-moon-telescope-binoculars.html). A drágább teleszkópokkal pedig már fotózhatjuk is a Holdat, és apróbb részleteket is megtekinthetünk rajta, különösen a Nap által megvilágított és sötét régiókat elválasztó határ, az úgynevezett [terminátor](https://en.wikipedia.org/wiki/Terminator_(solar)) környékén. Amit nem fogunk látni, az az Apollo-program amerikai űrhajósainak és holdautóik nyomai. Nem azért, mert [nincsenek ott](https://www.youtube.com/watch?v=_loUDS4c3Cs&ab_channel=VideoFromSpace), hanem mert a földi teleszkópokkal elérhető felbontás, és nagyítás ezt egyszerűen nem teszi lehetővé. Ellentétben a Hold körül keringő, 50 centiméter/pixeles felbontást elérő Lunar Reconnaissance Orbiter [űrszondával](https://qubit.hu/2019/07/24/egy-uj-kutatas-szerint-a-hold-arnyekos-sarkvidekein-hemzsegnek-a-vizjeggel-teli-kraterek), amely végigfotózta az Apollo-leszállóhelyeket.
+Galileihez hasonlóan 
 
-Naprendszerünk két óriásbolygója, a Jupiter és Szaturnusz is hálás célpontok, előbbi lenyűgöző [felhősávjai](https://qubit.hu/2018/02/14/fantasztikus-fotokat-kuldozget-haza-a-juno-a-jupiterrol), utóbbi [gyűrűrendszere](https://qubit.hu/2021/08/27/teljesen-mashogy-nez-ki-a-szaturnusz-belseje-mint-eddig-gondoltuk) miatt. Ahogy Galilei, mi is megfigyelhetjük apró fénypontokként a Jupiter körül keringő Io-t, amely a Naprendszer vulkanikusan [legaktívabb](https://qubit.hu/2020/02/21/te-hova-inditanal-urszondat-a-nasa-helyeben-a-venuszra-az-iora-vagy-a-tritonra) égitestje, a jégkérge alatt óceánt rejtő Europát és Ganymedest, illetve a bolygótól távolabb keringő Callistot. Ahogy a Hold esetén is, nagyobb teleszkópokkal több részletet fogunk látni a Jupiteren, és a Szaturnuszon.
-
-A Jupiterhez képest már nehezebb vállalkozás az összevetésben parányi Mars észlelése, ami kezdőtávcsöken egy narancssárgás pöttyként jelenik meg. Ahhoz, hogy [sötétebb-világosabb régióit](https://en.wikipedia.org/wiki/Classical_albedo_features_on_Mars), jégsapkáit és esetleg a 22 kilométer magas Olympus Mons vulkánját [megpillantsuk](https://www.cloudynights.com/topic/728416-new-mars-olympus-mons-close-up-dobson-05-mt/), pedig már lényegesen komolyabb amatőrtávcsövek kellenek. Ez tökéletesen mutatja, bármilyen teleszkópot is választunk, érdemes elengedni azokat a várakozásokat, hogy űrszondák vagy űrtávcsövek felvételeihez hasonlóan látjuk majd az égitesteket a távcsövön keresztül.
+Ezt pedig a távcsöveknél nem lehet mással kezdeni, mint hogy mire ne. Egy 
 
 Érdemes rögtön arra kitérni, hogy mire ne használjuk. Semmi esetre se irányítsunk egy távcsövet a Nap felé, mert azzal súlyos szemkárosodást okozhatunk magunknak, vagy másoknak. Ezért nappal kiemelt óvatossággal járjunk el a távcső kezelésekor, és ne hagyjuk azt észlelésre kész állapotban, felügyelet nélkül. A Nap megfigyelésére léteznek biztonságos megoldások, ezek ugyanakkor speciális eszközöket, például sérülékeny napfóliákat vagy különleges naptávcsöveket, illetve gyakorlatot, és szakszerű kezelést  igényelnek, így azt kezdőknek semmiképpen nem ajánljuk.
 
-A Naprendszerünknél távolabb szeretnénk kalandozni, érdemes először kettőscsillagokat, vagy kozmikus léptékben közeli csillaghalmazokat keresni, például az M45 Fiastyúk nyílthalmazt, melyek kisebb távcsöveken is szépen látszódnak. Az együttesen mély-ég objektumoknak nevezett csillaghalmazok, csillagködök (nebula) és galaxisok megfigyeléséhez nagyobb távcsövekre lesz szükségünk.
+Hold, Bolygók
 
+Kettőscsillagok, fényesebb galaxisok
 
+Mély ég objektumok
 
 ## Szabad szemes észlelés vagy asztrofotózás, és hordozhatóság
 
