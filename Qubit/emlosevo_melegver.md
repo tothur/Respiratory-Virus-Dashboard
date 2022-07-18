@@ -1,8 +1,8 @@
 # 230 millió éve melegvérűek az emlősök
 
-A késő triász éghajlati változási közepette alakult ki az emlősökre jellemző aktív életmód és állandó testhőmérséklét. A korai emlősökkel, 233 millió éve megjelenő melegvérűség számos, ma az emlősöket definiáló jellemzővel együtt jöhetett létre - derül ki egy ma, a Natureben megjelenő kutatásból.
+A késő triász éghajlati változási közepette alakult ki az emlősökre jellemző aktív életmód és közel állandó testhőmérséklét. A korai emlősökkel, 233 millió éve megjelenő melegvérűség számos, ma az emlősöket definiáló jellemzővel együtt jöhetett létre - derül ki egy ma, a Natureben megjelenő kutatásból.
 
-Az emlősök korai evolúcióját a belső fül fosszílizálódott maradványai alapján megvilágító kutatás két hónappal követ egy szintén a Natureben közölt vizsgálatot, ami azt találta, hogy már a dinoszauruszok és pteroszaruszok nagyjából 240 millió éve élt közös ősei is melegvérűek lehettek. A dinoszauruszok ma élő egyetlen csoportja, a madarakat az emlősökhöz hasonlóan alapvetően határozza meg a melegvérűség.
+Az emlősök korai evolúcióját a belső fül fosszílizálódott maradványai alapján megvilágító kutatás két hónappal követ egy szintén a Natureben közölt vizsgálatot, ami azt találta, hogy már a dinoszauruszok és pteroszaruszok nagyjából 240 millió éve élt közös ősei is melegvérűek lehettek. A dinoszauruszok ma élő egyetlen csoportja, a madarakat az emlősökhöz hasonlóan alapvetően határozza meg a melegvérűség, lehetővé téve a változatos környezetekben való életet.
 
 Warm-bloodedness, or endothermy, is a key feature of mammals and birds, and allows them to live in diverse environmental settings by keeping a near-constant core body temperature. Endotherms are more behaviourally active and can travel further and move faster than cold-blooded ectotherms, which are generally slower, less active and have decreased aerobic capacity. However, understanding when endothermy first emerged in mammalian evolutionary history remains challenging, as most fossil evidence is ambiguous.
 
