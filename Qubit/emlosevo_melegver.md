@@ -1,6 +1,8 @@
 # 230 millió éve melegvérűek az emlősök
 
-Warm-bloodedness in mammals may have originated in the Late Triassic period, around 233 million years ago, suggests a study in Nature this week. The findings, based on fossilized inner ears of mammal ancestors, improve our understanding of the evolutionary history of mammals.
+A késő triász éghajlati változási közepette alakult ki az emlősökre jellemző aktív életmód és állandó testhőmérséklét. A korai emlősökkel, 233 millió éve megjelenő melegvérűség számos, ma az emlősöket definiáló jellemzővel együtt jöhetett létre - derül ki egy ma, a Natureben megjelenő kutatásból.
+
+Az emlősök korai evolúcióját a belső fül fosszílizálódott maradványai alapján megvilágító kutatás két hónappal követ egy szintén a Natureben közölt vizsgálatot, ami azt találta, hogy már a dinoszauruszok és pteroszaruszok nagyjából 240 millió éve élt közös ősei is melegvérűek lehettek. A dinoszauruszok ma élő egyetlen csoportja, a madarakat az emlősökhöz hasonlóan alapvetően határozza meg a melegvérűség.
 
 Warm-bloodedness, or endothermy, is a key feature of mammals and birds, and allows them to live in diverse environmental settings by keeping a near-constant core body temperature. Endotherms are more behaviourally active and can travel further and move faster than cold-blooded ectotherms, which are generally slower, less active and have decreased aerobic capacity. However, understanding when endothermy first emerged in mammalian evolutionary history remains challenging, as most fossil evidence is ambiguous.
 
