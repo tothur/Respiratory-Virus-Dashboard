@@ -10,3 +10,4 @@ The authors examined the structural changes of semicircular canals from a group 
 
 https://www.nature.com/articles/s41586-022-04963-z
 
+https://qubit.hu/2022/05/25/mar-a-legelso-dinoszauruszok-es-pteroszauruszok-is-melegveruek-voltak
