@@ -1,6 +1,11 @@
 # 230 millió éve melegvérűek az emlősök
 
-Ha legközelebb maratont futunk, gondoljunk arra, hogy ezt 233 millió éve élt, korai emlősöknek köszönhetjük. A késő triász éghajlati változásai közepette alakult ki az emlősöket jellemző aktív életmód
+233 millió éve élt őseinknek köszönhetjük, hogy egész nap aktívak tudunk maradni, és a Föld szinte bármely szegletében megélünk. A melegvérűség, ami ezt lehetővé teszi, a korai emlősökben a késő-triász éghajlati változásai során alakult ki - derül ki egy ma, a Natureben [megjelenő kutatásból](https://www.nature.com/articles/s41586-022-04963-z).
+
+A nagy állatcsoportok közül jelenleg csak az emlősök és madarak képesek testük belsejében állandó testhőmérsékletet fenntartani. Még [májusban írtunk](https://qubit.hu/2022/05/25/mar-a-legelso-dinoszauruszok-es-pteroszauruszok-is-melegveruek-voltak)egy szintén a Natureben közölt tanulmányról, ami feltárta, hogy a melegvérűség már az első dinoszauruszokra és pteroszauruszokra is igaz volt. Azt egyes dinoszauruszok csak később vesztettek el, míg a ragadozó theropoda dinoszauruszok sosem, így a kréta végi kihalást túlélő egyetlen csoportjuk, a madarak ma is melegvérűek.
+
+
+
 
 A késő triász éghajlati változási közepette alakult ki az emlősökre jellemző aktív életmód és közel állandó testhőmérséklét. A korai emlősökkel, 233 millió éve megjelenő melegvérűség számos, ma az emlősöket definiáló jellemzővel együtt jöhetett létre - derül ki egy ma, a Natureben megjelenő kutatásból.
 
