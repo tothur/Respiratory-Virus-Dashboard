@@ -1,5 +1,7 @@
 # 230 millió éve melegvérűek az emlősök
 
+Ha legközelebb maratont futunk, gondoljunk arra, hogy ezt 233 millió éve élt, korai emlősöknek köszönhetjük. A késő triász éghajlati változásai közepette alakult ki az emlősöket jellemző aktív életmód
+
 A késő triász éghajlati változási közepette alakult ki az emlősökre jellemző aktív életmód és közel állandó testhőmérséklét. A korai emlősökkel, 233 millió éve megjelenő melegvérűség számos, ma az emlősöket definiáló jellemzővel együtt jöhetett létre - derül ki egy ma, a Natureben megjelenő kutatásból.
 
 Az emlősök korai evolúcióját a belső fül fosszílizálódott maradványai alapján megvilágító kutatás két hónappal követ egy szintén a Natureben közölt vizsgálatot, ami azt találta, hogy már a dinoszauruszok és pteroszaruszok nagyjából 240 millió éve élt közös ősei is melegvérűek lehettek. A dinoszauruszok ma élő egyetlen csoportja, a madarakat az emlősökhöz hasonlóan alapvetően határozza meg a melegvérűség, lehetővé téve a változatos környezetekben való életet.
