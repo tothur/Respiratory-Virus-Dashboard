@@ -2,7 +2,7 @@
 
 # Az amerikai és az európai űrűgynökség tegnapi bejelentése leegyszerűsítette a marsi minta-visszahozatalt, aminek a célja kideríteni, hogy kialakult-e a valaha a bolygón az élet.
 
-Egyszerűbben és hamarabb juthatnak földi laboratóriumokba a Perseverance marsjáró által gyűjtött kőzetminták. A legújabb tervek szerint azokat nem egy újabb marsjáró, hanem a Perseverance szállítja majd egy rakétához, ami 2030-ban elindítja Föld felé vezető útjukra őket - derül ki a NASA és az ESA [tegnapi](https://www.nasa.gov/press-release/nasa-esa-to-discuss-mars-sample-return-mission) sajtótájékoztatójából.
+Egyszerűbben és olcsóbban juthatnak földi laboratóriumokba a Perseverance marsjáró által gyűjtött kőzetminták. A legújabb tervek szerint azokat nem egy újabb marsjáró, hanem a Perseverance vagy helikopterek szállítják majd egy rakétához, ami 2031-ben elindítja Föld felé vezető útjukra őket, 2033-as érkezésre - derül ki a NASA és az ESA [tegnapi](https://www.nasa.gov/press-release/nasa-esa-to-discuss-mars-sample-return-mission) sajtótájékoztatójából.
 
 Az amerikai és európai űrűgynökségek több milliárd dolláros marsi minta-visszahozatali programjának célja kideríteni, hogy létezett-e a bolygón valaha élet.
 
@@ -28,10 +28,16 @@ september next decision point, finalizing architecture.
 
 randevous with orbiting samples at Mars. return to Utah in 2033. esa sample arm will grab samples from perseverance - adapted from perseverance and helicopter.
 
-Mimi - incredible sample collected yd. fine grain sedimentary rocks - greatest chance for preserving biosignatures.
+[Meenakshi Wadhwa](https://news.asu.edu/20210415-asu-professor-named-nasa-mars-sample-return-program-scientist), sample return principle scientist. - incredible sample collected yd. fine grain sedimentary rocks - greatest chance for preserving biosignatures.
 
 two helicopters like ingenuity in terms of size and mass. landing legs with small wheels - traverse across the surface across the ground. helicopters will have a little arm to grab tubes.
 
-price saving, time saving: plan always has been to use perseverance. architecture revison based on reliabality assessment. simpler, less complex, we have a simpler architecture.
+price saving, time saving: plan always has been to use perseverance. architecture revison based on reliabality assessment. simpler, less complex, we have a simpler architecture. money saved: less expensive.
 
 date: planned arrival mid-2030, mav launch 2031, return to sample 2033.
+
+SRL - sample retrieval lander, pinpoint landing capability, will get close
+
+Basic plan for Prsv to contiunue Jezero delta campaign, samples put into first depo later this year, after drive up the rest of the delta, than go out of the crater into the midway site, very ancient terrain. Perseverance is carrying the PRIMARY samples. If its breaking down, second sample depo will be made. Depo in Jezero will remain on Mars if all goes to plan.
+
+SRL could land where Perseverance ends up. First depo within Jezero. Perseverance collecting some duplicates, those will be carried within Perseverance to outside the crater.
