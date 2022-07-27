@@ -41,3 +41,13 @@ SRL - sample retrieval lander, pinpoint landing capability, will get close
 Basic plan for Prsv to contiunue Jezero delta campaign, samples put into first depo later this year, after drive up the rest of the delta, than go out of the crater into the midway site, very ancient terrain. Perseverance is carrying the PRIMARY samples. If its breaking down, second sample depo will be made. Depo in Jezero will remain on Mars if all goes to plan.
 
 SRL could land where Perseverance ends up. First depo within Jezero. Perseverance collecting some duplicates, those will be carried within Perseverance to outside the crater.
+
+Az ESA jelenleg azon dolgozik, hogy a Rosalind Franklin marsjáró eljuthasson a Marsra, discussions with nasa. https://qubit.hu/2022/03/01/a-haboru-miatt-elhalasztjak-az-europai-rosalind-franklin-marsjaro-felloveset
+
+*Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2022/07/14/melyebbre-kell-asni-hogy-kideruljon-volt-e-valaha-elet-a-marson
+
+https://qubit.hu/2020/01/18/mar-csak-11-evet-kell-aludni-hogy-megtudjuk-van-e-elet-a-marson
+
+https://qubit.hu/2021/04/19/tortenelmet-irt-a-marson-a-nasa-helikoptere-az-ingenuity
