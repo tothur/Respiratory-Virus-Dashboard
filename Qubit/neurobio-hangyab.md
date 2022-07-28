@@ -8,6 +8,8 @@ Az eredmények elméleti és kísérleti támogatást adnak egy olyan frekvencia
 
 Ez egy prototípusát inspirálhatja a CNS szinkronizációs folyamatainak nematódáktól gerincesekig.
 
+http://real-d.mtak.hu/1296/1/dc_1777_20_tezisek.pdf
+
 - medial septal (MS) - szeptális magok egyike, teheta hullám generálásban vesz részt. GABAergic sejtek az MS-ben theata pacemakerenként viselkednek. vannak még benne glutamatergic sejtek, cholinergic sejtek, más-más funklcióval.
 - hippokampusz - limbikus rendszer része, rövidtávú-hosszútávú memória konszolidálása, térmemória a navigációhoz. minden gerincesben megtalálható. alzheimernél az egyik első régió, ami károsodik, rövidtávú memóriazavar, diszorientáció. oxigénhiánynál, enkefalitisznál is károsodhat.
 - theta [osszilláció](https://www.cell.com/neuron/fulltext/S0896-6273(02)00586-X): theta hullámok generálják, neurális osszilláció az agyban, ami kogníció és viselkedés (tanulás, memória, térbeli navigáció) alapjául szolgál. EEG-n szépen látszik, 4-12 Hz között. két típusa van. egyik a hippokampusz theta osszillációja, ami egy erős osszilláció, a hippokampuszban és más struktúrákban megfigyelhető emlősöknél. és vannak a kortikus theta hullámok, melyek alacsony frekvenciájú komponensei a scalp EEG-nek, általában embereknél rögzítenek ilyeneket. patkányokban hippokampuszban könnyen megfigyelhetők, de más kortikus vagy szubkortikus agyi struktúrákban is megf. 6-10 Hz-es frekvencia mozgás, szaglászás, REM alvás közben. alacsonyabb, 6-7 Hz frekvencia figyel, de áll. nem rem alvás közben nincs ritmikus mintázat. hippokampusz theta hullám embereknél memória formálódáshoz és navigációhoz kötött. 
