@@ -1,5 +1,9 @@
 # Embargó Kedd 17:00 - Magyar kutatók igazolták, hogy idegsejtek ingaórákhoz hasonlóan szinkronizálódnak
 
+Christiaan Huygens holland matematikus és csillagász ingaóráihoz hasonlóan szinkronizálódnak egyes idegsejtek az agyban, az epizódikus tanuláshoz nélkülözhetetlen agyhullámokat eredményezve. 
+
+A Hangya Balázs, a Kísérleti Orvostudományi Kutatóintézet (KOKI) Rendszer-Neurobiológia kutatócsoportjának vezetője által vezetett kutatás. A tanulás agyi mechanizmusának megértésével foglalkozó kutatócsoport
+
 Az epizódikus tanulás és memória előhívás a hipokampusz theta osszcillációjától függ, melyet a GABAergic hálózata biztosít a medial spetumnak. kérdés: hogyan ér el ez a hálózat theta szinkronizációt? ehhez MS neuronok rögzítése és hipokampusz helyi tér potenciáljának együttes, egyidőbeni rögzítése éber és anesztizált egerekben és patkányokban. kiderült, hogy az MS pacemakerek szinkronizálják az egyéni saját ritmikus frekvenciájúkat, ahhoz hasonlóan, ahogy összeköttetésben álló pendelum órák teszik ezt, Huygens által megfigyelt módon. optogenetikai módszerrel megtalálták, hogy ezek parvalbumint kifejező GABAergic neuronok. az MS glutamatergic neuronjai eközben tonic excitationt adnak, ami elegendő a theta indukálásához.
 
 A waxing és csökkenő tonic excitation elegendő a theta és nem theta állapotok közti váltáshoz, egy egyetlen kompartmentes gátló pacemaker neuronok hálózati modellben. 
