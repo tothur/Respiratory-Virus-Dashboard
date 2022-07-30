@@ -1,6 +1,6 @@
 # Embargó Kedd 17:00 - Magyar kutatók igazolták, hogy idegsejtek ingaórákhoz hasonlóan szinkronizálódnak
 
-Christiaan Huygens holland matematikus és csillagász ingaóráihoz hasonlóan szinkronizálódnak egyes idegsejtek az agyban, az epizódikus tanuláshoz nélkülözhetetlen agyhullámokat eredményezve. 
+Christiaan Huygens holland matematikus és csillagász ingaóráihoz hasonlóan szinkronizálódnak egyes idegsejtek az agyban, az epizódikus tanuláshoz nélkülözhetetlen agyhullámokat eredményezve.
 
 A Hangya Balázs, a Kísérleti Orvostudományi Kutatóintézet (KOKI) Rendszer-Neurobiológia kutatócsoportjának vezetője által vezetett kutatás. A tanulás agyi mechanizmusának megértésével foglalkozó kutatócsoport
 
