@@ -1,4 +1,4 @@
-# A világűr tele van semmivel, ami csodákra képes
+# A világűr tele van semmivel, ami hihetetlen dolgokra képes
 
 ## Mi van ott, ahol nincsenek csillagok, bolygók, földönkívüliek, részecskék, vagy sugárzás? Kvantum vákum, melyet a vákum energia tölt ki. Ez pedig a világegyetem gyorsuló tágulásáért lehet felelős.
 
