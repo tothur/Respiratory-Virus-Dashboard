@@ -1,18 +1,18 @@
 # A világűr tele van semmivel, ami hihetetlen dolgokra képes
 
-## Mi van ott, ahol nincsenek csillagok, bolygók, földönkívüliek, részecskék, vagy sugárzás? Kvantum vákuum, melyet a vákuum energia tölt ki. Ez pedig a világegyetem gyorsuló tágulásával lehet kapcsolatban.
+## Mi van ott, ahol nincsenek csillagok, bolygók, földönkívüliek, részecskék, vagy sugárzás? Kvantum vákuum, melyet a vákuum energia tölt ki. Ez pedig a világegyetem gyorsuló tágulásáért lehet felelős.
 
-A világegyetemben a csillagok, bolygók, porszemek és fekete lyukak közt meglehetősen sok az üres tér, a semmi. A világűr jelentős részét kitöltő vákuum azonban sokkal izgalmasabb, mint valaha gondoltuk, és az univerzumra ható legjelentősebb erő mögött állhat.
+A világegyetemben a csillagok, bolygók, porszemek és fekete lyukak közt meglehetősen sok az üres tér, a semmi. Az elmúlt évtizedekben kiderült, hogy a világűr jelentős részét kitöltő vákuum sokkal izgalmasabb, mint valaha gondoltuk, olyannyira, hogy az univerzumra ható legjelentősebb erő mögött állhat.
 
 # Az első semmi: a vákuum
 
-A semmibe vezető utazásunkat kezdjük otthonunkhoz közel. Már egy tipikus porszívó is képes lecsökkenteni közel 20 százalékkal a légnyomást egy zárt térben, míg a kémiai és fizikai kísérletekben alkalmazott csúcstechnológiás vákuumkamrák 100 nanopascal légnyomást is el tudnak érni, ahol köbcentimétereként már csak 100 részecske marad a térben.
+A semmibe vezető utunkat kezdjük otthonunkhoz közel. Már egy tipikus porszívó is képes lecsökkenteni közel 20 százalékkal a légnyomást egy zárt térben, míg a kémiai és fizikai kísérletekben alkalmazott csúcstechnológiás vákuumkamrák 100 nanopascal légnyomást [is el tudnak érni](https://en.wikipedia.org/wiki/Vacuum), ahol köbcentimétereként már csak 100 részecske marad a térben.
 
 "A vákuum lényege, hogy nincsenek benne makroszkópikusan mérhető tömegű anyagi részecskék" - mondta a Qubitnek Kun Emma, a CSFK Konkoly Thege Miklós Csillagászati Intézet kutatója, aki nagy-energiájú neutrínókkal, fekete lyukakkal, és kozmológiai kérdésekkel foglalkozik.
 
-A Naprendszer, és maga az univerzum nagy része is, eltekintve a sűrűbb területektől - például egy üstökös csóvájától - elegendően ritka és hideg ahhoz, hogy ott vákuum jöjjön létre Kun szerint, míg a Földön ezt az állapotot nem nagyon tudjuk egy kísérleti kamrában elérni, mivel azt irgalmatlan energiával húzná össze a vákuum, hogy kiegyenlítse magát környezetével.
+A Naprendszerünk, és maga az univerzum nagy része is, eltekintve a sűrűbb területektől - például egy üstökös csóvájától - elegendően ritka és hideg ahhoz, hogy ott [egyes apró régiókban]vákuum jöjjön létre Kun szerint, míg a Földön ezt az állapotot nem nagyon tudjuk egy kísérleti kamrában elérni, mivel azt irgalmatlan energiával húzná össze a vákuum, hogy kiegyenlítse magát környezetével.
 
-Ha egy köbméteres teret vizsgálunk, akkor még a galaxisok, mint a saját Tejútrendszerünk közti, nagyon nagyon ritka intergalaktikus [térben is előfordul](https://ui.adsabs.harvard.edu/abs/1968PASJ...20..230T/abstract) 1-1 hidrogén atom.
+Ha nem mikroszkópikus, hanem egy egy köbméteres teret vizsgálunk, akkor még a galaxisok, mint a saját Tejútrendszerünk közti, nagyon ritka intergalaktikus [térben is előfordul](https://ui.adsabs.harvard.edu/abs/1968PASJ...20..230T/abstract) 1-1 hidrogén atom.
 
 # A második semmi: a kvantum vákuum, vákuum energiával és virtuális részecskékkel
 
@@ -32,7 +32,7 @@ Ebből a vákuumenergiából keletkeznek a kvantumfluktuációkkal járó [virtu
 
 ## Gyorsulva táguló univerzum
 
-A kozmológiában a vákuum energia kozmológiai állandóként jelenik meg, mondta Kun, amely a vákuum állapot energiájának egy nagyobb, érzékelhető skálákon feltűnő aspektusa. Az ismert világegyetem, a Naprendszerünkkel, a Tejútrendszerrel és az összes más galaxissal leírható sík univerzumként, ami szerinte azt jelenti, hogy ha vesszük a sugárzást, az anyagot és a sötét anyagot, valamint ezt a kozmológiai állandót, akkor ezek energiasűrűsége egyet kell hogy adjon. Az unverzumban az anyag Kun szerint lényegében megmondja a térnek, hogyan görbüljön, és a görbült tér pedig az anyagnak, hogyan közlekedjen a görbült térben, és így jön az is, hogy a gravitációs hullámokat a téridő fodrainak nevezik. Emellett, mint Kun elmondta, ez a sík univerzum a mai kozmológiai modell szerint nagy skálákon, bármerre is fordulunk és bármerre megyünk, ugyan úgy néz ki.
+A kozmológiában a vákuum energia [kozmológiai állandóként](https://en.m.wikipedia.org/wiki/Cosmological_constant) jelenik meg, mondta Kun, amely a vákuum állapot energiájának egy nagyobb, érzékelhető skálákon feltűnő aspektusa. Az ismert világegyetem, a Naprendszerünkkel, a Tejútrendszerrel és az összes más galaxissal leírható sík univerzumként, ami szerinte azt jelenti, hogy ha vesszük a sugárzást, az anyagot és a sötét anyagot, valamint ezt a kozmológiai állandót, akkor ezek energiasűrűsége egyet kell hogy adjon. Az unverzumban az anyag Kun szerint lényegében megmondja a térnek, hogyan görbüljön, és a görbült tér pedig az anyagnak, hogyan közlekedjen a görbült térben, és így jön az is, hogy a gravitációs hullámokat a téridő fodrainak nevezik. Emellett, mint Kun elmondta, ez a sík univerzum a mai kozmológiai modell szerint nagy skálákon, bármerre is fordulunk és bármerre megyünk, ugyan úgy néz ki.
 
 Az 1990-es évek óta tudjuk, hogy az univerzum tágulásának üteme gyorsul, amit a csillagászoknak távoli szupernóva robbanások segítettek megfejteni, amivel egyes csillagok életciklusa ér véget. Mint Kun elmondta, az 1A típusú szupernóváknál van egy úgynevezett Chandrasekhar-tömeg, 1,4-1,44 Naptömegnél, amikor gravitációsan instabillá válik a csillagmag, és fel fog robbanni. Ez azért következik be, mint mondta, mert a kifele áramló sugárnyomás nem képes ellenállni a befelé mutató gravitációnak, ha meghaladja a csillag magja ezt a tömeghatárt. Ennek a tömeghatárnak a következménye, hogy az 1A szupernóvákhoz abszolút fényesség rendelhető, azaz lényegében mindegy, milyen messziről mérjük a luminózitásukat, magyarázta. A szupernóva színképében lévő hidrogén alapján kimutatható, mondta Kun, hogy ilyen, sztenderdizálható fénygörbéjű IA, vagy másként viselkedő II-es típusú szupernóváról van szó. Ezután már csak meg kell mérnünk a látszólagos fényességét, venni az ismert abszolút fényességét, és ki lehet számolni, milyen messze van tőlünk, azaz csillagászati távoslságmérésre használható.
 
@@ -47,6 +47,8 @@ Jóval később kiderült Kun szerint, hogy a kozmológiai állandó nagyon is s
 Ezt a leírását az univerzumnak [Lambda-CDM modellnek nevezik](https://qubit.hu/2022/01/25/magyar-asztrofizikus-vezetesevel-vegzett-kutatas-segit-feltarni-a-sotet-energia-titkait), amely jól [megmagyarázza](https://en.wikipedia.org/wiki/Lambda-CDM_model) a kozmikus mikrohullámú háttársugárzás tulajdonságait, a galaxisok által alkotott nagy struktúrákat, egyes elemek mennyiségét, és az univerzum gyorsulva való tágulását.
 
 Mint Kun elmondta, a sötét energia hatását ismerik a kutatók, és sejtik, hogy abból származik, hogy a vákuumállapot energiája nem nulla, de a makroszkópikus és mikroszkópikus szint közti átmenetet nem értik. Ezt a kvantum gravitáció elmélete változtathatja majd meg szerinte, ami rendkívül izgalmas lehetőség, és sok minden másra is fényt deríthet. Mint elmondta, jelenlegi tudásunk szerint a gravitáció folytonos és nem lehet kvantálni, de vannak hipotetikus elképzelések gravitonokkal, amelyek szerint talán mégiscsak leírható lehet egyszer atomi skálákon.
+
+A gyorsulva táguló univerzum nem sok jót jósol a távoli jövőre nézve. 150 milliárd év múlva a lokális szuperklaszteren kívüli galaxisok már sehogy sem lesznek elérhetőek, 2 billió év múlva pedig már megfigyelhetőek sem, így az ekkor létező intelligens létformák már nem fogják tudni felismerni az ősrobbanás és a táguló világegyetem képét. 100 billió év múlva megszűnik a csillagformálódás, majd felfoghatatlan időtávokon, fokozatosan a fekete lyukak és a semmi átveszi az [uralmat a világegyetem felett](https://en.wikipedia.org/wiki/Future_of_an_expanding_universe).
 
 *Kapcsolódó cikkek a Qubiten:*
 
