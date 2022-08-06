@@ -1,12 +1,12 @@
-# Embargó Hétfő 17:00 - A fertőző megbetegedések több mint felét súlyosbította a klímaváltozás
+# Embargó Hétfő 17:00 - A fertőző megbetegedések több mint felét súlyosbíthatja a klímaváltozás
 
 ## Kemenesi Gábor virológus szerint egy új kutatás azt a közeljövőt festi fel, ami tulajdonképpen a jelenünk: a klímaváltozás nem jár egyedül, minden mindennel összefügg elve alapján húzza magával a fertőző betegségeket is.
 
-Súlyosabbá tették az emberi fertőző betegségek több mint felének hatását a klímaváltozás következményei. A kórokozók és terjedési útvonalaik pedig túl nagy számúak ahhoz, hogy társadalmi alkalmazkodással védekezni lehessen az üvegházhatású gázok kibocsátásának csökkentése nélkül - állítja egy hétfő délután a Nature Climate Change folyóiratban [megjelent](https://www.nature.com/articles/s41558-022-01426-1) kutatás.
+Súlyosabbá tehetik az emberi fertőző betegségek több mint felének hatását a klímaváltozás következményei. A kórokozók és terjedési útvonalaik pedig túl nagy számúak ahhoz, hogy társadalmi alkalmazkodással védekezni lehessen az üvegházhatású gázok kibocsátásának csökkentése nélkül - állítja egy hétfő délután a Nature Climate Change folyóiratban [megjelent](https://www.nature.com/articles/s41558-022-01426-1) kutatás.
 
-Az emberiséget fenyegető 375 fertőző megbetegedésből 218-ra hatott így a hőmérséklet növekedés, a csapadékmennyiség változás, az árvizek, az aszályok, és más, a globális felmelegedés által okozott vagy felerősített éghajlati kockázatok. Camilo Mora, a Hawaii Egyetem biológusa és kollégái összesen 10 ilyen trend baktériumok, vírusok és más kórokozók által okozott megbetegedésekre mért hatását vizsgálták, a meglévő szakirodalom keresésével és integrálásával. 
+Az emberiséget fenyegető 375 fertőző megbetegedésből 218-ra hathat így a hőmérséklet növekedés, a csapadékmennyiség változás, az árvizek, az aszályok, és más, a globális felmelegedés által okozott vagy felerősített éghajlati kockázatok. Camilo Mora, a Hawaii Egyetem biológusa és kollégái összesen 10 ilyen trend baktériumok, vírusok és más kórokozók által okozott megbetegedésekre mért befolyását vizsgálták, a meglévő szakirodalom keresésével és integrálásával. 
 
-Az amerikai szakemberek által vizsgált esettanulmányok 1006 olyan egyedi útvonalat azonosítottak, amelyek által a klímaváltozás hatásai különböző kórokozó terjedési útvonalakon keresztül emberi megbetegedéshez vezethetnek.
+Az amerikai szakemberek esettanulmányok alapján 1006 olyan egyedi útvonalat azonosítottak, amelyek által a klímaváltozás éghajlati és időjárási eseményekben mérhető hatásai különböző kórokozó terjedési útvonalain keresztül emberi megbetegedéshez vezethetnek.
 
 "Ez a szisztematikus áttekintő tanulmány pontosan számszerűsíti amiről fragmentáltan, tématerületenként már évtizedek óta beszélnek a tudósok. A fertőző betegségek megváltozott mintázatainak kapcsolata a klímaváltozással már ismert néhány évtizede, de végre egy jól felépített tanulmány emészthetőbbé és emberközelibbé teszi a probléma megértését." - kommentálta a Qubitnek a kutatás eredményeit Kemenesi Gábor virológus, a Pécsi Tudományegyetem adjunktusa.
 
