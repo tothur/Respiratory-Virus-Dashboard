@@ -26,8 +26,22 @@ Kemenesi szerint a klímaváltozás káros hatásaival jó ideje foglalkozik a t
 
 ## Kibocsátás csökkentés és visszafogottabb életmód lehet a megoldás
 
-Mora és kollégái azt találták, hogy a felmelegedés és csapadék változás megnövelheti betegség vektorok földrajzi elterjedését. Ilyenek a szúnyogok, kullancsok, 
+Mora és kollégái azt találták, hogy a felmelegedés és csapadékmennyiség változása módosíthatja betegség vektorként szolgáló állatok földrajzi elterjedését. Ilyenek a szúnyogok, melyek a [dengue](https://en.wikipedia.org/wiki/Dengue_virus), [nyugat-nílusi](https://en.wikipedia.org/wiki/West_Nile_virus) és [Zika](https://en.wikipedia.org/wiki/Zika_virus) vírusokat, illetve a [maláriát](https://en.wikipedia.org/wiki/Malaria) terjesztik, a [Lyme-kórért](https://en.wikipedia.org/wiki/Lyme_disease) felelős baktériumot hordozó kullancsok, vagy a [*Yersinia pestis* baktérium](https://qubit.hu/2022/06/15/leletekbol-vett-dns-mintakkal-megfejtettek-honnan-indult-a-nagy-pestisjarvany) vektorát adó patkánybolhák is. Érdekes módon az aszályos időszakok még tovább ronthatnak a helyzeten, a szúnyogok és madarak maradék vizes élőhelyekre koncentrálódása segítheti például a nyugat-nílusi vírus terjedését.
+
+Az éghajlati változások közvetlenül is hathatnak kórokozókra. Megfigyelték például a tengerekben élő *[Vibrio spp.](https://en.wikipedia.org/wiki/Vibrio)* baktériumfajok elterjedését a felmelegedés hatására, vagy az is ismert, hogy a melegebb körülmények növelik a szúnyogok csípési hajlandóságát, túlélését, és a bennük zajló vírusreplikációt, segítve a nyugat-nílusi vírus terjedését.
+
+A magasabb szélességeken való felmelegedés lehetővé teheti a vektoroknak és a kórokozóknak, hogy túléljék a teleket, a kutatók szerint súlyosbítva a Zika vagy a dengue által jelentett kockázatot. Az élőhelyeket megzavaró éghajlatváltozás szintén közelebb vihet az emberhez kórokozókat, például azzal, hogy a vadon élő denevérek, rágcsálók, vagy főemlősök nagyobb területeket kell hogy bejárjanak táplálékért, vélik a szakemberek. 
+
+Emellett arra is felhívják a figyelmet, hogy az éghajlatváltozás következményei közelebb vihetik az embereket is a kórokozókhoz, például ha nem áll rendelkezésre elég tiszta ivóvíz, illetve gyengíthetik az emberi szervezet kórokozókkal szembeni védekezőképességét is, a szervezetet érő stressz növelésén keresztül. Egy nemrég a Natureben közölt kutatás [ezt alá is támaszthatja](https://qubit.hu/2022/06/13/mar-a-rovid-tavu-stressz-is-vedtelenebbe-tehet-a-virusos-fertozesekkel-szemben), Poller és kollégái egereken végzett vizsgálatokban ugyanis felfedezték, hogy a rövid távú stressz is komoly hatással lehet a vírusos fertőzésekkel szembeni adaptív immunválaszra.
 
 Mivel túl sok kórokozóra, túl sok különböző módon hatnak az éghajlati kockázatok, Mora és kollégái szerint kritikus fontosságú a globális felmelegedésért felelős üvegházhatású gázok kibocsátásának mérséklése. Kemenesi úgy látja, hogy a megoldás az egyéni szinten tudatosabb, visszafogottabb és nem féktelen fogyasztáson alapuló élet, amelyhez hozzátartozik [a fenntartható táplálkozás](https://www.nature.com/articles/d41586-021-03565-5) is. Ez kéz a kézben a klímavédelmi megfontolásokkal a fertőző betegségek hatását is segíthet csökkenteni szerinte. 
 
 A magyar virológus elmondta, hogy tudományos szinten a pandémiás felkészülés mellett a kórokozók megelőzésének, illetve [megismerésének elvét](https://qubit.hu/2021/10/19/kemenesi-gabor-a-kornyezettudatos-gondolkodas-es-a-tudomany-segit-a-jarvanyok-elleni-harcban) kell követni, mielőtt azok ránk találnak. Ezen dolgoznak ők maguk is, tette hozzá, felderítésükkel és nyomonkövetésükkel (smart surveillance).
+
+*Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2021/10/19/kemenesi-gabor-a-kornyezettudatos-gondolkodas-es-a-tudomany-segit-a-jarvanyok-elleni-harcban
+
+https://qubit.hu/2021/11/11/megjelent-a-nagy-klimaatlasz-magyarorszagon-foleg-a-szunyogok-altal-terjesztett-virusoktol-lehet-tartani
+
+https://qubit.hu/2022/04/05/minden-eszkozunk-megvan-ahhoz-hogy-elkeruljuk-a-klimaapokalipszist-mar-csak-a-politikai-akarat-hianyzik
