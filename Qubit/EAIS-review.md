@@ -22,9 +22,12 @@ Az egyik fő probléma, állítják, hogy az olvadásra és gyarapodásra vonatk
 
 A kelet-antarktiszi jégtakaró fő, tengerszint alatti medencéi (ASB, WSB és RSB) jelentős jégveszteséget szenvedtek 24-14 millió éve a [miocéni felmelegedés során](https://qubit.hu/2022/07/25/elkepesztoen-hosszu-lehulest-forditott-meg-a-szen-dioxid-szint-novekedese-17-millio-eve). A 3,3-3 millió évvel ezelőtti pliocén közepén pedig a tengerszint több méteres növekedéséhez vezetve, amikor a légköri szén-dioxid szint a jelenlegihez utoljára hasonló volt. A WSB a jelenlegi negyedidőszaki jégkorszak egy 400 ezer évvel ezelőtti (MIS11) melegebb, interglaciális időszakában is visszahúzódott, a kutatók szerint jelezve az érzékenységét a 1,5-2 fokos klímaváltozásra is. 
 
-Az utolsó eljegesedés végével ugyanakkor az ASB-t és WSB-t limitált változások érték, azok inkább a WAIS-t és az EAIS-t összekötő tengeri területeketre korlátozódtak, a nyugat-antarktiszi jégtakarónál megismert, tengeri felmelegedés által okozott mechanizmussal. Ez, a tengeri jégtakarók instabilitásával 
+Az utolsó eljegesedés végével ugyanakkor az ASB-t és WSB-t limitált változások érték, azok inkább a WAIS-t és az EAIS-t összekötő tengeri területeketre korlátozódtak, a tengeri felmelegedés által okozott olvadással. A kutatók szerint ez, a tengeri jégtakarók instabilitásának bizonyítékaival együtt egy lehetséges forgatókönyvet vázol fel egyes kelet-antarktiszi gleccserek, mint a Denman destabilizációjára a következő évszázadokban.
 
 ## Egyes tengeri szektorok jelenleg eléggé olvadnak
+
+Emellett arra is vannak jelek, hogy egyes gleccserek az ASB-ben a Wilkes Land területen veszítenek tömegükből. Ezek tengeraljzattal érintkező határvonalának visszahúzódása és a jég vékonyodása összhasonlítható az utolsó eljegesedés utáni olvadás sebességével. A kutatók szerint ez felveti azt a lehetőséget, hogy a felmelegedés által okozott óceáni változásokra reagálnak így a gleccserek.
+
 
 ## Egyensúly és jövőbeli trendek
 
