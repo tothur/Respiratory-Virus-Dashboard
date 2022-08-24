@@ -6,9 +6,17 @@ Leletek új vizsgálata alapján már az egyik legkorábbi emberelőd is két l�
 
 A *[Sahelanthropus tchadensis](https://en.wikipedia.org/wiki/Sahelanthropus)* ennek ellenére jól tudott fára mászni, amely akkoriban részben erdős közép-afrikai élőhelyén fontos volt a túléléshez. A csimpánzokat és az embert magában foglaló [Hominini](https://en.wikipedia.org/wiki/Hominini) csoport legkorábbi tagjai közé tartozó emberelődről 2002 óta feltételezik koponyamaradványok alapján, hogy két lábon járhatott.
 
+Representation of the modes of locomotion practiced by Sahelanthropus
+
+Forrás: Sabine Riffaut, Guillaume Daver, Franck Guy / Palevoprim / CNRS – Université de Poitiers
+
 Guillaume Daver, illetve Franck Guy a franciaországi Poitiers Egyetem paleoantropológusainak és kollégáiknak most a 2001-ben, a chadi tómedence Toros-Menalla területén felfedezett *S. tchadensis* végtagcsontjainak vizsgálatával ezt sikerült megerősítenie. Emellett több részlet is kiderült az emberelőd egykori életmódjáról és környezetéről.
 
-Az [ember](https://en.wikipedia.org/wiki/Homo) (Homo) és a [csimpánzok](https://en.wikipedia.org/wiki/Pan_(genus)) (Pan) közös őse molekuláris adatok alapján 10-6 millió évvel ezelőtt élt, a modern ember és a csimpánzok genomja közt pedig közel 99 százalékos [az azonosság](https://www.science.org/content/article/bonobos-join-chimps-closest-human-relatives). Sok fosszília nem maradt fent ebből az időszakból, de a kutatók szerint ősibb jellegeik ellenére néhány, a Hominini csoporba sorolt afrikai fosszília 8-9,8 millió éves.
+Az [ember](https://en.wikipedia.org/wiki/Homo) (Homo) és a [csimpánzok](https://en.wikipedia.org/wiki/Pan_(genus)) (Pan) közös őse molekuláris adatok alapján 10-7 millió évvel ezelőtt élt, a modern ember és a csimpánzok genomja közt pedig közel 99 százalékos [az azonosság](https://www.science.org/content/article/bonobos-join-chimps-closest-human-relatives). Sok fosszília nem maradt fent ebből az időszakból, de a kutatók szerint ősibb jellegeik ellenére néhány, a Hominini csoporba sorolt afrikai fosszília 8-9,8 millió éves.
+
+Humanity separated from the chimpanzee group during the recent Miocene, most probably between 10 and 7 millions of years before present
+
+Franck Guy / PALEVOPRIM / CNRS – University of Poitiers
 
 ## A végtagcsontok megerősítik a két lábon járást, de komplexebb életmódot tárnak fel
 
@@ -25,6 +33,10 @@ A homininszerű jellegeket feltáró csontok alapján a legvalószínűbbnek azt
 ## Az élőhely erdővel és szavannával borított volt
 
 7 millió évvel ezelőtt, a miocén végén a globális átlaghőmérséklet nagyjából 5-6 fokkal [melegebb volt](https://qubit.hu/2022/07/25/elkepesztoen-hosszu-lehulest-forditott-meg-a-szen-dioxid-szint-novekedese-17-millio-eve) a mainál. Ekkor a napjainkban a Djurab-sivatagban elhelyezkedő [Toros-Ménalla](https://www.researchgate.net/publication/11267434_Geology_and_Palaeontology_of_the_Upper_Miocene_Toros-Menalla_Hominid_Locality_Chad) egy tómedencei peremvidék volt. Az élőhelyen egyszerre voltak szárazabb és nedvesebb füves területek, illetve erdők.
+
+The Djurab Desert, where the fossil sites that yielded the postcranial remains of Sahelanthropus tchadensis are located 
+
+Forrás: The Djurab Desert, where the fossil sites that yielded the postcranial remains of Sahelanthropus tchadensis are located.
 
 Az *S. tchadensis*-nél későbbi, kelet-afrikai emberelődök szintén olyan környezetben éltek, ahol a füves területek mellett fákkal borítottak is voltak. A Toros-Ménalla környezetéből kiindulva a kutatók arra következtetnek, hogy legalábbis a chadi emberelődök képesek voltak a talajmenti és a fákon lévő erőforrásokat kihasználni, hogy élelemhez és vízhez jussanak. Úgy vélik, ezen diverz életmód és az erdős környezet összefüggése arra utal, hogy a korai emberelődök nem feltétlenülk nyílt, viszonylag száraz környezetek megnövekedéséhez voltak kötve.
 
