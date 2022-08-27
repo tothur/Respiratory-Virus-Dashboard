@@ -4,7 +4,7 @@
 
 50 év után ismét emberes űrhajó fog a Hold körül keringeni, egyelőre még legénység nélkül. Az amerikai űrügynökség Orion-űrhajója magyar idő szerint 14:33 után indul útnak a floridai Cape Canaveralből, a valaha épített legnagyobb rakéta, az SLS segítségével.
 
-Az [Artemis I](https://en.wikipedia.org/wiki/Artemis_1) tesztrepülés során az [Orion](https://en.wikipedia.org/wiki/Orion_(spacecraft)) legalább egy hetet fog Hold-körüli pályán tölteni. Ez előkészíti űrhajósok visszatérését égi kísérőnkhöz két év múlva, 2024-ben, az Artemis II repülés során. A holdraszállásra egy évvel később, 2025-ben [kerülhet sor](https://www.nature.com/articles/d41586-022-01253-6) a Hold déli [pólusánál](https://www.nasa.gov/press-release/nasa-identifies-candidate-regions-for-landing-next-americans-on-moon). A NASA űrhajója 6 űrhajós ellátására lesz képes Föld-körüli pályán túl, akár három hétig, [európai szervízmodullja](https://en.wikipedia.org/wiki/European_Service_Module) segítségével.
+Az [Artemis I](https://en.wikipedia.org/wiki/Artemis_1) tesztrepülés során az [Orion](https://en.wikipedia.org/wiki/Orion_(spacecraft)) legalább egy hetet fog Hold-körüli pályán tölteni. Ez előkészíti űrhajósok visszatérését égi kísérőnkhöz két év múlva, 2024-ben, az Artemis II repülés során. A holdraszállásra egy évvel később, 2025-ben [kerülhet sor](https://www.nature.com/articles/d41586-022-01253-6). A NASA űrhajója 6 űrhajós ellátására lesz képes Föld-körüli pályán túl, akár három hétig, [európai szervízmodullja](https://en.wikipedia.org/wiki/European_Service_Module) segítségével.
 
 Az űrhajó a 98 méter magas, [Space Launch System](https://en.wikipedia.org/wiki/Space_Launch_System) (SLS) hordozórakétán emelkedik majd a magasba, annak első indításával. Az SLS a valaha épített egyik legnagyobb rakéta, amelynek ma indítandó verziója több mint fele annyi terhet tud a Holdhoz szállítani, mint amennyit az Apollo-küldetéseket oda juttató [Saturn V holdrakéta](https://en.wikipedia.org/wiki/Saturn_V).
 
@@ -40,6 +40,8 @@ https://www.theverge.com/23321544/nasa-artemis-sls-orion-explained
 Az SLS Block I verziója 27 tonna hasznos terhet tud a Holdhoz szállítani, szemben a Saturn V 43 tonnájával.
 
 ## Artemis II és III fogja követni
+
+Az Artemis III két űrhajósa a déli pólus közelében, a NASA által ebben a hónapban kiválasztott 13 [leszállóhely jelölt](https://www.nasa.gov/press-release/nasa-identifies-candidate-regions-for-landing-next-americans-on-moon) egyikén fog landolni.
 
 ## Tudományos haszna is van
 
