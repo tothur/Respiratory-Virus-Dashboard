@@ -1,9 +1,10 @@
-# 20 emlős, amely az ember miatt a kihalás szélén táncol
+# Íme 20 emlős, amely az ember miatt a kihalás szélén táncol
 
-231 critically endangered aves
-232 critically endangered mammalia
+Az IUCN vörös listája 232 kritikusan veszélyezetett emlőst [tart nyilván](https://www.iucnredlist.org/search). 
 
-https://www.iucnredlist.org/search
+
+
+
 https://www.worldwildlife.org/species/directory?direction=desc&sort=extinction_status
 
 ## Főemlősök
