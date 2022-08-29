@@ -1,6 +1,6 @@
 # Íme 20 emlős, amely az ember miatt a kihalás szélén táncol
 
-Az IUCN vörös listája 232 kritikusan veszélyezetett emlőst [tart nyilván](https://www.iucnredlist.org/search). 
+Az IUCN vörös listája 232 kritikusan veszélyezetett emlőst [tart nyilván](https://www.iucnredlist.org/search).
 
 
 
