@@ -1,14 +1,8 @@
 # Íme 20 emlős, amely az ember miatt a kihalás szélén táncol
 
-<<<<<<< HEAD
-Az IUCN vörös listája 232 kritikusan veszélyezetett emlőst [tart nyilván](https://www.iucnredlist.org/search).
-=======
 Múlt héten dugong https://444.hu/2022/08/24/kipusztulhatott-a-dugong-a-kinai-vizekben
 
-Az IUCN vörös listája 232 kritikusan veszélyezetett emlőst [tart nyilván](https://www.iucnredlist.org/search). 
->>>>>>> ccc480b29acabf5761b661c930354d009da9a22f
-
-
+Az IUCN vörös listája 232 kritikusan veszélyezetett emlőst [tart nyilván](https://www.iucnredlist.org/search).
 
 
 https://www.worldwildlife.org/species/directory?direction=desc&sort=extinction_status
