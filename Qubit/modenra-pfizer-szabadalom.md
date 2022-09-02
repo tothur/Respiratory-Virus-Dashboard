@@ -6,7 +6,7 @@ Az mRNS oltások és terápiák fejlesztésével foglalkozó Moderna augusztus v
 
 Az amerikai biotechnológiai vállalat 2010-2016 közötti, mRNS technológiára vonatkozó szabadalmainak megsértésére hivatkozik a massachusettsi bíróságnak és a Düsseldorfi helyi bíróságnak benyújtott keresetében, és közleményében nem finomkodik, azt állítja, hogy a Pfizer és a BioNTech lemásolta a technológiáját és azt továbbra is engedély nélkül használja a pfizer oltásként ismert vakcinája létrehozásához.
 
-A BioNTech rövid [közleményben](https://investors.biontech.de/news-releases/news-release-details/statement-patent-infringement-lawsuit-filed-moderna) reagált a Moderna bejelentésére, azt állítva, hogy munkájuk eredeti, és erőteljesen elutasítanak minden szabadalomsértésre utaló vádat.
+A BioNTech még aznap rövid [közleményben](https://investors.biontech.de/news-releases/news-release-details/statement-patent-infringement-lawsuit-filed-moderna) reagált a Moderna bejelentésére, azt állítva, hogy munkájuk eredeti, és erőteljesen elutasítanak minden szabadalomsértésre utaló vádat.
 
 BioNTech also values and respects valid and enforceable intellectual property rights of others and remains confident in its intellectual property. It is an unfortunate but rather regular occurrence that other companies make allegations that a successful product potentially infringes their intellectual property rights, even more so here after witnessing the historic accomplishments of a vaccine like COMIRNATY®.  Please understand that BioNTech will not comment on the company’s legal strategy.
 
