@@ -4,7 +4,7 @@
 
 Az mRNS oltások és terápiák fejlesztésével foglalkozó Moderna augusztus végén [beperelte](https://investors.modernatx.com/news/news-details/2022/Moderna-Sues-Pfizer-and-BioNTech-for-Infringing-Patents-Central-to-Modernas-Innovative-mRNA-Technology-Platform/default.aspx) a Pfizert és BioNTech-et szabadalmainak megsértésére hivatkozva.
 
-Az amerikai biotechnológiai vállalat 2010-2016 közötti, mRNS technológiára vonatkozó szabadalmainak megsértésére hivatkozik a massachusettsi bíróságnak és a Düsseldorfi helyi bíróságnak benyújtott keresetében, és közleményében nem finomkodik, azt állítja, hogy a Pfizer és a BioNTech lemásolta a technológiáját, és azt továbbra is engedély nélkül használja a pfizer oltásként ismert mRNMS vakcinája létrehozásához.
+Az amerikai biotechnológiai vállalat 2010-2016 közötti, mRNS technológiára vonatkozó szabadalmainak megsértésére hivatkozik a massachusettsi bíróságnak és a düsseldorfi helyi bíróságnak benyújtott keresetében, és közleményében nem finomkodik, azt állítja, hogy a Pfizer és a BioNTech lemásolta a technológiáját, és azt továbbra is engedély nélkül használja a pfizer oltásként ismert mRNMS vakcinája létrehozásához.
 
 A BioNTech még aznap rövid [közleményben](https://investors.biontech.de/news-releases/news-release-details/statement-patent-infringement-lawsuit-filed-moderna) reagált a Moderna bejelentésére. Azt állítják, hogy munkájuk eredeti, és erőteljesen elutasítanak minden szabadalomsértésre utaló vádat. A német vállalat szerint, melynek Karikó Katalin több évig a helyettes vezetője volt, egy sajnálatos, de viszonylag gyakori dolog, hogy más vállalatok egy sikeres termékkel szemben szabadalomsértési vádakat hoznak fel.
 
@@ -44,6 +44,8 @@ first betacoronavirus vaccine
 üzleti, gazdasági, politikai, geostrat okok?
 
 ## Ettől még ősszel jönnek a boosterek
+
+A szabadalmi harc nem érinti a 
 
 A szabadalmi háború mellett a covid sem tűnt el... ba5 cikk
 
