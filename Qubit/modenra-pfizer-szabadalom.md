@@ -8,7 +8,7 @@ Az amerikai biotechnológiai vállalat 2010-2016 közötti, mRNS technológiára
 
 A BioNTech még aznap rövid [közleményben](https://investors.biontech.de/news-releases/news-release-details/statement-patent-infringement-lawsuit-filed-moderna) reagált a Moderna bejelentésére. Azt állítják, hogy munkájuk eredeti, és erőteljesen elutasítanak minden szabadalomsértésre utaló vádat. A német vállalat szerint, melynek Karikó Katalin több évig a helyettes vezetője volt, egy sajnálatos, de viszonylag gyakori dolog, hogy más vállalatok egy sikeres termékkel szemben szabadalomsértési vádakat hoznak fel.
 
-A Moderna az életmentő oltások hozzáférhetőségének garantálására hivatkozva nem a pfizer oltás forgalmazásának megállítását, hanem kompenzációt szeretne. A vállalat korábbi ígéretével összhangban ez nem vonatkozik 92 alacsony és közepes jövedelmű országba irányuló eladásokra, ugyanakkor a Pfizer-BioNTech vakcináját elsősorban fejlett ipari demokráciák, mint az Egyesült Államok, az EU tagállamai és Japán vásárolták meg nagy számban.
+Attól nem kell tartani, hogy a per a pfizer jelenlegi, vagy omikronspecifikus oltásának hozzáférhetőségét veszélyeztetné. A Moderna az életmentő oltások elérhetőségének garantálására hivatkozva nem az oltás forgalmazásának megállítását, hanem anyagi kompenzációt szeretne. A vállalat korábbi ígéretével összhangban ez nem vonatkozik 92 alacsony és közepes jövedelmű országba irányuló eladásokra, ugyanakkor a Pfizer-BioNTech vakcináját elsősorban fejlett ipari demokráciák, mint az Egyesült Államok, az EU tagállamai és Japán vásárolták meg nagy számban.
 
 ## Egy kulcsfontosságú módosítás, amitől sokkal jobb lett az mRNS vakcina
 
@@ -35,6 +35,8 @@ Second, and again despite having many different options, Pfizer and BioNTech cop
 
 ## Van bármi realitása, hogy a Moderna megnyeri a pert?
 
+A Moderna egy tágnak tűnő
+
 Moderna scientists developed this approach when they created a vaccine for the coronavirus that causes Middle East Respiratory Syndrome (MERS) years before COVID-19 first emerged.
 
 first betacoronavirus vaccine
@@ -45,15 +47,15 @@ first betacoronavirus vaccine
 
 ## Ettől még ősszel jönnek a boosterek
 
-A szabadalmi harc nem érinti a 
+A Moderna által indított szabadalmi harc nem érinti sem a jelenlegi oltások elérhetőségét, sem a hamarosan érkező emlékeztető (booster) mRNS oltásokat. Ezek a covid járvány során az első frissített vakcinák, melyek [kissé jobb](https://www.nature.com/articles/d41586-022-02806-5) védelmet adnak az eredeti oltásokhoz képest az omikronos (kifejezetten a jelenleg terjedő BA.4-et és BA.5-öt) fertőzés vagy betegség ellen, de hasonlóan magas hatásossággal védenek a kórházi kezelést igénylő megbetegedéssel szemben.
 
-A szabadalmi háború mellett a covid sem tűnt el... ba5 cikk
+Ez [arra vezethető vissza](https://qubit.hu/2022/06/28/mennyire-vagyok-vedett-a-most-terjedo-virusvariansok-ellen-ha-mar-elkaptam-az-omikront), hogy a súlyos megbetegedés [kialakulása elleni](https://www.science.org/doi/10.1126/science.abm0829) védelemhez [fontos](https://www.thelancet.com/journals/lanmic/article/PIIS2666-5247(22)00036-2/fulltext), adaptív immunválaszban [résztvevő](https://www.nature.com/articles/s41423-021-00743-3) T-sejteket kevéssé tudják [kicselezni](https://www.nejm.org/doi/pdf/10.1056/NEJMoa2203965?articleTools=true) a vírus tüskefehérjéjének változásai. A járvány 2019 végi [kezdete](https://www.sciencedirect.com/science/article/pii/S1567134820301829) óta létrejött variánsok viszont egyre nehezebb feladat állítják az eredeti, vuhani változaton alapuló vakcina által indukált neutralizáló antitesteket.
 
-fda approved oltás
+A Pfizer-BioNTech 30 mikrogrammos, [kétkomponensű emlékeztető oltása](https://www.pfizer.com/news/press-release/press-release-detail/pfizer-and-biontech-granted-fda-emergency-use-authorization) 15 mikrogrammnyi, az eredeti vuhani vírus tüskefehérjéjét, és szintén 15 mikrogrammnyi, a BA.4/BA.5 variánsok tüskefehérjéjét kódoló mRNS-t tartalmaz. A [Moderna boostere](https://investors.modernatx.com/news/news-details/2022/Moderna-Completes-Application-To-U.S.-Food-And-Drug-Administration-For-Emergency-Use-Authorization-Of-Omicron-Targeting-Bivalent-Covid-19-Booster-Vaccine-mRNA-1273.222/default.aspx) egy 50 mikrogrammos, szintén kétkomponensű vakcina, amiben 25-25 mikrogrammos megoszlásban található az eredeti és BA.4/BA.5 tüskefehérje kódja. A Modernáé az [mRNA-1273.222](https://investors.modernatx.com/news/news-details/2022/Moderna-Receives-FDA-Authorization-for-Emergency-Use-of-Omicron-Targeting-Bivalent-COVID-19-Booster-Vaccine-for-Adults-18-Years-and-Older/default.aspx) kódjelű, 50 mikrogrammos kétkomponensű vakcina. Ez 25 mikrogrammnyi, az eredeti vuhani vírust kódoló mRNS-t, és szintén 25 mikrogrammnyi, a BA.4/BA.5 omikron változatok tüskefehérjéjének kódját tartalmazza.
 
-pfizer
+Augusztus 31-én az amerikai élelmiszer- és gyógyszerfelügyeleti hivatal (FDA) [jóváhagyta](https://www.statnews.com/2022/08/31/fda-authorizes-pfizer-moderna-covid-booster-targeted-against-omicron-strains/) az Pfizer-BioNTech és a Moderna új boostereinek felhasználását, melyet egy nappal az amerikai járványügyi hatóság (CDC) is [megerősített](https://www.statnews.com/2022/09/01/cdc-advisory-panel-backs-updated-covid-19-boosters/). Előbbi 12 éves kortól, utóbbi 18 éves kortól használható emlékeztető oltásként, annak, aki megkapta már első oltásait a járvány során. 
 
-moderna
+Szintén szeptember 1-jén az [európai gyógyszerügynökség](https://www.ema.europa.eu/en/news/first-adapted-covid-19-booster-vaccines-recommended-approval-eu) (EMA) javasolta a Moderna és a Pfizer frissített emlékeztető oltásainak engedélyezését. Ezek nem az USA-ban elfogadott vakcinák, hanem az omikron tavaly [decemberben megjelent BA.1 változatát](https://qubit.hu/2021/12/20/elkepesztoen-gyorsan-kepes-terjedni-az-omikron-de-az-astrazeneca-a-moderna-es-a-pfizer-felveszi-vele-a-harcot) és az eredeti vuhani vírust fele-fele arányban célzó boosterek. Ez a Moderna esetén az 50 mikrogrammos mRNA-1273.214-et, a Pfizer-BioNTech-nél pedig egy 30 mikrogrammos oltást jelent, amelyeknek kezdeti klinikai eredményeiről [június végén írtunk](https://qubit.hu/2022/06/28/mennyire-vagyok-vedett-a-most-terjedo-virusvariansok-ellen-ha-mar-elkaptam-az-omikront).
 
 *Kapcsolódó cikkek a Qubiten:*
 
