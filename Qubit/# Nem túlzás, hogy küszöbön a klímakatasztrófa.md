@@ -26,6 +26,12 @@ https://tc.copernicus.org/articles/14/4299/2020/
 
 https://www.carbonbrief.org/guest-post-how-close-is-the-west-antarctic-ice-sheet-to-a-tipping-point
 
+Collapse of the West Antarctic Ice Sheet after local destabilization of the Amundsen Basin
+https://www.pnas.org/doi/10.1073/pnas.1512482112
+
+Impact of Iceberg Calving on the Retreat of Thwaites Glacier, West Antarctica Over the Next Century With Different Calving Laws and Ocean Thermal Forcing
+https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019GL084066
+
 Scott Braddock scott.braddock@maine.edu WAIS Thwaites and Pine Island glaciers
 https://www.nature.com/articles/s41561-022-00961-y
 
@@ -61,4 +67,3 @@ https://qubit.hu/2022/03/07/az-amazoniai-esoerdo-76-szazalekat-visszafordithatat
 (SAHL, REEF, Boreal forest, GLCR, Barents Sea Ice)
 
 *Kapcsolódó cikkek a Qubiten:*
-
