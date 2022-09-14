@@ -2,19 +2,29 @@
 
 ## Egyre valószínűtlenebb, hogy 1,5 fokon féken tarthatnánk a felmelegedést, miközben már ezzel is a jégtakarók létét kockáztatjuk. A megoldás, hogy gyors kibocsátás csökkentéssel minimalizáljuk az időt, amit a Föld nem biztonságos éghajlatban tölt.
 
-A Föld rendszereinek megállíthatatlan felborulásával [fenyeget](https://qubit.hu/2022/09/09/mar-ot-katasztrofalis-klimatikus-fordulopontot-is-elerhetett-a-fold-egy-uj-atfogo-tanulmany-szerint) a globális felmelegedés. Egyes jégtakarók, a trópusi korallzátonyok és a permafroszt destabilizációja már 1,5 foknál is reális lehetőséggé válik, 2 foknál pedig a magashegyi gleccserek szinte teljes elolvadása és tengeráramlások megváltozása fenyeget - állítja egy múlt héten, a Scienceben [közölt tanulmány](https://www.science.org/doi/10.1126/science.abn7950).
+A Föld rendszereinek megállíthatatlan felborulásával [fenyeget](https://qubit.hu/2022/09/09/mar-ot-katasztrofalis-klimatikus-fordulopontot-is-elerhetett-a-fold-egy-uj-atfogo-tanulmany-szerint) a globális felmelegedés. Két jégtakaró, a trópusi korallzátonyok és a permafroszt destabilizációja már 1,5 foknál is reális lehetőséggé válik, 2 foknál pedig a magashegyi gleccserek szinte teljes elolvadása és egy tengeráramlás megváltozása fenyeget - állítja egy múlt héten, a Scienceben [közölt tanulmány](https://www.science.org/doi/10.1126/science.abn7950).
 
-Armstrong McKay, a stockholmi egyetem kutatója és kollégáinak összegző kutatása egy olyan időszakban figyelmeztet a klímaváltozás katasztrofális kockázataira, amikor sok millióan elsősorban a következő rezsiszámlájuk, a megélhetésüket fenyegető energiaárak, és az európai energiaválság miatt aggódnak.
+Armstrong McKay, a stockholmi egyetem kutatója és kollégáinak éghajlati fordulópontokat összegző kutatása egy olyan időszakban figyelmeztet a klímaváltozás katasztrofális kockázataira, amikor sok millióan elsősorban a következő rezsiszámlájuk, a megélhetésüket fenyegető energiaárak, és az európai energiaválság miatt aggódnak.
 
-A szakemberek 9 globális és 7 regionális jelentőségű éghajlati fordulópontot (climate tipping points) határoztak meg, a hozzájuk tartozó átbillenési hőmérséklettel, melyek hosszútávú túllépése emberi léptékben szinte örökre megváltoztatná bolygónk arculatát. Eredményeik alapján reális lehetőség, hogy a párizsi egyezményben meghatározott, [egyre nehezebben elérhető](https://public.wmo.int/en/media/press-release/united-science-we-are-heading-wrong-direction) 1,5 fokos klímacél az együttesen 12,5 méternyi tengerszintnek megfelelő jeget tároló grönlandi és nyugat-antarktiszi jégtakarók összeomlásával fenyeget.
+A szakemberek 9 globális és 7 regionális jelentőségű éghajlati fordulópontot (climate tipping points) határoztak meg, a hozzájuk tartozó átbillenési hőmérséklettel, melyek hosszútávú túllépése emberi léptékben szinte örökre megváltoztatná bolygónk arculatát. Eredményeik alapján reális lehetőség, hogy a párizsi egyezményben meghatározott, [egyre nehezebben elérhető](https://public.wmo.int/en/media/press-release/united-science-we-are-heading-wrong-direction) 1,5 fokos klímacél az együttesen 12,5 méternyi tengerszintnek megfelelő jeget tároló grönlandi és nyugat-antarktiszi jégtakarók összeomlását okozhatja.
 
-A Qubitnek nyilatkozó brit éghajlatkutató, Paul Ritchie szerint ez a forgatókönyv elkerülhető lehet, amennyiben időben sikerül a globális felmelegedést visszafordítani. McKay és kollégái tanulmányukban prominensen idézik is Ritchie és munkatársainak tavaly [a Natureben közölt](https://www.nature.com/articles/s41586-021-03263-2), egyes éghajlati fordulópontok ideiglenes túlléphetőségére vonatkozó eredményeit, melyekkel már [mi is foglalkoztunk]().
+A Qubitnek nyilatkozó brit éghajlatkutató, Paul Ritchie szerint ez a forgatókönyv elkerülhető lehet, amennyiben időben sikerül a globális felmelegedést visszafordítani. McKay és kollégái tanulmányukban prominensen idézik is Ritchie és munkatársainak tavaly [a Natureben közölt](https://www.nature.com/articles/s41586-021-03263-2), egyes éghajlati fordulópontok ideiglenes túlléphetőségére vonatkozó eredményeit, melyekkel már [mi is foglalkoztunk](https://qubit.hu/2021/05/06/egyre-nagyobb-mertekben-olvadnak-a-gleccserek-de-meg-van-eselyunk-a-jegtakarok-megmentesere).
 
 "A lassabban bekövetkező éghajlati fordulópontok, mint a jégtakarók, vagy az Észak-Atlanti-óceán áramlási rendszere (AMOC), lehetőséget kínálnak a küszöbértékük biztonságos túllépésére, elkerülve tényleges átbillenésüket, feltéve, hogy a hőmérséklet emelkedés gyorsan visszafordításra kerül, és jelentősen az átbillenési értékük alatt kerül stabilizálásra." - válaszolta a Qubit emailben küldött kérdésére Paul Ritchie, az Exeteri Egyetem éghajlatkutatója. A kutató hozzátette, hogy "az egymással kölcsönható éghajlati fordulópontok esetén fontos teljes mértékben figyelembe venni az időskálákat, melyeken az egyes fordulópontok változásai lezajlanak."
 
-## Tipping points
+## Mik az éghajlati fordulópontok?
 
-McKayék az éghajlati fordulópontokat 
+A Föld nagy rendszerei, mint a jégtakarók, a tengeráramlások, vagy az Amazóniai-esőerdő az éghajlat megváltozásának hatására egy ponton túl önfenntartó változásokat szenvedhetnek el, amelyek jelentős hatással járnak a bolygó egészére, és az emberiségre nézve.
+
+McKayék az éghajlati fordulópontokat olyan, adott hőmérsékleti érték felett bekövetkező, önfenntartó, és a visszacsatolások asszimetriájából következő változásokként definiálják, melyek jelentős és széleskörű hatásokkal járnak a Föld rendszereire. Egy még technikaibb defínció rájuk egy olyan kritikus küszöb, ahol egy apró zavarás minőségileg képes megváltoztatni a rendszer állapotát vagy fejlődését.
+
+Régóta ismert, hogy több olyan 
+
+Az éghajlati fordulópontok akkor következnek be, amikor az éghajlati rendszer egy elemének változásai önfenntartókká válnak egy pont után, jelentős következményekkel bírva az egész bolygóra nézve. 
+
+A kutatók a Föld múltbeli éghajlati változásait (paleoklíma), megfigyeléseket, és modelleket alapul véve a kutatók újravizsgálták a globális és regionális fordulópontok listáját.
+
+McKayék szerint a jelenlegi, ipari forradalom előttihez viszonyított 1,1 fokos felmelegedés már benne van néhány éghajlati fordulópont bizonytalansági tartományának alsó részében. Több fordulópont bekövetkezte válik lehetségessé 1,5-2 fok közt, és még több 2-3 fok közt.
 
 IPCC AR6 WGI TS https://www.ipcc.ch/site/assets/uploads/2018/11/AR6_WGI_outlines_P46.pdf
 
