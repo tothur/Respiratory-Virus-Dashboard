@@ -6,32 +6,15 @@ A Föld rendszereinek megállíthatatlan felborulásával [fenyeget](https://qub
 
 Armstrong McKay, a stockholmi egyetem kutatója és kollégáinak összegző kutatása egy olyan időszakban figyelmeztet a klímaváltozás katasztrofális kockázataira, amikor sok millióan elsősorban a következő rezsiszámlájuk, a megélhetésüket fenyegető energiaárak, és az európai energiaválság miatt aggódnak.
 
-A szakemberek 9 globális és 7 regionális jelentőségű éghajlati fordulópontot (climate tipping points) határoztak meg, a hozzájuk tartozó átbillenési hőmérséklettel, melyek hosszútávú túllépése emberi léptékben szinte örökre megváltoztatná bolygónk arculatát. Eredményeik alapján reális lehetőség, hogy a párizsi egyezményben meghatározott 1,5 fokos klímacél az együttesen 12,5 méternyi tengerszintnek megfelelő jeget tároló grönlandi és nyugat-antarktiszi jégtakarók összeomlásával fenyeget.
+A szakemberek 9 globális és 7 regionális jelentőségű éghajlati fordulópontot (climate tipping points) határoztak meg, a hozzájuk tartozó átbillenési hőmérséklettel, melyek hosszútávú túllépése emberi léptékben szinte örökre megváltoztatná bolygónk arculatát. Eredményeik alapján reális lehetőség, hogy a párizsi egyezményben meghatározott, [egyre nehezebben elérhető](https://public.wmo.int/en/media/press-release/united-science-we-are-heading-wrong-direction) 1,5 fokos klímacél az együttesen 12,5 méternyi tengerszintnek megfelelő jeget tároló grönlandi és nyugat-antarktiszi jégtakarók összeomlásával fenyeget.
 
-A Qubitnek nyilatkozó brit éghajlatkutató, Paul Ritchie szerint ez a forgatókönyv elkerülhető lehet, ha sikerül a globális felmelegedés visszafordítása. McKay és kollégái tanulmányukban idézik is Ritchie és munkatársainak tavaly a Natureben közölt, az éghajlati fordulópontok ideiglenes túllépésére vonatkozó eredményeit, melyekkel már mi is foglalkoztunk.
+A Qubitnek nyilatkozó brit éghajlatkutató, Paul Ritchie szerint ez a forgatókönyv elkerülhető lehet, amennyiben időben sikerül a globális felmelegedést visszafordítani. McKay és kollégái tanulmányukban prominensen idézik is Ritchie és munkatársainak tavaly [a Natureben közölt](https://www.nature.com/articles/s41586-021-03263-2), egyes éghajlati fordulópontok ideiglenes túlléphetőségére vonatkozó eredményeit, melyekkel már [mi is foglalkoztunk]().
 
-"A lassabban bekövetkező éghajlati fordulópontok, mint a jégtakarók, vagy az Észak-Atlanti-óceán áramlási rendszere (AMOC), lehetőséget kínálnak a küszöbértékük biztonságos túllépésére, elkerülve tényleges átbillenésüket, feltéve, hogy a hőmérséklet emelkedés gyorsan visszafordításra kerül, és jelentősen az átbillenési értékük alatt kerül stabilizálásra." - válaszolta a Qubit emailben küldött kérdésére Paul Ritchie, az Exeteri Egyetem éghajlatkutatója. A kutató hozzátette, hogy az egymással kölcsönható éghajlati fordulópontok esetén fontos teljes mértékben figyelembe venni az időskálákat, melyeken a fordulópontok lezajlanak.
-
-
-
- Qubitnek nyilatkozó 
-
-
-
-A szakemberek globális és regionális fordulópontoka
-
-
-
-
-
-The slow onset tipping elements (such as the ice sheets and AMOC) do offer the possibility of safe overshoots of their thresholds that avoid tipping provided the temperature can be reversed rapidly and stabilised well below their tipping thresholds. For the consideration of interacting tipping elements, it is important to fully account for timescales at which these elements act over.
-
-
+"A lassabban bekövetkező éghajlati fordulópontok, mint a jégtakarók, vagy az Észak-Atlanti-óceán áramlási rendszere (AMOC), lehetőséget kínálnak a küszöbértékük biztonságos túllépésére, elkerülve tényleges átbillenésüket, feltéve, hogy a hőmérséklet emelkedés gyorsan visszafordításra kerül, és jelentősen az átbillenési értékük alatt kerül stabilizálásra." - válaszolta a Qubit emailben küldött kérdésére Paul Ritchie, az Exeteri Egyetem éghajlatkutatója. A kutató hozzátette, hogy "az egymással kölcsönható éghajlati fordulópontok esetén fontos teljes mértékben figyelembe venni az időskálákat, melyeken az egyes fordulópontok változásai lezajlanak."
 
 ## Tipping points
 
-Paul Ritchie Paul.Ritchie@exeter.ac.uk TIPPING POINTS
-https://www.nature.com/articles/s41586-021-03263-2
+McKayék az éghajlati fordulópontokat 
 
 IPCC AR6 WGI TS https://www.ipcc.ch/site/assets/uploads/2018/11/AR6_WGI_outlines_P46.pdf
 
@@ -39,7 +22,7 @@ CB ART https://www.carbonbrief.org/global-warming-above-1-5c-could-trigger-multi
 
 ## WAIS
 
-A legkritikusabb helyzetben kétségtelenül az 5 méternyi tengerszinttel egyenértékű vizet tároló, nyugat-antarktiszi jégtakaró van. 
+A legkritikusabb helyzetben kétségtelenül az 5 méternyi tengerszinttel egyenértékű vizet tároló, nyugat-antarktiszi jégtakaró van. A déli kontinens nyugati felét borító jégtömeg
 
 https://www.carbonbrief.org/guest-post-how-close-is-the-west-antarctic-ice-sheet-to-a-tipping-point
 
@@ -62,6 +45,8 @@ Frank Pattyn fpattyn@ulb.ac.be Greenland and AIS
 https://www.nature.com/articles/s41558-018-0305-8
 
 ## EAIS
+
+Egy nemrég a Natureben publikált átfogó tanulmány [alapján áttekintettük](https://qubit.hu/2022/08/10/kiderult-milyen-sors-var-a-fold-legnagyobb-jegtakarojara-ha-nem-mersekeljuk-a-felmelegedest), hogy mi vár a Föld legnagyobb jégtakarójára, amely 52 méternyi tengerszintnek megfelelő jeget tárol. A kelet-antarktiszi jégtakaró 
 
 https://qubit.hu/2022/08/10/kiderult-milyen-sors-var-a-fold-legnagyobb-jegtakarojara-ha-nem-mersekeljuk-a-felmelegedest
 
