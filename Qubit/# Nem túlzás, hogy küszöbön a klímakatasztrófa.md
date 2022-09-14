@@ -2,7 +2,7 @@
 
 ## Egyre valószínűtlenebb, hogy 1,5 fokon féken tarthatnánk a felmelegedést, miközben már ezzel is a jégtakarók létét kockáztatjuk. A megoldás, hogy gyors kibocsátás csökkentéssel minimalizáljuk az időt, amit a Föld nem biztonságos éghajlatban tölt.
 
-A Föld rendszereinek megállíthatatlan felborulásával [fenyeget](https://qubit.hu/2022/09/09/mar-ot-katasztrofalis-klimatikus-fordulopontot-is-elerhetett-a-fold-egy-uj-atfogo-tanulmany-szerint) a globális felmelegedés. Egyes jégtakarók, a trópusi korallzátonyok és a permafroszt destabilizációja már 1,5 foknál is reális lehetőséggé válik, 2 foknál pedig az alpesi gleccserek szinte teljes elolvadása és tengeráramlások megváltozása fenyeget - állítja egy múlt héten, a Scienceben [közölt tanulmány](https://www.science.org/doi/10.1126/science.abn7950).
+A Föld rendszereinek megállíthatatlan felborulásával [fenyeget](https://qubit.hu/2022/09/09/mar-ot-katasztrofalis-klimatikus-fordulopontot-is-elerhetett-a-fold-egy-uj-atfogo-tanulmany-szerint) a globális felmelegedés. Egyes jégtakarók, a trópusi korallzátonyok és a permafroszt destabilizációja már 1,5 foknál is reális lehetőséggé válik, 2 foknál pedig a magashegyi gleccserek szinte teljes elolvadása és tengeráramlások megváltozása fenyeget - állítja egy múlt héten, a Scienceben [közölt tanulmány](https://www.science.org/doi/10.1126/science.abn7950).
 
 Armstrong McKay, a stockholmi egyetem kutatója és kollégáinak összegző kutatása egy olyan időszakban figyelmeztet a klímaváltozás katasztrofális kockázataira, amikor sok millióan elsősorban a következő rezsiszámlájuk, a megélhetésüket fenyegető energiaárak, és az európai energiaválság miatt aggódnak.
 
