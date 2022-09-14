@@ -1,11 +1,28 @@
-# Nem túlzás, hogy küszöbön a klímakatasztrófa - de éppen ezért kell cselekedni
+# Küszöbön a klímakatasztrófa, de még mindig nem késő megállítani
 
-## 
+## Egyre valószínűtlenebb, hogy 1,5 fokon féken tarthatnánk a felmelegedést, miközben már ezzel is a jégtakarók létét kockáztatjuk. A megoldás, hogy gyors kibocsátás csökkentéssel minimalizáljuk az időt, amit a Föld nem biztonságos éghajlatban tölt.
 
-Armstrong Mckay et al. Exceeding 1.5°C global warming could trigger multiple climate tipping points
-https://www.science.org/doi/10.1126/science.abn7950
+A Föld rendszereinek megállíthatatlan felborulásával [fenyeget](https://qubit.hu/2022/09/09/mar-ot-katasztrofalis-klimatikus-fordulopontot-is-elerhetett-a-fold-egy-uj-atfogo-tanulmany-szerint) a globális felmelegedés. Egyes jégtakarók, a trópusi korallzátonyok és a permafroszt destabilizációja már 1,5 foknál is reális lehetőséggé válik, 2 foknál pedig az alpesi gleccserek szinte teljes elolvadása és tengeráramlások megváltozása fenyeget - állítja egy múlt héten, a Scienceben [közölt tanulmány](https://www.science.org/doi/10.1126/science.abn7950).
+
+Armstrong McKay, a stockholmi egyetem kutatója és kollégáinak összegző kutatása egy olyan időszakban figyelmeztet a klímaváltozás katasztrofális kockázataira, amikor sok millióan elsősorban a következő rezsiszámlájuk, a megélhetésüket fenyegető energiaárak, és az európai energiaválság miatt aggódnak.
+
+A szakemberek 9 globális és 7 regionális jelentőségű éghajlati fordulópontot (climate tipping points) határoztak meg, a hozzájuk tartozó átbillenési hőmérséklettel, melyek hosszútávú túllépése emberi léptékben szinte örökre megváltoztatná bolygónk arculatát. Eredményeik alapján reális lehetőség, hogy a párizsi egyezményben meghatározott 1,5 fokos klímacél az együttesen 12,5 méternyi tengerszintnek megfelelő jeget tároló grönlandi és nyugat-antarktiszi jégtakarók összeomlásával fenyeget.
+
+A Qubitnek nyilatkozó brit éghajlatkutató, Paul Ritchie szerint ez a forgatókönyv elkerülhető lehet, ha sikerül a globális felmelegedés visszafordítása. McKay és kollégái tanulmányukban idézik is Ritchie és munkatársainak tavaly a Natureben közölt, az éghajlati fordulópontok ideiglenes túllépésére vonatkozó eredményeit, melyekkel már mi is foglalkoztunk.
 
 "A lassabban bekövetkező éghajlati fordulópontok, mint a jégtakarók, vagy az Észak-Atlanti-óceán áramlási rendszere (AMOC), lehetőséget kínálnak a küszöbértékük biztonságos túllépésére, elkerülve tényleges átbillenésüket, feltéve, hogy a hőmérséklet emelkedés gyorsan visszafordításra kerül, és jelentősen az átbillenési értékük alatt kerül stabilizálásra." - válaszolta a Qubit emailben küldött kérdésére Paul Ritchie, az Exeteri Egyetem éghajlatkutatója. A kutató hozzátette, hogy az egymással kölcsönható éghajlati fordulópontok esetén fontos teljes mértékben figyelembe venni az időskálákat, melyeken a fordulópontok lezajlanak.
+
+
+
+ Qubitnek nyilatkozó 
+
+
+
+A szakemberek globális és regionális fordulópontoka
+
+
+
+
 
 The slow onset tipping elements (such as the ice sheets and AMOC) do offer the possibility of safe overshoots of their thresholds that avoid tipping provided the temperature can be reversed rapidly and stabilised well below their tipping thresholds. For the consideration of interacting tipping elements, it is important to fully account for timescales at which these elements act over.
 
@@ -20,15 +37,9 @@ IPCC AR6 WGI TS https://www.ipcc.ch/site/assets/uploads/2018/11/AR6_WGI_outlines
 
 CB ART https://www.carbonbrief.org/global-warming-above-1-5c-could-trigger-multiple-tipping-points/
 
-## GrIS, AWSI
-
-Frank Pattyn fpattyn@ulb.ac.be Greenland and AIS 
-https://www.nature.com/articles/s41558-018-0305-8
-
-Jonathan M. Gregory j.m.gregory@reading.ac.uk GrIS no collapse
-https://tc.copernicus.org/articles/14/4299/2020/
-
 ## WAIS
+
+A legkritikusabb helyzetben kétségtelenül az 5 méternyi tengerszinttel egyenértékű vizet tároló, nyugat-antarktiszi jégtakaró van. 
 
 https://www.carbonbrief.org/guest-post-how-close-is-the-west-antarctic-ice-sheet-to-a-tipping-point
 
@@ -59,6 +70,14 @@ https://www.nature.com/articles/s41586-022-04946-0
 
 Frank Pattyn fpattyn@ulb.ac.be Greenland and AIS 
 https://www.nature.com/articles/s41558-018-0305-8
+
+## GrIS, AWSI
+
+Frank Pattyn fpattyn@ulb.ac.be Greenland and AIS 
+https://www.nature.com/articles/s41558-018-0305-8
+
+Jonathan M. Gregory j.m.gregory@reading.ac.uk GrIS no collapse
+https://tc.copernicus.org/articles/14/4299/2020/
 
 ## Boreális permafroszt
 
