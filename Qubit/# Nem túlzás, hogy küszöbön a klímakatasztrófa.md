@@ -5,6 +5,12 @@
 Armstrong Mckay et al. Exceeding 1.5°C global warming could trigger multiple climate tipping points
 https://www.science.org/doi/10.1126/science.abn7950
 
+"A lassabban bekövetkező éghajlati fordulópontok, mint a jégtakarók, vagy az Észak-Atlanti-óceán áramlási rendszere (AMOC), lehetőséget kínálnak a küszöbértékük biztonságos túllépésére, elkerülve tényleges átbillenésüket, feltéve, hogy a hőmérséklet emelkedés gyorsan visszafordításra kerül, és jelentősen az átbillenési értékük alatt kerül stabilizálásra." - válaszolta a Qubit emailben küldött kérdésére Paul Ritchie, az Exeteri Egyetem éghajlatkutatója. A kutató hozzátette, hogy az egymással kölcsönható éghajlati fordulópontok esetén fontos teljes mértékben figyelembe venni az időskálákat, melyeken a fordulópontok lezajlanak.
+
+The slow onset tipping elements (such as the ice sheets and AMOC) do offer the possibility of safe overshoots of their thresholds that avoid tipping provided the temperature can be reversed rapidly and stabilised well below their tipping thresholds. For the consideration of interacting tipping elements, it is important to fully account for timescales at which these elements act over.
+
+
+
 ## Tipping points
 
 Paul Ritchie Paul.Ritchie@exeter.ac.uk TIPPING POINTS
