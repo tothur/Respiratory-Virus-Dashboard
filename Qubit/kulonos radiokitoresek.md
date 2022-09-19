@@ -1,6 +1,6 @@
 # Szerda 17:00 - Különös rádiókitöréseket észleltek egy távoli galaxisból
 
-Frey Sándor https://konkoly.hu/staff/frey.shtml
+
 
 Observations of nearly 2,000 bursts from a fast radio burst called FRB 20201124A and the presentation of a model to explain the observed characteristics are reported in Nature and Nature Communications papers. The findings suggest that this fast radio burst may originate from a complex magnetized site, and might help us to understand the environments that produce these signals.
 
@@ -10,41 +10,29 @@ In the Nature paper, Kejia Lee and colleagues used the Five-hundred-meter Apertu
 
 In the Nature Communications paper, Fayin Wang and colleagues present a physical model to explain the observed characteristics of FRB 20201124A. They propose that the repeating signal comes from a binary system containing a magnetar and a Be star (a star hotter, larger and rotating faster than the Sun) with a disk. The authors suggest that future research should probe Be–X-ray binaries in search of fast radio burst signals.
 
-A fast radio burst source at a complex magnetized site in a barred galaxy
-
-Kejia Lee
-
-Peking University, Beijing, China
-
-https://www.nature.com/articles/s41586-022-05071-8
-
-Repeating fast radio burst 20201124A originates from a magnetar/Be star binary
-
-Fayin Wang
-
-Nanjing University, Nanjing, China
-
-https://www.nature.com/articles/s41467-022-31923-y
 
 ----
 
-A 2020-ban megfigyelt, tejútrendszerbeli FRB 200428 vizsgálata alapján úgy tűnt, hogy a magnetár neutroncsillagok lehetnek felelősek a gyors rádiókitörésekért. Mennyiben módosítják ezt a képet az új tanulmányok egy extragalaktikus forrás megfigyelésével?
+Kétezer gyors rádiókitörést észleltek egy távoli galaxisból kínai kutatók, ami két szerda délután megjelenő tanulmány alapján kiterjesztheti a titokzatos kozmikus jelenségről alkotott képünket.
 
-- derül ki...
+A gyors rádiókitörések (FRB, fast radio bursts) ezredmásodpercekig tartó, kozmikus forrásból érkező rádiójelek. Egy 2020-ban észlelt, saját galaxisunkon belüli jelforrás vizsgálata arra utalt, hogy az FRB-k mögött különösen erős mágneses térrel rendelkező, kompakt csillagmaradványok, vagyis magnetár neutroncsillagok állhanak.
 
-Közel két évvel ezelőtt
+Kejia Lee, a Peking Egyetem kutatója és kollégái szerda délután a [Nature-ben közölték](https://www.nature.com/articles/s41586-022-05071-8) az 500 méteres átmérőjű kínai FAST rádióteleszkóppal végzett megfigyeléseiket. A kutatók 1863 FRB-t észleltek 54 nap alatt egy méretében és szerkezetében a Tejútrendszerhez hasonló galaxisban található forrásból. A megfigyeléseket Fayin Wang, a Nanking Egyetem kutatója és kollégái egy szintén ma, a Nature Communications folyóiratban [megjelenő tanulmányukban](https://www.nature.com/articles/s41467-022-31923-y) egy magnetár neutroncsillag és egy Be-típusú csillag kettősrendszerével magyarázzák meg.
 
+"Könnyen meglehet, hogy a gyors rádiókitörések nem csak egyféle asztrofizikai jelenségre vezethetők vissza, hiszen megfigyelt tulajdonságaik is különbözőek." - válaszolta Frey Sándor csillagász, a CSFK Konkoly Thege Miklós Csillagászati Intézet [tudományos főmunkatársa](https://konkoly.hu/staff/frey.shtml) a Qubit kérdésére, ami arra vonatkozott, hogy mennyire módosítják az új eredmények a gyors rádiókitörésekről alkotott képünket. Hozzátette, "gondoljunk csak az egyszeri és az ismétlődő kitörések közötti alapvető eltérésre. Az előbbieket akár valamilyen kataklizmikus jelenség, mint egy csillagrobbanás is okozhatja, amikor a forrásuk megsemmisül, és ilyenkor természetesen nem várhatjuk, hogy a jel onnan valaha is megismétlődik."
 
-"Könnyen meglehet, hogy a gyors rádiókitörések nem csak egyféle asztrofizikai jelenségre vezethetők vissza, hiszen megfigyelt tulajdonságaik is különbözőek." - válaszolta Frey Sándor rádiócsillagász, a CSFK Konkoly Thege Miklós Csillagászati Intézet kutatója a Qubit kérdésére, ami arra vonatkozott, hogy mennyiben módosítják az új eredmémnyek a gyors rádiókitörésekről alkotott képünket. A kutató hozzátette, "Gondoljunk csak például az egyszeri és az ismétlődő kitörések közötti alapvető eltérésre. Az előbbieket akár valamilyen kataklizmikus jelenség (csillagrobbanás) is okozhatja, amikor a forrásuk megsemmisül, s ilyenkor természetesen nem várhatjuk, hogy a jel onnan valaha is megismétlődik."
+A kutató szerint "így a magnetárok sem tekinthetők 'végleges magyarázatnak, legfeljebb olyan jelölteknek, amelyek egyre ígéretesebbnek tűnnek. Az FRB-ket még nem túl régóta ismerjük, és csak az elmúlt néhány évben sikerült nagyobb számban, valós időben megfigyelni ilyeneket, némelyiküknek, leginkább az ismétlődőknek, pedig pontosan lokalizálni a helyzetét égen." A csillagász szerint "ez egy aktív kutatási terület és a tudomány még nem mondta ki a végső szót a jelenség okáról vagy okairól." 
 
-Frey szerint "így a magnetárok sem tekinthetők 'végleges magyarázatnak, legfeljebb olyan jelölteknek, amelyek egyre ígéretesebbnek tűnnek. Az FRB-ket még nem túl régóta ismerjük, és csak az elmúlt néhány évben sikerült nagyobb számban, valós időben megfigyelni ilyeneket, némelyiküknek (leginkább az ismétlődőknek) pedig pontosan lokalizálni a helyzetét égen. Ez egy aktív kutatási terület, a tudomány még nem mondta ki a végső szót a jelenség okáról vagy okairól. Ebből a szempontból az új tanulmányok nagyon fontosak, mert olyan mozaikdarabokat ásnak elő, amelyeket mindenképpen be kell tudni illeszteni a majdani "nagy képbe". Egyetlen felfedezés azonban ritkán módosít gyökeresen a fennálló elképzeléseken. A Nature-ben megjelent cikk szerzői egyébként maguk is óvatosan fogalmaznak az utolsó mondatukban: végső soron egy magnetár sem elképzelhetetlen magyarázat az FRB 20201124A produkálta jelenségekre, csakhogy abban az esetben valamilyen különleges belső tulajdonságra vagy szokatlan környezeti körülményekre kell gondolni."
+Frey úgy véli, "ebből a szempontból az új tanulmányok nagyon fontosak, mert olyan mozaikdarabokat ásnak elő, amelyeket mindenképpen be kell tudni illeszteni a majdani "nagy képbe". Egyetlen felfedezés azonban ritkán módosít gyökeresen a fennálló elképzeléseken. A Nature-ben megjelent cikk szerzői egyébként maguk is óvatosan fogalmaznak az utolsó mondatukban: végső soron egy magnetár sem elképzelhetetlen magyarázat az FRB 20201124A produkálta jelenségekre, csakhogy abban az esetben valamilyen különleges belső tulajdonságra vagy szokatlan környezeti körülményekre kell gondolni."
 
+"Ki nem zárja teljesen, legfeljebb valószínűtlenné teszi." - reagálta Frey a Qubit kérdésére, ami arra vonatkozott, hogy kizárják-e a jel tulajdonságai, vagy forrásának saját galaxisán belüli helyzete azt, hogy a megfigyelt jelenséget egy magnetár neutroncsillag okozza. A kutató hozzátette, "ennek oka, hogy a neutroncsillagok nagy tömegű, így rövid életű csillagok szupernóva-robbanása nyomán jönnek létre. A spirálgalaxisokban pedig a spirálkarok a hevesebb csillagkeletkezés jellemző helyszínei, nem pedig a karok közötti térség. Ettől persze még előfordulhat, hogy a spirálkaroktól távol is található egy-egy neutroncsillag."
 
-## A Qubit kérdésére, miszerint kizárja-e azt, hogy magnetár neutroncsillagról van szó, hogy a kitörések forrása hol helyezkedik el saját galaxisán belül, illetve hogy magas a kitöréseinek gyakorisága, Frey 
-
-
-Ki nem zárja teljesen, legfeljebb valószínűtlenné teszi. Ennek oka, hogy a neutroncsillagok nagy tömegű, így rövid életű csillagok szupernóva-robbanása nyomán jönnek létre. A spirálgalaxisokban pedig a spirálkarok a hevesebb csillagkeletkezés jellemző helyszínei, nem pedig a karok közötti térség. Ettől persze még előfordulhat, hogy a spirálkatóroktól távol is található egy-egy neutroncsillag. Nyilván sokkal okosabbak lennénk, ha nem egyetlen ilyen példányt ismernénk, hanem egy nagyobb minta statisztikai elemzésével dolgozhatnánk. Ami késik, nem múlik: idővel biztos lesz több hasonló felfedezés is.
+A csillagász szerint "nyilván sokkal okosabbak lennénk, ha nem egyetlen ilyen példányt ismernénk, hanem egy nagyobb minta statisztikai elemzésével dolgozhatnánk. Ami késik, nem múlik: idővel biztos lesz több hasonló felfedezés is."
 
 ## Mennyire tűnik neked reálisnak az FRB 20201124A megmagyarázására a Nat. Comm. tanulmányban felvázolt Be csillag és egy magnetár kettős rendszere?
 
-"A kapcsolódó Nature Communications cikk szerzői arra tesznek kísérletet, hogy elegánsan "megmentsék" az FRB-ket a magnetárokhoz kötő, egyre inkább elfogadottá váló magyarázatot. Ez a megoldás egyébként összecseng a másik cikk záró mondatával, hiszen ez épp egy szokatlan környezetben található magnetár lehetőségét veti fel. A számításaik alapján ez egy elképzelhető modellnek tűnik. De mint minden természettudományos elképzelésről, erről is a későbbi mérések mondják majd ki az ítéletet: lehet, hogy maradandónak bizonyul, lehet, hogy tévesnek. A szerzők mindenesetre javaslatot is tesznek arra, hogy a Be csillagok és nautroncsillagok alkotta röntgenkettősök körében kellene célzottan FRB-ket keresni. Ha ez eredménnyel járna, az erős érv volna a modelljük mellett. Ilyenekből ugyanakkor nem sokat ismerünk, szóval jó időbe telhet, amíg ebben a kérdésben tisztábban látunk majd."
+"A Nature Communications cikk szerzői arra tesznek kísérletet, hogy elegánsan "megmentsék" az FRB-ket a magnetárokhoz kötő, egyre inkább elfogadottá váló magyarázatot." - válaszolta Frey, Fayin Wangék kettős rendszeres hipotézisének realisztikusságát célzó kérdésünkre. A kutató szerint "ez a megoldás összecseng a másik cikk záró mondatával, hiszen ez épp egy szokatlan környezetben található magnetár lehetőségét veti fel. A számításaik alapján ez egy elképzelhető modellnek tűnik."
+
+A csillagász úgy látja, hogy "de mint minden természettudományos elképzelésről, erről is a későbbi mérések mondják majd ki az ítéletet: lehet, hogy maradandónak bizonyul, lehet, hogy tévesnek. A szerzők mindenesetre javaslatot is tesznek arra, hogy a Be csillagok és a neutroncsillagok alkotta röntgenkettősök körében kellene célzottan FRB-ket keresni. Ha ez eredménnyel járna, az erős érv volna a modelljük mellett. Ilyenekből ugyanakkor nem sokat ismerünk, szóval jó időbe telhet, amíg ebben a kérdésben tisztábban látunk majd."
+
+Kapcsolódó cikkek a Qubiten:
