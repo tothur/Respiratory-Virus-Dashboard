@@ -1,4 +1,4 @@
-# KÉSZÜL - Embargó Szerda 17:00 - Páratlan leletek tárják fel a gerinces állatok korai evolúcióját
+# KÉSZÜL - Embargó Szerda 17:00 - Páratlan fosszíliák tárják fel a gerinces állatok korai evolúcióját
 
 Több mint 430 millió éves, korai szilur időszaki, kína déli részéről előkerült, jól megőrződött halfosszíliák világítják meg az állkapcsos gerincesek kezdeti evolúcióját. A fosszíliák új halfajokat és a legősibb ismert állkapcsos gerinces fogat tárják fel. Az eredmények egyértelműen az állkapcsos gerincesek ősi eredetére mutatnak, és segítenek megérteni, hogyan alakultak ki legfontosabb jellgeztességeik - derül ki négy, szerda délután a Nature-ben közölt tanulmányból.
 
