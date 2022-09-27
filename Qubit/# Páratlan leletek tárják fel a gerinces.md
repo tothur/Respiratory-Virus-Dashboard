@@ -4,14 +4,30 @@ Több mint 430 millió éves, korai szilur időszaki, kína déli részéről el
 
 Az ember, ahogy a gerincesek 99,8 százaléka az [állkapcsosok](https://en.wikipedia.org/wiki/Gnathostomata) (Gnathostomata) közé tartozik. Ma élő állkapcsosok genetikai információjának vizsgálata korábban arra utalt, hogy a csoport 450 millió éve jöhetett létre, ugyanakkor a fosszíliák ritkák voltak ebből az időszakból (a korábban legősibb 425 millió éves volt), így nehéz volt a kutatóknak rekonstruálni az állkapcsos gerincesek korai evolúciós történetét.
 
+## Egy különleges dél-kínai lelőhely
+
+Zhu és kollégái egy különleges lelőhelyet írnak le, ahol korai-szilur időszaki kőzetek teljes állkapcsos hal fosszíliákat rejtenek, a legkorábbiakat amelyek ilyen jól megmaradtak.
+
 Min Zhu és kollégái különösen jól megőrződött fosszíliák lelőhelyét írják le a korai szilur időszakból, a dél-kínai Chongqink-ból, amely változatos, teljes testükben megőrződött halakat rejt. A fosszíliák közt vannak [páncélos őshalak](https://en.wikipedia.org/wiki/Placodermi) (Placodermi), kihalt, páncélos, ősi halak egy csoportja, melyek a legkorábbi ismert állkapcsos gerincesek voltak, valamint [porcos halak](https://en.wikipedia.org/wiki/Chondrichthyes) (Chondrichthyes), melyekhez ma a cápák és ráják tartoznak. 
 
 A lelőhelyen eddig 20 fosszíliával rendelkező domináns faj egy 3 centiméter hosszú páncélos őshal, a *Xiushanosteus mirabilis*, melyet most írtak le a kutatók. Ez a hal egyszerre rendelkezik nagyobb páncélos őshal alcsoportok jellegeinek kombinációival, ami segít megérteni a kutatóknak az állkapcsosok korai evolúcióját. Egy porcos hal, melyet *Shenacanthus vermiformis*-nak neveztek el, más porcos halakhoz hasonló testformája van, de páncéllemezekkel rendelkezett, amelyek inkább a páncélos őshalakra jellemzőek.
 
-Egy másik tanulmányban a szerzők részletesebben leírják a megtalált halakat. A galeaspid csoportba tartozó, páncélos állkapcsos halak, melyek Kínából és Észak-Vietnámból ismertek, most először sikerült részletesen a teljes testét leírni, egy 436 millió éves fosszília alapján. Ezeknek az ősi halaknak jellegzetes fejpajzsuk volt, de a fejet követő anatómiájuk eddig nem volt ismert. Úszóik a párosúszók ősi állapotát mutathatják, mielőtt azok mellúszókra (pectoral fins) és hasúszókra (pelvic fins) válltak szét, melyek a négylábúak (Tetrapoda) lábainak előfutárai.
+## Bizonyítva lett, hogy a szilurban kezdtek elterjedni az állkapcsosok
 
 A harmadik tanulmány egy tüskés, cápaszerű halat, a *Fanjingshania renovata*-nak elnevezett porcos halat írja le, melyet 439 millió éves rétegekben fedeztek fel. Az ősi cápának más ősi porcos halakhoz hasonló vállöve (shoulder girdle) van, de kemény szövet felszívódás bizonyítékait mutatja, ami általában [csontos halakra](https://en.wikipedia.org/wiki/Osteichthyes) (Osteichthyes) jellemző. Ezek a felfedezések az eddigi legbiztosabb bizonyítékot adják az állkapcsosok korai szilurban történő elterjedését, mielőtt a kora-devoni fosszilis rekordban széleskörben megjelentek volna.
 
+## Az eddigi legősibb állkapcsos fogak
+
 A negyedik tanulmány egy korábban ismeretlen, 439 millió éve élt cápaszerű porcos hal, a *Qianodus duplicis* fogait azonosította. Ezek a fogak a legősibb ismert állkapcsostól származók, amik 14 millió évvel korábbra tolják a gerincesek állkapcsának és fogazatának kialakulását.
+
+## Kiderült, hogy alakult a két páros úszó, amikből a négylábúak végtagjai lettek
+
+Gai és kollégái tanulmányukban a páros úszók evolúcióját világítják meg egy 436 millió éves, állkapocsnélküli hal, a *Tujiaaspis vividus* fosszíliája segítségével. A hal egy ostracoderm evolúciós ághoz tartozik, és közeli rokona a galeaspid, jellegzetes fejpajzzsal rendelkező páncélos állkapcsos halaknak, melyek Kínából és Észak-Vietnámból ismertek. 
+
+A Tujiaaspis-nak nincsenek elkülönülő mellúszói és hasúszói, helyette gerincformájú szárnyszerű képletei vannak, melyek a fej hátsó részétől a farok felé terjednek ki. A kutatók szerint ezek a folytonos úszóredők más állkapocsnélküli halakéhoz hasonlítanak, és az evolúciós alapjait képzik a mellúszóknak (pectoral fins) és hasúszóknak (pelvic fins), amikből 390 millió évvel ezelőtt a négylábúak (Tetrapoda) lábai kialakultak.
+
+A fosszília arra utal, hogy a folytonos úszóredő lépésről lépésre kezdett régiókra szétválni, kialakítva először a mellúszókat, majd a hasúszókat. A Nature-nek a tanulmányokat kommentáló Matt Friedman, a Michigan-i Egyetem paleontológusa szerint egy fosszília nem fogja lezárni a páros úszók evolúciójának modellek közti vitákat, de fontos őslénytani támpontot ad a megoldásához.
+
+A Gaiék által végzett számítógépes folyadékdinamikai modellek azt mutatják, hogy az egybefüggő úszóredő a páros úszók hiányában passzívan felhajtóerőt generált a halnak, arra utalva, hogy a páros úszók előtti jelleg is adaptív volt a halaknak.
 
 *Kapcsolódó cikkek a Qubiten:*
