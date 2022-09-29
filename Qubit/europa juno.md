@@ -2,9 +2,17 @@
 
 ## 
 
-Csütörtökön 11:36-kor a NASA Juno űrszondája elszáguldott a Jupiter Europa holdja mellett, amelynek során 358 kilométerre közelítette meg felszínét. Ez volt 22 éve az első alkalom, hogy a holdat, melynek jégpáncélja alatt folyékony vízréteg található, közelről űrszonda látogatta meg.
+Néhány száz kilométerre száguldott el csütörtökön a Jupiter Europa holdjától a NASA Juno szondája. Az űreszköz 22 év után az első, ami megközelíti a holdat, amely jégkérge alatt globális óceánt rejt.
 
-On Thursday, Sept. 29, at 2:36 a.m. PDT (5:36 a.m. EDT), NASA’s Juno spacecraft will come within 222 miles (358 kilometers) of the surface of Jupiter’s ice-covered moon, Europa. The solar-powered spacecraft is expected to obtain some of the highest-resolution images ever taken of portions of Europa’s surface, as well as collect valuable data on the moon’s interior, surface composition, and ionosphere, along with its interaction with Jupiter’s magnetosphere.
+A Juno 11:36-kor mindössze 358 kilométerre közelítette meg a jeges hold felszínét, miközben kamerájával az eddigi legnagyobb felbontású felvételeket készítette arról, és műszereivel megvizsgálta a hold belső szerkezetét, felszínének kémiai összetételét. 
+
+A Naprendszerben kevés ígéretesebb hely van jelenleg létező földön kívüli életre, mint az Europa. A NASA Pioneer és Voyager szondái, valamint Galileo-keringőegysége által felderített égitesthez két év múlva indít nagy-költségvetésű űrszondát az amerikai űrügynökség, a [Europa Clippert](https://en.wikipedia.org/wiki/Europa_Clipper).
+
+Addig is, a NASA-nak van egy 2016 óta a Jupitert vizsgáló szondája, ami pályáján meg tudja közelíteni a gázóriás három holdját. A Ganymedes [mellett tavaly haladt el](https://qubit.hu/2021/06/08/21-ev-utan-ismet-urszonda-latogatta-meg-a-jupiter-hatalmas-holdjat-a-ganymedest), most az Europát közelítette meg, a következő 2023 végén és 2024 elején pedig az aktív vulkánjairól híres Io lesz. Az, hogy a Juno ezt meg tudja tenni, a főhajtómű hibájának köszönhető, ami [nem tette lehetővé](https://qubit.hu/2019/02/07/holgyeim-es-uraim-ime-az-univerzum-uj-hose-a-juno) az irányítóknak, hogy lerövidítsék a szonda 53 napos kezdeti pályáját 14 naposra. 
+
+A Jupiter légkörének, felépítésének és belső folyamatainak megértésére indított Juno az elmúlt hat évben ennek ellenére teljesíteni tudta fő tudományos célkitűzéseit, és eközben a bolygóról készített lenyűgöző felvételeivel pedig rendszeresen elkápráztatja a nagyközönséget. A Juno Ganymedes mellett elhaladása előbb 43 naposra, az Europa pedig 38 naposra rövidítette Jupiter körüli pályáját, amit az Io 33 napra mérsékel majd a második mellette történő elhaladás után. Az első napelemekkel energiáttermelő külső naprendszerbeli szonda eddig összesen 45-ször közelítette meg a Jupitert, és elég jól viseli a gázóriás mostoha sugárzási környezetét.
+
+and ionosphere, along with its interaction with Jupiter’s magnetosphere.
 
 Such information could benefit future missions, including the agency’s Europa Clipper, which is set to launch in 2024 to study the icy moon. “Europa is such an intriguing Jovian moon, it is the focus of its own future NASA mission,” said Juno Principal Investigator Scott Bolton of the Southwest Research Institute in San Antonio. “We’re happy to provide data that may help the Europa Clipper team with mission planning, as well as provide new scientific insights into this icy world.”
 
