@@ -20,6 +20,14 @@ Emellett a szonda infravörös spektrométere infravörös tartományú felvéte
 
 A Juno küldetésének meghosszabbított fázisában meg tudja közelíteni a gázóriás három holdját. A Ganymedes [mellett tavaly haladt el](https://qubit.hu/2021/06/08/21-ev-utan-ismet-urszonda-latogatta-meg-a-jupiter-hatalmas-holdjat-a-ganymedest), most az Europát közelítette meg, a következő 2023 végén és 2024 elején pedig az aktív vulkánjairól híres Io lesz. Az, hogy a Juno ezt meg tudja tenni, a főhajtómű hibájának köszönhető, ami [nem tette lehetővé](https://qubit.hu/2019/02/07/holgyeim-es-uraim-ime-az-univerzum-uj-hose-a-juno) az irányítóknak, hogy lerövidítsék a szonda 53 napos kezdeti pályáját 14 naposra. 
 
-A Jupiter légkörének, felépítésének és belső folyamatainak megértésére indított Juno az elmúlt hat évben ennek ellenére teljesíteni tudta fő tudományos célkitűzéseit, és eközben a bolygóról készített lenyűgöző felvételeivel pedig rendszeresen elkápráztatja a nagyközönséget. A Juno Ganymedes mellett elhaladása előbb 43 naposra, az Europa pedig 38 naposra rövidítette Jupiter körüli pályáját, amit az Io 33 napra mérsékel majd a második mellette történő elhaladás után. Az első napelemekkel energiáttermelő külső naprendszerbeli szonda eddig összesen 45-ször közelítette meg a Jupitert, és elég jól viseli a gázóriás mostoha sugárzási környezetét.
+A Jupiter légkörének, felépítésének és belső folyamatainak megértésére indított Juno az elmúlt hat évben ennek ellenére teljesíteni tudta fő tudományos célkitűzéseit, és eközben a bolygóról készített lenyűgöző felvételeivel pedig rendszeresen elkápráztatja a nagyközönséget. A Juno Ganymedes mellett elhaladása előbb 43 naposra, az Europa pedig 38 naposra rövidítette Jupiter körüli pályáját, amit az Io 33 napra mérsékel majd a második mellette történő elhaladás után. 
+
+Az első napelemekkel energiáttermelő külső naprendszerbeli szonda eddig összesen 45-ször közelítette meg a Jupitert, és elég jól viseli a gázóriás mostoha sugárzási környezetét. Meghosszabbított küldetése 2025-ig tart.
 
 *Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2021/06/09/itt-a-valaha-latott-legreszletesebb-foto-a-naprendszer-legnagyobb-holdjarol
+
+https://qubit.hu/2019/02/07/holgyeim-es-uraim-ime-az-univerzum-uj-hose-a-juno
+
+https://qubit.hu/2019/08/17/igy-talalhatnank-legkonnyebben-foldon-kivuli-eletet-a-naprendszerben
