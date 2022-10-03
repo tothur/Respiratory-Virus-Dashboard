@@ -1,4 +1,4 @@
-# Mégiscsak egy tó lehet a Mars déli jégsapkája alatt
+# Mégiscsak lehet egy tó a Mars déli jégsapkája alatt
 
 ##
 
