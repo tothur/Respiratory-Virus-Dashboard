@@ -70,6 +70,11 @@ https://twitter.com/FukuyamaFrancis/status/1576814074750726144?s=20&t=kX7EssHczN
 
 Russian collapse Fukuyama
 
+Rose Gottemoeller, a Stanford Egyetem oktatója és a NATO volt helyettes-főtitkára a Financial Times-ban [megjelent](https://www.ft.com/content/e3b6df70-7735-414f-bf2c-816638455ff4) véleménycikke a kubai rakétaválságot feloldó nukleáris diplomácia mellett érvel. 
+
+The Cuban missile crisis ended with a quiet bargain — the US would remove its missiles from Turkey and the USSR would remove its missiles from Cuba. With Ukraine’s sovereignty and independence at stake, there is no obvious trade.
+
+But some quiet nuclear diplomacy might produce results. Two years ago, Putin offered to remove Russia’s new ground-based intermediate-range nuclear missile from Europe under verifiable conditions, thus underpinning a moratorium on such missiles in Europe. When Putin and Xi Jinping met in Beijing prior to the February invasion, they spoke of extending such a moratorium to Asia. Perhaps it is time to launch discreet talks, if only at a technical level, to explore what the two men had in mind. It would not solve the horrendous crisis in Ukraine, but it might lower the nuclear temperature
 
 
 *Kapcsolódó cikkek a Qubiten:*
