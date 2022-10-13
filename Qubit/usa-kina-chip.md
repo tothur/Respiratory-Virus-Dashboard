@@ -34,7 +34,7 @@ A TSMC 2024-ben nyithatja meg a legfejlettebb processzorok gyártására is alka
 
 A Samsung dél-koreai üzemeiben a TSMC 5 nanométereséhez hasonló, bár nem olyan fejlett 4 nanométeres technológiánál tart.
 
-Az Intel legfejlettebb processzorai egy a vállalat által Intel 7-nek nevezett 
+Az Intel legfejlettebb Alder Lake és Raptor Lake processzorai egy, a vállalat által Intel 7-nek nevezett technológián készülnek, ami nagyjából a TSMC 7 nanométeres folyamatának feleltethető meg. Az Intelt 2021 februárja óta vezető Pat Gelsinger, aki először az 1980-as években kezdett mérnökként a cégnél dolgozni, nagyszabású fejlesztési programot indított, aminek az a célja, hogy az Intel 2025-re túlszárnyalja a TSMC-t, és a világ legfejlettebb, 18A node-ú processzorait gyártsa.
 
 ## Fokozódó gazdasági, diplomáciai, katonai és űrverseny
 
