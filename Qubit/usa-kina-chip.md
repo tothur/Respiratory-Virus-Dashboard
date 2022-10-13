@@ -28,7 +28,9 @@ A világon ma három vállalat képes csúcstechnológiás processzorok előáll
 
 A világ legfejletebb, 5 nanométeres chipjeit jelenleg a félvezető gyártásának nagy részét Taiwan szigetén található félvezető gyártósorokon (fab) folytató TSMC gyártja. A vállalat 5 nanométeres technológiáját (node) használják az Apple legújabb iPhone-jaiban található A15 és A16 processzorokat A saját félvezető üzemekkel nem rendelkező AMD, NVIDIA, Broadcom, MediaTek, valamint az Apple is a TSMC segítségével gyárttat. A TSMC volt az első, ami elkezdte alkalmazni az ASML úgynevezett EUV technológiás gépeit a legfejlettebb processzorainak gyártásához.
 
-A vállalat 2024-ben nyithatja meg szintén legfejlettebb processzorok gyártására alkalmas arizoniai gyártósorát, ami mérsékelheti az ellátási láncok kitettségét egy tajvani konfliktus esetén.
+Az USA és szövetségesei emiatt jelenleg kritikus mértékben a TSMC-re és Tajvanra vannak utalva gazdaságuk működetéséhez. Tajvan ma egy de facto független, fejlett ipari demokrácia, ahova a kínai köztársaság (ROC) 1949-ben visszavonult a kínai polgárháború elvesztése után. A kínai népköztársaság (PRC), bár sosem kontrollálta a szigetállamot, Tajvant saját területének tekinti, amit akár katonai erővel is magához kíván csatolni. Az Egyesült Államok a Kínát körbevevő első szigetvonalon stratégiai elhelyezkedésű Tajvan fő szövetséges, de arról, hogy a szigetországot katonai erővel is megvédené-e egy kínai támadástól, évtizedek óta "stratégiai kétértelműséget" tart fent, bár Biden elnök többször is ígértet tett Tajvan megvédésére.
+
+A TSMC 2024-ben nyithatja meg a legfejlettebb processzorok gyártására is alkalmas arizoniai gyártósorát, ami mérsékelheti az ellátási láncok kitettségét egy tajvani konfliktus esetén.
 
 A Samsung dél-koreai üzemeiben a TSMC 5 nanométereséhez hasonló, bár nem olyan fejlett 4 nanométeres technológiánál tart.
 
