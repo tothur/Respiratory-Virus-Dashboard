@@ -20,9 +20,9 @@ Az USA-nak még egy [eszközt bevet](https://www.ft.com/content/6825bee4-52a7-4c
 
 ## A TSMC miatt még fontosabb lett Amerikának Taiwan
 
-A világon ma három vállalat képes csúcstechnológiás processzorok előállítására. A tajvani TSMC, a dél-koreai Samsung és az amerikai Intel.
+A világon ma három vállalat képes csúcstechnológiás processzorok előállítására. A világ vezető processzorgyártója, a tajvani TSMC, a dél-koreai Samsung és az amerikai Intel.
 
-A három közül a 
+A három közül a tajvani félvezető gyártó vállalat 
 
 https://www.ft.com/content/3bab2b03-0cd9-4e91-86ab-dcda499fb231
 
@@ -32,3 +32,7 @@ https://www.ft.com/content/3bab2b03-0cd9-4e91-86ab-dcda499fb231
 - diplomácia csendes óceán
 - űrverseny hold, mars
 - katonai verseny, fifth gen, hypersonics, naval
+
+Szovjet katonai vezetők az amerikai számítástudomány képességeit vezető okként [jelölték meg](https://www.ft.com/content/7539dcab-faf2-43a5-8a4e-77f98afecb19), amiért az USA megnyerte a hidegháborút. A jelenlegi amerikai-kínai stratégiai kompetíció kimenetelét is ugyan így eldöntheti.
+
+Kapcsolódó cikkek a Qubiten:
