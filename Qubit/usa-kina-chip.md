@@ -4,7 +4,7 @@ Az Egyesült Államok egyre keményebb eszközökkel próbálja visszafogni Kín
 
 Eközben Biden elnök két hónappal ezelőtt írta alá a kongresszus által júliusban elfogadott CHIPS and Science törvényt, ami 280 milliárd dollárt biztosít az amerikai félvezetőgyártás és kutatás fejlesztés megerősítéséhez. A törvény [legnagyobb nyertese](https://www.oregonlive.com/silicon-forest/2022/08/biden-signs-280-billion-chips-act-intel-stands-to-be-the-biggest-winner.html) az amerikai Intel, ami hetekkel később ennek hatására [letette](https://www.washingtonpost.com/us-policy/2022/09/09/biden-intel-ohio-chip-factory/) 2025-től üzemelő ohioi processzorgyárának alapkövét.
 
-A 20. században részben amerikai állami laboratóriumok és vállalatok által megalapozott és kifejlesztett félvezető iparágra és számítástechnikai technológiákra az USA-nak továbbra is nagyon jelentős befolyása van.
+A 20. században részben amerikai állami laboratóriumok és vállalatok által megalapozott és kifejlesztett félvezető és technológiai iparágra az USA-nak továbbra is [jelentős befolyása](https://www.nytimes.com/2022/10/13/us/politics/biden-china-technology-semiconductors.html) van.
 
 Az amerikai Biden kormányzat október 7-én széleskörű export korlátozásokat [jelentett be](https://www.ft.com/content/6825bee4-52a7-4c86-b1aa-31c100708c3e) Kína ellen, amik jelentősen megnehezíthetik majd, hogy kínai vállalatok fejlett chipekhez férjenek hozzá, vagy ilyeneket gyártsanak. Szakértők szerint a lépés rövid távon elsősorban kínai memóriagyártókat, a YMTC és ChangXin Memory vállalatokat érintheti. 
 
