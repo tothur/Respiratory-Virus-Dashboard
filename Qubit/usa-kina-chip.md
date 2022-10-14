@@ -46,15 +46,8 @@ Az Intel legfejlettebb Alder Lake és Raptor Lake processzorai egy, a vállalat 
 
 Az új szankciók a kínai technológiai ipart egy érzékeny periódusban érik, amikor Xi Jinping zero-covid politikája amúgy is megtépázza a kínai gazdaságot. Bár a mai legfejlettebb chipek gyártásához szükséges technológiákat rendkívül nehéz lesz Kínának kifejlesztenie, [idővel csökkenhet](https://www.nytimes.com/2022/10/13/us/politics/biden-china-technology-semiconductors.html).
 
-Az USA és Kína közti nagyhatalmi verseny
-
-
-
-- zero covid, világ vezető gdp-je
-- diplomácia csendes óceán
-- űrverseny hold, mars
-- katonai verseny, fifth gen, hypersonics, naval
+Az USA és Kína közti nagyhatalmi verseny diplomáciai, gazdasági, katonai területek mellett a világűrben is zajlik. Kína Csange-5 holdszondájával 2020-ban kőzetmintákat hozott vissza a Holdról a Földre, és tavaly Csurong marsjárója sikeresen landolt a vörös bolygón. Kína a napokban megállapodott Oroszországgal egy Holdon létesítendő bázis létrehozásáról és külső naprendszerbeli óriásbolygók mellett a NASA Voyager-szondáihoz hasonló szondákat indítana. 
 
 Szovjet katonai vezetők az amerikai számítástudomány képességeit vezető okként [jelölték meg](https://www.ft.com/content/7539dcab-faf2-43a5-8a4e-77f98afecb19), amiért az USA megnyerte a hidegháborút. A jelenlegi amerikai-kínai stratégiai kompetíció kimenetelét is ugyan így eldöntheti.
 
-Kapcsolódó cikkek a Qubiten:
+*Kapcsolódó cikkek a Qubiten:*
