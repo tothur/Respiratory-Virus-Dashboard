@@ -1,4 +1,4 @@
-# Embargó Szerda 17:00 - Kis csoportokban éltek a neandervölgyiek
+# KÉSZÜL - Embargó Szerda 17:00 - Kis csoportokban éltek a neandervölgyiek
 
 ## A friss Nobel-díjas Svante Paabo és kollégái két szibériai lelőhelyen talált maradványok genetikai vizsgálata alapján kiderítették, hogy a neandervölgyiek valószínűleg kis csoportokban éltek.
 
