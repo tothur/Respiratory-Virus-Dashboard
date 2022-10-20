@@ -4,6 +4,8 @@ Az emberi genomot egy 2 méter hosszú DNS szál alkotja, aminek parányi sejtek
 
 Kutatók erőfeszítéseinek hála feltárult a 3D genom egyedfejlődésben és betegségekben és vírusos fertőzésekben betöltött szerepe.
 
+A folyamatban lévő [4D nucleome projekt](https://www.4dnucleome.org/#) keretében eddig 703 peer-reviewed [tanulmány született](https://pubmed.ncbi.nlm.nih.gov/collections/60033344/?sort=pubdate)
+
 ## A DNS-t folymatosan be és ki kell csomagolni
 
 https://en.wikipedia.org/wiki/Chromosome
