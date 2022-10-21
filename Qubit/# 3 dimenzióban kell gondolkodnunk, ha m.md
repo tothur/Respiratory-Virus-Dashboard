@@ -4,15 +4,15 @@ Az emberi genomot egy 2 méter hosszú DNS szál alkotja, aminek parányi sejtek
 
 Kutatók erőfeszítéseinek hála feltárult a 3D genom egyedfejlődésben és betegségekben és vírusos fertőzésekben betöltött szerepe.
 
-A folyamatban lévő [4D nucleome projekt](https://www.4dnucleome.org/#) keretében eddig 703 peer-reviewed [tanulmány született](https://pubmed.ncbi.nlm.nih.gov/collections/60033344/?sort=pubdate)
-
-
-
 ## A DNS-t folymatosan be és ki kell csomagolni
 
-https://en.wikipedia.org/wiki/Chromosome
-https://en.wikipedia.org/wiki/Chromatin
-https://en.wikipedia.org/wiki/Histone
+[kromoszómák](https://en.wikipedia.org/wiki/Chromosome)
+[kromatin](https://en.wikipedia.org/wiki/Chromatin)
+a nukleoszómákat [hiszton fehérjék](https://en.wikipedia.org/wiki/Histone) alkotják
+
+
+
+
 https://www.nature.com/articles/nrm3965
 https://www.nature.com/articles/nature23884
 
@@ -25,6 +25,14 @@ ated domains (TADs), and chromatin loops
 The 3D structure of the nucleus is determined by the interplay of the cytoskeleton–nucleus links, integration and composition of the nuclear lamina, and degree of DNA packaging in the nucleus (Figure 2) [34–36]. In the polarized shape of a cell, the apical actin stress fibers compress the nucleus into a flat ellipsoid shape [37,38]; however, in the isotropic shape, the relaxed, depolymerized actin
 results in the loss of mechanical tension, thus resulting in a spherical nucleus.  mechanical regulation of the nucleus has the potential to change the chromosome structure and facilitate interaction between chromosomes and the nuclear envelope, and between
 genes and intermingling chromosomes.
+
+Nature 2017 4D nucleome project https://www.nature.com/articles/nature23884
+
+A folyamatban lévő [4D nucleome projekt](https://www.4dnucleome.org/#) keretében eddig 703 peer-reviewed [tanulmány született](https://pubmed.ncbi.nlm.nih.gov/collections/60033344/?sort=pubdate)
+
+4D Nucleome Network aims to develop and apply approaches to map the structure and dynamics of the human and mouse genomes in space and time with the goal of gaining deeper mechanistic insights into how the nucleus is organized and functions. The project will develop and benchmark experimental and computational approaches for measuring genome conformation and nuclear organization, and investigate how these contribute to gene regulation and other
+genome functions. 4DN Network will develop a set of approaches to map the structures and dynamics of the genome and to relate these features to its biological
+activities. 
 
 ## Hogy néz ki akkor valójában a genomunk? Nem úgy, ahogy a tankönyvben van.
 
@@ -174,19 +182,148 @@ resolution microscopy in mammals.
 ## Ha elromlik a 3D genom, jönnek a betegségek
 
 https://www.nature.com/articles/nrm.2016.138
-https://www.nature.com/articles/nbt.3863
-https://www.nature.com/articles/s41576-018-0007-0
 https://www.nature.com/articles/s41576-019-0128-0
+
+
+
+2018 július Nature Reviews Genetics https://www.nature.com/articles/s41576-018-0007-0
+
+Structural and quantitative chromosomal rearrangements, collectively referred to as structural variation (SV), contribute to a large extent to the genetic diversity of the human genome and thus are of high relevance for cancer genetics, rare diseases and evolutionary genetics. Recent studies have shown that SVs can not only affect gene dosage but also modulate basic mechanisms of gene regulation. SVs can alter the copy number of regulatory elements or modify the 3D genome by disrupting higher-​order chromatin organization such as topologically associating domains. As a result of these position effects, SVs can influence the expression of
+genes distant from the SV breakpoints, thereby causing disease. . Structural and quantitative chromo­somal rearrangements, collectively referred to as structural variation (SV), include deletions, duplications, inversions, insertions and translocations and make up the majority of varying nucleotides among
+human genomes4.
+
+Intra-​TAD SVs Structural variation (SV) that occurs within topologically associating domains (TADs). Within a regulatory domain, SVs of regulatory elements can change the enhancer dosage and may result in a tissue-​specific loss of function (deletion) or a gain of function (duplication) of their endogenous target gene, which can be located anywhere
+within the TAD.
+
+Inter-​TAD SVs Structural variations (SVs) that occur between topologically associating domains (TADs). Such SVs affect several regulatory domains and have the potential to disrupt and rearrange the complex 3D chromatin organization of a locus by repositioning TAD boundaries, genes and enhancer elements. These position effects may lead to TAD fusion (deletion), neo-​TAD formation (duplications) or TAD shuffling (inversion and/or translocation).
+
+TAD shuffling The reordering of topologically associating domains (TADs) within the genome. Inversions that cross TAD boundaries or translocations can result in the fusion of two regulatory domains that do not naturally belong together, causing enhancer adoption. At the same time, these structural variations can result in regulatory loss of function by removing enhancer elements
+from their target genes.
+
+https://www.nature.com/articles/nbt.3863 2017 marc. Nature Biotechnology
+
+Genetic variants associated with common diseases are usually located in noncoding parts of the human genome. DNA accessibility and various epigenetic modifications have been associated with regulatory function
+
+While active regulatory elements are characterized by nucleosome-free chromatin, large-scale chromatin immunoprecipitation sequencing (ChIP-seq) analyses revealed that the histones that comprise the nucleosomes flanking these nucleosomedepleted regions harbor characteristic post-translational modifications. These modifications, collectively referred to as the “histone code,” cor-
+relate with specific regulatory or transcriptional activities14–18 
+
+In order to compile a catalog of all the regulatory elements in the human genome, the ENCODE consortium produced massive data sets that profiled accessible DNA regions (mainly by analyzing DNase I hypersensitive (DHS) sites) and numerous histone marks genome-wide
+in a large panel of ~150 different human cell lines1. Encode also measured chromatin-binding profiles for dozens of TFs and transcriptional co-activators24
+
+Genome editing tools are transforming our ability to examine the function of noncoding elements in their native genomic contexts. Two genome-editing techniques have matured in recent years; programmable DNA-binding proteins named TALEs (transcription activator-
+like effectors) and RNA-based DNA-targeting CRISPR–Cas9 systems
+
+CRISPR–Cas9 and TALEN tools have also been applied on a small scale to disrupt chromatin loops and CTCF-associated TAD boundar-
+ies. CRISPR–Cas9 and TALE tools can be used also for epigenome editing. 6 fused TALE to the LSD1 histone demethylase to remove enhancer-associated histone modifications on H3K4 at selected target loci. They showed that this local manipulation of chromatin state indeed resulted in inactivation of the targeted enhancers and
+frequently caused downregulation of proximal genes1.
 
 ## Sejtdifferenciáció, fejlődési rendellenességek és rák 
 
 https://www.nature.com/articles/nrg.2016.112
+
+We also now know that enhancers function within topologically associated domains, which are structural and functional units of chromosomes. Studying disease-associated mutations and chromosomal rearrangements in the context of the 3D genome will enable the identification of dysregulated target genes and aid the progression from descriptive genetic association results to discovering molecular mechanisms underlying disease. Understanding the molecular basis of disease opens new avenues for the development and improvement of treat­ments.
+
+The mammalian genome carries an astounding amount of potential transcriptional enhancers that can
+have different modes of action
+
+Throughout the genome, chromatin loops link functionally relevant enhancers to target genes. Enhancers find their target genes within topologically associated domains (TADs), which are the structural and functional units of chromosomes that function to spatially confine transcription regulatory circuits. TADs are formed by architectural chromatin loops that often involve the ‘looping’ factors CCCTC-
+binding factor (CTCF) and cohesin
+
+Gene transcription is initiated at pro­ moter sequences immediately upstream of a gene, but differential gene expression in development and disease is also controlled by additional, often distal, regulatory sequences. Of these regulatory sequences, enhancers are
+the most abundant and best characterized.
+
+Enhancers are sequence modules, generally not more than a few hundred base pairs in size, which harbour recog­ nition motifs that attract specific sets of transcription fac­ tors. Transcription factor binding and the co‑recruitment of associated factors activate enhancers and provide them with a distinct chromatin signature. This signature often
+includes increased DNA accessibility.  The binding of specific transcription factors and the production of small enhancer RNAs are
+also part of the chromatin signature.
+
+Systematic mapping efforts based on chromatin sig­ natures have uncovered more than one million enhanc­ ers across different human and other mammalian cell types (reviewed in REFS 23,29). Enhancers primarily reside in non-coding parts of the genome at varying distances from their nearest genes and are mostly celltype specific16–19
+. It has therefore become clear that the
+human genome presents a rich and complex regulatory landscape that orchestrates the spatial and temporal
+expression of its roughly 20,000 genes. 
+
+Developmental genes are often controlled by multiple enhancers. The opposite also occurs whereby multiple genes compete for a common enhancer.
+
+we are increasingly appreciating that regula­ tory action is controlled in the spatial context of the
+genome.
+
+Chromosomal segments can contact each other but contact probabilities rapidly decay the further two segments are apart on the linear chromosome. If con­ tacts between chromosomal sites are stabilized — for example, by associated proteins with affinity for each other — it results in chromatin loops that can be classi­ fied into two types: architectural loops and regulatory loops. Architectural loops strongly depend on the pro­ tein CTCF (see below) and the cohesin protein complex. Moreover, architectural loops can span distances of up to 3 Mb of linear DNA and subdivide chromosomes into structural domains, or TADs57–59
+, discussed in fur­
+ther detail below. Regulatory loops are formed between enhancers and promoters and take place within the
+context of a TAD. 
+
+each investigated cell type harbours ­hundreds of tissue-specific enhancer-promoter loops. These loops contained genes that were expressed at the highest levels in the corresponding cell type, supporting the idea that
+chromatin loops are functionally important.
+
+. Chromatin looping between
+enhancers and promoters therefore seems to causally
+underlie gene activation.
+
 https://www.nature.com/articles/nrg3890
 https://www.nature.com/articles/s41586-019-1182-7
 
 ## Kognitív folyamatok és neurológiai betegségek 
 
-https://www.nature.com/articles/nrn.2016.124
+https://www.nature.com/articles/nrn.2016.124 Nature Reviews Neuroscience 2016 november
+
+Nonrandom chromosomal conformations, including promoter–enhancer loopings that bypass kilobases or megabases of linear genome, provide a crucial layer of transcriptional regulation and move vast amounts of non-coding sequence into the physical proximity of genes that are important for neurodevelopment, cognition and behaviour. Activity-regulated changes in the neuronal ‘3D genome’ could govern transcriptional mechanisms associated with learning and plasticity, and loop-bound intergenic and intronic non-coding sequences have been
+implicated in psychiatric and adult-onset neurodegenerative disease.
+
+Early findings from a select set of candidate gene loci indicate that chromosomal contacts and ‘loopings’ could be heavily regulated by neuronal activity, suggesting that the 3D genome plays a part in activity-dependent regulation of gene expression in brain cells. In addition, studies on a small number of candidate genes indicate that
+loop-bound non-coding DNA contributes to the genetic risk architecture of cognitive diseases with onset in early childhood or young adulthood, including autism2 and schizophrenia3. Of note, deleterious mutations in genes encoding regulators of chromosomal scaffolding severely affect brain development and function, further underscoring that proper packaging and organization of the genomic material inside the nuclei of brain cells is of
+pivotal importance
+
+Nucleosomes are composed of 146‑bp DNA wrapped around a core histone octamer and interconnected by linker DNA and linker histones. Chromatin can exist in different states, including an ‘open’ state (euchromatin) and a ‘closed’ or condensed state (het-
+erochromatin). 
+
+In ‘A compartments’ (blue), chromatin is in an open, or active, conformation and is permissive for transcription. In ‘B compartments’ (red), chromatin is condensed and RNA-polymerase and transcription-factor occupancy is decreased. Each
+compartment can contain several megabases of 3D genome sequences. topological-associated domains (TADs) that extend on average (median size) across 185 kilobases and can exist within both A and B compartments, the
+latter of which primarily harbour repressive and condensed chromatin. b) In ‘B compartments’, chromatin is condensed and is enriched with a different set of proteins compared with A compartments; these proteins include, among others,
+heterochromatin-​associated protein 1 (HP1)
+c) TAD boundaries and specific chromosomal loop formations (which include promoter–enhancer loopings) are often demarcated by CCCTC-binding factor (CTCF), cohesins and additional proteins that serve to regulate the formation of 3D genome structures118
+. The formation of promoter–enhancer loopings in A compartments, for
+example, involves a sequence of steps: binding of transcription factors to promoter and enhancer sequences of DNA (step 1); recruitment of the co‑activator complex Mediator, which in turn recruits the cohesin complex (step 2); and creation or stabilization of the loop by the cohesin complex as a ring structure (step 3). CTCF operates in parallel or synergistically to Mediator119
+.This structure allows the activation and modulation of the
+Pol II core transcription machinery. 
+
+Euchromatic regions are termed ‘A compartments’, are enriched with open (decondensed) chromatin and correspond to much higher overall levels of transcription, whereas
+‘B compartments’ harbour inactive, heterochromatic
+sequences. 
+
+It seems to be beyond doubt that genome folding and packaging are crucial for normal brain development and
+function
+
+ it is noteworthy that deleterious mutations in genes encoding scaffolding proteins for the 3D genome have been linked to disease. These include not only neurodevelopmental disorders such as Cornelia de Lange syndrome7,34,35
+but also adult-on set progressive
+demyelination syndromes36 (TABLE 1). Neurodevelopmental disease phenotypes in Cornelia de Lange syndrome include intellectual disability, psychosis and other psychiatric maladies. The underlying genetic defects include microdeletions and copy number variations that affect core members of the cohesin complex, including SMC1A and SMC3, and the accessory subunit nipped-B-like protein (NIPBL)34 (TABLE 1). The neurological manifestations could be due to 3D genome disorganization in brain cells and de‑compaction of chromatin; however, the precise molecular mechanisms remain to be elucidated37
+. Genetic mutations in the gene encoding CTCF, a
+key organizer of chromosomal loopings, have been
+linked to monogenic causes of microcephaly and cognitive disorder38,39
+
+A recent whole-genome sequencing (WGS) study in families on the autism spectrum disorder identified individuals with autism who did not carry disruptive mutations or copy number variations in known neurodevelopmental risk genes53
+. Instead, these individuals carried deletions or duplications in non-coding DNA regions that in control samples were sensitive to digestion by DNase I53. This would imply that the chromatin around these sequences is involved
+in transcriptional regulation elsewhere in the genome53. . On a genome-wide scale, at least half of all chro-
+mosomal loop formations targeting gene TSSs extend across 25–150 kb (albeit some promoter–enhancer loopings can extend far beyond that range)20,21,54
+, and there-
+fore it is possible that some of the autism-associated non-coding sequence mutations and deletions53
+result in
+altered 3D regulation of neurodevelopmental risk genes. Similar principles may apply to other types of neurologi-
+cal disease.
+
+there is evidence suggesting a role for aberrant 3D genome in adult-onset human cognitive disorders. For example, significant over-representation of enhancer sequences has been observed within the pool of polymorphisms and haplotypes associated with schizophrenia, an adult-onset cognitive disorder often accompanied by delusions and hallucinations3,58
+
+Other studies have suggested that alterations in DNA methylation and other types of epigenetic dysregulation of enhancer sequences could contribute to the neuropathol-
+ogy underlying mood and psychosis spectrum disorders.
+
+common sequence variants conferring genetic risk of Alzheimer disease-associated neurodegeneration show a strong overlap with mammalian enhancers and other cis-regulatory elements previously implicated in immune functions63
+.
+
+these findings point to a strong representation of enhancer elements among the genetic and epigenetic risk architectures of some common neuropsychiatric disorders, including autism, schizophrenia, depression and Alzheimer disease. The field now eagerly awaits studies undertaking comprehensive, genome-scale (Hi‑C) maps from brain tissue of subjects with such
+diseases
+
+A number of chromatin-modifying drugs have shown promising therapeutic effects in preclinical models of cog-
+nitive disease. It remains to be explored whether drug-induced changes in 3D genome organization could be harnessed for therapeutic interventions in brain disorders. Moreover, the safety profile for broadly acting chromatin-modifying drugs remains not
+known in the context of neuropsychiatric disease. Mutations affecting the function of protein scaffolds and global organizers of the 3D genome are frequently associated
+with neurodevelopmental defects.
 
 ## 3D genom és vírusok
 
