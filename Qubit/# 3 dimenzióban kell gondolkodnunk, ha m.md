@@ -237,9 +237,6 @@ Topologically associating domains. One of the most interesting recent discoverie
 . TADs typically manifest as contig-
 uous square domains along the diagonal of Hi‑C maps (or triangles as represented in FIG. 2b), in which regions within the same TAD interact with each other much more frequently than with regions located in adjacent domains (FIG. 2b). The spatial partitioning of the genome into TADs
 correlates with many linear genomic features such as histone modifications, coordinated gene expression, associ­ ation with the lamina and DNA replication timing9. Furthermore, enhancer–promoter interactions seem to
-<<<<<<< HEAD
-be mostly constrained within a TAD33
-=======
 be mostly constrained within a TAD.
 
 TADs are thought to be conserved between different cell types9,11 and across species; however, the extent of this
@@ -267,13 +264,12 @@ architectural proteins mediator, cohesin, CTCF, non-coding RNAs
 molecular mechanisms at play and to determine whether establishing and maintaining 3D chromatin structure is
 a general role of nuclear lncRNAs.
 
-1 , chromatin dynamics contribute
+chromatin dynamics contribute
 to the specification of distinct gene expression pro-
 grammes and biological functions
 
 The discovery of epigenomic chromosomal domains and of TADs has added a new dimension to our understanding of genome function and most recent analyses in the field have been directed towards
 understanding TAD formation and function
->>>>>>> 3dd81b1e99b6fb5f2d097f29323e6a6074a422ec
 
 https://www.nature.com/articles/nrm.2016.138 2016 nature reviews molecular cell biology
 
