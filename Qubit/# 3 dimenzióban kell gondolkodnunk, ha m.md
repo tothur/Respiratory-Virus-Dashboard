@@ -10,12 +10,6 @@ Kutatók erőfeszítéseinek hála feltárult a 3D genom egyedfejlődésben és 
 [kromatin](https://en.wikipedia.org/wiki/Chromatin)
 a nukleoszómákat [hiszton fehérjék](https://en.wikipedia.org/wiki/Histone) alkotják
 
-
-
-
-https://www.nature.com/articles/nrm3965
-https://www.nature.com/articles/nature23884
-
 https://www.mdpi.com/1422-0067/22/21/11585 2021 okt
 
 An enormous amount of hierarchical compaction is required to produce three-dimensional (3D) chromatin structures from one-dimensional (1D) linear DNA sequences inside the nucleus under physical constraints [9–11]. The nucleus of a human cell contains 46
@@ -26,7 +20,7 @@ The 3D structure of the nucleus is determined by the interplay of the cytoskelet
 results in the loss of mechanical tension, thus resulting in a spherical nucleus.  mechanical regulation of the nucleus has the potential to change the chromosome structure and facilitate interaction between chromosomes and the nuclear envelope, and between
 genes and intermingling chromosomes.
 
-Nature 2017 4D nucleome project https://www.nature.com/articles/nature23884
+Nature 2017 [4D nucleome projekt](https://www.nature.com/articles/nature23884) 
 
 A folyamatban lévő [4D nucleome projekt](https://www.4dnucleome.org/#) keretében eddig 703 peer-reviewed [tanulmány született](https://pubmed.ncbi.nlm.nih.gov/collections/60033344/?sort=pubdate)
 
@@ -126,12 +120,7 @@ an opportunity for silenced loci to escape inactivation (yellow spots)
 
 ## Genomi régiók, amik magukban szeretnek beszélgetni
 
-https://en.wikipedia.org/wiki/Topologically_associating_domain
-
-https://www.nature.com/articles/nrm3965
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8584255/
-
-
+(TAD, [topologically associated domain](https://en.wikipedia.org/wiki/Topologically_associating_domain))
 
 https://www.frontiersin.org/articles/10.3389/fcell.2021.774719/full 2021 dec
 
@@ -179,12 +168,10 @@ whole-genome level
 Fine structures ofthe 3D genome are also being investigated by combining improved CRISPR technologies with ultra-high
 resolution microscopy in mammals.
 
+CTCF and cohesin are important players in the establishment of the architectural loops that partition
+chromosomes into structural domains.
+
 ## Ha elromlik a 3D genom, jönnek a betegségek
-
-https://www.nature.com/articles/nrm.2016.138
-https://www.nature.com/articles/s41576-019-0128-0
-
-
 
 2018 július Nature Reviews Genetics https://www.nature.com/articles/s41576-018-0007-0
 
@@ -220,6 +207,71 @@ frequently caused downregulation of proximal genes1.
 ## Sejtdifferenciáció, fejlődési rendellenességek és rák 
 
 https://www.nature.com/articles/nrg.2016.112
+
+how chromatin is organized within the nucleus and how this 3D architecture influences gene regulation, cell fate decisions and evolution are major questions in
+cell biology.
+
+However, how chromatin is folded within the nucleus is still a matter of considerable debate. At the most basic level, folding of DNA into nucleosomes is well described6, but it is still unclear how individual nucleosomes interact with one
+another. 
+
+beyond individual loops, chromatin is organized in distinct structural domains, which may represent f ­unctional units of the genome7–9 Although three-dimensional (3D) architecture
+must be robust, it also needs to be flexible enough to allow marked changes to occur, such as those leading
+to mitosis
+
+Nucleosome-nucleosome interactions At the smallest scale of chromatin organization beyond the nucleosome one finds nucleosome–nucleosome interactions. For a long time, on the basis of in vitro electron microscopy, nucleosomes were thought to form arrays (often called the 30 nm chromatin fibres) with either solenoid or zigzag shapes20,21
+. However, the biological relevance of the 30 nm chromatin fibre has been increasingly called into question by several independent studies19,22–24
+. Contrary
+to expectations, nucleosomes seem to be more flexible19,24
+and are arranged in heterogeneous groups, called
+‘clutches’, in a cell-type dependent manner22
+
+Chromatin loops. A key feature of vertebrate genomes is the relatively long distances along the linear genome separating cis-regulatory elements, such as enhancers, from their target genes. In order to elicit its effect, an enhancer is thought to be brought into close spatial proximity with its target promoter through the formation of a ‘chroma-
+tin loop
+
+Long-range chromatin contacts are not limited to enhancer–promoter interactions. Spatial associations
+between actively transcribed co‑regulated genes - have also been observed. In another type of chromatin loops called ‘gene loops’ (FIG. 2a), which have been primarily identified in yeast, the transcription termination site of a gene loops back to make contact with its own promoter31
+. Gene loops have been suggested to reinforce
+the directionality of RNA synthesis from the promoter
+
+Topologically associating domains. One of the most interesting recent discoveries in this field was that chromo­somes are spatially segregated into sub-mega­base scale domains, often called topologically associating domains (TADs)7–9
+. TADs typically manifest as contig-
+uous square domains along the diagonal of Hi‑C maps (or triangles as represented in FIG. 2b), in which regions within the same TAD interact with each other much more frequently than with regions located in adjacent domains (FIG. 2b). The spatial partitioning of the genome into TADs
+correlates with many linear genomic features such as histone modifications, coordinated gene expression, associ­ ation with the lamina and DNA replication timing9. Furthermore, enhancer–promoter interactions seem to
+be mostly constrained within a TAD.
+
+TADs are thought to be conserved between different cell types9,11 and across species; however, the extent of this
+conservation is unclear.
+
+Compartmentalization of megabase-scale chromatin. At least in mammals, long-range interactions between TADs that can be located at variable distances, sometimes
+very far on the linear genome, give rise to compartment
+
+two major compartments can be further subdivided into six different subcompartment
+
+multiple TADs form a compartment,
+
+At even larger scales, chromatin is organized into individual chromosome territories (one for each chro-
+mosome), which rarely intermix
+
+dynamic nucleosome contacts form clutches and fibres. These engage in dynamic longer distance loops. Some of these loops that are established or stabilized by protein–protein contacts involving architectural (that is, CTCF and cohesin) and/or regulatory components (that is, transcription factors, Polycomb and heterochromatin proteins) give rise to structural landmarks, such as gene domains and TADs. Interaction among TADs of the same epigenomic type forms compartments and coalescence of compartments in the same
+chromosome forms chromosome territories.
+
+. Different species seem to deploy different components in order to estab-
+lish chromosome domains
+
+architectural proteins mediator, cohesin, CTCF, non-coding RNAs
+
+. Future work is required to dissect the precise
+molecular mechanisms at play and to determine whether establishing and maintaining 3D chromatin structure is
+a general role of nuclear lncRNAs.
+
+1 , chromatin dynamics contribute
+to the specification of distinct gene expression pro-
+grammes and biological functions
+
+The discovery of epigenomic chromosomal domains and of TADs has added a new dimension to our understanding of genome function and most recent analyses in the field have been directed towards
+understanding TAD formation and function
+
+https://www.nature.com/articles/nrm.2016.138 2016 nature reviews molecular cell biology
 
 We also now know that enhancers function within topologically associated domains, which are structural and functional units of chromosomes. Studying disease-associated mutations and chromosomal rearrangements in the context of the 3D genome will enable the identification of dysregulated target genes and aid the progression from descriptive genetic association results to discovering molecular mechanisms underlying disease. Understanding the molecular basis of disease opens new avenues for the development and improvement of treat­ments.
 
@@ -258,8 +310,74 @@ chromatin loops are functionally important.
 enhancers and promoters therefore seems to causally
 underlie gene activation.
 
-https://www.nature.com/articles/nrg3890
-https://www.nature.com/articles/s41586-019-1182-7
+Architectural loops subdivide chromosomes into structural domains, that is chromosomal segments within sequences that preferentially contact each other. TAD on avarage 1 Mb in length (100 kb-5Mb)
+
+smaller structural domains, called sub-TADs, with a median size of 185 kb (ranging from 40 kb to 3 Mb)59,66
+. Sub-TADs are believed
+to be dynamic and often tissue-specific
+
+topologically associted domains TAD boundaries tend to separate domains with dis­ tinct chromatin signatures, distinct gene activity and distinct replication timing57–59,73,74
+, whereas co‑regulated
+enhancers and promoters are mostly found within the
+same TAD18 (
+CTCF and cohesin are important players in the establishment of the architectural loops that partition
+chromosomes into structural domains.
+
+The way chromo­ somes fold ensures that active and inactive TADs s ­patially cluster in distinct nuclear compartments. Most often, the active regions preferentially accumulate in the nuclear interior, whereas inactive TADs accumulate at the periphery102
+
+In summary, genome structure strongly influences genome function. The looping of enhancers activates their target genes, and regulatory interactions seem to
+be primarily confined to structural domains or TADs.
+
+Therefore, it is these two levels of structural organiza­ tion in particular that need to be considered to inter­ pret genetic variation and to decipher transcription
+r ­egulatory circuits.
+
+Rearrangements such as inversions or translocations, as well as deletions of neighbouring sequences, can place an enhancer in a new genomic context where, owing to its promiscuous nature, it can activate a new target gene. This effect frequently ­happens
+in cancers of the blood
+
+question is how to systematically  assign function to the ever-­expanding collection of variants associated with disease? One strategy is to link identified risk variants to now widely available genome-wide epigenetic maps and to search for variants that colocalize with presumptive regula­
+tory sequences29
+
+ Larger chromo­ somal rearrangements often disrupt boundar­ies and merge the TADs that carry the chromosomal breakpoints58,92,93 (FIG. 4). As a consequence, new genes and enhancers enter each other’s search space and can form new regulatory circuits130
+
+Further support that intact boundaries are impor­
+tant for health comes from studies showing that CTCF and the cohesin subunits are frequently mutated in c ­ancer131–134
+
+architectural loops and structural domains are cr ­ucial for enhancers to act on the appropriate genes and show that their disruption can alter regulatory contacts
+and lead to disease.
+
+https://www.nature.com/articles/nrg3890 Nature Reviews Genetics 2015 március
+
+variation in local rates of mutations can affect both the evolution of genes and their function in normal and cancer cells.
+
+Chromatin organization contributes to regional variation in mutation rates, but its contribution differs among mutation types. In both germline and somatic mutations, base substitutions are more abundant in regions of closed chromatin, perhaps reflecting error accumulation late in replication. By contrast, a distinctive mutational state with very high levels of insertions and deletions (indels) and substitutions is enriched in regions of open chromatin. These associations indicate an intricate interplay between the nucleotide sequence of DNA and its dynamic packaging into chromatin.
+
+Recent studies have indicated that chromatin organi‑ zation is one of the causes of RViMR3
+
+complex‑ ity of the correlation between chromatin and mutation rates: some studies support a link between open chro‑ matin and repressed mutations39–42,49–52
+, potentially due
+to enhanced repair, and some argue for a link between closed chromatin and decreased mutation rates42
+, poten‑
+tially due to lack of exposure to mutagens. Other studies highlight patterns that are base-specific40,46
+, depend on epigenomic modifications in a genomic region47 , or are
+shaped by selection46,
+
+intrachromosomal regional variation in mutation rates is affected by chromatin state for many cancer types. The heterochromatin-associated repressive histone modification H3K9me3 accounted for more than 40% of variation. Altogether, chromatinrelated features accounted for more than 55% of vari‑ ation (TABLE 2). In fact, elevated mutation rates had a strong positive association with indicators of closed
+chromatin for various cancers
+
+1 . To
+explain this positive association of closed chromatin with elevated substitution rates, several hypotheses were proposed, including differing accessibility to DNA repair complexes, variation in the ability to signal repair and increased exposure to mutagens at the nuclear periphery15
+.
+Chromatin structure and organization varies across the genome in patterns that reflect the expression and activ‑ ity of the underlying DNA. Recent studies have shown that chromatin organization is also strongly correlated with the variation in both germline and somatic muta‑ tion rates. For some of the most frequently occurring mutations, such as single-base substitutions, their rates are suppressed in open, transcriptionally active chro‑ matin. This supports a model that DNA in more open chromatin is either mutated less frequently or repaired
+more frequently,
+
+Genome-wide multivariate segmentation analyses of chromatin structure and mutation rates have revealed a more complex, nuanced and multi­faceted
+picture
+
+Importantly, the associations between chromatin structure and mutation rates point to candidates for key determinants of the mutation rate variation, such as alterations in enzymes that modulate chromatin
+state in certain cancers.
+ 
+ it is already clear that the associations between mutation rates and chromatin
+point to a complex relationship between the DNA sequence and its dynamic packaging into nucleosomes and higher-order structures18.
 
 ## Kognitív folyamatok és neurológiai betegségek 
 
