@@ -2,7 +2,7 @@
 
 Az emberi genomot egy 2 méter hosszú DNS szál alkotja, aminek parányi sejtekben kell elférnie. Több mint 100 éve tudjuk, hogy az örökítőanyag kromoszómákba rendeződik, de a genom pontos térbeli szerkezetét és ennek működését csak az elmúlt években kezdjük megérteni.
 
-Kutatók erőfeszítéseinek hála feltárult a 3D genom egyedfejlődésben és betegségekben és vírusos fertőzésekben betöltött szerepe.
+Kutatók erőfeszítéseinek hála feltárult a 3D genom egyedfejlődésben és betegségekben és vírusos fertőzésekben betöltött szerepe....
 
 ## A DNS-t folymatosan be és ki kell csomagolni
 
