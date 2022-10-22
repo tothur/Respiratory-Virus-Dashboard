@@ -1,175 +1,53 @@
 # 3 dimenzióban kell gondolkodnunk, ha meg akarjuk érteni a DNS működését
 
-Az emberi genomot egy 2 méter hosszú DNS szál alkotja, aminek parányi sejtekben kell elférnie. Több mint 100 éve tudjuk, hogy az örökítőanyag kromoszómákba rendeződik, de a genom pontos térbeli szerkezetét és ennek működését csak az elmúlt években kezdjük megérteni.
+Az emberi genomot egy összességében két méter hosszú DNS szál alkotja, aminek parányi sejtmagokban kell elférnie. Több mint 100 éve ismert, hogy az örökítőanyag [kromoszómákba](https://en.wikipedia.org/wiki/Chromosome) rendeződik, de a genomot csomagoló térbeli szerkezetet és működését csak az elmúlt években kezdjük precízen megérteni.
 
-Kutatók erőfeszítéseinek hála feltárult a 3D genom egyedfejlődésben és betegségekben és vírusos fertőzésekben betöltött szerepe....
+Új vizsgálati megoldások, mint szuperrezolúciós mikroszkópok és a újgenerációs genomszekvenáláshoz kötődő technikák betekintést adtak a kutatóknak a DNS és fehérjék által létrehozott 3D genomba, aminek zavarai betegségek kialakulásához járulhatnak hozzá és vírusos fertőzésekben is jelentős szerepet játszik.
 
-## A DNS-t folymatosan be és ki kell csomagolni
+Több milliárd éve élnek a Földön olyan mikroorganizmusok, például az élővilág [egyik nagy csoportját](https://qubit.hu/2020/01/10/titokzatos-mikroorganizmusok-probalnak-tulelni-a-fold-egyik-legelhetetlenebb-pontjan) alkotó archeák, amelyek DNS-üket fehérjék által alkotott struktúrák köré csomagolják. Legújabb [kutatások alapján](https://www.nature.com/articles/s41564-022-01245-2#Sec9) az összefoglalóan [kromatinnak](https://en.wikipedia.org/wiki/Chromatin) nevezett DNS-fehérje szerkezetek nélkülözhetetlenek nekik a magas hőmérsékletű környezetek, például hőforrások tolerálásához.
 
-[kromoszómák](https://en.wikipedia.org/wiki/Chromosome)
-[kromatin](https://en.wikipedia.org/wiki/Chromatin)
-a nukleoszómákat [hiszton fehérjék](https://en.wikipedia.org/wiki/Histone) alkotják
+A komplex élet, az állatokat, növényeket, gombákat és számtalan egysejtűt magában foglaló eukarióták ezeknek az archeáknak egy csoportjából alakultak ki. Ezek az archeák már rendelkeztek azokkal a [hiszton](https://en.wikipedia.org/wiki/Histone) fehérjékkel, amelyek azokat a nukleoszómáknak nevezett szerkezeteket létrehozzák, amik köré a DNS fel tud tekeredni. Az eukarióták evolúciójuk során erre az alapra aztán egy bonyolult kromatin gépezetet építettek, ami az archeákéhoz képest hatalmas genomjaik kompaktabbá csomagolásában, gének kifejeződésének szabályozásában és a DNS működéséhez szükséges más funkciókban játszik szerepet.
 
-https://www.mdpi.com/1422-0067/22/21/11585 2021 okt
+## Hogyan épül fel a kromatin?
 
-An enormous amount of hierarchical compaction is required to produce three-dimensional (3D) chromatin structures from one-dimensional (1D) linear DNA sequences inside the nucleus under physical constraints [9–11]. The nucleus of a human cell contains 46
-denselypacked chromosomes. eA chromosome has a distinct status in the nucleus, known as a ‘chromosome territory’, which is further partitioned into chromosomal compartments (A/B), topologically associ-
-ated domains (TADs), and chromatin loops
+Az eukarióta sejtekben, így sajátjainkban is 146-147 bázispár hosszú DNS tekeredik a nukleoszóma szerkezetek köré, amiket nyolc hiszton fehérje épít fel. A hiszton fehérjéken van egy régió, amit [enzimek](https://en.wikipedia.org/wiki/Histone-modifying_enzymes) képesek kémiailag módosítani, ami leggyakrabban négy típusba (acetiláció, metiláció, foszforiláció és ubiquitináció) [sorolható](https://en.wikipedia.org/wiki/Histone#Modification). 
 
-The 3D structure of the nucleus is determined by the interplay of the cytoskeleton–nucleus links, integration and composition of the nuclear lamina, and degree of DNA packaging in the nucleus (Figure 2) [34–36]. In the polarized shape of a cell, the apical actin stress fibers compress the nucleus into a flat ellipsoid shape [37,38]; however, in the isotropic shape, the relaxed, depolymerized actin
-results in the loss of mechanical tension, thus resulting in a spherical nucleus.  mechanical regulation of the nucleus has the potential to change the chromosome structure and facilitate interaction between chromosomes and the nuclear envelope, and between
-genes and intermingling chromosomes.
+Ezek a módosítások képesek befolyásolni a hisztonok DNS-el történő interakcióját, ami ezáltal gének kifejeződését és más genetikai folyamatokat szabályoz, és együttesen [alkotja](https://www.nature.com/articles/s41592-020-0758-3) a "hiszton kódot". Egyes hiszton módosítások, amint egy 2020-ban a Nature Methods-ban megjelent [tanulmány összefoglalja](https://www.nature.com/articles/s41592-020-0758-3) egybevágnak a genom aktív vagy nem aktív régióival, és ezért a kromatin nagyobb skálájú szerkezetére is hatással vannak. A 10 nanométer széles nukleoszómákat egymástól néhánytól 80 bázispárig terjedő hosszúságú linker-DNS [választja el](https://www.amazon.com/Molecular-Biology-Sixth-Bruce-Alberts/dp/0815345240), de a nukleoszómák átlagosan 200 bázispáronként ismétlik egymást. 
 
-Nature 2017 [4D nucleome projekt](https://www.nature.com/articles/nature23884) 
+Az is [világos lett](https://www.science.org/doi/10.1126/sciadv.aay4055) az elmúlt néhány évben, hogy a kromatin egy bizonyos mérettartományban [nagyon nem úgy épül fel](https://www.nature.com/articles/s41592-020-0758-3), ahogy az a molekuláris biológiai tankönyvekben le van írva. A nukleoszómák egymás utánisága ugyanis kísérletek alapján nem hoz létre egy 30 nanométer széles kromatinszálat. Ehelyett a nukleoszómák [szuperrezolúciós mikroszkópos](https://en.wikipedia.org/wiki/Super-resolution_microscopy) vizsgálatok alapján csoportokat (nucleosome clutches) alkotnak, magyarázza a Nature Methods-ban közölt tanulmány, amik néhány ezer bázispárnyi DNS-t tartalmaznak.
 
-A folyamatban lévő [4D nucleome projekt](https://www.4dnucleome.org/#) keretében eddig 703 peer-reviewed [tanulmány született](https://pubmed.ncbi.nlm.nih.gov/collections/60033344/?sort=pubdate)
+Egy, a Science Advances folyóiratban Kai Huang és kollégái által 2020-ban [közölt kutatás](https://www.science.org/doi/10.1126/sciadv.aay4055) megerősíti a nukleoszóma csoportok létét, és azt állítja, hogy a nukleoszóma csoportok nagyobb skálán fa alakú struktúrákba rendeződhetnek biológiai funkciójuk teljesítéséhez.
 
-4D Nucleome Network aims to develop and apply approaches to map the structure and dynamics of the human and mouse genomes in space and time with the goal of gaining deeper mechanistic insights into how the nucleus is organized and functions. The project will develop and benchmark experimental and computational approaches for measuring genome conformation and nuclear organization, and investigate how these contribute to gene regulation and other
-genome functions. 4DN Network will develop a set of approaches to map the structures and dynamics of the genome and to relate these features to its biological
-activities. 
+A kromatin sematikus illusztrációja a fa alakú struktúrákkal
+Forrás: DOI: 10.1126/sciadv.aay4055
 
-## Hogy néz ki akkor valójában a genomunk? Nem úgy, ahogy a tankönyvben van.
+Bár ennek igazolásához további kutatások szükségesek, [lehetséges](https://www.science.org/doi/10.1126/sciadv.aba8811?rss=1), hogy a nagy, több tízezer bázispár hosszú régiókba rendeződött nukleoszóma csoportok [alkotják](https://www.nature.com/articles/s41592-020-0758-3) a még nagyobb kromatin struktúrákat, mint a géneket és szabályozóelemeket egymáshoz [közel helyező](https://www.frontiersin.org/articles/10.3389/fcell.2021.774719/full) kromatin hurkok (chromatin loops), illetve úgynevezett topológiailag asszociált doméneket ([TAD](https://en.wikipedia.org/wiki/Topologically_associating_domain), topologically associated domain).
 
-https://www.science.org/doi/10.1126/sciadv.aay4055 2020 jan
+https://www.frontiersin.org/articles/10.3389/fcell.2021.774719/full
+TADs are contiguous regions with more frequent chromatin interactions within the region than those with the other region in mammalian genomes...TADs allow long-range chromatin interaction 
 
-With the textbook view of chromatin folding based on the 30-nm fiber being challenged, it has been proposed that interphase DNA has an irregular 10-nm nucleosome polymer structure whose folding philosophy is unknown. Nevertheless, experimental advances suggest that this irregular packing is associated with many nontrivial physical properties that are puzzling from a polymer physics point of view. Here, we show that the reconciliation of these exotic properties necessitates modularizing three-dimensional genome into tree data structures on top of, and in striking contrast to, the linear topology of DNA double helix. These functional modules need to be connected and isolated by an open backbone that results in porous and heterogeneous packing in a quasi–self-similar manner, as revealed by our electron and optical imaging. Our multiscale theoretical and experimental results suggest the existence of higher-order universal folding principles for a disordered chromatin fiber to avoid entanglement and fulfill its biological functions.
+https://www.science.org/doi/10.1126/sciadv.aba8811?rss=1
+have revealed partitioning into several hundred kilobases to a few megabase-sized topologically associating domains (TADs) (6, 7). TADs are genomic segments with higher intra-TAD contacts compared to inter-TAD contacts. At higher levels of organization, TADs group into ~10- to 20-Mb genomic A and B compartments. A compartments denote deoxyribonuclease I–sensitive, transcriptionally active “open” chromatin, and B compartments denote transcriptionally repressed, “closed” chromatin (8). Compartments are generally correlated with euchromatin or heterochromatin, and nuclear interior or lamina/nucleolar contacts for A and B compartments, respectively (9).
 
-For example, it had previously been widely believed that chromatin is folded into 30-nm fibers (1), which are assembled into discrete higher-order structures. However, this regular folding hierarchy has been highly debated [see recent review (2) and references therein] and was not observed in the state-of-theart electron microscopy tomography (ChromEMT) experiment (3), which instead revealed a highly disordered chromatin polymer that is heterogeneously packed even down to the level of single nucleosomes in situ. This structural heterogeneity of chromatin has been suggested by partial wave spectroscopy (PWS) 
-
-(N) Schematic presentation of the interplay between transcription and chromatin packing. High DNA density (inactive) regions are highlighted in blue, and low DNA density (active) regions are highlighted in red. For a simple demonstration, we scaled down all the domains, which are expected to contain more
-nucleosomes in reality. 
-
-At the nanoscale, concurring with recent study (3), we did not observe the 30-nm fiber and instead revealed a granular packing structure with prevailing nanodomains
-of a peak radius around 70 nm. Our multiscale imaging suggests a quasi–self-similar picture of chromatin packing. Using heat shock as an example, we demonstrated that the average heterogeneity characterized by a mass fractal dimension is sensitive to environmental change and could serve as an indicator of chromatin folding state. 
-
-We have combined theoretical and experimental efforts to understand chromatin topology, statistics, scaling, and their couplings at the single-cell level. Our multiscale results, from kilobase-level nanoclusters to 100 Mb–level chromosome territories, provide an integrative view of higher-order chromatin folding as an alternative thinking to the classical 30-nm fiber–based picture. Our prediction that chromatin folds into tree-like topological domains connected by an active backbone explains and reconciles a wealth of exotic properties of this living biopolymer that are alien to the common sense of polymer physics. It is remarkable that despite the distinct folding modes at different scales, chromatin is able to maintain alternation between active and inactive states across many scales both in space and on DNA sequence, in a quasi–self-similar manner. The non-Gaussian folding statistics and global coupling between chromatin properties suggest that interphase DNA explores the great genomic landscape as a complex network rather than a simple polymer. The possibility of chromatin having tree data structures and universal folding principles opens an exciting new paradigm to understand genomic organization and presents many new questions, the answering of which would require collaborations between experimentalists and theorists from different fields. We hope that our insights in this paper could inspire future interdisciplinary efforts on this grand challenge of life science.
-
-https://www.nature.com/articles/s41592-020-0758-3 2020 apr
-
-Human DNA is 2 m long. How this DNA undergoes enormous compaction to fit into the tiny space of a cell’s nucleus (~20 μm in diameter) has been among the major mysteries
-of cell biology. It has been known for decades that repeating units of nucleosomes (146 bp of DNA wrapped around a core octamer of histone proteins) organize into 10-nm “beads on a string”1. However,
-further compaction is needed to fit the DNA into the nucleus. The longstanding model posits that chromatin folds into higher-order structures in a hierarchical manner, which includes the folding of the 10-nm fibers into 30-nm fibers by the linker histone H1 and subsequent folding into larger structures2. Histones, in addition to compacting DNA, can also actively con-
-trol gene expression through post-translational modifications to their tails that collectively generate an epigenetic “histone code”3
-. Specific histone ‘marks’ correlate with active versus silenced regions of the genome and hence are thought to give rise to different levels of chromatin compaction and higher-order structure3. 
-
-Nucleosomes are only 10 nm and <200 bp in size, the highly compacted fibers postulated by the textbook model are not much larger, and individual genes can be as small as few kilobases, containing only tens of nucleosomes.
-
-Super-resolution imaging further revealed nanodomains of nucleosomes (nucleosome clutches) of around a few kilobases in genomic size, as well as the clustering of these nanodomains in close proximity to form larger domains with a size range similar to that of TADs.
-
-. All these experiments put into doubt the hierarchical fold-
-ing model of chromatin and the existence of a regular 30-nm fiber structure. The most recent evidence against the hierarchical folding and 30-nm fiber model came from super-resolution imaging of nucleosomes in intact nuclei (see more below)35
-and subsequently from electron tomographic imaging of DNA.
-
-Super-resolution microscopy extended the spatial resolution of a light microscope from the ~250 to the 10–30-nm length scale,
-breaking what had been a fundamental limit. 
-
-STORM has been used to visualize the global organization of nucleosomes inside the nucleus (Fig. 2)35
-. These images revealed
-structures at varying length scales ranging from tens to hundreds of nanometers (Fig. 2a–c)35
-. The striking aspect of these early
-images was the absence of a prominent 30-nm fiber–like structure. Instead, nucleosomes were shown to form heterogeneous groups, which were named nucleosome clutches (Figs. 1 and 2b)35
-. Based
-on their spatial size (~30–50 nm) and the number of nucleosomes they contain, clutches correspond to a genomic length scale of a few kilobases, which is at the current limit of the spatial resolution of STORM. Clutches were interspersed with nucleosome-poor regions, and multiple clutches clustered in close proximity, forming larger “clutch domains” in the size range of several hundred nanometers (a genomic scale of tens of kilobases to megabases; Figs. 1 and 2a–c)39
-Clutch domains 1 µm Clutches 1 µm . It would be interesting to determine in future
-whether these clutch domains correspond to TADs and loops iden-
-tified using Hi-C. 
-
-The hetero-
-geneous organization of nucleosomes in the form of nucleosome clutches uncovered by STORM is in stark contrast to the textbook
-model of ordered, hierarchical folding of the chromatin fiber. silencing histone marks (H3K27me3) formed larger nanodomains that localized to more compacted DNA regions
-than active marks (H3K9ac, H3K4me3)4. . 
-
-It is likely that the epigenetic state
-of the histones alone likely influences nucleosome packing by modulating the electrostatic charges and influencing nucleosome– nucleosome and nucleosome–DNA interactions. In addition, these modified histones may be bound by additional repressive factors, such as the Polycomb group proteins, that can further modify chromatin folding and compaction. Second, Hi-C showed that the compartmentalization of the
+Second, Hi-C showed that the compartmentalization of the
 genome into TADs and loops is dependent on the architectural proteins cohesin and CTCF, which demarcate TAD and loop boundaries. However, super-resolution imaging and chromatin tracing revealed a more complex picture of TAD architecture in single cells, with highly variable boundaries that persisted after cohesin depletion48
 . More recent studies also revealed a similar picture in which
 neighboring TADs intermingled extensively with each other.
-
-. Overall, architectural proteins such as
-cohesin and CTCF do seem to play an important role in genome organization, but the precise principles of how these proteins coop-
-erate to organize the genome are still being uncovered. 
 
 Third, at a larger scale, the genome is compartmentalized and spatially segregated into active euchromatin and inactive heterochromatin, but it is likely that this binary classification is over-simplistic, and there are different flavors of hetero- and euchromatin with
 different levels of compaction and spatial organization. . Hence, although the
 organization of the genome is an important determinant of tran-
 scription, transcription itself can also shape genome organization.
+https://www.nature.com/articles/s41592-020-0758-3
 
-We are at an exciting time in which the development of new methods, including light and electron microscopy as well as genomic approaches, are elucidating longstanding questions about how the
-folding of the genome relates to gene activity. Further, it is essential to bridge the gap in the throughput of the imaging and genomics methods.
+Maga a sejtmag alakja is [dinamikusan változik](https://www.mdpi.com/1422-0067/22/21/11585), amit a DNS csomagolódásának mértéke és a sejtváz (citoszkeleton) határoz meg. A sejtmag alakjának szabályozása a kromoszómák struktúrját is képes megváltoztatni, és különböző kölcsönhatásokat okozni a genom egymástól távoli régiói közt.
 
-future advances in single-cell Hi-C85
-can potentially enable more direct
-comparison between imaging and genomic approaches. Finally, the integration of genomic and imaging data through data-driven modeling and the development of de novo models compatible with both types of datasets can further guide our understanding of the
-mechanisms that shape genome organization.
+Még [januárban írtunk](https://qubit.hu/2022/01/12/biologiai-alapelvet-irhat-at-egy-friss-kutatas-megsem-veletlenszeruek-a-dns-mutacioi) egy, a Nature-ben közölt kutatásról, ami szerint a biológiában elterjedt modellélőlény, a lúdfű genomjában a mutációk eloszlása nagyon nem véletlenszerű, ennek pedig 90 százalékát a genom 3D szerkezetét is befolyásoló epigenetikai tényezők okozzák, például a hiszton kód.
 
-he spatial resolution of most super-resolution microscopy methods is still not at the molecular scale and hence is not sufficient to resolve individual nucleosomes. New advances that provide ultra-high resolution, such as 3D MINFLUX88
-, may potentially be revolutionary for studying the
-smallest scales of genome folding. Similarly, tools making it possible to manipulate and rewire the genome at will are at their infancy51,89 New methods that can disrupt or form specific loops upon stimulation89
-, change the nucleosome-level compaction of chromatin
-fiber at specific loci, or dissolve or reform new chromatin domains will open a new window into genome structure, allowing us to go beyond correlations and study the cause-and-effect relationship
-between genome organization and transcriptional activation.
+A 2010-es években indult [4D nucleome projekt](https://www.4dnucleome.org/#) az ember és az egér genom térbeli struktúrájának és ennek időben dinamikus változásának feltárását [célozta meg](https://www.nature.com/articles/nature23884). A program keretében eddig 703 publikált [tanulmány született](https://pubmed.ncbi.nlm.nih.gov/collections/60033344/?sort=pubdate), amik arról árulkodnak, hogyan vesz részt a 3D genom a génszabályozásban és más genomi funkciókban, és ezt milyen innovatív technológiákkal lehet vagy lehetne a jövőben vizsgálni.
 
-https://www.science.org/doi/10.1126/sciadv.aba8811?rss=1 2020 szept
-
-"we use live- and fixed-cell 3D super-resolution and scanning electron microscopy to analyze structural and functional nuclear organization in somatic cells. We identify chains of interlinked ~200- to 300-nm-wide chromatin domains (CDs) composed of aggregated nucleosomes that can overlap with individual topologically associating domains and are distinct from a surrounding RNA-populated interchromatin compartment. Our findings establish CDs as physical and functional modules of mesoscale genome organization"
-
-The genome in mammalian cell nuclei is hierarchically organized at various scales correlating with diverse genomic functions (1, 2). At the base pair to kilobase pair levels, DNA is wrapped around core histones to create nucleosomes (3). At the 100-Mb scale, entire chromosomes harbor distinct territories within the nucleus with transcriptionally active euchromatic and inactive heterochromatic segments tending to segregate into specific nuclear subregions (4). Local chromatin organization ranging from several kilobases to 100 Mb (“mesoscale”) remains poorly understood (5). Advances in next-generation sequencing–based chromosome conformation capturing methods (3C/Hi-C) have revealed partitioning into several hundred kilobases to a few megabase-sized topologically associating domains (TADs) (6, 7). TADs are genomic segments with higher intra-TAD contacts compared to inter-TAD contacts. At higher levels of organization, TADs group into ~10- to 20-Mb genomic A and B compartments. A compartments denote deoxyribonuclease I–sensitive, transcriptionally active “open” chromatin, and B compartments denote transcriptionally repressed, “closed” chromatin (8). Compartments are generally correlated with euchromatin or heterochromatin, and nuclear interior or lamina/nucleolar contacts for A and B compartments, respectively (9).
-
-Schematic CD model. Nucleosomes with active histone marks (green dots) and associated TF and RNA polymerase complexes are located at the outer fringes of CDs. In contrast, nucleosomes with repressive histone marks tend to relocate, either because of charge change or loss of complex binding, toward the CD core (red dashed circle), thereby becoming inaccessible to the transcriptional machinery. Local decompaction caused by DNA polymerase remodeling activity in S phase (dark blue ovals, left) may provide
-an opportunity for silenced loci to escape inactivation (yellow spots)
-
-## Genomi régiók, amik magukban szeretnek beszélgetni
-
-(TAD, [topologically associated domain](https://en.wikipedia.org/wiki/Topologically_associating_domain))
-
-https://www.frontiersin.org/articles/10.3389/fcell.2021.774719/full 2021 dec
-
-genome of a eukaryotic organism is comprised of a supra-molecular complex of chromatin fibers and intricately folded three-dimensional (3D) structures. Chromatin architecture plays important roles in DNA replication, gene expression, and genome integrity. Higher-order chromatin organizations like chromosome territories (CTs), A/B compartments, topologically associating domains (TADs), and chromatin loops vary among cells, tissues, and species depending on the developmental stage and/or environmental conditions (4D genomics). Every chromosome occupies a separate territory in the interphase nucleus and forms the top layer of hierarchical structure (CTs) in most of
-the eukaryotes. 
-
-TADs are the structural units of chromatin. Chromatin architecture like TADs as well as the local interactions between promoter and regulatory elements correlates with the chromatin activity, which alters during environmental stresses due to relocalization of the architectural proteins. Moreover, chromatin looping brings the gene and regulatory elements in close proximity for interactions. The intricate relationship between nucleotide sequence and chromatin architecture requires a more comprehensive understanding to unravel the genome organization and genetic plasticity. During the last decade, advances in chromatin conformation capture techniques for unravelling 3D genome organizations have improved our understanding of genome biology. However, the recent advances, such as Hi-C and ChIA-PET, have substantially increased the resolution, throughput as well our
-interest in analysing genome organizations
-
-Eukaryotic genome organization can be observed at three levels i) linear genome: the nucleotide sequence deciphered by DNA sequencing, ii) epigenome: representing the additional information added due to the modified bases and/or histone proteins which help regulate gene expression, and iii) 3D structure of the genome: representing the arrangement of chromatins/chromosomes in the nucleus (Bonev and Cavalli, 2016). These genome-level organizations are being studied with the help of recent advances in imaging and molecular biology techniques. To understand 3D genome structure, techniques like chromosome conformation capture (3C), chromosome conformation capture-on-chip (4C), chromosome conformation capture carbon copy (5C), chromatin interaction analysis by paired-end tag (ChIA-PET) sequencing, highthroughput chromosome conformation capture (Hi-C), and their derivatives are being used. In eukaryotes, chromatin is packed into nucleosomes wherein
-histone proteins make up the largest component. DNA wrapped around a histone octamer (two units of each of the four core histones H2A, H2B, H3, and H4) sealed by a linker histone (H1)
-builds the structural constituent nucleosome to form chromatin.
-
-Studies show the hierarchical organization of genomes, wherein chromosome territories (CTs) are at the top of the hierarchical structure, followed by the chromosome compartments, topologically associating domains (TADs) and gene body/
-chromatin loops
-
-Although most ofthe 3D information on genome organization (e.g., LADs, NADs, TADs, etc.) in animals is comparable to that of plants, our knowledge of plant chromatin
-architecture is still in its infancy
-
-Dzuring mitosis interphase, each chromosome occupies an exclusive and limited domain in the nucleus called chromosome
-territory (CT). CT is further subdivided into chromosomal arm territories, and a contact matrix of chromosome arms is more intricate than the contact matrix of
-the chromosome.
-
-Chromosomal compartments are formed due to the genomewide interactions between TADs and epigenetic signatures, which have been discovered in both animals and plants while analysing Hi-C data. Two spatial compartments, namely A and B compartments, of chromosomes, have been reported. While A compartment is associated with open/active chromatin, the B
-compartment is associated with closed/inactive chromatin
-
-mammalian TADs are highly conserved in different tissues across the species (Dixon et al., 2012; Sexton and Cavalli, 2015; Vietri Rudan, et al., 2015; Grob and Grossniklaus, 2017), plant TADs are not conserved across the species (Dong et al., 2017). TADs are contiguous regions with more frequent chromatin interactions within the region than those with the other region in mammalian genomes (Dixon et al., 2012)(Figure 1A). TADs allow long-range chromatin interaction for target specificity of the remote cis-
-regulatory elements in plant and the human genome 
-
-Animals TAD boundaries are reported to be bound by the insulator protein CCCTC-binding factor (CTCF) and specific epigenetic marks (Dixon et al., 2012; Sexton et al., 2012; Rao et al., 2014; Tang et al., 2015), which affect chromatin functions and
-transcriptional activity.  chromatin loops are formed due to physical interaction between cis-acting elements and the genes that are brought into close spatial proximity, which are vital for
-gene regulation
-
-RNAs and multivalent proteins play vital roles in the formation of chromatin loops.
-
-advances/improvements in bioimaging and biochemical methods over the last few decades have unveiled 3D genome architectures in animals and plants at a rapid speed (Sexton and Cavalli, 2015; Ouyang et al., 2020). The 3D genome mapping approaches can be broadly divided into two categories. The first category of approaches is based on cytology/microscopy, which utilizes fluorescent dye to label DNA/chromatin and/or visualization of the spatial chromatin organization using a microscope (Probst, 2018). Combining microscopy with fluorescent in situ hybridization (FISH) boosted the progress in understanding how the spatial organization ofCTs affects gene expression within the nucleus (Zhang and Wang, 2021). The second group of approaches utilizes next-generation sequencing
-(NGS), 
-
-the advent of super-resolution microscopy (SRM) enables us to investigate
-nano-scale chromosome organizations in vivo.
-
-Hi-C : Relies on restriction enzyme to break the chromatin into smaller fragments, uses NGS approach to investigate both short- and longrange chromatin interactions at
-whole-genome level
-
-Fine structures ofthe 3D genome are also being investigated by combining improved CRISPR technologies with ultra-high
-resolution microscopy in mammals.
-
-CTCF and cohesin are important players in the establishment of the architectural loops that partition
-chromosomes into structural domains.
+A Nature Methods tanulmány [szerzői szerint](https://www.nature.com/articles/s41592-020-0758-3) We are at an exciting time in which the development of new methods, including light and electron microscopy as well as genomic approaches, are elucidating longstanding questions about how the
+folding of the genome relates to gene activity. Further, it is essential to bridge the gap in the throughput of the imaging and genomics methods. A szuperrezolúciós mikroszkópok mellett kritikus szerepet játszott ebben az új generációs szekvenáláson alapuló [Hi-C](https://en.wikipedia.org/wiki/Hi-C_(genomic_analysis_technique)) technológia és változatai is, aminek lényege, hogy a kromatint [enzimekkel](https://en.wikipedia.org/wiki/Restriction_enzyme) apró darabokra törik szekvenálásához és térbeli szerkezetének [felderítéséhez](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1913-y), ami többek közt a TAD-ok felfedézéshez járult hozzá. 
 
 ## Ha elromlik a 3D genom, jönnek a betegségek
 
@@ -458,3 +336,11 @@ Influenza vírusokkal 2018-ban végzett vizsgálatok arra utalnak, hogy a vírus
 A kutatók szerint a 3D genom betegségekkel időben összefüggő változásának vizsgálata segíthet még jobban megérteni, hogyan okozzák a betegséget a vírusos fertőzések. Emellett azt a lehetőséget is biztosíthatják, hogy a változások biokémiai jeleit megtalálhassuk és terápiás célpontokat keressünk ezeknek a fertőzéses megbetegedéseknek a kezelésére.
 
 *Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2021/08/17/ha-a-foldon-kivul-akar-tulelni-az-emberiseg-nem-uszhatja-meg-a-genszerkesztest
+
+https://qubit.hu/2022/06/08/a-szintetikus-biologia-koraban-elunk-de-a-mesterseges-elet-letrehozasa-meg-mindig-csak-alom
+
+https://qubit.hu/2022/01/12/biologiai-alapelvet-irhat-at-egy-friss-kutatas-megsem-veletlenszeruek-a-dns-mutacioi
+
+https://qubit.hu/2021/04/27/hamarabb-teszi-labat-az-ember-a-marsra-mint-egy-valos-jurassic-parkba
