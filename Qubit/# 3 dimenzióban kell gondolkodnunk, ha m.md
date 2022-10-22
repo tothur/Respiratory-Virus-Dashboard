@@ -51,50 +51,11 @@ folding of the genome relates to gene activity. Further, it is essential to brid
 
 ## Ha elromlik a 3D genom, jönnek a betegségek
 
-2018 július Nature Reviews Genetics https://www.nature.com/articles/s41576-018-0007-0
-
+https://www.nature.com/articles/s41576-018-0007-0
 Structural and quantitative chromosomal rearrangements, collectively referred to as structural variation (SV), contribute to a large extent to the genetic diversity of the human genome and thus are of high relevance for cancer genetics, rare diseases and evolutionary genetics. Recent studies have shown that SVs can not only affect gene dosage but also modulate basic mechanisms of gene regulation. SVs can alter the copy number of regulatory elements or modify the 3D genome by disrupting higher-​order chromatin organization such as topologically associating domains. As a result of these position effects, SVs can influence the expression of
-genes distant from the SV breakpoints, thereby causing disease. . Structural and quantitative chromo­somal rearrangements, collectively referred to as structural variation (SV), include deletions, duplications, inversions, insertions and translocations and make up the majority of varying nucleotides among
-human genomes4.
-
-Intra-​TAD SVs Structural variation (SV) that occurs within topologically associating domains (TADs). Within a regulatory domain, SVs of regulatory elements can change the enhancer dosage and may result in a tissue-​specific loss of function (deletion) or a gain of function (duplication) of their endogenous target gene, which can be located anywhere
-within the TAD.
-
-Inter-​TAD SVs Structural variations (SVs) that occur between topologically associating domains (TADs). Such SVs affect several regulatory domains and have the potential to disrupt and rearrange the complex 3D chromatin organization of a locus by repositioning TAD boundaries, genes and enhancer elements. These position effects may lead to TAD fusion (deletion), neo-​TAD formation (duplications) or TAD shuffling (inversion and/or translocation).
-
-TAD shuffling The reordering of topologically associating domains (TADs) within the genome. Inversions that cross TAD boundaries or translocations can result in the fusion of two regulatory domains that do not naturally belong together, causing enhancer adoption. At the same time, these structural variations can result in regulatory loss of function by removing enhancer elements
-from their target genes.
-
-https://www.nature.com/articles/nbt.3863 2017 marc. Nature Biotechnology
-
-Genetic variants associated with common diseases are usually located in noncoding parts of the human genome. DNA accessibility and various epigenetic modifications have been associated with regulatory function
-
-While active regulatory elements are characterized by nucleosome-free chromatin, large-scale chromatin immunoprecipitation sequencing (ChIP-seq) analyses revealed that the histones that comprise the nucleosomes flanking these nucleosomedepleted regions harbor characteristic post-translational modifications. These modifications, collectively referred to as the “histone code,” cor-
-relate with specific regulatory or transcriptional activities14–18 
-
-In order to compile a catalog of all the regulatory elements in the human genome, the ENCODE consortium produced massive data sets that profiled accessible DNA regions (mainly by analyzing DNase I hypersensitive (DHS) sites) and numerous histone marks genome-wide
-in a large panel of ~150 different human cell lines1. Encode also measured chromatin-binding profiles for dozens of TFs and transcriptional co-activators24
-
-Genome editing tools are transforming our ability to examine the function of noncoding elements in their native genomic contexts. Two genome-editing techniques have matured in recent years; programmable DNA-binding proteins named TALEs (transcription activator-
-like effectors) and RNA-based DNA-targeting CRISPR–Cas9 systems
-
-CRISPR–Cas9 and TALEN tools have also been applied on a small scale to disrupt chromatin loops and CTCF-associated TAD boundar-
-ies. CRISPR–Cas9 and TALE tools can be used also for epigenome editing. 6 fused TALE to the LSD1 histone demethylase to remove enhancer-associated histone modifications on H3K4 at selected target loci. They showed that this local manipulation of chromatin state indeed resulted in inactivation of the targeted enhancers and
-frequently caused downregulation of proximal genes1.
-
-## Sejtdifferenciáció, fejlődési rendellenességek és rák 
+genes distant from the SV breakpoints, thereby causing disease.
 
 https://www.nature.com/articles/nrg.2016.112
-
-how chromatin is organized within the nucleus and how this 3D architecture influences gene regulation, cell fate decisions and evolution are major questions in
-cell biology.
-
-However, how chromatin is folded within the nucleus is still a matter of considerable debate. At the most basic level, folding of DNA into nucleosomes is well described6, but it is still unclear how individual nucleosomes interact with one
-another. 
-
-beyond individual loops, chromatin is organized in distinct structural domains, which may represent f ­unctional units of the genome7–9 Although three-dimensional (3D) architecture
-must be robust, it also needs to be flexible enough to allow marked changes to occur, such as those leading
-to mitosis
 
 Nucleosome-nucleosome interactions At the smallest scale of chromatin organization beyond the nucleosome one finds nucleosome–nucleosome interactions. For a long time, on the basis of in vitro electron microscopy, nucleosomes were thought to form arrays (often called the 30 nm chromatin fibres) with either solenoid or zigzag shapes20,21
 . However, the biological relevance of the 30 nm chromatin fibre has been increasingly called into question by several independent studies19,22–24
