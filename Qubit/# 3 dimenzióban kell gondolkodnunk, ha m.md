@@ -83,18 +83,7 @@ A 3D genom strukturális variációinak szerepével foglalkoztak Malte Spielmann
 
 A kromoszóma átrendeződések mellett betegségekhez köthető genetikai mutációk vizsgálata egy 2016-ban a Nature Reviews Molecular Cell Biology-ban [publikált szakcikk](https://www.nature.com/articles/nrm.2016.138) szerint lehetővé teheti szabályozási kapcsolatok elromlása miatt diszregulált gének megtalálását, ezáltal felderítve betegségek molekuláris mechanizmusait, és megnyitva az utat ezek kezelése előtt.
 
-https://www.nature.com/articles/nrn.2016.124 Nature Reviews Neuroscience 2016 november
-
-Activity-regulated changes in the neuronal ‘3D genome’ could govern transcriptional mechanisms associated with learning and plasticity, and loop-bound intergenic and intronic non-coding sequences have been
-implicated in psychiatric and adult-onset neurodegenerative disease.
-
-Early findings from a select set of candidate gene loci indicate that chromosomal contacts and ‘loopings’ could be heavily regulated by neuronal activity, suggesting that the 3D genome plays a part in activity-dependent regulation of gene expression in brain cells. In addition, studies on a small number of candidate genes indicate that
-loop-bound non-coding DNA contributes to the genetic risk architecture of cognitive diseases with onset in early childhood or young adulthood, including autism2 and schizophrenia3. Of note, deleterious mutations in genes encoding regulators of chromosomal scaffolding severely affect brain development and function, further underscoring that proper packaging and organization of the genomic material inside the nuclei of brain cells is of
-pivotal importance. Genetic mutations in the gene encoding CTCF, a
-key organizer of chromosomal loopings, have been
-linked to monogenic causes of microcephaly and cognitive disorder38,39
-
-there is evidence suggesting a role for aberrant 3D genome in adult-onset human cognitive disorders. For example, significant over-representation of enhancer sequences has been observed within the pool of polymorphisms and haplotypes associated with schizophrenia, an adult-onset cognitive disorder often accompanied by delusions and hallucinations3,58
+A 3D genom aktivitásfüggő változásai a tanulással összefüggő DNS-ről RNS-re átírási folyamatokat irányítanak, az idegrendszeri aktivitás pedig erősen befolyásolhatja a kromoszómák közti kapcsolatokat és a kromatin hurokokat, ami arra utalhat, hogy a 3D genom részt vesz az idegrendszeri sejtekben a gének kifejeződésének aktivitásfüggő változásában, állítja egy a Nature Reviews Neuroscience-ben 2016-ban [megjelent tanulmány](https://www.nature.com/articles/nrn.2016.124). Egyes, a szakemberek által idézett kutatások arra mutatnak, hogy a kromatin hurkokban található, fehérjét nem kódoló DNS hozzájárul olyan kognitív zavarok vagy betegségek genetikai kockázataihoz, mint az [autizmus spektrum zavar](https://www.cdc.gov/ncbddd/autism/facts.html), vagy a [skizofrénia](https://en.wikipedia.org/wiki/Schizophrenia). A kutatók szerint a kromatin hurkok enhanszer elemei olyan neurodegeneratív betegségekben is szerepet játszhatnak, mint az [Alzheimer-kór](https://en.wikipedia.org/wiki/Alzheimer%27s_disease). 
 
 ## Vírusos fertőzések és a 3D genom
 
