@@ -10,66 +10,27 @@ A komplex élet, az állatokat, növényeket, gombákat és számtalan egysejtű
 
 ## Hogyan épül fel a kromatin?
 
-Az eukarióta sejtekben, így sajátjainkban is 146-147 bázispár hosszú DNS tekeredik a nukleoszóma szerkezetek köré, amiket nyolc hiszton fehérje épít fel. A hiszton fehérjéken van egy régió, amit [enzimek](https://en.wikipedia.org/wiki/Histone-modifying_enzymes) képesek kémiailag módosítani, ami leggyakrabban négy típusba (acetiláció, metiláció, foszforiláció és ubiquitináció) [sorolható](https://en.wikipedia.org/wiki/Histone#Modification). 
+Az eukarióta sejtekben, így sajátjainkban is 146-147 bázispár hosszú DNS tekeredik a nukleoszóma szerkezetek köré, amiket nyolc hiszton fehérje épít fel. A hiszton fehérjéken van egy régió, amit [enzimek](https://en.wikipedia.org/wiki/Histone-modifying_enzymes) képesek kémiailag módosítani, ami leggyakrabban négy típusba (acetiláció, metiláció, foszforiláció és ubiquitináció) [sorolható](https://en.wikipedia.org/wiki/Histone#Modification).
 
-Ezek a módosítások képesek befolyásolni a hisztonok DNS-el történő interakcióját, ami ezáltal gének kifejeződését és más genetikai folyamatokat szabályoz, és együttesen [alkotja](https://www.nature.com/articles/s41592-020-0758-3) a "hiszton kódot". Egyes hiszton módosítások, amint egy 2020-ban a Nature Methods-ban megjelent [tanulmány összefoglalja](https://www.nature.com/articles/s41592-020-0758-3) egybevágnak a genom aktív vagy nem aktív régióival, és ezért a kromatin nagyobb skálájú szerkezetére is hatással vannak. A 10 nanométer széles nukleoszómákat egymástól néhánytól 80 bázispárig terjedő hosszúságú linker-DNS [választja el](https://www.amazon.com/Molecular-Biology-Sixth-Bruce-Alberts/dp/0815345240), de a nukleoszómák átlagosan 200 bázispáronként ismétlik egymást. 
+*Nukleoszóma Forrás: Wikipedia*
+
+Ezek a módosítások képesek befolyásolni a hisztonok DNS-el történő interakcióját, ami ezáltal gének kifejeződését és más genetikai folyamatokat szabályoz, és együttesen [alkotja](https://www.nature.com/articles/s41592-020-0758-3) a "hiszton kódot". Egyes hiszton módosítások, amint egy 2020-ban a Nature Methods-ban megjelent [tanulmány összefoglalja](https://www.nature.com/articles/s41592-020-0758-3) egybevágnak a genom aktív vagy nem aktív régióival, és ezért a kromatin nagyobb skálájú szerkezetére is hatással vannak. A 10 nanométer széles nukleoszómákat egymástól néhánytól 80 bázispárig terjedő hosszúságú linker-DNS [választja el](https://www.amazon.com/Molecular-Biology-Sixth-Bruce-Alberts/dp/0815345240), de a nukleoszómák átlagosan 200 bázispáronként ismétlik egymást.
 
 Az is [világos lett](https://www.science.org/doi/10.1126/sciadv.aay4055) az elmúlt néhány évben, hogy a kromatin egy bizonyos mérettartományban [nagyon nem úgy épül fel](https://www.nature.com/articles/s41592-020-0758-3), ahogy az a molekuláris biológiai tankönyvekben le van írva. A nukleoszómák egymás utánisága ugyanis kísérletek alapján nem hoz létre egy 30 nanométer széles kromatinszálat. Ehelyett a nukleoszómák [szuperrezolúciós mikroszkópos](https://en.wikipedia.org/wiki/Super-resolution_microscopy) vizsgálatok alapján csoportokat (nucleosome clutches) alkotnak, magyarázza a Nature Methods-ban közölt tanulmány, amik néhány ezer bázispárnyi DNS-t tartalmaznak.
 
+*A kromatin sematikus illusztrációja a fa alakú struktúrákkal. Forrás: DOI: 10.1126/sciadv.aay4055*
+
 Egy, a Science Advances folyóiratban Kai Huang és kollégái által 2020-ban [közölt kutatás](https://www.science.org/doi/10.1126/sciadv.aay4055) megerősíti a nukleoszóma csoportok létét, és azt állítja, hogy a nukleoszóma csoportok nagyobb skálán fa alakú struktúrákba rendeződhetnek biológiai funkciójuk teljesítéséhez.
 
-A kromatin sematikus illusztrációja a fa alakú struktúrákkal
-Forrás: DOI: 10.1126/sciadv.aay4055
+Bár ennek igazolásához további kutatások szükségesek, [lehetséges](https://www.science.org/doi/10.1126/sciadv.aba8811?rss=1), hogy a nagy, több tízezer bázispár hosszú régiókba rendeződött nukleoszóma csoportok [alkotják](https://www.nature.com/articles/s41592-020-0758-3) a még nagyobb kromatin struktúrákat. Ilyenek az úgynevezett kromatin hurkok (chromatin loops). valamint topológiailag asszociált domének ([TAD](https://en.wikipedia.org/wiki/Topologically_associating_domain), topologically associated domain).
 
-Bár ennek igazolásához további kutatások szükségesek, [lehetséges](https://www.science.org/doi/10.1126/sciadv.aba8811?rss=1), hogy a nagy, több tízezer bázispár hosszú régiókba rendeződött nukleoszóma csoportok [alkotják](https://www.nature.com/articles/s41592-020-0758-3) a még nagyobb kromatin struktúrákat, mint a géneket és szabályozóelemeket egymáshoz [közel helyező](https://www.frontiersin.org/articles/10.3389/fcell.2021.774719/full) kromatin hurkok (chromatin loops), illetve úgynevezett topológiailag asszociált doméneket ([TAD](https://en.wikipedia.org/wiki/Topologically_associating_domain), topologically associated domain).
+*A 3D genom szerkezete Forrás: https://doi.org/10.1038/nrn.2016.124*
 
-https://www.nature.com/articles/nrg.2016.112
-Chromatin loops. A key feature of vertebrate genomes is the relatively long distances along the linear genome separating cis-regulatory elements, such as enhancers, from their target genes. In order to elicit its effect, an enhancer is thought to be brought into close spatial proximity with its target promoter through the formation of a ‘chromatin loop. Long-range chromatin contacts are not limited to enhancer–promoter interactions. Spatial associations
-between actively transcribed co‑regulated genes - have also been observed.
+A kromatin hurkok két fontos szereplőt [kötnek össze](https://www.nature.com/articles/nrg.2016.112) ahhoz, hogy a gének ki tudjanak fejeződni. Az egyik az egymástól nagyobb távolságra elhelyezkedő szabályozó elemek, például [enhanszerek](https://en.wikipedia.org/wiki/Enhancer_(genetics)), amik képesek fokozni az esélyét egy gén DNS-ből RNS-é átíródásának, ha csatlakoznak hozzájuk [transzkripciós faktoroknak](https://en.wikipedia.org/wiki/Transcription_factor) nevezett fehérjék. A másik pedig a gén átíródásához nélkülözhetetlen [promoter](https://en.wikipedia.org/wiki/Promoter_(genetics)).
 
-. TADs typically manifest as contig-
-uous square domains along the diagonal of Hi‑C maps (or triangles as represented in FIG. 2b), in which regions within the same TAD interact with each other much more frequently than with regions located in adjacent domains (FIG. 2b). The spatial partitioning of the genome into TADs correlates with many linear genomic features such as histone modifications, coordinated gene expression, associ­ ation with the lamina and DNA replication timing9. Furthermore, enhancer–promoter interactions seem to
-be mostly constrained within a TAD. TADs are thought to be conserved between different cell types9,11 and across species; however, the extent of this
-conservation is unclear.
+A TAD-ok [olyan genomi régiók](https://www.nature.com/articles/nrg.2016.112), amelyeken belül található részek inkább egymással lépnek gyakrabban kapcsolatba, mint más közeli TAD-okban találhatókkal. A legtöbb, ehanszereket és promotereket összekötő kromatin hurok is TAD-okon belül alakul ki egy 2016-os, a Nature Reviews Genetics-ben megjelent összefoglaló [szakcikk szerint](https://www.nature.com/articles/nrg.2016.112). A TAD-ok néhány százezertől néhány millió bázispár hosszúak, és újabb [eredmények szerint](https://www.science.org/doi/10.1126/sciadv.aba8811?rss=1) a TAD-ok határvonalai nem annyira élesek, és a szomszédos TAD-ok keveredhetnek egymással.
 
-At least in mammals, long-range interactions between TADs that can be located at variable distances, sometimes
-very far on the linear genome, give rise to compartment
-
-two major compartments can be further subdivided into six different subcompartment
-
-multiple TADs form a compartment,
-
-At even larger scales, chromatin is organized into individual chromosome territories (one for each chro-
-mosome), which rarely intermix
-
-https://www.nature.com/articles/nrm.2016.138
-
-Enhancers are sequence modules, generally not more than a few hundred base pairs in size, which harbour recog­ nition motifs that attract specific sets of transcription fac­ tors. Transcription factor binding and the co‑recruitment of associated factors activate enhancers and provide them with a distinct chromatin signature. This signature often
-includes increased DNA accessibility.  The binding of specific transcription factors and the production of small enhancer RNAs are
-also part of the chromatin signature.
-
-Systematic mapping efforts based on chromatin sig­ natures have uncovered more than one million enhanc­ ers across different human and other mammalian cell types (reviewed in REFS 23,29). Enhancers primarily reside in non-coding parts of the genome at varying distances from their nearest genes and are mostly celltype specific16–19
-. It has therefore become clear that the
-human genome presents a rich and complex regulatory landscape that orchestrates the spatial and temporal
-expression of its roughly 20,000 genes. 
-
-Developmental genes are often controlled by multiple enhancers. The opposite also occurs whereby multiple genes compete for a common enhancer.
-
-https://www.frontiersin.org/articles/10.3389/fcell.2021.774719/full
-TADs are contiguous regions with more frequent chromatin interactions within the region than those with the other region in mammalian genomes...TADs allow long-range chromatin interaction 
-
-https://www.science.org/doi/10.1126/sciadv.aba8811?rss=1
-have revealed partitioning into several hundred kilobases to a few megabase-sized topologically associating domains (TADs) (6, 7). TADs are genomic segments with higher intra-TAD contacts compared to inter-TAD contacts. At higher levels of organization, TADs group into ~10- to 20-Mb genomic A and B compartments. A compartments denote deoxyribonuclease I–sensitive, transcriptionally active “open” chromatin, and B compartments denote transcriptionally repressed, “closed” chromatin (8). Compartments are generally correlated with euchromatin or heterochromatin, and nuclear interior or lamina/nucleolar contacts for A and B compartments, respectively (9).
-
-Second, Hi-C showed that the compartmentalization of the
-genome into TADs and loops is dependent on the architectural proteins cohesin and CTCF, which demarcate TAD and loop boundaries. However, super-resolution imaging and chromatin tracing revealed a more complex picture of TAD architecture in single cells, with highly variable boundaries that persisted after cohesin depletion48
-. More recent studies also revealed a similar picture in which
-neighboring TADs intermingled extensively with each other.
-
-
-
-
-Nagyobb [szinten](https://www.nature.com/articles/s41592-020-0758-3) leegyszerűsítve a genom térben elválasztott aktív nyitott kromatinból (eukromatin) és inaktív zárt kromatinból (heterokromatin) áll. Maga a sejtmag alakja is [dinamikusan változik](https://www.mdpi.com/1422-0067/22/21/11585), amit a DNS csomagolódásának mértéke és a sejtváz (citoszkeleton) határoz meg. A sejtmag alakjának szabályozása a kromoszómák struktúrját is képes megváltoztatni, és különböző kölcsönhatásokat okozni a genom egymástól távoli régiói közt.
+Még nagyobb szinten a TAD-ok két eltérő típusú (A vagy B) kompartmentet hoznak létre, amik [leegyszerűsítve](https://www.nature.com/articles/s41592-020-0758-3) a genom térben elválasztott aktív nyitott kromatinból (A kompartment) és inaktív zárt kromatinból (B kompartment) [állnak](https://www.science.org/doi/10.1126/sciadv.aba8811?rss=1). Még kisebb nagyításban a kromatin egyedi kromoszóma területekre oszlik, kromoszómánként egyre, amelyek ritkán keverednek egymással. Maga a sejtmag alakja is [dinamikusan változik](https://www.mdpi.com/1422-0067/22/21/11585), amit a DNS csomagolódásának mértéke és a sejtváz (citoszkeleton) határoz meg. A sejtmag alakjának szabályozása a kromoszómák struktúrját is képes megváltoztatni, és különböző kölcsönhatásokat okozni a genom egymástól távoli régiói közt.
 
 A 2010-es években indult [4D nucleome projekt](https://www.4dnucleome.org/#) az ember és az egér genom térbeli struktúrájának és ennek időben dinamikus változásának feltárását [célozta meg](https://www.nature.com/articles/nature23884). A program keretében eddig 703 publikált [tanulmány született](https://pubmed.ncbi.nlm.nih.gov/collections/60033344/?sort=pubdate), amik arról árulkodnak, hogyan vesz részt a 3D genom a génszabályozásban és más genomi funkciókban, és ezt milyen innovatív technológiákkal lehet vagy lehetne a jövőben vizsgálni.
 
@@ -93,9 +54,7 @@ A vírus fehérjéi, mint írják, a gazdasejt szabályozófehérjéit mimikálv
 
 A májgyulladását okozó [Hepatitis B](https://en.wikipedia.org/wiki/Hepatitis_B_virus) DNS-vírus (HBV) képes genomját a sejtmagba juttatni, és egy speciális struktúrájú [DNS-el](https://en.wikipedia.org/wiki/CccDNA) a sejt gépezetét saját replikációjára áthangolni, írják a kutatók a tanulmányukban. A vírus képes a genom 3D struktúrájának megzavarására, ami megváltoztatja a sejtben a gének kifejeződését, a [herpeszvírusok](https://en.wikipedia.org/wiki/Herpesviridae) a kutatók által idézett korábbi vizsgálatok szerint pedig általánosságban valószínűleg a gazdasejt genomjának nyitott és DNS-ről RNS-re átírást végző aktív kromatin régióival hatnak kölcsön. 
 
-A herpszevírusokhoz tartpzó [Epstein-Barr-vírus](https://qubit.hu/2022/01/17/az-epsteinbarr-virus-lehet-a-sclerosis-multiplex-fo-okozoja) 15 ezer ponton hat kölcsön az emberi genommal, főként ezekben a nyitott kromatinos régiókban. A látens EBV fertőzés reaktivációja során azt figyelték meg korábbi kutatások, hogy a vírus genomunkkal kölcsönhatása a zárt kromatinos régiókból a nyílt kromatinosokba helyeződött át, és így a szakemberek szerint tűnik az EBV genomja befolyásolni a genomunk 3D szerkezetét.
-
-Influenza vírusokkal 2018-ban végzett vizsgálatok arra utalnak, hogy a vírus NS1 fehérjéje képes befolyásolni a DNS-ről RNS-re zajló átíródás kontrollját, ami teljesen megváltozatja a gazdasejt kromatinjának működését és kompaktságát.
+A herpszevírusokhoz tartpzó [Epstein-Barr-vírus](https://qubit.hu/2022/01/17/az-epsteinbarr-virus-lehet-a-sclerosis-multiplex-fo-okozoja) 15 ezer ponton hat kölcsön az emberi genommal, főként ezekben a nyitott kromatinos régiókban. A látens EBV fertőzés reaktivációja során azt figyelték meg korábbi kutatások, hogy a vírus genomunkkal kölcsönhatása a zárt kromatinos régiókból a nyílt kromatinosokba helyeződött át, és így a szakemberek szerint tűnik az EBV genomja befolyásolni a genomunk 3D szerkezetét. Influenza vírusokkal 2018-ban végzett vizsgálatok arra utalnak, hogy a vírus NS1 fehérjéje képes befolyásolni a DNS-ről RNS-re zajló átíródás kontrollját, ami teljesen megváltozatja a gazdasejt kromatinjának működését és kompaktságát.
 
 A kutatók szerint a 3D genom betegségekkel időben összefüggő változásának vizsgálata segíthet még jobban megérteni, hogyan okozzák a betegséget a vírusos fertőzések. Emellett azt a lehetőséget is biztosíthatják, hogy a változások biokémiai jeleit megtalálhassuk és terápiás célpontokat keressünk ezeknek a fertőzéses megbetegedéseknek a kezelésére.
 
