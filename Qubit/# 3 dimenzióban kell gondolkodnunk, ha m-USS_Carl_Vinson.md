@@ -264,7 +264,7 @@ architectural proteins mediator, cohesin, CTCF, non-coding RNAs
 molecular mechanisms at play and to determine whether establishing and maintaining 3D chromatin structure is
 a general role of nuclear lncRNAs.
 
-chromatin dynamics contribute
+1 , chromatin dynamics contribute
 to the specification of distinct gene expression pro-
 grammes and biological functions
 
@@ -443,18 +443,35 @@ nitive disease. It remains to be explored whether drug-induced changes in 3D gen
 known in the context of neuropsychiatric disease. Mutations affecting the function of protein scaffolds and global organizers of the 3D genome are frequently associated
 with neurodevelopmental defects.
 
-## Vírusos fertőzések és a 3D genom
+## 3D genom és vírusok
 
-Ezek után nem meglepő, hogy a 3D genomnak a vírusos fertőzések esetén is van szerepe, amit Weizheng Liang és kollégái [foglaltak össze](https://onlinelibrary.wiley.com/doi/10.1002/jmv.28040) 2022 augusztusában, a rangos Medical Journal of Virology folyóiratban. A legtöbb eukariótákat fertőző DNS örökítőanyagú vírus képes a sejtmagba juttatni a genomját, de az még nem teljesen világos a kutatók szerint, hogy a gazda genomjával kölcsönhat-e ahhoz vagy bele épül-e, hogy a sejtmag DNS-ről RNS-re átíró úgynevezett transzkripciós gépezetét saját érdekében eltérítse, és lemásolja magát.
+https://onlinelibrary.wiley.com/doi/10.1002/jmv.28040 2022 Medical Journal of Virology 
 
-A vírus fehérjéi, mint írják, a gazdasejt szabályozófehérjéit mimikálva eltérítik annak egész szabályozórendszerét, amivel át tudják alakítani a sejt kromatin szerkezetét, ami a gének DNS-ről RNS-re történő átírását és emiatt fehérjékké lefordítását szabályozza. Az már eddig is ismert volt a szakemberek szerint, hogy miután egyes vírusok bejutnak a sejtbe, a sejtmagba kerülő vírusgenom jelentős hatást mérhet a gazdasejt genomjának térbeli szerkezetére, ami után [specifikus vírusok esetén](https://www.sciencedirect.com/science/article/pii/S0042682215000549?via%3Dihub) - leggyakrabban [retrovírusoknál](https://en.wikipedia.org/wiki/Retrovirus) - a gazdasejt genomjába integrálódnak.
+Most eukaryotic DNA viruses can invade their genomes into the nucleus. However, it is still poorly understood how the viral genome is precisely positioned after entering the host cell nucleus to find the most suitable location and whether it can specifically interact with the host genome to hijack the host transcriptional factories or even integrate into the host genome to complete its transcription and replication rapidly. Chromosome conformation capture technology can reveal long‐range chromatin interactions between different chromosomal sites in the nucleus, potentially providing a reference for viral DNA‐
+host chromatin interactions.
 
-A májgyulladását okozó [Hepatitis B](https://en.wikipedia.org/wiki/Hepatitis_B_virus) DNS-vírus (HBV) képes genomját a sejtmagba juttatni, és egy speciális struktúrájú [DNS-el](https://en.wikipedia.org/wiki/CccDNA) a sejt gépezetét saját replikációjára áthangolni, írják a kutatók a tanulmányukban. A vírus képes a genom 3D struktúrájának megzavarására, ami megváltoztatja a sejtben a gének kifejeződését, a [herpeszvírusok](https://en.wikipedia.org/wiki/Herpesviridae) a kutatók által idézett korábbi vizsgálatok szerint pedig általánosságban valószínűleg a gazdasejt genomjának nyitott és DNS-ről RNS-re átírást végző aktív kromatin régióival hatnak kölcsön. 
+. For example, viral proteins can mimic the host's regulatory proteins to hijack the regulatory system of the host. Based on this, to reshape the chromatin conformation of host cells to regulate gene transcription and expression.11 During the mitotic stage of the host cell, the viral genome hinges on the host's chromatin to ensure virus genome replication as host mitosis.12 In addition, viruses also participate in the remodeling process of the cellular microenvironment, affecting the differentiation of cells. Most of these associated genes are related to the maintenance of chromatin conformation.13,14 At the same time, the chromatin conformation also affects the latent infection of the virus, resulting in different types of latent infection.15 It has been known that after the virus enters the host cell, the viral genome in the nucleus has a major impact on the
+host genome spatial structure leading to the viral genome being
 
-A herpszevírusokhoz tartpzó [Epstein-Barr-vírus](https://qubit.hu/2022/01/17/az-epsteinbarr-virus-lehet-a-sclerosis-multiplex-fo-okozoja) 15 ezer ponton hat kölcsön az emberi genommal, főként ezekben a nyitott kromatinos régiókban. A látens EBV fertőzés reaktivációja során azt figyelték meg korábbi kutatások, hogy a vírus genomunkkal kölcsönhatása a zárt kromatinos régiókból a nyílt kromatinosokba helyeződött át, és így a szakemberek szerint tűnik az EBV genomja befolyásolni a genomunk 3D szerkezetét.
+HBV: HBV belongs to the family of Hepadnaviridae, and the cccDNA can utilize host cells' transcription and translation mechanism to synthesize all RNAs and proteins required by HBV. The existing hepatitis B treatment drugs (nucleoside analogs such as lamivudine) can inhibit HBV replication by inhibiting the function of p protein (HBV polymerase), but they cannot remove cccDNA and integrated viral DNA in infected cells. Therefore, if the patients infected with HBV stop regularly taking the antiviral medicine, the viral DNA can use the transcription and translation mechanism of the host cell to resynthesize the RNA and protein required by HBV,
+thereby completing the virus replication. HBV can affect the host gene expression by various mechanisms. It cannot only directly influence the gene expression by integrated into the proximal locus of the target gene69–72 but also perform a function by distal interaction or disrupting the 3D genome
+structure.73–76
 
-Influenza vírusokkal 2018-ban végzett vizsgálatok arra utalnak, hogy a vírus NS1 fehérjéje képes befolyásolni a DNS-ről RNS-re zajló átíródás kontrollját, ami teljesen megváltozatja a gazdasejt kromatinjának működését és kompaktságát.
+Herpesviruses:  Most eukaryotic DNA viruses, such as herpesviruses, can transport their genomes into the nucleus. Recently, one team utilized pseudorabies virus (PRV) as a model virus and performed chromosome conformation capture analysis to demonstrate specific cross‐species genome‐wide chromatin interactions between virus and host.77 The results show that the PRV genome interacts with host chromatin open regions and transcriptionally active regions, mediated by the host DNA‐binding protein RUNX1, which helps the virus hijack the host type II RNA
+polymerase (RNAPII) for efficient transcription of viral genes
 
-A kutatók szerint a 3D genom betegségekkel időben összefüggő változásának vizsgálata segíthet még jobban megérteni, hogyan okozzák a betegséget a vírusos fertőzések. Emellett azt a lehetőséget is biztosíthatják, hogy a változások biokémiai jeleit megtalálhassuk és terápiás célpontokat keressünk ezeknek a fertőzéses megbetegedéseknek a kezelésére.
+IAV: In a recent study, scientists used the IAV to infect monocyte‐induced macrophages and explored the changes at the transcriptomic, epigenetic, and 3D genomics levels.81 Using different control conditions and control models (Mock infection, NS1 deletion), they found that the NS1 protein can inhibit transcription termination and sustains transcription even after the 3′ end of the gene (up to 850 kb). The continuous transcription downstream of the 3′ end of such genes is the cause of changes in the compactness of the 3D
+structure of the genome.  at the genome level, gene transcription can affect the 3D structure of the genome and the tightness of genome compression, providing a new
+perspective on the dynamic changes of the genome. 
+
+EBV: Over 15 000 contacts were identified between EBV and the human genome.29,83 In active chromatin locations, these contacts are
+highly enriched in H3K27ac and H3K4me1. researchers explored the interaction changes from latency to reactivation, and they found that the interaction sites
+changed from the heterochromatin region to the euchromatin loci.  EBV genome could affect the host epigenome directly, promoting tumorigenesis.
+
+HPV: Human papillomavirus, HPV, plays an important role in the occurrence and progression of cervical cancer.9 HPV could affect the MYC gene expression by forming long‐distance interaction among HPV, 8q24.22, and MYC, thereby promoting cancer progression. HPV can disrupt the host genome by dividing one TAD into two TADs.  HPV insertion can alter the chromatin structure by adding a new CTCF binding site, leading to changes in multilayers, including chromatin accessibility, transcription, and post transcription, thus advancing the tumor
+progression.9
+
+Growing evidence suggests that changes in the 3D genome often accompany the occurrence of diseases. Using 3D genomics to explore alterations in the 3D chromatin structure such as CT, A/B Compartment, TADs, and CL before and after the occurrence of diseases, as well as changes in the interaction between different regulatory elements and target genes, can offer new insights in the pathogenic mechanisms of viral infection. In addition, it can also provide us the possibility of searching for potential biomarkers and screening therapeutic
+targets, which will finally bring us solutions for treating diseases.
 
 *Kapcsolódó cikkek a Qubiten:*
