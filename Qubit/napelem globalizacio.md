@@ -1,4 +1,12 @@
-# Mit adott nekünk a globalizáció? Olcsóbb napelemeket.
+# Embargó Szerda 17:00 - Mit adott nekünk a globalizáció? Sokkal olcsóbb napelemeket
+
+## Ha az amerikai-kínai stratégiai versengés felborítja a globalizált napelemgyártást, 20-25 százalékkal nőhetnek 2030-ra a napelemek árai, nehezítve a klímaváltozás elleni küzdelmet.
+
+A napelemek 25 százalékkal drágábbak lehetnek 2030-ban, ha ellehetetlenül a globalizált gyártásuk, ami még nehezebbé tenné a párizsi egyezmény klímacéljainak elérését - állítja egy szerda délután, a Nature-ben közölt vizsgálat.
+
+John Paul Helveston, a Washington DC-ben található George Washington Egyetem rendszermérnöki tanszékének kutatója és kollégái szerint a globalizált napelemgyártás 67 milliárd dollárt spórolt meg az elmúlt években az Egyesült Államoknak, Németországnak és Kínának.
+
+A kutatók eredményei arra utalnak, hogy a klímaváltozás megfékezését célzó döntéseknek előnyösek a globálisan integrált gyártási láncok. A tanulmány néhány héttel az amerikai-kínai stratégiai versengés és gazdasági szétválasztódás legújabb állomása, az Egyesült Államok kínai chipgyártásra kivetett katasztrofális szankciói után jelenik meg.
 
 Globally integrated solar-cell supply chains may help to make solar energy cheaper, according to research published this week in Nature. Compared with a nationalized approach, in which supplies from external solar-cell (photovoltaic modules) producers are limited, a globalized supply chain could save billions of US dollars in installation fees, the study suggests.
 
