@@ -18,7 +18,7 @@ A szakemberek a helyi gyártás és a globalizált gyártás napelem telepítés
 
 Arra jutottak, hogy a globalizált napelemelőállítás a telepítőknek 24 milliárd dollárt spórolt meg 2008-2020 között az Egyesült Államokban, 7 milliárdot Németországban, és 36 milliárdot Kínában. Az ugyan ezeket a forgatókönyveket 2030-ra előrevetítő előrejelzéseik pedig arra utalnak, hogy a hazai gyártás 20-25 százalékkal nagyobb telepítési költségekhez vezetne 2030-ra, mintha megmaradna a globalizált gyártás.
 
-Kapcsolódó cikkek a Qubiten:
+*Kapcsolódó cikkek a Qubiten:*
 
 
 
