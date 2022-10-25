@@ -20,5 +20,3 @@ Arra jutottak, hogy a globalizált napelemelőállítás a telepítőknek 24 mil
 
 *Kapcsolódó cikkek a Qubiten:*
 
-
-
