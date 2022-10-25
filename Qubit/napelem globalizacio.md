@@ -2,19 +2,23 @@
 
 ## Ha az amerikai-kínai stratégiai versengés felborítja a globalizált napelemgyártást, 20-25 százalékkal nőhetnek 2030-ra a napelemek árai, nehezítve a klímaváltozás elleni küzdelmet.
 
-A napelemek 25 százalékkal drágábbak lehetnek 2030-ban, ha ellehetetlenül a globalizált gyártásuk, ami még nehezebbé tenné a párizsi egyezmény klímacéljainak elérését - állítja egy szerda délután, a Nature-ben közölt vizsgálat.
+A napelemek 25 százalékkal drágábbak lehetnek 2030-ban, ha ellehetetlenül a globalizált gyártásuk, ami még nehezebbé tenné a párizsi egyezmény klímacéljainak elérését - állítja egy szerda délután, a Nature-ben [közölt vizsgálat](https://www.nature.com/articles/s41586-022-05316-6).
 
-John Paul Helveston, a Washington DC-ben található George Washington Egyetem rendszermérnöki tanszékének kutatója és kollégái szerint a globalizált napelemgyártás 67 milliárd dollárt spórolt meg az elmúlt években az Egyesült Államoknak, Németországnak és Kínának.
+John Paul Helveston, a Washington DC-ben található George Washington Egyetem rendszermérnöki tanszékének kutatója és kollégái szerint a globalizált napelemgyártás 67 milliárd dollárnyi telepítési költséget spórolhatott meg az elmúlt években az Egyesült Államoknak, Németországnak és Kínának.
 
-A kutatók eredményei arra utalnak, hogy a klímaváltozás megfékezését célzó döntéseknek előnyösek a globálisan integrált gyártási láncok. A tanulmány néhány héttel az amerikai-kínai stratégiai versengés és gazdasági szétválasztódás legújabb állomása, az Egyesült Államok kínai chipgyártásra kivetett katasztrofális szankciói után jelenik meg.
+A globális felmelegedés 2 fok alatti limitálásához a megújuló energiaforrások gyors és széleskörű telepítésére van szükség a kutatók szerint. Eredményeik arra utalnak, hogy ehhez előnyösebbek lehetnek a hazai gyártásnál az integrált ellátási láncok, még ha más fontos érvek szólnak is előbbi mellett.
 
-Globally integrated solar-cell supply chains may help to make solar energy cheaper, according to research published this week in Nature. Compared with a nationalized approach, in which supplies from external solar-cell (photovoltaic modules) producers are limited, a globalized supply chain could save billions of US dollars in installation fees, the study suggests.
+A tanulmány néhány héttel az amerikai-kínai stratégiai versengés és gazdasági szétválasztódás legújabb állomása, az Egyesült Államok kínai chipgyártásra kivetett katasztrofális szankciói után jelenik meg.
 
-Countries often support domestic renewable energy manufacturing, with policies aiming to localize growth and employment benefits from the renewable energy industry. Yet to reduce global carbon emissions at a sufficient scale, renewable energy needs to be deployed quickly and widely, and thus needs to be cost-effective.
+Ez az első kvantitatív kutatás, ami megbecsüli a kizárólag hazai gyártáshoz képest a globalizált ellátási láncok segítségével megtakarított költségeket a napelemgyártásban.
 
-Gang He and colleagues compare the difference in costs of solar cell deployment between localized and global supply approaches across major markets. They calculate that the globalized solar-cell market has saved installers US $24 billion in the USA, $7 billion in Germany and $36 billion in China between 2008 and 2020. Projections suggest that relying on domestic producers would result in solar cell prices that are 20–25% higher in 2030, compared to globalized supply chain scenarios.
+## Megnézték mi lett volna az elmúlt évtizedben, ha nincs globalizált napelemgyártás
 
-This research provides the first quantitative estimation of costs saved through globally integrated supply chains, compared with strictly domestic solar-cell production. Climate policy should consider both the distribution of benefits from the renewable energy industry, and the ways in which costs could be substantially cut through globalized supply chains, the authors conclude.
+A szakemberek a helyi gyártás és a globalizált gyártás napelem telepítés költségére mért hatását hasonlították össze egy gépi tanulási modell segítségével három nagy piacon, az Egyesült Államokban, Németországban és Kínában.
 
-Gang He - Stony Brook University, Stony Brook, NY, USA 
-https://www.nature.com/articles/s41586-022-05316-6
+Arra jutottak, hogy a globalizált napelemelőállítás a telepítőknek 24 milliárd dollárt spórolt meg 2008-2020 között az Egyesült Államokban, 7 milliárdot Németországban, és 36 milliárdot Kínában. Az ugyan ezeket a forgatókönyveket 2030-ra előrevetítő előrejelzéseik pedig arra utalnak, hogy a hazai gyártás 20-25 százalékkal nagyobb telepítési költségekhez vezetne 2030-ra, mintha megmaradna a globalizált gyártás.
+
+Kapcsolódó cikkek a Qubiten:
+
+
+
