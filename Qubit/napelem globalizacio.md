@@ -4,7 +4,7 @@
 
 A napelemek 25 százalékkal drágábbak lennének 2030-ban, ha ellehetetlenül a globalizált gyártásuk, ami még nehezebbé tenné a párizsi egyezmény klímacéljainak elérését - állítja egy szerda délután, a Nature-ben [közölt vizsgálat](https://www.nature.com/articles/s41586-022-05316-6).
 
-John Paul Helveston, a Washington DC-ben található George Washington Egyetem rendszermérnöki tanszékének kutatója és kollégái szerint a globalizált napelemgyártás 67 milliárd dollárnyi telepítési költséget spórolhatott meg az elmúlt években az Egyesült Államoknak, Németországnak és Kínának, a 2006-2020 között három legnagyobb napelem telepítő országnak. Ez az első kutatás, ami konkrétan megbecsüli, hogy a nagyrészt hazai gyártáshoz képest mekkora megtakarítások érhetők el a globalizált ellátási láncok segítségével a napelemgyártásban.
+John Paul Helveston, a Washington DC-ben található George Washington Egyetem rendszermérnöki tanszékének kutatója és kollégái szerint a globalizált napelemgyártás 67 milliárd dollárnyi telepítési költséget spórolhatott meg az elmúlt években az Egyesült Államoknak, Németországnak és Kínának, a 2006-2020 között három legnagyobb napelem telepítő országnak. Ez az első kutatás, ami konkrétan megbecsüli, hogy a nagyrészt hazai gyártáshoz képest mekkora megtakarítások érhetők el a globalizált ellátási láncok segítségével a napelemgyártásban...
 
 A globális felmelegedés 2 fok alatti limitálásához a megújuló energiaforrások példátlanul gyors és széleskörű telepítésére van szükség a kutatók szerint. Eredményeik arra utalnak, hogy ehhez előnyösebbek lehetnek a hazai gyártásnál az integrált ellátási láncok, még ha más fontos érvek szólnak is előbbi mellett.
 
