@@ -16,7 +16,7 @@ Ez az első kvantitatív kutatás, ami megbecsüli a kizárólag hazai gyártás
 
 A szakemberek a helyi gyártás és a globalizált gyártás fotovoltaikus napelem telepítés költségére mért hatását hasonlították össze három nagy piacon, az Egyesült Államokban, Németországban és Kínában. Ezt egy kétfaktoroks gépi tanulási modell segítségével tették, ami történeti kapacitáson, komponensek és gyártáshoz szükséges anyagok árain alapult.
 
-A valóságban történthez képest alternatív forgatókönyben azzal számoltak, hogy az elmúlt több mint egy évtizedben 
+A valóságban történthez képest alternatív forgatókönyben azzal számoltak, hogy az elmúlt több mint egy évtizedben.
 
 Arra jutottak, hogy a globalizált napelemelőállítás a telepítőknek 24 milliárd dollárt spórolt meg 2008-2020 között az Egyesült Államokban, 7 milliárdot Németországban, és 36 milliárdot Kínában. Az ugyan ezeket a forgatókönyveket 2030-ra előrevetítő előrejelzéseik pedig arra utalnak, hogy a hazai gyártás 20-25 százalékkal nagyobb telepítési költségekhez vezetne 2030-ra, mintha megmaradna a globalizált gyártás.
 
