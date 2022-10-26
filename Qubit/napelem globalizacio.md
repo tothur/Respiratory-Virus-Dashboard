@@ -20,7 +20,7 @@ Ezekre válaszul, amint a kutatók összefoglalják tanulmányukban, az Egyesül
 
 Helvestonék úgy látják, hogy a nemzetközi klímapolitikának és a megújuló energia telepítésnek egyre inkább két út, a globális ellátási láncok megtartása vagy hazai technológiai fejlesztés és gyártás közül kell választania. Emiatt kutatásukkal azt kívánták megnézni, hogy mi a két irány milyen eltérő költségekkel jár a napelemek további elterjedésére. Ehhez összegyűjtötték az amerikai, kínai és németországi napelemtelepítés komponensekre és gyártáshoz szükséges anyagokra mért költségét, valamint a kapacitás növekedésének történetét 2006-2010 között. Az adatok elemzéséhez két tanulási modellt fejlesztettek, amivel megbecsülték a különböző forgatókönyvek esetén a napelemgyártás [tanulási görbéjét](https://en.wikipedia.org/wiki/Learning_curve), ami [lényegében](https://www.investopedia.com/terms/l/learning-curve.asp) a gyártási folyamat fejlődését fejezi ki az eltelt idő alatt a tanulásnak és a felgyülemlő szakértelemnek köszönhetően.
 
-A kutatók a 
+A kutatók a modellekkel összehasonlították, hogy 
 
 A valóságban történthez képest a szerzők azzal az alternatív forgatókönyvvel számoltak, hogy 2008-2020 között eltelt több mint 10 évben a hazai termelés fedezte egyre inkább a telepített napelem kapacitás egyre nagyobb részét.
 
