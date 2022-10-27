@@ -4,6 +4,10 @@
 
 Az MRO keringőegység idén év elején nagy felbontásban lefotózta az eddig megfigyelt legnagyobb, újonnan keletkezett marsi krátert (150 méter széles), ami felszín alatti vízjeget is feltárt. Ez az eddigi legközelebb az egyenlítőhöz, ahol felszín alatti jeget megfigyeltek. Az InSight közben rögzítette a becsapódás rengéshullámait, és így kiderült, hogy az tavaly december 24-én történt. Erről két tanulmány jön ki a Scienceben.
 
+https://www.science.org/doi/10.1126/science.abq7704
+https://www.science.org/doi/10.1126/science.abq7157
+kommentar https://www.science.org/doi/10.1126/science.add8574
+
 https://www.jpl.nasa.gov/news/nasas-insight-lander-detects-stunning-meteoroid-impact-on-mars
 
 The agency’s lander felt the ground shake during the impact while cameras aboard the Mars Reconnaissance Orbiter spotted the yawning new crater from space.
