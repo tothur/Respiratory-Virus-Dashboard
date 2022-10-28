@@ -1,52 +1,57 @@
-# Vízjeget tárt fel az eddig megfigyelt legnagyobb marsi becsapódás
+# Vízjeget tárt fel az eddig megfigyelt egyik legnagyobb marsi becsapódás
 
 ## 
 
-Az MRO keringőegység idén év elején nagy felbontásban lefotózta az eddig megfigyelt legnagyobb, újonnan keletkezett marsi krátert (150 méter széles), ami felszín alatti vízjeget is feltárt. Ez az eddigi legközelebb az egyenlítőhöz, ahol felszín alatti jeget megfigyeltek. Az InSight közben rögzítette a becsapódás rengéshullámait, és így kiderült, hogy az tavaly december 24-én történt. Erről két tanulmány jön ki a Scienceben.
+Két, több mint 130 méteres kráter létrejöttét figyelték meg a NASA űrszondái a Marson tavaly decemberben, aminek egyike az egyenlítőhöz eddig látott legközelebbi vízjég lerakódásokat tárta fel. A NASA október 27-ei [sajtótájékoztatóján](https://www.jpl.nasa.gov/news/nasas-insight-lander-detects-stunning-meteoroid-impact-on-mars) és a Science folyóiratban megjelent tanulmányokban ismertetett felfedezések emiatt megkönnyíthetik az első emberes marsi expedíció életét is.
 
-https://www.science.org/doi/10.1126/science.abq7704
-https://www.science.org/doi/10.1126/science.abq7157
-kommentar https://www.science.org/doi/10.1126/science.add8574
+A tavalyi becsapódások erős marsrengéseket generáltak, amiket az InSight leszállóegység rögzített szeizmográfja segítségével. A szondáig több ezer kilométert utazó rengések, amelyeket a kutatók csak utólag kötöttek össze a becsapódásokkal, új részleteket árulnak el a marsi kéreg történetéről. Az eseményeket a Mars Reconnaissance Orbiter (MRO) is észlelte, majd később nagy-felbontású [HiRISE](https://www.uahirise.org/) kamerájával meg is vizsgálta a krátereket. A 150 és 130 méter átmérőjű formációk az eddigi legnagyobb újonnan kialakult kráterek, amit a szonda 16 éves Mars-körüli vizsgálatai során felfedezett.
 
-https://www.jpl.nasa.gov/news/nasas-insight-lander-detects-stunning-meteoroid-impact-on-mars
+## Több ezer kilométerre található becsapódásokat is észlelni tudott az InSight
 
-The agency’s lander felt the ground shake during the impact while cameras aboard the Mars Reconnaissance Orbiter spotted the yawning new crater from space.
+A becsapódások és az általuk létrehozott kráterek szondákkal történő megfigyeléséről és rekonstruálásáról Liliya Posiolova, az MRO tudományos munkájának vezetője és kollégái [számoltak be](https://www.science.org/doi/10.1126/science.abq7704).
 
-NASA’s InSight lander recorded a magnitude 4 marsquake last Dec. 24, but scientists learned only later the cause of that quake: a meteoroid strike estimated to be one of the biggest seen on Mars since NASA began exploring the cosmos. What’s more, the meteoroid excavated boulder-size chunks of ice buried closer to the Martian equator than ever found before – a discovery with implications for NASA’s future plans to send astronauts to the Red Planet.
+Posiolováék szerint annak ellenére, hogy ezek a hiperszonikus sebességű becsapódások formálják leginkább a naprendszer égitestjeit, ritkán sikerül őket szeizmográfokkal rögzíteni és utána a kráterüket tanulmányozni. A 2021 december 24-ei becsapódást az MRO keringőegység kisebb felbontású, CTX kameráján dolgozó kutatók fedezték fel, majd később összekötötték az InSight által mért S1094b jelű rengéssel.
 
-Scientists determined the quake resulted from a meteoroid impact when they looked at before-and-after images from NASA’s Mars Reconnaissance Orbiter (MRO) and spotted a new, yawning crater. Offering a rare opportunity to see how a large impact shook the ground on Mars, the event and its effects are detailed in two papers published Thursday, Oct. 27, in the journal Science.
+https://youtu.be/17hsIedHKx8
 
-The meteoroid is estimated to have spanned 16 to 39 feet (5 to 12 meters) – small enough that it would have burned up in Earth’s atmosphere, but not in Mars’ thin atmosphere, which is just 1% as dense as our planet’s. The impact, in a region called Amazonis Planitia, blasted a crater roughly 492 feet (150 meters) across and 70 feet (21 meters) deep. Some of the ejecta thrown by the impact flew as far as 23 miles (37 kilometers) away.
+Ezután, a hasonló jellegű, tavaly szeptember 18-ai S1000a rengéshez kerestek krátert a felszínen, az InSighttól 7500 kilométeres távolságban. A [Valles Marineris](https://en.wikipedia.org/wiki/Valles_Marineris) kanyonrendszertől és hatalmas marsi [áradásos csatornáktól](https://en.wikipedia.org/wiki/Outflow_channels) északra, a Tempe Terra régióban rá is találtak, a nagyjából 130 méter átmérőjű S1000a kráterre.
 
-With images and seismic data documenting the event, this is believed to be one of the largest craters ever witnessed forming any place in the solar system. Many larger craters exist on the Red Planet, but they are significantly older and predate any Mars mission.
+A decemberi, InSighthoz közelebb, 3500 kilométerre lezajló S1094b becsapódás egy 150 méter átmérőjű és 21 méter mély krátert hagyott hátra a felszínen. Ez az északi szélesség 35. foka közelében, az Amazonis Planitia régióban található egy vulkáni síkságon, a 22 kilométer magas [Olympus Mons](https://en.wikipedia.org/wiki/Olympus_Mons) vulkántól északnyugatra.
 
-“It’s unprecedented to find a fresh impact of this size,” said Ingrid Daubar of Brown University, who leads InSight’s Impact Science Working Group. “It’s an exciting moment in geologic history, and we got to witness it.”
+A kráter a szonda HiRISE kamerájával történő megfigyelése, ami pixelenként 30 centiméteres részletességgel mutatja meg a Mars felszínét, világos foltokat mutatott a kráter körül, ami a kutatók szerint a becsapódás során a felszín alól kivájt vízjég lehet. Ez minden korábbi, vízjeget feltáró kráternél alacsonyabb szélességen helyezkedik el, és négy fokkal előzi meg a korábbi csúcstartót.
 
-InSight is studying the planet’s crust, mantle, and core. Seismic waves are key to the mission and have revealed the size, depth, and composition of Mars’ inner layers. Since landing in November 2018, InSight has detected 1,318 marsquakes, including several caused by smaller meteoroid impacts.
+https://youtu.be/NR7QCUit-do?t=2
 
-But the quake resulting from last December’s impact was the first observed to have surface waves – a kind of seismic wave that ripples along the top of a planet’s crust. The second of the two Science papers related to the big impact describes how scientists use these waves to study the structure of Mars’ crust.
+A NASA szerint a felszín alatti jég kulcsfontosságú erőforrás jövőbeli emberes marsutazásoknak, amit űrhajósok ívóvíz, rakétahajtóanyag előállításához és növénytermesztéshez tudnának hasznosítani. Az első emberes marsraszállásra valószínűleg egy egyenlítőhöz közeli helyen kerül majd sor, így különösen jó hír, hogy ezeken a területeken is lehet vízjégre számítani.
 
-becsapódás insight videó https://youtu.be/17hsIedHKx8
-kráter animáció https://youtu.be/NR7QCUit-do?t=2
+"Nem láttam még semmi hasonlót a becsapódásról készült képhez, a hatalmas kráterrel, felszínre került vízjéggel, és a marsi por által megőrzött drámai robbanási zónával. Elképzeltem, hogy milyen lehetett volna a felszínről látni a becsapódást, a légköri lökéshullámot és a több kilométerre szétszórt törmeléket" - mondta el Posiolova.
 
-Crater Hunters
+Emellett a kráter az S1000a-val ellentétben egy sík, porréteggel borított régióban keletkezett, ami lehetővé tette a becsapódás precíz rekonstruálását. Kiderült, hogy az [5-12 méteres](https://www.jpl.nasa.gov/news/nasas-insight-lander-detects-stunning-meteoroid-impact-on-mars) meteoroid északkeleti irányból érkezett, a felszínhez képest 30 fokos pályán. A becsapódás egy 0,1-1 kilotonnás energiájú (egy 1 kilotonnás robbanás ezer tonna TNT robbanóerejének feleltethető meg) felszíni robbanást okozott, ami két lökéshullámot indított. Ezek a lökéshullámok még a Mars ritka légkörében is elég erősek voltak ahhoz, hogy a krátertől 9 kilométerre is felkavarják a felszíni port, és a szakemberek szerint hozzáadtak a marsrengések energiájához.
 
-In late 2021, InSight scientists reported to the rest of the team they had detected a major marsquake on Dec. 24. The crater was first spotted on Feb. 11, 2022, by scientists working at Malin Space Science Systems (MSSS), which built and operates two cameras aboard MRO. The Context Camera (CTX) provides black-and-white, medium-resolution images, while the Mars Color Imager (MARCI) produces daily maps of the entire planet, allowing scientists to track large-scale weather changes like the recent regional dust storm that further diminished InSight’s solar power.
+Az MRO minden nap a teljes bolygót fényképező MARCI kamerája is észlelte a becsapódásokat, ami szinte biztossá teszi, hogy összefüggnek az InSight által rögzített 4 magnitudós rengésekkel. Az is kiderült, hogy az InSight kutatói a becsapódások távolságait a rengések elemzése alapján 70-130 kilométeres pontossággal adták meg, ami nagyon jó egyezésnek számít, és a marsi szeizmikus modellek pontosságát mutatja, legalább a köpeny 800 kilométeres mélységéig.
 
-The impact’s blast zone was visible in MARCI data that allowed the team to pin down a 24-hour period within which the impact occurred. These observations correlated with the seismic epicenter, conclusively demonstrating that a meteoroid impact caused the large Dec. 24 marsquake.
+## Az első felületi hullámok egy másik égitesten
 
-“The image of the impact was unlike any I had seen before, with the massive crater, the exposed ice, and the dramatic blast zone preserved in the Martian dust,” said Liliya Posiolova, who leads the Orbital Science and Operations Group at MSSS. “I couldn’t help but imagine what it must have been like to witness the impact, the atmospheric blast, and debris ejected miles downrange.”
+Mostanáig egyetlen másik égitesten sem sikerült a felszín közelében haladó, úgynevezett felületi rengéshullámokat észlelni. A becsapódások most viszont ilyeneket hozták létre, amiknek elemzését egy [másik tanulmányban](https://www.science.org/doi/10.1126/science.abq7157) ismerteti Doyeon Kim geofizikus és kollégái. A marsi kéreg összetételének és tulajdonságainak vizsgálata szerintük a bolygó történetének legfontosabb kérdéseire adhat választ. Ilyen a Mars arculatát alapvetően meghatározó, a déli magasföldek és az északi síkságok közötti átlagosan 5 kilométeres magasságkülönbség eredete is. 
 
-Establishing the rate at which craters appear on Mars is critical for refining the planet’s geologic timeline. On older surfaces, such as those of Mars and our Moon, there are more craters than on Earth; on our planet, the processes of erosion and plate tectonics erase older features from the surface.
+A kutatók úgy vélik, a látványos eltérésért vagy a kéreg vastagság, vagy sűrűségének különbségei (vagy ezek kombinációja) felelhet. Az InSight korábban megállapította, hogy leszállóhelye alatt a kéreg nagyjából 39 kilométer vastag. Most, az S1000a és S1094b becsapódások Rayleigh-típusú felületi rengéshullámai elárulták, hogy az InSight alatti kéreg más, mint a bolygó többi részén. A becsapódások után a kutatók két Rayleigh hullámot észleltek, az egyik a kráter irányából érkezett az InSighthoz, a másik pedig a bolygót megkerülve, és a Hellas becsapódási medencén áthaladva 75 perccel később.
 
-New craters also expose materials below the surface. In this case, large chunks of ice scattered by the impact were viewed by MRO’s High-Resolution Imaging Science Experiment (HiRISE) color camera.
+A két irányból érkező rengéshullámok eltérő sebességei látszólag különböző struktúrákról árulkodnak a déli és az északi félgömb esetén a kutatók szerint, de valójában a különbségeket a vékony kéreggel rendelkező Hellas-medence képes teljesen megmagyarázni. Az viszont biztosnak tűnik, hogy a rengéshullámok gyorsabban terjednek a marsi kéreg nagy részén, mint az InSight leszállóhelye alatt, amit utóbbi nagyobb kérgi porózussága okozhat.
 
-Subsurface ice will be a vital resource for astronauts, who could use it for a variety of needs, including drinking water, agriculture, and rocket propellant. Buried ice has never been spotted this close to the Martian equator, which, as the warmest part of Mars, is an appealing location for astronauts.
+A kutatók szerint a mars északi síkságai és déli magasföldjei közti különbséget hatalmas becsapódások, vagy marsi köpenyben zajló folyamatok is létrehozhatták. Mindkettő olyan kérget hozna létre északon, ami egybevág a közvetlenül a becsapódásoktól érkező rengéshullámok jellemzőivel. A déli magasföldekről árulkodó, bolygót megkerülő hullámok viszont a kutatók szerint most arra utalnak, hogy a kéreg struktúrája mindkét félgömbön hasonló.
+
+Egy, a felfedezésben nem résztvevő kutatók által a Science-nek [írt kommentár cikk](https://www.science.org/doi/10.1126/science.add8574) szerint a kéreg mélyének és a köpeny felsőbb régióinak részletesebb megértése segíthet eldönteni, hogy melyik hipotézis magyarázza jobban a Mars arculatát meghatározó különbségek kialakulását. A szakemberek hozzáteszik, hogy összességében az InSight egy, a [Föld belső felépítéséhez](https://qubit.hu/2022/04/26/550-millio-eve-alakult-ki-bolygonk-belso-magja-es-ugy-tunik-ez-mentette-meg-az-eletet-a-foldon) hasonló szerkezetet talált a Marson.
 
 ## Egy-két hónapja van hátra az InSightnak
 
-InSight has seen its power drastically decline in recent months due to dust settling on its solar panels. The spacecraft now is expected to shut down within the next six weeks, bringing the mission’s science to an end.
+Az InSight leszállóegység [2018-as landolása óta](https://qubit.hu/2018/11/26/ma-este-landol-a-marson-a-nasa-urszondaja-az-insight) tanulmányozza a bolygó belső szerkezetét. A szonda szeizmográfjával eddig több mint 1318 rengést észlelt, amik a kutatóknak [segítenek megérteni](https://qubit.hu/2022/05/10/minden-eddiginel-erosebb-marsrengest-eszlelt-az-insight-2018-ota-vartak-erre-a-kutatok) a kőzetbolygók, így a Föld kialakulását és változásának történetét is.
 
-Bruce: Az InSight valószínűleg 4-8 hetet fog még működni.
+A szondát két nagy napelemtábla látja el energiával, amikre az évek során a mostoha marsi környezetben [egyre több por rakódott](https://qubit.hu/2022/01/13/homokviharba-kerult-igy-kenyszerpihenore-kuldtek-az-insight-marsszondat-nehogy-ido-elott-az-opportunity-sorsara-jusson). A mérnökök minden próbálkozása ellenére az InSight energiája folyamatosan csökken, és a küldetést vezető [Bruce Banerdt](https://science.jpl.nasa.gov/people/banerdt/) szerint a szonda 4-8 hét múlva végleg elhallgathat. Ezzel négy év után egy tudományos szempontból nagyon sikeres küldetés zárul majd le, ami hosszú évekre vagy évtizedekre ellátta a kutatókat elemzésre váró adatokkal a Mars és a kőzetbolygók mélyében zajló folyamatokról.
 
 *Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2022/09/20/ilyen-hangja-van-annak-amikor-meteoroidok-csapodnak-be-a-marsba
+
+https://qubit.hu/2022/05/10/minden-eddiginel-erosebb-marsrengest-eszlelt-az-insight-2018-ota-vartak-erre-a-kutatok
+
+https://qubit.hu/2020/11/30/vulkani-tevekenysegre-utalo-nyomokat-talaltak-a-marson
