@@ -42,6 +42,11 @@ A kutatók szerint a mars északi síkságai és déli magasföldjei közti kül
 
 Egy, a felfedezésben nem résztvevő kutatók által a Science-nek [írt kommentár cikk](https://www.science.org/doi/10.1126/science.add8574) szerint a kéreg mélyének és a köpeny felsőbb régióinak részletesebb megértése segíthet eldönteni, hogy melyik hipotézis magyarázza jobban a Mars arculatát meghatározó különbségek kialakulását. A szakemberek hozzáteszik, hogy összességében az InSight egy, a [Föld belső felépítéséhez](https://qubit.hu/2022/04/26/550-millio-eve-alakult-ki-bolygonk-belso-magja-es-ugy-tunik-ez-mentette-meg-az-eletet-a-foldon) hasonló szerkezetet talált a Marson.
 
+InSight is studying the planet’s crust, mantle, and core. Seismic waves are key to the mission and have revealed the size, depth, and composition of Mars’ inner layers. Since landing in November 2018, InSight has detected 1,318 marsquakes, including several caused by smaller meteoroid impacts.
+
+becsapódás insight videó https://youtu.be/17hsIedHKx8
+kráter animáció https://youtu.be/NR7QCUit-do?t=2
+
 ## Egy-két hónapja van hátra az InSightnak
 
 Az InSight leszállóegység [2018-as landolása óta](https://qubit.hu/2018/11/26/ma-este-landol-a-marson-a-nasa-urszondaja-az-insight) tanulmányozza a bolygó belső szerkezetét. A szonda szeizmográfjával eddig több mint 1318 rengést észlelt, amik a kutatóknak [segítenek megérteni](https://qubit.hu/2022/05/10/minden-eddiginel-erosebb-marsrengest-eszlelt-az-insight-2018-ota-vartak-erre-a-kutatok) a kőzetbolygók, így a Föld kialakulását és változásának történetét is.
