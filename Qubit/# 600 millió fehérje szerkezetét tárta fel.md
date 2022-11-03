@@ -12,20 +12,7 @@ Eugene Koonin neves amerikai evolúciógenetikus [szerint](https://ai.facebook.c
 
 A kutatók az ESM-2-vel 617 millió fehérje szekvenciához tartozó térszerkezetet határozták meg, ami lefedi a felhasznált [MGnify90](https://www.ebi.ac.uk/metagenomics/) metagenomikai adatbázis 99 százalékát. Az így létrejött [ESM metagenomikai atlasz](https://esmatlas.com/), valamint a nyelvi modellek bárkinek nyíltan elérhetők [GitHub-on keresztül](https://github.com/facebookresearch/esm#atlas).
 
-
-A
-
-Az előrejelzett fehérje térszerkezeteket tartalmazó ESM metagenomikai atlasz 617 millió fehérje szekvencia alapján 
-
-
-
-
 A Naturenek Burkhard Rost, a Müncheni Műszaki Egyetem bioinformatikusa [elmondta](https://www.nature.com/articles/d41586-022-03539-1), hogy a Meta nyelvi modelljének gyorsasága és pontossága impresszív, de kérdéses, hogy valóban előnyt ad-e az AlphaFold precíziójához képest, amikor fehérjék szerkezetének metagenomikai adatbázisokból történő meghatározásáról van szó. A kutató szerint a nyelvi modellek igazán [annak megállapítására](https://qubit.hu/2022/09/28/soha-nem-latott-feherjeket-almodik-meg-a-proteinmpnn-mesterseges-intelligencia) jók, hogyan változtatják meg mutációk a fehérjék szerkezetét.
-
-
-https://esmatlas.com/
-
-
 
 *Kapcsolódó cikkek a Qubiten:*
 
