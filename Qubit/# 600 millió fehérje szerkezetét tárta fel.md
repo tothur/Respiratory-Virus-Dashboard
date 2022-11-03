@@ -1,6 +1,6 @@
 # 600 millió fehérje szerkezetét tárta fel az ESMFold, a Meta algoritmusa
 
-## A Facebookot Meta mesterséges intelligenciával foglalkozó kutatói egy, az eddigi módszereknél sokkal gyorsabb fehérjekutató algoritmust hoztak létre. A módszer segítségével most először tárult fel a fehérjeuniverzum sötét anyaga. 
+## A Facebook anyavállalata, a Meta mesterséges intelligenciával foglalkozó kutatói egy, az eddigi módszereknél sokkal gyorsabb fehérjekutató algoritmust hoztak létre. A módszer segítségével most először tárult fel a fehérjeuniverzum sötét anyaga. 
 
 Több mint 600 millió fehérje háromdimenziós szerkezetét fejtette meg a Meta ESMFold mesterséges intelligenciája. Az új módszer eddig példátlan betekintést ad a fehérje szerkezetek valódi változatosságába, ami gyógyszerkutatási és biotechnológiai alkalmazásokkal kecsegtet - derül ki egy bioRxiv-ra október 31-én [feltöltött preprint](https://www.biorxiv.org/content/10.1101/2022.07.20.500902v2) tanulmányból.
 
