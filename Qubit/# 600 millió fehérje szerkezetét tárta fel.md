@@ -6,9 +6,11 @@ Több mint 600 millió fehérje háromdimenziós szerkezetét fejtette meg a Met
 
 A Zeming Lin, a New York-i Egyetem és a Meta AI FAIR csoportjának kutatója és kollégái által kifejlesztett nyelvi modell az eddigi megoldásoknál több mint 10-szer gyorsabb lehet, és az esetek többségében olyan precíz eredményt ad, mint a legjobb fehérjekutató algoritmus, a DeepMind AlphaFold2-je.
 
-A fehérjék aminosavak láncolatából épülnek fel
+A mostani áttörés lényege, hogy az algoritmussal olyan fehérjék szerkezetét határozták meg, amiket különböző környezetekben vett mintákban találtak.
 
-A kutatók az ESM2-t egy olyan fehérje adatbázisra szabadították rá
+A kutatók a mesterséges intelligenciát egy olyan fehérje adatbázisra szabadították rá, a
+
+A fehérjéket peptidkötéssel egymáshoz kapcsolódó aminosav-maradékok [építik fel](https://qubit.hu/2022/09/28/soha-nem-latott-feherjeket-almodik-meg-a-proteinmpnn-mesterseges-intelligencia). 
 
 
 https://www.nature.com/articles/d41586-022-03539-1
