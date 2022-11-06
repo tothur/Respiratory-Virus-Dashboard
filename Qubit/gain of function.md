@@ -2,6 +2,11 @@
 
 ## Egy, az NIH által felkért szakértői csoport nemrég a gain of function kutatásokat érintő szabályok kiterjesztését javasolta. Kemenesi Gábor és Müller Viktor magyarázza el a Qubitnek, hogy ez jó ötlet-e.
 
+https://www.science.org/content/article/u-s-weighs-crackdown-experiments-could-make-viruses-more-dangerous
+https://www.nature.com/articles/d41586-022-03344-w
+https://www.nytimes.com/2022/10/30/opinion/virology-safety.html?smid=tw-share
+https://www.nytimes.com/2022/10/22/science/covid-virus-laboratory-experiments.html
+
 - Hogyan hatott ez a két H5N1-es kutatás általánosságban, és neked milyen tanulságokkal szolgált ez az egész?
 
 Ahogy mondod, ez a két eset volt, ami először komolyabban ráirányította a figyelmet erre az egész kérdéskörre, ideértve az én figyelmemet is. Akkor azt a cikket, azt gyakorlatilag úgy írtam, hogy a Viruses folyóirat szerkesztőbizotssági tagjaként, hogy abban a folyóiratban is megjelenjen ez a kérdés.
