@@ -16,7 +16,14 @@ A JPL mostanában a [Perseverance](https://qubit.hu/2022/07/28/a-perseverance-ma
 
 ## 
 
-A független bizottság a Psyche küldetésnek azt javasolta, hogy állítsanak fel egy tervet a szükséges szoftveres fejlesztések befejezéséhez, állítsanak fel egy új indítási időpontot.
+A Psyche indítását
+
+A független bizottság azt javasolta, hogy a Psyche küldetés dolgozzon ki egy tervet a maradék fejlesztési feladatok lebonyolítására, jelöljenek ki egy tág indítási ablakot, és tekintsenek át minden eddig elvégzett munkát, hogy kiderüljön, hogy nem maradt
+
+
+
+
+ fel egy tervet a szükséges szoftveres fejlesztések befejezéséhez, állítsanak fel egy új indítási időpontot.
 
 
 Psyche küldetéséhez azt javasolta, hogy 
