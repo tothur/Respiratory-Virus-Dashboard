@@ -16,9 +16,11 @@ A JPL mostanában a [Perseverance](https://qubit.hu/2022/07/28/a-perseverance-ma
 
 ## 
 
-Ehhez képest nem tűnt rendkívüli eseménynek, hogy a NASA júliusban [elhalasztotta](https://www.nasa.gov/press-release/nasa-announces-launch-delay-for-psyche-asteroid-mission) a Psyche szonda indítását, mert nem maradt már elég idő arra, hogy befejezzék az alapvető navigációs, irányítási és kommunikációs funkcióit működtető szoftver tesztelését. A 985 millió dolláros költségvetésű szondát célpontjáról, a fémben gazdag [16 Psyche](https://en.wikipedia.org/wiki/16_Psyche) kisbolygóról nevezték el. Korábban kutatók úgy vélték, hogy a kisbolygó egy olygókezdemény magjának maradványa lehet, de jelenleg [valószínűbbnek tűnik](https://arxiv.org/abs/2110.03635), hogy felszínének magas vastartalmú lávát  vulkánok hozták létre.
+Ehhez képest nem tűnt rendkívüli eseménynek, hogy a NASA júliusban [elhalasztotta](https://www.nasa.gov/press-release/nasa-announces-launch-delay-for-psyche-asteroid-mission) a Psyche szonda indítását, mert nem maradt már elég idő arra, hogy befejezzék az alapvető navigációs, irányítási és kommunikációs funkcióit működtető szoftver tesztelését. A 985 millió dolláros költségvetésű szondát célpontjáról, a fémben gazdag [16 Psyche](https://en.wikipedia.org/wiki/16_Psyche) kisbolygóról nevezték el. Korábban kutatók úgy vélték, hogy a kisbolygó egy bolygókezdemény magjának maradványa lehet, de jelenleg [valószínűbbnek tűnik](https://arxiv.org/abs/2110.03635), hogy felszínének magas fémtartalmát vulkánok hozták létre.
 
-Ez 
+Bár ez 
+
+
 
 
 A független bizottság azt javasolta, hogy a Psyche küldetés dolgozzon ki egy tervet a maradék fejlesztési feladatok lebonyolítására, jelöljenek ki egy tág indítási ablakot, és tekintsenek át minden eddig elvégzett munkát, hogy kiderüljön, hogy nem maradt
