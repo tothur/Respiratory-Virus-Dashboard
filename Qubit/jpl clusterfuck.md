@@ -16,9 +16,14 @@ A JPL mostanában a [Perseverance](https://qubit.hu/2022/07/28/a-perseverance-ma
 
 ## 
 
+A független bizottság a Psyche küldetésnek azt javasolta, hogy állítsanak fel egy tervet a szükséges szoftveres fejlesztések befejezéséhez, állítsanak fel egy új indítási időpontot.
+
+
+Psyche küldetéséhez azt javasolta, hogy 
+
 A JPL részéről Leshin és a NASA-tól az űrügynökség tudományos programjéért felelős Thomas Zurbuchen egyetértettek a vizsgálóbizottsággal abban, hogy rövid és hosszútávú döntéseket kell hozniuk, hogy ne fordulhassanak elő mégegyszer a Psyche 
 
-A független bizottság a Psych
+
 
 JPL, he said, has an “unprecedented workload” of projects and the board found the lab’s resources were stretched thin, particularly in key technical expertise. “There is a large imbalance today between the workload and the available resources at JPL,” he said. “This imbalance was clearly a root cause of the Psyche issues and, in our judgement, adversely affects all flight project activity at JPL.”
 
