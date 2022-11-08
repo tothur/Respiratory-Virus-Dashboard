@@ -1,5 +1,13 @@
 # Arra még a gleccserkutatók sem számítottak, hogy 200 kilométerre a parttól kezd olvadni a grönlandi jégtakaró északkeleti része
 
+##
+
+Több mint ötször gyorsabban olvadhat a grönlandi jégtakaró egyik legfontosabb régiója, mint korábban feltételezték.
+
+
+
+Shfaqat Abbas Khan, a Dán Műszaki Egyetem kutatója és kollégái
+
 Shfaqat Abbas Khan
 Technical University of Denmark, Kongens Lyngby, Denmark
 https://www.nature.com/articles/s41586-022-05301-z
