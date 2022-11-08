@@ -68,3 +68,11 @@ Kinek lehet úgymond joga beleszólni ebbe az egész gondolkodásba. Mert hogy f
 - Van esetleg még valami, amit hozzá szeretnél tenni?
 
 Abból is látszik, hogy nem egyszerű a kérdés, hogy nincsen szakmai konszenzus se. A leghozzáértőbb kutatók véleménye is megoszlik abban, hogy mi a ésszerű rizikó és mi nem, ami nem könnyíti meg mondjuk közvéleménynek a helyzetét. De ez tényleg azt jelzi, hogy ez egy bonyolult és emberi gondolkodással nehezen kezelhető kérdés.
+
+*Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2021/05/31/nem-zarhato-ki-hogy-laboratoriumbol-szabadult-ki-a-koronavirus
+
+https://qubit.hu/2021/12/04/a-virusvadaszat-a-sars-cov-2-regenye-jo-konyv-amit-nem-jo-olvasni
+
+https://qubit.hu/2022/04/08/a-koronavirussal-foglalkozo-kutatok-tobb-mint-harmadat-erte-zaklatas-a-jarvany-alatt
