@@ -1,0 +1,13 @@
+# Arra még a gleccserkutatók sem számítottak, hogy 200 kilométerre a parttól kezd olvadni a grönlandi jégtakaró északkeleti része
+
+Shfaqat Abbas Khan
+Technical University of Denmark, Kongens Lyngby, Denmark
+https://www.nature.com/articles/s41586-022-05301-z
+
+Future ice loss from the Northeast Greenland Ice Stream, part of the Greenland ice sheet, could cause sea levels to rise by up to 15.5 mm by 2100, a study in Nature suggests. This rise is the equivalent of the entirety of the Greenland ice sheet’s contribution to sea-level rise over the past 50 years.
+
+The Northeast Greenland Ice Stream comprises a fast-flowing main trunk that extends for 600 km and is 30–50 km wide, connecting the interior of the ice sheet to two marine-terminating glaciers (Nioghalvfjerdsfjord Gletscher and Zachariae Isstrøm), which drain approximately 12% of the Greenland ice sheet. Over the past decade the Northeast Greenland Ice Stream has been speeding up, but uncertainties over the flow rate have hampered the detection of ice flow acceleration upstream from the glacier terminus.
+
+To investigate how far ice flow acceleration has spread upstream, Shfaqat Abbas Khan and colleagues used global navigation satellite system data to gather high-resolution data on ice velocity. The data were collected from three stations located on the ice stream, between 90 and 190 km inland from the glacier terminus, from 2016 to 2019. These data were then compared to previous data on surface elevations and flow accelerations. The authors suggest that extensive speeding up and thinning of the ice, which may have been triggered by the collapse of the ice shelf at the Zachariae Isstrøm glacier in 2012, has already occurred at least 200 km inland. They indicate that from 2011 to 2021 the Northeast Greenland Ice Stream thinned by 2–3 m between 100 and 200 km upstream, and suggest that this thinning will continue at an accelerated rate throughout this century. They also use modelling to show that future ice loss may contribute around 13.5 to 15.5 mm to sea-level rise by 2100, which is the equivalent of the entire contribution of the Greenland ice sheet over the past 50 years.
+
+The authors conclude that their findings demonstrate the interconnection of upstream sectors of a glacier and its terminus, and highlight the potential impact of the inland thinning on the Greenland ice sheet and potential future sea-level rises, which may aid in future projections.
