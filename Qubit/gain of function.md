@@ -73,8 +73,8 @@ Abból is látszik, hogy nem egyszerű a kérdés, hogy nincsen szakmai konszenz
 
 *Kapcsolódó cikkek a Qubiten:*
 
-https://qubit.hu/2021/05/31/nem-zarhato-ki-hogy-laboratoriumbol-szabadult-ki-a-koronavirus
-
 https://qubit.hu/2021/12/04/a-virusvadaszat-a-sars-cov-2-regenye-jo-konyv-amit-nem-jo-olvasni
 
 https://qubit.hu/2022/04/08/a-koronavirussal-foglalkozo-kutatok-tobb-mint-harmadat-erte-zaklatas-a-jarvany-alatt
+
+https://qubit.hu/2021/05/31/nem-zarhato-ki-hogy-laboratoriumbol-szabadult-ki-a-koronavirus
