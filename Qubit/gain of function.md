@@ -45,7 +45,9 @@ Sok olyan kutatás, ami megvalósult az elmúlt években, erre ez igaz [előnyö
 
 Emiatt az épült be a szakmai gondolodásba, hogy ilyen kísérleteket csinálunk, ezekből még nem lett baj. Akkor az emberi gondolkodás ezt természetesen meghosszabbítja, hogy ez egy biztonságos dolog, ebből nem is lesz baj. De itt akkora nagy a potenciális katasztrófa, amit egy nagyon ritka esemény okozhat, hogy nem úgy kellene tanulni belőle, hogy megvárjuk amikor először lesz baj, és akkor majd onnantól védekezünk, hanem most felmérni, nem a hétköznapi intuitív gondolkodásunkkal, hanem egy tudományosabb megközelítéssel, hogy voltaképpen tudjuk, hogy mekkora katasztrófa származhatna ebből, és ezek alapján mérlegelni a kockázatokat. 
 
-- Sok a zoonózis egyes kutatók szerint vs alacsony rizikó a laborbalesetekben?
+- Sok a zoonózis egyes kutatók szerint vs alacsony rizikó a laborbalesetekben? 
+ 
+https://www.nature.com/articles/s41467-022-31860-w
 
 Itt annyira kicsi valószínűségekről van szó, hogy azokat már gyakorlatilag nem tudjuk olyan biztonsággal felmérni, hogy ilyen összevetést adhassunk. Azt látjuk, hogy új zoonótikus pandémia az nincsen minden nap. Amit modern orvostudomány bizonyítottan lát, az a mostani koronavírus pandémiát megelőzően a HIV pandémiája, ami állati eredetű kórokozóból alakult ki, körülbelül 100 évvel ezelőtt, csak sokkal később jelent meg globálisan, és sokkal később ismerte fel az orvostudomány. A korábbi influenzavírus pandémiáknál a legsúlyosabb amit ismerünk, ez a spanyolnátha, 1918-19-ből, itt is madárinfluenza gének kerültek be az embereket fertőző új vírustörzsbe, bizonyos értelemben itt is beszéltünk állati eredetről, de ezek a nagy események nagyon ritkák. Ehhez képest akkor most a laboreredetnél, ahogy az előbb elmondtam, egy esemény van, amikor gyanítjuk, hogy erről lehetett szó, itt is elmondható hogy nagyon ritka. Két ennyire ritka eseményt nem lehet összehasonlítani, nem lehet azt mondani, hogy laborból 102 évente szabadul ki valami kórokozó, természetes úton pedig 27 évente jut valami az emberre, ami egy új pandémiát indít el, ráadásul ezek a valószínűségek változnak is.
 
