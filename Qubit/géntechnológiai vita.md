@@ -10,15 +10,15 @@ Málnási Csizmadia András: biokémikus, az ELTE TTK Biokémiai Tanszék egyete
 
 Varga Máté: genetikus, az ELTE TTK Genetikai Tanszék egyetemi docense, a University College of London tudományos munkatársa és a Qubit rendszeres szerzője ezzel szemben "".
 
-🔹 A hárommenetes rangadón intézetünk elismert kutatói az oxfordi vitát formálják lágymányosi stílusúra
-🔹 3 menetben 5-5 percet kapnak saját válaszuk megfogalmazására:
-▪ Mit értünk az alatt, hogy “designer-bébi”?
-▪ Elfogadható-e/megalapozott-e monogénes betegségek gyógyítása genomszerkesztéssel?
-▪ Elfogadható-e/megalapozott-e komplex jellegek megváltoztatása genomszerkesztéssel?
-🔹 A menetek végén 2-2 percben reagálnak egymás állításaira
-🔹 A győztes személyéről a közönség dönt!
+## Mit értünk az alatt, hogy "designer-bébi"?
 
-Az ELTE TTK Biológiai Intézete által szervezett vita a korábbi Élő Adás előadássorozatnak, ahol kutatók egy órás előadásokban beszéltek témájukról, a teljes újragondolásaként született.
+## Elfogadható-e és megalapozott-e a monogénes betegségek gyógyítása genomszerkesztéssel?
+
+Ahogy várható volt, itt volt a két kutató közt a legkevesebb különbség.
+
+## Elfogadható-e/megalapozott-e komplex jellegek megváltoztatása genomszerkesztéssel?
+
+A közönségszavazás szerint a vitát x nyerte. Az ELTE TTK Biológiai Intézete által szervezett vita a korábbi Élő Adás előadássorozatnak, ahol kutatók egy órás előadásokban beszéltek témájukról, a teljes újragondolásaként született, és nem lenne baj, ha nem az utolsó ilyen alkalom lenne.
 
 *Kapcsolódó cikkek a Qubiten:*
 
