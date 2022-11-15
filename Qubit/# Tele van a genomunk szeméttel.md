@@ -10,3 +10,5 @@ John Frank, az amerikai Cornell Egyetem genetikusa kollégáival alaposan felder
 https://www.science.org/doi/10.1126/science.abq7871
 
 https://sandwalk.blogspot.com/2021/11/whats-in-your-genome-2021.html
+
+*Kapcsolódó cikkek a Qubiten:*
