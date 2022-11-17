@@ -2,10 +2,9 @@
 
 ## 
 
+A kezdés előtt pár perccel már nem lehetett elférni az "Eljön a dizájner bébik kora?" címmel meghírdetett géntechnológiai vita helyszínéül szolgáló aulában, az ELTE Lágymányosi Campusának déli tömbjében. A rendezvény kezdése technikai okokból 20 percet csúszott.
 
 a kezdés technikai okokból 25 percet csúszott... heavy metal bevezető, kovács mihály, boxmeccses bevonuló, közönség taps
-
-A kezdés előtt pár perccel már alig lehetett elférni az "Eljön a dizájner bébik kora?" címmel meghírdetett géntechnológiai vita helyszínéül szolgáló aulában, az ELTE Lágymányosi Campusának déli tömbjében. A rendezvény kezdése technikai okokból 20 percet csúszott.
 
 A kinti borús időt ellensúlyozó sárgás lámpafényben az esemény moderátora, Kovács Mihály, az ELTE TTK Biokémiai Tanszékének vezetője elkezdte bemutatni a vitában résztvevő két kutatót. A nagyjából egy órás, az ELTE TTK Biológiai Intézete által az oxfordi vita mintájára [szervezett eseményen](https://www.facebook.com/events/877471566772087) köztük érdemi vita tudott kialakulni arról, hogy képesek leszünk-e valaha megtervezni utódainkat, és elfogadható-e ez egyáltalán.
 
@@ -17,50 +16,22 @@ szavazas a vita elott telefonnal
 
 ## Mit értünk az alatt, hogy "designer-bébi"?
 
-Nem csak, hogy lesz designer bébi, hanem bizonyos szinten mindig is létezett ez a koncepció. Az ember tökéletességének fokozására törekvés már egy nagyon régi gondolat, ami [az elmúlt](https://en.wikipedia.org/wiki/Eugenics) 100 évben sajnos sok [tragédiához vezetett](https://ihpi.umich.edu/news/forced-sterilization-policies-us-targeted-minorities-and-those-disabilities-and-lasted-21st) - kezdte érvelését Málnási-Csizmadia. Az először 1978-ban sikeresen alkalmazott in-vitro megtermékenyítésből (IVF) mára 15-20 milliárdos üzlet lett az USA-ban, azzal együtt is, hogy szerinte 15 ezerből 2 így születő gyermeknek lehet genetikai problémája, ami kétszeres kockázat növekedést jelent a természetes megtermékenyítéshez képest. Ma egyetlen sejtből a teljes emberi genomot meg tudjuk határozni, és ez az információ megadja az elméleti alapot az embriók közötti szelektálásra is. Végül a magát szerinte a történelembe beíró [Ho Csian-kuj kínai kutató példáját hozta fel](https://qubit.hu/2022/06/08/a-szintetikus-biologia-koraban-elunk-de-a-mesterseges-elet-letrehozasa-meg-mindig-csak-alom), aki Kínában három év börtönbüntetésre ítéltek, miután három gyermek genomjában örökölhető változtatásokat eszközölt a CRISPR technológia segítségével.
+Nem csak, hogy lesz designer bébi, hanem bizonyos szinten mindig is létezett ez a koncepció. Az ember tökéletességének fokozására törekvés már egy nagyon régi gondolat, ami [az elmúlt](https://en.wikipedia.org/wiki/Eugenics) 100 évben sajnos sok [tragédiához vezetett](https://ihpi.umich.edu/news/forced-sterilization-policies-us-targeted-minorities-and-those-disabilities-and-lasted-21st) - kezdte érvelését Málnási-Csizmadia. Az először 1978-ban sikeresen alkalmazott in-vitro megtermékenyítésből (IVF) mára 15-20 milliárdos üzlet lett az USA-ban, azzal együtt is, hogy szerinte 15 ezerből 2 így születő gyermeknek lehet genetikai problémája, ami kétszeres kockázat növekedést jelent a természetes megtermékenyítéshez képest. 
 
-Ha már vannak, az egész vita okafogyott? - tette fel a kérdést Varga, aki szerint fontos, hogy precízen kezeljük ezeket a szavakat és ne a társadalomban meghonosult értelmük szerint. A genetikus a banán példáját hozta fel, ahol a nemesítés jelentős genetikai változásokat okozott, de ennek ellenére azt senki nem tekinti 
+Ma egyetlen sejtből a teljes emberi genomot meg tudjuk határozni, és ez az információ megadja az elméleti alapot az embriók közötti szelektálásra is. Végül a magát szerinte a történelembe beíró [Ho Csian-kuj kínai kutató példáját hozta fel](https://qubit.hu/2022/06/08/a-szintetikus-biologia-koraban-elunk-de-a-mesterseges-elet-letrehozasa-meg-mindig-csak-alom), aki Kínában három év börtönbüntetésre ítéltek, miután három gyermek genomjában örökölhető változtatásokat eszközölt a [CRISPR gén- és genomszerkesztési technológia](https://qubit.hu/2022/06/08/a-szintetikus-biologia-koraban-elunk-de-a-mesterseges-elet-letrehozasa-meg-mindig-csak-alom) segítségével.
 
+Ha már vannak, az egész vita okafogyott? - tette fel a kérdést Varga, aki szerint fontos, hogy precízen kezeljük ezeket a szavakat és ne a társadalomban meghonosult értelmük szerint. A kutató a banán példáját hozta fel, ahol a nemesítés jelentős és bonyolult genetikai változásokat okozott, de ennek ellenére azt senki nem tekinti genetikailag módosított élőlénynek (GMO). Az in-vitro megtermékenyítésre rátérve hangsúlyozta, mindig is magas volt a társadalmi elfogadottsága, és ma is az. Ehhez képest, mint mondta, a kevezőnek vélt tulajdonságok kiválasztására, és ilyen okokból az embriók szelekciójára vagy genomjuk manipulálására irányuló elképzeléseket a társadalom borzasztóan elutasítja világszerte, így Magyarországon is. 
 
-Varga: 
+Varga szerint ez a hozzáállás nem is fog megváltozni, és ha lesz is egy-két eset, nem várható, hogy társadalmilag elfogadott lesz, mert a genetikai tudásunk bizonyosságától még nagyon messze állunk. Málnási-Csizmadia erre azzal reagált, hogy a kínai CRISPR bébik bejelentését először internetes kommentekben lelkesedéssel fogadták, és ez a sajtóvisszhang miatt fordulhatott meg, amit Varga azzal hárított el, hogy mindenkit lebeszélne arról, hogy ilyen kommentmezőket olvasson.
 
-Egész vita okafogyott, mert már vannak? Szavak és értelmük fontos, megtervezhetjük-e? Ez a része nem fog megvalósulni. Szavak mást jelentenek, mint kellene. Science magazin cikk, banán genom, vad banán nagyon máshogy néz ki mint a nemesített, genetikai eredetű különbségek, iszonyatosan bonyulult változások. Ez a lényeg, hogy a nagy genetikai változások ellenére ez nem GMO. IVF - amerikai társadalom 30% vagy maga részt vett IVF-ben vagy ismer vkit, nagy elfogadottság ma, de már kezdetén is. Embriók szelekciója, tervezettésghez kapcsolt jellegekre, az borzasztóan elutasított. Kiválogatni embriókat, amiből okos, magas emberek lesznek, azt nem szereti a társadalom. Igaz ez, ha CRISPR-rel akarunk beavatkozni. Ma embere szerint kivétel nélkül, Mo-on is borzasztóan elutasított az a gondolat, hogy embrió genomba belenyúljunk ilyen okokból. Varga szerint az ilyen típusú attitűd nem is fog megváltozni.
+## Biotechnológia eszközeivel felszámoljuk-e az örökletes betegségeket?
 
-Málnási:
+A kérdésre Varga empatikus igennel válaszolt, mert erre már most is számos példát látunk. Ilyen az örökletes [Tay-Sachs](https://en.wikipedia.org/wiki/Tay%E2%80%93Sachs_disease) betegség is, ami az idegsejtek fokozatos elpusztulásával jár korai gyermekkorban. Ez az 1970-es években még jelentősen gyakoribb volt az amerikai askenázi zsidó közösségben, de genetikai szűrővizsgálatoknak és genetikai tanácsadásnak hála sikerült minimalizálni az előfordulását. A genetikus szerint ezekből, az egy gén elromlása által okozott betegségekből nagyon sok van, ami csak az Európai Unióban akár 30 millió embert érinthet. Nagyon sokukra nincs is semmilyen kezelés, ha pedig igen, akkor a beavatkozások ára nagyon költséges.
 
-Érdekes dolgokat mondtál, teljesen egyetértek veled. De igen is, lesz designer bébi és bizonyos szempontból már ma is van. Ez egy társadalmi kérdés, ma kell is, hogy ezekről beszéljünk.
+Ezeknek a betegségeknek a kezelése el fog jutni odáig, hogy az már embriókban megtörténik, mondta Málnási-Csizmadia. A jelenlegi géntechnológiai eszközök, mint a CRISPR azonban általában mozaikos kísérleti embriókat hoznak létre, azaz a kutatók által eszközölt változtatások csak a sejtek egy részében jelennek meg. Létezik már módszer ennek kiküszöbölésére, de a biokémikus szerint van itt egy sokkal alapvetőbb kérdés is. Az általában genetikai eredetű, szívizmot érintő [cardiomiopátia](https://en.wikipedia.org/wiki/Cardiomyopathy) megbetegedéshez nagyjából 400 különböző mutációt kötöttek eddig. De ha ezek, az izomösszehúzódásért felelős miozin II motorfehérjében megjelenő változások mind károsak lennének, vetette fel, akkor valószínűleg az evolúció során kiszelektálódnak. Az, hogy ez nem történt meg, annak is köszönhető, hogy a szívizomban dolgozó miozin II fehérje megtalálható vázizmokat alkotó harántcsíkolt izomokban is. Így lehetséges, hogy egy mutáció, ami a vázizmok működését javítja, a szívizomnál ellentétes hatással jár.
 
-Varga: 
-
-Társadalmilag elfogadott lesz? Oké, lesz egy-két eset. A tudás bizonyosságától még nagyon messze állunk. Varga szerint látható időn belül nem lesz elfogadott a tudáshiányunk miatt.
-
-Málnási:
-
-Kínai crispr konferencia, YT kommentek, első hónapban hatalmas lelkesedés h milyen klassz, majd sajtó (?) miatt megváltozott a hangulat.
-
-Varga: 
-
-Mindenkit lebeszélnék arról, hogy YT és FB kommenteket olvasson. erős taps.
-
-## Biotechnológia eszközeivel felszámoljuk-e a súlyos örökletes betegségeket?
-
-Varga:
-
-Igen. Empatikus igen, mert ez már történik, számos példát látunk. Ritka lizoszómális betegség, askhenázi közösségekben gyakori volt, mára nem, 70-es évek óta folyamatos screenek zajlanak az amerikai közösségekben. Hibás enzimnek van-e aktivitása vagy nem? később gen tesztek. 70-es években évente 60 ilyen gyermek született ebben a nagyon súlyos betegségben. 90-es évek közepére 3-5-re lecsökkent, mára még kisebb. Részben genetikai tanácsadással érték el, hordozó szülők házasodásának vagy gyerekvállalás kerülése, v embriót vizsgálták, v IVF előtt vizsgálták. Monogénes betegségek, egy gén elromlik, nagyon szomorú kimenetel. Összességében nagyon sok ilyen betegség van, EU-ban 30 milliót érintenek. Nincs megnyugató kezelés mindegyikre, beavatkozások ára nagy. Anyagcsere betegség - in vivo crispr gyógyszerek, pótolják a hiányzó enzimet. 
-
-Málnási: nem öröklődő dolog. 
-
-Varga: valóban nem, a beavatkozás pillanata a 
-
-Málnási: 30 millió ember érintett EU-ban. Már embrió szinten is lesznek ilyen designer bébik, akár csak, hogy ilyen betegségeket meggyógyítsunk (ha gyógyítás ez). egyik szem kék, másik barna kisfiúban, példa a mozaikos testre, pár sejt korban genetikai változás. crispr-nél mozaikos bébi létrehozása. ezzel a módszerrel szinte biztos hogy mozaikos embriók és emberek lesznek. 1-2-3 évben másik módszer, nem mozaikos embriót hoz létre nagy valószínűséggel - spermiummal együtt visszük be a crispr hatóanyagokat a petesejtbe. 2 éves nature cikk, cardiomyopatia javítása. súlyos szív megálláshoz vezethet, ez történt mr ericksennel is. myozinban egy mutáció. de mi az a jó szív? Mindig tudjuk, hogy ezek betegségek-e? 400 cardiomyopatia mutáció ma, evo során ki kellett volna szelektálódni. de vannak olyan mutációk, amik poz hatnak a szívműködésre. szívizom működéséért a myozin motorfehérje felel. szívizom egy típusú, harántcsíkoltban 2 db (1 szives miozin, egy masik). kulonbozo funkciok miatt ugyan az a mutacio nem jo. lesz designer bébi, azonban ez nagyon súlyos kockázatokhoz és társadalmi kockázatokhoz vezet. hosszú taps.
-
-Varga: 
-
-Vetélytárs önmaga ellen érvelt. Azért nem lesz szükség a crispr szerű beavatkozásokra, mert már vannak működő eszközeink, meglévő eszköztárunk. Genetikai teszteket Szaud-Arábiában is gyakran használják, mutációk kiszűrése, genetikai tesztek házasság előtt, 165 ezer házasság felmondása, önmagában elegendőnek tűnik a betegségek visszaszorítására. 
-
-Málnási:
-
-Vannak más lehetőségek is, a crispr, én is úgy gondolom, hogy valószínűleg nem alkalmas "családtervezésre", hanem valószínűleg a genetic predicition lesz az, amit nagyon fognak nyomatni. Szaudiaknál lehet h herceg mondja meg, h kivel és kivel nem, de USA-ban 10-15 milliárdos biznisz a családtervezés és IVF, nálunk is jelentős. Effektív vagy költséghatékony-e?
+Varga szerint pont azért nem lesz szükség a CRISPR-hez hasonló beavatkozásokra, mert már meg van az eszköztárunk a genetikai szűrővizsgálatokkal és tanácsadással, és sok sesetben elegendőnek tűnik a betegségek visszaszorítására. Az már látszik, hogy nem a CRISPR lesz az a technológia, ami megoldja embrionális korban a betegségeknek a kezelését, mondta Málnási-Csizmadia, hanem 
+Vargával egyetértésben úgy látja, a genetikai információn alapuló előrejelzések segíthetnek majd ebben a jelenleginél is jobban.
 
 ## Rutinszerűen fogunk-e designolni gyermeki genomokat?
 
