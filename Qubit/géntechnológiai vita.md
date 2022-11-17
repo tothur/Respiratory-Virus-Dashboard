@@ -17,9 +17,10 @@ szavazas a vita elott telefonnal
 
 ## Mit értünk az alatt, hogy "designer-bébi"?
 
-Málnási:
+Nem csak, hogy lesz designer bébi, hanem bizonyos szinten mindig is létezett ez a koncepció. Az ember tökéletességének fokozására törekvés már egy nagyon régi gondolat, ami [az elmúlt](https://en.wikipedia.org/wiki/Eugenics) 100 évben sajnos sok [tragédiához vezetett](https://ihpi.umich.edu/news/forced-sterilization-policies-us-targeted-minorities-and-those-disabilities-and-lasted-21st) - kezdte érvelését Málnási-Csizmadia. Az először 1978-ban sikeresen alkalmazott in-vitro megtermékenyítésből (IVF) mára 15-20 milliárdos üzlet lett az USA-ban, azzal együtt is, hogy szerinte 15 ezerből 2 így születő gyermeknek lehet genetikai problémája, ami kétszeres kockázat növekedést jelent a természetes megtermékenyítéshez képest. Ma egyetlen sejtből a teljes emberi genomot meg tudjuk határozni, és ez az információ megadja az elméleti alapot az embriók közötti szelektálásra is. Végül a magát szerinte a történelembe beíró [Ho Csian-kuj kínai kutató példáját hozta fel](https://qubit.hu/2022/06/08/a-szintetikus-biologia-koraban-elunk-de-a-mesterseges-elet-letrehozasa-meg-mindig-csak-alom), aki Kínában három év börtönbüntetésre ítéltek, miután három gyermek genomjában örökölhető változtatásokat eszközölt a CRISPR technológia segítségével.
 
-Lesz-e? Nem csak lesz, hanem mindig is volt ez a koncepció, és most is van. Régi gondolat, hogy minél "tökéletesebb fajunk" legyen, sok tragédiához vezető koncepció az elmúlt évszázadban. A mendeli genetikának és darwini genetikának a fűszerezésével indult ki, komoly társadalmi eszme. 1907-2013 között USA-ban emberek sterilizálása. 1978-ban in vitro fert, mest megterm, nagy biznisz, 15-20 milliárd dolláros éves biznisz. Lefagyasztott embrió, genetikai kockázat néhány embriónál, természetesen 1:15000, ehhez képest 2-5x nagyobb kockázat. Mára továbbfejlődött, utóbbi években teljes genom szekvenálás, embriók közt szelektálhatunk, kínai CRISPR babyk.
+Ha már vannak, az egész vita okafogyott? - tette fel a kérdést Varga, aki szerint fontos, hogy precízen kezeljük ezeket a szavakat és ne a társadalomban meghonosult értelmük szerint. A genetikus a banán példáját hozta fel, ahol a nemesítés jelentős genetikai változásokat okozott, de ennek ellenére azt senki nem tekinti 
+
 
 Varga: 
 
@@ -41,7 +42,7 @@ Varga:
 
 Mindenkit lebeszélnék arról, hogy YT és FB kommenteket olvasson. erős taps.
 
-## Elfogadható-e és megalapozott-e a monogénes betegségek gyógyítása genomszerkesztéssel?
+## Biotechnológia eszközeivel felszámoljuk-e a súlyos örökletes betegségeket?
 
 Varga:
 
@@ -61,9 +62,7 @@ Málnási:
 
 Vannak más lehetőségek is, a crispr, én is úgy gondolom, hogy valószínűleg nem alkalmas "családtervezésre", hanem valószínűleg a genetic predicition lesz az, amit nagyon fognak nyomatni. Szaudiaknál lehet h herceg mondja meg, h kivel és kivel nem, de USA-ban 10-15 milliárdos biznisz a családtervezés és IVF, nálunk is jelentős. Effektív vagy költséghatékony-e?
 
-## Elfogadható-e/megalapozott-e komplex jellegek megváltoztatása genomszerkesztéssel?
-
-Rutinszerűen fogunk-e designolni?
+## Rutinszerűen fogunk-e designolni gyermeki genomokat?
 
 https://qubit.hu/2022/10/12/megfejtettek-a-testmagassag-genetikai-hatteret
 
@@ -75,7 +74,7 @@ Varga: ezek a cégek léteznek, csak minek, lehet h van egy szűk réteg, akinek
 
 Málnási: "Én nem hiszek a tudományban, mert szerintem ez nem hit kérdése. A tudomány arról szól, hogy dolgokat felfedezzünk, nem hogy higyjünk benne." Az emberek szeretnek "hinni" a tudományban, erre jól lehet játszani. Ha hisztek a tudományban, a társadalom véleménye Málnási szerint megváltoztatható. Sok példa, hogy a társadalom véleménye alapvető dolgokban drasztikusan megváltozott. Ha a tech szűk elitnek érhető el ez, genetikai megváltoztatások, ha elérhetők lesznek, az emberi fajt kettészedhetik. Aki csinálja a tudományt, az tudja köventi, hogy "ne árts", sajnos a mai trendeket hiúság, progresszió, profit hajtja Málnási szerint. Társadalmi felelőssége a kutatóknak.
 
-A közönségszavazás szerint a vitát x nyerte. Az ELTE TTK Biológiai Intézete által szervezett vita a korábbi Élő Adás előadássorozatnak, ahol kutatók egy órás előadásokban beszéltek témájukról, a teljes újragondolásaként született, és nem lenne baj, ha nem az utolsó ilyen alkalom lenne.
+A közönségszavazás szerint a vitát Varga nyerte. Az ELTE TTK Biológiai Intézete által szervezett vita a korábbi Élő Adás előadássorozatnak, ahol kutatók egy órás előadásokban beszéltek témájukról, a teljes újragondolásaként született, és nem lenne baj, ha nem az utolsó ilyen alkalom lenne.
 
 *Kapcsolódó cikkek a Qubiten:*
 
