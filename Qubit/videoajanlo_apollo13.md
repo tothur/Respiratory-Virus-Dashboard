@@ -1,6 +1,6 @@
 # Videóajánló: Gyorsan tanul az ember, amikor nagy bajban van - interjú Jim Lovell-el, az Apollo 13 parancsnokával
 
-##
+## Újra emberes űrhajó jár a Hold közelében, egyelőre még legénység nélkül. 
 
 50 éve [először van](https://qubit.hu/2022/11/16/elindult-az-artemis1-az-ember-holdra-valo-visszateresenek-foprobaja) emberes űrhajó a Hold környezetében. Az amerikai űrügynökség szerdán kezdődött Artemis-1 repülésén a még űrhajósokat nem szállító Orion eddig nagyjából problémamentesen teljesített, ami reálissá teszi, hogy a következő repülésen 2024-ben már asztronauták is utazzanak.
 
@@ -26,8 +26,12 @@ Miután sikeresen landoltak a Csendes-óceánban, Lovell szerint tiszta örömö
 
 ## Hol?
 
-Az Apollo 13 küldetésének 50. évfordulója alkalmából, az Astronomy magazin által készített interjún.
+Az Apollo 13 küldetésének 50. évfordulója alkalmából, az amerikai [Astronomy magazin](https://astronomy.com/) által 2020 elején készített interjún.
 
 *Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2022/10/31/legalabb-20-ezer-eve-fogyasztunk-alkoholt-de-ez-csak-nehany-szaz-eve-lett-igazan-veszelyes
+
+https://qubit.hu/2022/10/15/videoajanlo-hogyan-lesz-a-semmibol-valami
 
 https://qubit.hu/2022/09/25/a-szen-dioxid-kibocsatas-csokkentese-nem-csodaszer-a-klimavaltozas-ellen-de-egeto-szukseg-van-ra
