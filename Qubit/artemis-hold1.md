@@ -8,7 +8,7 @@ Az Orion holdközeli elhaladása során egy kritikusan fontos, 2,5 percig tartó
 
 A mai rakétamanőver alatt az Orion a Föld nézőpontjából a Hold mögött lesz, így a NASA [Deep Space Network](https://eyes.nasa.gov/dsn/dsn.html) földi rádióantenna rendszere 34 percig nem fogják tudni tartani vele a kapcsolatot. A kommunikáció helyreállása után várhatók az első képek és videók a Hold-melletti elhaladásról, és annak megerősítése, hogy sikeres volt-e a pályakorrekció.
 
-A NASA tegnap döntött úgy, hogy mivel az Orion és európai szervízmodulljának minden rendszere megfelelően működik, nincs akadálya, hogy belépjen erre a pályára. Ha a 26 napig tartó legénység nélküli küldetés során minden rendben alakul, két év múlva [már űrhajósok utazhatnak a Holdhoz](https://qubit.hu/2022/11/16/elindult-az-artemis1-az-ember-holdra-valo-visszateresenek-foprobaja) az Artemis-2 küldetésen az Orionnal. Az űrügynökség szerint a tesztrepülés egyelőre nem csak, hogy rendben halad, hanem az Orion űrhajó egyenesen túlszárnyalja a várakozásokat.
+A NASA vasárnap döntött úgy, hogy mivel az Orion és európai szervízmodulljának minden rendszere megfelelően működik, nincs akadálya, hogy belépjen erre a pályára. Ha a 26 napig tartó legénység nélküli küldetés során minden rendben alakul, két év múlva [már űrhajósok utazhatnak a Holdhoz](https://qubit.hu/2022/11/16/elindult-az-artemis1-az-ember-holdra-valo-visszateresenek-foprobaja) az Artemis-2 küldetésen az Orionnal. Az űrügynökség szerint a tesztrepülés egyelőre nem csak, hogy rendben halad, hanem az Orion űrhajó egyenesen túlszárnyalja a várakozásokat.
 
 https://www.youtube.com/watch?v=BvWtNx3VOUA
 
