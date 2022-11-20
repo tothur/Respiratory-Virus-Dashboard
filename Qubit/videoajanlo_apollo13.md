@@ -1,6 +1,6 @@
-# Videóajánló: Interjú az űrhajóssal, 
+# Videóajánló: Gyorsan tanul az ember, amikor nagy bajban van - interjú Jim Lovell-el, az Apollo 13 parancsnokával
 
-##
+## Újra emberes űrhajó jár a Hold közelében, egyelőre még legénység nélkül. 
 
 50 éve [először van](https://qubit.hu/2022/11/16/elindult-az-artemis1-az-ember-holdra-valo-visszateresenek-foprobaja) emberes űrhajó a Hold környezetében. Az amerikai űrügynökség szerdán kezdődött Artemis-1 repülésén a még űrhajósokat nem szállító Orion eddig nagyjából problémamentesen teljesített, ami reálissá teszi, hogy a következő repülésen 2024-ben már asztronauták is utazzanak.
 
@@ -12,10 +12,26 @@ Jim Lovell, 1928-ban született amerikai űrhajós, aki 1968-ban az [Apollo 8](h
 
 ## Mit?
 
-Mi volt az Apollo 13 küldetés célja? [Fra Mauro](https://en.wikipedia.org/wiki/Fra_Mauro_formation) 
+Ez volt az első alkalom, amikor már igazán a felfedezések hajtották a küldetés, miután az Apollo 11 és Apollo 12 bizonyította, hogy el tudunk jutni a Holdra - reagálta Lovell a küldetés eredeti céljait fírtató kérdésre. Egy [Fra Mauro](https://en.wikipedia.org/wiki/Fra_Mauro_formation) nevű helyen akartak leszállni, ahol más típusú kőzetek voltak, mint amihez a korábbi holdraszállások során hozzáfértek az űrhajósok. Erre is készültek, tette hozzá, csak sajnos nem sikerült. Lovell eredetileg az Apollo 14-en repült volna, de mint mondta, a NASA menedzsmentje úgy döntött, hogy az eredetileg Apollo-13-ra kijelölt Alan Shepard űrhajósnak akkor még nem volt elég gyakorlata, így kettőjüknek cserélnie kellett. Ezzel Lovellnek nem volt problémája, de amikor visszanéz, elég világos, hogy már a küldetés tervezésétől nem alakultak szerencsésen a dolgok.
+
+Két héttel az indítás előtt, amikor tesztelték a Saturn V rakéta és az űrhajó rendszereit, a földi személyzet megpróbálta kiszdni a folyékony oxigént az Apollo parancsnoki modullra szerelt műszaki egység egyik tartályából, magyarázta Lovell. Ez nem sikerült, ezért az űrhajó 28 voltos elektromos rendszere helyett az 65 voltos indítóállásira kapcsolták a tartály melegítőrendszerét. A művelet sikeres volt, de amit akkor nem tudott a földi személyzet, az az volt, hogy a tartály a 28 voltra tervezett termosztát hibája miatt nagyon felforrósodott, és ez megrongálta az oxigén tank körüli kábeleket. Lovell szerint az indítás előtti napokban történő feltöltésétől az űrhajó oxigéntartálya egy időzített bomba volt.
+
+Az indítás során egy ideig minden rendben ment, de aztán 1-2 perccel korábban, mint kellett volna, leállt a középső hajtómű, mondta Lovell. Szerencsére maradt elég üzemanyaguk ahhoz, hogy elérjék a megfelelő Föld-körüli pályát, és a további fokozatok elindították a Hold irányába. Lovell az Apollo 8-as tapasztalatai miatt komfortosan érezte magát a küldetés elején, és kiderült az is gyorsan, hogy Jack Swigert pilóta nagyon kompetens volt. Az oxigéntartály a küldetés második napján, április 13-án egy rutniművelet hatására fel is robbant, és Lovell először azt gondolta, hogy Fred Haise ismét egy oxigénszeleppel matat, ami hasonló hangokat adott a küldetés korábbi fázisában. Aztán Haisere nézve gyorsan realizálta, hogy nem ő volt, és azt is észrevette, hogy az űrhajót energiával ellátó három tüzelőanyagcellából kettőt elvesztettek. Ezután kitekintett az egyik oldalablakon, és az űrhajóból távozó gázszerű anyagra lett figyelmes, és gyorsan realizálta, hogy oxigént veszítenek.
+
+Mindhárman korábbi tesztpilóták voltak, mondta így hozzá voltak szokva a problémákhoz, ami segített abban, hogy higgadtan tudják kezelni a helyzetet. Az is gyorsan világos lett, hogy az Odyssey parancsnoki modullja haldoklik, így az Aquarius holdkompban kell meghúzniuk magukat. Az nagyon nagy szerencse volt, mondta, hogy a pontos pozíciójukat megadó navigációs információkat kiszedték a parancsnoki modullból és áthelyezték a holdkompba. A következő feladat az volt, hogy az űrhajót a Hold-körüli pályára álláshoz vezető útról visszahelyezzék egy olyanra, ami a Hold gravitációjának kihasználásával gyorsan visszahozta volna az űrhajósokat a Földre. Már egy apró hiba esetén is, magyarázta, az űrhajó teljesen elveszhetett volna a Föld-Hold rendszerben, lehetetlenné téve a Földre visszatérést. Szerencsére minden rendben ment, és a Hold melletti elhaladásukkal felállították a Földtől legtávolabb merészkedő űrhajósok rekordját.
+
+A holdkompba költözéssel persze nem oldódott meg minden, mert csak a parancsnoki modullnak volt a Földre visszatéréshez szükséges hővédőpajzsa. Az összecsatolt űrhajó holdkompból történő irányítása szokatlan volt és egy ideig hozzá kellett szoknia, és mint hozzátette, ha nagyon nagy bajban van az ember, gyorsan tanul. Lovell szerint voltak nehézségek a földi irányítással történő kommunikációban, de nélkülük nem élték volna túl az utat. Elmesélt arról is egy történetet, hogy a Hold megközelítésekor, amikor ő éppen az irányítás üzenetét írta le és azt várta, hogy űrhajóstársai is másolják azokat, ők éppen kamerákkal fotózták a Holdat. De szerencsére sikerült leírnia a parancssort, és a képek is elkészültek a Hold Földről nem látható, túlsó oldaláról.
+
+Miután sikeresen landoltak a Csendes-óceánban, Lovell szerint tiszta örömöt éreztek, de mielőtt visszajuthattak volna a Földre, még egy komoly problémát meg kellett oldaniuk. A két űrhajósra és két napos küldetésre tervezett, de három űrhajós által négy napig használt holdkompban egyre jobban kezdett felgyülemleni a szén-dioxid. Végül a Földön dolgozó mérnökök kitalálták, hogyan lehetne a holdkomp kör alakú szűrőjéhez csatolni, a parancsnoki modullból átvett négyzet alakú szűrőt, ezzel eltávolítva a kabinból a szén-dioxid nagy részét, magyarázta Lovell.
 
 ## Hol?
 
-Astronomy magazine interjú az Apollo 13 küldetésének 50. évfordulója alkalmából.
+Az Apollo 13 küldetésének 50. évfordulója alkalmából, az amerikai [Astronomy magazin](https://astronomy.com/) által 2020 elején készített interjún.
 
 *Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2022/10/31/legalabb-20-ezer-eve-fogyasztunk-alkoholt-de-ez-csak-nehany-szaz-eve-lett-igazan-veszelyes
+
+https://qubit.hu/2022/10/15/videoajanlo-hogyan-lesz-a-semmibol-valami
+
+https://qubit.hu/2022/09/25/a-szen-dioxid-kibocsatas-csokkentese-nem-csodaszer-a-klimavaltozas-ellen-de-egeto-szukseg-van-ra
