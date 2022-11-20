@@ -6,11 +6,11 @@
 
 Az Orion holdközeli elhaladása során egy kritikusan fontos, 2,5 percig tartó rakétamanőverrel felkészül arra, hogy pályára álljon az égitest körül. Erre négy nap múlva kerül majd sor, még egy hajtóműbegyújtás után, amivel az űrhajó megérkezik a Holdtól 64 ezer kilométerre található úgynevezett távoli retrográd pályára. A stabil, a Hold Föld körüli keringésével ellentétes irányú pálya a jövőbeli repülésekhez képest jobban feszíti majd az Orion rendszereit.
 
-A mai rakétamanőver alatt az Orion a Föld nézőpontjából a Hold mögött lesz, így a NASA Deep Space Network földi rádióantenna rendszere 34 percig nem fogják tudni tartani vele a kapcsolatot. Csak ezután derül majd ki, hogy az sikeresen lezajlott-e. A kommunikáció helyreállása után várhatók az első képek és videók a Hold-melletti elhaladásról.
-
-https://www.youtube.com/watch?v=BvWtNx3VOUA
+A mai rakétamanőver alatt az Orion a Föld nézőpontjából a Hold mögött lesz, így a NASA több mint 20 űrszondával és a James Webb űrtávcsővel kommunikáló [Deep Space Network](https://eyes.nasa.gov/dsn/dsn.html) földi rádióantenna rendszere 34 percig nem fogják tudni tartani vele a kapcsolatot. A kommunikáció helyreállása után várhatók az első képek és videók a Hold-melletti elhaladásról, és annak megerősítése, hogy sikeres volt-e a pályakorrekció.
 
 A NASA tegnap döntött úgy, hogy mivel az Orion és európai szervízmodulljának minden rendszere megfelelően működik, nincs akadálya, hogy belépjen erre a pályára. Ha a 26 napig tartó legénység nélküli küldetés során minden rendben alakul, két év múlva [már űrhajósok utazhatnak a Holdhoz](https://qubit.hu/2022/11/16/elindult-az-artemis1-az-ember-holdra-valo-visszateresenek-foprobaja) az Artemis-2 küldetésen az Orionnal. Az űrügynökség szerint a tesztrepülés egyelőre nem csak, hogy rendben halad, hanem az Orion űrhajó egyenesen túlszárnyalja a várakozásokat.
+
+https://www.youtube.com/watch?v=BvWtNx3VOUA
 
 Amint Mike Sarafin, az Artemis-1-ért felelős szakember a NASA pénteki sajtótájékoztatóján [elmondta](https://twitter.com/NASA/status/1593735329047277569?s=20&t=JZ1z6LtqYoU0CWhCrP4e-g), az Artemis-1 legfontosabb célja annak demonstrálása, hogy az Orion űrhajó hővédőpajzsa rendben működik a Földre történő visszatéréskor és az űrhajó képes megbírkózni a világűr körülményeivel. A küldetés elején apró problémák jelentkeztek az Orion csillagokat követő kamerákat használó navigációs rendszerében, de mint azóta a Sarafin szerint a vizsgálatok feltárták, ezeket a hajtóműfúvókák okozták.
 
@@ -18,7 +18,7 @@ https://twitter.com/NASAArtemis/status/1593985275499118592?s=20&t=4aO0lya_xLKCz-
 
 Jim Geffre, az Orion integrációjáért felelős szakember szerint az Orion négy, egyenként 4 méter hosszú napelemei több energiát termelnek, mint arra számítottak, így 13 kilowattal tud gazdálkodni az űrhajó.
 
-Az Oriont a valaha épített egyik legerősebb rakéta, a Space Launch System (SLS) juttatta Hold-felé tartó pályára. Ez volt az SLS első indítása, ami alatt az eddig több mint 20 milliárd dolláros fejlesztési költségű és viták keresztüzében álló rakétarendszer a NASA szerint hibátlanul üzemelt. Az indítóállásban azonban a vártnál több kár keletkezett.
+Az Oriont a valaha épített egyik legerősebb rakéta, a Space Launch System (SLS) juttatta Hold-felé tartó pályára. Ez volt az SLS első indítása, ami alatt az eddig több mint 20 milliárd dolláros fejlesztési költségű és viták keresztüzében álló rakétarendszer a NASA szerint hibátlanul üzemelt. Az indítóállásban keletkezett valamennyi kár, de az űrügynökség szerint erre számítottak is.
 
 https://www.youtube.com/watch?v=tZ3odzYhxIQ
 
