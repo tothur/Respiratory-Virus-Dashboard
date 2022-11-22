@@ -2,9 +2,7 @@
 
 ##
 
-Lakatos Mónika - éghajlatváltozás hatásai a Kárpát-medencében
-
-OMSZ szakmai főtanácsadója, klímatológiai kutató
+- mondta el Lakatos Mónika, az OMSZ szakmai főtanácsadója, éghajlatkutató a Magyar Tudomány ünnepén kedd este tartott előadásán.
 
 Az OMSZ egyszerre foglalkozik a hazai és a Kárpát-medencei éghajlati változások megfigyelésével, és a folytatódó globális felmelegedés várható további hatásainak klímamodellezésével - mondta Lakatos.
 
