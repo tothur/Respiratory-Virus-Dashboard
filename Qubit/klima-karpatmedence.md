@@ -50,6 +50,8 @@ Változott a klímaváltozás diskurzus, több önkormányzat is klímavészhely
 
 Éghajlatváltozás hatásai KM-ben egyértelműek, hatással vannak a term ökoszisztémára és minden szektorra, minden termelő és szolg szektorra. Ha a mi gyerekeink Mo tájait végigjárják a jövőben, már nem azzal fognak találkozni, amivel mi.
 
-Kérdések részt Bozó László meteorológus, MTA rendes tagja moderálta. Észak-Eu csap növ, Mediterrán csap csökkenés, Mo kettő határán. 
+Észak-Eu csap növ, Mediterrán csap csökkenés, Mo kettő határán, hó és tavaszi hóolvadás is hozzájárulhat a vízhozamhoz - tavaszi hótakaró csökken európában, vízhozam csökkenés. tavaszi áradások is ettől függenek, sok hó hirtelen olvadása komoly árvizet okozhat.
+
+üvegházhatású gázok mintegy csapdába ejtik a hőt, ezzel többlet melegedést eredményeznek, ennek egy része az óceánokban raktározódik, éghajlati rendszer minden elemében érzékelhető a többlet hő hatása.
 
 *Kapcsolódó cikkek a Qubiten:*
