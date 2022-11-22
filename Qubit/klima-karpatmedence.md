@@ -1,4 +1,4 @@
-# 
+# Lehetetlen lett volna egy ilyen forró nyár az éghajlatváltozás nélkül
 
 ##
 
@@ -6,19 +6,21 @@ Lakatos Mónika - éghajlatváltozás hatásai a Kárpát-medencében
 
 OMSZ szakmai főtanácsadója, klímatológiai kutató
 
-OMSZ éghajlati osztályán egyik alapvető feladat az éghajlati monitoroing, mérések, megfigyelésekkel - Kárpát mendencében hogy nyilvánul meg az éghajlatváltozás + klímamodellező csoport: a jelenkori változások hogyan folytatódnak a jövőben, milyen valószínűsíthető éghajlati állapottal találkozunk majd
+Az OMSZ egyszerre foglalkozik a hazai és a Kárpát-medencei éghajlati változások megfigyelésével, és a folytatódó globális felmelegedés várható további hatásainak klímamodellezésével - mondta Lakatos.
 
-Kárpát-medencét kötelességünk megvédeni, Alpok védi a ciklonoktól, Kárpátok a hidegbetöréstől. Meddig lesz "európa éléskamrája" és "természeti paradicsom" tette fel a kérdést Lakatos, amit kéktúrás képeivel illusztrált. Mezőgazdaság meglehetősen kitett az éghajlatváltozásnak, természetes ökoszisztéma fontos számunkra, ezek is sérülnek a folytatódó klímaváltozással. Tudunk-e elég határozott lépéseket tenni?
+A kutató szerint ahogy az Alpok védelemzi a ciklonoktól, a Kárpátok pedig a hidegbetöréstől a Kárpát-medencét, nekünk is óvnunk kell azt, ami a nekünk fontos természetes ökoszisztéma és a mezőgazdaság sérülését okozza. A fő kérdés szerinte, hogy tudunk-e ennek érdekében elég határozott lépéseket tenni.
 
-Kétségtelenül egy globálisan melegedő környezetben élünk, az IPCC hatodik jelentését publikálja, már 2021 augusztus fizikai tudományos alapokat bemutató fejezet, egyértelműen kimondja, hogy az elmúlt 125 ezer évben nem volt olyan magas a bolygó hőmérséklete, mint ma és legalább 2 ezer éve nem volt olyan ütemű felmelegedés, mint ma.
+A párizsi klímavállalások alapján az éghajlatváltozást lehetőség szerint 1,5 vagy legalább 2 fok alatt igyekeznek az országok tartani, de ehhez képest, mint mondta, már a meteorológiai világszervezet éves éghajlati jelentése szerint 2022 az 1850-1900-as, iparosodás előtti átlaghoz képest 1,15 fokkal melegebb.
 
-SLIDE
+Lakatos szerint kétségtelen, hogy egy melegedő klímában élünk. Az IPCC tavalyi, a klímaváltozás fizikai alapjait bemutató jelentése (AR6 WGI) egyértelműen kimondja, hogy az elmúlt 125 ezer évben (az utolsó interglaciális időszak, az Eemian óta) nem volt még olyan magas a globális átlaghőmérséklet, mint ma, és legalább 2 ezer éve példátlan a felmelegedés mértéke.
 
-Éghajlati rendszer változásai: CO2 legmagasabb az utóbbi 2 millió évben, metán legmagasabb 800 ezer évben, tengerszint emelkedés 3 ezer éve leggyorsabb, északi-sark 1000 évben legkisebb, gleccserek visszahúzódása 2 ezer évben leglátványosabb - éghajlati rendszer minden elemében megmutatkoznak a változások.
+IPCC GRAFIKON
 
-WMO éves éghajlati jelentés - 1,15 fokkal melegebb 2022 mint 1850-1900 átlag. 2015 és 2022 közötti 8 év a legmelegebb egymás utáni év a mérések kezdete óta. Párizs 1,5 és 2 fok küszöbszámok - azt aláírók 2c alatt igyekeznek tartani, de 1,5 alatt lehetőség szerint tartani. Ehhez képest már 1,15-nél tartunk.
+A változások az éghajlati rendszer minden elemében megmutatkoznak, ami az üvegházhatású gázok, a szén-dioxid és metán 2 millió és 800 ezer éve példátlan szintjéhez köthető.  A változások tetten érhetők az utóbbi 3 ezer év leggyorsabb ütemű tengerszint emelkedésében, az északi sarki jégtakaró és a gleccserek 1-2 ezer éve leglátványosabb visszahúzódásában.
 
-Globális és hazai hőmérséklet. Globális felszínhőmérséklet: kontinensek és tengerfelszínhőmérséklet átlaga (!). 1901-2021: 1,14 fokos globális felszínhőmérséklet emelkedés, hazai 1,21 fokos emelkedés - Kárpát-medencében a globális átlagnál nagyobb. A Földön a jobban melegedő régiókhoz tartozunk, kontinensek belseje és az északi félgömb északi része melegszik jobban.
+Az elmúlt 120 évben (1901-2021) a magyarországi átlaghőmérséklet 1,21 fokkal nőtt, az 1,14 fokos globális átlaghoz képest. A gyorsabb növekedést, mint mondta, részben az okozza, hogy a globális átlag a gyorsabban melegedő szárazföldeket és lassabban melegedő tengerfelszínio hőmérsékletek átlagát tartalmazza. Emellett eleve az északi félgömb északi része melegszik jobban, és annak is a szárazföld belseje eső területei.
+
+Az idei nyár 1901 óta a legmelegebb volt, de már az év elejétől komoly aszály pusztított az országban, mondta az éghajlatkutató.
 
 Idén rekordmeleg nyár és év elejétől komoly aszály pusztított. 2022 nyara 1901 óta legmelegebb, Alföld középső és DK régió, hőhullámos nap 30-nál több (25C fok feletti napi középhőmérséklet, egészséges szervezetnek is figyelmet igénylő.) 10 legmelegebb nap közt csak egy 2000 előtt, 1992-es. Az 1991-2020-as átlagnál (30 éves aktuális normál) az idei nyár 2 fokkal volt melegebb, az 1971-2000-es (korábbi aktuális normál, regionális klímamodell szimulációk ehhez viszonyítva) átlag nyárnál 3,1 fokkal. Nagyon komoly aszály 2022-ben, már a január is rendkívül száraz volt, február is, áprilisban érkezett elegendő csapadék, nyár forró száraz, szeptember átlagnál hűvösebb és csapadékosabb, október is rendkívül meleg és száraz volt. Júliusban nagyon kevés csapadék, olyan területek ahol szinte semmi csapadék, legszárazabb jan-július időszak 1901 óta. Magyarország éghajlatának az aszály valamennyire velejárója, időnként előfordultak komoly aszályoka régmúltban is.
 
@@ -30,7 +32,7 @@ Hazai hőmérséklet változás 1901-2020 között: megfigyelt hazai változáso
 
 SLIDE
 
-120 évben egyedül a tavasz (szignf csökkenés), rövidebben az éves csapadék mutat szignifikáns változást (szign. emelkedés 1981-2020). Növekedett, de intenzívebbé is vált. Péczely-féle éghajlati körzetek - hőmérséklet + nedvesség ellátottság: 1961-1990: kisalföld és alföld nagy része - mérsékelten meleg és száraz 1991-2020: látványos a meleg-száraz kategória előretörése. Területi aránya 1961-1990 10 százalék alatt volt, 1991-2020 57 százalék. Átlagok eltolódásához, ha lassan történnek, lehet alkalmazkodni, de minden ágazatot a szélsőségek gyakoribbá válása visel meg leginkább. Több a +25 fokos hőhullám, 1901 óta lineáris trend szerint 7 napos növekedés, legintenzívebb változás 1981-2020 - délkeleti régió, kisalföld több mint 2 hetes növekedés. Leginkább a sűrűn lakott, belvárosi környezetben élőket viselik meg a hőségperiódusok, városi hősziget jelenség, nagyon látványos hogy pirosodik és szélesedik a grafikon, jóval korábban is előfordulhatnak már és egyre több van belőlük. 15 napnál hosszabb hőhullámok Budapesten - 2018 közel 30 napig tartott, de csúcshő nem volt olyan magas, 2007-es legmagasabb Magyar mért hőmérséklettel, rövid és nagyon intenzív, 15 napnál hosszabbak mind 1990 után fordultak elő Bp-en.
+120 évben egyedül a tavasz (szignf csökkenés), rövidebben az éves csapadék mutat szignifikáns változást (szign. emelkedés 1981-2020). Növekedett, de intenzívebbé is vált. Péczely-féle éghajlati körzetek - hőmérséklet + nedvesség ellátottság: 1961-1990: kisalföld és alföld nagy része - mérsékelten meleg és száraz 1991-2020: látványos a meleg-száraz kategória előretörése. Területi aránya 1961-1990 10 százalék alatt volt, 1991-2020 57 százalék. Átlagok eltolódásához, ha lassan történnek, lehet alkalmazkodni, de minden ágazatot a szélsőségek gyakoribbá válása visel meg leginkább. Több a +25 fokos hőhullám, 1901 óta lineáris trend szerint 7 napos növekedés, legintenzívebb változás 1981-2020 - délkeleti régió, kisalföld több mint 2 hetes növekedés. Leginkább a sűrűn lakott, belvárosi környezetben élőket viselik meg a hőségperiódusok, városi hősziget jelenség, nagyon látványos hogy pirosodik és szélesedik a grafikon, jóval korábban is előfordulhatnak már és egyre több van belőlük. 15 napnál hosszabb hőhullámok Budapesten - 2018 közel 30 napig tartott, de csúcshőmérséklet nem volt olyan magas, 2007-es legmagasabb Magyar mért hőmérséklettel, rövid és nagyon intenzív, 15 napnál hosszabbak mind 1990 után fordultak elő Bp-en.
 
 Kevesebb a fagyos nap, magasabb hőmérsékleti szélsőségekkel és kevesebb hideg szélsőséggel jár - hátrányok:, kártevők áttelelése, melegebb teleken kevesebb a hó. Kevesebb a csapadékos nap 17 nappal 120 év alatt, intenzitás növekedés így egyértelmű hiszen a csapadék összeg keveset változott - ynáron 1,4 mm-el nőtt 120 év alatt a csapadék. Vegetációs időszak változása: hidegtűrő növényeknél korábban (országosan 2 héttel) kezdődik az aktív időszak, és később van vége, országosan 12 nappal. DK országrész a legnagyobb mértékű a hossz növekedése.
 
