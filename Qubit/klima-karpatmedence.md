@@ -1,6 +1,11 @@
 # Az idei nyár egy ízelítő volt a jövőből
 
-## Lakatos Mónika éghajlatkutató szerint 
+## Kétségtelen, hogy melegszik a bolygó, 
+
+
+Lakatos Mónika éghajlatkutató az MTA Magyar Tudomány ünnepe programsorozat
+
+– mondta el Lakatos Mónika éghajlatkutató tegnap este, az MTA-n tartott előadásában.
 
 Az idei nyáron ízelítőt kaptunk a jövőből, amikor az évszázad végére több mint 2 fokkal emelkedhet a hazai nyári középhőmérséklet - mondta el Lakatos Mónika éghajlatkutató, az OMSZ szakmai főtanácsadója az MTA Magyar Tudomány ünnepe programsorozat keretében kedd este [tartott előadásán](https://www.youtube.com/watch?v=9EFcKpJdeuA), ahol a klímaváltozás Kárpát-medencei hatásairól beszélt.
 
@@ -8,7 +13,7 @@ A szakember szerint a múlt héten véget érő egyiptomi COP27 klímacsúcs a k
 
 Az elmúlt években már máshogy beszélünk a klímaváltozásról, és egyre több önkormányzat hirdet szerte a világon klímavészhelyzetet. Ebben Lakatos szerint nagy szerepet játszottak a legújabbkori klímamozgalmak, mint a Greta Thunberg svéd klímaaktivista által alapított [Fridays for Future](https://fridaysforfuture.org/). A kutató úgy látja, a fiataloknak nyilvánvaló lett, hogy az éghajlatváltozást saját bőrünkön érezzük és annak egyes elemei már most visszafordíthatatlanok.
 
-A kutató szerint ahogy az Alpok védi a Kárpát-medencét az Atlanti-óceáni ciklonoktól, a Kárpátok pedig a hidegbetöréstől, nekünk is óvnunk kell azt a természetes ökoszisztémát és a mezőgazdaságot is veszélyeztető éghajlatváltozástól. A fő kérdés, tette hozzá, hogy tudunk-e ezért elég határozott lépéseket tenni. Kollégáival az országos meteorológiai szolgálatban azon dolgoznak, hogy megfigyeljék a hazai és Kárpát-medencei éghajlati változásokat, beszámoljanak azokról a döntéshozók és a közvélemény felé, valamint előrejelezzék a folytatódó globális felmelegedés további várható hatásait.
+A kutató szerint ahogy az Alpok védi a Kárpát-medencét az Atlanti-óceáni ciklonoktól, a Kárpátok pedig a hidegbetöréstől, nekünk is óvnunk kell azt a természetes ökoszisztémát és a mezőgazdaságot is veszélyeztető éghajlatváltozástól. A fő kérdés, tette hozzá, hogy tudunk-e ezért elég határozott lépéseket tenni. Kollégáival az országos meteorológiai szolgálatnál azon dolgoznak, hogy megfigyeljék a hazai és Kárpát-medencei éghajlati változásokat, beszámoljanak azokról a döntéshozók és a közvélemény felé, valamint előrejelezzék a folytatódó globális felmelegedés további várható hatásait.
 
 ## 125 ezer éve nem volt ilyen magas a globális hőmérséklet
 
@@ -42,13 +47,14 @@ Európában a csapadék mennyisége az északi régiókban inkább növekedni, d
 
 ## Hogyan segít az éghajlatváltozás megértésben az OMSZ?
 
-Alkalmazkodni kell, meg kell ismerni és meg is kell ismertetni a változásokat, amik bekövetkeztek, várhatókra becslést adni. Ezeket az eredményeket a kutatóknak kommunikálnia is kell, döntéshozók felé is, hogy lehessen stratégiailag tervezni velük. OMSZ éghajlati monitoring: adatminőség, a mérések minősége kulcsfontosságú. mérőhelyek költöztetése, változó mérési körülmények - el kell különíteni a mesterséges változások jeleit, ezért adat ellenőrzést és homogenizálást, pótlást kell végezni, a MASHv3 homogenizálós eljárással, amit Szentimrey Tamás fejlesztett ki. Szeged esetén polgári repülés kiszolgálásához reptérre költözött az állomás, ezért a nyers adatokból lehűlés jön ki. Térben is reprezentatívnak kell lennie az adatoknak, becsülni, interpolálni kell azokat a pontokat, ahol nincs mérés - MISHv1 homogenizálás - Szentimrey Tamás és Bihari Zita, statisztikai, jól megalapozott interpolációs eljárás. Éghajlati vizsgálatoknál országos átlag, állomási adatokat rácshálóra interpoláljuk, rácsháló minden egyes pontját használjuk az átlagoláshoz, állomások térben sokszor nem reprezentatív - ezért fontos, interpoláció figyelembe tudja venni a domborzatot is. Országos átlag így sokkal megbízhatóbb lesz. Adatok elérhetők a HuClim adatbázisban, az odp.met.hu-n.
+A kutató szerint a változásokhoz alkalmazkodni kell, de ehhez először fel kell tárni azokat, amik eddig bekövetkeztek. Erre szolgál az éghajlati monitoring, ahol kulcsfontosságú szerinte, hogy az adatok és mérések, amikre a hazai éghajlati trendeket alapozzák, megbízhatóak legyenek.
 
-Éghajlati modelleredmények széleskörű felhasználása: hatásvizsgálatok - éghajlatváltozás hatása szektorokra. fontos az adatok hozáférhetősége, mert együttműködni kell számos szakterülettel, ezért OMSZ nyílt adatok - odp.met.hu és KLIMADAT.
+Ehhez ellenőrzik a mérési adatokat és a Szentimrey Tamás által kifejlesztett, MASH statisztikai eljárással kiegyenlítik (homogenizálják) az állomások áttelepítése és a mérési körülmények módosulása által okozott változásokat. Egy másik, Bihari Zita és Szentimrey Tamás által kifejlesztett MISH eljárással pedig a mért adatokat térben is reprezentatívvá teszik, amiből egy megbízható országos átlagot lehet számolni. A nyers adatok és a homogenizált adatsorok is nyíltan, [bárkinek elérhetők](https://odp.met.hu/climate/) az OMSZ weboldalán, a meteorológiai adattárban.
 
-Kitekintés a KM-re: közös kihívások, alkalmazkodás tudományos megalapozásához pannonian basin experiment kezdeményezés, kárpátmedence klímatológiai folyamatainak leírása, megállapították, hogy a mezőgazdasági kockázatok felmérése a legnagyobb modellzési kihívás. Atmosphere folyóiratban 1 lapszám Kárpát-medencére és előforduló szélsőségekre fókuszált már eddig, mik azok a tudományos kérdések, amik itt foglalkoztatják a kutatókat, gyűjtemény. CARPATCLIM adatbázis, egységes adatbázis a kezdeményezésnek, egységes vizsgálathoz. Napi adatbázis, OMSZ vezetéssel készült, MASH-MISH rendszerek, homogenizált, 13 alap változás és 37 indikátor, főként aszály indikátorok. Adatminőség fontos, csapadékösszeg esetén elemzéshez a CARPATCLIM a legpontosabb, európai adatok alábecsülnek, az ERA modell túlbecsüli. CARPATCLIM összefésült országos adatok.
+Mivel a Kárpát-medencében Lakatos szerint közösek az éghajlatváltozás által támasztott kihívások, pár éve elindult egy együttműködés a régió éghajlati folyamatainak leírására (Pannonian Basin Experiment, PannEx). A projekt eredményeként született az Atmosphere tudományos folyóirat, 14 különböző tanulmányt összefogó, [2021-es különszáma](https://www.mdpi.com/journal/atmosphere/special_issues/climate_extremes_pannonian), valamint a [CarpatClim](http://www.carpatclim-eu.org/pages/home/) éghajlati adatbázis. 
 
-Klímadat projekt eredményei - megjelenítő rendszer és adatbázis, országosan is aggregálható, múltbeli megfigyelések és valószínűségi térkép és intervallumok a jövőre nézve is. 
+Ez egy egységes, a Kárpát-medencét alkotó országok adataiból az OMSZ vezetésével összefésült adatbázis, ahol a hazaihoz hasonlóan nagy figyelmet szenteltek az adatok minőségére. Lakatos szerint a CarpatClim jelenleg a legpontosabb kiindulópontot szolgáltatja a Kárpát-medencében várható éghajlatváltozás előrejelzésére és modellezésére. Úgy véli, a kutatóknak fontos feladata, hogy ezeket kommuniklják a társadalom és a döntéshozók felé is, hogy stratégiailag lehessen velük tervezni.
+
 
 *Kapcsolódó cikkek a Qubiten:*
 
