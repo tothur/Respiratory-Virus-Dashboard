@@ -33,7 +33,39 @@ Dheeraj Pasham, az MIT asztrofizikusa és kollégái az esemény [modellezésév
 
 Kiderült, hogy a relativisztikus nyalábot anyag, konkrétabban elektronok dominálták extrém mértékben, ami a kutatók szerint megkérdőjelezi a nyalábokról alkotott eddigi képünket.
 
+Both models 1 and 2 require a strong SSC contribution to 
+match the X-ray flux. For this to happen, we require a strongly 
+matter-dominated jet; that is, most of the power is carried by the electrons and protons within the jet, rather than by the magnetic field. Such 
+a matter-dominated flow is in tension with the common theoretical 
+paradigm that jets are magnetically dominated at their launching 
+point, and then accelerate by turning the magnetic field into bulk 
+kinetic energy until they reach rough equipartition32,33, but is in line with 
+ref. 34, which proposed a structured, radiation-driven jet powered by 
+super-Eddington accretion.
+
 Arra is fény derült, hogy a csillag a Naphoz hasonló méretű és tömegű lehetett, a szupermasszív fekete lyuk tömege pedig viszonylag alacsony. 
+
+A TDE is largely characterized by the pericentre distance (the closest approach between the star and the black hole), the stellar properties 
+and the black hole mass. The pericentre distance does not affect the 
+accretion rate if the disruption is full (for example, refs. 43–46), whereas 
+if it is partial there is a steep fall in luminosity with increasing distance 
+(for example, refs. 44,47,48). For a star of radius R⋆ and mass M⋆ and a black 
+hole of mass M, the characteristic TDE accretion rate is 
+∝ (M⋆/R⋆)
+3/2
+(M/M⋆)
+−1/2
+. For a main sequence star with R⋆ ∝ M⋆ the 
+luminosity is therefore ∝ M1/2
+⋆ , and a very massive (and rare) star is 
+needed to substantially modify the accretion rate (for example, see 
+fig. 4 of ref. 49). On the other hand, the Eddington ratio for a TDE scales 
+as M−3/2, and a modest decrease in black hole mass yields a large increase 
+in the Eddington fraction. Given these considerations, and the approximate scaling of the X-ray luminosity as ∝ t
+−9/4 (ref. 47), we suggest that 
+AT 2022cmc could have been powered by the partial disruption (near 
+the full disruption threshold) of a dwarf star by a relatively low-mass 
+black hole and its super-Eddington accretion
 
 *Kapcsolódó cikkek a Qubiten:*
 
