@@ -4,6 +4,9 @@
 
 Egy távoli szupermasszív fekete lyuk szétszakított egy csillagot, ami túl közel került hozzá. Ez akkora elektromágneses jelet produkált, hogy azt még földi teleszkópok is észlelték - derül ki szerdán a [Nature](https://www.nature.com/articles/s41586-022-05465-8) és a [Nature Astronomy](https://www.nature.com/articles/s41550-022-01820-x) folyóiratokban közölt tanulmányokból.
 
+A3 Tidal Disruption Graphic
+Credit: Carl Knox – OzGrav, ARC Centre of Excellence for Gravitational Wave Discovery, Swinburne University of Technology
+
 Igor Andreoni, a Marylandi Egyetem csillagásza és kollégái az eseményből keletkező fényt 2022. február 11-én [észlelték](https://www.nature.com/articles/s41586-022-05465-8) a San Diego-i Palomar Obszervatóriumban található [Zwicky Transient Facilitynek](https://www.ztf.caltech.edu/) nevezett optikai teleszkóprendszerrel, ami az égbolt nagy részének megfigyelésével kifejezetten ehhez hasonló kozmikus történések észlelésére szolgál.
 
 Ez volt a valaha megfigyelt legtávolabbi példa arra, amikor egy fekete lyuk ár-apály erői szétszakítanak egy csillagot ([tidal disruption event](https://en.wikipedia.org/wiki/Tidal_disruption_event)). A jel forrása bolygónktól 12,4 milliárd fényévre található, egy távoli galaxisban. Az esemény vizsgálata a kutatók szerint segíthet megérteni, hogyan növekszenek az általában galaxisok középpontjában található szupermasszív fekete lyukak a körülöttök lévő anyag - köztük csillagok - bekebelezésével.
