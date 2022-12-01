@@ -31,7 +31,11 @@ A jel tulajdonságai alapján a legvalószínűbb forgatókönyv szerintük az, 
 
 Dheeraj Pasham, az MIT asztrofizikusa és kollégái az esemény [modellezésével](https://www.nature.com/articles/s41550-022-01820-x) azt kívánták megérteni, hogy mit árul el a jel a relativisztikus nyalábokról, és mik lehettek a fekete lyuk, valamint a szétszakított csillag jellemzői.
 
+<<<<<<< HEAD
 Kiderült, hogy a relativisztikus nyalábot anyag, konkrétabban elektronok dominálták extrém mértékben, ami a kutatók szerint megkérdőjelezi a nyalábokról alkotott eddigi képünket. 
+=======
+Kiderült, hogy a relativisztikus nyalábot erősen anyagot dominálták, konkrétabban elektronok, ami a kutatók szerint megkérdőjelezi a nyalábokról alkotott eddigi képünket.
+>>>>>>> dc3ced7ccfeadfe6db184e97d56f99b94d1d252a
 
 Both models 1 and 2 require a strong SSC contribution to 
 match the X-ray flux. For this to happen, we require a strongly 
