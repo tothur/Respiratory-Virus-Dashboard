@@ -33,7 +33,11 @@ A jel tulajdonságai alapján a legvalószínűbb forgatókönyv szerintük az, 
 
 Dheeraj Pasham, az MIT asztrofizikusa és kollégái az esemény [modellezésével](https://www.nature.com/articles/s41550-022-01820-x) azt kívánták megérteni, hogy mit árul el a jel a relativisztikus nyalábokról, és mik lehettek a fekete lyuk, valamint a szétszakított csillag jellemzői.
 
+<<<<<<< HEAD
 Kiderült, hogy a relativisztikus nyaláb energiájának túlnyomó részéért az általa szállított anyag - elektronok és protonok - és nem a mágneses tér felelnek. Ez a kutatók szerint nem illeszkedik a nyalábokról alkotott általános elméleti képünkbe, ami a mágneses tér megfigyeltnél nagyobb szerepét hangsúlyozza.
+=======
+Kiderült, hogy a relativisztikus nyalábot anyag, konkrétabban elektronok dominálták extrém mértékben, ami a kutatók szerint megkérdőjelezi a nyalábokról alkotott eddigi képünket. 
+>>>>>>> c897fb466fe4d8db394547fc2a413653193c9416
 
 Arra is fény derült, hogy a csillag a Naphoz hasonló méretű és tömegű lehetett, a szupermasszív fekete lyuk pedig kategóriájához képest viszonylag alacsony tömegű.
 

@@ -1,0 +1,49 @@
+# Bemutatták a B-21-et, a lopakodó repülők új generációját
+
+## Az eddigi legfejlettebb, és legnagyobb hatótávú csupaszárny lopakodót az Egyesült Államok már egy potenciális Kínával zajló konfliktus veszélyének tudatában építi. Már a ceremónia is jelezte, hogy azt remélik, a gép léte önmagában is elég elrettentő erő lehet.
+
+Az eddigi legfejlettebb csupaszárny lopakodóját az Egyesült Államok már egy potenciális Kínával zajló konfliktus veszélyének tudatában mutatta be.
+
+Az Egyesült Államok [bemutatta](https://apnews.com/article/technology-china-business-air-force-palmdale-761db1dae42616181a2cc63966f43554) új generációs lopakodó bombázóját, a B-21-et, amitől azt remélik, hogy segít majd megőrizni az ország katonai fölényét a következő évtizedekben. A magyar idő szerint szombat éjszaka felfedett futurisztikus repülőgép jövőre emelkedhet először a magasba, és a légierő az évtized közepén kezdheti majd használni.
+
+A B-21 lopakodó bombázó USAF
+
+A programban résztvevők [által](https://www.thedrive.com/the-war-zone/this-is-the-b-21-raider-stealth-bomber) a valaha épített legfejlettebb lopakodó repülőnek nevezett B-21 elsődleges [feladata](https://www.defense.gov/News/News-Stories/Article/Article/3235326/world-gets-first-look-at-b-21-raider/), hogy behatoljon az ellenséges légtérbe és ott képes legyen hagyományos, vagy [nukleáris fegyvereket](https://qubit.hu/2022/02/28/igy-allnak-most-a-vilag-atomarzenaljai) bevetni. Emellett fejlett [felderítési](https://en.wikipedia.org/wiki/Intelligence,_surveillance,_target_acquisition,_and_reconnaissance#ISR_(Intelligence,_surveillance_and_reconnaissance)) (intelligence, surveillance and reconnaissance, ISR) és kommunikációs képességekkel is rendelkezik.
+
+A becslések szerint a teljes program 93,4 billió forintos (240 milliárd dollár) [költségű](https://www.thedrive.com/the-war-zone/this-is-the-b-21-raider-stealth-bomber), és egyetlen gép megépítése 269,3 milliárd forintba (692 millió dollár) kerül. A most kigurított B-21 mellett jelenleg öt másik van különböző építési fázisban. A Pentagon a nagy-hatótávolságú lopakodóból legalább 100 darabot szeretne rendelni, amire a hidegháború elején kifejlesztett, és első repülését 70 éve végrehajtó B-52-n kívül minden más amerikai bombázót felváltanak majd. A program a sajtóval [megosztott információk](https://www.thedrive.com/the-war-zone/this-is-the-b-21-raider-stealth-bomber) szerint tartja a kijelölt költséghatárokat, és fejlesztési ütemtervet.
+
+A Time [exkluzív riportja](https://time.com/6238168/b-21-raider-bomber-us-military-exclusive/) további részleteket árult el a speciális hozzáférésű program ([Special Access Program](https://www.thedrive.com/the-war-zone/29092/special-access-programs-and-the-pentagons-ecosystem-of-secrecy)) titkosítási kategóriába tartozó projektről. A riport szerint bár a B-21 program eddig valóban tartja a korai mérföldköveket, a neheze csak most jön, a gyártási és tesztelési folyamat beindulásával. Ennek része egy általában időigényes és komplikált folyamat annak bizonyítása, hogy a gép alkalmas nukleáris fegyverek biztonságos hordozására és alkalmazására.
+
+https://youtu.be/chJlJgrvfBY?t=1406
+
+A ceremóniát 34 évvel az ikonikus, csupaszárny [B-2 Spirit](https://en.wikipedia.org/wiki/Northrop_Grumman_B-2_Spirit) első nyilvános szereplése után tartották. A szintén a Northrop Grumman által gyártott, némileg kisebb B-21-et misztikus hangulatot keltő fényeffektek közepette ugyan azon a helyen leplezték le, az amerikai légierő a kaliforniai Palmdaleben található [Plant 42](https://en.wikipedia.org/wiki/United_States_Air_Force_Plant_42) repülőgép gyártó üzemében. A több ezer meghívott vendég, a sajtó munkatársai és az élő közvetítést nézők csak a mindvégig hangárban maradó repülőgép elejét láthatták, és a gépről semmilyen más szögből készült felvétel nem jelent meg.
+
+Eddig egyetlen más ország sem mutatott be lopakodó stratégiai bombázót, de amerikai információk szerint Kína nagy erőkkel dolgozik egy [H-20 kódjelű](https://en.wikipedia.org/wiki/Xian_H-20), nagy hatótávú, csupaszárny repülőgépen, ami még ebben az évtizedben szolgálatba állhat. Hasonló fejlesztések zajlanak Oroszországban is, a hosszú évek óta tervezett [PAK DA](https://en.wikipedia.org/wiki/Tupolev_PAK_DA) első repülésére a mostani tervek szerint a 2020-as évek közepén kerülhet sor.
+
+## A legfejlettebb légvédelmet is kijászhatja
+
+Az amerikai F-22 és F-35 lopakodó vadászgépekhez képest méretük és csupaszárny kialakításuk miatt minden irányból, különböző hullámhosszú radarok ellen jól optimalizált ([broadband stealth](https://www.thedrive.com/the-war-zone/19077/congressman-details-integration-issues-with-the-b-21s-exotic-air-inlet-design)) lopakodó bombázókat radarok nehezen, korlátozott távolságból képesek csak észlelni. Ebben segíti őket a hajtómű beömlő nyílásának kialkítása, a kis méretű, speciális ablakok, az építésükhöz alkalmazott kompozit anyagok, és a szigorúan őrzött titoknak minősülő radarelnyelő bevonatok. A gépek különböző megoldásokkal hőkibocsátásukat is minimalizálják, hogy infravörös szenzorok kisebb valószínűséggel pillanthassák meg őket.
+
+Az eseményen Lloyd Austin amerikai védelmi miniszter [elmondta](https://www.defense.gov/News/News-Stories/Article/Article/3235326/world-gets-first-look-at-b-21-raider/), hogy a B-21 "az Egyesült Államok leleményességben és innovációs képességekben meglévő tartós előnyeinek bizonyítéka, és jelzi a hadügyminisztérium elkötelezettségét olyan fejlett képességek létrehozására, amik képesek elrettenteni az agressziót ma és a jövőben is."
+
+Austin azt állította, hogy a B-21-ben visszaköszön a lopakodó technológia 50 évnyi fejlődése, ami miatt a legfejlettebb légvédelmi rendszereknek is nehéz dolguk lesz megtalálni. Ebbe beletartozik az is, hogy könnyebb lesz karbantartani, ami fontos előny lehet az ilyen szempontból híresen problémás és speciális,  hőmérsékletszabályzott hangárokat igénylő B-2-höz képest.
+
+A B-2 és B-21 mellett a [James Webb űrteleszkóp](https://qubit.hu/2022/07/12/megerkezett-az-elso-kep-a-james-webb-urtavcsotol-rajta-a-valaha-megfigyelt-legosibb-galaxisokkal) megépítéséért is felelős [Northrop Grumman](https://www.northropgrumman.com/) vezérigazgatója, Kathy Warden szerint az új digitális technológiáknak hála a repülőgép egy új tervezési, fejlesztési folyamatot és haditechnikai beszerzési modellt jelenít meg. Ennek elsődleges célja elkerülni a korábbi projektek, mint a Lockheed Martin által vezetett F-35 vadászgép program sorsát, ami a fejlesztési költségek elszabadulásával, és sorozatos csúszásokkal járt. Warden elmondta, a világ sosem látott még a B-21-hez hasonló technológiát, és a gép moduláris kialakítása alkalmassá teszi azt új képességek gyors integrációjára, hogy lépést tudjon tartani a fejlődő fenyegetésekkel.
+
+A War Zone amerikai katonai blog a bombázó erősen világos szürke színére is [felhívta a figyelmet](https://www.thedrive.com/the-war-zone/this-is-the-b-21-raider-stealth-bomber), ami szerintük azt jelezheti, hogy vége a kizárólag éjszaka leple alatt folytatott küldetéseknek, és a B-21-el már nappali repüléseket is terveznek ellenséges légtér környékén. A szerzők szerint egyelőre a B-21 lopakodó technológiájának legszenzitívebb részét, a hajtóművek kiömlőnyílásait teljes homály fedi.
+
+# A nagy hatótáv a Csendes-óceáni térségben jöhet jól
+
+A védelmi miniszter elmondta, hogy a B-21 hatótávolsága páratlan, emiatt nem kell a célpontjához közeli régióban állomásoznia, vagy szakértők által sérülékenynek tartott logisztikai támogatásra támaszkodnia célpontja eléréséhez. Ennek különösen a Csendes-óceáni térségben van jelentősége, egy Kínával folytatott potenciális konfliktus esetén. A B-21 hatótávját tovább növelhetik majd robotrepülőgépek, mint a lopakodó technológiájú, szárazföldi célpontok elleni [JASSM](https://en.wikipedia.org/wiki/AGM-158_JASSM), hajók elleni [LRASM](https://en.wikipedia.org/wiki/AGM-158C_LRASM), valamint a jelenleg fejlesztés alatt álló, nukleáris töltettel szerelt [LRSO](https://en.wikipedia.org/wiki/AGM-181_LRSO).
+
+A Pentagon múlt heti [jelentése szerint](https://apnews.com/article/technology-china-business-air-force-palmdale-761db1dae42616181a2cc63966f43554) az ázsiai ország támasztja a "legjelentősebb és rendszerszintű kihívást az amerikai nemzetbiztonság és a szabad nemzetközi rendszer ellen." Ennek [egy kulcseleme](https://qubit.hu/2022/10/17/amerika-minden-eszkozt-bevet-hogy-megallitsa-kina-technologiai-fejlodeset) a de facto független Tajvan, amit a Kínai Népköztársaság saját területének tekint és katonai erővel is kész megszerezni, Joe Biden amerikai elnök pedig többször ígéretet tett a csúcstechnológiás chipeket előállító demokratikus szigetország megvédésére.
+
+A B-21 "Raider" elnevezés a második világháború alatti  [Doolittle-rajtaütés](https://en.wikipedia.org/wiki/Doolittle_Raid) előtt tiszteleg, amikor 16 amerikai bombázó a [Pearl Harbor elleni japán támadás](https://en.wikipedia.org/wiki/Attack_on_Pearl_Harbor) után néhány hónappal repülőgéphordozókról szállt fel Tokió és más célpontok bombázására, anélkül, hogy visszatéréshez elég üzemanyaguk lett volna. Az Austin által vakmerőnek nevezett küldetés szerinte amerikai pilóták generációit inspirálta.
+
+A B-21 előtt beszélő védelmi miniszter szerint a gép az Egyesült Államok elrettentő stratégiájának [szimbóluma](https://www.defense.gov/News/News-Stories/Article/Article/3235326/world-gets-first-look-at-b-21-raider/), az ezt bármikor és bárhol alátámasztó katonai képességekkel. A következő 30-50 évben a [fejlesztők reményei szerint](https://www.thedrive.com/the-war-zone/this-is-the-b-21-raider-stealth-bomber) legjobb lopakodónak maradó repülőgép prezentálása és az elhangzott beszédek alapján már maga a bemutató is ennek részét képezhette.
+
+*Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2022/02/28/igy-allnak-most-a-vilag-atomarzenaljai
+
+
