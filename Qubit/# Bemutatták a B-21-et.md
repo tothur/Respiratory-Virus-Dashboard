@@ -2,8 +2,6 @@
 
 ## Az eddigi legfejlettebb, és legnagyobb hatótávú csupaszárny lopakodót az Egyesült Államok már egy potenciális Kínával zajló konfliktus veszélyének tudatában építi. Már a ceremónia is jelezte, hogy azt remélik, a gép léte önmagában is elég elrettentő erő lehet.
 
-Az eddigi legfejlettebb csupaszárny lopakodóját az Egyesült Államok már egy potenciális Kínával zajló konfliktus veszélyének tudatában mutatta be.
-
 Az Egyesült Államok [bemutatta](https://apnews.com/article/technology-china-business-air-force-palmdale-761db1dae42616181a2cc63966f43554) új generációs lopakodó bombázóját, a B-21-et, amitől azt remélik, hogy segít majd megőrizni az ország katonai fölényét a következő évtizedekben. A magyar idő szerint szombat éjszaka felfedett futurisztikus repülőgép jövőre emelkedhet először a magasba, és a légierő az évtized közepén kezdheti majd használni.
 
 A B-21 lopakodó bombázó USAF
