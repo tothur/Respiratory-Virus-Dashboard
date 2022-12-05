@@ -9,7 +9,9 @@ Credit: Carl Knox – OzGrav, ARC Centre of Excellence for Gravitational Wave Di
 
 Igor Andreoni, a Marylandi Egyetem csillagásza és kollégái az eseményből keletkező fényt 2022. február 11-én [észlelték](https://www.nature.com/articles/s41586-022-05465-8) a San Diego-i Palomar Obszervatóriumban található [Zwicky Transient Facilitynek](https://www.ztf.caltech.edu/) nevezett optikai teleszkóprendszerrel, ami az égbolt nagy részének megfigyelésével kifejezetten ehhez hasonló kozmikus történések észlelésére szolgál.
 
-Ez volt a valaha megfigyelt legtávolabbi példa arra, amikor egy fekete lyuk ár-apály erői szétszakítanak egy csillagot ([tidal disruption event](https://en.wikipedia.org/wiki/Tidal_disruption_event)). A jel forrása bolygónktól 12,4 milliárd fényévre található, egy távoli galaxisban. Az esemény vizsgálata a kutatók szerint segíthet megérteni, hogyan növekszenek az általában galaxisok középpontjában található szupermasszív fekete lyukak a körülöttök lévő anyag - köztük csillagok - bekebelezésével.
+Ez volt a valaha megfigyelt legtávolabbi példa arra, amikor egy fekete lyuk ár-apály erői szétszakítanak egy csillagot ([tidal disruption event](https://en.wikipedia.org/wiki/Tidal_disruption_event)). A jel forrása bolygónktól 12,4 milliárd fényévre található, egy távoli galaxisban.
+
+Az esemény vizsgálata a kutatók szerint segíthet megérteni, hogyan növekszenek az általában galaxisok középpontjában, így a [Tejútrendszerünk középpontjában](https://qubit.hu/2022/05/12/megerkezett-a-szenzacios-elso-felvetel-a-tejutrendszer-kozponti-fekete-lyukarol) is megtalálható szupermasszív fekete lyukak a körülöttök lévő anyag - köztük csillagok - bekebelezésével.
 
 Az eddigi négy közül, beleértve a mostanit is, a legjobban vizsgált csillag szétszakítási esemény a 2011-es [Swift J1644+57](https://arxiv.org/abs/1301.1982) volt, amit a a NASA [Neil Gehrels Swift obszervatórium](https://en.wikipedia.org/wiki/Neil_Gehrels_Swift_Observatory) űrtávcsövén elhelyezett Swift Burst Alert teleszkóp [detektált](https://arxiv.org/pdf/1604.06468.pdf).
 
@@ -21,7 +23,7 @@ Ezek közt volt a NASA [Neil Gehrels Swift obszervatórium](https://en.wikipedia
 
 A különböző hullámhosszakon végzett megfigyelések egybehangzóan támogatják azt, hogy a jelet egy csillag fekete lyuk általi szétszakísása váltotta ki. Amikor az objektumok gravitációja csillagokat vonz magához, a csillagok szétszakadhatnak és anyagaik a fekete lyuk akkréciós korongjára zuhanhatnak.
 
-A fekete lyuk akkréciós korongjára zuhanó anyag ritka esetekben nagy energiájú [relativisztikus nyalábokat](https://en.wikipedia.org/wiki/Astrophysical_jet) (relativistic jet) eredményezhet, amik közel fénysebességgel haladnak. Mivel a nyaláb nagyjából éppen felénk irányult, a jel röntgen és rádiótartományban a nagyon távoli galaxisokból érkezők közül a valaha megfigyelt egyik legerősebb volt, ami jól mutajta, hogy mennyire extrém energiájúak lehetnek ezek a jelenségek. 
+A fekete lyuk akkréciós korongjából ritka esetekben nagy energiájú, ionizált anyagból álló [relativisztikus nyalábokat](https://en.wikipedia.org/wiki/Astrophysical_jet) (relativistic jet) indulhatnak ki, amik közel fénysebességgel haladnak. Mivel a nyaláb nagyjából éppen felénk irányult, a jel röntgen és rádiótartományban a nagyon távoli galaxisokból érkezők közül a valaha megfigyelt egyik legerősebb volt, ami jól mutajta, hogy mennyire extrém energiájúak lehetnek ezek a jelenségek. 
 
 "Mivel eddig nagyon kevés ilyen relativisztikus nyalábbal járó ár-apályos szétszakítási eseményt figyeltek meg a kutatók, ezért ezek továbbra is kevéssé értett, nagyon különleges események" - [mondta el](https://www.eso.org/public/news/eso2216/) Nial Tanvir, a Leicester Egyetem csillagásza, aki a VLT teleszkóppal végzett megfigyeléseket vezette.
 
@@ -31,41 +33,9 @@ A jel tulajdonságai alapján a legvalószínűbb forgatókönyv szerintük az, 
 
 Dheeraj Pasham, az MIT asztrofizikusa és kollégái az esemény [modellezésével](https://www.nature.com/articles/s41550-022-01820-x) azt kívánták megérteni, hogy mit árul el a jel a relativisztikus nyalábokról, és mik lehettek a fekete lyuk, valamint a szétszakított csillag jellemzői.
 
-Kiderült, hogy a relativisztikus nyalábot erősen anyagot dominálták, konkrétabban elektronok, ami a kutatók szerint megkérdőjelezi a nyalábokról alkotott eddigi képünket.
+Kiderült, hogy a relativisztikus nyaláb energiájának túlnyomó részéért az általa szállított anyag - elektronok és protonok - és nem a mágneses tér felelnek. Ez a kutatók szerint nem illeszkedik a nyalábokról alkotott általános elméleti képünkbe, ami a mágneses tér megfigyeltnél nagyobb szerepét hangsúlyozza.
 
-Both models 1 and 2 require a strong SSC contribution to 
-match the X-ray flux. For this to happen, we require a strongly 
-matter-dominated jet; that is, most of the power is carried by the electrons and protons within the jet, rather than by the magnetic field. Such 
-a matter-dominated flow is in tension with the common theoretical 
-paradigm that jets are magnetically dominated at their launching 
-point, and then accelerate by turning the magnetic field into bulk 
-kinetic energy until they reach rough equipartition32,33, but is in line with 
-ref. 34, which proposed a structured, radiation-driven jet powered by 
-super-Eddington accretion.
-
-Arra is fény derült, hogy a csillag a Naphoz hasonló méretű és tömegű lehetett, a szupermasszív fekete lyuk tömege pedig viszonylag alacsony. 
-
-A TDE is largely characterized by the pericentre distance (the closest approach between the star and the black hole), the stellar properties 
-and the black hole mass. The pericentre distance does not affect the 
-accretion rate if the disruption is full (for example, refs. 43–46), whereas 
-if it is partial there is a steep fall in luminosity with increasing distance 
-(for example, refs. 44,47,48). For a star of radius R⋆ and mass M⋆ and a black 
-hole of mass M, the characteristic TDE accretion rate is 
-∝ (M⋆/R⋆)
-3/2
-(M/M⋆)
-−1/2
-. For a main sequence star with R⋆ ∝ M⋆ the 
-luminosity is therefore ∝ M1/2
-⋆ , and a very massive (and rare) star is 
-needed to substantially modify the accretion rate (for example, see 
-fig. 4 of ref. 49). On the other hand, the Eddington ratio for a TDE scales 
-as M−3/2, and a modest decrease in black hole mass yields a large increase 
-in the Eddington fraction. Given these considerations, and the approximate scaling of the X-ray luminosity as ∝ t
-−9/4 (ref. 47), we suggest that 
-AT 2022cmc could have been powered by the partial disruption (near 
-the full disruption threshold) of a dwarf star by a relatively low-mass 
-black hole and its super-Eddington accretion
+Arra is fény derült, hogy a csillag a Naphoz hasonló méretű és tömegű lehetett, a szupermasszív fekete lyuk pedig kategóriájához képest viszonylag alacsony tömegű.
 
 *Kapcsolódó cikkek a Qubiten:*
 
