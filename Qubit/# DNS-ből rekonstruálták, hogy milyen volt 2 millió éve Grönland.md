@@ -30,7 +30,7 @@ A DNS az üledékrétegekben ásványok felszínéhez kapcsolódhatott, ami seg�
 
 A genomikai vizsgálattal a jelenleg Grönlandon őshonos 175 szövetes növényi nemzetségből 70-et sikerült megtalálni, amiknek nagy része ma jóval a területtől délre él. Egy más módszerrel folytatott vizsgálat 102 nemzetséget azonosított, aminek egy részét a területen talált pollenek is igazolták. A 102 nemzetség 39 százaléka ma már nem fordul elő Grönlandon, csak az Észak-Amerikai tajgán. Több ezek közül egyszerűen nem képes örökké fagyott talajon megélni, és a mai grönlandi viszonyokhoz képest magasabb hőmérsékletet igényel.
 
-A terület növényzete 2 millió évvel ezelőtt egy északi nyitott tajga volt (open boreal forest), amiben nyárfák, nyírfák, tuják, bokrok és gyógynövények fordultak elő. Ezek mindegyikét nem sikerült a korábbi pollen alapú vizsgálatok alapján megtalálni.
+A terület növényzete 2 millió évvel ezelőtt egy nyitott tajga volt (open boreal forest), amiben többek közt nyárfák (*Populus sp.*), nyírfák (*Betula sp.*), fűzfák (*Salix sp.*), tuják (*Thuja sp.*), valamint sások (*Carex sp.*) fordultak elő. A nyírfából eredő DNS mint
 
 A genomi DNS maradványok nyulak, mitokondriális DNS pedig masztodonok, rénszarvasok, rágcsálók és ludak jelenlétét mutatta meg a területen, amik mind a ma, vagy a pleisztocén legvégén, néhány tízezer éve élő rokonaikhoz képest ősibbek voltak.
 
