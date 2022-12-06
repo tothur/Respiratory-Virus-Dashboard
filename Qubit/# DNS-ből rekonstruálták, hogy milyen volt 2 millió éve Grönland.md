@@ -20,7 +20,7 @@ Eddig kevés információ volt arról, hogy az északi-sarkvidék élővilága h
 
 BINGMAP1
 
-A kutatók különböző kormeghatározási, például a Föld mágneses terének egykori jellegét rögzítő, vagy radioizotópos módszerekkel arra jutottak, hogy a formáció 1,9-2,1 millió éve rakódott le. A 51 mintát a rétegeken belül öt különböző mintavételi helyről vették, amik szerves anyagokban gazdagok, és valószínűleg a víz által magasabban fekvő régiókból elszállított, majd a területen koncentrálódott DNS-t tartalmaznak. A későbbi vizsgálatok azt is feltárták, hogy az azonosított DNS erősen károsodott.
+A kutatók különböző kormeghatározási, például a Föld mágneses terének egykori jellegét rögzítő, vagy radioizotópos módszerekkel arra jutottak, hogy a formáció 1,9-2,1 millió éve rakódott le. A 51 mintát a rétegeken belül öt különböző mintavételi helyről vették 2006-2016 között. Ezek szerves anyagokban gazdagok, és valószínűleg a víz által magasabban fekvő régiókból elszállított, majd a területen koncentrálódott DNS-t tartalmaznak. A későbbi vizsgálatok azt is feltárták, hogy az azonosított DNS erősen károsodott.
 
 BINGMAP2
 
