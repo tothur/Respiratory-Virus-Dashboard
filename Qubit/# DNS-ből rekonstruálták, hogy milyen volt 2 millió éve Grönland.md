@@ -1,4 +1,4 @@
-# DNS-ből rekonstruálták, hogy milyen volt 2 millió éve Grönland
+# Az eddigi legősibb DNS-ből rekonstruálták, hogy milyen volt 2 milió éve Grönland
 
 ## 
 
