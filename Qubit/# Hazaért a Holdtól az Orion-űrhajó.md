@@ -8,7 +8,9 @@ A kapszulát a terveknek megfelelően az amerikai haditengerészet (US Navy) had
 
 Az Oriont több hónapnyi csúszás után a valaha épített egyik legerősebb rakéta, az SLS (Space Launch System) indította el a Holdhoz november 16-án, ami a NASA szerint hibátlanul teljesített. A nem újrahasználható rakéta, aminek a mostani volt a legelső indítása, fellövésenként közel 2 milliárd dollárba kerül.
 
-A NASA Artemis programja a harmadik, holdraszállást magában foglaló 2025-ös repülésig 93 milliárd dollárba [kerül majd](https://www.voanews.com/a/despite-cost-overruns-and-delays-nasa-hopes-to-launch-artemis-1-this-year-/6746292.html), amiből 23 milliárd [dollárt](https://en.wikipedia.org/wiki/Space_Launch_System) az SLS és 27 milliárd [dollárt](https://en.wikipedia.org/wiki/Orion_(spacecraft)) az Orion-űrhajó fejlesztési költsége tett eddig ki.
+A NASA Artemis programja a harmadik, holdraszállást magában foglaló 2025-ös repülésig a 2021-es magyar GDP felébe, 93 milliárd dollárba [kerül majd](https://www.voanews.com/a/despite-cost-overruns-and-delays-nasa-hopes-to-launch-artemis-1-this-year-/6746292.html), amiből 23 milliárd [dollárt](https://en.wikipedia.org/wiki/Space_Launch_System) az SLS és 27 milliárd [dollárt](https://en.wikipedia.org/wiki/Orion_(spacecraft)) az Orion-űrhajó fejlesztési költsége tett eddig ki.
+
+36.960.060.000.000
 
 ## Simán ment az Artemis-1
 
@@ -22,4 +24,10 @@ Innentől viszonylag egyenes út vezet az Artemis-2-höz.
 
 Az újbóli holdraszállásra három év múlva, 2025-ben kerülhet majd sor.
 
+A Föld-Hold gazdaság (cis lunar economy) az elmúlt években egyre kevésbé tűnik sci-finek.
+
 ## Mikor jutunk el a Marsra?
+
+A Marshoz az SLS Block 2 tud majd indítani
+
+Starship? https://qubit.hu/2022/02/07/nem-kell-a-marsig-mennie-ahhoz-hogy-hatalmas-elonyhoz-juttassa-az-usa-t-elon-musk-urhajoja-a-starship
