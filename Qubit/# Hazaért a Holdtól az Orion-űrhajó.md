@@ -1,14 +1,14 @@
 # Hazaért a Holdtól az Orion-űrhajó, amivel az emberiség 2024-ben visszatér az égitesthez
 
-Vasárnap este teljes sikerrel zárult az amerikai űrügynökség Artemis-1 tesztküldetése. A NASA Orion űrhajója magyar idő szerint 18:40-kor landolt a Csendes óceánon, miután 26 napos küldetése alatt kétszer megközelítette a Holdat és pályára is állt körülötte.
+Vasárnap este teljes sikerrel zárult az amerikai űrügynökség Artemis-1 tesztküldetése. A NASA Orion űrhajója magyar idő szerint 18:39-kor landolt a Csendes óceánon, miután 26 napos küldetése alatt kétszer megközelítette a Holdat és pályára is állt körülötte.
 
-Az Orion így teljesítette tesztrepülésének legfontosabb célját, és átvészelte a földi légkörbe visszatérést Hold-körüli pályáról. Ezzel minden komoly akadály elhárult a két év múlva következő Artemis-2 repülés elől, amin négy amerikai űrhajós utazik majd a Holdhoz.
+Az Orion 39400 kilométer per órás sebességgel [lépett be](https://www.reuters.com/lifestyle/science/nasas-orion-capsule-heads-splashdown-after-artemis-i-flight-around-moon-2022-12-11/) a Föld légkörébe, ami alatt közel 5000 fokosra hevült a hővédőpajzsa. Azzal, hogy átvészelte a Holdtól történő visszatérést, és sikeresen landolt az óceánban, minden komoly akadály elhárult a két év múlva következő Artemis-2 repülés elől, amin négy amerikai űrhajós utazik majd a Holdhoz.
 
 A kapszulát a terveknek megfelelően az amerikai haditengerészet (US Navy) hadihajója, a USS Portland legénysége emelte ki az óceánból, a mexikói Guadalupe szigethez közeli leszállóhelyen. Az Orionról a légkörbe lépés előtt levált a nem újrahasználható [európai szervizmodulja](https://en.wikipedia.org/wiki/European_Service_Module), amivel rakétamanővereit végzete, és ami az energiaellátását biztosította.
 
 Az Oriont több hónapnyi csúszás után a valaha épített egyik legerősebb rakéta, az SLS (Space Launch System) [indította el](https://qubit.hu/2022/11/16/elindult-az-artemis1-az-ember-holdra-valo-visszateresenek-foprobaja) a Holdhoz november 16-án, ami a NASA szerint hibátlanul teljesített. A nem újrahasználható rakéta, aminek a mostani volt a legelső indítása, fellövésenként közel 2 milliárd dollárba kerül.
 
-Az Orion először november 21-én [haladt el](https://qubit.hu/2022/11/21/50-ev-utan-most-eloszor-haladt-el-urhajo-a-hold-kozeleben-ket-ev-mulva-mar-emberek-is-utazhatnak-rajta) a Hold mellett, a felszíntől 130 kilométerre, majd november 25-én állt pályára az égitest körül. A Holdtól 64 ezer kilométerre található úgynevezett távoli retrográd pályán 6 napot töltött, ahol az Orion megdöntötte a Földtől legtávolabb kerülő űrhajó rekordját, amit az [Apollo 13](https://qubit.hu/2022/11/19/videoajanlo-amikor-nagy-bajban-van-gyorsan-tanul-az-ember) állított fel 1970-ben. Az Orion december 5-én másodjára is megközelítette 127 kilométerre, majd hazafele vette az irányt.
+Az Orion először november 21-én [haladt el](https://qubit.hu/2022/11/21/50-ev-utan-most-eloszor-haladt-el-urhajo-a-hold-kozeleben-ket-ev-mulva-mar-emberek-is-utazhatnak-rajta) a Hold mellett, a felszíntől 130 kilométerre, majd november 25-én állt pályára az égitest körül. A Holdtól 64 ezer kilométerre található úgynevezett távoli retrográd pályán 6 napot töltött, ahol az Orion Földtől mért 434500 kilométeres távolságával megdöntötte a bolygónktól valaha legtávolabb kerülő űrhajó rekordját, amit az [Apollo 13](https://qubit.hu/2022/11/19/videoajanlo-amikor-nagy-bajban-van-gyorsan-tanul-az-ember) állított fel 1970-ben. Az Orion december 5-én másodjára is megközelítette 127 kilométerre, majd hazafele vette az irányt.
 
 A NASA Artemis programja a harmadik, holdraszállást magában foglaló 2025-ös repülésig a 2021-es magyar GDP felébe, 93 milliárd dollárba [kerül majd](https://www.voanews.com/a/despite-cost-overruns-and-delays-nasa-hopes-to-launch-artemis-1-this-year-/6746292.html), amiből 23 milliárd [dollárt](https://en.wikipedia.org/wiki/Space_Launch_System) az SLS és 27 milliárd [dollárt](https://en.wikipedia.org/wiki/Orion_(spacecraft)) az Orion-űrhajó fejlesztési költsége tett eddig ki.
 
@@ -37,7 +37,9 @@ Mike Sarafin a NASA december 8-ai sajtótájékoztatóján elmondta, hogy az SLS
 
 Az újbóli holdraszállásra három év múlva, 2025-ben kerülhet majd sor.
 
-A Föld-Hold gazdaság (cis lunar economy) az elmúlt években egyre kevésbé tűnik sci-finek.
+Tegnap reggel [lőtték fel](https://spaceflightnow.com/2022/12/11/falcon-9-ispace-mission-1-live-coverage/) a SpaceX Falcon 9 rakétájával a flordiai Cape Canavarelből a Hakuto-R holdraszálló szonda, amit a Japán ispace vállalat tervezett, ami megkísérli az első magáncég által kifejlesztett eszközként landolni a Holdon.ő
+
+Ezek alapján a Föld-Hold gazdaság (cis lunar economy), ahol az emberiség elkezdi felhasználni a Hold és később földközeli kisbolygók erőforrásait, egyre kevésbé tűnik sci-finek. A Hold körül fokozódó forgalom az amerikai hadsereg figyelmét sem kerülte el, és az űrhaderő (Space Force) a [következő években indíthat](https://qubit.hu/2022/05/09/az-usa-utan-kina-is-kisbolygoba-csapodo-urszondat-indit-ami-tovabb-fokozhatja-a-ket-orszag-kozti-feszultseget) egy megfigyelő műholdat a Holdhoz, ami lehetővé tenné az amerikai űrprogramra potenciálisan veszélyes aktivitás monitorozását is.
 
 ## Mikor jutunk el a Marsra?
 
