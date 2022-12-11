@@ -14,7 +14,7 @@ A NASA Artemis programja a harmadik, holdraszállást magában foglaló 2025-ös
 
 ## Simán ment az Artemis-1
 
-Az Orion kapszula egy úgynevezett nem-ballisztikus légkörbelépést (skip reentry) hajtott végre 
+Az Orion kapszula egy úgynevezett [nem-ballisztikus légkörbelépést](https://en.wikipedia.org/wiki/Non-ballistic_atmospheric_entry) (skip reentry) hajtott végre. Először a Csendes-óceán déli része felett lépett be a légkörbe, és fokozatosan, hosszú időn keresztül fékeződött le az Apollo parancsnoki modulhoz hasonlóan.
 
 bónusz célok elérve.
 
@@ -27,9 +27,11 @@ https://twitter.com/NASA_Johnson/status/1600564704685998085?s=20&t=1Vm3oZ6i8FrH7
 
 A landolás előtt két nappal a szervizmodul napelemtábláin elhelyezett kamerák körbefotózták az űrhajót.
 
+Bár azok nem képezték az Artemis-1 küldetés részét, a Holdhoz indított apró CubeSat szondák nem váltották be a hozzájuk fűzött reményeket.
+
 Innentől viszonylag egyenes út vezet az Artemis-2-höz.
 
-Bár azok nem képezték az Artemis-1 küldetés részét, a Holdhoz indított apró CubeSat szondák nem váltották be a hozzájuk fűzött reményeket.
+Mike Sarafin a NASA december 8-ai sajtótájékoztatóján elmondta, hogy az SLS rakéta fő fokozata, a gyorsítórakéták, egy új Orion űrhajó és az európai szervizmodul is készülnek a következő Artemis repülésre, és az indítóállást is hamarosan elkezdik átvizsgálni és megjavítani.
 
 ## Holdraszállások, hold körüli űrállomás és felszíni bázis építés az évtized végéig
 
