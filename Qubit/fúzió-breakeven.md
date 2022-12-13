@@ -1,7 +1,33 @@
-# Itt a fúziós áttörés, több energiát termelt a reakció, mint amennyit beletápláltak
+# Szenzációs áttörést értek el a fúziós energiában amerikai kutatók
 
-- Tekinthető-e a "breakeven" pont elérésnek, hogy a National Ignition Facility lézeres fúziós berendezésében a fúziós reakcióban több energia jött létre (2,5 megajoule), mint amennyi energiát a lézerekkel bevittek a plazmába (2,1 megajoule), és mekkora ennek a tudományos jelentősége?
+## Most először több energia keletkezett egy fúziós reakcióból, mint amennyit beletápláltak. A kaliforniai National Ignition Facility lézeres fúziós berendezése az áttörést egy augusztusi kísérlet során érte el, ami 
 
-- Mennyire visz közelebb ez a "net energia többlet" az energiatermelésre használható fúzióhoz, ha a lézerek működtetéséhez szükséges energia a plazmába bevitt energiának akár néhány 100-szorosa is lehet?
+ egy augusztusi kísérletében most először több energia keletkezett egy fúziós reakcióból, mint amennyit beletápláltak. 
 
-- Milyen következményei lehetnek az eredménynek a fúziós kutatásokra nézve? Jelentheti-e ez azt, hogy előnybe kerül a lézeres inerciális fúzió a mágneses összetartású fúziót alkalmazó berendezésekhez képest?
+Amerikai kutatók évtizedek óta remélt áttörést értek el a fúziós energia kutatásában, a kaliforniai National Ignition Facility (NIF) lézeres fúziós berendezés segítségével. Egy augusztusi kísérletben a fúziós reakció során most először több energia szabadult fel, mint amennyit beletápláltak, ami reményt ad arra, hogy a fúziós energia a jövőben alkalmassá válhat energiatermelésre.
+
+A Qubitnek Dunai Dániel, az ELKH [Energiatudományi Kutatóközpont](https://www.ek-cer.hu/) Fúziós Plazmafizika Laboratóriumának [tudományos főmunkatársa](https://www.ek-cer.hu/fuzios-plazmafizika-laboratorium/) 
+
+A fúziós kutatásokban [tudományos breakeven](https://en.wikipedia.org/wiki/Fusion_energy_gain_factor)-ként ismert pont eléréséről először a Financial Times [írt vasárnap](https://www.ft.com/content/4b6f0fab-66ef-4e33-adec-cfc345589dc7), amiben a kísérletekre rálátó szakemberekre hivatkoztak, majd azt hétfőn a New York Times-nak kormányzati források [is megerősítették](https://www.nytimes.com/2022/12/12/science/nuclear-fusion-energy-breakthrough.html). Az eredményt hivatalosan kedd délután jelenti be az amerikai energiaügyi minisztérium (Department of Energy), ami az atomenergiai kutatásokért és az amerikai [nukleáris fegyverarzenál](https://qubit.hu/2022/02/28/igy-allnak-most-a-vilag-atomarzenaljai) fejlesztéséért és felügyeletéért felelős.
+
+A Lawrence Livermore Nemzeti Laboratórium részeként működő NIF kutatói [idén januárban közölték](https://qubit.hu/2022/01/26/itt-a-fantasztikus-ego-plazma-amivel-vegre-belathato-tavolsagba-kerult-a-fuzios-energia) a Nature és Nature Physics folyóiratokban tavalyi eredményeiket, amikkel elérték az égő fúziós plazma állapotát, és minden korábbinál közelebb jutottak a breakeven ponthoz. A tavaly augusztusi kísérletekben 1,35 megajoule energia szabadult fel a [lézerekkel biztosított](https://qubit.hu/2022/07/17/szupereros-lezerek-valthatjak-valora-az-emberiseg-regi-almat-a-fuzios-energiat) 1,9 megajoulehoz képest, ami 0,7-es net energia nyereségre (Q) jön ki. 
+
+A mostani kísérletben a [fúziós reakció](https://en.wikipedia.org/wiki/Nuclear_fusion) 2,5 megajoule szabadult fel, a betáplált 2,1 megajoulehoz képest, ami 1,19-es Q értékkel túlszárnyalja a Q = 1 breakeven pontot. A Financial Times információi [szerint](https://www.ft.com/content/4b6f0fab-66ef-4e33-adec-cfc345589dc7) a kísérlet kiértékelését megnehezítette, hogy a mérőrendszerek egy részét is károsította a vártnál több felszabaduló energia.
+
+A tudományos áttörés jelentős fordulatot jelent a National Ignition Facility életében a nyár eleji helyzethez képest. Ekkor a Nature [arról írt](https://www.nature.com/articles/d41586-022-02022-1), hogy kutatók szerint teljesen újra kell gondolni a kísérleti berendezés működését, miután nem sikerült az addigi, 2021-es rekorderedményt újabb kísérletekben megismételni. Egyes szakemberek, mint az amerikai tengerészeti kutatólaboratórium fizikusa, Stephen Bodner ekkor technológiai "dead end"-nek nevezték a berendezést, amit új generációs lézereket alkalmazókkal kellene felváltani.
+
+## Hogyan működik a lézeres fúzió a National Ignition Facilityben?
+
+A fúziós kutatások mellett az extrém körülményeket előállító kísérletekkel a NIF [elsődleges célja](https://www.nytimes.com/2022/12/12/science/nuclear-fusion-energy-breakthrough.html) az amerikai nukleáris arzenál fenntartásához szükséges mérések összegyűjtése, valamint különleges plazmaállapotok [vizsgálata](https://qubit.hu/2022/01/26/itt-a-fantasztikus-ego-plazma-amivel-vegre-belathato-tavolsagba-kerult-a-fuzios-energia). A NIF a mágnesesen összetartott fúziós berendezésekkel ellentétben, mint amilyen a Franciaországban épülő [ITER](https://www.iter.org/) tokamak kísérleti reaktor, [nem tekinthető](https://www.nytimes.com/2022/12/12/science/nuclear-fusion-energy-breakthrough.html) egy praktikus energiatermelésben használható fúziós berendezés előfutárának.
+
+A kísérleti berendezésben 192 nagy energiájú lézer segítségével indítják be a fúziós üzemanyag összepréselésével és felhevítésével az [inerciális fúzió](https://en.wikipedia.org/wiki/Inertial_confinement_fusion) elvén működő reakciót. Ahogy [azt korábban összefoglaltuk](https://qubit.hu/2022/01/26/itt-a-fantasztikus-ego-plazma-amivel-vegre-belathato-tavolsagba-kerult-a-fuzios-energia), a lézereket a kutatók egy speciális [hohlraum henger](https://en.wikipedia.org/wiki/Hohlraum) belső falára irányítják, ami röntgensugárzást generál, összenyomja és 50 millió fokra forrósítja az üzemanyagként funkcionáló, nagyjából 200 mikrogrammyni deutérium (²H) és trícium (³H) hidrogén izotópot. Az atommagok egyesülésével hélium jön létre, neutronok és energia létrejötte mellett.
+ 
+Bár a lézerekkel a fúziós reakcióba 2,1 megajoulet tápláltak be, a jelentkező veszteségek miatt a [lézerek működtetése](https://en.wikipedia.org/wiki/National_Ignition_Facility#Laser) nagyságrendekkel több, akár kétszázszor ennyi energiát is igényelhet. Ez a különbség csúcstechnológiás szilárdtest-lézerekkel és a fúziós reakció során termelődő energia növelésével [méréskelhető](https://www.nytimes.com/2022/12/12/science/nuclear-fusion-energy-breakthrough.html), de ez még nem jelentené azt, hogy megérkezett az energiatermelésre bevethető lézeres fúzió. Ehhez a másodperc [töredékéig](https://en.wikipedia.org/wiki/Femtosecond) tartó fúziós reakciókat újabb és újabb fúziós üzemanyagon beindító lézersugarakra lenne szükség, a keletkező hőenergia elektromos energiává alakítása mellett.
+
+*Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2022/07/17/szupereros-lezerek-valthatjak-valora-az-emberiseg-regi-almat-a-fuzios-energiat
+
+https://qubit.hu/2022/01/26/itt-a-fantasztikus-ego-plazma-amivel-vegre-belathato-tavolsagba-kerult-a-fuzios-energia
+
+https://qubit.hu/2021/08/23/megdolt-a-fuzios-energia-rekordja-tobb-mint-tizbilliard-wattos-teljesitmenyt-sikerult-elerni
