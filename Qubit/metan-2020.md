@@ -32,4 +32,10 @@ George Allen úgy látja, továbbra is van néhány, a kutatásban is megjelenő
 
 *Kapcsolódó cikkek a Qubiten:*
 
+https://qubit.hu/2022/01/28/a-kikapcsolt-gaztuzhelyekbol-is-szivarog-a-levegobe-a-kornyezetre-karos-metan
+
+https://qubit.hu/2022/04/05/minden-eszkozunk-megvan-ahhoz-hogy-elkeruljuk-a-klimaapokalipszist-mar-csak-a-politikai-akarat-hianyzik
+
 https://qubit.hu/2022/09/19/kuszobon-a-klimakatasztrofa-de-meg-mindig-meg-lehet-allitani
+
+https://qubit.hu/2022/04/05/minden-eszkozunk-megvan-ahhoz-hogy-elkeruljuk-a-klimaapokalipszist-mar-csak-a-politikai-akarat-hianyzik
