@@ -1,5 +1,7 @@
 # One Ocean Expedition
 
+[1 intro paragraph]
+
 “The students kept saying and keep saying that it was a life changing, one in a lifetime experience. Lot of it has to do with that they get this feeling that they have accomplished something they never thought they would have accomplished. It was a combination of academic and sailing experience for the students, and they made a lot of friendships that will last for a long time.” - said Katja Susanna Enberg, Professor of fisheries science at the Department of Biological Sciences, Bergen University.
 
 Enberg led an interdisciplinary [course on sustainability](https://www.uib.no/en/oneocean/140406/study-sustainability-pacific-ocean) for university students aboard the sailing vessel Statsraad Lehmkuhl between May and August of this year, while the ship was sailing in the Pacific-ocean. Enberg talked to Qubit extensively about her research background, the One Ocean Expedition, and her experience teaching about sustainability in the Pacific.
