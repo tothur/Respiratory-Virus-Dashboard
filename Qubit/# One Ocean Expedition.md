@@ -16,11 +16,28 @@ Currently Enberg is taking part in a large interdisciplinary project, where as s
 
 Because of this background, and her experience in teaching students for up to two weeks on research vessels in the North Sea, Enberg said that she was asked to lead the course in sustainability. She explained, that "it is quite obvious that you need to put students from different disciplines together" because that way they can "get an understanding that a lot of people actually want to work with the same goal, but they might be thinking completely differently." That's why she said that from the very beginning she wanted the course to be interdisciplinary, where students from a lot of different backgrounds are put together, with good representation from international students, not just Norwegians. In her experience, that "also enriches the learning quite a bit, when you get perspectives from someone else who is not exactly like you, and hasn't had exactly the same life."
 
-Enberg said that when organizing the course, they also wanted to have different kind of teachers apart from her own field of biology, so teachers from climate science, psychology, law, and social anthropology. The researcher said that this way "the students would get a wider understanding of sustainability", which doesn't always match their expectation of someone telling them how to live sustainably. Enberg said that she wanted "them to learn something bigger, than whether they should recycle or not. Trying to open up their thoughts and minds, and also open up to see that it's not so simple, and that's part of the problem, that you have to dare to kind of confront the complexity of sustainability."
+## Different expectations from the students
 
-//
+"The students were not just students, they were also the sailing crew, because this is an old sailing ship, it doesn't work if someone is not pulling the ropes." - said Enberg. As the researcher explained, the students were strictly working in three shifts, 2 times for 4 hours each day, and also during the night to keep the ship functioning. This necessary focus on sailing caused some challenges for teaching, with the students only being able to spend 2 hours a day on the course, and teachers not being able to have all the students around at the same time. Enberg also added, that there was also a lack of good teaching locations on the ship, that would have been suitable for a group of all together 90 students. This is why "we ended up teaching the same thing three times, it was at times a bit exhausting."
 
-“I had chosen to structure my teaching around the SDG14, life below water sustainable development goal. Because it has sort of 6-7 subgoals, that you can use. One is on fisheries and one is on biodiversity and then there is something about illegal fishing. I roughly structured it around those.” – explained 
+////
+
+Enberg said that when organizing the course, they also wanted to have different kind of teachers apart from her own field of biology, so teachers from climate science, psychology, law, and social anthropology. The researcher said that this way "the students would get a wider understanding of sustainability", which doesn't always "match their expectations of someone telling them how to live sustainably."
+
+This difference between the students expectations and what some of them got out of the course is also reflected in her final speech that she gave on board the ship, which she shared with Qubit. In it, she said that "We could also have organized a course where we would have taken the “oracle” or activist role and presented you our favorite solutions and you could have gone home with that, but we, or at least I, think that it is much more important to give you realistic view of the standing of the world and some tools to be able yourself to evaluate different solutions, maybe even start working towards new ones."
+
+Enberg in our interview said that she wanted "them to learn something bigger, than whether they should recycle or not. Trying to open up their thoughts and minds, and also open up to see that it's not so simple, and that's part of the problem, that you have to dare to kind of confront the complexity of sustainability."
+
+In her speech Enberg also mentioned that at the start of the journey her "plans were not working" as much as she had hoped for, and she had to start adjusting her "teaching plans for the reality I met on the ship."
+
+## Life on board the ship
+
+
+“I had chosen to structure my teaching around the SDG14, life below water sustainable development goal" - explained Enberg, because it has subgoals on fisheries, on biodiversity, and on illegal fishing, which the course could be organized around. 
+
+One special aspect of staying on a ship together with their students, explained Enberg, was that they couldn't avoid hearing if the students were unhappy. 
+
+
 
 In general we had very little lecturing, although the students wanted more lectures, because they were so tired, so it’s nice to sit back and listen. We tried to have active learning methods, where we give them a task and then they work on it, and then they come back with something. 
 
@@ -30,25 +47,24 @@ Then we had the psychology teaching also in the first leg from Valparaso to Tahi
 
 The climate science there was actually more sort of interactive lectures, so maybe that was the most lecture based part and also the law. There was quite a bit of sort of lectures, less discussion and and also some debates in that part. So the yeah, so the climate part was quite basic climate science. How ocean works, how the atmosphere works and then the law was also quite basic, law of the sea. There was only, actually, maybe five law students, quite a few, but not from 90. Then in the end was me and one of the anthropologists, we tried to pull together from all the teachers teaching, sort of trying to pull all the strings together and get sort of more of amalga met in the end to the challenge the students a bit of what they had learned. 
 
-## Life on board the ship
-
-"The students were not just students, they were also the sailing crew, because this is an old sailing ship, it doesn't work if someone is not pulling the ropes." As Enberg explained, the students were strictly working in three shifts, 2 times for 4 hours each day, and also during the night to keep the ship functioning. This necessary focus on sailing caused some challenges for teaching, with the students only being able to spend 2 hours a day on the course, and teachers not being able to have all the students around at the same time. Enberg also added, that there was also a lack of good teaching locations on the ship, that would have been suitable for a group of all together 90 students.
-
-
-so we ended up teaching the same thing three times, so it was at times a bit exhausting.
-
-It’s also like one of the things that is very special when you are staying with your students for four months is that you know if, students are not happy with the teacher, and often they are not, then they will go to a cafe and bitch about the teachers. But then now it was we were there all the time, and of course we couldn't avoid sometimes hearing being unhappy about something. I didn't take it very hardly but for example, one of my PhD students who was a teaching assistant on the course, she took it quite hard, when she heard that they were kind of unhappy with something, and whispering in the corner. You are there all the time, they can't escape, and I can't escape, or we teachers couldn't escape. But I mean in general, I think it really went very well and they started calling me their mom on the board, so I guess I should be happy about that.
-
-
 
 
 When you are in a ship, when we were sailing from from Valparaso to Tahiti it’s 5 weeks, we didn't see any island, we didn't see any ships, we didn't see anything, we just saw the sea. The students started making jokes that they weren’t sure if they were actually on the sea, or in some kind of Truman show. Apart from the differences in temperature between the North Sea and the Pacific, as Enberg explained, "the Ocean is pretty similar, wherever you go."
 
 "We saw daily some birds, and you can maybe judge from the birds, that these are not Norwegian birds, when you are on a ship, it’s hard to say what’s the difference, obviously when we got to stop and jump in the ocean, then it was clear, because the water was 30 degrees, that never happens [in the North Sea]. With this sailing vessel we are obviously not able to trawl or catch fish in a way that we do in the North Sea, when we are researching or teaching, so we couldn’t get this abundance of animals to look at, which we usually do. But whenever there was a fish, it was just like, oh, it was a big highlight because everyone was running around. Sometimes we saw dolphins and sharks, so that was also quite nice
 
+
+
+
+It’s also like one of the things that is very special when you are staying with your students for four months is that you know if, students are not happy with the teacher, and often they are not, then they will go to a cafe and bitch about the teachers. But then now it was we were there all the time, and of course we couldn't avoid sometimes hearing being unhappy about something. I didn't take it very hardly but for example, one of my PhD students who was a teaching assistant on the course, she took it quite hard, when she heard that they were kind of unhappy with something, and whispering in the corner. You are there all the time, they can't escape, and I can't escape, or we teachers couldn't escape. But I mean in general, I think it really went very well and they started calling me their mom on the board, so I guess I should be happy about that.
+
 For me personally, I think some of the highlights were, because it was an interdisciplinary course there were a lot of things that were completely new to many of the people that were there. When I then started hearing them using terms that I knew that they learned throughout this course and they kind of internalized the thinking about planetary sustainability and all kind of things that we have been talking about. I did a quite a bit of interviews with the students and they kind of like, how much they appreciated the possibility to talk with people from other disciplines. And of course also because in this kind of course there is a lot of time, there was no Internet, they had no connection to the outside world, so there's not much left than to talk with your pals, so I think they got quite a bit of good discussions going.
 
+////
+
 ## Research work
+
+Enberg explained that 
 
 In order to do any research that is extractive, you have to have a research permission and that hasn't always been so easy for the ship, so for many of the Island states and others as well, they actually haven’t had the permission to do research on their economic zones.
 
@@ -58,7 +74,7 @@ Enberg, who isn’t involved in the data analysis process told us that these are
 
 ## Seeing the impacts of climate change on the Pacific Islands
 
-"When we were able to get on some of the islands, I think that's what was a big highlight, because in the end, at sea, it is the same all the time." - said Enberg.
+"When we were able to get on some of the islands, I think that's what was a big highlight, because in the end, at sea, it is the same all the time." - said Enberg, adding that 35 students spent 3 weeks on Fiji, on some days living in local villages, and they were the ones who got the most interaction with local people.
 
 "35 of the students were on Fiji for 3 weeks, that was something that was planned all the way. They were the ones who got the most interaction with the local people, so they lived some days in the local villages and interacted with the UN in Fiji and they tried to understand a place where the climate effects are already quite visible. People actually have had to move their village because the ocean was destroying it and things like that so."
 
