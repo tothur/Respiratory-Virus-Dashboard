@@ -63,3 +63,5 @@ One of the challenges during the trip was due to the continuing effects of the c
 we took about 30 students from the Pacific region on board the ship so then also those students that were the original students that were on board but also this interaction with the local students. That was also very good learning experience for the Norwegian and mostly European students that were left on board can at least the discussions with local people. 
 
 "I think the one of the big eye openers, even for the Norwegians you know Norwegians have been living from the sea for a long time. I mean, it's been a fishing nation. I mean, we've been living on oil for a long time, which also comes in from the sea in our case, but still, Norwegians really don't have that kind of closeness with the Ocean as those Pacific people. They have a very specific relationship with the ocean, they are kind of are the ocean, it’s sort of extremely tight cultural and spiritual and personal relationship to the ocean, which is completely different from what we are used to" - said Enberg.
+
+*Kapcsolódó cikkek a Qubiten:*
