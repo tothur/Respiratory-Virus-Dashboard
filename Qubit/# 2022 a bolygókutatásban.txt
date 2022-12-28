@@ -1,15 +1,17 @@
 # 2022 a bolygókutatásban
 
 
+Ez volt az alpesi gleccserek minden rekordot megdöntő olvadásának éve is, és az, amikor kiderült, hogy már 1,5 fok feletti klímaváltozás veszélybe sodorhatja a közel 10 méternyi tengerszintnek megfelelő jeget tároló nyugat-antarktiszi és grönlandi-jégtakarókat. Mivel a jégtakarók lassan reagáló rendszerek, a kutatók szerint ez nem teszi reménytelenné a helyzetet, hanem még fontossabb a párzis klímaegyezmény betartása. 
 
-Föld magja: 
-	
+## A belső mag kialakulása menthette meg a földi életet
+
 - https://qubit.hu/2022/04/20/a-foldkereg-harmadaig-mar-sikerult-lefurnunk-a-cel-a-fold-magjat-burkolo-kopeny-elerese
 - https://qubit.hu/2022/04/26/550-millio-eve-alakult-ki-bolygonk-belso-magja-es-ugy-tunik-ez-mentette-meg-az-eletet-a-foldon
 - https://qubit.hu/2022/05/19/megszuletett-a-magyarazat-arra-hogyan-keletkezhetett-a-fold-melyeben-rejlo-ket-gigantikus-kepzodmeny
 - https://qubit.hu/2022/06/02/a-kozetlemezek-mozgasanak-koszonhetjuk-hogy-a-fold-nem-jegesedett-el-teljesen-az-elmult-par-millio-evben
 
-## A Föld belső magjának kialakulása menthette meg az életet
+A Föld legmélyebb rétegeibe bepillantást nyerő kutatások arra jutottak az elmúlt években, hogy bolygónk belső magja 550 millió éve alakulhatott ki. Ez kulcsszerepet játszhatott abban, hogy stabilizálja a Föld összeomlóban lévő mágneses terét.
+
 
 Idén közelebb jutottunk két hatalmas, a földköpenyben elhelyezkedő 
 
@@ -40,11 +42,9 @@ Az elmúlt hetekben a palentológus közösségben [jelentős botrány kerekedet
 
 Két másik fejlemény is történt idén a kréta-végi kihalás kutatásában. Augusztusban [geológusok azonosítottak](https://qubit.hu/2022/08/21/talaltak-egy-66-millio-eves-kratert-aminek-koze-lehet-a-dinoszauruszok-kihalasahoz) egy, a nyugat-afrikai Guinea partjától pár száz kilométerre egy 66 millió éves, kráterszerű struktúrát. Ez, ha fúrási mintavételek megerősítik a 8,5 kilométeres átmérőjű Nadir kráter létét és keletkezésének idejét, akár azt is jelentheti, hogy a kréta végén egy kettős kisbolygó, vagy két, azonos családba tartozó kisbolygó találta el bolygónkat. Egy októberben közzétett tanulmányban [most először mutatták be](https://qubit.hu/2022/10/10/a-fold-nem-sokszor-latott-akkora-cunamit-amekkorat-a-kreta-vegi-kisbolygo-becsapodas-inditott-el) a teljes Földre kiterjedő szimulációját a Chicxulub-kisbolygó által létrehozott globális cunaminak. Ennek energiája 30 ezerszer nagyobb volt, mint a 230 ezer áldozatot követelő indiai-óceáni cunamié, és ma egy ilyen esemény elöntené a legtöbb tengerparti területet.
 
-Nem okoz automatikusan tömeges kihalást, ha egy égitest eltalálja a Földet. Idén kiderült, hogy a Grönland északi részén, ma a grönlandi-jégtakaró alatt található 31 kilométeres Hiawatha kráter 58 millió éve [keletkezett](https://qubit.hu/2022/03/16/58-millio-eves-becsapodasi-kratert-talaltak-a-gronlandi-jegtakaro-alatt). A krátert korábbi spekulációk összekötötték az utolsó glaciális periódust 13 ezer éve lezáró, a valószínűleg az Észak-Atlanti-óceán áramlási rendszere (AMOC) lelassulása által okozott Younger Dryas lehűléssel, de ez az új eredmények tükrében teljesen kizárható. A kráter létrejöttével a jelenlegi adatok szerint sem jelentős kihalás, vagy súlyos éghajlati változás sem esik egybe.
+Bár helyi szinten katasztrofális lehet, nem okoz automatikusan tömeges kihalást, ha egy égitest eltalálja a Földet. Idén kiderült, hogy a Grönland északi részén, ma a grönlandi-jégtakaró alatt található 31 kilométeres Hiawatha kráter 58 millió éve [keletkezett](https://qubit.hu/2022/03/16/58-millio-eves-becsapodasi-kratert-talaltak-a-gronlandi-jegtakaro-alatt). A krátert korábbi spekulációk összekötötték az utolsó glaciális periódust 13 ezer éve lezáró, a valószínűleg az Észak-Atlanti-óceán áramlási rendszere (AMOC) lelassulása által okozott Younger Dryas lehűléssel, de ez az új eredmények tükrében teljesen kizárható. A kráter létrejöttével a jelenlegi adatok szerint sem jelentős kihalás, vagy súlyos éghajlati változás sem esik egybe.
 
-
-	
-Klíma:
+## Példátlan mértékben olvadtak idén a gleccserek, de még nem késő megállítani a klímakatasztrófát
 	
 - https://qubit.hu/2022/03/07/az-amazoniai-esoerdo-76-szazalekat-visszafordithatatlan-pusztulas-fenyegeti-a-klimavaltozas-es-az-erdoirtasok-miatt
 - https://qubit.hu/2022/06/23/evezredeken-at-tarto-stabilitas-utan-peldatlan-mertekben-kezdtek-olvadni-a-legfontosabb-nyugat-antarktiszi-gleccserek
