@@ -1,15 +1,47 @@
 # 2022 a bolygókutatásban
 
+
+
 Föld magja: 
 	
 - https://qubit.hu/2022/04/20/a-foldkereg-harmadaig-mar-sikerult-lefurnunk-a-cel-a-fold-magjat-burkolo-kopeny-elerese
 - https://qubit.hu/2022/04/26/550-millio-eve-alakult-ki-bolygonk-belso-magja-es-ugy-tunik-ez-mentette-meg-az-eletet-a-foldon
 - https://qubit.hu/2022/05/19/megszuletett-a-magyarazat-arra-hogyan-keletkezhetett-a-fold-melyeben-rejlo-ket-gigantikus-kepzodmeny
 - https://qubit.hu/2022/06/02/a-kozetlemezek-mozgasanak-koszonhetjuk-hogy-a-fold-nem-jegesedett-el-teljesen-az-elmult-par-millio-evben
-	
-K-Pg kihalás:
-	
-- https://qubit.hu/2022/02/23/tavasz-volt-a-fold-eszaki-felteken-amikor-kihaltak-a-dinoszauruszok
+
+## A Föld belső magjának kialakulása menthette meg az életet
+
+Idén közelebb jutottunk két hatalmas, a földköpenyben elhelyezkedő 
+
+Miközben az elmúlt 16 millió évben fokozatosan csökkent bolygónk átlaghőmérséklete, legalábbis millió éves időskálán, egyre több szén-dioxid szabadult fel a Föld mélyéből. Erre jutott egy május végén [közölt kutatás](https://qubit.hu/2022/06/02/a-kozetlemezek-mozgasanak-koszonhetjuk-hogy-a-fold-nem-jegesedett-el-teljesen-az-elmult-par-millio-evben). Ebben a szakemberek a kőzetlemezek mozgása és a Föld éghajlatának elmúlt 250 millió évben történő alakulása közti összefüggést tárták fel.
+
+A Föld mélyében zajló folyamatok jelentős hatással vannak bolygónk éghajlatára, és így az élővilág evolúciójára is. Egy [május végi kutatás](https://qubit.hu/2022/06/02/a-kozetlemezek-mozgasanak-koszonhetjuk-hogy-a-fold-nem-jegesedett-el-teljesen-az-elmult-par-millio-evben) . A legmeglepőbb eredményre az elmúlt 20 millió év vizsgálatá
+
+
+
+A legmeglepőbb megállapításuk az elmúlt 16 millió évre vonatkozott, ahol 
+
+
+Miközben az elmúlt 16 millió évben a Föld éghajlata hosszútávú lehűlési trendet mutatott, 
+
+A vizsgálatból kiderült, hogy az elmúlt 16 millió év lehűléséért a hegységképződés 
+
+
+
+## A Föld északi féltekének tavaszán haltak ki a dinoszauruszok
+
+Nem sokszor fordul elő, hogy több tízmillió év távlatából meg tudjuk mondani, milyen évszakban történt egy, a földi élővilág sorsát alapvetően meghatározó esemény. Az év elején Melanie During és kollégái a Nature-ben [közölt kutatásukban](https://qubit.hu/2022/02/23/tavasz-volt-a-fold-eszaki-felteken-amikor-kihaltak-a-dinoszauruszok) megállapították, hogy a Chicxulub-kisbolygó az északi félteke tavaszán találta el bolygónkat 66 millió évvel ezelőtt. A becsapódás által kiváltott kréta végi kihalás elpusztította a fajok háromnegyedét, köztük az összes nem-madár dinoszauruszt és pteroszauruszt.
+
+A 10-15 kilométeres kisbolygó apokaliptikus pusztítást és egy 200 kilométeres átmérőjű krátert [hagyott maga után](https://qubit.hu/2022/02/23/tavasz-volt-a-fold-eszaki-felteken-amikor-kihaltak-a-dinoszauruszok), és a kréta időszak utolsó tavasza hamarosan becsapódási télre váltott. A kutatók áttörő eredményei rávilágítottak arra is, hogy a kataklizma miért érintette súlyosabban a bolygó északi féltekének élővilágát, és miért lehetett hatása állatcsoportonként ennyire eltérő. Ezt jól mutatja, hogy a déli féltekén az ekkor már hibernációhoz készülődő emlősök kevésbé voltak kiszolgáltatottak, mint az érzékeny táplálékgyűjtési és szaporodási periódusban lévő északi társaik.
+
+Duringék minderre az Észak-Dakotában található Tanis lelőhelyről előkerült, a becsapódás napján elpusztult halak fosszíliái alapján jutottak. A kutatók szerint a katasztrófális nap eseményeit üledékrétegében rögzítő szenzációs lelőhelyet [Robert DePalma](https://qubit.hu/2022/05/21/videoajanlo-az-oslenykutato-aki-azt-allitja-hogy-megtalalta-a-dinoszauruszok-gyilkosanak-nyomait) és kollégái [írták le még 2019-ben](https://qubit.hu/2019/04/03/rekonstrualtak-a-foldi-elet-tortenetenek-legsotetebb-napjat-felbolydult-a-paleontologustarsadalom). DePalma és munkatársai még 2021 végén közöltek egy tanulmányt a Scientific Reports-ban, ami tavasz és nyár közé tette a kihalás idejét. Ezzel látszólag megelőzték a tanulmányukat a Nature-nek hamarabb benyújtó Duringékat.
+
+Az elmúlt hetekben a palentológus közösségben [jelentős botrány kerekedett](https://www.science.org/content/article/paleontologist-accused-faking-data-dino-killing-asteroid-paper) abból, hogy During és Per Ahlberg svéd őslénykutató kollégája meggyanúsították DePalmáékat, hogy a Scientific Reportsban [megjelent](https://www.nature.com/articles/s41598-021-03232-9), jelenleg szerkesztői figyelmeztetéssel ellátott tanulmányukban hamis adatokat közöltek, alátámasztandó egy meglévő konklúziót. DePalma, aki jelenleg a Machesteri Egyetem PhD hallgatója, tagadja a vádakat és azt állítja, sosem hamisítottak meg adatokat, és a nyers adatok egy kutató évekkel korábbi halála miatt elvesztek. A Science által [megszólaltatott](https://www.science.org/content/article/paleontologist-accused-faking-data-dino-killing-asteroid-paper) szakértők szerint ahhoz, hogy DePalmáék tisztázni tudják magukat, ezeknek a nyers adatok közzétételére lenne szükség. Mindez természetesen semmit nem von le Duringék áttörő eredményeiből, vagy a Tanis lelőhely jelentőségéből. 
+
+Két másik fejlemény is történt idén a kréta-végi kihalás kutatásában. Augusztusban [geológusok azonosítottak](https://qubit.hu/2022/08/21/talaltak-egy-66-millio-eves-kratert-aminek-koze-lehet-a-dinoszauruszok-kihalasahoz) egy, a nyugat-afrikai Guinea partjától pár száz kilométerre egy 66 millió éves, kráterszerű struktúrát. Ez, ha fúrási mintavételek megerősítik a 8,5 kilométeres átmérőjű Nadir kráter létét és keletkezésének idejét, akár azt is jelentheti, hogy a kréta végén egy kettős kisbolygó, vagy két, azonos családba tartozó kisbolygó találta el bolygónkat. Egy októberben közzétett tanulmányban [most először mutatták be](https://qubit.hu/2022/10/10/a-fold-nem-sokszor-latott-akkora-cunamit-amekkorat-a-kreta-vegi-kisbolygo-becsapodas-inditott-el) a teljes Földre kiterjedő szimulációját a Chicxulub-kisbolygó által létrehozott globális cunaminak. Ennek energiája 30 ezerszer nagyobb volt, mint a 230 ezer áldozatot követelő indiai-óceáni cunamié, és ma egy ilyen esemény elöntené a legtöbb tengerparti területet.
+
+
+
 - https://qubit.hu/2022/10/10/a-fold-nem-sokszor-latott-akkora-cunamit-amekkorat-a-kreta-vegi-kisbolygo-becsapodas-inditott-el
 - https://qubit.hu/2022/08/21/talaltak-egy-66-millio-eves-kratert-aminek-koze-lehet-a-dinoszauruszok-kihalasahoz
 - https://qubit.hu/2022/03/16/58-millio-eves-becsapodasi-kratert-talaltak-a-gronlandi-jegtakaro-alatt
