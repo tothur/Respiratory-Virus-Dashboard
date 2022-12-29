@@ -1,34 +1,50 @@
-# 2022 a bolygókutatásban
+# Brutálisan olvadó gleccserek, csodák a Föld mélyében, és a tavaszi nagy kihalás - ilyen volt 2022 a földtudományban
+
+Izgalmasabbnál izgalmasabb dolgokat találtak 2022-ben a Naprendszerben [barangoló szondáink](https://qubit.hu/tag/urkutatas) kisebb és nagyobb égitestek környékén, de nem volt hiány földtudományi felfedezésekben sem. Elképesztő dolgok kezdtek körvonalazódni a Föld magjának viselkedéséről és a földköpeny szerkezetéről, megértettük, hogyan alakították a Föld mélyében és felszínén zajló folyamatok bolygónk éghajlatát, és kiderült, hogy a nem-madár dinoszauruszok a kréta időszak utolsó tavaszán haltak ki.
+
+De ez volt az az év, amit az alpesi gleccserek rekordmértékű olvadása jellemzett, és amikor kiderült, hogy már 1,5 fok feletti klímaváltozás is hosszú távon az együtt közel 12 méternyi tengerszintnek megfelelő jeget tároló nyugat-antarktiszi és grönlandi-jégtakarókat összeomlásával fenyeget. Mivel a jégtakarók lassan reagáló rendszerek, ez még mindig elkerülhető, és más 2022-ben közölt kutatásokkal, valamint klímajelentés
 
 
-Ez volt az alpesi gleccserek minden rekordot megdöntő olvadásának éve is, és az, amikor kiderült, hogy már 1,5 fok feletti klímaváltozás veszélybe sodorhatja a közel 10 méternyi tengerszintnek megfelelő jeget tároló nyugat-antarktiszi és grönlandi-jégtakarókat. Mivel a jégtakarók lassan reagáló rendszerek, a kutatók szerint ez nem teszi reménytelenné a helyzetet, hanem még fontossabb a párzis klímaegyezmény betartása. 
+ hanem még fontossabb a párizsi klímaegyezmény betartása. 
+
+
+
+
 
 ## A belső mag kialakulása menthette meg a földi életet
 
-- https://qubit.hu/2022/04/20/a-foldkereg-harmadaig-mar-sikerult-lefurnunk-a-cel-a-fold-magjat-burkolo-kopeny-elerese
-- https://qubit.hu/2022/04/26/550-millio-eve-alakult-ki-bolygonk-belso-magja-es-ugy-tunik-ez-mentette-meg-az-eletet-a-foldon
-- https://qubit.hu/2022/05/19/megszuletett-a-magyarazat-arra-hogyan-keletkezhetett-a-fold-melyeben-rejlo-ket-gigantikus-kepzodmeny
-- https://qubit.hu/2022/06/02/a-kozetlemezek-mozgasanak-koszonhetjuk-hogy-a-fold-nem-jegesedett-el-teljesen-az-elmult-par-millio-evben
+Úgy tűnhet, hogy a geofizikusok a 20. század végéig szinte mindent kiderítettek arról, hogy mi van a lábunk alatt, a földrengések segítségével bolygónk szerkezetébe bepillantást engedő globális szeizmográf hálózatokkal, láva formájában felszínre került magmából vett mintákkal és [a földkéreg harmadát elérő fúrásokkal](https://qubit.hu/2022/04/20/a-foldkereg-harmadaig-mar-sikerult-lefurnunk-a-cel-a-fold-magjat-burkolo-kopeny-elerese). Az elmúlt években mégis úgy tűnik, a Föld magjának és köpenyének szerkezete is tartogathat még komoly meglepetéseket.
 
-A Föld legmélyebb rétegeibe bepillantást nyerő kutatások arra jutottak az elmúlt években, hogy bolygónk belső magja 550 millió éve alakulhatott ki. Ez kulcsszerepet játszhatott abban, hogy stabilizálja a Föld összeomlóban lévő mágneses terét.
+Bolygónk legmélyebb, földköpeny alatti rétegeiben egy korábban folyékony halmazállapotú, külső rétegre és különleges [halmazállapotú vasötvözetekből álló](https://qubit.hu/2022/02/17/felejtsd-el-amit-fizikabol-es-foldrajzbol-tanultal-lehet-hogy-a-fold-magja-megsem-szilard) belsőre osztott mag található. Az elmúlt években egyre valószínűbbnek tűnik, hogy a belső mag elképesztő dolgokat csinál - néha lassabban, néha pedig gyorsabban forog, mint a bolygó egésze - aminek köze lehet a köpenyben található, furcsa, kontinens méretű régiókhoz. 
 
+Emellett úgy tűnik, hogy bolygónk 4,54 milliárd éves történetéhez képest a belső mag elég fiatal, és valamikor az utóbbi 0,5-1 milliárd évben jöhetett létre. Ez pont egy olyan időszakra esik, amikor jelentősen meggyengült a bolygónk légkörét a napszél töltött részecskéitől védő mágneses tér. Egyes [kutatók szerint](https://qubit.hu/2022/04/26/550-millio-eve-alakult-ki-bolygonk-belso-magja-es-ugy-tunik-ez-mentette-meg-az-eletet-a-foldon) a mágneses teret biztosító áramlásokat a külső magban a belső mag növekedése turbózhatta fel. Ezzel, a hipotézis szerint helyreállt annak erőssége, egy evolúciós szempontból különösen fontos időszakban. Eközben arra is [gyűlnek a bizonyítékok](https://qubit.hu/2022/04/26/550-millio-eve-alakult-ki-bolygonk-belso-magja-es-ugy-tunik-ez-mentette-meg-az-eletet-a-foldon), hogy maga a belső mag is két részből áll, így a Földnek lehet egy 300 kilométeres sugarú, [legbelső magja is](https://qubit.hu/2021/03/04/a-fold-belso-magjanak-lehet-egy-meg-belsobb-magja).
 
-Idén közelebb jutottunk két hatalmas, a földköpenyben elhelyezkedő 
+A földköpeny furcsa képződményei, amik kihathatnak a belső mag forgására az úgynevezett LLSVP-k. Amint [arról májusban írtunk](https://qubit.hu/2022/05/19/megszuletett-a-magyarazat-arra-hogyan-keletkezhetett-a-fold-melyeben-rejlo-ket-gigantikus-kepzodmeny), a nagyjából Afrika és a Csendes-óceán alatt található, több ezer kilométer széles struktúrákat valószínűleg a Föld magjából távozó hő és lemeztektonikai folyamatok együttese alakíthatta ki. Van azonban egy ennél radikálisabb hipotézis is, ami szerint az LLSVP-k a Holdat 4,5 milliárd éve létrehozó, Földbe csapódó Theia [maradványai lehetnek](https://qubit.hu/2022/05/19/megszuletett-a-magyarazat-arra-hogyan-keletkezhetett-a-fold-melyeben-rejlo-ket-gigantikus-kepzodmeny). A vitát a következő években az LLSVP-k korának és sűrűségének precízebb meghatározása döntheti el, valamint a Hold keletkezésének pontosabb megértése.
 
-Miközben az elmúlt 16 millió évben fokozatosan csökkent bolygónk átlaghőmérséklete, legalábbis millió éves időskálán, egyre több szén-dioxid szabadult fel a Föld mélyéből. Erre jutott egy május végén [közölt kutatás](https://qubit.hu/2022/06/02/a-kozetlemezek-mozgasanak-koszonhetjuk-hogy-a-fold-nem-jegesedett-el-teljesen-az-elmult-par-millio-evben). Ebben a szakemberek a kőzetlemezek mozgása és a Föld éghajlatának elmúlt 250 millió évben történő alakulása közti összefüggést tárták fel.
+A [miocén](https://en.wikipedia.org/wiki/Miocene) közepén több tízmillió éves globális lehűlési trend fordult meg, ami a mainál jelentősen magasabb globális átlaghőmérséklethez és a nyugat-antarktiszi jégtakaró [jelentős részének elolvadásához vezetett](https://qubit.hu/2022/01/06/teljesen-atirta-a-nyugat-antarktiszi-jegtakaro-tortenetet-a-friss-kutatas-ami-ravilagit-miert-kell-2-fok-alatt-tartani-a-felmelegedest). A melegebb időszakért, amint egy június végén a Science-ben [közölt tanulmány feltárta](https://qubit.hu/2022/07/25/elkepesztoen-hosszu-lehulest-forditott-meg-a-szen-dioxid-szint-novekedese-17-millio-eve), a légköri szén-dioxid szint megnövekedése felelt, aminek forrása lemeztektonikai folyamatokban keresendő.
 
-A Föld mélyében zajló folyamatok jelentős hatással vannak bolygónk éghajlatára, és így az élővilág evolúciójára is. Egy [május végi kutatás](https://qubit.hu/2022/06/02/a-kozetlemezek-mozgasanak-koszonhetjuk-hogy-a-fold-nem-jegesedett-el-teljesen-az-elmult-par-millio-evben) . A legmeglepőbb eredményre az elmúlt 20 millió év vizsgálatá
+Ezután az elmúlt 15 millió évben a légköri szén-dioxid [szinttel együtt](https://today.tamu.edu/2021/06/14/ancient-deepsea-shells-reveal-66-million-years-of-carbon-dioxide-levels/) fokozatosan csökkent bolygónk átlaghőmérséklete is, legalábbis millió éves időskálákon. Egy május végén a Nature-ben [megjelent kutatás szerint](https://qubit.hu/2022/06/02/a-kozetlemezek-mozgasanak-koszonhetjuk-hogy-a-fold-nem-jegesedett-el-teljesen-az-elmult-par-millio-evben), ez annak ellenére alakult így, hogy ebben az időszakban több szén-dioxid szabadult fel a Föld mélyéről, mint a megelőző néhány tíz millió évben bármikor. 
 
+Dietmar Müller és kollégái [tanulmányukban](https://qubit.hu/2022/06/02/a-kozetlemezek-mozgasanak-koszonhetjuk-hogy-a-fold-nem-jegesedett-el-teljesen-az-elmult-par-millio-evben) a kőzetlemezek mozgása és a Föld éghajlatának elmúlt 250 millió évben történő alakulása közti összefüggést tekintették át. Eredményeik arra utalnak, hogy a kőzetlemezek alábukásával (szubdukció) járó, vulkáni tevékenységgel a légkörbe távozó szén-dioxid mennyisége az elmúlt 16 millió évben 30 százalékkal nőtt. Ezt a folyamatot valaminek ellensúlyoznia kellett, ami nem volt más, mint a szén-dioxidot megkötő, hegységképződés által hajtott erózió és kémiai mállás fokozódása. Az sem kizárt a kutatók szerint, hogy a lemeztektonikai folyamatok akadályozták meg, hogy az elmúlt néhány millió évben elszabaduljon a bolygón az eljegesedés.
 
+## Példátlan mértékben olvadtak idén a gleccserek, de még nem késő megállítani a klímakatasztrófát
 
-A legmeglepőbb megállapításuk az elmúlt 16 millió évre vonatkozott, ahol 
+Ma, az emberi tevékenység által okozott globális felmelegedés korában persze nem az egész bolygót beborító jégtől, hanem a meglévő jégtakarók és gleccserek olvadásától kell tartani. 
 
+Idén egy átfogó kutatásból kiderült, hogy mi 
 
-Miközben az elmúlt 16 millió évben a Föld éghajlata hosszútávú lehűlési trendet mutatott, 
+7,2 méter GrIS és 5 méter WAIS
 
-A vizsgálatból kiderült, hogy az elmúlt 16 millió év lehűléséért a hegységképződés 
-
-
+	
+- https://qubit.hu/2022/03/07/az-amazoniai-esoerdo-76-szazalekat-visszafordithatatlan-pusztulas-fenyegeti-a-klimavaltozas-es-az-erdoirtasok-miatt
+- https://qubit.hu/2022/06/23/evezredeken-at-tarto-stabilitas-utan-peldatlan-mertekben-kezdtek-olvadni-a-legfontosabb-nyugat-antarktiszi-gleccserek
+- https://qubit.hu/2022/08/10/kiderult-milyen-sors-var-a-fold-legnagyobb-jegtakarojara-ha-nem-mersekeljuk-a-felmelegedest
+- https://qubit.hu/2022/09/02/elkepeszto-abra-mutatja-hogy-mennyire-felgyorsult-iden-a-svajci-gleccserek-olvadasa
+- https://qubit.hu/2022/09/19/kuszobon-a-klimakatasztrofa-de-meg-mindig-meg-lehet-allitani
+- https://qubit.hu/2022/11/09/sokkal-gyorsabban-olvadhat-a-gronlandi-jegtakaro-mint-eddig-gondoltak
+- https://qubit.hu/2022/11/16/a-klimavaltozas-felturbozta-a-hurrikanokat-es-mas-tropusi-ciklonokat
+- https://qubit.hu/2022/12/07/az-eddig-talalt-legosibb-dns-bol-rekonstrualtak-hogyan-nezett-ki-gronland-2-millio-eve
+- https://qubit.hu/2022/12/14/ontjak-magukbol-a-metant-a-mocsarak-es-ez-mar-az-onmagat-erosito-klimavaltozas-jele-lehet
 
 ## A Föld északi féltekének tavaszán haltak ki a dinoszauruszok
 
@@ -43,18 +59,4 @@ Az elmúlt hetekben a palentológus közösségben [jelentős botrány kerekedet
 Két másik fejlemény is történt idén a kréta-végi kihalás kutatásában. Augusztusban [geológusok azonosítottak](https://qubit.hu/2022/08/21/talaltak-egy-66-millio-eves-kratert-aminek-koze-lehet-a-dinoszauruszok-kihalasahoz) egy, a nyugat-afrikai Guinea partjától pár száz kilométerre egy 66 millió éves, kráterszerű struktúrát. Ez, ha fúrási mintavételek megerősítik a 8,5 kilométeres átmérőjű Nadir kráter létét és keletkezésének idejét, akár azt is jelentheti, hogy a kréta végén egy kettős kisbolygó, vagy két, azonos családba tartozó kisbolygó találta el bolygónkat. Egy októberben közzétett tanulmányban [most először mutatták be](https://qubit.hu/2022/10/10/a-fold-nem-sokszor-latott-akkora-cunamit-amekkorat-a-kreta-vegi-kisbolygo-becsapodas-inditott-el) a teljes Földre kiterjedő szimulációját a Chicxulub-kisbolygó által létrehozott globális cunaminak. Ennek energiája 30 ezerszer nagyobb volt, mint a 230 ezer áldozatot követelő indiai-óceáni cunamié, és ma egy ilyen esemény elöntené a legtöbb tengerparti területet.
 
 Bár helyi szinten katasztrofális lehet, nem okoz automatikusan tömeges kihalást, ha egy égitest eltalálja a Földet. Idén kiderült, hogy a Grönland északi részén, ma a grönlandi-jégtakaró alatt található 31 kilométeres Hiawatha kráter 58 millió éve [keletkezett](https://qubit.hu/2022/03/16/58-millio-eves-becsapodasi-kratert-talaltak-a-gronlandi-jegtakaro-alatt). A krátert korábbi spekulációk összekötötték az utolsó glaciális periódust 13 ezer éve lezáró, a valószínűleg az Észak-Atlanti-óceán áramlási rendszere (AMOC) lelassulása által okozott Younger Dryas lehűléssel, de ez az új eredmények tükrében teljesen kizárható. A kráter létrejöttével a jelenlegi adatok szerint sem jelentős kihalás, vagy súlyos éghajlati változás sem esik egybe.
-
-## Példátlan mértékben olvadtak idén a gleccserek, de még nem késő megállítani a klímakatasztrófát
-	
-- https://qubit.hu/2022/03/07/az-amazoniai-esoerdo-76-szazalekat-visszafordithatatlan-pusztulas-fenyegeti-a-klimavaltozas-es-az-erdoirtasok-miatt
-- https://qubit.hu/2022/06/23/evezredeken-at-tarto-stabilitas-utan-peldatlan-mertekben-kezdtek-olvadni-a-legfontosabb-nyugat-antarktiszi-gleccserek
-- https://qubit.hu/2022/07/25/elkepesztoen-hosszu-lehulest-forditott-meg-a-szen-dioxid-szint-novekedese-17-millio-eve
-- https://qubit.hu/2022/08/10/kiderult-milyen-sors-var-a-fold-legnagyobb-jegtakarojara-ha-nem-mersekeljuk-a-felmelegedest
-- https://qubit.hu/2022/09/02/elkepeszto-abra-mutatja-hogy-mennyire-felgyorsult-iden-a-svajci-gleccserek-olvadasa
-- https://qubit.hu/2022/09/19/kuszobon-a-klimakatasztrofa-de-meg-mindig-meg-lehet-allitani
-- https://qubit.hu/2022/11/09/sokkal-gyorsabban-olvadhat-a-gronlandi-jegtakaro-mint-eddig-gondoltak
-- https://qubit.hu/2022/11/16/a-klimavaltozas-felturbozta-a-hurrikanokat-es-mas-tropusi-ciklonokat
-- https://qubit.hu/2022/12/07/az-eddig-talalt-legosibb-dns-bol-rekonstrualtak-hogyan-nezett-ki-gronland-2-millio-eve
-- https://qubit.hu/2022/12/14/ontjak-magukbol-a-metant-a-mocsarak-es-ez-mar-az-onmagat-erosito-klimavaltozas-jele-lehet
-
 	
