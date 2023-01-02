@@ -4,7 +4,7 @@
 
 Semelyik másik, a földtörténeti középidőben élt madárnak nem volt olyan szárnycsontja, mint egy nemrég felfedezett, 119 millió éves, csőrrel és hosszú faroktollakkal rendelkező madárnak - derül ki egy december végén, a Communications Biology folyóiratban [megjelent tanulmányból](https://www.nature.com/articles/s42003-022-04316-6).
 
-Renfei Wang, a kínai Jilin Egyetem földtudományi intézetének paleontológusa és kollégái által leírt új dinoszaurusz faj, a *Confuciusornis shifan* majdnem teljes, artikulált fosszíliája Xiaotaizi falu közeléből került elő, a kínai liaoning tartomány nyugati részéből, a 119 millió éves, kora kréta időszaki Jiufotang formációból. Az apró faj shifan neve mandarin nyelven "tanárok eszményképét" jelenti, és Conficius előtt tiszteleg.
+Renfei Wang, a kínai Jilin Egyetem földtudományi intézetének paleontológusa és kollégái által leírt új dinoszaurusz faj, a *Confuciusornis shifan* majdnem teljes, artikulált fosszíliája Xiaotaizi falu közeléből került elő, a kínai liaoning tartomány nyugati részéből, a 119 millió éves, kora kréta időszaki Jiufotang formációból. Az apró faj shifan neve mandarin nyelven "tanárok eszményképét" jelenti, és Conficius előtt tiszteleg. A szakemberek úgy vélik, a fosszília elképesztően jól példázza az első csőrrel rendelkező korai madarak anatómiai, fejlődésbiológiai és funkcionális változatosságát.
 
 A legkorábbi ismert csőrrel rendelkező madárszerű dinoszauruszok, a Confuciusornithidae csoport korai Pygostylia madárszerű dinoszauruszok közé tartozik, amik a kréta időszak elején éltek, 135-120 millió évvel ezelőtt. Ezek voltak a legkorábbi ismert fogak nélküli, csőrrel rendelkező korai madarak. A confuciusornithideket kelet-ázsiai Jehol biótából azonosították, és eddig 11 fajt írtak le, több ezer, a Debeigou, Yixian és Jiufotang formációkban jól megmaradt fosszília alapján.
 
@@ -41,7 +41,5 @@ Az újonnan leírt faj leginkább egy extra, párnaszerű, a szárny első digit
 Az ilyen struktúrák, amik a kutatók szerint függetlenül jelenhettek meg az emlősökben, madarakban és lepidosaurusokban a vázrendszer fejlődése és mechanikai faktorok miatt. Korábbi vizsgálatok alapján merevebbé tehetnek artikuláris csontokat, amik megerősítést igényelnek, például a szárazföldi mozgással összefüggő terheléssel szemben.
 
 A struktúra megléte az állat növekedési stratégiájával, és a szárnyra nehezedő funkcionális terheléssel függhet össze, és az mechanikai terhelés hatására jelenhetett meg. Ez a C. shifannak a különleges csont segíthetett a viszonylag lassú fejlődésű állatnak kifejletlen (juvenile) életkorban repülés funkcionális terheit elviselni, amikor még a vázrendszerének növekedése nem fejeződött be. 
-
-A szakemberek úgy vélik, a fosszília elképesztően jól példázza az első csőrrel rendelkező korai madarak anatómiai, fejlődésbiológiai és funkcionális változatosságát.
 
 *Kapcsolódó cikkek Qubiten:*
