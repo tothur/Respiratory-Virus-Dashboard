@@ -1,14 +1,16 @@
-# Párnaszerű csonttal küzdötte le a repülés terheit egy kréta elején élt korai madár, a Confuciusornis shifan 
+# Párna-szerű csonttal küzdötte le a repülés terheit egy kréta elején élt korai madár, a Confuciusornis shifan 
 
 ## 
 
-Semelyik másik, a földtörténeti középidőben élt madárnak nem volt olyan szárnycsontja, mint egy nemrég felfedezett, 119 millió éves, csőrrel és hosszú faroktollakkal rendelkező madárnak - derül ki egy december végén, a Communications Biology folyóiratban [megjelent tanulmányból](https://www.nature.com/articles/s42003-022-04316-6).
+Semelyik másik ősi vagy mai madárnak nincs olyan, párnaként funkcionáló csont a szárnyában, mint egy nemrég felfedezett madárszerű dinoszaurusznak. A csőrrel és hosszú faroktollakkal rendelkező madár a kréta elején, 119 millió éve élt, és a repülés evolúciójáról árulkodik - derül ki egy december végén, a Communications Biology folyóiratban [megjelent tanulmányból](https://www.nature.com/articles/s42003-022-04316-6).
 
-Renfei Wang, a kínai Jilin Egyetem földtudományi intézetének paleontológusa és kollégái által leírt új dinoszaurusz faj, a *Confuciusornis shifan* majdnem teljes, artikulált fosszíliája Xiaotaizi falu közeléből került elő, a kínai liaoning tartomány nyugati részéből, a 119 millió éves, kora kréta időszaki Jiufotang formációból. Az apró faj shifan neve mandarin nyelven "tanárok eszményképét" jelenti, és Conficius előtt tiszteleg. A szakemberek úgy vélik, a fosszília elképesztően jól példázza az első csőrrel rendelkező korai madarak anatómiai, fejlődésbiológiai és funkcionális változatosságát.
+Renfei Wang, a kínai Jilin Egyetem földtudományi intézetének paleontológusa és kollégái egy jól megőrződött, új madárszerű dinoszauruszt írtak le, amit *Confuciusornis shifan*-nak neveztek el. A fosszília Liáoníng tartomány nyugati részéből, a kora kréta időszaki, 119 millió éves Jiufotang geológiai formációból került elő. A "shifan" fajnév, amely "tanárok példaképét" jelenti, Konfuciusz kínai filozófus előtt tiszteleg.
 
-A legkorábbi ismert csőrrel rendelkező madárszerű dinoszauruszok, a Confuciusornithidae csoport korai Pygostylia madárszerű dinoszauruszok közé tartozik, amik a kréta időszak elején éltek, 135-120 millió évvel ezelőtt. Ezek voltak a legkorábbi ismert fogak nélküli, csőrrel rendelkező korai madarak. A confuciusornithideket kelet-ázsiai Jehol biótából azonosították, és eddig 11 fajt írtak le, több ezer, a Debeigou, Yixian és Jiufotang formációkban jól megmaradt fosszília alapján.
+A 66 millió évvel ezelőtti nagy kihalást egyedüli dinoszauruszként átvészelő ma élő madarak ([Aves](https://en.wikipedia.org/wiki/Bird)) a kréta végén alakultak ki. Az állatok a jurában és krétában rendkívül változatos madárszárnyú dinoszauruszok ([Avialae](https://en.wikipedia.org/wiki/Avialae)) [képviselői](https://qubit.hu/2021/09/21/agyanak-es-latasanak-is-koszonheti-a-madar-hogy-o-az-egyetlen-ma-elo-dinoszaurusz), amiknek ősei tollakkal borított, [maniraptora ragadozó dinoszauruszok](https://qubit.hu/2021/09/21/agyanak-es-latasanak-is-koszonheti-a-madar-hogy-o-az-egyetlen-ma-elo-dinoszaurusz) voltak. A madárszárnyúak evolúciós történetének egyik fontos állomása a [Pygostylia](https://en.wikipedia.org/wiki/Pygostylia) csoport megjelenése volt, amik egyik közös jellemzője, ahogy nevük is utal rá, hogy leghátsó farokcsigolyáik összeolvadtak, amik létrehozták a farokcsontot (pygostyle). 
 
-A madárszerű dinoszauruszok evolúciójának megértését az elmúlt évtizedekben forradalmasították a kora kréta időszaki, Kínából előkerült fosszíliák. A korai madarak és madárszerű dinoszauruszok (Avialae) rendkívül változatosak voltak. Egyetlen, a kréta-végi kihalást túlélő csoportjuk az időszak végén megjelent madarak (Aves).
+A Pygostylia egyik evolúciós ága a mai madarak felé vezet, míg a másik a Confuciusornithidae csoporthoz. A *Confuciusornis shifan* ez utóbbihoz, a ma ismert legkorábbi, csőrrel rendelkező dinoszauruszok közé tartozott, amik a kréta elején, 135-120 millió évvel ezelőtt éltek. Az először 1995-ben, a [*Confuciusornis sanctus*](https://en.wikipedia.org/wiki/Confuciusornis) faj fosszíliája alapján leírt [Confuciusornithidae](https://en.wikipedia.org/wiki/Confuciusornithidae) családba sorolt állat a mai kelet-ázsia területén élhettek. A Kínában található, kora kréta időszaki Debeigou, Yixian és Jiufotang geológiai formációkból 11 fajukat azonosították eddig, több ezer, jó állapotban fennmaradt fosszília alapján. 
+
+Abban, hogy ma ennyire precíz képünk van a madárszerű dinoszaurszok evolúciójáról, [kulcsfontosságú szerepet játszott](https://en.wikipedia.org/wiki/Origin_of_birds#Feathered_dinosaurs_in_China) az ezen kínai lelőhelyekből előkerült fosszíliák vizsgálata. A kutatók szerint a most megtalált fosszília elképesztően jól mutatja Confuciusornithidae csoporthoz sorolt állatok testfelépítésének, egyedfejlődésének és életmódjának változatosságát.
 
 ## Jól repülhetett
 
@@ -43,3 +45,5 @@ Az ilyen struktúrák, amik a kutatók szerint függetlenül jelenhettek meg az 
 A struktúra megléte az állat növekedési stratégiájával, és a szárnyra nehezedő funkcionális terheléssel függhet össze, és az mechanikai terhelés hatására jelenhetett meg. Ez a C. shifannak a különleges csont segíthetett a viszonylag lassú fejlődésű állatnak kifejletlen (juvenile) életkorban repülés funkcionális terheit elviselni, amikor még a vázrendszerének növekedése nem fejeződött be. 
 
 *Kapcsolódó cikkek Qubiten:*
+
+https://qubit.hu/2022/11/30/150-eves-hipotezist-donthet-meg-egy-belga-banyaban-megtalalt-kulonos-madarfosszilia
