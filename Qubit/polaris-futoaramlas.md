@@ -52,11 +52,9 @@ A 2021 study found that a stratospheric polar vortex disruption is linked with e
 
 Judah Cohen és kollégái által 2021-ben, a Science-ben [publikált tanulmány](https://doi.org/10.1126/science.abi9167) arra talált bizonyítékot, hogy a poláris vortex északi sarki felmelegedés által okozott diszrupciója összeköttetésben áll extrém hideg időjárással Észak-Amerika és Ázsia egyes részein. Az arktiszi tengeri jég kiterjedésének csökkenése egy másik 2021-es, a Nature Communications-ben [közölt kutatás](https://www.nature.com/articles/s41467-021-26232-9) szerint kapcsolatban áll a nyugat-amerikai erdőtüzek kockázatával.
 
-Moreover, a range of long-term observational data collected during 2010s and published in 2020s now suggests that the intensification of Arctic amplification since the early 2010s was not linked to significant changes on midlatitude atmospheric patterns
-2019 nature climate change https://doi.org/10.1038%2Fs41558-019-0551-4
-2020 science advances https://doi.org/10.1126%2Fsciadv.aay2880
+Egy 2019-ben, a Nature Climate Change folyóiratban [megjelent kutatásban](https://doi.org/10.1038%2Fs41558-019-0551-4) Russell Blackport és kollégái azt állították, hogy a kevesebb tengeri jégnek minimális befolyása van az erősebb középszélességi telekre, és azokat anomáliás légköri körforgás okozza az enyhe arktiszi körülményekkel együtt. Egy évvel később, a Science Advances-ben [közölt tanulmány](https://doi.org/10.1126%2Fsciadv.aay2880) arra jutott, hogy a wavier körforgás felé tartó trend 2010 előtti 20-30 évben ősszel és télen az északi féltekén megfordult az elmúlt években, a folytatódó arktiszi felmelegedés ellenére, ami iszignifikáns több évtizedes trendeket eredményezett. A kutatók szerint így a jet stream erősebb hullámzása nem az északi sarki melegedés következménye.
 
-Mekkora lehet a tengeri jég visszahúzódás és a hatása közti összefüggés? Egy 2022-ben, a Nature Communications-ben [megjelent tanulmány](https://www.nature.com/articles/s41467-022-28283-y) szerint 
+Egy 2022-ben, a Nature Communications-ben [megjelent tanulmány](https://www.nature.com/articles/s41467-022-28283-y) szerint 16 éghajlati modell támogatta, hogy a középszélességek nyugati szelei (westerlies) gyengülésére lehet számítani a jövőben az északi sarki tengeri jég elvesztésére. Ugyanakkor az jég elvesztésének hatása gyenge, és csak a variablitás 10 százalékáért lehet felelős.
 
 2017 review - nat variability vs anthropogenic forcing? https://research-information.bris.ac.uk/en/publications/weakening-and-shift-of-the-arctic-stratospheric-polar-vortex(caf74781-222b-4735-b171-8842cead4086).html
 
