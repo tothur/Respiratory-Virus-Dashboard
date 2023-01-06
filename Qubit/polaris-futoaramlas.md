@@ -2,7 +2,6 @@
 
 ##
 
-
 2022 végén több millióan maradtak áram nélkül és közlekedési káosz alakult ki az Egyesült Államokban, miután egy "bombaciklon" sarkvidéki hideget és hóviharokat eredményezett az ország nagy részén. A Montana államban található Lincolnban december 22-én [mért](https://twitter.com/NWSGreatFalls/status/1605950194071130113) -45 celsius fokhoz képest Európában hetek óta [szokatlanul meleg](https://www.bbc.com/news/world-europe-64158283) van, és az Alpokban 2 ezer méter alatt lassan [alig találni](https://www.bbc.com/news/world-europe-64151166) havat.
 
 Az ember által okozott globális felmelegedés mindkét extrém időjárási eseményt valószínűbbé tehette.
@@ -67,3 +66,11 @@ jet stream actually strengthened based on aircraft data https://agupubs.onlineli
 a 2021 study was able to reconstruct jet stream patterns over the past 1,250 years based on Greenland ice cores, and found that all of the recently observed changes remain within range of natural variability: the earliest likely time of divergence is in 2060, under the Representative Concentration Pathway 8.5 which implies continually accelerating greenhouse gas emissions. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8463874
 
 pielke sr jet stream reanalysis https://link.springer.com/article/10.1007/s00704-022-04225-y
+
+*Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2022/12/30/az-hogy-extrem-hideg-van-amerikaban-nem-jelenti-azt-hogy-ne-lenne-klimavaltozas
+
+https://qubit.hu/2022/12/30/2022-ijeszto-mertekben-olvado-gleccserek-csodak-a-fold-melyeben-es-a-tavaszi-nagy-kihalas
+
+https://qubit.hu/2022/11/16/a-klimavaltozas-felturbozta-a-hurrikanokat-es-mas-tropusi-ciklonokat
