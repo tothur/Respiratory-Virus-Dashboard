@@ -1,12 +1,22 @@
-# A poláris futóáramlás megváltozása miatt őrült meg az időjárás?
+# Az északi sarkvidék felmelegedése összeköttetésben állhat a megőrült téli időjárással
+
+##
 
 
-Észak-Amerikai fagyhalál, hó, Európai meleg tél, nincs hó az alpokban - mi történik?
+2022 végén több millióan maradtak áram nélkül és közlekedési káosz alakult ki az Egyesült Államokban, miután egy "bombaciklon" sarkvidéki hideget és hóviharokat eredményezett az ország nagy részén. A Montana államban található Lincolnban december 22-én [mért](https://twitter.com/NWSGreatFalls/status/1605950194071130113) -45 celsius fokhoz képest Európában hetek óta [szokatlanul meleg](https://www.bbc.com/news/world-europe-64158283) van, és az Alpokban 2 ezer méter alatt lassan [alig találni](https://www.bbc.com/news/world-europe-64151166) havat.
+
+Az ember által okozott globális felmelegedés mindkét extrém időjárási eseményt valószínűbbé tehette.
+
+Ennek egy lehetséges mechanizmus, amit több mint 10 éve Jennifer Francis és Stephen Vavrus éghajlatkutatók [vettetek fel](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2012GL051000), az északi sarki felmelegedés poláris futóáramlást gyengítő és hullámzóbbá tevő hatásában rejlik, ami fokozhatja a hidegbetörések, hőséghullámok gyakoriságát.
+
+A poláris futóáramlás [jet stream](https://www.climate.gov/news-features/blogs/enso/what-jet-stream) egy viszonylag keskeny, keleti irányú irányú gyors légáramlás, ami az egész bolygót megkerüli, foglalta össze a lényeget Tim Woollings éghajlatkutató nemrég a NOAA [blogján](https://www.climate.gov/news-features/blogs/enso/what-jet-stream). A pár száz kilométer széles áramlás 9,5-13 kilométeres magasságban a legerősebb, ahol a sugárhajtású repülőgépek is utaznak, emiatt a légiközlekedésnek különösen oda kell rá figyelnie. Ha a repülőgépek a futóáramlásban haladnak kelet felé, időt és üzemanyagot spórolhatnak meg, nyugat felé viszont emiatt el kell kerülniük.
+
+Woollings szerint a futóáramlás befolyásolja a közepes szélességek - ahol Magyarország is található - időjárási rendszereit, így kihat arra is, mely régiók 
+
+A futóáramlást képesek úgynevezett [Rossby hullámok](https://oceanservice.noaa.gov/facts/rossby-wave.html) befolyásolni, 
 
 
-poláris futóáramlás (polar [jet stream](https://www.climate.gov/news-features/blogs/enso/what-jet-stream))
-
-- Milyen faktorok alakítják Európa téli időjárást?
+...
 
 One factor that contributes to the creation of a concentrated polar jet is the undercutting of sub-tropical air masses by the more dense polar air masses at the polar front. This causes a sharp north-south pressure (south-north potential vorticity) gradient in the horizontal plane, an effect which is most significant during double Rossby wave breaking events.
 
@@ -20,7 +30,7 @@ jet stream drifting poleward https://agupubs.onlinelibrary.wiley.com/doi/full/10
 
 While the Arctic remains one of the coldest places on Earth today, the temperature gradient between it and the warmer parts of the globe will continue to diminish with every decade of global warming as the result of Arctic amplification. If this gradient has a strong influence on the jet stream, then it will eventually become weaker and more variable in its course, which would allow more cold air from the polar vortex to leak mid-latitudes and slow the progression of Rossby Waves, leading to more persistent and more extreme weather.
 
-jennifer francis stephen vavrus 2012 arctic amplif jet stream link paper https://ui.adsabs.harvard.edu/abs/2012GeoRL..39.6801F
+
 
 arctic oscillation was weaker during LGM, warming not necessarily implies unstability https://ui.adsabs.harvard.edu/abs/2010JCli...23.3792L - disagrees with francis-vavrus
 
