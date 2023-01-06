@@ -4,7 +4,7 @@
 
 2022 végén több millióan maradtak áram nélkül és közlekedési káosz alakult ki az Egyesült Államokban, miután egy "bombaciklon" sarkvidéki hideget és hóviharokat eredményezett az ország nagy részén. A Montana államban található Lincolnban december 22-én [mért](https://twitter.com/NWSGreatFalls/status/1605950194071130113) -45 celsius fokhoz képest Európában hetek óta [szokatlanul meleg](https://www.bbc.com/news/world-europe-64158283) van, és az Alpokban 2 ezer méter alatt lassan [alig találni](https://www.bbc.com/news/world-europe-64151166) havat.
 
-Az ember által okozott globális felmelegedés mindkét extrém időjárási eseményt valószínűbbé tehette.
+Az ember által okozott globális felmelegedés mindkét extrém időjárási eseményt valószínűbbé tehette. A Qubitnek Szabó Amanda Imola, az ELTE TTK Meteorológiai Tanszékének kutatója "", Szabó nemrég a Másfélfokon [írt arról](https://masfelfok.hu/2022/12/30/ujra-extrem-hideg-tombolt-az-usa-ban-hova-tunt-a-globalis-felmelegedes/), hogy az észak-amerikai hidegbetörés mögött felsejlhett a globális felmelegedés hatása.
 
 Ennek egy lehetséges mechanizmus, amit több mint 10 éve Jennifer Francis és Stephen Vavrus éghajlatkutatók [vettetek fel](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2012GL051000), az északi sarki felmelegedés poláris futóáramlást gyengítő és hullámzóbbá tevő hatásában rejlik, ami fokozhatja a hidegbetörések, hőséghullámok gyakoriságát.
 
