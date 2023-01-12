@@ -1,12 +1,10 @@
 # KÉSZÜL - Az elmúlt 600 évben példátlanul rövid az alpesi hószezon
 
-## Cserjék maradványainak vizsgálatával kutatók összerakták, hogyan változott 1400 és 2018 között egy 2000 méter feletti területen.
+## Egy hosszú életű cserje évgyűrűinek vizsgálatával kutatók feltárták, hogy a megelőző évszázadokhoz képest a 19. század végétől a korábbi évszázadok átlagához képest jelentősen csökkent az olasz Alpok éves hóborítottsága. 
 
 A 19. század vége óta egyre kevesebb ideig borítja hó az Alpok magasabban fekvő régióit. A csökkenés mértéke példátlan az elmúlt 600 évben és folytatódik - derül ki egy csütörtökön, a Nature Climate Change folyóiratban [megjelent tanulmányból](https://www.nature.com/articles/s41558-022-01575-3), ami a kutatók szerint mélyreható hatásokat gyakorol a természeti környezetre, és gazdasági szektorokra is.
 
 Marco Carrer, a Padovai Egyetem erdészeti ökológus professzora és kollégái az olasz alpokban található [Val Ventina](https://goo.gl/maps/pQB6TBVYaeczNysa8) 2000 méter feletti területén rekonstruálták a hóborítottság éves időtartamát 1400 és 2018 között. A kutatók ehhez egy Ciprusfélék [családjához tartozó](http://erdeszetilapok.oszk.hu/00306/pdf/073-074.pdf) cserje, a törpe havasi boróka *(Juniperus communis alpina)* évgyűrűit vizsgálták, a növény ágaiból vett 572 minta segítségével.
-
-Az évgyűrűk szélessége és növekedési mintázatai a kutatók szerint a terület éves hóborítottságának időtartamáról árulkodnak. Ez az elmúlt két évtizedben átlagosan 215 nap körül alakult évente, ami az éghajlati rekonstrukció alapján 36 nappal kevesebb az évszázados átlagnál.
 
 KUTATÓK KÉP
 
@@ -16,7 +14,9 @@ A magashegységek, így az Alpok is, gleccsereik és hótakarójuk miatt kritiku
 
 Az 1971-2019 közötti mérések szerint az Alpokban az átlagos hómélység 8,4 százalékkal csökkent ebben az időszakban a kutatók szerint évtizedenként, a hótakaró tartóssága pedig 5,6 százalékkal. Ahhoz viszont, hogy megértsék, mennyire szokatlan ez a folyamat, és arra hogyan hat a globális felmelegedés, sokkal hosszabb távú adatsorokra volt szükségük. A helyi hótakaró esetén néhány évtizedre visszanyúló mérési adatsorok kiterjesztésének egy módja az éghajlat és környezeti körülmények rekonstruálása nagy magasságokban található, hosszú életű fák vagy cserjék évgyűrűi által őrzött információ segítségével.
 
-A szakemberek azt állítják, eredményeik alapján sürgősen ki kell dolgozni adaptációs stratégiákat az Alpok hótakaró eltűnése által legerősebben súlytott természeti rendszereinek és gazdasági szektorainak megóvására.
+Az évgyűrűk szélessége és növekedési mintázatai a kutatók szerint a terület éves hóborítottságának időtartamáról árulkodnak. Ez az elmúlt két évtizedben átlagosan 215 nap körül alakult évente, ami az éghajlati rekonstrukció alapján 36 nappal kevesebb az évszázados átlagnál.
+
+A szakemberek azt állítják, eredményeik alapján sürgősen ki kell dolgozni adaptációs stratégiákat az Alpok hótakaró eltűnése által legerősebben sújtott természeti rendszereinek és gazdasági szektorainak megóvására.
 
 *Kapcsolódó cikkek a Qubiten:*
 
