@@ -10,14 +10,26 @@ A Qubitnek a tanulmányt Csathó Beáta, a Buffalo-i Egyetem geológiai tanszék
 
 ## Jégmintákból kinyert oxigén izotópok rögzítik az egykori hőmérsékletet
 
-A kutatók földtörténeti időben precízen elhelyezett, geokémiai minták segítségével képesek évmilliókra visszamenően rekonstruálni bolygónk éghajlatának alakulását. Ez kulcsfontosságú ahhoz, hogy megértsük, [miként reagálnak](https://qubit.hu/2020/10/10/tobb-mint-3-fokos-globalis-felmelegedessel-kell-szamolni-az-evszazad-vegeig) a Föld rendszerei a növekvő légköri szén-dioxid koncentrációra és átlaghőmérsékletre, és megmutatja, hogy milyen természetes alapról indul az emberi tevékenység által okozott globális felmelegedés.
+A kutatók földtörténeti időben precízen elhelyezett, [éghajlati proxinak](https://en.wikipedia.org/wiki/Proxy_(climate)) nevezett geokémiai eljárások segítségével képesek évmilliókra visszamenően rekonstruálni bolygónk éghajlatának alakulását. Ez kulcsfontosságú ahhoz, hogy megértsük, [miként reagálnak](https://qubit.hu/2020/10/10/tobb-mint-3-fokos-globalis-felmelegedessel-kell-szamolni-az-evszazad-vegeig) a Föld rendszerei a növekvő légköri szén-dioxid koncentrációra és az ezáltal eredményezett új átlaghőmérsékletre (klímaszenzitivitás), és megmutatja, hogy milyen természetes alapról indul az emberi tevékenység által okozott globális felmelegedés.
+
+Az éghajlat rekonstruálása jégminták esetén [leggyakrabban](https://www.e-education.psu.edu/earth103/node/5) a vízmolekulák oxigén atomjai, pontosabban azok izotóparányaival történik. Az oxigén kevésbé gyakori 18-as és leggyakoribb 16-os izotóparányának vizsgálatával. Ha a jégmintákban több 16-os izotóp van jelen, hidegebb volt az éghajlat, ha kevesebb, akkor melegebb.
+
+The ratio between the 16O and 18O water molecule isotopologues in an ice core helps determine past temperatures and snow accumulations.[4] The heavier isotope (18O) condenses more readily as temperatures decrease and falls more easily as precipitation, while the lighter isotope (16O) needs colder conditions to precipitate. The farther north one needs to go to find elevated levels of the 18O isotopologue, the warmer the period.[further explanation needed] [7]
 
 A grönlandi NGT-2012 és az északi-sarki régiót lefedő Arctic 2k hőmérsékleti rekonstrukciók az ipari forradalmat megelőzően, 1000-1800 között különböző mértékű lehűlési trendet mutatnak, amit 1800 után mindkettőnél felmelegedés követ. Az ipari forradalom előtti grönlandi lehűlési trend évszázadonként 0,06 fok volt, aminek több mint 11-szerese, 0,7 fok az 1800 utáni felmelegedés mértéke évszázadonként. Csathó szerint "az ipari forradalmat megelőző északi sarkvidéki lehűlés az úgy nevezett neoglaciális lehűlés része, ami kb. 8000 évvel ezelőtt kezdődött. A kutatók nagy része a lehűlést a Föld pályának változásának tulajdonitja ami a nyári napsugárzás csökkenését okozta."
+
+## Egy grönlandi blokkolásnak nevezett légköri jelenség is hozzájárult a rekord nyári olvadáshoz
+
+## A partmenti olvadás mértéke egybevág az extrém hőmérséklettel
 
 Bár Csathó szerint "a jégtakaró belsejét még nem érte el az olvadás." az új kutatás szerzői azt találták, hogy "a jégtakaró belső körzetében kimutatott felmelegedés mértéke és a jégtakaró perifériális, alacsonyabban fekvő területének olvadása (MAR3.5.2, például 1.c ábra) közötti korreláció alapján következtetnek arra hogy a további felmelegedés a jégtakaró olvadását is elő fogja segiteni."
 
 Csathó elmagyarázta, hogy "az új eredmények azt is valószinűsitik, hogy a felmelegedés nem fogja növelni a csapadékmennyiséget, ami ellensúlyozhatná a megnövekedett olvadást. Fontos kihangsúlyozni, hogy mig az új eredmények jelzik, hogy az elmúlt évtizedek (1993-2012) hőmérséklete nagy mértékben meghaladja az elmúlt évezred tendenciáját és a további felmelegedés a jégolvadás további növekedését valószinűsiti, a jövőbeli változások pontosabb előre jelzése csak csatolt jégtakaró, atmoszféra, óceán, fölkéreg model tanulmányok alapján lehetséges."
 
-## Egy grönlandi blokkolásnak nevezett légköri jelenség is hozzájárult a rekord nyári olvadáshoz
+*Kapcsolódó cikkek a Qubiten:*
 
-## 
+https://qubit.hu/2022/11/09/sokkal-gyorsabban-olvadhat-a-gronlandi-jegtakaro-mint-eddig-gondoltak
+
+https://qubit.hu/2022/03/25/felfedtek-a-rejtelyes-okot-amiert-a-vikingek-hirtelen-elmenekultek-gronlandrol-a-15-szazadban
+
+https://qubit.hu/2022/12/07/az-eddig-talalt-legosibb-dns-bol-rekonstrualtak-hogyan-nezett-ki-gronland-2-millio-eve
