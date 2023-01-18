@@ -6,7 +6,7 @@ A grönlandi jégtakaró belseje az előző évtizedben 1,5 fokkal volt melegebb
 
 Maria Hörhold, a németországi Alfred-Wegener Kutatóintézet Helmholdtz sarkvidéki és tengerkutató központjának [gleccserkutatója](https://www.researchgate.net/profile/Maria-Hoerhold-2) és kollégái jégmintákból Grönland középső és északi részének 1000 és 2011 közötti hőmérsékletét rekonstruálták. A kutatók szerint a közelmúltbeli extrém hőmérséklet a természetes variabilitás és az ember által okozott globális felmelegedés együttes hatásának eredménye.
 
-A Qubitnek a tanulmányt Csathó Beáta, a Buffalo-i Egyetem geológiai tanszékének gleccserkutató [professzora](https://scholar.google.com/citations?user=55OfS30AAAAJ&hl=en) kommentálta. A magyar kutató szerint a "bemutatott eredmény jelentős előre lépésnek tekinthető, hiszen ez az első olyan rekonstrukció amely az grönlandi jégtakaró központi és északi részének közelmúltbeli (1993-2012) hőmérsékletét becsüli meg terepi mintavételezés (fúrások) alapján, mig korábban csak klimamodelek alapján lehetett megbecsülni a hőmérsékleti változásokat. A gyors felmelegedést a tanulmány az antropogén felmelegedés és az évtizedes ciklusú természetes változás együttes hatásának tulajdonitja."
+A Qubitnek a tanulmányt Csathó Beáta, a Buffalo-i Egyetem geológiai tanszékének gleccserkutató [professzora](https://scholar.google.com/citations?user=55OfS30AAAAJ&hl=en) kommentálta. A magyar szakember szerint a "bemutatott eredmény jelentős előre lépésnek tekinthető, hiszen ez az első olyan rekonstrukció amely a grönlandi jégtakaró központi és északi részének közelmúltbeli (1993-2012) hőmérsékletét becsüli meg terepi mintavételezés (fúrások) alapján, mig korábban csak klimamodelek alapján lehetett megbecsülni a hőmérsékleti változásokat. A gyors felmelegedést a tanulmány az antropogén felmelegedés és az évtizedes ciklusú természetes változás együttes hatásának tulajdonitja."
 
 ## Jégmintákból kinyert oxigén izotópok rögzítik az egykori hőmérsékletet
 
@@ -25,6 +25,10 @@ A grönlandi NGT-2012 és az északi-sarki régiót lefedő Arctic 2k hőmérsé
 Bár Csathó szerint "a jégtakaró belsejét még nem érte el az olvadás." az új kutatás szerzői azt találták, hogy "a jégtakaró belső körzetében kimutatott felmelegedés mértéke és a jégtakaró perifériális, alacsonyabban fekvő területének olvadása (MAR3.5.2, például 1.c ábra) közötti korreláció alapján következtetnek arra hogy a további felmelegedés a jégtakaró olvadását is elő fogja segiteni."
 
 Csathó elmagyarázta, hogy "az új eredmények azt is valószinűsitik, hogy a felmelegedés nem fogja növelni a csapadékmennyiséget, ami ellensúlyozhatná a megnövekedett olvadást. Fontos kihangsúlyozni, hogy mig az új eredmények jelzik, hogy az elmúlt évtizedek (1993-2012) hőmérséklete nagy mértékben meghaladja az elmúlt évezred tendenciáját és a további felmelegedés a jégolvadás további növekedését valószinűsiti, a jövőbeli változások pontosabb előre jelzése csak csatolt jégtakaró, atmoszféra, óceán, fölkéreg model tanulmányok alapján lehetséges."
+
+
+
+"Sajnos a nyári olvadás egyre inkább előfordul a jégtakaró belső területein. Egyre gyakoribb hogy a grönlandi jégtakaró legmagasabb pontján, a Summit (3216 méter tengerszint feletti magasság) is [olvadást észlelnek](https://arctic.noaa.gov/Report-Card/Report-Card-2021/ArtMID/8022/ArticleID/946/Greenland-Ice-Sheet), sőt többször már eső is esett az elmúlt években. Sajnos a nagy magasságban előforduló olvadás egyre gyakoribb."
 
 *Kapcsolódó cikkek a Qubiten:*
 
