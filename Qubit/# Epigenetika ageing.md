@@ -1,4 +1,4 @@
-# Gondok lehetnek egy, az öregedés genetikai okait megfejtő kutatással
+# Gondok lehetnek egy kutatással, ami azt állítja, megfejtette az öregedés genetikai okait
 
 ## 
 
