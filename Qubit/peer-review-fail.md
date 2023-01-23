@@ -1,4 +1,4 @@
-# 5-6 kutatás peer review
+# A 6 legnagyobb hülyeség, ami mostanában megjelent vezető tudományos folyóiratban
 
 ##
 
