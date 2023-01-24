@@ -16,12 +16,21 @@ Hat kutatást választottunk ki, amik az elmúlt 20 évben jelentek meg vezető 
 
 ## No retraction - Alzheimer - NATURE
 
-Mostanában kavart nagy vihart, hogy 2006-os, tanulmányban 
+Tavaly nagy vihart kavart, hogy az egyik legnagyobb hatású tanulmány, amely a világszerte több tAlzheimer-kór kialakulását béta-amiloid (Aβ) plakkokhoz kötötte, manipulált felvételeket 
+
+
+Matthew Schrag
 
 https://www.nature.com/articles/nature04533
 https://qubit.hu/2022/08/15/hamisitott-eredmenyekre-alapozhattak-az-elmult-16-ev-alzheimer-kutatasainak-jo-reszet
 
 ## No retraction - Arzénos élet - SCIENCE
+
+"Kibővült az élet definíciója" - fogalmazott a NASA tudományos programjának akkori vezetője, Ed Weiler, amikor az űrügynökség bejelentette, hogy egy általuk finanszírozott kutatás egy olyan mikroorganizmusra bukkant, ami foszfor helyett arzént használ nukleinsavainak és fehérjéinek felépítésére. 
+
+"Az élet defíníciója kibővült" - fogalmazott a NASA tudományos programjának akkori vezetője, Ed Weiler, 
+
+2010 decemberében szenzációs [bejelentést tett](https://www.nasa.gov/topics/universe/features/astrobiology_toxic_chemical.html) a NASA, arról, hogy az. Felisa Wolfe-Simon és kollégái 
 
 https://en.wikipedia.org/wiki/GFAJ-1
 
@@ -53,15 +62,9 @@ https://www.nature.com/articles/s41423-020-0424-9
 
 A Retraction Watch adatbázisa szerint a szakirodalmban [legtöbbet idézett](https://retractionwatch.com/the-retraction-watch-leaderboard/top-10-most-highly-cited-retracted-papers/) visszavont tanulmány egy 2013-as, a rangos New England Journal of Medicine [folyóiratban közölt](https://www.nejm.org/doi/full/10.1056/NEJMoa1200303) spanyol kutatás. Ez azt állította, hogy a mediterrán diéta és annak extra-szűz olivaolajjal, valamint diófélékkel történő kiegészítése 30 százalékkal csökkentheti a súlyos kardivaszkuláris események bekövetkeztét olyan embereknél, akik nagyobb kardiovaszkuláris kockázattal rendelkeztek.
 
-Ramón Estruch és kollégáinak publikációját 2018-ban a folyóirat szerkesztői [vonták vissza](https://www.npr.org/sections/health-shots/2018/06/13/619619302/researchers-soften-claim-that-mediterranean-diet-prevents-heart-attacks?live=1), mert a kutatásukba bevont 7400 önkéntest nem random módon helyezték el a mediterrán diéta és a kontroll csoportként szolgáló alacsony zsírtartalmú diéta csoportba. Amint Alison Mccook, a Retraction Watch szerkesztője [összefoglalta](https://www.npr.org/sections/health-shots/2018/06/13/619619302/researchers-soften-claim-that-mediterranean-diet-prevents-heart-attacks?live=1), ezt egy John Carlisle nevű, klinikai vizsgálatok százait ellenőrző brit aneszteziológus vette észre.
+Ramón Estruch és kollégáinak publikációját 2018-ban a folyóirat szerkesztői [vonták vissza](https://retractionwatch.com/2018/06/13/does-the-mediterranean-diet-prevent-heart-attacks-nejm-retracts-and-replaces-high-profile-paper/), mert a kutatásukba bevont 7400 önkéntest nem random módon helyezték el a mediterrán diéta és a kontroll csoportként szolgáló alacsony zsírtartalmú diéta csoportba. Ezt megelőzően 1905 másik tanulmány hivatkozott rá, a visszavonása után pedig 950. Amint Alison Mccook, a Retraction Watch szerkesztője [összefoglalta](https://www.npr.org/sections/health-shots/2018/06/13/619619302/researchers-soften-claim-that-mediterranean-diet-prevents-heart-attacks?live=1), ezt egy John Carlisle nevű, klinikai vizsgálatok százait ellenőrző brit aneszteziológus vette észre.
 
 A kutatók a párkapcsolatban élő résztvevőkre ugyan azt a diétát írták ki, és az egyik kutatási területen egy egész faluból származó résztvevőknek ugyan azt a diétát adták ki. Martínez González, a tanulmány vezetője szerint miután kizárták a nem randomizált résztvevőket, ugyan azok az eredméynek maradtak, csak a kutatók nem tudták már azt állítani, hogy a diéta felelt ezekért a egészségi előnyökért. A NEJM ezután a szerzőkkel az eredeti tanulmányt egy átdolgozott, finomabb következtetésűre [cseréltette le](https://www.nejm.org/doi/full/10.1056/nejmoa1800389).
-
-Ezt megelőzően 1905 másik tanulmány hivatkozott rá, a visszavonása után pedig 950.
-
-https://retractionwatch.com/2018/06/13/does-the-mediterranean-diet-prevent-heart-attacks-nejm-retracts-and-replaces-high-profile-paper/
-
-
 
 *Kapcsolódó cikkek a Qubiten:*
 
