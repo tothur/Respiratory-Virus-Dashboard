@@ -2,63 +2,41 @@
 
 ##
 
-rise and fall of peer review https://experimentalhistory.substack.com/p/the-rise-and-fall-of-peer-review
+Évek [óta viták](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1420798/) folynak a tudományos [közösségben](https://newrepublic.com/article/135921/science-suffering-peer-reviews-big-problems) arról, hogy mennyire működik jól a folyóiratokban megjelenő tanulmányok hasonló területeken dolgozó szakemberek általi, peer-review-nak nevezett ellenőrzése, ami elvben egy tudományos minőségbiztosítási rendszerként funkcionál, a gyakorlatban azonban sokszor nem igazán hatékony. 
 
-peer review flawed process https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1420798/
+Adam Mastroianni, a Columbia Business School kutatója nemrég egyenesen amellett érvelt, hogy a peer review [rendszer megbukott](https://experimentalhistory.substack.com/p/the-rise-and-fall-of-peer-review), és a megoldás inkább valamiféle publikáció utáni, szakemberek általi ellenőrzési rendszer lehet. Ilyen a Twitter és hozzá hasonló platformok elterjedésével évek óta létezik, és nap mint nap látunk arra példákat, hogy mennyire [fontos funkciót](https://qubit.hu/2023/01/23/alapvetoen-hibas-lehet-a-friss-kutatas-ami-azt-allitja-hogy-megfejtette-az-oregedes-genetikai-alapjait) tölt be.
 
-scientists says peer review is obsolete https://whyevolutionistrue.com/2022/12/16/a-scientist-says-that-peer-review-is-obsolete/
+A peer review körüli viták általában akkor lángolnak fel igazán, amikor vezető folyóiratok, mint a Nature, a Science, a Cell vagy a PNAS közölnek olyan kutatásokat, amiknek konklúziói inognak meg ilyen poszt-publikációs ellenőrzés hatására. Most hat ilyen példát mutatunk be.
 
-nrew republic peer review https://newrepublic.com/article/135921/science-suffering-peer-reviews-big-problems
+## Hamis alapra épülhetett az Alzheimer kutatások egy része
 
-https://www.science.org/content/article/what-massive-database-retracted-papers-reveals-about-science-publishing-s-death-penalty
+Hatalmas vihart kavart tavaly, hogy az elmúlt évtizedek egyik legjelentősebb, az Alzheimer-kór kiváltó okaival foglalkozó tanulmány manipulált kísérleti felvételeket tartalmazhat. A Sylvain Lesné francia idegtudós és kollégái által még 2006-ban, a Nature-ben [közölt kutatás](https://www.nature.com/articles/nature04533) egerekben végzett kísérletek alapján azt állította, hogy a betegség kialakulása egy Aβ*56-nak elnevezett, béta-amiloid (Aβ) több alegységből álló fehérjekomplexek (oligomerek) sejten kívüli felhalmozódásához köthető. 
 
-Hat kutatást választottunk ki, amik az elmúlt 20 évben jelentek meg vezető folyóiratokban.
+Amint [arról részletesen írtunk](https://qubit.hu/2022/08/15/hamisitott-eredmenyekre-alapozhattak-az-elmult-16-ev-alzheimer-kutatasainak-jo-reszet), másfél évtizeddel később Matthew Schrag, a nashville-i Vanderbilt Egyetem idegtudósa rájött, hogy a kutatók konklúziójukat manipulált ábrákkal támasztották alá. Schrag vélekedését a Science folyóirat fél éven át tartó, vezető szakértők bevonásával lefolytatott [vizsgálata is támogatta](https://www.science.org/content/article/potential-fabrication-research-images-threatens-key-theory-alzheimers-disease).
 
-## No retraction - Alzheimer - NATURE
+A Nature még a Science cikkének megjelenése előtt egy figyelmeztetést [helyezett el](https://www.nature.com/articles/nature04533) a publikáción, ami szerint a folyóirat szerkesztői vizsgálják a kísérleti ábrákkal szemben megfogalmazott aggályokat, és a folyamat lezárultáig az eredményeket óvatossággal kell kezelni. Ha a felülvizsgálat a más kutatások által eddig 2286 alkalommal idézett tanulmány visszavonásával zárul, ez sem tud már a Lesnéék által 16 évnyi Alzheimer kutatásra és a kutatási támogatások elosztására gyakorolt hatáson változtatni. Fontos ugyanakkor hozzátenni, hogy a botrány nem írja felül, hogy a béta-amiloid plakkok a komplex tényezők [együttese által okozott](https://www.nia.nih.gov/news/nia-statement-amyloid-beta-protein-dementia-research) Alzheimer-kór fontos markerei, és az sem világos, hogy milyen hatása lesz az alapkutatások irányára.
 
-Tavaly nagy vihart kavart, hogy az egyik legnagyobb hatású tanulmány, amely a világszerte több tAlzheimer-kór kialakulását béta-amiloid (Aβ) plakkokhoz kötötte, manipulált felvételeket 
+## Nincs arzénos élet, sem foszfin a Vénusz légkörében
 
+"Kibővült az élet definíciója" - fogalmazott a NASA tudományos programjának akkori vezetője, Ed Weiler, amikor az űrügynökség [2010-ben bejelentette](https://www.nasa.gov/topics/universe/features/astrobiology_toxic_chemical.html), hogy egy általuk finanszírozott kutatás olyan mikroorganizmusra bukkant, ami az összes földi élőlénytől eltérően az élethez kulcsfontosságú molekulákban a foszfátiont ([PO4]3-) arzenáttal ([AsO4]3-) tudja helyettesíteni. Felisa Wolfe-Simon és kollégáinak Science-ben [megjelent tanulmánya](https://www.science.org/doi/10.1126/science.1197258) nem kevesebbet állított, mint hogy az "adjunk munkát Felisának" (Give Felisa a Job)-ról GFAJ-1-nek elnevezett, szélsőséges körülmények közt élő extremofil baktérium DNS-ében arzenátot detektáltak, és a baktérium képes foszfátion nélkül növekedni.
 
-Matthew Schrag
+Nem sokat kellett várni, hogy biokémiusok mikrobiológusok, élükön a kanadai University of British Columbia kutatójával, Rosemary (Rosie) Redfielddel [megkérdőjelezzék](http://rrresearch.fieldofscience.com/2010/12/arsenic-associated-bacteria-nasas.html) a szerzők konklúzióját, amit Redfield szerint a tanulmány semmilyen komoly bizonyítékkal nem támasztott alá. Redfield, Leonid Kruglyak evolúciógenetikus és kollégáik egy évvel később, a Science-ben [közölték vizsgálatukat](https://www.science.org/doi/10.1126/science.1219861), ami nem volt képes reprodukálni, hogy a GFAJ-1 foszfátion nélkül is osztódik, vagy hogy arzenátot építene a DNS-ébe. 
 
-https://www.nature.com/articles/nature04533
-https://qubit.hu/2022/08/15/hamisitott-eredmenyekre-alapozhattak-az-elmult-16-ev-alzheimer-kutatasainak-jo-reszet
+Tőlük függetlenül Tobias Erb és kollégái [azt találták](https://www.science.org/doi/10.1126/science.1218455), hogy a baktériumnak biztosan szüksége van foszfátra, és viszonylag jól tolerálja az arzént. Ez ugyanakkor nem meglepő, hiszen élőhelyén [fordul elő](https://en.wikipedia.org/wiki/GFAJ-1) a világon az egyik legmagasabb természetes arzén koncentráció. Felisa Wolfe-Simonék tanulmánya a mai napig nem került visszavonásra, de ez David Sanders biológus 2021-es, a Retraction Watch-on írt [cikke szerint](https://retractionwatch.com/2021/01/21/why-one-biologist-says-its-not-too-late-to-retract-the-arsenic-life-paper/) még mindig nem késő.
 
-## No retraction - Arzénos élet - SCIENCE
+Még az arzénos életnél is szenzációsabb [bejelentést tettek](https://qubit.hu/2020/09/14/eletre-utalo-kemiai-jeleket-talaltak-a-venusz-legkoreben) 2020 szeptemberében amerikai és brit kutatók, akik azt állították, hogy a Hawaii-i JCMT és a chilei ALMA rádióteleszkóppal egy Földhöz hasonló bolygókon potenciálisan életre utaló kémiai jelet, foszfint mutattak ki a Vénusz légkörében, ami ott akár extremofil mikrobák jelenlétére utalhat. Már akkor jeleztük, hogy Jane Greaves és kollégáinak a Nature Astronomy-ben megjelent tanulmánya ezzel önmagában biztosan nem képes a vénuszi élet [jelenlétét bizonyítani](https://qubit.hu/2020/09/14/eletre-utalo-kemiai-jeleket-talaltak-a-venusz-legkoreben), de a független kutatók ellenőrzése alatt a mérések néhány hét alatt [megkérdőjeleződtek](https://arxiv.org/abs/2010.09761). 
 
-"Kibővült az élet definíciója" - fogalmazott a NASA tudományos programjának akkori vezetője, Ed Weiler, amikor az űrügynökség bejelentette, hogy egy általuk finanszírozott kutatás egy olyan mikroorganizmusra bukkant, ami foszfor helyett arzént használ nukleinsavainak és fehérjéinek felépítésére. 
+Az ALMA obszervatórium nem sokkal később elismerte, hogy hibás volt az adatok kalibrációja, ami hatással lehet a tanulmány konklúzióira. Független kutatók, G Villanueva és kollégái 2021 júliusában reagáltak a tanulmányra az újrakalibrált adatok vizsgálatával, és nem találtak bizonyítékot a foszfin jelenlétére, a JCMT teleszkóp méréseit pedig kén-dioxiddal magyarázták meg. Az erre [írt válaszukban](https://www.nature.com/articles/s41550-021-01424-x) Greaves és kollégái kitartottak amellett, hogy van foszfin a bolygó légkörében, és az eredeti tanulmány a mai napig nem került visszavonásra, az csupán egy szerkesztői figyelmeztetéssel lett ellátva az ALMA adatok hibás kalibrációjáról.
 
-"Az élet defíníciója kibővült" - fogalmazott a NASA tudományos programjának akkori vezetője, Ed Weiler, 
+## Visszavont tanulmányok az omikron kialakulásáról és T-sejteket fertőző koronavírusról
 
-2010 decemberében szenzációs [bejelentést tett](https://www.nasa.gov/topics/universe/features/astrobiology_toxic_chemical.html) a NASA, arról, hogy az. Felisa Wolfe-Simon és kollégái 
+Az előbbi három példához képest rendkívül gyorsan visszavontak egy Science-ben tavaly december 1-jén [közölt tanulmányt](https://www.science.org/doi/10.1126/science.add8737). Ez genomikai vizsgálatok alapján azt állította, hogy a SARS-CoV-2 koronavírus omikron variánsa fokozatosan alakult ki Nyugat-Afrikában, mielőtt a Dél-Afrikai Köztársaságban 2021 novemberében [észlelték volna](https://qubit.hu/2021/12/02/latvanyosan-sok-aggaszto-mutacioval-rendelkezik-az-omikron-de-meg-nem-tudni-milyen-lesz-az-egyuttes-hatasuk).
 
-https://en.wikipedia.org/wiki/GFAJ-1
+A szakcikk megjelenése után független kutatók, köztük a dél-afrikai bioinformatikus professzor, Tulio de Oliveira a szekvenciák rossz minőségére és az evolúciós rokonsági (filogenetikai) vizsgálatok gyengeségére [hívta fel a figyelmet](https://twitter.com/Tuliodna/status/1599366087077875712?s=20&t=F_zfgu1JvqJqlAUjixA7HQ). Ezen kritikákra reagálva a kutatók újravizsgálták az adataikat, amikben szennyeződéseket találtak, így maguk a szerzők döntöttek úgy december 20-án, hogy [visszavonják publikációjukat](https://www.science.org/doi/10.1126/science.adg2821).
 
-https://doi.org/10.1126%2Fscience.1197258
+Nem tartott sokkal tovább Xinling Wang és kollégáinak a rangos Cellular & Molecular Immunology folyóiratban 2020 áprilisában [megjelent kutatása](https://www.nature.com/articles/s41423-020-0424-9), ami azt az extrém állítást tette, hogy a koronavírus a HIV vírushoz hasonlóan képes T-sejteket fertőzni. A folyóirat által három nap alatt elfogadott publikációban nem megfelelő T-sejteket használtak, és a kutatás tele volt módszertani hibákkal, amit a szerzők is beláttak, így 2020 júliusában visszavonták a tanulmányt.
 
-https://doi.org/10.1126%2Fscience.1218455
-https://doi.org/10.1126%2Fscience.1219861
-
-Rosie Redfield - cascade of fail - twitter embed?
-
-https://journals.sagepub.com/doi/10.1177/0963662516649806
-
-## No retraction yet - Phosphine on Venus - NATURE ASTRONOMY
-
-https://www.nature.com/articles/s41550-020-1174-4
-
-embargó leaky https://www.science.org/content/blog-post/phosphine-life-and-venus
-
-## Retracted - Omikron Afrika - SCIENCE
-
-https://retractionwatch.com/2022/12/20/contamination-leads-to-swift-retraction-for-science-paper-on-the-origins-of-omicron-in-africa/
-
-## Retracted - T-sejteket fertőz a SARS-CoV-2 - CELLULAR AND MOLECULAR IMMUNOLOGY
-
-retracted
-https://www.nature.com/articles/s41423-020-0424-9
-
-## Retracted - Mediterrán diéta - NEJM
+## Visszavonás és átdolgozás
 
 A Retraction Watch adatbázisa szerint a szakirodalmban [legtöbbet idézett](https://retractionwatch.com/the-retraction-watch-leaderboard/top-10-most-highly-cited-retracted-papers/) visszavont tanulmány egy 2013-as, a rangos New England Journal of Medicine [folyóiratban közölt](https://www.nejm.org/doi/full/10.1056/NEJMoa1200303) spanyol kutatás. Ez azt állította, hogy a mediterrán diéta és annak extra-szűz olivaolajjal, valamint diófélékkel történő kiegészítése 30 százalékkal csökkentheti a súlyos kardivaszkuláris események bekövetkeztét olyan embereknél, akik nagyobb kardiovaszkuláris kockázattal rendelkeztek.
 
