@@ -1,24 +1,32 @@
-# Húsz éve történt a Columbia szerencsétlenség
+# Ma húsz éve történt a Columbia szerencsétlenség
 
 ##
 
 "Columbia, Houston, UHF comm check."
 
-Ma húsz évvel ezelőtt, 2003. február 1-jén, keleti parti idő szerint reggel 9-kor a NASA elvesztette a kapcsolatot a világűrből visszatérő Columbia űrsiklóval és hét fős legénységével. A houstoni irányításnak 12 perccel később vált egyértelművé, hogy az űrrepülőgép a légkörben darabokra szakadt és a Challenger óta az amerikai űrügynökség legsúlyosabb tragédiája volt kibontakozóban.
+Ma húsz évvel ezelőtt, 2003. február 1-jén, keleti parti idő szerint reggel 9-kor a NASA [elvesztette a kapcsolatot](https://www.nasa.gov/feature/20-years-ago-remembering-columbia-and-her-crew) a világűrből visszatérő Columbia űrsiklóval és hét fős legénységével. A houstoni irányításnak 12 perccel később vált egyértelművé, hogy az űrrepülőgép a légkörben darabokra szakadt és a Challenger óta az amerikai űrügynökség legsúlyosabb tragédiája volt kibontakozóban.
 
 "A Columbia elveszett, nincsenek túlélők." - mondta George W. Bush amerikai elnök aznap esti beszédében. Az űrrepülőgép sorsa 15 nappal korábban, az indítás 81.  másodpercében pecsételődött meg, amikor a hajtóműveit üzemanyaggal ellátó külső tankról levált egy hőszigetelődarab és eltalálta a bal szárnyát. Erről egy fellövéskor rögzített videó tanúskodott, aminek a küldetés alatti elemzése során a NASA szakemberei és az irányítás is arra jutott, hogy nincs veszélyben az űrrepülőgép biztonságos hazatérése.
 
-A Rick Husband parancsnok által vezetett [STS-107](https://en.wikipedia.org/wiki/STS-107)-en hat amerikai és egy izraeli űrhajós utazott.
+Az [STS-107](https://en.wikipedia.org/wiki/STS-107) jelű küldetést Rick Husband űrhajós és vadászpilóta vezette, akinek a Nemzetközi Űrállomáshoz irányuló [STS-96](https://en.wikipedia.org/wiki/STS-96) után ez volt a második űrrepülése. A legénység két másik tagjának, az első indiai származású női űrhajós Kalpana Chawlanak és Michael P. Andersonnak szintén ez volt a második űrrepülése. A pilóta, William McCool, a küldetés specialista Laurel Clark és David Brown a NASA előtt mindhárman az amerikai haditengerészetben szolgáltak. A legénység hetedik tagja Ilan Ramon volt, aki első izraeli űrhajósként repült a Columbián.
 
-A Columbia volt az első űrrepülőgép, ami 1981-ben repült először.
+Az űrhajósok két hétig tudományos kísérleteket folytattak 
 
-A Columbia maradványait 3 hónapig keresték, ami alatt 83,900 darabot találtak, ami az űrrepülőgép tömegének 38 százalékát tette ki. 
+A Rick Husband parancsnok által vezetett [STS-107](https://en.wikipedia.org/wiki/STS-107) küldetésen hat amerikai és egy izraeli űrhajós tudományos kísérleteket [folytatott](https://www.nasa.gov/mission_pages/shuttle/shuttlemissions/archives/sts-107.html) a mikrogravitációs környezetben, az űrhajó rakterébe szerelt SPACEHAB modul ál
 
-A vizsgálat (Columbia Accident Investigation Board, CAIB) 2003 augusztusában adta ki végleges jelentését, amely megállíp
+
+az űrhajó rakterébe szerelt SPACEHAB modul
+
+
+Az amerikai történelem legnagyobb szárazföldi [kereső művelete](https://www.amazon.com/Bringing-Columbia-Home-Untold-Shuttle/dp/1628728515) három hónapig tartott, ami alatt az űrrepülőgép tömegének 38 százalékát kitevő, több mint 83 ezer maradványt találtak, köztük Ramon naplóját, aminek utolsó bejegyzései közt [arról írt](https://www.theguardian.com/world/2008/oct/04/israelandthepalestinians.spaceexploration), hogy "ma először éreztem azt, hogy ténylegesen a világűrben élek. Olyan ember lettem, aki a világűrben él és dolgozik."
+
+Az amerikai haditengerészet admirálisa, Hal Gehman által vezetett baleseti vizsgálat (Columbia Accident Investigation Board, CAIB) 2003 augusztusában adta ki végleges jelentését
+
+A Columbia volt az első űrrepülőgép, ami 1981-ben repült először. Utolsó 2011, STS-135, Atlantis. MIR, Hubble, ISS, Spacelab-Spacehab. 135 repülés. Challenger 1986. 
 
 ## Zavarodottság Houstonban
 
-Az űrrepülőgépet a visszatérés során 
+Az űrrepülőgépet az alacsony Föld-körüli pályáról történő visszatérés során 
 
 https://en.wikipedia.org/wiki/Space_Shuttle_thermal_protection_system
 
@@ -46,11 +54,16 @@ https://www.youtube.com/watch?v=cbnT8Sf_LRs
 
 At 9:00:18 am, the orbiter began a catastrophic breakup, and all on-board data recording soon ceased.[14]: 1.20  Ground observers noted a sudden increase in debris being shed, and all on-board systems lost power. By 9:00:25 am, the orbiter's fore and aft sections had separated from one another.[14]: 1.21  The sudden jerk caused the crew compartment to collide with the interior wall of the fuselage, resulting in a depressurization of the crew compartment by 9:00:35 am.[14]: 1.22  The pieces of the orbiter continued to break apart into smaller pieces, and within a minute after breakup were too small to be detected from ground-based videos. By 9:35 am, all debris and crew remains were estimated to have impacted the ground.[14]: 1.77 
 
+https://youtu.be/lNfEUkxmliQ
+
 At approximately 9:12 am, when Columbia would be conducting its final maneuvers to land, a Mission Control member received a phone call that discussed news coverage of the orbiter breaking up. This information was passed onto the Entry Flight Director, LeRoy Cain, who initiated contingency procedures
 
 ## Meg lehetett volna-e menteni az űrhajósokat?
 
 foam hitting the leading edge of the left wing, loss of control, disintegration
+
+- damage was likely not fixable on orbit - NASA managers limited investigation due to this, report confirms this
+- 
 
 During the design process of the Space Shuttle, a requirement of the ET was that it would not release any debris that could potentially damage the orbiter and its TPS. The integrity of the TPS components was necessary for the survival of the crew during reentry, and the tiles and panels were only built to withstand relatively minor impacts. On STS-1, the first flight of the Space Shuttle, the orbiter Columbia was damaged during its launch from a foam strike. Foam strikes occurred regularly during Space Shuttle launches; of the 79 missions with available imagery during launch, foam strikes occurred on 65 of them.[5]: 121–122 
 
@@ -71,12 +84,18 @@ also 1 abort to orbit STS-51-F https://en.wikipedia.org/wiki/STS-51-F
 
 ## Az űrrepülőgép program vége
 
+hoping for the best management - success oriented management - Alex Roland
+
 2004 retirmenent after iss finished http://www.nasa.gov/missions/solarsystem/bush_vision.html
 
 https://en.wikipedia.org/wiki/STS-114
 https://en.wikipedia.org/wiki/STS-121
 
+Discovery on orbit inspection, rescue mission readytwot
+
 ISS safe haven, Hubble servicing another shuttle in standby
+
+https://www.youtube.com/watch?v=3deA3BXAnHs
 
 2011-2020 ISS Soyuz
 
