@@ -6,7 +6,9 @@ Több [napig](https://www.bbc.com/news/world-us-canada-64507225) egy kínai sztr
 
 Az amerikai légierő által február 4-én este, az Atlanti-óceán felett lelőtt ballon 20 ezer méteres magasságban szelte át a kontinenst, és a ballon maradványainak összeszedésére jelentős művelet indult. A három iskolabusz méretű, napelemekkel ellátott egységet szállító ballonról Kína múlt hét pénteken [elismerte](https://www.bbc.com/news/world-us-canada-64515033), hogy ők indították, de azt állították, hogy az elsősorban meteorológiai mefigyeléseket végzett, és sajnálatukat fejezte ki, hogy az, ahogy fogalmaztak force majeur miatt amerikai légtérbe sodródott.
 
-Ezzel [még mélyebbre zuhant](https://444.hu/2023/02/06/leeresztett-ballon-loki-az-eddigieknel-is-melyebbre-washington-es-peking-kapcsolatat) az egyébként sem fényes amerikai-kínai viszony, 
+Ezzel [még mélyebbre zuhant](https://444.hu/2023/02/06/leeresztett-ballon-loki-az-eddigieknel-is-melyebbre-washington-es-peking-kapcsolatat) a 2022-ben mélypontra jutó amerikai-kínai viszony, 
+
+https://www.bbc.com/news/world-asia-china-64529922
 
 https://www.nytimes.com/2023/02/05/us/politics/balloon-china-spying-united-states.html?smid=nytcore-ios-share&referringSource=articleShare
 
@@ -30,23 +32,31 @@ Az első ballont a [Montgolfier fivérek](https://en.wikipedia.org/wiki/Montgolf
 
 A második világháborúban az Egyesült Királyság közel 100 ezer ballont engedett szabadon a németek által elfogalalt területek fölé, az [Outward hadművelet](https://en.wikipedia.org/wiki/Operation_Outward) keretében, hogy távvezetékeket károsítsanak és tüzeket indítsanak segítségükkel. Japán a poláris futóáramlást kihasználva szintén gyújtóballonokat indított az Egyesült Államok fölé, amikből 300 ért célba, hat áldozatot követelve, és kis mértékű vagyoni kárt okoztak.
 
-Iain Boyd, a Colorado Boulder Egyetem professzora a The Conversation-ön [írt cikkében](https://theconversation.com/chinese-spy-balloon-over-the-us-an-aerospace-expert-explains-how-the-balloons-work-and-what-they-can-see-199245) arról írt, hogy az Egyesült Államok az 1940-es és 1950-es években ballonokat küldött a Szovjetunió fölé. A [Mogul projekt](https://en.wikipedia.org/wiki/Project_Mogul) keretében a nagy magasságban utazó ballonokon mikrofonok kaptak helyet, amik a szovjet nukleáris tesztek által produkált hanghullámokat rögzítették. Ma hasonló elven működik a CTBTO szervezet globális infrahang detektor rendszere.
+Iain Boyd, a Colorado Boulder Egyetem professzora a The Conversation-ön [írt cikkében](https://theconversation.com/chinese-spy-balloon-over-the-us-an-aerospace-expert-explains-how-the-balloons-work-and-what-they-can-see-199245) arról írt, hogy az Egyesült Államok az 1940-es és 1950-es években ballonokat küldött a Szovjetunió fölé. A [Mogul projekt](https://en.wikipedia.org/wiki/Project_Mogul) keretében a nagy magasságban utazó ballonokon mikrofonok kaptak helyet, amik a szovjet nukleáris tesztek által produkált hanghullámokat rögzítették. Ma hasonló elven működik a nukleáris teszttilalmat monitorozó [CTBTO](https://www.ctbto.org/) szervezet globális infrahang detektor rendszere.
 
 
 amiket előbb a U-2 [kémrepülőgép](https://en.wikipedia.org/wiki/Lockheed_U-2), majd műholdak váltottak fel.
+
+A modern ballonok  - More recently, the US has reportedly been considering adding high-altitude inflatables into the Pentagon's surveillance network. Modern balloons typically hover between 24km-37km above the earth's surface (80,000ft-120,000ft). https://www.bbc.com/news/world-asia-china-64508086
+
+manőverező gépi tanulásos ballon https://www.wired.com/2017/02/machine-learning-drifting-real-world-internet-balloons/
+
+
 
 A Politco és a Bloomberg [forrásai szerint](https://www.politico.com/news/2023/02/05/timeline-a-chinese-spy-balloons-7-day-trip-across-the-united-states-00081222) nem ez az [első eset](https://www.bloomberg.com/news/articles/2023-02-03/high-flying-balloon-seen-as-part-of-broader-chinese-spy-program?srnd=premium-asia#xj4y7vzkg), hogy kínai megfigyelőballonokat észlelnek, és ezek az elmúlt években öt kontinens felett megjelentek, így Ázsia és Európa felett is. Az Egyesült Államok felett korábban négy alkalommal figyeltek meg hasonló ballonokat, háromszor a Trump adminisztráció alatt és egyszer a Biden adminisztráció elején.
 
 ## Miről gyűjthet adatokat egy megfigyelő ballon a műhold konstellációk korában?
 
-ballons vs satellites https://theconversation.com/chinese-spy-balloon-over-the-us-an-aerospace-expert-explains-how-the-balloons-work-and-what-they-can-see-199245
-https://www.stripes.com/theaters/us/2023-02-04/drones-satellites-spy-balloons-9038271.html
 
-why balloon https://www.bbc.com/news/world-asia-china-64508086
+ https://www.washingtonpost.com/national-security/2023/02/04/china-spy-balloon-montana-why/
 
-why balloon https://www.washingtonpost.com/national-security/2023/02/04/china-spy-balloon-montana-why/
+Boyd [szerint](https://theconversation.com/chinese-spy-balloon-over-the-us-an-aerospace-expert-explains-how-the-balloons-work-and-what-they-can-see-199245) a sztratoszférikus ballonok egyszerre sokkal közelebb vannmak a felszínhez, mint a műholdak, így jobb felbontású optikai vagy infravörös tartományú felvételeket tudnak készíteni, miközben viszonylag lassan haladnak, így hosszabb időn át tudnak egy adott területet megfigyelni. 
 
-Boyd szerint a sztratoszférikus ballonok egyszerre sokkal közelebb vannmak a felszínhez, mint a műholdak, így részletesebb optikai vagy infravörös tartományú képalakotást tudnak elérni, miközben viszonylag lassan haladnak, így hosszabb időn át tudnak egy adott területet megfigyelni.
+Balloons also have an advantage over satellites because they are more maneuverable, according to Malcolm Macdonald, a professor and space technology engineer from the University of Strathclyde in Scotland. “The motion of a satellite is very predictable, a balloon (or other aircraft) offers the chance for an unexpected overflight, to catch those you are observing by surprise,” Macdonald said in an email. “You might hope to get something you might not see, or hear, from space.” Satellites can provide high-resolution imagery, Clarke said — but balloons can stay over one area for longer periods than satellites, if the weather permits. https://www.stripes.com/theaters/us/2023-02-04/drones-satellites-spy-balloons-9038271.html
+
+“Not only are they cheaper than launching satellites into space, but by operating within the bounds of the earth’s atmosphere, closer to the surface, they can obtain better quality images,” he added. The latest generation of balloons are high-tech in their own right, “envisaged as systems that can fly up to 90,000 feet” high, “deploy their own drone systems” and detect incoming missiles.
+
+predictable vs unpredictable overflight, esp with lower radar, eps not against USA https://www.washingtonpost.com/national-security/2023/02/04/china-spy-balloon-montana-why/
 
 ## A világűr határáig merészkednek a léghajók
 
