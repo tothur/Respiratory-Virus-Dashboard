@@ -34,6 +34,9 @@ A második világháborúban az Egyesült Királyság közel 100 ezer ballont en
 
 Iain Boyd, a Colorado Boulder Egyetem professzora a The Conversation-ön [írt cikkében](https://theconversation.com/chinese-spy-balloon-over-the-us-an-aerospace-expert-explains-how-the-balloons-work-and-what-they-can-see-199245) arról írt, hogy az Egyesült Államok az 1940-es és 1950-es években ballonokat küldött a Szovjetunió fölé. A [Mogul projekt](https://en.wikipedia.org/wiki/Project_Mogul) keretében a nagy magasságban utazó ballonokon mikrofonok kaptak helyet, amik a szovjet nukleáris tesztek által produkált hanghullámokat rögzítették. Ma hasonló elven működik a nukleáris teszttilalmat monitorozó [CTBTO](https://www.ctbto.org/) szervezet globális infrahang detektor rendszere.
 
+nasa sztrasztoszférikus ballonok https://www.nasa.gov/feature/balloons-on-ice-final-flight-launches-in-antarctica 
+
+alan https://www.thespacereview.com/article/3043/1
 
 amiket előbb a U-2 [kémrepülőgép](https://en.wikipedia.org/wiki/Lockheed_U-2), majd műholdak váltottak fel.
 
