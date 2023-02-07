@@ -8,6 +8,8 @@ Tegnap hajnalban 7,8-as [erősségű földrengés](https://earthquake.usgs.gov/e
 
 A földrengésről a Svábhegyi Csillagvizsgáló 
 
+https://www.facebook.com/svabhegyicsillagvizsgalo/videos/1408809609927166/
+
 Ez a terület a Durham Egyetem földtudományi professzora, Jenny Jenkins szerint különösen kitett a földrengéseknek, mert három tektonikus lemez, az anatóliai, az arábiai és az afrikai határán helyezekedik el. Az arábiai lemez észak felé mozog, ami a Törökország alatti anatóliai lemezt nyugati irányba nyomja. 
 
 A mozgás hatására nyomás épül fel a törésvonalakon, aminek kibocsátása okozza a földrengést, ami Jenkins szerint valószínűleg a Kelet-anatóliai, vagy a Holt-tengeri transzform törésvonalon történt. Mindkettő úgynevezett strike-slip törésvonal, ami azt jelenti, hogy a lemezek egy ideig el tudnak mozdulni.
