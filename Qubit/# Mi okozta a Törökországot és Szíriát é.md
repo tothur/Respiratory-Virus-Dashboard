@@ -6,7 +6,7 @@ https://qubit.hu/2023/02/06/az-elmult-szaz-ev-egyik-legerosebb-foldrengese-razta
 
 Tegnap hajnalban 7,8-as [erősségű földrengés](https://earthquake.usgs.gov/earthquakes/eventpage/us6000jllz/executive) rázta meg Törökország déli részét a Szír határ közelében, ami katasztrofális pusztítást és eddigi adatok szerint [több mint](https://444.hu/2023/02/07/a-torokorszagi-sziriai-foldrengesek-tuleloi-a-romok-alol-kiabalnak-kozben-ejszaka-fagyhalal-is-fenyegeti-oket) 5 ezer ember halálát okozta. Ezt erős utórengések, és egy 7,5-ös [erősségű rengés](https://earthquake.usgs.gov/earthquakes/eventpage/us6000jlqa/executive) követte a Sürgü törésvonal [rendszerben](https://theconversation.com/turkey-syria-earthquakes-a-seismologist-explains-what-has-happened-199340), amit valószínűleg szintén a 7,8-as rengés váltott ki.
 
-A földrengésről 
+A földrengésről a Svábhegyi Csillagvizsgáló 
 
 Ez a terület a Durham Egyetem földtudományi professzora, Jenny Jenkins szerint különösen kitett a földrengéseknek, mert három tektonikus lemez, az anatóliai, az arábiai és az afrikai határán helyezekedik el. Az arábiai lemez észak felé mozog, ami a Törökország alatti anatóliai lemezt nyugati irányba nyomja. 
 
