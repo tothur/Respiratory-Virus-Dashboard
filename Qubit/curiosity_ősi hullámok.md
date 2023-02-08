@@ -1,23 +1,17 @@
-# Ősi hullámok 
+# Ősi tavi hullámok nyomaira bukkant a Curiosity marsjáró egy olyan helyen, ahol senki nem számított rájuk
 
-# NASA’s Curiosity Finds Surprise Clues to Mars’ Watery Past
+## Fodrozódott felszínű kőzeteket talált a NASA szondája.
 
-## Among other discoveries made by the rover, rippled rock textures suggest lakes existed in a region of ancient Mars that scientists expected to be drier.
+Az eddigi legegyértelműbb bizonyítékot találta a Curiosity marsjáró hullámzó, ősi tavakra, amik több milliárd évvel ezelőtt léteztek a a Gale-kráterben, egy olyan időszakban, amikor a bolygó elvileg már egyre szárazabb volt - [állítja](https://www.jpl.nasa.gov/news/nasas-curiosity-finds-surprise-clues-to-mars-watery-past) az amerikai űrügynökség tegnapi közleménye.
 
-When NASA’s Curiosity rover arrived at the “sulfate-bearing unit” last fall, scientists thought they’d seen the last evidence that lakes once covered this region of Mars. That’s because the rock layers here formed in drier settings than regions explored earlier in the mission. The area’s sulfates – salty minerals – are thought to have been left behind when water was drying to a trickle.
+A kutatók fodrodózdós textúrájú kőzeteket azonosítottak, amiket szerintük egy sekély tóban hullámok által az aljzaton felkevert üledék hagyott hátra. A NASA JPL kutatóintézete szerint amikor a Gale-kráterben található, 5 kilométer magas Mt. Sharp hegyen vizsgálódó Curiosity megérkezett egy szulfátásványokban gazdag geológai réteghez, a kutatók azt várták, hogy már nem fognak ebben a szárazabb körülmények közt keletkezett, fiatalabb rétegben tavakra utaló bizonyítékokat látni. Korábban úgy vélték, hogy a terület szulfát sói egy fokozatosan kiszáradó bolygó képéről árulkodnak.
 
-So Curiosity’s team was surprised to discover the mission’s clearest evidence yet of ancient water ripples that formed within lakes. Billions of years ago, waves on the surface of a shallow lake stirred up sediment at the lake bottom, over time creating rippled textures left in rock.
+"Ez az eddigi legjobb bizonyíték folyékony víz és hullámok egykor létezésére, amit láttunk az egész küldetés során. Több száz méter magas tavi üledékrétegen másztunk keresztül, de nem láttunk ilyen bizonyítékokat, amiket most egy olyan területen találtunk, amiről azt hittük, hogy már kiszáradt volt." - mondta el Ashwin Vasavada, a Curiosity küldetésének JPL-ben dolgozó vezető kutatója.
 
-“This is the best evidence of water and waves that we’ve seen in the entire mission,” said Ashwin Vasavada, Curiosity’s project scientist at NASA’s Jet Propulsion Laboratory in Southern California. “We climbed through thousands of feet of lake deposits and never saw evidence like this – and now we found it in a place we expected to be dry.”
+A Curiosity [több mint 10 éve](https://qubit.hu/2022/08/06/boldog-10-szuletesnapot-a-marson-curiosity), 2012 augusztusában landolt a bolygón, a kráter középpontjában magasodó hegy rétegeit pedig 2014 óta térképezi fel, a Mars ezen régiójának geológiai történetét felderítve ezzel. Ahogy a marsjáró felfele halad a hegyen, általánosságban egyre fiatalabb kőzetekhez jut, amivel a kutatók fel tudják térképezni, hogyan alakult a bolygó egy életnek barátságosabb világból a mai hideg és sivatagos formájává. A küldetés során kiderült, hogy a kráterben hosszú ideig tavak és vízfolyások léteztek, és megfelelő körülményeket biztosíthatott mikrobiális életnek, ha az valaha kialakult a Marson.
 
-## Layers of History
-
-Since 2014, the rover has been ascending the foothills of Mount Sharp, a 3-mile-tall (5-kilometer-tall) mountain that was once laced with lakes and streams that would have provided a rich environment for microbial life, if any ever formed on the Red Planet.
-
-Mount Sharp is made up of layers, with the oldest at the bottom of the mountain and the youngest at the top. As the rover ascends, it progresses along a Martian timeline, allowing scientists to study how Mars evolved from a planet that was more Earth-like in its ancient past, with a warmer climate and plentiful water, to the freezing desert it is today.
 
 Having climbed nearly a half-mile above the mountain’s base, Curiosity has found these rippled rock textures preserved in what’s nicknamed the “Marker Band” – a thin layer of dark rock that stands out from the rest of Mount Sharp. This rock layer is so hard that Curiosity hasn’t been able to drill a sample from it despite several attempts. It’s not the first time Mars has been unwilling to share a sample: Lower down the mountain, on “Vera Rubin Ridge,” Curiosity had to try three times before finding a spot soft enough to drill.
-
 Scientists will be looking for softer rock in the week ahead. But even if they never get a sample from this unusual strip of rock, there are other sites they’re eager to explore.
 
 ## Martian Clues
@@ -30,4 +24,20 @@ One more clue within the Marker Band that has fascinated the team is an unusual 
 
 “The wave ripples, debris flows, and rhythmic layers all tell us that the story of wet-to-dry on Mars wasn’t simple,” Vasavada said. “Mars’ ancient climate had a wonderful complexity to it, much like Earth’s.”
 
+Curiosity összefoglaló: 
+https://qubit.hu/2019/05/11/igy-alakitotta-at-a-marsrol-alkotott-kepunket-a-nasa-bravuros-marsjaroja-a-curiosity
+https://qubit.hu/2020/12/18/nyolc-eve-roja-a-mars-felszinet-a-nasa-faradhatatlan-urszondaja-a-curiosity
+
+Kiszáradó Mars:
+https://qubit.hu/2019/10/18/a-curiosity-3-milliard-eves-kozetmintaibol-megerthetjuk-hogyan-lett-a-mars-kek-bolygobol-szaraz-sivatag
+https://qubit.hu/2022/03/04/korallszeru-kokenysora-leltek-a-marson
+https://qubit.hu/2022/06/23/a-curiosity-marsjaro-epp-megfejti-a-mars-kiszaradasanak-titkait
+https://qubit.hu/2023/01/04/opalt-talalt-a-marson-a-curiosity
+
 *Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2023/01/04/opalt-talalt-a-marson-a-curiosity
+
+https://qubit.hu/2022/08/06/boldog-10-szuletesnapot-a-marson-curiosity
+
+https://qubit.hu/2022/06/23/a-curiosity-marsjaro-epp-megfejti-a-mars-kiszaradasanak-titkait
