@@ -10,8 +10,6 @@ A kutatók a múlt hétfőn a Nature Ecology and Evolution [megjelent tanulmány
 
 "Karst és munkatársainak publikációja egy alapos elemzés a [közös micélium hálózat](https://en.wikipedia.org/wiki/Mycorrhizal_network) (CMN) kutatásának jelenlegi állásáról. Valós problémákat fogalmaznak meg, hiszen sok olyan állítás kering a médiában, ami sok esetben megalapozatlannak tűnik tudományos szemszögből, illetve csak egy -bár a legizgalmasabb-, a tudományos eredményeket magyarázó alternatív hipotézisek közül." - kommentálta a Qubitnek a tanulmányt Parádi István egyetemi adjunktus, az ELTE TTK Növényélettani és Molekuláris Növénybiológiai Tanszékének kutatója. Hozzátette, "a szerzők célja az, hogy a CMN vizsgálati eredményeinek interpretációja kerüljön közelebb a tényekhez, valamint számos javaslatot is megfogalmaznak a jövőbeli kutatásokhoz."
 
-A három szakember korábbi kutatások, köztük saját vizsgálataik korlátainak bemutatása és kritikája mellett 18 különböző javaslatot fogalmaznak meg olyan kísérletekre, amik már ma rendelkezésre álló eszközökkel elvégezhetők. A szakirodalom áttekintése során emellett arra találtak bizonyítékot, hogy az elmúlt 25 évben megduplázódott a nem támogatott állítások idézettsége, és az idézettség a micélium hálózatok pozitív hatásainak hangsúlyozása felé torzít.
-
 ## Tényleg széleskörben elterjedtek a micélium hálózatok az erdőkben és tápanyagokat adnak át?
 
 Az olyan, úgynevezett mikoheterotróf növények létezése, amik a szenet más növények gyökereit kolonizáló mikorrgiza gombáktól szerzik be, erős bizonyítékot ad arra, hogy léteznek micélium hálózatok és képesek erdei növények közt erőforrásokat transzferálni. A legjobb bizonyítékok a hálózatok méretére, és az általuk összekötött növényekre olyan kutatásokból van, amik a mikorrhiza gyökerekből vett, gomba és a növényi DNS minták vizsgálatán alapultak. Ezek a kutatók szerint képesek a hálózatok térbeli folytonosságát igazolni, de az időbeli tartósságukról nincs információ.
@@ -31,12 +29,17 @@ Parádi szerint "a cikk által vizsgált tézisek közül a CMN léte a leginká
 
 
 
-A magyar kutató szerint "sajnos a talaj és különösen a talajbiológia kutatása rendkívül nehéz, hiszen a Föld egyik legösszetettebb és legváltozatosabb élőhelyéről van szó, ahol egy-egy folyamat vizsgálata önmagában rendkívül összetett és költséges feladat." 
+  
 
-Karst és kollégái fontosnak tartják, hogy 
 
-ugyanakkor a szakemberek szerint keveset tudunk még róluk ahhoz, hogy ez alapján az erdőgazdálkodásra vonatkozó következtetéseink legyenek.
+## A szakirodalom a micélium hálózat pozitív hatásainak hangsúlyozása felé torzít
 
-## Preferált segítség az utódoknak?
+A három szakember korábbi kutatások, köztük saját vizsgálataik korlátainak bemutatása és kritikája mellett 18 különböző javaslatot is megfogalmaznak olyan kísérletekre, amik már ma rendelkezésre álló eszközökkel elvégezhetők. Ilyen például, hogy a jövőbeli kutatások terjesszék ki a genetikai-alapú micélium hálózat vizsgálatokat különböző erdőkre világszerte, és a kísérletek tárják fel nagy-felbontásban a fák közötti gombafonal összeköttetések térbeli szerkezetét, és hogy ezek időben milyen hosszan léteznek.
+
+Ahhoz, hogy jobban megértsük a micélium hálózatok funkcióját szerintük a növények közötti erőforrás csere vizsgálatakor ökológiailag fontos anyagokra, vízre és nitrogénre kell fókuszálni. Emellett érdemes festési technikákkal tesztelni, hogyan áramlik a víz két növény között a gyökérzetükön és a micélium hálózaton keresztül, és a természetes, valamint mesterséges elválasztást alkalmazó kísérleteket kombinálni.
+
+Közel 1500 tanulmány áttekintése során arra találtak bizonyítékot, hogy az elmúlt 25 évben kétszer gyakoribb lett, hogy bizonyítékokkal valójában nem alátámasztott állítást kötnek referenciákhoz a tanulmányokban. Ennek egyik leggyakoribb oka, hogy a tanulmányok nem említik meg a korábbi kísérletek értelmezését zavaró hatásokat és alternatív magyarázatokat. Az idézések emellett a micélium hálózatok pozitív hatásainak túlbecsülése és túlzott hangsúlyozása felé torzítanak.
+
+Karst és kollégái szerint fontos, hogy a tudományos közösség és a közvélemény is tisztában legyen azzal, hogy milyen bizonyítékok állnak rendelkezésre a micélium hálózatok erdőkben játszott szerepéről. Ezek, mint írják, még nem elegendők ahhoz, hogy az erdőgazdálkodást a micélium hálózatok köré kellene rendezni.
 
 *Kapcsolódó cikkek a Qubiten:*
