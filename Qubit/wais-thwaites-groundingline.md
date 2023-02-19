@@ -8,6 +8,10 @@ Peter Davis, a brit antarktiszi felmérés sarkkutatója és kollégái [azt tal
 
 Britney Schmidt, a Cornell Egyetem kutatója és kollégái pedig [arra jutottak](https://www.nature.com/articles/s41586-022-05691-0), hogy 
 
+icefin robot developed with NASA help https://twitter.com/Dr_ThomasZ/status/1626089732013711360?s=20
+
+https://twitter.com/IcefinRobot/status/1625904259811225605?s=20
+
 Az eredményekkel több információnk lett a gleccser jelenlegi állapotáról, és azok változó mintázatú olvadásra utalnak, és arra, hogy komplex, a jég és az óceán közötti interakciók fontos szerepet játszanak majd a gleccser jövőjében, amit továbbfejlesztett modelleknek kell majd előrejelezni a jövőben.
 
 *Kapcsolódó cikkek a Qubiten:*
