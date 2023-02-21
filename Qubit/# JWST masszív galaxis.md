@@ -1,8 +1,16 @@
-# Megmértek egy ősi galaxist a James Webbel, nehezebb, mint várták. Mit jelent ez?
+# Embargó Szerda 17:00 - Hat, az ősrobbanás után 500-700 millió évvel kialakult hatalmas galaxist találtak a James Webb űrtávcsővel
 
 ## 
 
-Korábban 1 milliárd évvel az ősrobbanás után létező (), 10-11-en Naptömegű galaxisokat 
+Hat nagy tömegű galaxist találtak kutatók a James Webb űrteleszkóppal, amik 500-700 millió évvel az ősrobbanás után alakulhattak ki. Ha az űrtávcső spektroszkópiai mérései megerősítik a felfedezést, az a jelenlegi kozmológiai modell finomítását igényelheti.
+
+Ivo Labbé, a Swinburne Technológiai Egyetem asztrofizikusa és kollégáinak szerdán a Nature-ben publikált felfedezése azt mutatja, hogy ezek az ősi galaxisok sokkal masszívabbak, mint amire korábbi vizsgálatokból számítani lehetett. Mind a hat galaxis tömege meghaladja a 10-10-en Naptömeget, az egyik pedig a 10-11-en Naptömeget is elérheti. Összehasonlításul saját galaxisunk, a Tejútrendszer 1,15x10-12-en Naptömegű és 100-500 milliárd csillagot foglal magában.
+
+Korábban 1 milliárd évvel az ősrobbanás után létező (z-6), 10-11-en Naptömegű galaxisokat sikerült azonosítani, de nehéznek volt hasonlóan masszív galaxisokat találni ennél korábban technológiai okokból.
+
+A 2021 decemberében indított James Webb űrteleszkóp ezt megváltoztatta, és már a kezdeti megfigyelési időszakában is el tudtak a kutatók kezdeni ilyen, az ősrobbanás utáni első 750 millió évben létező, eredetileg is vörös galaxisokat keresni.
+
+A kutatók hat masszív galaxisnál 7,4-9,1 közötti vöröseltolódás értékeket találtak. Az egyik galaxis lehet, hogy eléri a 10-11-en Naptömeget. Ha a galaxisok korát igazolják a spektroszkópiai mérések, a megfigyelt galaxistömegek sokkal nagyobbak lennének ahhoz képest, amire korábbi vizsgálatokból számítani lehetett.
 
 Observations of a population of candidate massive galaxies that formed around 500–700 million years after the Big Bang are published in Nature today. These galaxies are more massive than has been expected for this early point in time. The observations, part of the first release of data from the James Webb Space Telescope (JWST), offer insights into early galaxy formation.
 
