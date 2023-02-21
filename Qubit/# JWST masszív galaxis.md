@@ -2,7 +2,7 @@
 
 ## 
 
-
+Korábban 1 milliárd évvel az ősrobbanás után létező (), 10-11-en Naptömegű galaxisokat 
 
 Observations of a population of candidate massive galaxies that formed around 500–700 million years after the Big Bang are published in Nature today. These galaxies are more massive than has been expected for this early point in time. The observations, part of the first release of data from the James Webb Space Telescope (JWST), offer insights into early galaxy formation.
 
