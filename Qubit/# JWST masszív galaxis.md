@@ -6,6 +6,10 @@ Hat nagy tömegű galaxist találtak kutatók a James Webb űrteleszkóppal, ami
 
 Ivo Labbé, a Swinburne Technológiai Egyetem asztrofizikusa és kollégáinak szerdán a Nature-ben publikált felfedezése azt mutatja, hogy ezek az ősi galaxisok sokkal masszívabbak, mint amire korábbi vizsgálatokból számítani lehetett. Mind a hat galaxis tömege meghaladja a 10-10-en Naptömeget, az egyik pedig a 10-11-en Naptömeget is elérheti. Összehasonlításul saját galaxisunk, a Tejútrendszer 1,15x10-12-en Naptömegű és 100-500 milliárd csillagot foglal magában.
 
+kép
+
+A mérések a James Webb űrtávcső (JWST) kezdeti tudományos programja során készültek az elektromágneses spektrum közeli-infravörös tartományban dolgozó NIRCam műszerrel. 
+
 Korábban 1 milliárd évvel az ősrobbanás után létező (z-6), 10-11-en Naptömegű galaxisokat sikerült azonosítani, de nehéznek volt hasonlóan masszív galaxisokat találni ennél korábban technológiai okokból.
 
 A 2021 decemberében indított James Webb űrteleszkóp ezt megváltoztatta, és már a kezdeti megfigyelési időszakában is el tudtak a kutatók kezdeni ilyen, az ősrobbanás utáni első 750 millió évben létező, eredetileg is vörös galaxisokat keresni.
