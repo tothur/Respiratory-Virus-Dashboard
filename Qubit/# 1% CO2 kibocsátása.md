@@ -1,7 +1,39 @@
 # The world’s top 1% of emitters produce over 1 000 times more CO2 than the bottom 1%
 
 
-https://www.iea.org/commentaries/the-world-s-top-1-of-emitters-produce-over-1-000-times-more-co2-than-the-bottom-1
+Közel 800 millió ember felelős az energiafelhasználáshoz köthető szén-dioxid kibocsátás feléért, miközben az életmódjukkal legkevesebb klímakárt okozó 10 százalék csak 0,2 százalékáért – derül ki a Nemzetközi Energiaügynökség (IEA) szakembereinek [szerdai elemzéséből](https://www.iea.org/commentaries/the-world-s-top-1-of-emitters-produce-over-1-000-times-more-co2-than-the-bottom-1), ami markáns egyenlőtlenségeket tár fel abban, hogy kik felelősek a globális felmelegedésért.
+
+Laura Cozzi, Olivia Chen és Hyeji Kim munkája világossá teszi, hogy bár a regionális és országokra lebontott különbségek jelentősek, ennél is látványosabb különbségek jelennek meg jövedelmi csoportonként. Miközben 2021-ben az átlagos észak-amerikai lakoshoz 11-szer több energiához köthető CO2 kibocsátás volt köthető, mint egy átlag afrikaihoz, addig a kibocsátók felső 1 százaléka és alsó 1 százaléka között 1000-szeres különbség van.
+
+Az ipari forradalom óta az emberi tevékenységhez köthető üvegházhatású gázok (elsősorban szén-dioxid és metán) [légkörbe juttatása](https://www.ipcc.ch/report/ar6/wg1/chapter/technical-summary/) 1,1 [celsius fokkal](https://climate.nasa.gov/news/3246/nasa-says-2022-fifth-warmest-year-on-record-warming-trend-continues/) növelte meg bolygónk átlaghőmérsékletét. 1850 és 2021 között a Carbon Brief [szerint](https://www.carbonbrief.org/analysis-which-countries-are-historically-responsible-for-climate-change/) az össz globális kibocsátás, beleértve a földhasználatból és erdőgazdálkodásból származót, 20 százalékáért felelt az Egyesült Államok, 11 százalékáért Kína, 7 százalékáért Oroszország, 5 százalékáért Brazília és 4 százalékáért Indonézia, Németország és 3 százalékáért az Egyesült Királyság.
+
+A klímaváltozás következményei az IPCC [szerint](https://www.ipcc.ch/report/ar6/wg2/downloads/report/IPCC_AR6_WGII_SummaryForPolicymakers.pdf) a legkiszolgáltatottabb embereket és társadalmi rendszereket érintik súlyosabban. A felmelegedéssel gyakoriságukban és/vagy erősségükben fokozódó extrém időjárási események különösen a kis szigetországokat érintik, az áradásokkal és aszállyal összefüggő élelmezés-ellátási bizonytalanság pedig Afrikában, valamint Közép-és Dél-Amerikában növekszik.
+
+
+
+kis szigetországokat,
+
+
+
+A szakemberek azt vizsgálták, hogyan aránylik az egyének energia felhasználáshoz köthető szénlábnyoma jövedelmük alapján, így nem számol más üvegházhatású gázok kibocsátásával, vagy mezőgazdasághoz és földhasználhathoz kötődő kibocsátással. Az energia modellezéssel foglalkozó szakemberek az IEA energiafelhasználási és szén-dioxid kibocsátási adataiból indultak ki, és ezeket a jövedelmi csoportokra nézve súlyozták régiónként és szektoronként. 
+
+Cozzi és kollégái a jövedelmi eloszlási adatok 25 fejlett gazdaság háztartási kiadási adataiból, valamint a Nemzetközi Egyenlőtlenségi adatbázis országokra bontott jövedelem- és vagyoneloszlási adataiból. A kutatók a kibocsátás mértékét fogyasztás alapon határozták meg, és nem területi kibocsátás szerint, az Our World in Data kereskedelem által okozott kibocsátási becslések alapján.
+
+
+
+## 
+
+2021-ben az egy főre jutó átlagos globális CO2 kibocsátás 4,7 tonna volt, ami két New York és Szingapúr közötti repülőútnak, vagy egy átlagos SUV 18 hónapig történő vezetésének felel meg. A kibocsátók felső 10 százaléka, 782 millió ember majdnem ötször ennyi, 22 tonnányi szén-dioxid kibocsátásért volt felelős 2021-ben, ami 200-szor annyi, mint amiért a kibocsátók alsó 10 százaléka felel. A kibocsátók felső 10 százaléka így a kutatók szerint egyáltalán nem csak dollármilliomosokból és milliárdosokból áll, akik csupán a Föld lakosságának 0,6 százalékát, 47 millió embert tesznek ki.
+
+ÁBRA1
+
+A kibocsátók felső 10 százaléka minden kontinensen megtalálható, de 85 százalékuk fejlett ipari demokráciákban (Ausztrália, Kanada, Új-Zéland, Egyesült Királyság, EU, Japán, Korea, Egyesült Államok) vagy Kínában él. A fennmaradó 15 százalék a Közel-Keleten, Oroszországban, és a Dél-afrikai Köztársaságban, amik jelentős jövedelmi különbségekkel és egyenlőtlenségekkel rendelkező országok. A kibocsátók alsó 10 százaléka afrikai és ázsiai fejlődő gazdaságokban él a szakemberek szerint, ahol viszonylag kevés árút fogyasztanak és szolgáltatást vesznek igénybe, és sok esetben nem férnek hozzá áramhoz vagy tiszta főzési lehetőséghez.
+
+ÁBRA2
+
+Amikor közelebbreől megnézték, hogyan oszlik meg a jövedelmi csoportok között a kibocsátás, még látványosabbak lettek az egyenlőtlenségek a nagyobb jövedelműek esetén. Amint a Stockholmi Környezeti Intézet becsüli, a világ lakosságának leggazdagabb 0,1 százaléka  
+
+A closer look at income groups reveals even more dramatic disparities towards the top of the curve. As the Stockholm Environment Institute estimates, the richest 0.1% of the world’s population emitted 10 times more than all the rest of the richest 10% combined, exceeding a total footprint of 200 tonnes of CO2 per capita annually. Within this 0.1% are the billionaires and multimillionaires whose emissions-intensive super-yachts, private jets, and mansions have attracted the attention of climate activists.
 
 https://qubit.hu/2022/12/08/a-megujulo-energia-mar-2025-ben-atveheti-a-vezetest-a-szentol
 https://qubit.hu/2021/07/06/egyre-tobb-forgatokonyv-szamol-agressziv-zold-fordulattal-az-energiapiacon
@@ -10,32 +42,9 @@ https://qubit.hu/2022/04/05/minden-eszkozunk-megvan-ahhoz-hogy-elkeruljuk-a-klim
 
 ## CO2 emissions are highly unequal across income groups and regions
 
-- derül ki a Nemzetközi Energiaügynökség (IEA) szakembereinek szerdai elemzéséből.
-
-Az 
-
-Wealth, energy use, and the consumption of goods and services are unevenly distributed across the world. Carbon dioxide (CO2) emissions are no exception. Emissions vary across countries and across generations, but even more so across income groups.
-
-This commentary is part of the IEA’s ongoing work to explore people-centred energy transitions, including analysis on universal energy access and just transitions for energy sector workers. The analysis quantifies the emissions footprints of individuals by income, focusing on energy-related CO2 emissions. Emissions are adjusted for trade to reflect the upstream effects of individuals’ consumption patterns.
-
-
-Laura Cozzi, Olivia Chen és Hyeji Kim elemzése feltárja, hogyan aránylik az egyének energia felhasználáshoz köthető szénlábnyoma jövedelmük alapján.
-
-Az energia modellezéssel foglalkozó szakemberek az IEA energiafelhasználási és szén-dioxid kibocsátási adataiból indultak ki, és ezeket a jövedelmi csoportokra nézve súlyozták régiónként és szektoronként. A jövedelmi eloszlási adatok 25 fejlett gazdaság háztartási kiadási adataiból, valamint a Nemzetközi Egyenlőtlenségi adatbázis országokra bontott jövedelem- és vagyoneloszlási adataiból. A kutatók a kibocsátás mértékét fogyasztás alapon határozták meg, és nem területi kibocsátás szerint, az Our World in Data 
 
 
 
-Adjustments are made to reflect consumption-based rather than territorial CO2, based on estimates of emissions in trade by Our World in Data. The analysis accounts for energy-related CO2, and not other greenhouse gases, nor those related to land use and agriculture.
-
-
-
-In 2021, the average North American emitted 11 times more energy-related CO2 than the average African. Yet variations across income groups are even more significant. The top 1% of emitters globally each had carbon footprints of over 50 tonnes of CO2 in 2021, more than 1 000 times greater than those of the bottom 1% of emitters. Meanwhile, the global average energy-related carbon footprint is around 4.7 tonnes of CO2 per person – the equivalent of taking two round-trip flights between Singapore and New York, or of driving an average SUV for 18 months. These large contrasts reflect great differences in income and wealth, and in lifestyles and consumption patterns.
-
-Globally, the top 10% of emitters were responsible for almost half of global energy-related CO2 emissions in 2021, compared with a mere 0.2% for the bottom 10%. The top 10% averaged 22 tonnes of CO2 per capita in 2021, over 200 times more than the average for the bottom 10%. There are 782 million people in the top 10% of emitters, extending well beyond traditional ideas of the super rich. By comparison, around 0.6% of the world – an estimated 46.8 million individuals – are considered millionaires or billionaires.
-
-The top 10% of emitters span all continents. Around 85% of them live in advanced economies – including Australia, Canada, the European Union, Japan, Korea, New Zealand, United States, and United Kingdom – and also in China. The rest are from the Middle East, Russia, and South Africa, in countries with relatively high income and wealth inequality and emissions-intensive fuel mixes. The bottom 10% of emitters globally live in developing economies in Africa and Asia, where they consume relatively small amounts of goods and services, and in many cases lack access to electricity and clean cooking.
-
-A closer look at income groups reveals even more dramatic disparities towards the top of the curve. As the Stockholm Environment Institute estimates, the richest 0.1% of the world’s population emitted 10 times more than all the rest of the richest 10% combined, exceeding a total footprint of 200 tonnes of CO2 per capita annually. Within this 0.1% are the billionaires and multimillionaires whose emissions-intensive super-yachts, private jets, and mansions have attracted the attention of climate activists.
 
 ## Income disparities vary across energy uses, with personal transport being the most unequal
 
