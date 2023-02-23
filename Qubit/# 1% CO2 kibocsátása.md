@@ -1,8 +1,5 @@
 # The world’s top 1% of emitters produce over 1 000 times more CO2 than the bottom 1%
 
-Laura Cozzi, Chief Energy Modeler
-Olivia Chen, Junior Energy Modeller
-Hyeji Kim, Junior Analyst
 
 https://www.iea.org/commentaries/the-world-s-top-1-of-emitters-produce-over-1-000-times-more-co2-than-the-bottom-1
 
@@ -13,9 +10,24 @@ https://qubit.hu/2022/04/05/minden-eszkozunk-megvan-ahhoz-hogy-elkeruljuk-a-klim
 
 ## CO2 emissions are highly unequal across income groups and regions
 
+- derül ki a Nemzetközi Energiaügynökség (IEA) szakembereinek szerdai elemzéséből.
+
+Az 
+
 Wealth, energy use, and the consumption of goods and services are unevenly distributed across the world. Carbon dioxide (CO2) emissions are no exception. Emissions vary across countries and across generations, but even more so across income groups.
 
 This commentary is part of the IEA’s ongoing work to explore people-centred energy transitions, including analysis on universal energy access and just transitions for energy sector workers. The analysis quantifies the emissions footprints of individuals by income, focusing on energy-related CO2 emissions. Emissions are adjusted for trade to reflect the upstream effects of individuals’ consumption patterns.
+
+
+Laura Cozzi, Olivia Chen és Hyeji Kim elemzése feltárja, hogyan aránylik az egyének energia felhasználáshoz köthető szénlábnyoma jövedelmük alapján.
+
+Az energia modellezéssel foglalkozó szakemberek az IEA energiafelhasználási és szén-dioxid kibocsátási adataiból indultak ki, és ezeket a jövedelmi csoportokra nézve súlyozták régiónként és szektoronként. A jövedelmi eloszlási adatok 25 fejlett gazdaság háztartási kiadási adataiból, valamint a Nemzetközi Egyenlőtlenségi adatbázis országokra bontott jövedelem- és vagyoneloszlási adataiból. A kutatók a kibocsátás mértékét fogyasztás alapon határozták meg, és nem területi kibocsátás szerint, az Our World in Data 
+
+
+
+Adjustments are made to reflect consumption-based rather than territorial CO2, based on estimates of emissions in trade by Our World in Data. The analysis accounts for energy-related CO2, and not other greenhouse gases, nor those related to land use and agriculture.
+
+
 
 In 2021, the average North American emitted 11 times more energy-related CO2 than the average African. Yet variations across income groups are even more significant. The top 1% of emitters globally each had carbon footprints of over 50 tonnes of CO2 in 2021, more than 1 000 times greater than those of the bottom 1% of emitters. Meanwhile, the global average energy-related carbon footprint is around 4.7 tonnes of CO2 per person – the equivalent of taking two round-trip flights between Singapore and New York, or of driving an average SUV for 18 months. These large contrasts reflect great differences in income and wealth, and in lifestyles and consumption patterns.
 
