@@ -1,5 +1,20 @@
 # Embargó Kedd 17:00 - Ismeretlen elefánt madárt tárt fel tojások DNS vizsgálata
 
+Még ma sem ritka, hogy ha Madagaszkár déli részén a tengerparton járkálunk, hatalmas tojások darabkáit pillantjuk meg a homokban.
+
+Ezeket az egy évezreddel ezelőtt kihalt elefántmadarak hagyták hátra, amik a [valaha élt legnehezebb](https://www.nytimes.com/2018/09/26/science/largest-elephant-bird.html) madarak lehettek. A különleges állatcsoportról nagyon keveset tudunk, 2014-ben David Attenborough is foglalkozott https://www.youtube.com/watch?v=VhIk3AW04Ck
+
+ maradványaiba ütköznek. Ezeket 
+
+Az akár 1000 kilogramm tömeget elérő, röpképtelen madarak 
+
+A tojásaik maradványa nyugat-ausztráliá
+
+https://museum.wa.gov.au/audiotour/tt/object-13.html
+
+
+Az elefántmadarak kihalásával 
+
 A tengerpart tojás darabkákkal van tele... ezek nem teknősök és nem is ma élő madarak tojásai, 
 
 
