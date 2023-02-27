@@ -1,21 +1,21 @@
 # Embargó Kedd 17:00 - Ismeretlen elefánt madárt tárt fel tojások DNS vizsgálata
 
-Még ma sem ritka, hogy ha Madagaszkár déli részén a tengerparton járkálunk, hatalmas tojások darabkáit [pillantjuk meg](https://www.flickr.com/photos/niallcorbet/16258804744) a homokban, amiket a [valaha élt legnehezebb](https://www.nytimes.com/2018/09/26/science/largest-elephant-bird.html) madarak hagytak hátra. A kizárólag az Afrika délkeleti partjánál található szigeten élt titokzatos elefántmadarak közel ezer éve haltak ki, amiknek lehetséges okaival David Attenborough is [foglalkozott](https://www.youtube.com/watch?v=VhIk3AW04Ck) egy 2014-es természetfilmjében.
 
+1960-ban egy madagaszkári fiatal a szigeten első [természetfilm sorozatát forgató](https://www.bbc.co.uk/iplayer/episode/p00db24v/zoo-quest-zoo-quest-to-madagascar-episode-1) David Attenboroughnak ajándékozta egy hatalmas tojáshéj darabkáit. Az epizódban a ragasztószallaggal rekonstruált tojáshéjjal a természettudós bemutatta az egykor Madagaszkáron élt elefántmadarakat, amik a valaha létező legnagyobb és [legnehezebb](https://www.nytimes.com/2018/09/26/science/largest-elephant-bird.html) madarak közé tartoztak. A titokzatos állatok 1000 évvel ezelőtt tűntek el az emberi tevékenység következtében. Kihalásukban, ahogy a Madagaszkárra [visszatérő](https://en.wikipedia.org/wiki/Attenborough_and_the_Giant_Egg) Attenborough 2011-es [filmjében elmagyarázta](https://www.youtube.com/watch?v=VhIk3AW04Ck) kulcsszerepük lehetett viszonylag védtelen tojásaiknak, amiknek maradványaira ma is könnyen [rá lehet találni](https://www.flickr.com/photos/niallcorbet/16258804744) a sziget déli részének tengerpartjain. 
 
+Alicia Grealy, a nyugat-ausztráliai Curtin Egyetem környezeti DNS laboratóriumának kutatója és kollégái most a tojáshéjak csúcstechnológiás vizsgálatával minden korábbinál pontosabban rekonstruálták a röpképtelen elefántmadarak közel 30 millió évre visszanyúló evolúciós történetét. A kedden a Nature Communications folyóiratban [közölt eredmények](https://www.nature.com/articles/s41467-023-36405-3) azt sugallják, hogy az elefántmadarak extrém nagy testmérete és 700-1000 kilogrammos tömege az utóbbi egy millió év terméke, és Madagaszkár éghajlatának szárazabbá válásával esik egybe.
 
+Az először több mint 150 éve leírt állatcsoportról kevés információnk van, mert a legtöbb fajuk a rossz fosszilizációs körülmények miatt hiányos csontváz maradványokból ismert a sziget déli és középső részéről, de eddig általánosan két rendszertani nembe tartozó, 8 faj volt elfogadott. Ahhoz, hogy [molekuláris módszerrel felderítsék](https://qubit.hu/2022/06/24/nem-kell-panikba-esni-ha-nincs-dns-mintank-uj-modszerekkel-molekulak-nelkul-is-jol-feltarhato-a-kihalt-elolenyek-evolucioja) családfájukat, a csontmaradványokhoz képest sokkal gyakoribb tojáshéj töredékekhez fordultak.
 
-A tojásaik maradványa nyugat-ausztráliá
+A kutatók 960 elefántmadár tojáshéjat tanulmányoztak, amit 291 különböző helyen gyűjtöttek a szigeten, köztük most először annak északi részén. A madagaszkári szakemberek bevonása nélkül, főként Ausztráliában és az Egyesült Államokban végzett vizsgálatok során meghatározták a tojások korát, mikroszkópikus szerkezetét, kémiai összetételét, és ősi fehérjéket valamint mitokondriális DNS mintákat izoláltak belőlük.
 
-https://museum.wa.gov.au/audiotour/tt/object-13.html
-
-
-
-
-New insights into extinct elephant birds from Madagascar, gained from DNA analysis of fossil eggshells that are over 1,000 years old, are reported in a Nature Communications paper. The findings improve our understanding of elephant bird evolution and distribution on the island, and suggests that there may have been a previously unknown lineage of the bird.
+Az 1290-6190 éves tojásmaradványok kora egybevág korábban azonosított csontfosszíliákéval, amik földrajzilag hasonló régiókban helyezkednek el a tojáshéj vastagsága alapján azonosított három tojástípussal.
 
 The elephant bird was a large, flightless bird that went extinct around 1,000 years ago when humans arrived in Madagascar. The limited bones available suggest that there were four species of elephant bird, but the evolutionary history of this group remains unclear. The analysis of ancient DNA preserved in eggshells is known to be a promising source of information when skeletal fossils are limited. For example, in previous research, such analyses have supported that the elephant and kiwi birds were related.
 
 Alicia Grealy and colleagues analysed 960 elephant bird eggshell fragments found at 291 locations across Madagascar. The eggshells were between 6,190–1,290 years old, consistent with when these birds lived. By measuring the thickness of the eggshells, the authors estimated that the eggs weighed between 0.86–10.47kg, and the size of the birds that laid them ranged between 41–1,000kg. DNA analysis showed that elephant birds in southern Madagascar had low genetic diversity, with fewer species than estimated from skeletal fossils. However, the authors suggest the possibility of a previously unknown lineage of elephant bird in northern Madagascar, of which no skeletal remains have yet been found.
 
 The findings demonstrate how eggshells can preserve important information, and highlights the complexity of the evolution of the elephant bird.
+
+*Kapcsolódó cikkek a Qubiten:*
+
