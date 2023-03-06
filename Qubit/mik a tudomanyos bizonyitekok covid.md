@@ -17,3 +17,11 @@ Korábban egy 2021-es, a rangos Cell folyóiratban megjelent tanulmány
 Angela Rassmussen, a kanadai Sasckw Egyetemen dolgozó amerikai virológus 
 
 Egy alternatív covid eredet hipotézisnek meg kellene magyarázni ugyan ezeket az epidemiológiai és genomikai információkat. Rassmussen szerint 
+
+*Kapcsolódó cikkek a Qubiten:*
+
+https://qubit.hu/2022/11/14/eletmento-kutatas-vagy-rizikos-kiserlet-mire-jo-hogy-virusokat-modositanak-a-laborban
+
+https://qubit.hu/2022/12/15/lazitottak-a-vadallatfarmok-szabalyozasan-kinaban
+
+https://qubit.hu/2021/12/04/a-virusvadaszat-a-sars-cov-2-regenye-jo-konyv-amit-nem-jo-olvasni
