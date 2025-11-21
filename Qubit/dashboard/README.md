@@ -65,3 +65,25 @@ To keep the monitor running unattended, add a cron entry (runs every 2 hours):
 ```
 
 The script records previously seen PDF URLs in the JSON state file so it only reports newly posted bulletins.
+
+## Extracting structured metrics from NNGYK bulletins
+
+Use `nngyk_extract.py` to turn a bulletin PDF into a `nngyk_latest.json` snapshot that the dashboard will auto-load (it merges into the filter dropdowns and weekly series when present alongside `index.html`).
+
+```bash
+# Ensure pdfminer is available for text extraction
+python -m pip install pdfminer.six
+
+# Convert a PDF URL (or local file) into dashboard-ready JSON
+python nngyk_extract.py \
+  "https://example.com/path/to/bulletin.pdf" \
+  --output nngyk_latest.json \
+  --save-pdf bulletin_week12.pdf
+```
+
+The helper currently looks for:
+- Season context such as `2025/26` and the Hungarian `hét` label to infer the ISO week.
+- Headline virological detections for **Influenza A**, **Influenza B**, **RSV**, and **SARS-CoV-2**.
+- Additional sentinel metrics (ILI/ARI incidence per 100k, samples tested, lab-confirmed cases) captured into a `metrics` block for future cards.
+
+Because the PDF layouts can change, the extractor uses regex heuristics to stay resilient. If a new bulletin layout appears, tweak the patterns in `nngyk_extract.py` and rerun to refresh `nngyk_latest.json`.

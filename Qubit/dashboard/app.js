@@ -16,6 +16,38 @@ const euWeekStamp = document.getElementById("eu-week-stamp");
 let trendChart;
 let regionChart;
 
+async function hydrateNNGYKData() {
+  try {
+    const response = await fetch("./nngyk_latest.json", { cache: "no-cache" });
+    if (!response.ok) throw new Error(`Status ${response.status}`);
+    const payload = await response.json();
+    if (!Array.isArray(payload.weekly)) throw new Error("Missing weekly array");
+
+    if (payload.datasets) {
+      Object.entries(payload.datasets).forEach(([key, meta]) => {
+        respiratoryData.datasets[key] = meta;
+      });
+    }
+
+    if (Array.isArray(payload.years)) {
+      const mergedYears = new Set([...respiratoryData.years, ...payload.years]);
+      respiratoryData.years = Array.from(mergedYears).sort();
+    }
+
+    if (Array.isArray(payload.viruses)) {
+      const mergedViruses = new Set([...respiratoryData.viruses, ...payload.viruses]);
+      respiratoryData.viruses = Array.from(mergedViruses);
+    }
+
+    respiratoryData.weekly.push(...payload.weekly);
+    console.info("Hydrated NNGYK weekly data from nngyk_latest.json");
+    return true;
+  } catch (error) {
+    console.warn("Using bundled NNGYK sample data", error);
+    return false;
+  }
+}
+
 function populateFilters() {
   Object.entries(respiratoryData.datasets).forEach(([key, meta]) => {
     const option = document.createElement("option");
@@ -236,6 +268,7 @@ async function loadERVISSContext() {
 }
 
 async function main() {
+  await hydrateNNGYKData();
   populateFilters();
   datasetSelect.value = "NNGYK";
   yearSelect.value = respiratoryData.years[respiratoryData.years.length - 1];
