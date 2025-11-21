@@ -1,4 +1,4 @@
-import { respiratoryData } from "./data.js";
+import { respiratoryData, europeanContextSample } from "./data.js";
 
 const datasetSelect = document.getElementById("dataset");
 const yearSelect = document.getElementById("year");
@@ -9,9 +9,44 @@ const datasetBadge = document.getElementById("dataset-badge");
 const datasetDescription = document.getElementById("dataset-description");
 const tableBody = document.getElementById("table-body");
 const chipsRow = document.getElementById("chips");
+const euDetectionsList = document.getElementById("eu-detections");
+const euPositivityList = document.getElementById("eu-positivity");
+const euWeekStamp = document.getElementById("eu-week-stamp");
 
 let trendChart;
 let regionChart;
+
+async function hydrateNNGYKData() {
+  try {
+    const response = await fetch("./nngyk_latest.json", { cache: "no-cache" });
+    if (!response.ok) throw new Error(`Status ${response.status}`);
+    const payload = await response.json();
+    if (!Array.isArray(payload.weekly)) throw new Error("Missing weekly array");
+
+    if (payload.datasets) {
+      Object.entries(payload.datasets).forEach(([key, meta]) => {
+        respiratoryData.datasets[key] = meta;
+      });
+    }
+
+    if (Array.isArray(payload.years)) {
+      const mergedYears = new Set([...respiratoryData.years, ...payload.years]);
+      respiratoryData.years = Array.from(mergedYears).sort();
+    }
+
+    if (Array.isArray(payload.viruses)) {
+      const mergedViruses = new Set([...respiratoryData.viruses, ...payload.viruses]);
+      respiratoryData.viruses = Array.from(mergedViruses);
+    }
+
+    respiratoryData.weekly.push(...payload.weekly);
+    console.info("Hydrated NNGYK weekly data from nngyk_latest.json");
+    return true;
+  } catch (error) {
+    console.warn("Using bundled NNGYK sample data", error);
+    return false;
+  }
+}
 
 function populateFilters() {
   Object.entries(respiratoryData.datasets).forEach(([key, meta]) => {
@@ -185,7 +220,55 @@ function applyFilters() {
   renderChips(filtered);
 }
 
-function main() {
+function renderEuropeanContext(context) {
+  const detectionsWeek = context.detections?.[0]?.week ?? "–";
+  const positivityWeek = context.positivity?.[0]?.week ?? "–";
+  const effectiveWeek = detectionsWeek !== "–" ? detectionsWeek : positivityWeek;
+  euWeekStamp.textContent = effectiveWeek === "–" ? "Latest ISO week" : effectiveWeek;
+
+  euDetectionsList.innerHTML = "";
+  context.detections
+    .slice(0, 4)
+    .forEach((row) => {
+      const li = document.createElement("li");
+      const detections = Number(row.detections ?? 0);
+      const formatted = Number.isFinite(detections)
+        ? detections.toLocaleString()
+        : (row.detections ?? "");
+      li.innerHTML = `<span>${row.virus}</span><strong>${formatted}</strong>`;
+      euDetectionsList.appendChild(li);
+    });
+
+  euPositivityList.innerHTML = "";
+  context.positivity
+    .slice(0, 4)
+    .forEach((row) => {
+      const li = document.createElement("li");
+      const tests = row.tests ? ` · ${Number(row.tests).toLocaleString()} tests` : "";
+      const positivity = Number(row.positivity ?? 0);
+      const formattedPos = Number.isFinite(positivity)
+        ? positivity.toFixed(1)
+        : row.positivity ?? "";
+      li.innerHTML = `<span>${row.virus}</span><strong>${formattedPos}%${tests}</strong>`;
+      euPositivityList.appendChild(li);
+    });
+}
+
+async function loadERVISSContext() {
+  try {
+    const response = await fetch("./erviss_latest.json", { cache: "no-cache" });
+    if (!response.ok) throw new Error(`Status ${response.status}`);
+    const json = await response.json();
+    if (!json.detections || !json.positivity) throw new Error("Missing keys");
+    return json;
+  } catch (error) {
+    console.warn("Falling back to sample ERVISS context", error);
+    return europeanContextSample;
+  }
+}
+
+async function main() {
+  await hydrateNNGYKData();
   populateFilters();
   datasetSelect.value = "NNGYK";
   yearSelect.value = respiratoryData.years[respiratoryData.years.length - 1];
@@ -195,6 +278,9 @@ function main() {
   [datasetSelect, yearSelect, virusSelect].forEach((el) =>
     el.addEventListener("change", applyFilters)
   );
+
+  const context = await loadERVISSContext();
+  renderEuropeanContext(context);
 }
 
 main();

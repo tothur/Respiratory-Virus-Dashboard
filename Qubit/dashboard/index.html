@@ -58,6 +58,29 @@
         </article>
       </div>
 
+      <section class="context-grid" aria-label="European context from ERVISS">
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2>Aggregate weekly detections (EU/EEA)</h2>
+              <p class="footer-note">ILI/ARI virological detections across ERVISS sentinel countries.</p>
+            </div>
+            <div class="badge" id="eu-week-stamp">Latest ISO week</div>
+          </div>
+          <ul class="context-list" id="eu-detections" aria-label="Top ERVISS detections"></ul>
+        </article>
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2>Aggregate weekly test positivity (EU/EEA)</h2>
+              <p class="footer-note">Comparative positivity to contrast with Hungarian trends.</p>
+            </div>
+            <div class="badge">ERVISS ILI/ARI</div>
+          </div>
+          <ul class="context-list" id="eu-positivity" aria-label="ERVISS positivity"></ul>
+        </article>
+      </section>
+
       <section class="card chart-card" aria-label="Visual summaries">
         <div class="chart-container">
           <canvas id="trend-chart" aria-label="Weekly trend" role="img"></canvas>

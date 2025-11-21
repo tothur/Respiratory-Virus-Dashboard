@@ -31,3 +31,17 @@ export const respiratoryData = {
     { dataset: "ERVISS", year: 2024, virus: "SARS-CoV-2", week: 10, cases: 640, region: "Baltic" },
   ],
 };
+
+export const europeanContextSample = {
+  detections: [
+    { virus: "Influenza A", week: "2024-W07", detections: 12876 },
+    { virus: "Influenza B", week: "2024-W07", detections: 4620 },
+    { virus: "RSV", week: "2024-W07", detections: 2431 },
+    { virus: "SARS-CoV-2", week: "2024-W07", detections: 1894 },
+  ],
+  positivity: [
+    { virus: "Influenza A/B", week: "2024-W07", positivity: 18.4, tests: 9450 },
+    { virus: "RSV", week: "2024-W07", positivity: 11.1, tests: 3100 },
+    { virus: "SARS-CoV-2", week: "2024-W07", positivity: 6.3, tests: 4870 },
+  ],
+};
