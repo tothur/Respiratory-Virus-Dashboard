@@ -4,6 +4,7 @@ The script is designed to:
 - Download or read a given PDF bulletin.
 - Pull out season/week metadata and headline virological counts.
 - Emit a dashboard-ready JSON snapshot (``nngyk_latest.json``).
+- Batch mode: point ``--folder`` at a directory of PDFs to parse them all.
 
 It relies on lightweight regex heuristics so that even text-based PDFs work.
 If you need higher-fidelity table parsing, install ``pdfminer.six`` (used for
@@ -188,6 +189,8 @@ def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "source",
+        nargs="?",
+        default=None,
         help="Path or URL to an NNGYK PDF (e.g., bulletin link)",
     )
     parser.add_argument(
@@ -202,6 +205,12 @@ def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:
         default=None,
         help="Optional path to persist the downloaded PDF locally",
     )
+    parser.add_argument(
+        "--folder",
+        type=Path,
+        default=None,
+        help="Parse all PDF files in the given folder (ignores --save-pdf)",
+    )
     return parser.parse_args(argv)
 
 
@@ -215,9 +224,46 @@ def resolve_pdf(source: str, save_pdf: Path | None) -> Path:
 
 def main(argv: Iterable[str] | None = None) -> int:
     args = parse_args(argv)
+    if not args.source and not args.folder:
+        print("error: provide a source PDF/URL or use --folder to parse a directory", file=sys.stderr)
+        return 2
+
+    def _parse_pdf_path(pdf_path: Path) -> ExtractionResult:
+        text = extract_text(pdf_path)
+        return parse_bulletin(text)
+
+    if args.folder:
+        pdf_dir = args.folder
+        pdfs = sorted(p for p in pdf_dir.glob("*.pdf") if p.is_file())
+        if not pdfs:
+            print(f"No PDF files found in {pdf_dir}", file=sys.stderr)
+            return 1
+
+        aggregated = []
+        for pdf_path in pdfs:
+            try:
+                result = _parse_pdf_path(pdf_path)
+                payload = result.to_dashboard_payload()
+                aggregated.append(
+                    {
+                        "file": str(pdf_path),
+                        "week": result.week,
+                        "season_year": result.season_year,
+                        "payload": payload,
+                    }
+                )
+                print(
+                    f"[ok] {pdf_path.name} -> week {result.week or 'unknown'}, season {result.season_year or 'unknown'}"
+                )
+            except Exception as exc:  # noqa: BLE001
+                print(f"[fail] {pdf_path}: {exc}", file=sys.stderr)
+
+        args.output.write_text(json.dumps(aggregated, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        print(f"Parsed {len(aggregated)} PDFs from {pdf_dir} -> {args.output}")
+        return 0
+
     pdf_path = resolve_pdf(args.source, args.save_pdf)
-    text = extract_text(pdf_path)
-    result = parse_bulletin(text)
+    result = _parse_pdf_path(pdf_path)
     payload = result.to_dashboard_payload()
     args.output.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 

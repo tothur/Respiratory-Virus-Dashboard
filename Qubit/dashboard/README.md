@@ -1,74 +1,48 @@
 # Respiratory Virus Dashboard
 
-A modern, static browser dashboard for visualizing respiratory virus trends using Hungarian NNGYK and European ERVISS/ECDC surveillance data.
-
-The page highlights weekly surges, total cases, and (when provided) variant/lineage shares for the selected pathogen. A seasonal influenza alert lets you know when combined flu detections cross an epidemic threshold. Dedicated charts contrast NNGYK flu-like illness (ILI) trends with Europe-wide influenza, RSV, and COVID-19 test positivity.
+A modern, static browser dashboard for visualizing Hungarian NNGYK flu-like illness (ILI) trends. The page highlights weekly surges, totals, and (when provided) variant/lineage shares for the selected season.
 
 ## What you see on the page
 
-- **Sticky header + filters:** Top bar with title, season filter, dataset/virus selector, and quick badges for surge signals.
-- **Epidemic alert:** A color-coded flu alert banner that appears when the latest combined influenza A/B total exceeds the configured threshold.
-- **Metric cards:** A grid of totals (cases, peak week, median, positivity) and a “rising vs easing” surge callout for the current filter.
-- **Surge + variant panels:** Left column highlights which pathogens are surging or easing; right column shows variant/lineage shares when provided in the data.
-- **European context cards:** Two small summary panes for ERVISS EU/EEA aggregate weekly detections and test positivity (influenza, RSV, SARS-CoV-2).
-- **Side-by-side trend charts:** Left: NNGYK ILI weekly trend for the selected season. Right: ERVISS EU/EEA positivity trend plotting influenza, RSV, and COVID-19 on the same axes.
-- **Accessible data table:** Full record list with sorting and filter-aware totals beneath the charts.
+- **Sticky header + filter:** Top bar with title and season selector plus quick badges.
+- **ILI alert:** Color-coded alert banner when the latest ILI total exceeds the threshold.
+- **Metric cards:** Totals (cases, peak week, median) and a “rising vs easing” surge callout.
+- **Surge + variant panels:** Highlights which pathogens are surging or easing; lineage pane shows data when provided.
+- **ILI trend chart:** Weekly ILI curve for the selected season.
+- **Accessible data table:** Full record list with sorting and filter-aware totals.
 
 Open `index.html` in a browser to see the full layout with the bundled 2024/2025 samples, including current-season ILI and multi-pathogen European positivity lines.
 
 ## Running locally
 
 1. Open `dashboard/index.html` directly in a modern browser, or serve the folder with any static file server.
-2. Interact with the dataset, year, and virus filters to update the visuals and table. The ILI chart is pinned to NNGYK data for the selected season (2024/2025 samples provided).
+2. Select the season to update the visuals and table. The ILI chart is pinned to NNGYK data for the selected season (2025/2026 sample provided, or parsed PDFs if `nngyk_all.json` exists).
 
 ## Connecting real data
 
-Replace the placeholder records in `data.js` with live feeds from:
-- NNGYK weekly influenza and RSV bulletin (Hungarian).
-- ERVISS/ECDC respiratory virus surveillance feeds (European).
+Replace the placeholder records in `data.js` (or drop a generated `nngyk_all.json`) with live NNGYK data from the weekly bulletin parser.
 
 Each data row expects the shape:
 
 ```js
 {
-  dataset: "NNGYK" | "ERVISS",
-  year: 2024,
-  virus: "Influenza A",
-  week: 10,
+  dataset: "NNGYK",
+  year: 2025,
+  virus: "ILI (flu-like illness)",
+  week: 46,
   cases: 1234,
-  region: "Central"
+  region: "National"
 }
 ```
 
-The dashboard automatically recalculates totals, peak week, median, ILI trend chart, and the table.
-
-### European ERVISS context panes
-
-Two small cards show EU/EEA aggregate weekly detections and test positivity for ILI/ARI virological data (influenza, RSV, SARS-CoV-2). To feed them with live values:
-
-```bash
-python erviss_fetch.py \
-  --detections-url "<CSV download for Aggregate weekly detections>" \
-  --positivity-url "<CSV download for Aggregate weekly test positivity>" \
-  --output erviss_latest.json
-```
-
-- Download links are available from the ERVISS data explorer ("Virological" → "Aggregate weekly detections" / "Aggregate weekly test positivity" → Export → CSV).
-- The script defaults to the EU/EEA aggregate rows; adjust `--country` or `--country-field` if the CSV uses other labels.
-- The dashboard automatically falls back to sample values in `data.js` when `erviss_latest.json` is absent.
-
-Tips for reliable ERVISS pulls:
-- Use the "Copy link" option in the CSV export menu so the script can download directly without manual steps.
-- Keep the default `--country EU/EEA` to mirror Europe-wide trends; switch it to specific ISO-like codes if you want country-level context instead.
-- Schedule the script weekly (e.g., via cron) to keep the European cards aligned with the latest published week.
+The dashboard automatically recalculates totals, peak week, median, and the ILI trend chart.
 
 ### Seasonal influenza alerting
 
-The dashboard computes the latest combined influenza A and B totals for the selected dataset/year. If the most recent week exceeds the default epidemic threshold of 2,000 cases, a warning banner appears above the metric cards. Adjust the threshold in `app.js` (`INFLUENZA_THRESHOLD`) to match official national guidance.
+The dashboard computes the latest ILI total for the selected season. If the most recent week exceeds the default alert threshold of 2,000 cases, a warning banner appears above the metric cards. Adjust the threshold in `app.js` (`ILI_THRESHOLD`) to match official guidance.
 
 ## Feature ideas you can add next
 
-- **Live ERVISS fetch on load:** Call `erviss_fetch.py` from a small wrapper endpoint or a scheduled job that drops `erviss_latest.json` so the dashboard always opens on fresh European numbers.
 - **Auto-refreshing NNGYK data:** Parse newly downloaded PDFs into structured weekly records and merge them into `data.js` (or a JSON feed) so ILI trends update without manual edits.
 - **Hover comparisons:** Add chart tooltips that show week-over-week deltas and the previous season’s value for the same week to spotlight unusual jumps.
 - **Print/export mode:** Provide a “Download snapshot” button that exports the current filters into a PDF (using `window.print` or a client-side PDF library) for briefing packets.

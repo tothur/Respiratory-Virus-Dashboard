@@ -17,7 +17,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Iterable, List, Set
 from urllib.error import URLError, HTTPError
-from urllib.parse import urljoin, urlparse
+from urllib.parse import parse_qs, urljoin, urlparse
 from urllib.request import Request, urlopen
 
 CATEGORY_URL = (
@@ -106,15 +106,46 @@ def _download_pdf(url: str, directory: Path, timeout: int = 30) -> Path:
     """Download a PDF to the target directory and return the saved path."""
     directory.mkdir(parents=True, exist_ok=True)
     parsed = urlparse(url)
-    filename = Path(parsed.path).name or "nngyk.pdf"
+
+    req = Request(url, headers={"User-Agent": USER_AGENT})
+    with urlopen(req, timeout=timeout) as resp:
+        content_type = (resp.headers.get("Content-Type") or "").lower()
+        disposition = resp.headers.get("Content-Disposition", "")
+        body = resp.read()
+
+    def _filename_from_disposition(header: str) -> str | None:
+        if not header:
+            return None
+        parts = [part.strip() for part in header.split(";")]
+        for part in parts:
+            if part.lower().startswith("filename*="):
+                _, _, value = part.partition("=")
+                return Path(value.strip('"')).name
+            if part.lower().startswith("filename="):
+                _, _, value = part.partition("=")
+                return Path(value.strip('"')).name
+        return None
+
+    filename = _filename_from_disposition(disposition)
+    if not filename:
+        query = parse_qs(parsed.query).get("download", [])
+        if query:
+            candidate = query[0].split(":", 1)[-1]
+            filename = f"{Path(candidate).stem}.pdf"
+        else:
+            filename = Path(parsed.path).name or "nngyk.pdf"
+            if not filename.lower().endswith(".pdf") and "pdf" in content_type:
+                filename = f"{Path(filename).stem or 'nngyk'}.pdf"
+
     destination = directory / filename
     if destination.exists():
         stem = destination.stem
         destination = destination.with_name(f"{stem}-{int(time.time())}{destination.suffix}")
 
-    req = Request(url, headers={"User-Agent": USER_AGENT})
-    with urlopen(req, timeout=timeout) as resp:
-        destination.write_bytes(resp.read())
+    if "pdf" not in content_type and not body.startswith(b"%PDF"):
+        raise ValueError(f"Unexpected content type for {url}: {content_type or 'unknown'}")
+
+    destination.write_bytes(body)
     return destination
 
 

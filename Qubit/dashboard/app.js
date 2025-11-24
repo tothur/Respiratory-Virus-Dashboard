@@ -1,18 +1,12 @@
-import { respiratoryData, europeanContextSample, europeanPositivityTrendSample } from "./data.js";
+import { respiratoryData, seasonLabels } from "./data.js";
 
-const datasetSelect = document.getElementById("dataset");
 const yearSelect = document.getElementById("year");
-const virusSelect = document.getElementById("virus");
 const totalCases = document.getElementById("total-cases");
 const peakWeek = document.getElementById("peak-week");
 const datasetBadge = document.getElementById("dataset-badge");
 const datasetDescription = document.getElementById("dataset-description");
 const tableBody = document.getElementById("table-body");
 const chipsRow = document.getElementById("chips");
-const euDetectionsList = document.getElementById("eu-detections");
-const euPositivityList = document.getElementById("eu-positivity");
-const euWeekStamp = document.getElementById("eu-week-stamp");
-const euPositivityBadge = document.getElementById("eu-positivity-badge");
 const surgeList = document.getElementById("surge-list");
 const variantList = document.getElementById("variant-list");
 const variantNote = document.getElementById("variant-note");
@@ -21,40 +15,27 @@ const fluAlertText = document.getElementById("flu-alert-text");
 const fluAlertChip = document.getElementById("flu-alert-chip");
 const iliYearBadge = document.getElementById("ili-year-badge");
 
-const INFLUENZA_THRESHOLD = 2000;
-const INFLUENZA_VIRUSES = ["Influenza A", "Influenza B"];
+const ILI_THRESHOLD = 2000;
+const DEFAULT_VIRUS = "ILI (flu-like illness)";
+const DATASET = "NNGYK";
 
 let trendChart;
-let euPositivityChart;
 
 function populateFilters() {
-  Object.entries(respiratoryData.datasets).forEach(([key, meta]) => {
-    const option = document.createElement("option");
-    option.value = key;
-    option.textContent = meta.name;
-    datasetSelect.appendChild(option);
-  });
-
+  yearSelect.innerHTML = "";
   respiratoryData.years.forEach((year) => {
     const option = document.createElement("option");
     option.value = year;
-    option.textContent = year;
+    option.textContent = seasonLabels[year] || year;
     yearSelect.appendChild(option);
-  });
-
-  respiratoryData.viruses.forEach((virus) => {
-    const option = document.createElement("option");
-    option.value = virus;
-    option.textContent = virus;
-    virusSelect.appendChild(option);
   });
 }
 
 function currentSelection() {
   return {
-    dataset: datasetSelect.value,
+    dataset: DATASET,
     year: Number(yearSelect.value),
-    virus: virusSelect.value,
+    virus: DEFAULT_VIRUS,
   };
 }
 
@@ -88,9 +69,9 @@ function median(values) {
   return sorted.length % 2 === 0 ? Math.round((sorted[mid - 1] + sorted[mid]) / 2) : sorted[mid];
 }
 
-function latestInfluenzaTotals(dataset, year) {
+function latestILITotals(dataset, year) {
   const rows = respiratoryData.weekly.filter(
-    (row) => row.dataset === dataset && row.year === year && INFLUENZA_VIRUSES.includes(row.virus)
+    (row) => row.dataset === dataset && row.year === year && row.virus === DEFAULT_VIRUS
   );
 
   if (!rows.length) return null;
@@ -101,7 +82,7 @@ function latestInfluenzaTotals(dataset, year) {
 }
 
 function renderFluAlert(dataset, year) {
-  const latest = latestInfluenzaTotals(dataset, year);
+  const latest = latestILITotals(dataset, year);
   if (!latest) {
     fluAlert.hidden = true;
     return;
@@ -110,11 +91,11 @@ function renderFluAlert(dataset, year) {
   fluAlert.hidden = false;
   fluAlert.classList.remove("alert-ok");
 
-  const exceeds = latest.total >= INFLUENZA_THRESHOLD;
+  const exceeds = latest.total >= ILI_THRESHOLD;
   const weekLabel = latest.latestWeek.toString().padStart(2, "0");
   const text = exceeds
-    ? `Week W${weekLabel}: combined influenza A/B activity (${latest.total.toLocaleString()} cases) is above the epidemic threshold (${INFLUENZA_THRESHOLD}).`
-    : `Week W${weekLabel}: influenza A/B activity (${latest.total.toLocaleString()} cases) remains below the epidemic threshold (${INFLUENZA_THRESHOLD}).`;
+    ? `Week W${weekLabel}: ILI activity (${latest.total.toLocaleString()} cases) is above the alert threshold (${ILI_THRESHOLD}).`
+    : `Week W${weekLabel}: ILI activity (${latest.total.toLocaleString()} cases) remains below the alert threshold (${ILI_THRESHOLD}).`;
 
   if (!exceeds) {
     fluAlert.classList.add("alert-ok");
@@ -215,12 +196,7 @@ function renderTable(data) {
 function renderILIChart(year) {
   const ctx = document.getElementById("ili-chart").getContext("2d");
   const rows = respiratoryData.weekly
-    .filter(
-      (row) =>
-        row.dataset === "NNGYK" &&
-        row.year === year &&
-        (row.virus === "ILI (flu-like illness)" || INFLUENZA_VIRUSES.includes(row.virus))
-    )
+    .filter((row) => row.dataset === DATASET && row.year === year && row.virus === DEFAULT_VIRUS)
     .sort((a, b) => a.week - b.week);
 
   const labels = rows.map((d) => `W${d.week.toString().padStart(2, "0")}`);
@@ -228,7 +204,8 @@ function renderILIChart(year) {
 
   if (trendChart) trendChart.destroy();
 
-  iliYearBadge.textContent = rows.length ? `${year} season` : "Awaiting data";
+  const seasonLabel = seasonLabels[year] || `${year} season`;
+  iliYearBadge.textContent = rows.length ? seasonLabel : "Awaiting data";
 
   trendChart = new Chart(ctx, {
     type: "line",
@@ -261,82 +238,6 @@ function renderILIChart(year) {
   });
 }
 
-function renderEuPositivityTrend(trend) {
-  const ctx = document.getElementById("eu-positivity-chart").getContext("2d");
-  const hasVirusKey = trend.some((d) => d.virus);
-  const palette = {
-    "Influenza A/B": "#a855f7",
-    RSV: "#22d3ee",
-    "SARS-CoV-2": "#f97316",
-  };
-
-  const weeks = hasVirusKey
-    ? Array.from(new Set(trend.map((d) => d.week))).sort((a, b) => a.localeCompare(b))
-    : [...trend].sort((a, b) => a.week.localeCompare(b.week)).map((d) => d.week);
-
-  const datasetMap = new Map();
-  trend.forEach((row, idx) => {
-    const virus = row.virus || "Influenza";
-    if (!datasetMap.has(virus)) {
-      const colorKeys = Object.keys(palette);
-      const color = palette[virus] || palette[colorKeys[idx % colorKeys.length]];
-      datasetMap.set(virus, { label: `${virus} positivity`, color, points: {} });
-    }
-    datasetMap.get(virus).points[row.week] = row.positivity;
-  });
-
-  if (euPositivityChart) euPositivityChart.destroy();
-
-  euPositivityBadge.textContent = weeks.length ? `${weeks[weeks.length - 1]} latest` : "Awaiting data";
-
-  const datasets = weeks.length
-    ? Array.from(datasetMap.entries()).map(([virus, { label, color, points }]) => ({
-        label,
-        data: weeks.map((week) => points[week] ?? null),
-        tension: 0.32,
-        fill: false,
-        borderColor: color,
-        backgroundColor: color,
-        pointRadius: 3,
-        pointHoverRadius: 5,
-      }))
-    : [
-        {
-          label: "EU/EEA test positivity",
-          data: [0],
-          tension: 0.32,
-          fill: false,
-          borderColor: palette["Influenza A/B"],
-          backgroundColor: palette["Influenza A/B"],
-          pointRadius: 3,
-          pointHoverRadius: 5,
-        },
-      ];
-
-  euPositivityChart = new Chart(ctx, {
-    type: "line",
-    data: {
-      labels: weeks.length ? weeks : ["No data"],
-      datasets,
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: { labels: { color: "#e5e7eb" } },
-        tooltip: {
-          callbacks: {
-            label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y?.toFixed(1)}%`,
-          },
-        },
-      },
-      scales: {
-        x: { ticks: { color: "#9ca3af", maxRotation: 0 }, grid: { display: false } },
-        y: { ticks: { color: "#9ca3af", callback: (v) => `${v}%` }, grid: { color: "rgba(255,255,255,0.05)" } },
-      },
-    },
-  });
-}
-
 function applyFilters() {
   const { dataset, year, virus } = currentSelection();
   const filtered = respiratoryData.weekly.filter(
@@ -357,71 +258,69 @@ function applyFilters() {
   renderILIChart(year);
 }
 
-function renderEuropeanContext(context) {
-  const detectionsWeek = context.detections?.[0]?.week ?? "–";
-  const positivityWeek = context.positivity?.[0]?.week ?? "–";
-  const effectiveWeek = detectionsWeek !== "–" ? detectionsWeek : positivityWeek;
-  euWeekStamp.textContent = effectiveWeek === "–" ? "Latest ISO week" : effectiveWeek;
-
-  euDetectionsList.innerHTML = "";
-  context.detections
-    .slice(0, 4)
-    .forEach((row) => {
-      const li = document.createElement("li");
-      const detections = Number(row.detections ?? 0);
-      const formatted = Number.isFinite(detections)
-        ? detections.toLocaleString()
-        : (row.detections ?? "");
-      li.innerHTML = `<span>${row.virus}</span><strong>${formatted}</strong>`;
-      euDetectionsList.appendChild(li);
-    });
-
-  euPositivityList.innerHTML = "";
-  context.positivity
-    .slice(0, 4)
-    .forEach((row) => {
-      const li = document.createElement("li");
-      const tests = row.tests ? ` · ${Number(row.tests).toLocaleString()} tests` : "";
-      const positivity = Number(row.positivity ?? 0);
-      const formattedPos = Number.isFinite(positivity)
-        ? positivity.toFixed(1)
-        : row.positivity ?? "";
-      li.innerHTML = `<span>${row.virus}</span><strong>${formattedPos}%${tests}</strong>`;
-      euPositivityList.appendChild(li);
-    });
-
-  const positivityTrend = context.positivityTrend?.length
-    ? context.positivityTrend
-    : europeanPositivityTrendSample;
-  renderEuPositivityTrend(positivityTrend);
-}
-
-async function loadERVISSContext() {
+async function loadNNGYKData() {
   try {
-    const response = await fetch("./erviss_latest.json", { cache: "no-cache" });
+    const response = await fetch("./nngyk_all.json", { cache: "no-cache" });
     if (!response.ok) throw new Error(`Status ${response.status}`);
-    const json = await response.json();
-    if (!json.detections || !json.positivity) throw new Error("Missing keys");
-    return json;
+    const parsed = await response.json();
+    if (!Array.isArray(parsed)) throw new Error("Unexpected payload");
+
+    const weekly = [];
+    const years = new Set();
+
+    parsed.forEach((entry) => {
+      const rows = entry?.payload?.weekly || [];
+      rows.forEach((row) => {
+        weekly.push(row);
+        years.add(row.year);
+      });
+    });
+
+    if (weekly.length) {
+      const aggregated = new Map();
+      weekly.forEach((row) => {
+        const key = `${row.year}-${row.week}`;
+        const current = aggregated.get(key) || {
+          dataset: DATASET,
+          year: row.year,
+          week: row.week,
+          virus: DEFAULT_VIRUS,
+          cases: 0,
+          region: "National",
+        };
+        current.cases += Number(row.cases ?? 0);
+        aggregated.set(key, current);
+      });
+
+      respiratoryData.weekly = Array.from(aggregated.values()).sort((a, b) => a.week - b.week);
+      respiratoryData.viruses = [DEFAULT_VIRUS];
+      respiratoryData.years = Array.from(years).sort();
+      respiratoryData.datasets.NNGYK.description = "Structured from parsed NNGYK bulletins (latest run).";
+      console.info(`Loaded ${weekly.length} NNGYK rows from nngyk_all.json (aggregated to ILI view)`);
+    } else {
+      console.warn("nngyk_all.json loaded but no weekly rows found");
+    }
   } catch (error) {
-    console.warn("Falling back to sample ERVISS context", error);
-    return europeanContextSample;
+    console.warn("Falling back to bundled sample NNGYK data", error);
   }
 }
 
 async function main() {
+  await loadNNGYKData();
   populateFilters();
-  datasetSelect.value = "NNGYK";
-  yearSelect.value = respiratoryData.years[respiratoryData.years.length - 1];
-  virusSelect.value = "ILI (flu-like illness)";
+
+  const fallbackYear = respiratoryData.years[respiratoryData.years.length - 1];
+  const latestNNGYKYear =
+    Math.max(
+      ...respiratoryData.weekly.filter((row) => row.dataset === DATASET).map((row) => row.year),
+      fallbackYear
+    ) || fallbackYear;
+
+  yearSelect.value = latestNNGYKYear;
+
   applyFilters();
 
-  [datasetSelect, yearSelect, virusSelect].forEach((el) =>
-    el.addEventListener("change", applyFilters)
-  );
-
-  const context = await loadERVISSContext();
-  renderEuropeanContext(context);
+  yearSelect.addEventListener("change", applyFilters);
 }
 
 main();
