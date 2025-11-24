@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Respiratory Virus Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <h1>Respiratory Virus Seasons</h1>
+        <span>Modern browser dashboard powered by NNGYK and ERVISS/ECDC data</span>
+      </div>
+      <div class="badge" id="dataset-badge">NNGYK (Hungary)</div>
+    </header>
+
+    <section class="controls" aria-label="Dashboard filters">
+      <label>
+        <span class="sr-only">Dataset</span>
+        <select id="dataset" class="select" aria-label="Dataset"></select>
+      </label>
+      <label>
+        <span class="sr-only">Year</span>
+        <select id="year" class="select" aria-label="Year"></select>
+      </label>
+      <label>
+        <span class="sr-only">Virus</span>
+        <select id="virus" class="select" aria-label="Virus"></select>
+      </label>
+    </section>
+
+    <main class="grid" aria-live="polite">
+      <section class="alert-card" id="flu-alert" aria-live="polite" role="status">
+        <div class="alert-icon" aria-hidden="true">⚠️</div>
+        <div>
+          <h2>Seasonal influenza threshold</h2>
+          <p class="footer-note" id="flu-alert-text">Awaiting data…</p>
+        </div>
+        <span class="pill" id="flu-alert-chip">Monitoring</span>
+      </section>
+
+      <div class="grid metrics">
+        <article class="card">
+          <h2>Total cases</h2>
+          <div class="value" id="total-cases">0</div>
+          <p class="footer-note">Based on selected dataset, year and pathogen.</p>
+        </article>
+        <article class="card">
+          <h2>Peak week</h2>
+          <div class="value" id="peak-week">–</div>
+          <p class="footer-note">Calendar week with the highest activity.</p>
+        </article>
+        <article class="card">
+          <h2>Dataset notes</h2>
+          <p id="dataset-description" class="footer-note">
+            Aggregated national respiratory virus surveillance shared by the National Public Health Center.
+          </p>
+          <div class="chip-row" id="chips"></div>
+        </article>
+      </div>
+
+      <section class="context-grid" aria-label="Weekly trend highlights">
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2>Weekly trend signals</h2>
+              <p class="footer-note">Fast view of which pathogens are currently surging or easing.</p>
+            </div>
+            <div class="badge">Live selection</div>
+          </div>
+          <ul class="trend-list" id="surge-list"></ul>
+        </article>
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2>Variant detection snapshot</h2>
+              <p class="footer-note">Lineage mix when subtyping is available.</p>
+            </div>
+            <div class="badge">Sequencing</div>
+          </div>
+          <p class="footer-note" id="variant-note">No variant lineage breakdown is available for this selection yet.</p>
+          <ul class="context-list" id="variant-list" aria-label="Detected variants"></ul>
+        </article>
+      </section>
+
+      <section class="context-grid" aria-label="European context from ERVISS">
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2>Aggregate weekly detections (EU/EEA)</h2>
+              <p class="footer-note">ILI/ARI virological detections across ERVISS sentinel countries.</p>
+            </div>
+            <div class="badge" id="eu-week-stamp">Latest ISO week</div>
+          </div>
+          <ul class="context-list" id="eu-detections" aria-label="Top ERVISS detections"></ul>
+        </article>
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2>Aggregate weekly test positivity (EU/EEA)</h2>
+              <p class="footer-note">Comparative positivity to contrast with Hungarian trends.</p>
+            </div>
+            <div class="badge">ERVISS ILI/ARI</div>
+          </div>
+          <ul class="context-list" id="eu-positivity" aria-label="ERVISS positivity"></ul>
+        </article>
+      </section>
+
+      <section class="card chart-card" aria-label="Visual summaries">
+        <div class="chart-container">
+          <div class="context-header">
+            <div>
+              <h2>Flu-like illness (NNGYK)</h2>
+              <p class="footer-note">Weekly ILI counts from Hungarian sentinel reports (synthetic 2024/2025).</p>
+            </div>
+            <div class="badge" id="ili-year-badge">Latest season</div>
+          </div>
+          <canvas id="ili-chart" aria-label="Flu-like illness trend" role="img"></canvas>
+        </div>
+        <div class="chart-container">
+          <div class="context-header">
+            <div>
+              <h2>EU/EEA respiratory test positivity</h2>
+              <p class="footer-note">Influenza, RSV and COVID-19 ERVISS trends to compare against Hungary.</p>
+            </div>
+            <div class="badge" id="eu-positivity-badge">Latest ISO week</div>
+          </div>
+          <canvas id="eu-positivity-chart" aria-label="EU positivity trend" role="img"></canvas>
+        </div>
+      </section>
+
+      <section class="card" aria-label="Weekly table">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+          <div>
+            <h2>Week-by-week detail</h2>
+            <p class="footer-note">Sorted by calendar week; numbers are synthetic placeholders.</p>
+          </div>
+          <div class="badge">Accessible table view</div>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Week</th>
+              <th scope="col">Virus</th>
+              <th scope="col">Region</th>
+              <th scope="col">Cases</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </section>
+
+      <p class="footer-note">
+        This dashboard ships with representative sample numbers. Replace <code>dashboard/data.js</code> with live feeds
+        from NNGYK and ERVISS/ECDC to operationalize the view. The layout is fully static, making it easy to host on
+        any web server.
+      </p>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
