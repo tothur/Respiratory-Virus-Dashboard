@@ -32,7 +32,8 @@ class _PdfLinkParser(HTMLParser):
     def __init__(self, base_url: str) -> None:
         super().__init__()
         self.base_url = base_url
-        self.links: Set[str] = set()
+        self.pdf_links: Set[str] = set()
+        self.all_links: Set[str] = set()
 
     def handle_starttag(self, tag: str, attrs: List[tuple[str, str]]) -> None:
         if tag.lower() != "a":
@@ -40,19 +41,37 @@ class _PdfLinkParser(HTMLParser):
         href = dict(attrs).get("href")
         if not href:
             return
-        if ".pdf" in href.lower():
-            self.links.add(urljoin(self.base_url, href))
+        absolute = urljoin(self.base_url, href)
+        self.all_links.add(absolute)
+        href_lower = href.lower()
+        if ".pdf" in href_lower:
+            self.pdf_links.add(absolute)
 
 
 def fetch_pdf_links(url: str = CATEGORY_URL, timeout: int = 20) -> List[str]:
     """Return all absolute PDF URLs from the category page."""
+    parser = _PdfLinkParser(url)
+
     req = Request(url, headers={"User-Agent": USER_AGENT})
     with urlopen(req, timeout=timeout) as resp:
         content_type = resp.headers.get_content_charset() or "utf-8"
         html = resp.read().decode(content_type, errors="replace")
-    parser = _PdfLinkParser(url)
     parser.feed(html)
-    return sorted(parser.links)
+
+    # Some NNGYK season pages link to intermediate download handlers without a
+    # .pdf extension (e.g., "download=1234:filename"). Consider those URLs
+    # PDF downloads too so the monitor can pick them up instead of returning
+    # an empty set.
+    if parser.pdf_links:
+        candidates = set(parser.pdf_links)
+    else:
+        candidates = {
+            link
+            for link in parser.all_links
+            if "download=" in link.lower() or "format=pdf" in link.lower()
+        }
+
+    return sorted(candidates)
 
 
 @dataclass

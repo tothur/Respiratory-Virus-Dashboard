@@ -91,6 +91,8 @@ python nngyk_monitor.py --interval-minutes 180 --state-file /var/tmp/nngyk_seen.
 
 Newly detected PDFs are saved into `nngyk_pdfs/` by default. Override with `--download-dir /path/to/folder` if you want them somewhere else.
 
+If the season page lists “Download” links without a `.pdf` filename, the monitor still picks them up by matching the download handler URLs (look for `download=` or `format=pdf`).
+
 To keep the monitor running unattended, add a cron entry (runs every 2 hours):
 
 ```
