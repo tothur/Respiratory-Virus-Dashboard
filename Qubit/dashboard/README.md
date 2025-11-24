@@ -2,10 +2,24 @@
 
 A modern, static browser dashboard for visualizing respiratory virus trends using Hungarian NNGYK and European ERVISS/ECDC surveillance data.
 
+The page highlights weekly surges, total cases, and (when provided) variant/lineage shares for the selected pathogen. A seasonal influenza alert lets you know when combined flu detections cross an epidemic threshold. Dedicated charts contrast NNGYK flu-like illness (ILI) trends with Europe-wide influenza, RSV, and COVID-19 test positivity.
+
+## What you see on the page
+
+- **Sticky header + filters:** Top bar with title, season filter, dataset/virus selector, and quick badges for surge signals.
+- **Epidemic alert:** A color-coded flu alert banner that appears when the latest combined influenza A/B total exceeds the configured threshold.
+- **Metric cards:** A grid of totals (cases, peak week, median, positivity) and a “rising vs easing” surge callout for the current filter.
+- **Surge + variant panels:** Left column highlights which pathogens are surging or easing; right column shows variant/lineage shares when provided in the data.
+- **European context cards:** Two small summary panes for ERVISS EU/EEA aggregate weekly detections and test positivity (influenza, RSV, SARS-CoV-2).
+- **Side-by-side trend charts:** Left: NNGYK ILI weekly trend for the selected season. Right: ERVISS EU/EEA positivity trend plotting influenza, RSV, and COVID-19 on the same axes.
+- **Accessible data table:** Full record list with sorting and filter-aware totals beneath the charts.
+
+Open `index.html` in a browser to see the full layout with the bundled 2024/2025 samples, including current-season ILI and multi-pathogen European positivity lines.
+
 ## Running locally
 
 1. Open `dashboard/index.html` directly in a modern browser, or serve the folder with any static file server.
-2. Interact with the dataset, year, and virus filters to update the visuals and table.
+2. Interact with the dataset, year, and virus filters to update the visuals and table. The ILI chart is pinned to NNGYK data for the selected season (2024/2025 samples provided).
 
 ## Connecting real data
 
@@ -26,11 +40,11 @@ Each data row expects the shape:
 }
 ```
 
-The dashboard automatically recalculates totals, peak week, median, charts, and the table.
+The dashboard automatically recalculates totals, peak week, median, ILI trend chart, and the table.
 
 ### European ERVISS context panes
 
-Two small cards show EU/EEA aggregate weekly detections and test positivity for ILI/ARI virological data. To feed them with live values:
+Two small cards show EU/EEA aggregate weekly detections and test positivity for ILI/ARI virological data (influenza, RSV, SARS-CoV-2). To feed them with live values:
 
 ```bash
 python erviss_fetch.py \
@@ -42,6 +56,23 @@ python erviss_fetch.py \
 - Download links are available from the ERVISS data explorer ("Virological" → "Aggregate weekly detections" / "Aggregate weekly test positivity" → Export → CSV).
 - The script defaults to the EU/EEA aggregate rows; adjust `--country` or `--country-field` if the CSV uses other labels.
 - The dashboard automatically falls back to sample values in `data.js` when `erviss_latest.json` is absent.
+
+Tips for reliable ERVISS pulls:
+- Use the "Copy link" option in the CSV export menu so the script can download directly without manual steps.
+- Keep the default `--country EU/EEA` to mirror Europe-wide trends; switch it to specific ISO-like codes if you want country-level context instead.
+- Schedule the script weekly (e.g., via cron) to keep the European cards aligned with the latest published week.
+
+### Seasonal influenza alerting
+
+The dashboard computes the latest combined influenza A and B totals for the selected dataset/year. If the most recent week exceeds the default epidemic threshold of 2,000 cases, a warning banner appears above the metric cards. Adjust the threshold in `app.js` (`INFLUENZA_THRESHOLD`) to match official national guidance.
+
+## Feature ideas you can add next
+
+- **Live ERVISS fetch on load:** Call `erviss_fetch.py` from a small wrapper endpoint or a scheduled job that drops `erviss_latest.json` so the dashboard always opens on fresh European numbers.
+- **Auto-refreshing NNGYK data:** Parse newly downloaded PDFs into structured weekly records and merge them into `data.js` (or a JSON feed) so ILI trends update without manual edits.
+- **Hover comparisons:** Add chart tooltips that show week-over-week deltas and the previous season’s value for the same week to spotlight unusual jumps.
+- **Print/export mode:** Provide a “Download snapshot” button that exports the current filters into a PDF (using `window.print` or a client-side PDF library) for briefing packets.
+- **Mobile-first refinements:** Introduce a single-column layout breakpoint for the cards/charts and larger touch targets on filters to keep the view readable on phones.
 
 ## Monitoring NNGYK PDF bulletins
 
@@ -58,32 +89,20 @@ Customize the polling cadence and state file location if you prefer:
 python nngyk_monitor.py --interval-minutes 180 --state-file /var/tmp/nngyk_seen.json
 ```
 
+Newly detected PDFs are saved into `nngyk_pdfs/` by default. Override with `--download-dir /path/to/folder` if you want them somewhere else.
+
 To keep the monitor running unattended, add a cron entry (runs every 2 hours):
 
 ```
 0 */2 * * * cd /path/to/dashboard && /usr/bin/python3 nngyk_monitor.py --once >> nngyk_monitor.log 2>&1
 ```
 
-The script records previously seen PDF URLs in the JSON state file so it only reports newly posted bulletins.
-
-## Extracting structured metrics from NNGYK bulletins
-
-Use `nngyk_extract.py` to turn a bulletin PDF into a `nngyk_latest.json` snapshot that the dashboard will auto-load (it merges into the filter dropdowns and weekly series when present alongside `index.html`).
+On macOS you can also keep it alive in a terminal without cron:
 
 ```bash
-# Ensure pdfminer is available for text extraction
-python -m pip install pdfminer.six
-
-# Convert a PDF URL (or local file) into dashboard-ready JSON
-python nngyk_extract.py \
-  "https://example.com/path/to/bulletin.pdf" \
-  --output nngyk_latest.json \
-  --save-pdf bulletin_week12.pdf
+cd /path/to/dashboard
+nohup python nngyk_monitor.py --interval-minutes 360 > ~/Library/Logs/nngyk_monitor.log 2>&1 &
+disown
 ```
 
-The helper currently looks for:
-- Season context such as `2025/26` and the Hungarian `hét` label to infer the ISO week.
-- Headline virological detections for **Influenza A**, **Influenza B**, **RSV**, and **SARS-CoV-2**.
-- Additional sentinel metrics (ILI/ARI incidence per 100k, samples tested, lab-confirmed cases) captured into a `metrics` block for future cards.
-
-Because the PDF layouts can change, the extractor uses regex heuristics to stay resilient. If a new bulletin layout appears, tweak the patterns in `nngyk_extract.py` and rerun to refresh `nngyk_latest.json`.
+This keeps checking every 6 hours (tweak the interval to once or twice per week) and writes new PDFs to `nngyk_pdfs/`. The script records previously seen PDF URLs in the JSON state file so it only reports newly posted bulletins.

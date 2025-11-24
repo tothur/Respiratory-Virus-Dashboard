@@ -81,9 +81,24 @@ def build_context(args: argparse.Namespace) -> Dict[str, object]:
     detections_rows = fetch_csv(args.detections_url)
     positivity_rows = fetch_csv(args.positivity_url)
 
+    raw_detections = detections_rows
+    raw_positivity = positivity_rows
+
     if args.country:
         detections_rows = filter_country(detections_rows, args.country, args.country_field)
         positivity_rows = filter_country(positivity_rows, args.country, args.country_field)
+
+        if not detections_rows:
+            print(
+                f"Warning: no detection rows for '{args.country}' using {args.country_field}; falling back to unfiltered data."
+            )
+            detections_rows = raw_detections
+
+        if not positivity_rows:
+            print(
+                f"Warning: no positivity rows for '{args.country}' using {args.country_field}; falling back to unfiltered data."
+            )
+            positivity_rows = raw_positivity
 
     context = {
         "detections": summarize_detections(

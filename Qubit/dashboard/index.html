@@ -38,6 +38,15 @@
     </section>
 
     <main class="grid" aria-live="polite">
+      <section class="alert-card" id="flu-alert" aria-live="polite" role="status">
+        <div class="alert-icon" aria-hidden="true">⚠️</div>
+        <div>
+          <h2>Seasonal influenza threshold</h2>
+          <p class="footer-note" id="flu-alert-text">Awaiting data…</p>
+        </div>
+        <span class="pill" id="flu-alert-chip">Monitoring</span>
+      </section>
+
       <div class="grid metrics">
         <article class="card">
           <h2>Total cases</h2>
@@ -57,6 +66,30 @@
           <div class="chip-row" id="chips"></div>
         </article>
       </div>
+
+      <section class="context-grid" aria-label="Weekly trend highlights">
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2>Weekly trend signals</h2>
+              <p class="footer-note">Fast view of which pathogens are currently surging or easing.</p>
+            </div>
+            <div class="badge">Live selection</div>
+          </div>
+          <ul class="trend-list" id="surge-list"></ul>
+        </article>
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2>Variant detection snapshot</h2>
+              <p class="footer-note">Lineage mix when subtyping is available.</p>
+            </div>
+            <div class="badge">Sequencing</div>
+          </div>
+          <p class="footer-note" id="variant-note">No variant lineage breakdown is available for this selection yet.</p>
+          <ul class="context-list" id="variant-list" aria-label="Detected variants"></ul>
+        </article>
+      </section>
 
       <section class="context-grid" aria-label="European context from ERVISS">
         <article class="card">
@@ -83,10 +116,24 @@
 
       <section class="card chart-card" aria-label="Visual summaries">
         <div class="chart-container">
-          <canvas id="trend-chart" aria-label="Weekly trend" role="img"></canvas>
+          <div class="context-header">
+            <div>
+              <h2>Flu-like illness (NNGYK)</h2>
+              <p class="footer-note">Weekly ILI counts from Hungarian sentinel reports (synthetic 2024/2025).</p>
+            </div>
+            <div class="badge" id="ili-year-badge">Latest season</div>
+          </div>
+          <canvas id="ili-chart" aria-label="Flu-like illness trend" role="img"></canvas>
         </div>
         <div class="chart-container">
-          <canvas id="region-chart" aria-label="Regional distribution" role="img"></canvas>
+          <div class="context-header">
+            <div>
+              <h2>EU/EEA respiratory test positivity</h2>
+              <p class="footer-note">Influenza, RSV and COVID-19 ERVISS trends to compare against Hungary.</p>
+            </div>
+            <div class="badge" id="eu-positivity-badge">Latest ISO week</div>
+          </div>
+          <canvas id="eu-positivity-chart" aria-label="EU positivity trend" role="img"></canvas>
         </div>
       </section>
 

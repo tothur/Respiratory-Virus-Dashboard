@@ -1,7 +1,8 @@
 """Monitor the NNGYK respiratory bulletin page for new PDF posts.
 
-This utility fetches the Légúti Figyelőszolgálat adatai listing and reports
-PDF links that were not present in the previous run. Use `--interval-minutes`
+This utility fetches the Légúti Figyelőszolgálat adatai listing, reports
+PDF links that were not present in the previous run, and can download any
+newly discovered PDFs into a local folder. Use `--interval-minutes`
 for continuous polling (default: 120 minutes) or `--once` for a single check.
 """
 from __future__ import annotations
@@ -16,7 +17,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Iterable, List, Set
 from urllib.error import URLError, HTTPError
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
 
 CATEGORY_URL = (
@@ -79,17 +80,43 @@ class MonitorResult:
     new_urls: List[str]
     all_urls: List[str]
     timestamp: datetime
+    downloaded_files: List[Path]
 
 
-def check_once(state_path: Path) -> MonitorResult:
+def _download_pdf(url: str, directory: Path, timeout: int = 30) -> Path:
+    """Download a PDF to the target directory and return the saved path."""
+    directory.mkdir(parents=True, exist_ok=True)
+    parsed = urlparse(url)
+    filename = Path(parsed.path).name or "nngyk.pdf"
+    destination = directory / filename
+    if destination.exists():
+        stem = destination.stem
+        destination = destination.with_name(f"{stem}-{int(time.time())}{destination.suffix}")
+
+    req = Request(url, headers={"User-Agent": USER_AGENT})
+    with urlopen(req, timeout=timeout) as resp:
+        destination.write_bytes(resp.read())
+    return destination
+
+
+def check_once(state_path: Path, download_dir: Path | None = None) -> MonitorResult:
     state = MonitorState.load(state_path)
     timestamp = datetime.now(timezone.utc)
     all_urls = fetch_pdf_links()
     new_urls = [url for url in all_urls if url not in state.seen_urls]
+    downloaded: List[Path] = []
+
+    if download_dir and new_urls:
+        for url in new_urls:
+            try:
+                downloaded.append(_download_pdf(url, download_dir))
+            except Exception as exc:  # noqa: BLE001
+                print(f"Failed to download {url}: {exc}", file=sys.stderr)
+
     state.seen_urls.update(all_urls)
     state.last_checked = timestamp.isoformat()
     state.save(state_path)
-    return MonitorResult(new_urls=new_urls, all_urls=all_urls, timestamp=timestamp)
+    return MonitorResult(new_urls=new_urls, all_urls=all_urls, timestamp=timestamp, downloaded_files=downloaded)
 
 
 def print_report(result: MonitorResult) -> None:
@@ -104,12 +131,16 @@ def print_report(result: MonitorResult) -> None:
     else:
         print("No new PDF links since the previous check.")
     print(f"Total PDF links found this run: {len(result.all_urls)}")
+    if result.downloaded_files:
+        print("Downloaded:")
+        for path in result.downloaded_files:
+            print(f"- {path}")
 
 
-def monitor_loop(state_path: Path, interval_minutes: int) -> None:
+def monitor_loop(state_path: Path, interval_minutes: int, download_dir: Path | None) -> None:
     while True:
         try:
-            result = check_once(state_path)
+            result = check_once(state_path, download_dir)
             print_report(result)
         except (HTTPError, URLError) as err:
             print(f"Request error: {err}", file=sys.stderr)
@@ -137,6 +168,12 @@ def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:
         action="store_true",
         help="Only perform a single check instead of looping",
     )
+    parser.add_argument(
+        "--download-dir",
+        type=Path,
+        default=Path("nngyk_pdfs"),
+        help="Folder to store newly detected PDFs (default: ./nngyk_pdfs)",
+    )
     return parser.parse_args(argv)
 
 
@@ -144,7 +181,7 @@ def main(argv: Iterable[str] | None = None) -> int:
     args = parse_args(argv)
     if args.once:
         try:
-            result = check_once(args.state_file)
+            result = check_once(args.state_file, args.download_dir)
         except (HTTPError, URLError) as err:
             print(f"Request error: {err}", file=sys.stderr)
             return 1
@@ -155,7 +192,7 @@ def main(argv: Iterable[str] | None = None) -> int:
         f"Starting continuous monitor of {CATEGORY_URL}\n"
         f"Polling every {args.interval_minutes} minutes."
     )
-    monitor_loop(args.state_file, args.interval_minutes)
+    monitor_loop(args.state_file, args.interval_minutes, args.download_dir)
     return 0
 
 
