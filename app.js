@@ -439,19 +439,18 @@ function renderILIChart(year) {
   iliYearBadge.textContent = rows.length ? seasonLabel : "Awaiting data";
 
   trendChart = new Chart(ctx, {
-    type: "line",
+    type: "bar",
     data: {
       labels: labels.length ? labels : ["No data"],
       datasets: [
         {
           label: "Flu-like illness (NNGYK)",
           data: values.length ? values : [0],
-          tension: 0.35,
-          fill: true,
+          backgroundColor: "rgba(6, 182, 212, 0.6)",
           borderColor: "#06b6d4",
-          backgroundColor: "rgba(6, 182, 212, 0.2)",
-          pointRadius: 4,
-          pointHoverRadius: 6,
+          borderWidth: 1.5,
+          borderRadius: 6,
+          hoverBackgroundColor: "rgba(6, 182, 212, 0.8)",
         },
       ],
     },
@@ -463,7 +462,7 @@ function renderILIChart(year) {
       },
       scales: {
         x: { ticks: { color: "#9ca3af" }, grid: { display: false } },
-        y: { ticks: { color: "#9ca3af" }, grid: { color: "rgba(255,255,255,0.05)" } },
+        y: { beginAtZero: true, ticks: { color: "#9ca3af" }, grid: { color: "rgba(255,255,255,0.05)" } },
       },
     },
   });
@@ -501,29 +500,29 @@ function renderSariChart() {
   if (sariChart) sariChart.destroy();
 
   sariChart = new Chart(ctx, {
-    type: "line",
+    type: "bar",
     data: {
       labels: labels.length ? labels : ["No data"],
       datasets: [
         {
           label: "SARI admissions",
           data: admissions.length ? admissions : [0],
-          tension: 0.35,
-          fill: false,
+          backgroundColor: "rgba(249, 115, 22, 0.7)",
           borderColor: "#f97316",
-          backgroundColor: "#f97316",
-          pointRadius: 4,
-          pointHoverRadius: 6,
+          borderWidth: 1.5,
+          borderRadius: 6,
+          hoverBackgroundColor: "rgba(249, 115, 22, 0.85)",
+          maxBarThickness: 26,
         },
         {
           label: "SARI ICU",
           data: icu.length ? icu : [0],
-          tension: 0.35,
-          fill: false,
+          backgroundColor: "rgba(250, 204, 21, 0.7)",
           borderColor: "#facc15",
-          backgroundColor: "#facc15",
-          pointRadius: 4,
-          pointHoverRadius: 6,
+          borderWidth: 1.5,
+          borderRadius: 6,
+          hoverBackgroundColor: "rgba(250, 204, 21, 0.85)",
+          maxBarThickness: 26,
         },
       ],
     },
@@ -535,7 +534,11 @@ function renderSariChart() {
       },
       scales: {
         x: { ticks: { color: "#9ca3af" }, grid: { display: false } },
-        y: { ticks: { color: "#9ca3af" }, grid: { color: "rgba(255,255,255,0.05)" } },
+        y: {
+          beginAtZero: true,
+          ticks: { color: "#9ca3af" },
+          grid: { color: "rgba(255,255,255,0.05)" },
+        },
       },
     },
   });
