@@ -24,10 +24,10 @@ Open `index.html` in a browser to see the full layout with the bundled sample; i
 Use the combined agent to monitor, download, and extract PDFs into the dashboard JSON:
 
 ```bash
-# one-off: fetch new PDFs (or all with --sync-all) and extract to nngyk_all.json
+# one-off: fetch new PDFs (or all with --sync-all) and extract to nngyk_all.json (+ ERVISS into erviss_data/)
 python3 nngyk_agent.py --once
 
-# continuous: poll every 3 hours (default)
+# continuous: poll every 3 hours (default) and include ERVISS EU/EEA virology
 python3 nngyk_agent.py --interval-hours 3
 
 # force re-download all listed PDFs before extracting
@@ -38,8 +38,25 @@ Outputs:
 - PDFs saved to `nngyk_pdfs/`
 - Parsed weekly data saved to `nngyk_all.json` (consumed automatically by the dashboard)
 - State of seen URLs kept in `nngyk_seen.json`
+- EU/EEA ERVISS SARI virological snapshot saved to `erviss_data/erviss_sari.json` (fetched each run, disable with `--skip-erviss`; CSV copy saved alongside)
 
 Dependencies: Python 3 + `pdfminer.six` (`python3 -m pip install --user pdfminer.six`).
+
+### EU/EEA ERVISS SARI feed (virological detections + positivity)
+
+The agent now also pulls weekly EU/EEA SARI virological data from the ERVISS GitHub CSV:
+https://github.com/EU-ECDC/Respiratory_viruses_weekly_data/blob/main/data/SARITestsDetectionsPositivity.csv
+
+You can run it standalone if you only need the EU feed:
+
+```bash
+python3 erviss_sari_fetch.py \
+  --url https://raw.githubusercontent.com/EU-ECDC/Respiratory_viruses_weekly_data/main/data/SARITestsDetectionsPositivity.csv \
+  --output erviss_data/erviss_sari.json \
+  --csv-copy erviss_data/SARITestsDetectionsPositivity.csv
+```
+
+Rows kept: indicator starts with `SARI virological` and country is `EU/EEA` (all viruses, per week/year). The dashboard automatically consumes `erviss_sari.json` for the sentinel detections/positivity panels and the leading-virus alert.
 
 Shape of each row in `nngyk_all.json` payload:
 

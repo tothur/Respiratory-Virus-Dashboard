@@ -21,6 +21,7 @@ from typing import Iterable, List
 from urllib.error import HTTPError, URLError
 
 from nngyk_monitor import CATEGORY_URL, MonitorState, _download_pdf, fetch_pdf_links
+from erviss_sari_fetch import DEFAULT_URL as ERVISS_URL, DEFAULT_OUTPUT as ERVISS_OUTPUT, DEFAULT_CSV_COPY, main as fetch_erviss
 from nngyk_extract import ExtractionResult, extract_text, parse_bulletin
 
 DEFAULT_INTERVAL_HOURS = 3
@@ -72,6 +73,9 @@ def check_and_extract(
     download_dir: Path,
     output: Path,
     sync_all: bool = False,
+    fetch_erviss_url: str | None = None,
+    erviss_output: Path | None = None,
+    erviss_csv_copy: Path | None = None,
 ) -> int:
     state = MonitorState.load(state_path)
     all_urls = fetch_pdf_links()
@@ -87,7 +91,17 @@ def check_and_extract(
     state.save(state_path)
 
     # Extract all PDFs currently in the folder
-    return extract_folder(download_dir, output)
+    result = extract_folder(download_dir, output)
+    if fetch_erviss_url and erviss_output:
+        try:
+            print(f"Fetching ERVISS SARI CSV: {fetch_erviss_url}")
+            args = ["--url", fetch_erviss_url, "--output", str(erviss_output)]
+            if erviss_csv_copy:
+                args.extend(["--csv-copy", str(erviss_csv_copy)])
+            fetch_erviss(args)
+        except Exception as exc:  # noqa: BLE001
+            print(f"[warn] Failed to fetch ERVISS SARI data: {exc}", file=sys.stderr)
+    return result
 
 
 def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:
@@ -102,6 +116,28 @@ def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:
         action="store_true",
         help="Redownload all listed PDFs (not just new links) before extracting",
     )
+    parser.add_argument(
+        "--skip-erviss",
+        action="store_true",
+        help="Disable fetching ERVISS SARI CSV during this run (defaults to on).",
+    )
+    parser.add_argument(
+        "--erviss-url",
+        default=ERVISS_URL,
+        help="CSV URL for ERVISS SARI virological EU/EEA data (set empty to skip)",
+    )
+    parser.add_argument(
+        "--erviss-output",
+        type=Path,
+        default=Path(ERVISS_OUTPUT),
+        help="Where to write the ERVISS JSON snapshot",
+    )
+    parser.add_argument(
+        "--erviss-csv-copy",
+        type=Path,
+        default=Path(DEFAULT_CSV_COPY),
+        help="Where to save a copy of the downloaded ERVISS CSV",
+    )
     return parser.parse_args(argv)
 
 
@@ -110,7 +146,19 @@ def main(argv: Iterable[str] | None = None) -> int:
 
     def run_cycle() -> int:
         print(f"Checking {CATEGORY_URL}")
-        return check_and_extract(args.state_file, args.download_dir, args.output, sync_all=args.sync_all)
+        fetch_url = None if args.skip_erviss else (args.erviss_url or None)
+        if fetch_url:
+            args.erviss_output.parent.mkdir(parents=True, exist_ok=True)
+            args.erviss_csv_copy.parent.mkdir(parents=True, exist_ok=True)
+        return check_and_extract(
+            args.state_file,
+            args.download_dir,
+            args.output,
+            sync_all=args.sync_all,
+            fetch_erviss_url=fetch_url,
+            erviss_output=args.erviss_output if fetch_url else None,
+            erviss_csv_copy=args.erviss_csv_copy if fetch_url else None,
+        )
 
     if args.once:
         try:
