@@ -149,6 +149,10 @@ main {
   gap: 16px;
 }
 
+.card-large {
+  grid-column: 1 / -1;
+}
+
 .context-header {
   display: flex;
   justify-content: space-between;
