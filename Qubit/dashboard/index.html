@@ -30,6 +30,15 @@
     </section>
 
     <main class="grid" aria-live="polite">
+      <section class="alert-card" id="leader-alert" aria-live="polite" role="status">
+        <div class="alert-icon" aria-hidden="true">📈</div>
+        <div>
+          <h2>Leading virus by positivity</h2>
+          <p class="footer-note" id="leader-alert-text">Awaiting positivity data…</p>
+        </div>
+        <span class="pill" id="leader-alert-chip">Monitoring</span>
+      </section>
+
       <section class="alert-card" id="flu-alert" aria-live="polite" role="status">
         <div class="alert-icon" aria-hidden="true">⚠️</div>
         <div>
@@ -51,11 +60,12 @@
           <p class="footer-note">Calendar week with the highest activity.</p>
         </article>
         <article class="card">
-          <h2>Dataset notes</h2>
-          <p id="dataset-description" class="footer-note">
-            Aggregated national respiratory virus surveillance shared by the National Public Health Center.
-          </p>
-          <div class="chip-row" id="chips"></div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>Latest week cases</h2>
+            <span class="badge" id="latest-week-badge">Latest week</span>
+          </div>
+          <div class="value" id="latest-week-cases">–</div>
+          <p class="footer-note">Most recent reported week for the selected pathogen.</p>
         </article>
         <article class="card">
           <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -112,7 +122,7 @@
         <article class="card">
           <div class="context-header">
             <div>
-              <h2>Sentinel detections</h2>
+              <h2>Sentinel Virus Detections</h2>
               <p class="footer-note">Latest detections among sentinel samples.</p>
             </div>
             <div class="badge" id="viro-week-badge">Latest week</div>
@@ -152,7 +162,7 @@
         <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
           <div>
             <h2>Week-by-week detail</h2>
-            <p class="footer-note">Sorted by calendar week; numbers are synthetic placeholders.</p>
+            <p class="footer-note">Sorted by calendar week with matching SARI and positivity context.</p>
           </div>
           <div class="badge">Accessible table view</div>
         </div>
@@ -163,10 +173,21 @@
               <th scope="col">Virus</th>
               <th scope="col">Region</th>
               <th scope="col">Cases</th>
+              <th scope="col">SARI admissions</th>
+              <th scope="col">SARI ICU</th>
+              <th scope="col">Top positivity</th>
             </tr>
           </thead>
           <tbody id="table-body"></tbody>
         </table>
+      </section>
+
+      <section class="card" aria-label="Dataset notes">
+        <h2>Dataset notes</h2>
+        <p id="dataset-description" class="footer-note">
+          Aggregated national respiratory virus surveillance shared by the National Public Health Center.
+        </p>
+        <div class="chip-row" id="chips"></div>
       </section>
 
       <p class="footer-note">

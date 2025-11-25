@@ -14,6 +14,11 @@ const variantWeekBadge = document.getElementById("variant-week-badge");
 const fluAlert = document.getElementById("flu-alert");
 const fluAlertText = document.getElementById("flu-alert-text");
 const fluAlertChip = document.getElementById("flu-alert-chip");
+const latestWeekCasesValue = document.getElementById("latest-week-cases");
+const latestWeekBadge = document.getElementById("latest-week-badge");
+const leaderAlert = document.getElementById("leader-alert");
+const leaderAlertText = document.getElementById("leader-alert-text");
+const leaderAlertChip = document.getElementById("leader-alert-chip");
 const iliYearBadge = document.getElementById("ili-year-badge");
 const sariAdmissionsValue = document.getElementById("sari-admissions");
 const sariIcuValue = document.getElementById("sari-icu");
@@ -81,6 +86,33 @@ function median(values) {
   return sorted.length % 2 === 0 ? Math.round((sorted[mid - 1] + sorted[mid]) / 2) : sorted[mid];
 }
 
+function latestPositivityLeader() {
+  const positivity = respiratoryData.virologyPositivity || [];
+  if (!positivity.length) return null;
+  const latestWeek = Math.max(...positivity.map((p) => p.week));
+  const latestRows = positivity.filter((p) => p.week === latestWeek);
+  if (!latestRows.length) return null;
+  const leader = latestRows.reduce(
+    (best, row) => (Number(row.positivity ?? 0) > Number(best.positivity ?? -Infinity) ? row : best),
+    { positivity: -Infinity }
+  );
+  if (!leader || leader.positivity === -Infinity) return null;
+  return { week: latestWeek, virus: leader.virus, positivity: Number(leader.positivity) };
+}
+
+function renderLeaderAlert() {
+  const leader = latestPositivityLeader();
+  if (!leader) {
+    leaderAlert.hidden = true;
+    return;
+  }
+  leaderAlert.hidden = false;
+  const weekLabel = `W${leader.week.toString().padStart(2, "0")}`;
+  const posLabel = leader.positivity.toFixed(1);
+  leaderAlertText.textContent = `Week ${weekLabel}: ${leader.virus} shows the highest sentinel test positivity (${posLabel}%).`;
+  leaderAlertChip.textContent = leader.virus;
+}
+
 function latestILITotals(dataset, year) {
   const rows = respiratoryData.weekly.filter(
     (row) => row.dataset === dataset && row.year === year && row.virus === DEFAULT_VIRUS
@@ -91,6 +123,20 @@ function latestILITotals(dataset, year) {
   const latestRows = rows.filter((row) => row.week === latestWeek);
   const total = latestRows.reduce((sum, row) => sum + row.cases, 0);
   return { latestWeek, total };
+}
+
+function renderLatestWeekCases(data) {
+  if (!data.length) {
+    latestWeekCasesValue.textContent = "–";
+    latestWeekBadge.textContent = "Awaiting data";
+    return;
+  }
+  const latestWeek = Math.max(...data.map((row) => row.week));
+  const total = data
+    .filter((row) => row.week === latestWeek)
+    .reduce((sum, row) => sum + Number(row.cases ?? 0), 0);
+  latestWeekCasesValue.textContent = total.toLocaleString();
+  latestWeekBadge.textContent = `W${latestWeek.toString().padStart(2, "0")}`;
 }
 
 function renderFluAlert(dataset, year) {
@@ -256,13 +302,37 @@ function renderVariants(dataset, year, virus) {
 function renderTable(data) {
   tableBody.innerHTML = "";
   const sorted = [...data].sort((a, b) => a.week - b.week);
+  const sariByWeek = (respiratoryData.sariWeekly || []).reduce((map, row) => {
+    map.set(row.week, row);
+    return map;
+  }, new Map());
+  const positivityByWeek = (respiratoryData.virologyPositivity || []).reduce((map, row) => {
+    const current = map.get(row.week);
+    if (!current || Number(row.positivity ?? 0) > Number(current.positivity ?? 0)) {
+      map.set(row.week, row);
+    }
+    return map;
+  }, new Map());
+
   sorted.forEach((row) => {
+    const sari = sariByWeek.get(row.week);
+    const admissionsLabel =
+      sari && Number.isFinite(Number(sari.admissions)) ? Number(sari.admissions).toLocaleString() : "–";
+    const icuLabel = sari && Number.isFinite(Number(sari.icu)) ? Number(sari.icu).toLocaleString() : "–";
+    const pos = positivityByWeek.get(row.week);
+    const posLabel =
+      pos && Number.isFinite(Number(pos.positivity))
+        ? `${pos.virus} (${Number(pos.positivity).toFixed(1)}%)`
+        : "–";
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>W${row.week.toString().padStart(2, "0")}</td>
       <td>${row.virus}</td>
       <td>${row.region}</td>
       <td>${row.cases.toLocaleString()}</td>
+      <td>${admissionsLabel}</td>
+      <td>${icuLabel}</td>
+      <td>${posLabel}</td>
     `;
     tableBody.appendChild(tr);
   });
@@ -443,8 +513,15 @@ function renderVirology() {
 
   const detWeeks = Array.from(new Set(detections.map((d) => d.week))).sort((a, b) => a - b);
   const detViruses = Array.from(new Set(detections.map((d) => d.virus)));
+  const detectionPalette = {
+    "SARS-CoV-2": "#22c55e",
+    "Influenza A(H1N1pdm09)": "#f97316",
+    "Influenza A(NT)": "#38bdf8",
+    "Influenza B": "#a855f7",
+  };
+  const detectionFallback = ["#eab308", "#14b8a6", "#ef4444", "#6366f1"];
   const detSeries = detViruses.map((virus, idx) => {
-    const color = ["#f97316", "#06b6d4", "#22c55e"][idx % 3];
+    const color = detectionPalette[virus] || detectionFallback[idx % detectionFallback.length];
     const points = detections.filter((d) => d.virus === virus).reduce((acc, row) => {
       acc[row.week] = row.detections;
       return acc;
@@ -531,8 +608,10 @@ function applyFilters() {
 
   renderTable(filtered);
   renderChips(filtered);
+  renderLatestWeekCases(filtered);
   renderSurgeSignals(dataset, year);
   renderVariants(dataset, year, virus);
+  renderLeaderAlert();
   renderFluAlert(dataset, year);
   renderILIChart(year);
   renderSariCards();
