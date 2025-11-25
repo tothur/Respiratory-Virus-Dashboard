@@ -228,9 +228,9 @@ main {
   gap: 6px;
   background: rgba(255, 255, 255, 0.06);
   border-radius: 999px;
-  padding: 6px 12px;
+  padding: 8px 14px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text);
 }
 
@@ -302,6 +302,16 @@ main {
   color: var(--muted);
   font-weight: 600;
   font-size: 13px;
+}
+
+.table th.sortable {
+  cursor: pointer;
+}
+
+.sort-indicator {
+  display: inline-block;
+  margin-left: 6px;
+  color: var(--muted);
 }
 
 .table tr:hover {

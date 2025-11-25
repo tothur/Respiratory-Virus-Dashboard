@@ -67,6 +67,26 @@ def parse_number(row: Dict[str, str], keys: Iterable[str], as_int: bool = True) 
   return None
 
 
+def extract_virus(row: Dict[str, str]) -> str:
+  """Prefer subtype, but fall back to pathogen/type when subtype is a total/NA bucket."""
+
+  def cleaned(value: Optional[str]) -> str:
+    return (value or "").strip()
+
+  subtype = cleaned(row.get("pathogensubtype"))
+  pathogen = cleaned(row.get("pathogen"))
+  ptype = cleaned(row.get("pathogentype"))
+
+  subtype_lower = subtype.lower()
+  if subtype and subtype_lower not in {"total", "na", "n/a", "unknown"}:
+    return subtype
+  if pathogen:
+    return pathogen
+  if ptype:
+    return ptype
+  return ""
+
+
 @dataclass
 class SariRow:
   week: int
@@ -83,6 +103,8 @@ def filter_rows(rows: List[Dict[str, str]], *, year_filter: Optional[Iterable[in
   for row in rows:
     indicator_raw = row.get("indicator") or ""
     indicator = indicator_raw.lower().strip()
+    if indicator not in {"detections", "positivity", "tests"}:
+      continue
 
     country = (
       row.get("countryname")
@@ -99,6 +121,11 @@ def filter_rows(rows: List[Dict[str, str]], *, year_filter: Optional[Iterable[in
       if not any(isinstance(v, str) and "EU/EEA" in v.upper() for v in row.values()):
         continue
 
+    age = (row.get("age") or "").strip().lower()
+    if age and age != "total":
+      # Keep only the total (all-age) rows to match the dashboard rollups.
+      continue
+
     survtype = (row.get("survtype") or row.get("pathogentype") or row.get("surveillance_system") or "").lower()
     if "sari" not in survtype:
       continue
@@ -110,7 +137,7 @@ def filter_rows(rows: List[Dict[str, str]], *, year_filter: Optional[Iterable[in
     if allowed_years is not None and year not in allowed_years:
       continue
 
-    virus = row.get("pathogensubtype") or row.get("pathogen") or row.get("virus") or "Unknown"
+    virus = extract_virus(row) or "Unknown"
     val = parse_number(row, ["value", "detections", "positive", "positives", "cases", "count"], as_int=True)
     positivity_val = parse_number(
       row, ["value", "positivity_rate", "positivity", "percent_positive", "positivity_percent"], as_int=False

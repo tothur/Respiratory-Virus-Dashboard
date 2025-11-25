@@ -3,10 +3,11 @@ import { respiratoryData, seasonLabels } from "./data.js";
 const yearSelect = document.getElementById("year");
 const totalCases = document.getElementById("total-cases");
 const peakWeek = document.getElementById("peak-week");
-const datasetBadge = document.getElementById("dataset-badge");
 const datasetDescription = document.getElementById("dataset-description");
 const tableBody = document.getElementById("table-body");
 const chipsRow = document.getElementById("chips");
+const weekHeader = document.getElementById("week-header");
+const casesHeader = document.getElementById("cases-header");
 const surgeList = document.getElementById("surge-list");
 const variantList = document.getElementById("variant-list");
 const variantNote = document.getElementById("variant-note");
@@ -19,6 +20,9 @@ const latestWeekBadge = document.getElementById("latest-week-badge");
 const leaderAlert = document.getElementById("leader-alert");
 const leaderAlertText = document.getElementById("leader-alert-text");
 const leaderAlertChip = document.getElementById("leader-alert-chip");
+const leaderEuAlert = document.getElementById("leader-eu-alert");
+const leaderEuAlertText = document.getElementById("leader-eu-alert-text");
+const leaderEuAlertChip = document.getElementById("leader-eu-alert-chip");
 const iliYearBadge = document.getElementById("ili-year-badge");
 const sariAdmissionsValue = document.getElementById("sari-admissions");
 const sariIcuValue = document.getElementById("sari-icu");
@@ -41,6 +45,9 @@ const DEFAULT_VIRUS = "ILI (flu-like illness)";
 const DATASET = "NNGYK";
 const ERVISS_DATASET = "ERVISS";
 const ERVISS_YEAR_PRIORITY = [2026, 2025];
+let sortColumn = "week";
+let sortDirection = "asc";
+let latestFiltered = [];
 
 let trendChart;
 let sariChart;
@@ -107,6 +114,39 @@ function latestPositivityLeader() {
   return { week: latestWeek, virus: leader.virus, positivity: Number(leader.positivity) };
 }
 
+function latestEuPositivityLeader() {
+  const detections = respiratoryData.ervissDetections || [];
+  const positivity = respiratoryData.ervissPositivity || [];
+  if (!detections.length && !positivity.length) return null;
+  const yearCandidates = Array.from(
+    new Set(
+      [...detections, ...positivity]
+        .map((row) => Number(row.year))
+        .filter((year) => Number.isFinite(year))
+    )
+  );
+  const targetYear =
+    ERVISS_YEAR_PRIORITY.find((yr) => yearCandidates.includes(yr)) ||
+    (yearCandidates.length ? Math.max(...yearCandidates) : null);
+  if (!targetYear) return null;
+  const targetPositivity = positivity.filter((p) => Number(p.year) === targetYear);
+  if (!targetPositivity.length) return null;
+  const latestWeek = Math.max(...targetPositivity.map((p) => p.week));
+  const latestRows = targetPositivity.filter((p) => p.week === latestWeek);
+  if (!latestRows.length) return null;
+  const leader = latestRows.reduce(
+    (best, row) => (Number(row.positivity ?? 0) > Number(best.positivity ?? -Infinity) ? row : best),
+    { positivity: -Infinity }
+  );
+  if (!leader || leader.positivity === -Infinity) return null;
+  return {
+    week: latestWeek,
+    year: targetYear,
+    virus: leader.virus,
+    positivity: Number(leader.positivity),
+  };
+}
+
 function renderLeaderAlert() {
   const leader = latestPositivityLeader();
   if (!leader) {
@@ -118,6 +158,19 @@ function renderLeaderAlert() {
   const posLabel = leader.positivity.toFixed(1);
   leaderAlertText.textContent = `Week ${weekLabel}: ${leader.virus} shows the highest sentinel test positivity (${posLabel}%).`;
   leaderAlertChip.textContent = leader.virus;
+}
+
+function renderEuLeaderAlert() {
+  const leader = latestEuPositivityLeader();
+  if (!leader) {
+    leaderEuAlert.hidden = true;
+    return;
+  }
+  leaderEuAlert.hidden = false;
+  const weekLabel = `W${leader.week.toString().padStart(2, "0")}`;
+  const posLabel = leader.positivity.toFixed(1);
+  leaderEuAlertText.textContent = `Week ${weekLabel} (${leader.year}): ${leader.virus} leads EU/EEA sentinel positivity (${posLabel}%).`;
+  leaderEuAlertChip.textContent = leader.virus;
 }
 
 function latestILITotals(dataset, year) {
@@ -306,9 +359,35 @@ function renderVariants(dataset, year, virus) {
   }
 }
 
+function updateSortHeaders() {
+  const ariaValue = sortDirection === "asc" ? "ascending" : "descending";
+  if (weekHeader) {
+    weekHeader.setAttribute("aria-sort", sortColumn === "week" ? ariaValue : "none");
+    const indicator = weekHeader.querySelector(".sort-indicator");
+    if (indicator) indicator.textContent = sortColumn === "week" ? (sortDirection === "asc" ? "▲" : "▼") : "";
+  }
+  if (casesHeader) {
+    casesHeader.setAttribute("aria-sort", sortColumn === "cases" ? ariaValue : "none");
+    const indicator = casesHeader.querySelector(".sort-indicator");
+    if (indicator) indicator.textContent = sortColumn === "cases" ? (sortDirection === "asc" ? "▲" : "▼") : "";
+  }
+}
+
 function renderTable(data) {
   tableBody.innerHTML = "";
-  const sorted = [...data].sort((a, b) => a.week - b.week);
+  updateSortHeaders();
+  const sorted = [...data].sort((a, b) => {
+    const key = sortColumn === "cases" ? "cases" : "week";
+    const valA = Number(a[key] ?? 0);
+    const valB = Number(b[key] ?? 0);
+    if (valA !== valB) {
+      return (valA - valB) * (sortDirection === "asc" ? 1 : -1);
+    }
+    // Stable-ish fallback to week then virus for consistent ordering.
+    const weekDiff = Number(a.week ?? 0) - Number(b.week ?? 0);
+    if (weekDiff !== 0) return weekDiff;
+    return (a.virus || "").localeCompare(b.virus || "");
+  });
   const sariByWeek = (respiratoryData.sariWeekly || []).reduce((map, row) => {
     map.set(row.week, row);
     return map;
@@ -746,16 +825,44 @@ function renderEuVirology() {
   });
 }
 
+function handleSort(column) {
+  if (sortColumn === column) {
+    sortDirection = sortDirection === "asc" ? "desc" : "asc";
+  } else {
+    sortColumn = column;
+    sortDirection = "asc";
+  }
+  renderTable(latestFiltered);
+}
+
+function bindSortControls() {
+  const controls = [
+    { el: weekHeader, column: "week" },
+    { el: casesHeader, column: "cases" },
+  ];
+  controls.forEach(({ el, column }) => {
+    if (!el) return;
+    const activate = () => handleSort(column);
+    el.addEventListener("click", activate);
+    el.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        activate();
+      }
+    });
+  });
+}
+
 function applyFilters() {
   const { dataset, year, virus } = currentSelection();
   const filtered = respiratoryData.weekly.filter(
     (row) => row.dataset === dataset && row.year === year && row.virus === virus
   );
+  latestFiltered = filtered;
 
   const { total, peakWeek: peak } = summarize(filtered);
   totalCases.textContent = total.toLocaleString();
   peakWeek.textContent = peak;
-  datasetBadge.textContent = respiratoryData.datasets[dataset].name;
   datasetDescription.textContent = respiratoryData.datasets[dataset].description;
 
   renderTable(filtered);
@@ -764,6 +871,7 @@ function applyFilters() {
   renderSurgeSignals(dataset, year);
   renderVariants(dataset, year, virus);
   renderLeaderAlert();
+  renderEuLeaderAlert();
   renderFluAlert(dataset, year);
   renderILIChart(year);
   renderSariCards();
@@ -933,6 +1041,7 @@ async function main() {
 
   yearSelect.value = latestNNGYKYear;
 
+  bindSortControls();
   applyFilters();
 
   yearSelect.addEventListener("change", applyFilters);
