@@ -31,12 +31,8 @@ let viroPositivityChart;
 const euDetectionsList = document.getElementById("eu-detections");
 const euPositivityList = document.getElementById("eu-positivity");
 const euWeekBadge = document.getElementById("eu-week-badge");
-const euVariantList = document.getElementById("eu-variant-list");
-const euVariantNote = document.getElementById("eu-variant-note");
-const euVariantWeekBadge = document.getElementById("eu-variant-week-badge");
 let euDetectionsChart;
 let euPositivityChart;
-let euVariantChart;
 let variantChart;
 
 // National epidemic threshold set to ~28,900 cases (approx. 289 per 100k for ~10M population).
@@ -44,6 +40,7 @@ const ILI_THRESHOLD = 28900;
 const DEFAULT_VIRUS = "ILI (flu-like illness)";
 const DATASET = "NNGYK";
 const ERVISS_DATASET = "ERVISS";
+const ERVISS_YEAR_PRIORITY = [2026, 2025];
 
 let trendChart;
 let sariChart;
@@ -249,33 +246,6 @@ function findVariantBreakdown(dataset, year, virus) {
   return { dataset, year, virus, breakdown, week: latestWeek, weeks, series };
 }
 
-function findVariantBreakdownFromDetections(detections) {
-  const grouped = aggregateDetections(detections);
-  const influenzaRows = grouped.filter((row) => row.virus.toLowerCase().startsWith("influenza"));
-  if (!influenzaRows.length) return null;
-
-  const latestWeek = Math.max(...influenzaRows.map((r) => r.week));
-  const latest = influenzaRows.filter((r) => r.week === latestWeek);
-  const breakdown = latest.map((r) => ({
-    lineage: r.virus.replace(/^(Influenza\s*)/i, ""),
-    detections: r.detections,
-  }));
-
-  const weeks = Array.from(new Set(influenzaRows.map((r) => r.week))).sort((a, b) => a - b);
-  const lineages = Array.from(new Set(influenzaRows.map((r) => r.virus))).sort();
-  const series = lineages.map((lineage) => {
-    const points = influenzaRows
-      .filter((r) => r.virus === lineage)
-      .reduce((acc, row) => {
-        acc[row.week] = row.detections;
-        return acc;
-      }, {});
-    return { lineage: lineage.replace(/^(Influenza\s*)/i, ""), data: weeks.map((w) => points[w] ?? null) };
-  });
-
-  return { breakdown, week: latestWeek, weeks, series };
-}
-
 function renderVariants(dataset, year, virus) {
   const match = findVariantBreakdown(dataset, year, virus);
   variantList.innerHTML = "";
@@ -322,66 +292,6 @@ function renderVariants(dataset, year, virus) {
     });
 
     variantChart = new Chart(ctx, {
-      type: "line",
-      data: { labels, datasets },
-      options: {
-        responsive: true,
-        plugins: { legend: { labels: { color: "#e5e7eb" } } },
-        scales: {
-          x: { ticks: { color: "#9ca3af" }, grid: { display: false } },
-          y: { ticks: { color: "#9ca3af" }, grid: { color: "rgba(255,255,255,0.05)" }, beginAtZero: true },
-        },
-      },
-    });
-  }
-}
-
-function renderEuVariants() {
-  euVariantList.innerHTML = "";
-  if (euVariantChart) {
-    euVariantChart.destroy();
-    euVariantChart = null;
-  }
-
-  const match = findVariantBreakdownFromDetections(respiratoryData.ervissDetections || []);
-  if (!match) {
-    euVariantNote.textContent = "No subtype breakdown is available yet.";
-    euVariantWeekBadge.textContent = "Latest week";
-    return;
-  }
-
-  const weekLabel = `W${match.week.toString().padStart(2, "0")}`;
-  euVariantNote.textContent = `Influenza subtypes detected in ${weekLabel}, with historical weekly totals shown below.`;
-  euVariantWeekBadge.textContent = `Week ${weekLabel}`;
-
-  const ordered = match.breakdown.sort((a, b) => (b.detections || 0) - (a.detections || 0));
-  ordered.forEach((entry) => {
-    const li = document.createElement("li");
-    const suffix = entry.detections ? `${entry.detections}` : entry.share != null ? `${entry.share}%` : "";
-    li.innerHTML = `<span>${entry.lineage}</span><strong>${suffix}</strong>`;
-    euVariantList.appendChild(li);
-  });
-
-  const ctx = document.getElementById("eu-variant-chart")?.getContext("2d");
-  if (ctx && match.series.length) {
-    const labels = match.weeks.map((w) => `W${w.toString().padStart(2, "0")}`);
-    const palette = ["#38bdf8", "#22c55e", "#a855f7", "#f97316", "#facc15", "#64748b"];
-    const datasets = match.series.map((entry, idx) => {
-      const color = palette[idx % palette.length];
-      return {
-        label: entry.lineage,
-        data: entry.data,
-        borderColor: color,
-        backgroundColor: color,
-        tension: 0.3,
-        fill: false,
-        spanGaps: true,
-        pointRadius: 3,
-        pointHoverRadius: 5,
-      };
-    });
-
-    euVariantChart = new Chart(ctx, {
       type: "line",
       data: { labels, datasets },
       options: {
@@ -552,11 +462,15 @@ function renderSariChart() {
   });
 }
 
-function aggregateDetections(detections = respiratoryData.virologyDetections || []) {
+function aggregateDetections(detections = respiratoryData.virologyDetections || [], yearFilter = null) {
   const byKey = new Map();
   detections.forEach((row) => {
-    const key = `${row.week}-${row.virus}`;
-    const current = byKey.get(key) || { week: row.week, virus: row.virus, detections: 0 };
+    const week = Number(row.week);
+    if (!Number.isFinite(week)) return;
+    const year = Number(row.year);
+    if (yearFilter !== null && Number.isFinite(year) && year !== yearFilter) return;
+    const key = `${Number.isFinite(year) ? year : "NA"}-${week}-${row.virus}`;
+    const current = byKey.get(key) || { year: Number.isFinite(year) ? year : undefined, week, virus: row.virus, detections: 0 };
     current.detections += Number(row.detections ?? 0);
     byKey.set(key, current);
   });
@@ -691,18 +605,34 @@ function renderVirology() {
 }
 
 function renderEuVirology() {
-  const detections = aggregateDetections(respiratoryData.ervissDetections || []);
-  const positivity = respiratoryData.ervissPositivity?.slice() || [];
+  const allDetections = respiratoryData.ervissDetections || [];
+  const allPositivity = respiratoryData.ervissPositivity?.slice() || [];
+  const yearCandidates = Array.from(
+    new Set(
+      [...allDetections, ...allPositivity]
+        .map((row) => Number(row.year))
+        .filter((year) => Number.isFinite(year))
+    )
+  );
+  const targetYear =
+    ERVISS_YEAR_PRIORITY.find((yr) => yearCandidates.includes(yr)) ||
+    (yearCandidates.length ? Math.max(...yearCandidates) : null);
+
+  const detections = targetYear ? aggregateDetections(allDetections, targetYear) : [];
+  const positivity = targetYear ? allPositivity.filter((p) => Number(p.year) === targetYear) : [];
 
   const latestWeek =
     detections.length || positivity.length
       ? Math.max(0, ...detections.map((d) => d.week || 0), ...positivity.map((p) => p.week || 0))
-      : "–";
-  euWeekBadge.textContent = latestWeek === "–" ? "Latest week" : `Week W${latestWeek.toString().padStart(2, "0")}`;
+      : null;
+  const hasLatestWeek = Number.isFinite(latestWeek) && latestWeek > 0;
+  euWeekBadge.textContent = hasLatestWeek
+    ? `${targetYear ? `${targetYear}-` : ""}W${latestWeek.toString().padStart(2, "0")}`
+    : "Latest week";
 
   euDetectionsList.innerHTML = "";
   detections
-    .filter((d) => d.week === latestWeek)
+    .filter((d) => (hasLatestWeek ? d.week === latestWeek : false))
     .slice(0, 6)
     .forEach((row) => {
       const li = document.createElement("li");
@@ -717,7 +647,7 @@ function renderEuVirology() {
 
   euPositivityList.innerHTML = "";
   positivity
-    .filter((p) => p.week === latestWeek)
+    .filter((p) => (hasLatestWeek ? p.week === latestWeek : false))
     .slice(0, 6)
     .forEach((row) => {
       const li = document.createElement("li");
@@ -840,7 +770,6 @@ function applyFilters() {
   renderSariChart();
   renderVirology();
   renderEuVirology();
-  renderEuVariants();
 }
 
 async function loadNNGYKData() {
@@ -959,16 +888,24 @@ async function loadERVISSSari() {
     }
     if (!payload) return;
 
-    const detections = (payload.detections || []).map((row) => ({
-      week: Number(row.week),
-      virus: row.virus,
-      detections: Number(row.detections ?? 0),
-    }));
-    const positivity = (payload.positivity || []).map((row) => ({
-      week: Number(row.week),
-      virus: row.virus,
-      positivity: Number(row.positivity ?? 0),
-    }));
+    const detections = (payload.detections || []).map((row) => {
+      const year = Number(row.year ?? payload.latest_year);
+      return {
+        year: Number.isFinite(year) ? year : undefined,
+        week: Number(row.week),
+        virus: row.virus,
+        detections: Number(row.detections ?? 0),
+      };
+    });
+    const positivity = (payload.positivity || []).map((row) => {
+      const year = Number(row.year ?? payload.latest_year);
+      return {
+        year: Number.isFinite(year) ? year : undefined,
+        week: Number(row.week),
+        virus: row.virus,
+        positivity: Number(row.positivity ?? 0),
+      };
+    });
 
     respiratoryData.ervissDetections = detections.sort((a, b) => a.week - b.week);
     respiratoryData.ervissPositivity = positivity.sort((a, b) => a.week - b.week);

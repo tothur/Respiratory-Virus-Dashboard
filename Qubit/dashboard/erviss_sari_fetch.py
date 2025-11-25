@@ -25,6 +25,7 @@ DEFAULT_URL = "https://raw.githubusercontent.com/EU-ECDC/Respiratory_viruses_wee
 DEFAULT_DIR = "erviss_data"
 DEFAULT_OUTPUT = f"{DEFAULT_DIR}/erviss_sari.json"
 DEFAULT_CSV_COPY = f"{DEFAULT_DIR}/SARITestsDetectionsPositivity.csv"
+DEFAULT_YEARS = [2025, 2026]
 
 
 def fetch_csv(url: str) -> Tuple[str, List[Dict[str, str]]]:
@@ -76,8 +77,9 @@ class SariRow:
   positivity: Optional[float] = None
 
 
-def filter_rows(rows: List[Dict[str, str]]) -> List[SariRow]:
+def filter_rows(rows: List[Dict[str, str]], *, year_filter: Optional[Iterable[int]] = None) -> List[SariRow]:
   kept: List[SariRow] = []
+  allowed_years = set(year_filter) if year_filter is not None else None
   for row in rows:
     indicator_raw = row.get("indicator") or ""
     indicator = indicator_raw.lower().strip()
@@ -104,6 +106,8 @@ def filter_rows(rows: List[Dict[str, str]]) -> List[SariRow]:
     year_week = row.get("year_week") or row.get("yearweek")
     year, week = parse_year_week(year_week or "")
     if not year or not week:
+      continue
+    if allowed_years is not None and year not in allowed_years:
       continue
 
     virus = row.get("pathogensubtype") or row.get("pathogen") or row.get("virus") or "Unknown"
@@ -197,6 +201,14 @@ def main(argv: List[str] | None = None) -> int:
     default=DEFAULT_CSV_COPY,
     help="Optional path to save the downloaded CSV alongside the JSON (default: erviss_data/SARITestsDetectionsPositivity.csv)",
   )
+  parser.add_argument(
+    "--year",
+    dest="years",
+    type=int,
+    nargs="+",
+    default=DEFAULT_YEARS,
+    help="Restrict rows to these ISO years (space separated; default: 2025 2026)",
+  )
   args = parser.parse_args(argv)
 
   try:
@@ -205,7 +217,7 @@ def main(argv: List[str] | None = None) -> int:
     print(f"Failed to fetch CSV: {exc}", file=sys.stderr)
     return 1
 
-  filtered = filter_rows(rows)
+  filtered = filter_rows(rows, year_filter=args.years)
   if not filtered:
     indicators = sorted({(r.get("indicator") or "").strip() for r in rows})
     countries = sorted({(r.get("countryname") or r.get("country") or r.get("country_code") or r.get("reporting_country") or r.get("region") or "").strip() for r in rows})
