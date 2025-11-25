@@ -57,6 +57,19 @@
           </p>
           <div class="chip-row" id="chips"></div>
         </article>
+        <article class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>SARI admissions</h2>
+            <span class="badge" id="sari-week-badge">Latest week</span>
+          </div>
+          <div class="value" id="sari-admissions">–</div>
+          <p class="footer-note">Severe acute respiratory infection hospitalizations (sentinel hospitals).</p>
+        </article>
+        <article class="card">
+          <h2>SARI ICU</h2>
+          <div class="value" id="sari-icu">–</div>
+          <p class="footer-note">ICU/sub-intensive admissions among SARI hospitalizations.</p>
+        </article>
       </div>
 
       <section class="context-grid" aria-label="Weekly trend highlights">
@@ -69,17 +82,6 @@
             <div class="badge">Live selection</div>
           </div>
           <ul class="trend-list" id="surge-list"></ul>
-        </article>
-        <article class="card">
-          <div class="context-header">
-            <div>
-              <h2>Variant detection snapshot</h2>
-              <p class="footer-note">Lineage mix when subtyping is available.</p>
-            </div>
-            <div class="badge">Sequencing</div>
-          </div>
-          <p class="footer-note" id="variant-note">No variant lineage breakdown is available for this selection yet.</p>
-          <ul class="context-list" id="variant-list" aria-label="Detected variants"></ul>
         </article>
       </section>
 
@@ -94,6 +96,56 @@
           </div>
           <canvas id="ili-chart" aria-label="Flu-like illness trend" role="img"></canvas>
         </div>
+        <div class="chart-container">
+          <div class="context-header">
+            <div>
+              <h2>SARI hospitalizations</h2>
+              <p class="footer-note">Weekly SARI admissions and ICU load from sentinel hospitals.</p>
+            </div>
+            <div class="badge">Hospital trend</div>
+          </div>
+          <canvas id="sari-chart" aria-label="SARI hospitalizations trend" role="img"></canvas>
+        </div>
+      </section>
+
+      <section class="context-grid" aria-label="Virology detections and positivity">
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2>Sentinel detections</h2>
+              <p class="footer-note">Latest detections among sentinel samples.</p>
+            </div>
+            <div class="badge" id="viro-week-badge">Latest week</div>
+          </div>
+          <ul class="context-list" id="viro-detections" aria-label="Sentinel detections"></ul>
+          <canvas id="viro-detections-chart" aria-label="Sentinel detections trend" role="img"></canvas>
+        </article>
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2>Test positivity</h2>
+              <p class="footer-note">Positivity rates in sentinel samples.</p>
+            </div>
+            <div class="badge">Virology</div>
+          </div>
+          <ul class="context-list" id="viro-positivity" aria-label="Sentinel positivity"></ul>
+          <canvas id="viro-positivity-chart" aria-label="Sentinel positivity trend" role="img"></canvas>
+        </article>
+      </section>
+
+      <section class="context-grid" aria-label="Influenza subtypes">
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2>Detected influenza subtypes</h2>
+              <p class="footer-note">Latest week with subtype detections.</p>
+            </div>
+            <div class="badge" id="variant-week-badge">Latest week</div>
+          </div>
+          <p class="footer-note" id="variant-note">No subtype breakdown is available yet.</p>
+          <ul class="context-list" id="variant-list" aria-label="Detected variants"></ul>
+          <canvas id="variant-chart" aria-label="Influenza subtype trend" role="img"></canvas>
+        </article>
       </section>
 
       <section class="card" aria-label="Weekly table">

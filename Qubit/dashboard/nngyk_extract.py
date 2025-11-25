@@ -42,6 +42,16 @@ VIRUS_PATTERNS: Dict[str, List[re.Pattern[str]]] = {
         re.compile(r"SARS[-\s]?CoV[-\s]?2[^\d]*(?P<count>\d{1,3}(?:[ .]\d{3})*)", re.IGNORECASE),
         re.compile(r"covid[^\d]*(?P<count>\d{1,3}(?:[ .]\d{3})*)", re.IGNORECASE),
     ],
+    "ILI (flu-like illness)": [
+        re.compile(
+            r"(?P<count>\d{1,3}(?:[ .]\d{3})*)\s*f[őo]?\s*fordult\s+orvoshoz\s+influenzaszer[űu]",
+            re.IGNORECASE,
+        ),
+        re.compile(
+            r"influenzaszer[űu][^\d]{0,20}(?P<count>\d{1,3}(?:[ .]\d{3})*)\s*f[őo]",
+            re.IGNORECASE,
+        ),
+    ],
 }
 
 METRIC_PATTERNS: List[Tuple[str, re.Pattern[str]]] = [
@@ -67,6 +77,32 @@ METRIC_PATTERNS: List[Tuple[str, re.Pattern[str]]] = [
         "lab_confirmed_cases",
         re.compile(r"laborat[oó]riumban[^\d]*(?P<value>\d{1,3}(?:[ .]\d{3})*)\s+azonos[ií]tott", re.IGNORECASE),
     ),
+    (
+        "sari_admissions",
+        re.compile(
+            r"(?P<value>\d{1,3}(?:[ .]\d{3})*)\s*f[őo]t\s+vettek\s+fel.*?(SARI|súlyos[^\\n]{0,30}légúti)",
+            re.IGNORECASE | re.DOTALL,
+        ),
+    ),
+    (
+        "sari_icu",
+        re.compile(
+            r"k[öo]z[üu]l[üu]k?.{0,200}?(?P<value>\d{1,3}(?:[ .]\d{3})*)\s*f[őo].{0,200}?intenz",
+            re.IGNORECASE | re.DOTALL,
+        ),
+    ),
+    (
+        "pos_influenza",
+        re.compile(r"influenza[^\\n]{0,20}pozitivit[aá]si\\s+ar[aá]ny\\s+(?P<value>\\d{1,2}(?:[.,]\\d)?)%", re.IGNORECASE),
+    ),
+    (
+        "pos_rsv",
+        re.compile(r"RSV[^\\n]{0,20}pozitivit[aá]si\\s+ar[aá]ny\\s+(?P<value>\\d{1,2}(?:[.,]\\d)?)%", re.IGNORECASE),
+    ),
+    (
+        "pos_sars2",
+        re.compile(r"SARS[-\\s]?CoV[-\\s]?2[^\\n]{0,20}pozitivit[aá]si\\s+ar[aá]ny\\s+(?P<value>\\d{1,2}(?:[.,]\\d)?)%", re.IGNORECASE),
+    ),
 ]
 
 
@@ -77,6 +113,9 @@ class ExtractionResult:
     season_year: int | None
     virus_counts: Dict[str, int]
     metrics: Dict[str, float | int]
+    sari_admissions: int | None = None
+    sari_icu: int | None = None
+    virology: Dict[str, object] | None = None
 
     def to_dashboard_payload(self) -> Dict[str, object]:
         years = [self.season_year] if self.season_year else []
@@ -107,6 +146,12 @@ class ExtractionResult:
             "viruses": viruses,
             "weekly": weekly_rows,
             "metrics": self.metrics,
+            "sari": {
+                "week": self.week,
+                "admissions": self.sari_admissions,
+                "icu": self.sari_icu,
+            },
+            "virology": self.virology or {},
             "metadata": {
                 "week": self.week,
                 "season_year": self.season_year,
@@ -152,6 +197,51 @@ def _parse_float(token: str) -> float:
     return float(normalized)
 
 
+def _parse_hu_number(token: str) -> int | None:
+    """Parse small Hungarian number words (e.g., 'egy', 'két', 'húsz')."""
+    if not token:
+        return None
+    norm = (
+        token.strip()
+        .lower()
+        .replace("á", "a")
+        .replace("é", "e")
+        .replace("í", "i")
+        .replace("ó", "o")
+        .replace("ö", "o")
+        .replace("ő", "o")
+        .replace("ú", "u")
+        .replace("ü", "u")
+        .replace("ű", "u")
+        .replace("-", "")
+    )
+    mapping = {
+        "egy": 1,
+        "ket": 2,
+        "kett": 2,
+        "ketto": 2,
+        "harom": 3,
+        "negy": 4,
+        "ot": 5,
+        "hat": 6,
+        "het": 7,
+        "nyolc": 8,
+        "kilenc": 9,
+        "tiz": 10,
+        "tizenegy": 11,
+        "tizenketto": 12,
+        "tizenharom": 13,
+        "tizennegy": 14,
+        "tizenot": 15,
+        "tizenhat": 16,
+        "tizenhet": 17,
+        "tizennyolc": 18,
+        "tizenkilenc": 19,
+        "husz": 20,
+    }
+    return mapping.get(norm)
+
+
 def detect_virus_counts(text: str) -> Dict[str, int]:
     counts: Dict[str, int] = {}
     for virus, patterns in VIRUS_PATTERNS.items():
@@ -177,12 +267,88 @@ def detect_metrics(text: str) -> Dict[str, float | int]:
     return metrics
 
 
+def detect_sari_icu_fallback(text: str) -> int | None:
+    """Handle layouts where the ICU count is separated from the intensív phrase."""
+    lower = text.lower()
+    intens_idx = lower.find("intenz")
+    pattern = re.compile(
+        r"k[öo]z[üu]l[üu]k?.{0,40}?(?P<count>\d{1,3}(?:[ .]\d{3})*)\s*f[őo]",
+        re.IGNORECASE | re.DOTALL,
+    )
+    matches: list[tuple[int, int]] = []
+    for m in pattern.finditer(text):
+        try:
+            matches.append((m.start(), _parse_int(m.group("count"))))
+        except Exception:  # noqa: BLE001
+            continue
+    if not matches:
+        return None
+    if intens_idx != -1:
+        return min(matches, key=lambda x: abs(x[0] - intens_idx))[1]
+    return matches[0][1]
+
+
+def detect_virology(text: str) -> Dict[str, object]:
+    """Extract sentinel detections (with subtypes) and positivity percentages."""
+    detections = []
+    positivity = []
+
+    count_pattern = re.compile(
+        r"(?P<count_token>(?:\d{1,3}(?:[ .]\d{3})*)|[A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű-]+)\s+betegn[ée]l[^\n]{0,120}?(?P<virus>influenza\s+[A-Za-z0-9()]+|influenza|RSV|SARS[-\s]?CoV[-\s]?2)",
+        re.IGNORECASE | re.DOTALL,
+    )
+    for m in count_pattern.finditer(text):
+        token = m.group("count_token")
+        virus_label = m.group("virus").strip()
+        val = None
+        try:
+            val = _parse_int(token)
+        except Exception:  # noqa: BLE001
+            val = _parse_hu_number(token)
+        if val is not None:
+            if virus_label.lower().startswith("influenza"):
+                virus_label = virus_label.replace("influenza", "Influenza").replace("  ", " ").strip()
+            elif "rsv" in virus_label.lower():
+                virus_label = "RSV"
+            elif "sars" in virus_label.lower():
+                virus_label = "SARS-CoV-2"
+            detections.append({"virus": virus_label, "detections": val})
+
+    positivity_patterns = [
+        ("Influenza", re.compile(r"influenza[^\n]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<val>\d{1,2}(?:[.,]\d)?)%", re.IGNORECASE)),
+        ("RSV", re.compile(r"RSV[^\n]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<val>\d{1,2}(?:[.,]\d)?)%", re.IGNORECASE)),
+        ("SARS-CoV-2", re.compile(r"SARS[-\s]?CoV[-\s]?2[^\n]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<val>\d{1,2}(?:[.,]\d)?)%", re.IGNORECASE)),
+    ]
+    for virus_label, pat in positivity_patterns:
+        m = pat.search(text)
+        if m:
+            try:
+                positivity.append({"virus": virus_label, "positivity": _parse_float(m.group("val"))})
+            except Exception:  # noqa: BLE001
+                continue
+
+    return {"detections": detections, "positivity": positivity}
+
+
 def parse_bulletin(text: str) -> ExtractionResult:
     week = detect_week(text)
     season_year = detect_season_year(text)
     virus_counts = detect_virus_counts(text)
     metrics = detect_metrics(text)
-    return ExtractionResult(text=text, week=week, season_year=season_year, virus_counts=virus_counts, metrics=metrics)
+    sari_adm = metrics.get("sari_admissions")
+    sari_icu = metrics.get("sari_icu") or detect_sari_icu_fallback(text)
+    virology = detect_virology(text)
+
+    return ExtractionResult(
+        text=text,
+        week=week,
+        season_year=season_year,
+        virus_counts=virus_counts,
+        metrics=metrics,
+        sari_admissions=sari_adm,
+        sari_icu=sari_icu,
+        virology=virology or None,
+    )
 
 
 def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:

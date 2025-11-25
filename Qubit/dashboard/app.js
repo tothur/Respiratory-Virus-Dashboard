@@ -10,16 +10,28 @@ const chipsRow = document.getElementById("chips");
 const surgeList = document.getElementById("surge-list");
 const variantList = document.getElementById("variant-list");
 const variantNote = document.getElementById("variant-note");
+const variantWeekBadge = document.getElementById("variant-week-badge");
 const fluAlert = document.getElementById("flu-alert");
 const fluAlertText = document.getElementById("flu-alert-text");
 const fluAlertChip = document.getElementById("flu-alert-chip");
 const iliYearBadge = document.getElementById("ili-year-badge");
+const sariAdmissionsValue = document.getElementById("sari-admissions");
+const sariIcuValue = document.getElementById("sari-icu");
+const sariWeekBadge = document.getElementById("sari-week-badge");
+const viroWeekBadge = document.getElementById("viro-week-badge");
+const viroDetectionsList = document.getElementById("viro-detections");
+const viroPositivityList = document.getElementById("viro-positivity");
+let viroDetectionsChart;
+let viroPositivityChart;
+let variantChart;
 
-const ILI_THRESHOLD = 2000;
+// National epidemic threshold set to ~28,900 cases (approx. 289 per 100k for ~10M population).
+const ILI_THRESHOLD = 28900;
 const DEFAULT_VIRUS = "ILI (flu-like illness)";
 const DATASET = "NNGYK";
 
 let trendChart;
+let sariChart;
 
 function populateFilters() {
   yearSelect.innerHTML = "";
@@ -93,9 +105,10 @@ function renderFluAlert(dataset, year) {
 
   const exceeds = latest.total >= ILI_THRESHOLD;
   const weekLabel = latest.latestWeek.toString().padStart(2, "0");
+  const thresholdLabel = ILI_THRESHOLD.toLocaleString();
   const text = exceeds
-    ? `Week W${weekLabel}: ILI activity (${latest.total.toLocaleString()} cases) is above the alert threshold (${ILI_THRESHOLD}).`
-    : `Week W${weekLabel}: ILI activity (${latest.total.toLocaleString()} cases) remains below the alert threshold (${ILI_THRESHOLD}).`;
+    ? `Week W${weekLabel}: ILI activity (${latest.total.toLocaleString()} cases) is above the alert threshold (${thresholdLabel}).`
+    : `Week W${weekLabel}: ILI activity (${latest.total.toLocaleString()} cases) remains below the alert threshold (${thresholdLabel}).`;
 
   if (!exceeds) {
     fluAlert.classList.add("alert-ok");
@@ -154,28 +167,90 @@ function renderSurgeSignals(dataset, year) {
 }
 
 function findVariantBreakdown(dataset, year, virus) {
-  return respiratoryData.variants.find(
-    (entry) => entry.dataset === dataset && entry.year === year && entry.virus === virus
-  );
+  const grouped = aggregateDetections();
+  const influenzaRows = grouped.filter((row) => row.virus.toLowerCase().startsWith("influenza"));
+  if (!influenzaRows.length) return null;
+
+  const latestWeek = Math.max(...influenzaRows.map((r) => r.week));
+  const latest = influenzaRows.filter((r) => r.week === latestWeek);
+  const breakdown = latest.map((r) => ({
+    lineage: r.virus.replace(/^(Influenza\s*)/i, ""),
+    detections: r.detections,
+  }));
+
+  const weeks = Array.from(new Set(influenzaRows.map((r) => r.week))).sort((a, b) => a - b);
+  const lineages = Array.from(new Set(influenzaRows.map((r) => r.virus))).sort();
+  const series = lineages.map((lineage) => {
+    const points = influenzaRows
+      .filter((r) => r.virus === lineage)
+      .reduce((acc, row) => {
+        acc[row.week] = row.detections;
+        return acc;
+      }, {});
+    return { lineage: lineage.replace(/^(Influenza\s*)/i, ""), data: weeks.map((w) => points[w] ?? null) };
+  });
+
+  return { dataset, year, virus, breakdown, week: latestWeek, weeks, series };
 }
 
 function renderVariants(dataset, year, virus) {
   const match = findVariantBreakdown(dataset, year, virus);
   variantList.innerHTML = "";
+  if (variantChart) {
+    variantChart.destroy();
+    variantChart = null;
+  }
 
   if (!match) {
-    variantNote.textContent = "No variant lineage breakdown is available for this selection yet.";
+    variantNote.textContent = "No subtype breakdown is available yet.";
+    variantWeekBadge.textContent = "Latest week";
     return;
   }
 
-  variantNote.textContent = "Lineage share among typed detections.";
-  match.breakdown
-    .sort((a, b) => b.share - a.share)
-    .forEach((entry) => {
-      const li = document.createElement("li");
-      li.innerHTML = `<span>${entry.lineage}</span><strong>${entry.share}%</strong>`;
-      variantList.appendChild(li);
+  const weekLabel = `W${match.week.toString().padStart(2, "0")}`;
+  variantNote.textContent = `Influenza subtypes detected in ${weekLabel}, with historical weekly totals shown below.`;
+  variantWeekBadge.textContent = `Week ${weekLabel}`;
+
+  const ordered = match.breakdown.sort((a, b) => (b.detections || 0) - (a.detections || 0));
+  ordered.forEach((entry) => {
+    const li = document.createElement("li");
+    const suffix = entry.detections ? `${entry.detections}` : entry.share != null ? `${entry.share}%` : "";
+    li.innerHTML = `<span>${entry.lineage}</span><strong>${suffix}</strong>`;
+    variantList.appendChild(li);
+  });
+
+  const ctx = document.getElementById("variant-chart")?.getContext("2d");
+  if (ctx && match.series.length) {
+    const labels = match.weeks.map((w) => `W${w.toString().padStart(2, "0")}`);
+    const palette = ["#38bdf8", "#22c55e", "#a855f7", "#f97316", "#facc15", "#64748b"];
+    const datasets = match.series.map((entry, idx) => {
+      const color = palette[idx % palette.length];
+      return {
+        label: entry.lineage,
+        data: entry.data,
+        borderColor: color,
+        backgroundColor: color,
+        tension: 0.3,
+        fill: false,
+        spanGaps: true,
+        pointRadius: 3,
+        pointHoverRadius: 5,
+      };
     });
+
+    variantChart = new Chart(ctx, {
+      type: "line",
+      data: { labels, datasets },
+      options: {
+        responsive: true,
+        plugins: { legend: { labels: { color: "#e5e7eb" } } },
+        scales: {
+          x: { ticks: { color: "#9ca3af" }, grid: { display: false } },
+          y: { ticks: { color: "#9ca3af" }, grid: { color: "rgba(255,255,255,0.05)" }, beginAtZero: true },
+        },
+      },
+    });
+  }
 }
 
 function renderTable(data) {
@@ -238,6 +313,210 @@ function renderILIChart(year) {
   });
 }
 
+function latestSari() {
+  if (!respiratoryData.sariWeekly?.length) return null;
+  const latest = respiratoryData.sariWeekly.reduce(
+    (max, row) => (row.week > max.week ? row : max),
+    { week: 0, admissions: 0, icu: 0 }
+  );
+  return latest;
+}
+
+function renderSariCards() {
+  const latest = latestSari();
+  if (!latest) {
+    sariAdmissionsValue.textContent = "–";
+    sariIcuValue.textContent = "–";
+    sariWeekBadge.textContent = "Awaiting data";
+    return;
+  }
+  sariAdmissionsValue.textContent = latest.admissions.toLocaleString();
+  sariIcuValue.textContent = latest.icu.toLocaleString();
+  sariWeekBadge.textContent = `Week W${latest.week.toString().padStart(2, "0")}`;
+}
+
+function renderSariChart() {
+  const ctx = document.getElementById("sari-chart").getContext("2d");
+  const rows = respiratoryData.sariWeekly?.slice().sort((a, b) => a.week - b.week) ?? [];
+  const labels = rows.map((d) => `W${d.week.toString().padStart(2, "0")}`);
+  const admissions = rows.map((d) => d.admissions);
+  const icu = rows.map((d) => d.icu);
+
+  if (sariChart) sariChart.destroy();
+
+  sariChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: labels.length ? labels : ["No data"],
+      datasets: [
+        {
+          label: "SARI admissions",
+          data: admissions.length ? admissions : [0],
+          tension: 0.35,
+          fill: false,
+          borderColor: "#f97316",
+          backgroundColor: "#f97316",
+          pointRadius: 4,
+          pointHoverRadius: 6,
+        },
+        {
+          label: "SARI ICU",
+          data: icu.length ? icu : [0],
+          tension: 0.35,
+          fill: false,
+          borderColor: "#facc15",
+          backgroundColor: "#facc15",
+          pointRadius: 4,
+          pointHoverRadius: 6,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { labels: { color: "#e5e7eb" } },
+        tooltip: { mode: "index", intersect: false },
+      },
+      scales: {
+        x: { ticks: { color: "#9ca3af" }, grid: { display: false } },
+        y: { ticks: { color: "#9ca3af" }, grid: { color: "rgba(255,255,255,0.05)" } },
+      },
+    },
+  });
+}
+
+function aggregateDetections() {
+  const detections = respiratoryData.virologyDetections || [];
+  const byKey = new Map();
+  detections.forEach((row) => {
+    const key = `${row.week}-${row.virus}`;
+    const current = byKey.get(key) || { week: row.week, virus: row.virus, detections: 0 };
+    current.detections += Number(row.detections ?? 0);
+    byKey.set(key, current);
+  });
+  return Array.from(byKey.values());
+}
+
+function renderVirology() {
+  const detections = aggregateDetections();
+  const positivity = respiratoryData.virologyPositivity?.slice() || [];
+
+  const latestWeek =
+    detections.length || positivity.length
+      ? Math.max(0, ...detections.map((d) => d.week || 0), ...positivity.map((p) => p.week || 0))
+      : "–";
+  viroWeekBadge.textContent = latestWeek === "–" ? "Latest week" : `Week W${latestWeek.toString().padStart(2, "0")}`;
+
+  viroDetectionsList.innerHTML = "";
+  detections
+    .filter((d) => d.week === latestWeek)
+    .slice(0, 6)
+    .forEach((row) => {
+      const li = document.createElement("li");
+      li.innerHTML = `<span>${row.virus}</span><strong>${Number(row.detections ?? 0).toLocaleString()}</strong>`;
+      viroDetectionsList.appendChild(li);
+    });
+  if (!viroDetectionsList.children.length) {
+    const li = document.createElement("li");
+    li.textContent = "No detections available.";
+    viroDetectionsList.appendChild(li);
+  }
+
+  viroPositivityList.innerHTML = "";
+  positivity
+    .filter((p) => p.week === latestWeek)
+    .slice(0, 6)
+    .forEach((row) => {
+      const li = document.createElement("li");
+      li.innerHTML = `<span>${row.virus}</span><strong>${Number(row.positivity ?? 0).toFixed(1)}%</strong>`;
+      viroPositivityList.appendChild(li);
+    });
+  if (!viroPositivityList.children.length) {
+    const li = document.createElement("li");
+    li.textContent = "No positivity data available.";
+    viroPositivityList.appendChild(li);
+  }
+
+  // Trend charts
+  const detCtx = document.getElementById("viro-detections-chart").getContext("2d");
+  const posCtx = document.getElementById("viro-positivity-chart").getContext("2d");
+
+  const detWeeks = Array.from(new Set(detections.map((d) => d.week))).sort((a, b) => a - b);
+  const detViruses = Array.from(new Set(detections.map((d) => d.virus)));
+  const detSeries = detViruses.map((virus, idx) => {
+    const color = ["#f97316", "#06b6d4", "#22c55e"][idx % 3];
+    const points = detections.filter((d) => d.virus === virus).reduce((acc, row) => {
+      acc[row.week] = row.detections;
+      return acc;
+    }, {});
+    return {
+      label: virus,
+      data: detWeeks.map((w) => points[w] ?? null),
+      borderColor: color,
+      backgroundColor: color,
+      tension: 0.3,
+      fill: false,
+      pointRadius: 3,
+      pointHoverRadius: 5,
+    };
+  });
+
+  if (viroDetectionsChart) viroDetectionsChart.destroy();
+  viroDetectionsChart = new Chart(detCtx, {
+    type: "line",
+    data: { labels: detWeeks.map((w) => `W${w.toString().padStart(2, "0")}`), datasets: detSeries },
+    options: {
+      responsive: true,
+      plugins: { legend: { labels: { color: "#e5e7eb" } } },
+      scales: {
+        x: { ticks: { color: "#9ca3af" }, grid: { display: false } },
+        y: { ticks: { color: "#9ca3af" }, grid: { color: "rgba(255,255,255,0.05)" } },
+      },
+    },
+  });
+
+  const posWeeks = Array.from(new Set(positivity.map((d) => d.week))).sort((a, b) => a - b);
+  const posViruses = Array.from(new Set(positivity.map((d) => d.virus)));
+  const posSeries = posViruses.map((virus, idx) => {
+    const color = ["#a855f7", "#22d3ee", "#f97316"][idx % 3];
+    const points = positivity.filter((d) => d.virus === virus).reduce((acc, row) => {
+      acc[row.week] = row.positivity;
+      return acc;
+    }, {});
+    return {
+      label: `${virus} positivity`,
+      data: posWeeks.map((w) => points[w] ?? null),
+      borderColor: color,
+      backgroundColor: color,
+      tension: 0.3,
+      fill: false,
+      pointRadius: 3,
+      pointHoverRadius: 5,
+    };
+  });
+
+  if (viroPositivityChart) viroPositivityChart.destroy();
+  viroPositivityChart = new Chart(posCtx, {
+    type: "line",
+    data: { labels: posWeeks.map((w) => `W${w.toString().padStart(2, "0")}`), datasets: posSeries },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { labels: { color: "#e5e7eb" } },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y?.toFixed(1)}%`,
+          },
+        },
+      },
+      scales: {
+        x: { ticks: { color: "#9ca3af" }, grid: { display: false } },
+        y: { ticks: { color: "#9ca3af", callback: (v) => `${v}%` }, grid: { color: "rgba(255,255,255,0.05)" } },
+      },
+    },
+  });
+}
+
 function applyFilters() {
   const { dataset, year, virus } = currentSelection();
   const filtered = respiratoryData.weekly.filter(
@@ -256,6 +535,9 @@ function applyFilters() {
   renderVariants(dataset, year, virus);
   renderFluAlert(dataset, year);
   renderILIChart(year);
+  renderSariCards();
+  renderSariChart();
+  renderVirology();
 }
 
 async function loadNNGYKData() {
@@ -266,37 +548,89 @@ async function loadNNGYKData() {
     if (!Array.isArray(parsed)) throw new Error("Unexpected payload");
 
     const weekly = [];
+    const sariRows = [];
+    const viroDetections = [];
+    const viroPositivity = [];
     const years = new Set();
+    const viruses = new Set();
 
     parsed.forEach((entry) => {
       const rows = entry?.payload?.weekly || [];
+      const sari = entry?.payload?.sari;
+      const viro = entry?.payload?.virology || {};
       rows.forEach((row) => {
         weekly.push(row);
-        years.add(row.year);
+        if (Number.isFinite(row.year)) {
+          years.add(row.year);
+        }
+        if (row.virus) {
+          viruses.add(row.virus);
+        }
       });
+      if (sari && sari.week) {
+        const admissions = Number(sari.admissions ?? 0);
+        const icu = Number(sari.icu ?? 0);
+        if (Number.isFinite(admissions) || Number.isFinite(icu)) {
+          sariRows.push({
+            week: sari.week,
+            admissions,
+            icu,
+          });
+        }
+      }
+      const weekVal = entry.week || rows[0]?.week || null;
+      if (viro && weekVal) {
+        (viro.detections || []).forEach((d) => {
+          if (d.virus && d.detections != null) {
+            viroDetections.push({ week: weekVal, virus: d.virus, detections: Number(d.detections) });
+          }
+        });
+        (viro.positivity || []).forEach((p) => {
+          if (p.virus && p.positivity != null) {
+            viroPositivity.push({ week: weekVal, virus: p.virus, positivity: Number(p.positivity) });
+          }
+        });
+      }
     });
 
     if (weekly.length) {
       const aggregated = new Map();
       weekly.forEach((row) => {
-        const key = `${row.year}-${row.week}`;
-        const current = aggregated.get(key) || {
-          dataset: DATASET,
-          year: row.year,
-          week: row.week,
-          virus: DEFAULT_VIRUS,
-          cases: 0,
-          region: "National",
-        };
+        const dataset = row.dataset || DATASET;
+        const year = Number(row.year);
+        const week = Number(row.week);
+        const virus = row.virus || DEFAULT_VIRUS;
+        const region = row.region || "National";
+        if (!Number.isFinite(year) || !Number.isFinite(week)) return;
+        const key = `${dataset}-${year}-${week}-${virus}-${region}`;
+        const current = aggregated.get(key) || { dataset, year, week, virus, cases: 0, region };
         current.cases += Number(row.cases ?? 0);
         aggregated.set(key, current);
+        if (Number.isFinite(year)) years.add(year);
+        if (virus) viruses.add(virus);
       });
 
-      respiratoryData.weekly = Array.from(aggregated.values()).sort((a, b) => a.week - b.week);
-      respiratoryData.viruses = [DEFAULT_VIRUS];
-      respiratoryData.years = Array.from(years).sort();
-      respiratoryData.datasets.NNGYK.description = "Structured from parsed NNGYK bulletins (latest run).";
-      console.info(`Loaded ${weekly.length} NNGYK rows from nngyk_all.json (aggregated to ILI view)`);
+      const aggregatedRows = Array.from(aggregated.values()).sort(
+        (a, b) => a.year - b.year || a.week - b.week || a.virus.localeCompare(b.virus)
+      );
+      if (aggregatedRows.length) {
+        respiratoryData.weekly = aggregatedRows;
+        respiratoryData.viruses = Array.from(viruses).sort();
+        respiratoryData.years = Array.from(years).sort((a, b) => a - b);
+        respiratoryData.datasets.NNGYK.description = "Structured from parsed NNGYK bulletins (latest run).";
+        if (sariRows.length) {
+          respiratoryData.sariWeekly = sariRows.sort((a, b) => a.week - b.week);
+        }
+        if (viroDetections.length) {
+          respiratoryData.virologyDetections = viroDetections.sort((a, b) => a.week - b.week);
+        }
+        if (viroPositivity.length) {
+          respiratoryData.virologyPositivity = viroPositivity.sort((a, b) => a.week - b.week);
+        }
+        console.info(`Loaded ${aggregatedRows.length} weekly rows from nngyk_all.json`);
+      } else {
+        console.warn("nngyk_all.json loaded but contained no weekly rows after aggregation");
+      }
     } else {
       console.warn("nngyk_all.json loaded but no weekly rows found");
     }
