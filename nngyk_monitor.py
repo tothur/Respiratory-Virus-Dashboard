@@ -1,6 +1,6 @@
-"""Monitor the NNGYK respiratory bulletin page for new PDF posts.
+"""Monitor NNGYK respiratory bulletin pages for new PDF posts.
 
-This utility fetches the Légúti Figyelőszolgálat adatai listing, reports
+This utility fetches the Légúti Figyelőszolgálat adatai listings, reports
 PDF links that were not present in the previous run, and can download any
 newly discovered PDFs into a local folder. Use `--interval-minutes`
 for continuous polling (default: 120 minutes) or `--once` for a single check.
@@ -20,10 +20,20 @@ from urllib.error import URLError, HTTPError
 from urllib.parse import parse_qs, urljoin, urlparse
 from urllib.request import Request, urlopen
 
-CATEGORY_URL = (
+CURRENT_SEASON_URL = (
     "https://nnk.gov.hu/index.php/leguti-figyeloszolgalat-2/"
     "category/420-leguti-figyeloszolgalat-adatai-2025-2026-evi-szezon.html"
 )
+HISTORICAL_SEASON_URLS = (
+    "https://www.nnk.gov.hu/index.php/leguti-figyeloszolgalat-2/"
+    "category/390-leguti-figyeloszolgalat-adatai-2024-2025-evi-szezon.html",
+)
+
+# Fetch links from all configured season pages by default.
+CATEGORY_URLS = (CURRENT_SEASON_URL, *HISTORICAL_SEASON_URLS)
+
+# Backwards compatible alias used by older callers / log messages.
+CATEGORY_URL = CURRENT_SEASON_URL
 USER_AGENT = "NNGYK-PDF-Monitor/1.0 (contact: dashboard script)"
 DEFAULT_INTERVAL_MINUTES = 120
 
@@ -48,30 +58,36 @@ class _PdfLinkParser(HTMLParser):
             self.pdf_links.add(absolute)
 
 
-def fetch_pdf_links(url: str = CATEGORY_URL, timeout: int = 20) -> List[str]:
-    """Return all absolute PDF URLs from the category page."""
-    parser = _PdfLinkParser(url)
+def fetch_pdf_links(urls: str | Iterable[str] = CATEGORY_URLS, timeout: int = 20) -> List[str]:
+    """Return all absolute PDF URLs from one or more category pages."""
+    url_list = [urls] if isinstance(urls, str) else list(urls)
+    all_candidates: Set[str] = set()
 
-    req = Request(url, headers={"User-Agent": USER_AGENT})
-    with urlopen(req, timeout=timeout) as resp:
-        content_type = resp.headers.get_content_charset() or "utf-8"
-        html = resp.read().decode(content_type, errors="replace")
-    parser.feed(html)
+    for url in url_list:
+        parser = _PdfLinkParser(url)
 
-    # Some NNGYK season pages link to intermediate download handlers without a
-    # .pdf extension (e.g., "download=1234:filename"). Consider those URLs
-    # PDF downloads too so the monitor can pick them up instead of returning
-    # an empty set.
-    if parser.pdf_links:
-        candidates = set(parser.pdf_links)
-    else:
-        candidates = {
-            link
-            for link in parser.all_links
-            if "download=" in link.lower() or "format=pdf" in link.lower()
-        }
+        req = Request(url, headers={"User-Agent": USER_AGENT})
+        with urlopen(req, timeout=timeout) as resp:
+            content_type = resp.headers.get_content_charset() or "utf-8"
+            html = resp.read().decode(content_type, errors="replace")
+        parser.feed(html)
 
-    return sorted(candidates)
+        # Some NNGYK season pages link to intermediate download handlers without a
+        # .pdf extension (e.g., "download=1234:filename"). Consider those URLs
+        # PDF downloads too so the monitor can pick them up instead of returning
+        # an empty set.
+        if parser.pdf_links:
+            candidates = set(parser.pdf_links)
+        else:
+            candidates = {
+                link
+                for link in parser.all_links
+                if "download=" in link.lower() or "format=pdf" in link.lower()
+            }
+
+        all_candidates.update(candidates)
+
+    return sorted(all_candidates)
 
 
 @dataclass
@@ -171,9 +187,11 @@ def check_once(state_path: Path, download_dir: Path | None = None) -> MonitorRes
 
 def print_report(result: MonitorResult) -> None:
     dt = result.timestamp.astimezone().strftime("%Y-%m-%d %H:%M:%S %Z")
-    header = f"Checked {CATEGORY_URL} at {dt}"
+    header = f"Checked NNGYK season pages at {dt}"
     print(header)
     print("-" * len(header))
+    for url in CATEGORY_URLS:
+        print(f"- {url}")
     if result.new_urls:
         print("New PDF links detected:")
         for url in result.new_urls:
@@ -238,10 +256,10 @@ def main(argv: Iterable[str] | None = None) -> int:
         print_report(result)
         return 0
 
-    print(
-        f"Starting continuous monitor of {CATEGORY_URL}\n"
-        f"Polling every {args.interval_minutes} minutes."
-    )
+    print("Starting continuous monitor of NNGYK season pages:")
+    for url in CATEGORY_URLS:
+        print(f"- {url}")
+    print(f"Polling every {args.interval_minutes} minutes.")
     monitor_loop(args.state_file, args.interval_minutes, args.download_dir)
     return 0
 

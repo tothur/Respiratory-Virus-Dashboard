@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Iterable, List, Tuple
@@ -181,10 +182,21 @@ def detect_week(text: str) -> int | None:
 
 
 def detect_season_year(text: str) -> int | None:
-    match = SEASON_PATTERN.search(text)
-    if match:
-        return int(match.group("year"))
-    return None
+    matches = [int(m.group("year")) for m in SEASON_PATTERN.finditer(text)]
+    return max(matches) if matches else None
+
+
+def infer_season_year_from_filename(pdf_path: Path, week: int | None) -> int | None:
+    """Infer the season start year from a filename + week number.
+
+    NNGYK bulletins are typically named with the calendar year (e.g., Figyelo_2025_03_het.pdf).
+    For early-year weeks (W01..), the season start year is usually the previous year.
+    """
+    match = re.search(r"(20\d{2})", pdf_path.stem)
+    if not match or week is None:
+        return None
+    year = int(match.group(1))
+    return year if week >= 40 else year - 1
 
 
 def _parse_int(token: str) -> int:
@@ -433,7 +445,10 @@ def main(argv: Iterable[str] | None = None) -> int:
 
     def _parse_pdf_path(pdf_path: Path) -> ExtractionResult:
         text = extract_text(pdf_path)
-        return parse_bulletin(text)
+        result = parse_bulletin(text)
+        if result.season_year is None:
+            result.season_year = infer_season_year_from_filename(pdf_path, result.week)
+        return result
 
     if args.folder:
         pdf_dir = args.folder

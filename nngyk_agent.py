@@ -1,7 +1,7 @@
 """Combined NNGYK monitor + extractor.
 
 Features:
-- Polls the NNGYK season page for new bulletin PDFs (default every 3 hours).
+- Polls NNGYK season pages for new bulletin PDFs (default every 3 hours).
 - Downloads newly posted PDFs (or all known links when --sync-all is used).
 - Extracts weekly metrics from every PDF in the download folder and writes nngyk_all.json.
 
@@ -20,9 +20,9 @@ from pathlib import Path
 from typing import Iterable, List
 from urllib.error import HTTPError, URLError
 
-from nngyk_monitor import CATEGORY_URL, MonitorState, _download_pdf, fetch_pdf_links
+from nngyk_monitor import CATEGORY_URLS, MonitorState, _download_pdf, fetch_pdf_links
 from erviss_sari_fetch import DEFAULT_URL as ERVISS_URL, DEFAULT_OUTPUT as ERVISS_OUTPUT, DEFAULT_CSV_COPY, main as fetch_erviss
-from nngyk_extract import ExtractionResult, extract_text, parse_bulletin
+from nngyk_extract import ExtractionResult, extract_text, infer_season_year_from_filename, parse_bulletin
 
 DEFAULT_INTERVAL_HOURS = 3
 
@@ -39,6 +39,8 @@ def extract_folder(pdf_dir: Path, output: Path) -> int:
         try:
             text = extract_text(pdf_path)
             result: ExtractionResult = parse_bulletin(text)
+            if result.season_year is None:
+                result.season_year = infer_season_year_from_filename(pdf_path, result.week)
             payload = result.to_dashboard_payload()
             aggregated.append(
                 {
@@ -145,7 +147,9 @@ def main(argv: Iterable[str] | None = None) -> int:
     args = parse_args(argv)
 
     def run_cycle() -> int:
-        print(f"Checking {CATEGORY_URL}")
+        print("Checking NNGYK season pages:")
+        for url in CATEGORY_URLS:
+            print(f"- {url}")
         fetch_url = None if args.skip_erviss else (args.erviss_url or None)
         if fetch_url:
             args.erviss_output.parent.mkdir(parents=True, exist_ok=True)
@@ -170,7 +174,7 @@ def main(argv: Iterable[str] | None = None) -> int:
             print(f"Unexpected error: {exc}", file=sys.stderr)
             return 1
 
-    print(f"Starting continuous monitor of {CATEGORY_URL}")
+    print("Starting continuous monitor of NNGYK season pages")
     print(f"Polling every {args.interval_hours} hours. Output: {args.output} | PDFs: {args.download_dir}")
     while True:
         try:
