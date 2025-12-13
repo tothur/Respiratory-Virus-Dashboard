@@ -1,6 +1,10 @@
 import { respiratoryData, seasonLabels } from "./data.js";
 
+const SUPPORTED_LANGS = ["en", "hu"];
+const STORAGE_LANG_KEY = "rvd-lang";
+
 const yearSelect = document.getElementById("year");
+const langSelect = document.getElementById("lang");
 const totalCases = document.getElementById("total-cases");
 const peakWeek = document.getElementById("peak-week");
 const datasetDescription = document.getElementById("dataset-description");
@@ -35,6 +39,301 @@ const euWeekBadge = document.getElementById("eu-week-badge");
 let euDetectionsChart;
 let euPositivityChart;
 
+const STRINGS = {
+  en: {
+    "meta.title": "Seasonal Respiratory Virus Dashboard – Hungary/EU",
+    "header.title": "Seasonal Respiratory Virus Dashboard – Hungary/EU",
+    "header.subtitle": "Respiratory pandemic dashboard for Hungary & EU/EEA powered by NNGYK and ECDC data",
+    "header.controls": "Header controls",
+    "controls.language": "Language",
+    "controls.year": "Year",
+    "sections.alerts": "Key alerts",
+    "sections.trends": "Weekly trend highlights",
+    "sections.charts": "Visual summaries",
+    "sections.virology": "Virology detections and positivity",
+    "sections.eu": "EU/EEA virology detections and positivity",
+    "sections.table": "Weekly table",
+    "sections.dataset": "Dataset notes",
+    "alerts.flu.title": "Seasonal influenza threshold",
+    "alerts.loading": "Awaiting data…",
+    "alerts.loadingPos": "Awaiting positivity data…",
+    "alerts.loadingEuPos": "Awaiting EU/EEA positivity data…",
+    "alerts.leaderHu.title": "Leading virus by positivity in Hungary",
+    "alerts.leaderEu.title": "Leading virus by positivity in the EU/EEA",
+    "status.monitoring": "Monitoring",
+    "status.latestWeek": "Latest week",
+    "status.latestSeason": "Latest season",
+    "metrics.total.title": "Total cases",
+    "metrics.total.note": "Based on selected dataset, year and pathogen.",
+    "metrics.peak.title": "Peak week",
+    "metrics.peak.note": "Calendar week with the highest activity.",
+    "metrics.latest.title": "Latest week cases",
+    "metrics.latest.note": "Most recent reported week for the selected pathogen.",
+    "metrics.sariAdmissions.title": "SARI admissions",
+    "metrics.sariAdmissions.note": "Severe acute respiratory infection hospitalizations (sentinel hospitals).",
+    "metrics.sariIcu.title": "SARI ICU",
+    "metrics.sariIcu.note": "ICU/sub-intensive admissions among SARI hospitalizations.",
+    "trend.title": "Weekly trend signals",
+    "trend.note": "Fast view of which pathogens are currently surging or easing.",
+    "trend.badge": "Live selection",
+    "charts.ili.title": "Flu-like illness (NNGYK)",
+    "charts.ili.note": "Weekly ILI counts from Hungarian sentinel reports.",
+    "charts.sari.title": "SARI hospitalizations",
+    "charts.sari.note": "Weekly SARI admissions and ICU load from sentinel hospitals.",
+    "charts.sari.badge": "Hospital trend",
+    "charts.ili.aria": "ILI trend",
+    "charts.sari.aria": "SARI hospitalizations trend",
+    "viro.detections.title": "Sentinel Virus Detections",
+    "viro.detections.note": "Latest detections among sentinel samples.",
+    "viro.positivity.title": "Test positivity",
+    "viro.positivity.note": "Positivity rates in sentinel samples.",
+    "viro.badge": "Virology",
+    "viro.detections.list.aria": "Sentinel detections",
+    "viro.detections.chart.aria": "Sentinel detections trend",
+    "viro.positivity.list.aria": "Sentinel positivity",
+    "viro.positivity.chart.aria": "Sentinel positivity trend",
+    "eu.detections.title": "EU/EEA Virus Detections",
+    "eu.detections.note": "SARI virological detections (ERVISS, EU/EEA).",
+    "eu.positivity.title": "EU/EEA Test Positivity",
+    "eu.positivity.note": "Positivity rates in SARI samples (ERVISS, EU/EEA).",
+    "eu.badge": "EU/EEA",
+    "eu.detections.list.aria": "EU detections",
+    "eu.detections.chart.aria": "EU detections trend",
+    "eu.positivity.list.aria": "EU positivity",
+    "eu.positivity.chart.aria": "EU positivity trend",
+    "table.title": "Respiratory viruses week-by-week in Hungary",
+    "table.note": "Click Week or Cases to sort; shows matching SARI and positivity context.",
+    "table.badge": "Accessible table view",
+    "table.headers.week": "Week",
+    "table.headers.virus": "Virus",
+    "table.headers.region": "Region",
+    "table.headers.cases": "Cases",
+    "table.headers.sariAdmissions": "SARI admissions",
+    "table.headers.sariIcu": "SARI ICU",
+    "table.headers.topPositivity": "Top positivity",
+    "dataset.note": "Aggregated national respiratory virus surveillance shared by the National Public Health Center.",
+    // Dynamic strings
+    "status.awaitingData": "Awaiting data",
+    "status.noData": "No data",
+    "chips.dataPoints": "Data points",
+    "chips.peakWeek": "Peak week",
+    "chips.medianCases": "Median cases",
+    "trend.empty": "No weekly trend data yet.",
+    "trend.noRecentChange": "No recent change",
+    "trend.direction.surging": "Surging",
+    "trend.direction.declining": "Declining",
+    "trend.direction.flat": "Flat",
+    "alerts.leaderHu.text": "Week {week}: {virus} shows the highest sentinel test positivity ({pos}%).",
+    "alerts.leaderEu.text": "Week {week} ({year}): {virus} leads EU/EEA sentinel positivity ({pos}%).",
+    "alerts.flu.text.above":
+      "Week {week}: ILI activity ({cases} cases) is above the alert threshold ({threshold}).",
+    "alerts.flu.text.below":
+      "Week {week}: ILI activity ({cases} cases) remains below the alert threshold ({threshold}).",
+    "alerts.flu.chip.above": "Epidemic signal",
+    "alerts.flu.chip.below": "Below threshold",
+    "viro.week.latest": "Latest week",
+    "viro.week.week": "Week {week}",
+    "viro.detections.empty": "No detections available.",
+    "viro.positivity.empty": "No positivity data available.",
+    "eu.week.latest": "Latest week",
+    "eu.detections.empty": "No detections available.",
+    "eu.positivity.empty": "No positivity data available.",
+    "charts.ili.datasetLabel": "Flu-like illness (NNGYK)",
+    "charts.sari.admissionsLabel": "SARI admissions",
+    "charts.sari.icuLabel": "SARI ICU",
+    "charts.positivity.suffix": " positivity",
+    "week.label": "Week {week}",
+  },
+  hu: {
+    "meta.title": "Szezonális Légúti Kórokozó Dashboard – Magyarország/EU",
+    "header.title": "Szezonális Légúti Kórokozó Dashboard – Magyarország/EU",
+    "header.subtitle": "Magyarországi és EU/EGT légúti helyzetkép az NNGYK és ECDC adatai alapján",
+    "header.controls": "Fejléc vezérlők",
+    "controls.language": "Nyelv",
+    "controls.year": "Év",
+    "sections.alerts": "Fő riasztások",
+    "sections.trends": "Heti trend kiemelések",
+    "sections.charts": "Vizuális összefoglalók",
+    "sections.virology": "Virológiai kimutatások és pozitivitás",
+    "sections.eu": "EU/EGT virológiai kimutatások és pozitivitás",
+    "sections.table": "Heti táblázat",
+    "sections.dataset": "Adatkészletek megjegyzései",
+    "alerts.flu.title": "Szezonális influenzaküszöb",
+    "alerts.loading": "Adatok betöltése…",
+    "alerts.loadingPos": "Pozitivitási adatok betöltése…",
+    "alerts.loadingEuPos": "EU/EGT pozitivitási adatok betöltése…",
+    "alerts.leaderHu.title": "Vezető kórokozó pozitivitás szerint (Magyarország)",
+    "alerts.leaderEu.title": "Vezető kórokozó pozitivitás szerint (EU/EGT)",
+    "status.monitoring": "Megfigyelés",
+    "status.latestWeek": "Legfrissebb hét",
+    "status.latestSeason": "Legfrissebb szezon",
+    "metrics.total.title": "Esetszám összesen",
+    "metrics.total.note": "A kiválasztott adatbázis, év és kórokozó alapján.",
+    "metrics.peak.title": "Csúcs hét",
+    "metrics.peak.note": "A legmagasabb aktivitású naptári hét.",
+    "metrics.latest.title": "Legfrissebb heti esetszám",
+    "metrics.latest.note": "A kiválasztott kórokozó legfrissebb jelentett hete.",
+    "metrics.sariAdmissions.title": "SARI felvételek",
+    "metrics.sariAdmissions.note": "Súlyos akut légúti fertőzés miatti kórházi felvételek (őrszem kórházak).",
+    "metrics.sariIcu.title": "SARI ICU",
+    "metrics.sariIcu.note": "Intenzív/szubintenzív ellátás a SARI felvételek között.",
+    "trend.title": "Heti trend jelzések",
+    "trend.note": "Gyors áttekintés arról, mely kórokozók erősödnek vagy enyhülnek.",
+    "trend.badge": "Aktuális nézet",
+    "charts.ili.title": "Influenzaszerű megbetegedések (NNGYK)",
+    "charts.ili.note": "Heti ILI esetszám magyarországi őrszem jelentések alapján.",
+    "charts.sari.title": "SARI kórházi felvételek",
+    "charts.sari.note": "Heti SARI felvételek és intenzív terhelés az őrszem kórházakból.",
+    "charts.sari.badge": "Kórházi trend",
+    "charts.ili.aria": "ILI trend",
+    "charts.sari.aria": "SARI kórházi felvételek trend",
+    "viro.detections.title": "Sentinel orvosi vírus kimutatások",
+    "viro.detections.note": "Legfrissebb kimutatások az őrszem mintákban.",
+    "viro.positivity.title": "Tesztpozitivitás (sentinel orvosi minták)",
+    "viro.positivity.note": "Pozitivitási arányok az őrszem mintákban.",
+    "viro.badge": "Virológia",
+    "viro.detections.list.aria": "Őrszem kimutatások",
+    "viro.detections.chart.aria": "Őrszem kimutatások trend",
+    "viro.positivity.list.aria": "Őrszem pozitivitás",
+    "viro.positivity.chart.aria": "Őrszem pozitivitás trend",
+    "eu.detections.title": "EU/EGT vírus kimutatások",
+    "eu.detections.note": "SARI virológiai kimutatások (ERVISS, EU/EGT).",
+    "eu.positivity.title": "EU/EGT tesztpozitivitás",
+    "eu.positivity.note": "Pozitivitási arányok a SARI mintákban (ERVISS, EU/EGT).",
+    "eu.badge": "EU/EGT",
+    "eu.detections.list.aria": "EU kimutatások",
+    "eu.detections.chart.aria": "EU kimutatások trend",
+    "eu.positivity.list.aria": "EU pozitivitás",
+    "eu.positivity.chart.aria": "EU pozitivitás trend",
+    "table.title": "Légúti vírusok heti bontásban (Magyarország)",
+    "table.note": "Kattints a Hét vagy Esetszám oszlopra a rendezéshez; SARI és pozitivitási kontextussal.",
+    "table.badge": "Akadálymentes táblázat",
+    "table.headers.week": "Hét",
+    "table.headers.virus": "Vírus",
+    "table.headers.region": "Régió",
+    "table.headers.cases": "Esetszám",
+    "table.headers.sariAdmissions": "SARI felvételek",
+    "table.headers.sariIcu": "SARI intenzív",
+    "table.headers.topPositivity": "Legmagasabb pozitivitás",
+    "dataset.note": "Az NNGYK által közzétett országos légúti járványügyi felügyeleti adatok összesítve.",
+    // Dynamic strings
+    "status.awaitingData": "Adatra vár",
+    "status.noData": "Nincs adat",
+    "chips.dataPoints": "Adatpont",
+    "chips.peakWeek": "Csúcs hét",
+    "chips.medianCases": "Medián esetszám",
+    "trend.empty": "Még nincs heti trend adat.",
+    "trend.noRecentChange": "Nincs friss változás",
+    "trend.direction.surging": "Erősödik",
+    "trend.direction.declining": "Enyhül",
+    "trend.direction.flat": "Változatlan",
+    "alerts.leaderHu.text": "{week}. hét: {virus} a legmagasabb sentinel tesztpozitivitású ({pos}%).",
+    "alerts.leaderEu.text": "{week}. hét ({year}): {virus} vezeti az EU/EGT sentinel pozitivitást ({pos}%).",
+    "alerts.flu.text.above":
+      "{week}. hét: az ILI aktivitás ({cases} eset) meghaladja a riasztási küszöböt ({threshold}).",
+    "alerts.flu.text.below":
+      "{week}. hét: az ILI aktivitás ({cases} eset) a riasztási küszöb alatt marad ({threshold}).",
+    "alerts.flu.chip.above": "Járványjelzés",
+    "alerts.flu.chip.below": "Küszöb alatt",
+    "viro.week.latest": "Legfrissebb hét",
+    "viro.week.week": "{week}. hét",
+    "viro.detections.empty": "Nincs elérhető kimutatás.",
+    "viro.positivity.empty": "Nincs elérhető pozitivitási adat.",
+    "eu.week.latest": "Legfrissebb hét",
+    "eu.detections.empty": "Nincs elérhető kimutatás.",
+    "eu.positivity.empty": "Nincs elérhető pozitivitási adat.",
+    "charts.ili.datasetLabel": "ILI (influenzaszerű megbetegedés, NNGYK)",
+    "charts.sari.admissionsLabel": "SARI felvételek",
+    "charts.sari.icuLabel": "SARI intenzív",
+    "charts.positivity.suffix": " pozitivitás",
+    "week.label": "{week}. hét",
+  },
+};
+
+let currentLang = "en";
+
+function normalizeLang(lang) {
+  const value = String(lang || "").toLowerCase();
+  if (SUPPORTED_LANGS.includes(value)) return value;
+  if (value.startsWith("hu")) return "hu";
+  if (value.startsWith("en")) return "en";
+  return null;
+}
+
+function resolveInitialLang() {
+  try {
+    const url = new URL(window.location.href);
+    const queryLang = normalizeLang(url.searchParams.get("lang"));
+    if (queryLang) return queryLang;
+  } catch {
+    // ignore
+  }
+  const stored = normalizeLang(localStorage.getItem(STORAGE_LANG_KEY));
+  if (stored) return stored;
+  const navigatorLang = normalizeLang(
+    (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage
+  );
+  return navigatorLang || "en";
+}
+
+function t(key, params = null) {
+  const table = STRINGS[currentLang] || STRINGS.en;
+  const fallback = STRINGS.en;
+  const raw = table[key] ?? fallback[key];
+  if (raw == null) return key;
+  if (!params) return raw;
+  return String(raw).replace(/\{(\w+)\}/g, (_, name) => (params[name] != null ? String(params[name]) : `{${name}}`));
+}
+
+function applyStaticI18n() {
+  document.documentElement.lang = currentLang;
+  document.title = t("meta.title");
+
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (!key) return;
+    const value = t(key);
+    if (value) el.textContent = value;
+  });
+
+  document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
+    const spec = el.getAttribute("data-i18n-attr");
+    if (!spec) return;
+    spec
+      .split(/[;,]/g)
+      .map((part) => part.trim())
+      .filter(Boolean)
+      .forEach((pair) => {
+        const [attr, key] = pair.split(":").map((s) => s.trim());
+        if (!attr || !key) return;
+        el.setAttribute(attr, t(key));
+      });
+  });
+}
+
+function setLanguage(lang, { persist = true, updateUrl = false } = {}) {
+  const normalized = normalizeLang(lang) || "en";
+  currentLang = normalized;
+  if (langSelect) langSelect.value = normalized;
+  if (persist) {
+    try {
+      localStorage.setItem(STORAGE_LANG_KEY, normalized);
+    } catch {
+      // ignore
+    }
+  }
+  if (updateUrl) {
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set("lang", normalized);
+      window.history.replaceState({}, "", url);
+    } catch {
+      // ignore
+    }
+  }
+  applyStaticI18n();
+}
+
 // National epidemic threshold set to ~28,900 cases (approx. 289 per 100k for ~10M population).
 const ILI_THRESHOLD = 28900;
 const DEFAULT_VIRUS = "ILI (flu-like illness)";
@@ -60,6 +359,51 @@ const matchesSeasonYear = (rowYear, selectedYear) => {
   const value = Number(rowYear);
   return !Number.isFinite(value) || value === selectedYear;
 };
+
+const VIRUS_LABELS_HU = {
+  "ILI (flu-like illness)": "ILI (influenzaszerű megbetegedés)",
+  Influenza: "Influenza",
+  "Influenza A": "Influenza A",
+  "Influenza B": "Influenza B",
+  "Influenza A(H1N1pdm09)": "Influenza A(H1N1pdm09)",
+  "Influenza A(H3)": "Influenza A(H3)",
+  "Influenza A(NT)": "Influenza A(NT)",
+  RSV: "RSV",
+  "SARS-CoV-2": "SARS-CoV-2",
+};
+
+const REGION_LABELS_HU = { National: "Országos" };
+
+function displayVirus(name) {
+  if (currentLang !== "hu") return name;
+  return VIRUS_LABELS_HU[name] || name;
+}
+
+function displayRegion(name) {
+  if (currentLang !== "hu") return name;
+  return REGION_LABELS_HU[name] || name;
+}
+
+function formatWeek(week) {
+  return `W${Number(week).toString().padStart(2, "0")}`;
+}
+
+function formatWeekLabel(week) {
+  const label = formatWeek(week);
+  return t("week.label", { week: label });
+}
+
+function formatWeekBadge(week) {
+  const label = formatWeek(week);
+  if (currentLang === "hu") return t("viro.week.week", { week: label });
+  return label;
+}
+
+function formatSeasonLabel(year) {
+  const known = seasonLabels[year];
+  if (known) return known;
+  return currentLang === "hu" ? `${year} szezon` : `${year} season`;
+}
 
 function populateFilters() {
   yearSelect.innerHTML = "";
@@ -89,9 +433,9 @@ function renderChips(data) {
   chipsRow.innerHTML = "";
   const summary = summarize(data);
   const chips = [
-    { label: "Data points", value: data.length },
-    { label: "Peak week", value: summary.peakWeek },
-    { label: "Median cases", value: median(data.map((d) => d.cases)) },
+    { label: t("chips.dataPoints"), value: data.length },
+    { label: t("chips.peakWeek"), value: summary.peakWeek },
+    { label: t("chips.medianCases"), value: median(data.map((d) => d.cases)) },
   ];
 
   chips.forEach((chip) => {
@@ -166,10 +510,11 @@ function renderLeaderAlert(year) {
     return;
   }
   leaderAlert.hidden = false;
-  const weekLabel = `W${leader.week.toString().padStart(2, "0")}`;
+  const weekLabel = formatWeek(leader.week);
   const posLabel = leader.positivity.toFixed(1);
-  leaderAlertText.textContent = `Week ${weekLabel}: ${leader.virus} shows the highest sentinel test positivity (${posLabel}%).`;
-  leaderAlertChip.textContent = leader.virus;
+  const virusLabel = displayVirus(leader.virus);
+  leaderAlertText.textContent = t("alerts.leaderHu.text", { week: weekLabel, virus: virusLabel, pos: posLabel });
+  leaderAlertChip.textContent = virusLabel;
 }
 
 function renderEuLeaderAlert() {
@@ -179,10 +524,16 @@ function renderEuLeaderAlert() {
     return;
   }
   leaderEuAlert.hidden = false;
-  const weekLabel = `W${leader.week.toString().padStart(2, "0")}`;
+  const weekLabel = formatWeek(leader.week);
   const posLabel = leader.positivity.toFixed(1);
-  leaderEuAlertText.textContent = `Week ${weekLabel} (${leader.year}): ${leader.virus} leads EU/EEA sentinel positivity (${posLabel}%).`;
-  leaderEuAlertChip.textContent = leader.virus;
+  const virusLabel = displayVirus(leader.virus);
+  leaderEuAlertText.textContent = t("alerts.leaderEu.text", {
+    week: weekLabel,
+    year: leader.year,
+    virus: virusLabel,
+    pos: posLabel,
+  });
+  leaderEuAlertChip.textContent = virusLabel;
 }
 
 function latestILITotals(dataset, year) {
@@ -221,7 +572,7 @@ function renderLatestWeekCases(data) {
 
   if (!data.length) {
     latestWeekCasesValue.textContent = "–";
-    latestWeekBadge.textContent = "Awaiting data";
+    latestWeekBadge.textContent = t("status.awaitingData");
     return;
   }
   const latestWeek = data.reduce(
@@ -232,7 +583,7 @@ function renderLatestWeekCases(data) {
     .filter((row) => row.week === latestWeek)
     .reduce((sum, row) => sum + toNumber(row.cases), 0);
   latestWeekCasesValue.textContent = total.toLocaleString();
-  latestWeekBadge.textContent = `W${latestWeek.toString().padStart(2, "0")}`;
+  latestWeekBadge.textContent = formatWeekBadge(latestWeek);
 }
 
 function renderFluAlert(dataset, year) {
@@ -246,16 +597,28 @@ function renderFluAlert(dataset, year) {
   fluAlert.classList.remove("alert-ok", "alert-critical");
 
   const exceeds = latest.total >= ILI_THRESHOLD;
-  const weekLabel = latest.latestWeek.toString().padStart(2, "0");
+  const weekLabel = formatWeek(latest.latestWeek);
   const thresholdLabel = ILI_THRESHOLD.toLocaleString();
-  const text = exceeds
-    ? `Week W${weekLabel}: ILI activity (${latest.total.toLocaleString()} cases) is above the alert threshold (${thresholdLabel}).`
-    : `Week W${weekLabel}: ILI activity (${latest.total.toLocaleString()} cases) remains below the alert threshold (${thresholdLabel}).`;
+  const text = t(exceeds ? "alerts.flu.text.above" : "alerts.flu.text.below", {
+    week: weekLabel,
+    cases: latest.total.toLocaleString(),
+    threshold: thresholdLabel,
+  });
 
   fluAlert.classList.add(exceeds ? "alert-critical" : "alert-ok");
 
   fluAlertText.textContent = text;
-  fluAlertChip.textContent = exceeds ? "Epidemic signal" : "Below threshold";
+  fluAlertChip.textContent = t(exceeds ? "alerts.flu.chip.above" : "alerts.flu.chip.below");
+}
+
+function formatSurgeLabel(direction, pct, previousWeek) {
+  const directionLabel = t(`trend.direction.${direction}`);
+  const sign = pct >= 0 ? "+" : "";
+  const prev = formatWeek(previousWeek);
+  if (currentLang === "hu") {
+    return `${directionLabel} (${sign}${pct}% a ${prev} héthez képest)`;
+  }
+  return `${directionLabel} (${sign}${pct}% vs ${prev})`;
 }
 
 function computeSurgeSignals(dataset, year) {
@@ -271,14 +634,14 @@ function computeSurgeSignals(dataset, year) {
       const latest = sorted[sorted.length - 1];
       const previous = sorted[sorted.length - 2];
       if (!latest || !previous) {
-        return { virus, label: "No recent change", change: 0, week: latest?.week ?? "–" };
+        return { virus, label: t("trend.noRecentChange"), change: 0, week: latest?.week ?? "–", direction: "flat" };
       }
       const delta = latest.cases - previous.cases;
       const pct = previous.cases ? Math.round((delta / previous.cases) * 100) : 0;
-      const direction = delta > 0 ? "Surging" : delta < 0 ? "Declining" : "Flat";
+      const direction = delta > 0 ? "surging" : delta < 0 ? "declining" : "flat";
       return {
         virus,
-        label: `${direction} (${pct >= 0 ? "+" : ""}${pct}% vs W${previous.week.toString().padStart(2, "0")})`,
+        label: formatSurgeLabel(direction, pct, previous.week),
         change: delta,
         week: latest.week,
         direction,
@@ -293,15 +656,18 @@ function renderSurgeSignals(dataset, year) {
 
   if (!signals.length) {
     const li = document.createElement("li");
-    li.textContent = "No weekly trend data yet.";
+    li.textContent = t("trend.empty");
     surgeList.appendChild(li);
     return;
   }
 
   signals.forEach((signal) => {
     const li = document.createElement("li");
-    li.className = `trend-${signal.direction.toLowerCase()}`;
-    li.innerHTML = `<div><strong>${signal.virus}</strong><span>Week ${signal.week}</span></div><span class="pill">${signal.label}</span>`;
+    const direction = signal.direction || "flat";
+    li.className = `trend-${direction}`;
+    const virusLabel = displayVirus(signal.virus);
+    const weekLabel = Number.isFinite(Number(signal.week)) ? formatWeekLabel(signal.week) : "–";
+    li.innerHTML = `<div><strong>${virusLabel}</strong><span>${weekLabel}</span></div><span class="pill">${signal.label}</span>`;
     surgeList.appendChild(li);
   });
 }
@@ -362,13 +728,13 @@ function renderTable(data, seasonYear) {
     const pos = positivityByWeek.get(row.week);
     const posLabel =
       pos && pos.positivity != null && Number.isFinite(Number(pos.positivity))
-        ? `${pos.virus} (${Number(pos.positivity).toFixed(1)}%)`
+        ? `${displayVirus(pos.virus)} (${Number(pos.positivity).toFixed(1)}%)`
         : "–";
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>W${row.week.toString().padStart(2, "0")}</td>
-      <td>${row.virus}</td>
-      <td>${row.region}</td>
+      <td>${displayVirus(row.virus)}</td>
+      <td>${displayRegion(row.region)}</td>
       <td>${row.cases.toLocaleString()}</td>
       <td>${admissionsLabel}</td>
       <td>${icuLabel}</td>
@@ -384,21 +750,20 @@ function renderILIChart(year) {
     .filter((row) => row.dataset === DATASET && row.year === year && row.virus === DEFAULT_VIRUS)
     .sort((a, b) => seasonWeekCompare(a.week, b.week));
 
-  const labels = rows.map((d) => `W${d.week.toString().padStart(2, "0")}`);
+  const labels = rows.map((d) => formatWeek(d.week));
   const values = rows.map((d) => d.cases);
 
   if (trendChart) trendChart.destroy();
 
-  const seasonLabel = seasonLabels[year] || `${year} season`;
-  iliYearBadge.textContent = rows.length ? seasonLabel : "Awaiting data";
+  iliYearBadge.textContent = rows.length ? formatSeasonLabel(year) : t("status.awaitingData");
 
   trendChart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: labels.length ? labels : ["No data"],
+      labels: labels.length ? labels : [t("status.noData")],
       datasets: [
         {
-          label: "Flu-like illness (NNGYK)",
+          label: t("charts.ili.datasetLabel"),
           data: values.length ? values : [0],
           backgroundColor: "rgba(6, 182, 212, 0.6)",
           borderColor: "#06b6d4",
@@ -433,14 +798,14 @@ function renderSariCards(year) {
   if (!latest) {
     sariAdmissionsValue.textContent = "–";
     sariIcuValue.textContent = "–";
-    sariWeekBadge.textContent = "Awaiting data";
+    sariWeekBadge.textContent = t("status.awaitingData");
     return;
   }
   sariAdmissionsValue.textContent =
     latest.admissions != null && Number.isFinite(Number(latest.admissions)) ? Number(latest.admissions).toLocaleString() : "–";
   sariIcuValue.textContent =
     latest.icu != null && Number.isFinite(Number(latest.icu)) ? Number(latest.icu).toLocaleString() : "–";
-  sariWeekBadge.textContent = `Week W${latest.week.toString().padStart(2, "0")}`;
+  sariWeekBadge.textContent = formatWeekBadge(latest.week);
 }
 
 function renderSariChart(year) {
@@ -450,7 +815,7 @@ function renderSariChart(year) {
       ?.filter((row) => matchesSeasonYear(row.year, year))
       .slice()
       .sort((a, b) => seasonWeekCompare(a.week, b.week)) ?? [];
-  const labels = rows.map((d) => `W${d.week.toString().padStart(2, "0")}`);
+  const labels = rows.map((d) => formatWeek(d.week));
   const admissions = rows.map((d) => d.admissions);
   const icu = rows.map((d) => d.icu);
 
@@ -459,10 +824,10 @@ function renderSariChart(year) {
   sariChart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: labels.length ? labels : ["No data"],
+      labels: labels.length ? labels : [t("status.noData")],
       datasets: [
         {
-          label: "SARI admissions",
+          label: t("charts.sari.admissionsLabel"),
           data: admissions.length ? admissions : [0],
           backgroundColor: "rgba(249, 115, 22, 0.7)",
           borderColor: "#f97316",
@@ -472,7 +837,7 @@ function renderSariChart(year) {
           maxBarThickness: 26,
         },
         {
-          label: "SARI ICU",
+          label: t("charts.sari.icuLabel"),
           data: icu.length ? icu : [0],
           backgroundColor: "rgba(250, 204, 21, 0.7)",
           borderColor: "#facc15",
@@ -526,7 +891,8 @@ function renderVirology(year) {
   const latestWeek = candidateWeeks.length
     ? candidateWeeks.reduce((best, week) => (seasonWeekIndex(week) > seasonWeekIndex(best) ? week : best), candidateWeeks[0])
     : "–";
-  viroWeekBadge.textContent = latestWeek === "–" ? "Latest week" : `Week W${latestWeek.toString().padStart(2, "0")}`;
+  viroWeekBadge.textContent =
+    latestWeek === "–" ? t("viro.week.latest") : t("viro.week.week", { week: formatWeek(latestWeek) });
 
   viroDetectionsList.innerHTML = "";
   detections
@@ -534,12 +900,12 @@ function renderVirology(year) {
     .slice(0, 6)
     .forEach((row) => {
       const li = document.createElement("li");
-      li.innerHTML = `<span>${row.virus}</span><strong>${Number(row.detections ?? 0).toLocaleString()}</strong>`;
+      li.innerHTML = `<span>${displayVirus(row.virus)}</span><strong>${Number(row.detections ?? 0).toLocaleString()}</strong>`;
       viroDetectionsList.appendChild(li);
     });
   if (!viroDetectionsList.children.length) {
     const li = document.createElement("li");
-    li.textContent = "No detections available.";
+    li.textContent = t("viro.detections.empty");
     viroDetectionsList.appendChild(li);
   }
 
@@ -549,12 +915,12 @@ function renderVirology(year) {
     .slice(0, 6)
     .forEach((row) => {
       const li = document.createElement("li");
-      li.innerHTML = `<span>${row.virus}</span><strong>${Number(row.positivity ?? 0).toFixed(1)}%</strong>`;
+      li.innerHTML = `<span>${displayVirus(row.virus)}</span><strong>${Number(row.positivity ?? 0).toFixed(1)}%</strong>`;
       viroPositivityList.appendChild(li);
     });
   if (!viroPositivityList.children.length) {
     const li = document.createElement("li");
-    li.textContent = "No positivity data available.";
+    li.textContent = t("viro.positivity.empty");
     viroPositivityList.appendChild(li);
   }
 
@@ -578,7 +944,7 @@ function renderVirology(year) {
       return acc;
     }, {});
     return {
-      label: virus,
+      label: displayVirus(virus),
       data: detWeeks.map((w) => points[w] ?? null),
       borderColor: color,
       backgroundColor: color,
@@ -592,7 +958,7 @@ function renderVirology(year) {
   if (viroDetectionsChart) viroDetectionsChart.destroy();
   viroDetectionsChart = new Chart(detCtx, {
     type: "line",
-    data: { labels: detWeeks.map((w) => `W${w.toString().padStart(2, "0")}`), datasets: detSeries },
+    data: { labels: detWeeks.map((w) => formatWeek(w)), datasets: detSeries },
     options: {
       responsive: true,
       interaction: { mode: "index", intersect: false },
@@ -613,7 +979,7 @@ function renderVirology(year) {
       return acc;
     }, {});
     return {
-      label: `${virus} positivity`,
+      label: `${displayVirus(virus)}${t("charts.positivity.suffix")}`,
       data: posWeeks.map((w) => points[w] ?? null),
       borderColor: color,
       backgroundColor: color,
@@ -627,7 +993,7 @@ function renderVirology(year) {
   if (viroPositivityChart) viroPositivityChart.destroy();
   viroPositivityChart = new Chart(posCtx, {
     type: "line",
-    data: { labels: posWeeks.map((w) => `W${w.toString().padStart(2, "0")}`), datasets: posSeries },
+    data: { labels: posWeeks.map((w) => formatWeek(w)), datasets: posSeries },
     options: {
       responsive: true,
       interaction: { mode: "index", intersect: false },
@@ -671,7 +1037,7 @@ function renderEuVirology() {
   const hasLatestWeek = Number.isFinite(latestWeek) && latestWeek > 0;
   euWeekBadge.textContent = hasLatestWeek
     ? `${targetYear ? `${targetYear}-` : ""}W${latestWeek.toString().padStart(2, "0")}`
-    : "Latest week";
+    : t("eu.week.latest");
 
   euDetectionsList.innerHTML = "";
   detections
@@ -679,12 +1045,12 @@ function renderEuVirology() {
     .slice(0, 6)
     .forEach((row) => {
       const li = document.createElement("li");
-      li.innerHTML = `<span>${row.virus}</span><strong>${Number(row.detections ?? 0).toLocaleString()}</strong>`;
+      li.innerHTML = `<span>${displayVirus(row.virus)}</span><strong>${Number(row.detections ?? 0).toLocaleString()}</strong>`;
       euDetectionsList.appendChild(li);
     });
   if (!euDetectionsList.children.length) {
     const li = document.createElement("li");
-    li.textContent = "No detections available.";
+    li.textContent = t("eu.detections.empty");
     euDetectionsList.appendChild(li);
   }
 
@@ -694,12 +1060,12 @@ function renderEuVirology() {
     .slice(0, 6)
     .forEach((row) => {
       const li = document.createElement("li");
-      li.innerHTML = `<span>${row.virus}</span><strong>${Number(row.positivity ?? 0).toFixed(1)}%</strong>`;
+      li.innerHTML = `<span>${displayVirus(row.virus)}</span><strong>${Number(row.positivity ?? 0).toFixed(1)}%</strong>`;
       euPositivityList.appendChild(li);
     });
   if (!euPositivityList.children.length) {
     const li = document.createElement("li");
-    li.textContent = "No positivity data available.";
+    li.textContent = t("eu.positivity.empty");
     euPositivityList.appendChild(li);
   }
 
@@ -722,7 +1088,7 @@ function renderEuVirology() {
       return acc;
     }, {});
     return {
-      label: virus,
+      label: displayVirus(virus),
       data: detWeeks.map((w) => points[w] ?? null),
       borderColor: color,
       backgroundColor: color,
@@ -736,7 +1102,7 @@ function renderEuVirology() {
   if (euDetectionsChart) euDetectionsChart.destroy();
   euDetectionsChart = new Chart(detCtx, {
     type: "line",
-    data: { labels: detWeeks.map((w) => `W${w.toString().padStart(2, "0")}`), datasets: detSeries },
+    data: { labels: detWeeks.map((w) => formatWeek(w)), datasets: detSeries },
     options: {
       responsive: true,
       interaction: { mode: "index", intersect: false },
@@ -757,7 +1123,7 @@ function renderEuVirology() {
       return acc;
     }, {});
     return {
-      label: `${virus} positivity`,
+      label: `${displayVirus(virus)}${t("charts.positivity.suffix")}`,
       data: posWeeks.map((w) => points[w] ?? null),
       borderColor: color,
       backgroundColor: color,
@@ -771,7 +1137,7 @@ function renderEuVirology() {
   if (euPositivityChart) euPositivityChart.destroy();
   euPositivityChart = new Chart(posCtx, {
     type: "line",
-    data: { labels: posWeeks.map((w) => `W${w.toString().padStart(2, "0")}`), datasets: posSeries },
+    data: { labels: posWeeks.map((w) => formatWeek(w)), datasets: posSeries },
     options: {
       responsive: true,
       interaction: { mode: "index", intersect: false },
@@ -829,7 +1195,7 @@ function applyFilters() {
   const { total, peakWeek: peak } = summarize(filtered);
   totalCases.textContent = total.toLocaleString();
   peakWeek.textContent = peak;
-  datasetDescription.textContent = respiratoryData.datasets[dataset].description;
+  datasetDescription.textContent = t("dataset.note");
 
   renderTable(filtered, year);
   renderChips(filtered);
@@ -1004,6 +1370,7 @@ async function loadERVISSSari() {
 }
 
 async function main() {
+  setLanguage(resolveInitialLang(), { persist: false });
   await loadNNGYKData();
   await loadERVISSSari();
   populateFilters();
@@ -1021,6 +1388,12 @@ async function main() {
   applyFilters();
 
   yearSelect.addEventListener("change", applyFilters);
+  if (langSelect) {
+    langSelect.addEventListener("change", () => {
+      setLanguage(langSelect.value, { persist: true, updateUrl: true });
+      applyFilters();
+    });
+  }
 }
 
 main();
