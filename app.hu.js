@@ -48,6 +48,25 @@ let latestFiltered = [];
 let trendChart;
 let sariChart;
 
+const VIRUS_LABELS = {
+  "ILI (flu-like illness)": "ILI (influenzaszerű megbetegedés)",
+  "Influenza A": "Influenza A",
+  "Influenza B": "Influenza B",
+  "Influenza A(H1N1pdm09)": "Influenza A(H1N1pdm09)",
+  "Influenza A(H3)": "Influenza A(H3)",
+  "RSV": "RSV",
+  "SARS-CoV-2": "SARS-CoV-2",
+};
+
+const translateVirus = (name) => VIRUS_LABELS[name] || name;
+const REGION_LABELS = { National: "Országos" };
+const translateRegion = (name) => REGION_LABELS[name] || name;
+const formatWeek = (week) => `W${week.toString().padStart(2, "0")}`;
+const DATASET_DESCRIPTIONS = {
+  NNGYK: "Az NNGYK légúti figyelőszolgálatának strukturált, feldolgozott heti adatai.",
+  ERVISS: "EU/EGT SARI virológiai kimutatások és pozitivitás (ECDC ERVISS).",
+};
+
 function populateFilters() {
   yearSelect.innerHTML = "";
   respiratoryData.years.forEach((year) => {
@@ -76,9 +95,9 @@ function renderChips(data) {
   chipsRow.innerHTML = "";
   const summary = summarize(data);
   const chips = [
-    { label: "Data points", value: data.length },
-    { label: "Peak week", value: summary.peakWeek },
-    { label: "Median cases", value: median(data.map((d) => d.cases)) },
+    { label: "Adatpont", value: data.length },
+    { label: "Csúcs hét", value: summary.peakWeek },
+    { label: "Medián esetszám", value: median(data.map((d) => d.cases)) },
   ];
 
   chips.forEach((chip) => {
@@ -150,10 +169,10 @@ function renderLeaderAlert() {
     return;
   }
   leaderAlert.hidden = false;
-  const weekLabel = `W${leader.week.toString().padStart(2, "0")}`;
+  const weekLabel = formatWeek(leader.week);
   const posLabel = leader.positivity.toFixed(1);
-  leaderAlertText.textContent = `Week ${weekLabel}: ${leader.virus} shows the highest sentinel test positivity (${posLabel}%).`;
-  leaderAlertChip.textContent = leader.virus;
+  leaderAlertText.textContent = `${weekLabel}. hét: ${translateVirus(leader.virus)} a legmagasabb sentinel tesztpozitivitású (${posLabel}%).`;
+  leaderAlertChip.textContent = translateVirus(leader.virus);
 }
 
 function renderEuLeaderAlert() {
@@ -163,10 +182,12 @@ function renderEuLeaderAlert() {
     return;
   }
   leaderEuAlert.hidden = false;
-  const weekLabel = `W${leader.week.toString().padStart(2, "0")}`;
+  const weekLabel = formatWeek(leader.week);
   const posLabel = leader.positivity.toFixed(1);
-  leaderEuAlertText.textContent = `Week ${weekLabel} (${leader.year}): ${leader.virus} leads EU/EEA sentinel positivity (${posLabel}%).`;
-  leaderEuAlertChip.textContent = leader.virus;
+  leaderEuAlertText.textContent = `${weekLabel}. hét (${leader.year}): ${translateVirus(
+    leader.virus
+  )} vezeti az EU/EGT sentinel pozitivitást (${posLabel}%).`;
+  leaderEuAlertChip.textContent = translateVirus(leader.virus);
 }
 
 function latestILITotals(dataset, year) {
@@ -202,7 +223,7 @@ function renderLatestWeekCases(data) {
 
   if (!data.length) {
     latestWeekCasesValue.textContent = "–";
-    latestWeekBadge.textContent = "Awaiting data";
+    latestWeekBadge.textContent = "Adatra vár";
     return;
   }
   const latestWeek = Math.max(...data.map((row) => row.week));
@@ -210,7 +231,7 @@ function renderLatestWeekCases(data) {
     .filter((row) => row.week === latestWeek)
     .reduce((sum, row) => sum + toNumber(row.cases), 0);
   latestWeekCasesValue.textContent = total.toLocaleString();
-  latestWeekBadge.textContent = `W${latestWeek.toString().padStart(2, "0")}`;
+  latestWeekBadge.textContent = `${formatWeek(latestWeek)}. hét`;
 }
 
 function renderFluAlert(dataset, year) {
@@ -227,13 +248,13 @@ function renderFluAlert(dataset, year) {
   const weekLabel = latest.latestWeek.toString().padStart(2, "0");
   const thresholdLabel = ILI_THRESHOLD.toLocaleString();
   const text = exceeds
-    ? `Week W${weekLabel}: ILI activity (${latest.total.toLocaleString()} cases) is above the alert threshold (${thresholdLabel}).`
-    : `Week W${weekLabel}: ILI activity (${latest.total.toLocaleString()} cases) remains below the alert threshold (${thresholdLabel}).`;
+    ? `W${weekLabel}. hét: az ILI aktivitás (${latest.total.toLocaleString()} eset) meghaladja a riasztási küszöböt (${thresholdLabel}).`
+    : `W${weekLabel}. hét: az ILI aktivitás (${latest.total.toLocaleString()} eset) a riasztási küszöb alatt marad (${thresholdLabel}).`;
 
   fluAlert.classList.add(exceeds ? "alert-critical" : "alert-ok");
 
   fluAlertText.textContent = text;
-  fluAlertChip.textContent = exceeds ? "Epidemic signal" : "Below threshold";
+  fluAlertChip.textContent = exceeds ? "Járványjelzés" : "Küszöb alatt";
 }
 
 function computeSurgeSignals(dataset, year) {
@@ -249,14 +270,15 @@ function computeSurgeSignals(dataset, year) {
       const latest = sorted[sorted.length - 1];
       const previous = sorted[sorted.length - 2];
       if (!latest || !previous) {
-        return { virus, label: "No recent change", change: 0, week: latest?.week ?? "–" };
+        return { virus, label: "Nincs friss változás", change: 0, week: latest?.week ?? "–", direction: "flat" };
       }
       const delta = latest.cases - previous.cases;
       const pct = previous.cases ? Math.round((delta / previous.cases) * 100) : 0;
-      const direction = delta > 0 ? "Surging" : delta < 0 ? "Declining" : "Flat";
+      const direction = delta > 0 ? "surging" : delta < 0 ? "declining" : "flat";
+      const dirLabel = direction === "surging" ? "Erősödik" : direction === "declining" ? "Enyhül" : "Változatlan";
       return {
         virus,
-        label: `${direction} (${pct >= 0 ? "+" : ""}${pct}% vs W${previous.week.toString().padStart(2, "0")})`,
+        label: `${dirLabel} (${pct >= 0 ? "+" : ""}${pct}% a W${previous.week.toString().padStart(2, "0")} héthez képest)`,
         change: delta,
         week: latest.week,
         direction,
@@ -271,7 +293,7 @@ function renderSurgeSignals(dataset, year) {
 
   if (!signals.length) {
     const li = document.createElement("li");
-    li.textContent = "No weekly trend data yet.";
+    li.textContent = "Még nincs heti trend adat.";
     surgeList.appendChild(li);
     return;
   }
@@ -279,7 +301,9 @@ function renderSurgeSignals(dataset, year) {
   signals.forEach((signal) => {
     const li = document.createElement("li");
     li.className = `trend-${signal.direction.toLowerCase()}`;
-    li.innerHTML = `<div><strong>${signal.virus}</strong><span>Week ${signal.week}</span></div><span class="pill">${signal.label}</span>`;
+    li.innerHTML = `<div><strong>${translateVirus(signal.virus)}</strong><span>${formatWeek(
+      signal.week
+    )}. hét</span></div><span class="pill">${signal.label}</span>`;
     surgeList.appendChild(li);
   });
 }
@@ -333,13 +357,13 @@ function renderTable(data) {
     const pos = positivityByWeek.get(row.week);
     const posLabel =
       pos && Number.isFinite(Number(pos.positivity))
-        ? `${pos.virus} (${Number(pos.positivity).toFixed(1)}%)`
+        ? `${translateVirus(pos.virus)} (${Number(pos.positivity).toFixed(1)}%)`
         : "–";
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>W${row.week.toString().padStart(2, "0")}</td>
-      <td>${row.virus}</td>
-      <td>${row.region}</td>
+      <td>${translateVirus(row.virus)}</td>
+      <td>${translateRegion(row.region)}</td>
       <td>${row.cases.toLocaleString()}</td>
       <td>${admissionsLabel}</td>
       <td>${icuLabel}</td>
@@ -355,21 +379,21 @@ function renderILIChart(year) {
     .filter((row) => row.dataset === DATASET && row.year === year && row.virus === DEFAULT_VIRUS)
     .sort((a, b) => a.week - b.week);
 
-  const labels = rows.map((d) => `W${d.week.toString().padStart(2, "0")}`);
+  const labels = rows.map((d) => formatWeek(d.week));
   const values = rows.map((d) => d.cases);
 
   if (trendChart) trendChart.destroy();
 
-  const seasonLabel = seasonLabels[year] || `${year} season`;
-  iliYearBadge.textContent = rows.length ? seasonLabel : "Awaiting data";
+  const seasonLabel = seasonLabels[year] || `${year} szezon`;
+  iliYearBadge.textContent = rows.length ? seasonLabel : "Adatra vár";
 
   trendChart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: labels.length ? labels : ["No data"],
+      labels: labels.length ? labels : ["Nincs adat"],
       datasets: [
         {
-          label: "Flu-like illness (NNGYK)",
+          label: "ILI (influenzaszerű megbetegedés, NNGYK)",
           data: values.length ? values : [0],
           backgroundColor: "rgba(6, 182, 212, 0.6)",
           borderColor: "#06b6d4",
@@ -407,18 +431,18 @@ function renderSariCards() {
   if (!latest) {
     sariAdmissionsValue.textContent = "–";
     sariIcuValue.textContent = "–";
-    sariWeekBadge.textContent = "Awaiting data";
+    sariWeekBadge.textContent = "Adatra vár";
     return;
   }
   sariAdmissionsValue.textContent = latest.admissions.toLocaleString();
   sariIcuValue.textContent = latest.icu.toLocaleString();
-  sariWeekBadge.textContent = `Week W${latest.week.toString().padStart(2, "0")}`;
+  sariWeekBadge.textContent = `${formatWeek(latest.week)}. hét`;
 }
 
 function renderSariChart() {
   const ctx = document.getElementById("sari-chart").getContext("2d");
   const rows = respiratoryData.sariWeekly?.slice().sort((a, b) => a.week - b.week) ?? [];
-  const labels = rows.map((d) => `W${d.week.toString().padStart(2, "0")}`);
+  const labels = rows.map((d) => formatWeek(d.week));
   const admissions = rows.map((d) => d.admissions);
   const icu = rows.map((d) => d.icu);
 
@@ -427,10 +451,10 @@ function renderSariChart() {
   sariChart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: labels.length ? labels : ["No data"],
+      labels: labels.length ? labels : ["Nincs adat"],
       datasets: [
         {
-          label: "SARI admissions",
+          label: "SARI felvételek",
           data: admissions.length ? admissions : [0],
           backgroundColor: "rgba(249, 115, 22, 0.7)",
           borderColor: "#f97316",
@@ -440,7 +464,7 @@ function renderSariChart() {
           maxBarThickness: 26,
         },
         {
-          label: "SARI ICU",
+          label: "SARI intenzív",
           data: icu.length ? icu : [0],
           backgroundColor: "rgba(250, 204, 21, 0.7)",
           borderColor: "#facc15",
@@ -492,7 +516,8 @@ function renderVirology() {
     detections.length || positivity.length
       ? Math.max(0, ...detections.map((d) => d.week || 0), ...positivity.map((p) => p.week || 0))
       : "–";
-  viroWeekBadge.textContent = latestWeek === "–" ? "Latest week" : `Week W${latestWeek.toString().padStart(2, "0")}`;
+  viroWeekBadge.textContent =
+    latestWeek === "–" ? "Legfrissebb hét" : `W${latestWeek.toString().padStart(2, "0")}. hét`;
 
   viroDetectionsList.innerHTML = "";
   detections
@@ -500,12 +525,12 @@ function renderVirology() {
     .slice(0, 6)
     .forEach((row) => {
       const li = document.createElement("li");
-      li.innerHTML = `<span>${row.virus}</span><strong>${Number(row.detections ?? 0).toLocaleString()}</strong>`;
+      li.innerHTML = `<span>${translateVirus(row.virus)}</span><strong>${Number(row.detections ?? 0).toLocaleString()}</strong>`;
       viroDetectionsList.appendChild(li);
     });
   if (!viroDetectionsList.children.length) {
     const li = document.createElement("li");
-    li.textContent = "No detections available.";
+    li.textContent = "Nincs elérhető kimutatás.";
     viroDetectionsList.appendChild(li);
   }
 
@@ -515,12 +540,12 @@ function renderVirology() {
     .slice(0, 6)
     .forEach((row) => {
       const li = document.createElement("li");
-      li.innerHTML = `<span>${row.virus}</span><strong>${Number(row.positivity ?? 0).toFixed(1)}%</strong>`;
+      li.innerHTML = `<span>${translateVirus(row.virus)}</span><strong>${Number(row.positivity ?? 0).toFixed(1)}%</strong>`;
       viroPositivityList.appendChild(li);
     });
   if (!viroPositivityList.children.length) {
     const li = document.createElement("li");
-    li.textContent = "No positivity data available.";
+    li.textContent = "Nincs elérhető pozitivitási adat.";
     viroPositivityList.appendChild(li);
   }
 
@@ -544,7 +569,7 @@ function renderVirology() {
       return acc;
     }, {});
     return {
-      label: virus,
+      label: translateVirus(virus),
       data: detWeeks.map((w) => points[w] ?? null),
       borderColor: color,
       backgroundColor: color,
@@ -558,7 +583,7 @@ function renderVirology() {
   if (viroDetectionsChart) viroDetectionsChart.destroy();
   viroDetectionsChart = new Chart(detCtx, {
     type: "line",
-    data: { labels: detWeeks.map((w) => `W${w.toString().padStart(2, "0")}`), datasets: detSeries },
+    data: { labels: detWeeks.map((w) => formatWeek(w)), datasets: detSeries },
     options: {
       responsive: true,
       interaction: { mode: "index", intersect: false },
@@ -579,7 +604,7 @@ function renderVirology() {
       return acc;
     }, {});
     return {
-      label: `${virus} positivity`,
+      label: `${translateVirus(virus)} pozitivitás`,
       data: posWeeks.map((w) => points[w] ?? null),
       borderColor: color,
       backgroundColor: color,
@@ -593,7 +618,7 @@ function renderVirology() {
   if (viroPositivityChart) viroPositivityChart.destroy();
   viroPositivityChart = new Chart(posCtx, {
     type: "line",
-    data: { labels: posWeeks.map((w) => `W${w.toString().padStart(2, "0")}`), datasets: posSeries },
+    data: { labels: posWeeks.map((w) => formatWeek(w)), datasets: posSeries },
     options: {
       responsive: true,
       interaction: { mode: "index", intersect: false },
@@ -636,8 +661,8 @@ function renderEuVirology() {
       : null;
   const hasLatestWeek = Number.isFinite(latestWeek) && latestWeek > 0;
   euWeekBadge.textContent = hasLatestWeek
-    ? `${targetYear ? `${targetYear}-` : ""}W${latestWeek.toString().padStart(2, "0")}`
-    : "Latest week";
+    ? `${targetYear ? `${targetYear}-` : ""}${formatWeek(latestWeek)}`
+    : "Legfrissebb hét";
 
   euDetectionsList.innerHTML = "";
   detections
@@ -645,12 +670,12 @@ function renderEuVirology() {
     .slice(0, 6)
     .forEach((row) => {
       const li = document.createElement("li");
-      li.innerHTML = `<span>${row.virus}</span><strong>${Number(row.detections ?? 0).toLocaleString()}</strong>`;
+      li.innerHTML = `<span>${translateVirus(row.virus)}</span><strong>${Number(row.detections ?? 0).toLocaleString()}</strong>`;
       euDetectionsList.appendChild(li);
     });
   if (!euDetectionsList.children.length) {
     const li = document.createElement("li");
-    li.textContent = "No detections available.";
+    li.textContent = "Nincs elérhető kimutatás.";
     euDetectionsList.appendChild(li);
   }
 
@@ -660,12 +685,12 @@ function renderEuVirology() {
     .slice(0, 6)
     .forEach((row) => {
       const li = document.createElement("li");
-      li.innerHTML = `<span>${row.virus}</span><strong>${Number(row.positivity ?? 0).toFixed(1)}%</strong>`;
+      li.innerHTML = `<span>${translateVirus(row.virus)}</span><strong>${Number(row.positivity ?? 0).toFixed(1)}%</strong>`;
       euPositivityList.appendChild(li);
     });
   if (!euPositivityList.children.length) {
     const li = document.createElement("li");
-    li.textContent = "No positivity data available.";
+    li.textContent = "Nincs elérhető pozitivitási adat.";
     euPositivityList.appendChild(li);
   }
 
@@ -688,7 +713,7 @@ function renderEuVirology() {
       return acc;
     }, {});
     return {
-      label: virus,
+      label: translateVirus(virus),
       data: detWeeks.map((w) => points[w] ?? null),
       borderColor: color,
       backgroundColor: color,
@@ -702,7 +727,7 @@ function renderEuVirology() {
   if (euDetectionsChart) euDetectionsChart.destroy();
   euDetectionsChart = new Chart(detCtx, {
     type: "line",
-    data: { labels: detWeeks.map((w) => `W${w.toString().padStart(2, "0")}`), datasets: detSeries },
+    data: { labels: detWeeks.map((w) => formatWeek(w)), datasets: detSeries },
     options: {
       responsive: true,
       interaction: { mode: "index", intersect: false },
@@ -723,7 +748,7 @@ function renderEuVirology() {
       return acc;
     }, {});
     return {
-      label: `${virus} positivity`,
+      label: `${translateVirus(virus)} pozitivitás`,
       data: posWeeks.map((w) => points[w] ?? null),
       borderColor: color,
       backgroundColor: color,
@@ -737,7 +762,7 @@ function renderEuVirology() {
   if (euPositivityChart) euPositivityChart.destroy();
   euPositivityChart = new Chart(posCtx, {
     type: "line",
-    data: { labels: posWeeks.map((w) => `W${w.toString().padStart(2, "0")}`), datasets: posSeries },
+    data: { labels: posWeeks.map((w) => formatWeek(w)), datasets: posSeries },
     options: {
       responsive: true,
       interaction: { mode: "index", intersect: false },
@@ -795,7 +820,7 @@ function applyFilters() {
   const { total, peakWeek: peak } = summarize(filtered);
   totalCases.textContent = total.toLocaleString();
   peakWeek.textContent = peak;
-  datasetDescription.textContent = respiratoryData.datasets[dataset].description;
+  datasetDescription.textContent = DATASET_DESCRIPTIONS[dataset] || respiratoryData.datasets[dataset].description;
 
   renderTable(filtered);
   renderChips(filtered);
@@ -888,7 +913,8 @@ async function loadNNGYKData() {
         respiratoryData.weekly = aggregatedRows;
         respiratoryData.viruses = Array.from(viruses).sort();
         respiratoryData.years = Array.from(years).sort((a, b) => a - b);
-        respiratoryData.datasets.NNGYK.description = "Structured from parsed NNGYK bulletins (latest run).";
+        respiratoryData.datasets.NNGYK.description =
+          "NNGYK bulletinokból automatikusan kinyert és strukturált heti adatok.";
         if (sariRows.length) {
           respiratoryData.sariWeekly = sariRows.sort((a, b) => a.week - b.week);
         }
@@ -898,15 +924,15 @@ async function loadNNGYKData() {
         if (viroPositivity.length) {
           respiratoryData.virologyPositivity = viroPositivity.sort((a, b) => a.week - b.week);
         }
-        console.info(`Loaded ${aggregatedRows.length} weekly rows from nngyk_all.json`);
+        console.info(`Betöltve ${aggregatedRows.length} heti sor a nngyk_all.json fájlból`);
       } else {
-        console.warn("nngyk_all.json loaded but contained no weekly rows after aggregation");
+        console.warn("A nngyk_all.json betöltődött, de az összesítés után nem maradt heti sor.");
       }
     } else {
-      console.warn("nngyk_all.json loaded but no weekly rows found");
+      console.warn("A nngyk_all.json betöltődött, de nem tartalmazott heti sorokat.");
     }
   } catch (error) {
-    console.warn("Falling back to bundled sample NNGYK data", error);
+    console.warn("Alapértelmezett mintaadatok használata (NNGYK)", error);
   }
 }
 
@@ -949,12 +975,14 @@ async function loadERVISSSari() {
     respiratoryData.ervissDetections = detections.sort((a, b) => a.week - b.week);
     respiratoryData.ervissPositivity = positivity.sort((a, b) => a.week - b.week);
     respiratoryData.datasets[ERVISS_DATASET] = {
-      name: "ERVISS (EU/EEA)",
-      description: "EU/EEA SARI virological detections and positivity from ECDC ERVISS.",
+      name: "ERVISS (EU/EGT)",
+      description: "EU/EGT SARI virológiai kimutatások és pozitivitás az ECDC ERVISS adatbázisból.",
     };
-    console.info(`Loaded ERVISS SARI EU/EEA virology rows (${detections.length} detections, ${positivity.length} positivity).`);
+    console.info(
+      `Betöltve ERVISS SARI EU/EGT virológia (${detections.length} kimutatás, ${positivity.length} pozitivitási sor).`
+    );
   } catch (error) {
-    console.warn("ERVISS SARI virology not loaded", error);
+    console.warn("ERVISS SARI virológia nem töltődött be", error);
   }
 }
 

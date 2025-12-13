@@ -12,7 +12,8 @@ A modern, static browser dashboard for visualizing Hungarian NNGYK flu-like illn
 - **SARI trend chart:** Weekly SARI admissions and ICU load from sentinel hospitals.
 - **Accessible data table:** Full record list with sorting and filter-aware totals.
 
-Open `index.html` in a browser to see the full layout with the bundled sample; if `nngyk_all.json` exists, it will replace the sample with parsed bulletin data.
+Open `index.html` in a browser to see the full layout with the bundled sample; if `nngyk_all.json` exists, it will replace the sample with parsed bulletin data.  
+Hungarian UI: open `index.hu.html` (uses the same data with full magyar felület).
 
 ## Running locally
 

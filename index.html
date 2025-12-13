@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Respiratory Virus Dashboard</title>
+    <title>Seasonal Respiratory Virus Dashboard – Hungary/EU</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +17,7 @@
     <header>
       <div class="header-bar">
         <div class="brand">
-          <h1>Respiratory Virus Seasons</h1>
+        <h1>Seasonal Respiratory Virus Dashboard – Hungary/EU</h1>
           <span>Respiratory pandemic dashboard for Hungary &amp; EU/EEA powered by NNGYK and ECDC data</span>
         </div>
         <label class="header-picker">
@@ -29,7 +29,7 @@
 
     <main class="grid" aria-live="polite">
       <section class="alert-stack" aria-label="Key alerts">
-        <section class="alert-card alert-critical" id="flu-alert" aria-live="polite" role="status">
+        <section class="alert-card" id="flu-alert" aria-live="polite" role="status">
           <div class="alert-icon" aria-hidden="true">⚠️</div>
           <div>
             <h2>Seasonal influenza threshold</h2>
@@ -152,23 +152,8 @@
         </article>
       </section>
 
-      <section class="context-grid" aria-label="Influenza subtypes">
-        <article class="card">
-          <div class="context-header">
-            <div>
-              <h2>Detected influenza subtypes</h2>
-              <p class="footer-note">Latest week with subtype detections.</p>
-            </div>
-            <div class="badge" id="variant-week-badge">Latest week</div>
-          </div>
-          <p class="footer-note" id="variant-note">No subtype breakdown is available yet.</p>
-          <ul class="context-list" id="variant-list" aria-label="Detected variants"></ul>
-          <canvas id="variant-chart" aria-label="Influenza subtype trend" role="img"></canvas>
-        </article>
-      </section>
-
-      <section class="context-grid" aria-label="EU/EEA virology detections and positivity">
-        <article class="card card-large">
+      <section class="eu-stack" aria-label="EU/EEA virology detections and positivity">
+        <article class="card card-wide">
           <div class="context-header">
             <div>
               <h2>EU/EEA Virus Detections</h2>
@@ -179,7 +164,7 @@
           <ul class="context-list" id="eu-detections" aria-label="EU detections"></ul>
           <canvas id="eu-detections-chart" aria-label="EU detections trend" role="img"></canvas>
         </article>
-        <article class="card card-large">
+        <article class="card card-wide">
           <div class="context-header">
             <div>
               <h2>EU/EEA Test Positivity</h2>

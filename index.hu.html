@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Szezonális Légúti Kórokozó Dashboard – Magyarország/EU</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-bar">
+        <div class="brand">
+        <h1>Szezonális Légúti Kórokozó Dashboard – Magyarország/EU</h1>
+          <span>Magyarországi és EU/EGT légúti helyzetkép az NNGYK és ECDC adatai alapján</span>
+        </div>
+        <label class="header-picker">
+          <span class="sr-only">Év</span>
+          <select id="year" class="select" aria-label="Év"></select>
+        </label>
+      </div>
+    </header>
+
+    <main class="grid" aria-live="polite">
+      <section class="alert-stack" aria-label="Fő riasztások">
+        <section class="alert-card" id="flu-alert" aria-live="polite" role="status">
+          <div class="alert-icon" aria-hidden="true">⚠️</div>
+          <div>
+            <h2>Szezonális influenzaküszöb</h2>
+            <p class="footer-note" id="flu-alert-text">Adatok betöltése…</p>
+          </div>
+          <span class="pill" id="flu-alert-chip">Megfigyelés</span>
+        </section>
+
+        <section class="alert-card" id="leader-alert" aria-live="polite" role="status">
+          <div class="alert-icon" aria-hidden="true">📈</div>
+          <div>
+            <h2>Vezető kórokozó pozitivitás szerint (HU)</h2>
+            <p class="footer-note" id="leader-alert-text">Pozitivitási adatok betöltése…</p>
+          </div>
+          <span class="pill" id="leader-alert-chip">Megfigyelés</span>
+        </section>
+
+        <section class="alert-card" id="leader-eu-alert" aria-live="polite" role="status">
+          <div class="alert-icon" aria-hidden="true">🌐</div>
+          <div>
+            <h2>Vezető kórokozó pozitivitás szerint (EU/EGT)</h2>
+            <p class="footer-note" id="leader-eu-alert-text">EU/EGT pozitivitási adatok betöltése…</p>
+          </div>
+          <span class="pill" id="leader-eu-alert-chip">Megfigyelés</span>
+        </section>
+      </section>
+
+      <div class="grid metrics">
+        <article class="card">
+          <h2>Esetszám összesen</h2>
+          <div class="value" id="total-cases">0</div>
+          <p class="footer-note">A kiválasztott adatbázis, év és kórokozó alapján.</p>
+        </article>
+        <article class="card">
+          <h2>Csúcs hét</h2>
+          <div class="value" id="peak-week">–</div>
+          <p class="footer-note">A legmagasabb aktivitású naptári hét.</p>
+        </article>
+        <article class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>Legfrissebb heti esetszám</h2>
+            <span class="badge" id="latest-week-badge">Legfrissebb hét</span>
+          </div>
+          <div class="value" id="latest-week-cases">–</div>
+          <p class="footer-note">A kiválasztott kórokozó legfrissebb jelentett hete.</p>
+        </article>
+        <article class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>SARI felvételek</h2>
+            <span class="badge" id="sari-week-badge">Legfrissebb hét</span>
+          </div>
+          <div class="value" id="sari-admissions">–</div>
+          <p class="footer-note">Súlyos akut légúti fertőzés miatti kórházi felvételek (őrszem kórházak).</p>
+        </article>
+        <article class="card">
+          <h2>SARI ICU</h2>
+          <div class="value" id="sari-icu">–</div>
+          <p class="footer-note">Intenzív/szubintenzív ellátás a SARI felvételek között.</p>
+        </article>
+      </div>
+
+      <section class="context-grid" aria-label="Heti trend kiemelések">
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2>Heti trend jelzések</h2>
+              <p class="footer-note">Gyors áttekintés arról, mely kórokozók erősödnek vagy enyhülnek.</p>
+            </div>
+            <div class="badge">Aktuális nézet</div>
+          </div>
+          <ul class="trend-list" id="surge-list"></ul>
+        </article>
+      </section>
+
+      <section class="card chart-card" aria-label="Vizuális összefoglalók">
+        <div class="chart-container">
+          <div class="context-header">
+            <div>
+              <h2>Influenzaszerű megbetegedések (NNGYK)</h2>
+              <p class="footer-note">Heti ILI esetszám magyarországi őrszem jelentések alapján (2025/2026 szezon).</p>
+            </div>
+            <div class="badge" id="ili-year-badge">Legfrissebb szezon</div>
+          </div>
+          <canvas id="ili-chart" aria-label="ILI trend" role="img"></canvas>
+        </div>
+        <div class="chart-container">
+          <div class="context-header">
+            <div>
+              <h2>SARI kórházi felvételek</h2>
+              <p class="footer-note">Heti SARI felvételek és intenzív terhelés az őrszem kórházakból.</p>
+            </div>
+            <div class="badge">Kórházi trend</div>
+          </div>
+          <canvas id="sari-chart" aria-label="SARI kórházi felvételek trend" role="img"></canvas>
+        </div>
+      </section>
+
+      <section class="context-grid" aria-label="Virológiai kimutatások és pozitivitás">
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2>Sentinel orvosi vírus kimutatások</h2>
+              <p class="footer-note">Legfrissebb kimutatások az őrszem mintákban.</p>
+            </div>
+            <div class="badge" id="viro-week-badge">Legfrissebb hét</div>
+          </div>
+          <ul class="context-list" id="viro-detections" aria-label="Őrszem kimutatások"></ul>
+          <canvas id="viro-detections-chart" aria-label="Őrszem kimutatások trend" role="img"></canvas>
+        </article>
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2>Tesztpozitivitás (sentinel orvosi minták)</h2>
+              <p class="footer-note">Pozitivitási arányok az őrszem mintákban.</p>
+            </div>
+            <div class="badge">Virológia</div>
+          </div>
+          <ul class="context-list" id="viro-positivity" aria-label="Őrszem pozitivitás"></ul>
+          <canvas id="viro-positivity-chart" aria-label="Őrszem pozitivitás trend" role="img"></canvas>
+        </article>
+      </section>
+
+      <section class="eu-stack" aria-label="EU/EGT virológiai kimutatások és pozitivitás">
+        <article class="card card-wide">
+          <div class="context-header">
+            <div>
+              <h2>EU/EGT vírus kimutatások</h2>
+              <p class="footer-note">SARI virológiai kimutatások (ERVISS, EU/EGT).</p>
+            </div>
+            <div class="badge" id="eu-week-badge">Legfrissebb hét</div>
+          </div>
+          <ul class="context-list" id="eu-detections" aria-label="EU kimutatások"></ul>
+          <canvas id="eu-detections-chart" aria-label="EU kimutatások trend" role="img"></canvas>
+        </article>
+        <article class="card card-wide">
+          <div class="context-header">
+            <div>
+              <h2>EU/EGT tesztpozitivitás</h2>
+              <p class="footer-note">Pozitivitási arányok a SARI mintákban (ERVISS, EU/EGT).</p>
+            </div>
+            <div class="badge">EU/EGT</div>
+          </div>
+          <ul class="context-list" id="eu-positivity" aria-label="EU pozitivitás"></ul>
+          <canvas id="eu-positivity-chart" aria-label="EU pozitivitás trend" role="img"></canvas>
+        </article>
+      </section>
+
+      <section class="card table-card" aria-label="Heti táblázat">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+          <div>
+            <h2>Légúti vírusok heti bontásban (Magyarország)</h2>
+            <p class="footer-note">Kattints a Hét vagy Esetszám oszlopra a rendezéshez; SARI és pozitivitási kontextussal.</p>
+          </div>
+          <div class="badge">Akadálymentes táblázat</div>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" id="week-header" class="sortable" tabindex="0" aria-sort="ascending">
+                <span>Hét</span><span class="sort-indicator" aria-hidden="true"></span>
+              </th>
+              <th scope="col">Vírus</th>
+              <th scope="col">Régió</th>
+              <th scope="col" id="cases-header" class="sortable" tabindex="0" aria-sort="none">
+                <span>Esetszám</span><span class="sort-indicator" aria-hidden="true"></span>
+              </th>
+              <th scope="col">SARI felvételek</th>
+              <th scope="col">SARI intenzív</th>
+              <th scope="col">Legmagasabb pozitivitás</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </section>
+
+      <footer class="page-footer" aria-label="Adatkészletek megjegyzései">
+        <div>
+          <p id="dataset-description" class="footer-note">
+            Az NNGYK által közzétett országos légúti járványügyi felügyeleti adatok összesítve.
+          </p>
+          <div class="chip-row" id="chips"></div>
+        </div>
+      </footer>
+    </main>
+
+    <script type="module" src="./app.hu.js"></script>
+  </body>
+</html>

@@ -267,6 +267,30 @@ def detect_metrics(text: str) -> Dict[str, float | int]:
     return metrics
 
 
+def detect_sari_admissions(text: str) -> int | None:
+    """Handle SARI admission phrasing even when 'fel' and 'SARI' are separated by line breaks."""
+    patterns = [
+        re.compile(
+            r"(?P<value>\d{1,3}(?:[ .]\d{3})*)\s*f[őo]t\s+vettek\s+fel.{0,200}?(SARI|súlyos[^\\n]{0,50}légúti)",
+            re.IGNORECASE | re.DOTALL,
+        ),
+        re.compile(
+            r"(?P<value>\d{1,3}(?:[ .]\d{3})*)\s*f[őo]t\s+vettek.{0,200}?(SARI|súlyos[^\\n]{0,50}légúti).{0,120}?fel",
+            re.IGNORECASE | re.DOTALL,
+        ),
+        re.compile(r"(?P<value>\d{1,3}(?:[ .]\d{3})*)\s+SARI\s+beteg", re.IGNORECASE),
+    ]
+    for pattern in patterns:
+        match = pattern.search(text)
+        if not match:
+            continue
+        try:
+            return _parse_int(match.group("value"))
+        except Exception:  # noqa: BLE001
+            continue
+    return None
+
+
 def detect_sari_icu_fallback(text: str) -> int | None:
     """Handle layouts where the ICU count is separated from the intensív phrase."""
     lower = text.lower()
@@ -294,8 +318,9 @@ def detect_virology(text: str) -> Dict[str, object]:
     positivity = []
 
     count_pattern = re.compile(
-        r"(?P<count_token>(?:\d{1,3}(?:[ .]\d{3})*)|[A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű-]+)\s+betegn[ée]l[^\n]{0,120}?(?P<virus>influenza\s+[A-Za-z0-9()]+|influenza|RSV|SARS[-\s]?CoV[-\s]?2)",
-        re.IGNORECASE | re.DOTALL,
+        r"(?P<count_token>(?:\d{1,3}(?:[ .]\d{3})*)|[A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű-]+)"
+        r"\s+betegn[ée]l[\s\S]{0,140}?(?P<virus>influenza\s+[A-Za-z0-9()]+|influenza|RSV|SARS[-\s]?CoV[-\s]?2)",
+        re.IGNORECASE,
     )
     for m in count_pattern.finditer(text):
         token = m.group("count_token")
@@ -327,6 +352,16 @@ def detect_virology(text: str) -> Dict[str, object]:
             except Exception:  # noqa: BLE001
                 continue
 
+    if detections:
+        collapsed = {}
+        for entry in detections:
+            virus = entry["virus"]
+            val = entry["detections"]
+            current = collapsed.get(virus)
+            if current is None or val > current["detections"]:
+                collapsed[virus] = entry
+        detections = list(collapsed.values())
+
     return {"detections": detections, "positivity": positivity}
 
 
@@ -335,7 +370,9 @@ def parse_bulletin(text: str) -> ExtractionResult:
     season_year = detect_season_year(text)
     virus_counts = detect_virus_counts(text)
     metrics = detect_metrics(text)
-    sari_adm = metrics.get("sari_admissions")
+    sari_adm = metrics.get("sari_admissions") or detect_sari_admissions(text)
+    if sari_adm is not None:
+        metrics["sari_admissions"] = sari_adm
     sari_icu = metrics.get("sari_icu") or detect_sari_icu_fallback(text)
     virology = detect_virology(text)
 
