@@ -15,45 +15,46 @@
   </head>
   <body>
     <header>
-      <div class="brand">
-        <h1>Respiratory Virus Seasons</h1>
-        <span>Respiratory pandemic dashboard for Hungary &amp; EU/EEA powered by NNGYK and ECDC data</span>
+      <div class="header-bar">
+        <div class="brand">
+          <h1>Respiratory Virus Seasons</h1>
+          <span>Respiratory pandemic dashboard for Hungary &amp; EU/EEA powered by NNGYK and ECDC data</span>
+        </div>
+        <label class="header-picker">
+          <span class="sr-only">Year</span>
+          <select id="year" class="select" aria-label="Year"></select>
+        </label>
       </div>
     </header>
 
-    <section class="controls" aria-label="Dashboard filters">
-      <label>
-        <span class="sr-only">Year</span>
-        <select id="year" class="select" aria-label="Year"></select>
-      </label>
-    </section>
-
     <main class="grid" aria-live="polite">
-      <section class="alert-card" id="leader-alert" aria-live="polite" role="status">
-        <div class="alert-icon" aria-hidden="true">📈</div>
-        <div>
-          <h2>Leading virus by positivity in Hungary</h2>
-          <p class="footer-note" id="leader-alert-text">Awaiting positivity data…</p>
-        </div>
-        <span class="pill" id="leader-alert-chip">Monitoring</span>
-      </section>
+      <section class="alert-stack" aria-label="Key alerts">
+        <section class="alert-card alert-critical" id="flu-alert" aria-live="polite" role="status">
+          <div class="alert-icon" aria-hidden="true">⚠️</div>
+          <div>
+            <h2>Seasonal influenza threshold</h2>
+            <p class="footer-note" id="flu-alert-text">Awaiting data…</p>
+          </div>
+          <span class="pill" id="flu-alert-chip">Monitoring</span>
+        </section>
 
-      <section class="alert-card" id="leader-eu-alert" aria-live="polite" role="status">
-        <div class="alert-icon" aria-hidden="true">🌐</div>
-        <div>
-          <h2>Leading virus by positivity in the EU/EEA</h2>
-          <p class="footer-note" id="leader-eu-alert-text">Awaiting EU/EEA positivity data…</p>
-        </div>
-        <span class="pill" id="leader-eu-alert-chip">Monitoring</span>
-      </section>
+        <section class="alert-card" id="leader-alert" aria-live="polite" role="status">
+          <div class="alert-icon" aria-hidden="true">📈</div>
+          <div>
+            <h2>Leading virus by positivity in Hungary</h2>
+            <p class="footer-note" id="leader-alert-text">Awaiting positivity data…</p>
+          </div>
+          <span class="pill" id="leader-alert-chip">Monitoring</span>
+        </section>
 
-      <section class="alert-card" id="flu-alert" aria-live="polite" role="status">
-        <div class="alert-icon" aria-hidden="true">⚠️</div>
-        <div>
-          <h2>Seasonal influenza threshold</h2>
-          <p class="footer-note" id="flu-alert-text">Awaiting data…</p>
-        </div>
-        <span class="pill" id="flu-alert-chip">Monitoring</span>
+        <section class="alert-card" id="leader-eu-alert" aria-live="polite" role="status">
+          <div class="alert-icon" aria-hidden="true">🌐</div>
+          <div>
+            <h2>Leading virus by positivity in the EU/EEA</h2>
+            <p class="footer-note" id="leader-eu-alert-text">Awaiting EU/EEA positivity data…</p>
+          </div>
+          <span class="pill" id="leader-eu-alert-chip">Monitoring</span>
+        </section>
       </section>
 
       <div class="grid metrics">
@@ -191,7 +192,7 @@
         </article>
       </section>
 
-      <section class="card" aria-label="Weekly table">
+      <section class="card table-card" aria-label="Weekly table">
         <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
           <div>
             <h2>Respiratory viruses week-by-week in Hungary</h2>
@@ -219,19 +220,14 @@
         </table>
       </section>
 
-      <section class="card" aria-label="Dataset notes">
-        <h2>Dataset notes</h2>
-        <p id="dataset-description" class="footer-note">
-          Aggregated national respiratory virus surveillance shared by the National Public Health Center.
-        </p>
-        <div class="chip-row" id="chips"></div>
-      </section>
-
-      <p class="footer-note">
-        This dashboard ships with representative sample numbers. Replace <code>dashboard/data.js</code> (or drop a fresh
-        <code>nngyk_all.json</code>) with live NNGYK feeds to operationalize the view. The layout is fully static,
-        making it easy to host on any web server.
-      </p>
+      <footer class="page-footer" aria-label="Dataset notes">
+        <div>
+          <p id="dataset-description" class="footer-note">
+            Aggregated national respiratory virus surveillance shared by the National Public Health Center.
+          </p>
+          <div class="chip-row" id="chips"></div>
+        </div>
+      </footer>
     </main>
 
     <script type="module" src="./app.js"></script>
