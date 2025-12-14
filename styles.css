@@ -214,7 +214,7 @@ main.grid {
 
 .alert-card {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 12px;
   background: linear-gradient(90deg, rgba(125, 211, 252, 0.14), var(--card-strong));
@@ -224,6 +224,15 @@ main.grid {
   box-shadow: var(--shadow);
   min-height: 78px;
   min-width: 0;
+}
+
+.alert-card > * {
+  min-width: 0;
+}
+
+.alert-card h2,
+.alert-card p {
+  overflow-wrap: anywhere;
 }
 
 .alert-critical {
@@ -356,6 +365,11 @@ html[data-theme="light"] .alert-ok .pill {
   font-size: 0.98rem;
   font-weight: 800;
   letter-spacing: 0.015em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .card,
@@ -838,6 +852,17 @@ canvas {
 @media (max-width: 640px) {
   main {
     padding: 16px;
+  }
+
+  .alert-card {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .alert-card .pill {
+    grid-column: 1 / -1;
+    justify-self: start;
+    padding: 6px 12px;
+    font-size: 0.9rem;
   }
 
   .table {
