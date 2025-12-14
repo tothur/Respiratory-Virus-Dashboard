@@ -27,6 +27,45 @@ from nngyk_extract import ExtractionResult, extract_text, infer_season_year_from
 DEFAULT_INTERVAL_HOURS = 3
 
 
+def _entry_key(entry: dict) -> tuple[int | None, int | None]:
+    return entry.get("season_year"), entry.get("week")
+
+
+def _load_existing_output(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        return []
+    return payload if isinstance(payload, list) else []
+
+
+def _merge_output(existing: list[dict], updates: list[dict]) -> list[dict]:
+    unknown: list[dict] = []
+    merged: dict[tuple[int | None, int | None], dict] = {}
+
+    for entry in existing:
+        key = _entry_key(entry)
+        if key == (None, None):
+            unknown.append(entry)
+        else:
+            merged[key] = entry
+
+    for entry in updates:
+        key = _entry_key(entry)
+        if key == (None, None):
+            unknown.append(entry)
+        else:
+            merged[key] = entry
+
+    sorted_known = sorted(
+        merged.values(),
+        key=lambda item: (item.get("season_year") or 0, item.get("week") or 0, item.get("file") or ""),
+    )
+    return [*unknown, *sorted_known]
+
+
 def extract_folder(pdf_dir: Path, output: Path) -> int:
     """Parse all PDFs in a folder and write aggregated JSON list."""
     pdfs = sorted(p for p in pdf_dir.glob("*.pdf") if p.is_file())
@@ -74,15 +113,36 @@ def extract_folder(pdf_dir: Path, output: Path) -> int:
     return 0
 
 
-def download_pdfs(urls: List[str], download_dir: Path) -> List[Path]:
-    saved: List[Path] = []
+def download_pdfs(urls: List[str], download_dir: Path) -> List[tuple[str, Path]]:
+    saved: List[tuple[str, Path]] = []
     for url in urls:
         try:
-            saved.append(_download_pdf(url, download_dir))
+            saved.append((url, _download_pdf(url, download_dir)))
             print(f"[downloaded] {url}")
         except Exception as exc:  # noqa: BLE001
             print(f"[download failed] {url}: {exc}", file=sys.stderr)
     return saved
+
+
+def _parse_pdfs(pdf_paths: Iterable[Path]) -> list[dict]:
+    parsed: list[dict] = []
+    for pdf_path in pdf_paths:
+        try:
+            text = extract_text(pdf_path)
+            result: ExtractionResult = parse_bulletin(text)
+            if result.season_year is None:
+                result.season_year = infer_season_year_from_filename(pdf_path, result.week)
+            entry = {
+                "file": str(pdf_path),
+                "week": result.week,
+                "season_year": result.season_year,
+                "payload": result.to_dashboard_payload(),
+            }
+            parsed.append(entry)
+            print(f"[ok] {pdf_path.name} -> week {result.week or 'unknown'}, season {result.season_year or 'unknown'}")
+        except Exception as exc:  # noqa: BLE001
+            print(f"[fail] {pdf_path}: {exc}", file=sys.stderr)
+    return parsed
 
 
 def check_and_extract(
@@ -90,6 +150,7 @@ def check_and_extract(
     download_dir: Path,
     output: Path,
     sync_all: bool = False,
+    incremental: bool = False,
     fetch_erviss_url: str | None = None,
     erviss_output: Path | None = None,
     erviss_csv_copy: Path | None = None,
@@ -105,16 +166,44 @@ def check_and_extract(
                     existing.unlink()
                 except Exception as exc:  # noqa: BLE001
                     print(f"[warn] Failed to remove {existing}: {exc}", file=sys.stderr)
-        download_pdfs(target_urls, download_dir)
+        downloaded = download_pdfs(target_urls, download_dir)
+        downloaded_urls = [url for url, _path in downloaded]
+        downloaded_paths = [path for _url, path in downloaded]
     else:
         print("No new PDFs to download.")
+        downloaded_urls = []
+        downloaded_paths = []
 
-    # Always update state to include current listings so we don't re-alert on next run
-    state.seen_urls.update(all_urls)
+    # Mark successful downloads as seen; keep failures eligible for retry next run.
+    # When sync_all is requested, we still record everything as seen to avoid unbounded growth.
+    if sync_all:
+        state.seen_urls.update(all_urls)
+    else:
+        state.seen_urls.update(downloaded_urls)
     state.save(state_path)
 
-    # Extract all PDFs currently in the folder
-    result = extract_folder(download_dir, output)
+    if incremental and not sync_all:
+        if downloaded_paths:
+            existing = _load_existing_output(output)
+            updates = _parse_pdfs(downloaded_paths)
+            if not updates:
+                result = 1
+            else:
+                merged = _merge_output(existing, updates)
+                output.write_text(json.dumps(merged, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+                print(f"Updated {len(updates)} PDFs -> merged output {output}")
+                result = 0
+        else:
+            if output.exists():
+                print(f"No new PDFs; leaving existing output unchanged: {output}")
+                result = 0
+            else:
+                print(f"No PDFs downloaded and {output} does not exist; run with --sync-all to bootstrap.", file=sys.stderr)
+                result = 1
+    else:
+        # Extract all PDFs currently in the folder (full rebuild from disk)
+        result = extract_folder(download_dir, output)
+
     if fetch_erviss_url and erviss_output:
         try:
             print(f"Fetching ERVISS SARI CSV: {fetch_erviss_url}")
@@ -138,6 +227,11 @@ def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:
         "--sync-all",
         action="store_true",
         help="Redownload all listed PDFs (not just new links) before extracting",
+    )
+    parser.add_argument(
+        "--incremental",
+        action="store_true",
+        help="Only parse newly downloaded PDFs and merge into existing output (useful for CI runs without stored PDFs).",
     )
     parser.add_argument(
         "--skip-erviss",
@@ -180,6 +274,7 @@ def main(argv: Iterable[str] | None = None) -> int:
             args.download_dir,
             args.output,
             sync_all=args.sync_all,
+            incremental=args.incremental,
             fetch_erviss_url=fetch_url,
             erviss_output=args.erviss_output if fetch_url else None,
             erviss_csv_copy=args.erviss_csv_copy if fetch_url else None,

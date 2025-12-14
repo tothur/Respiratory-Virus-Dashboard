@@ -43,7 +43,10 @@ jobs:
 
       - name: Run updater
         run: |
-          python nngyk_agent.py --once
+          # CI runners don't keep the nngyk_pdfs/ download folder between runs,
+          # so use incremental mode to merge newly downloaded PDFs into the
+          # already-versioned nngyk_all.json output.
+          python nngyk_agent.py --once --incremental
 
       - name: Commit & push updated data
         run: |
@@ -63,13 +66,13 @@ jobs:
 
           git commit -m "Auto-update data [skip ci]"
 
-          # Rebase onto latest main and retry push a few times to avoid non-fast-forward failures
+          # Rebase onto the latest default branch and retry push a few times to avoid non-fast-forward failures
           for i in 1 2 3; do
             echo "Push attempt $i..."
-            git fetch origin main
-            git rebase origin/main || (git rebase --abort && exit 1)
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}" || (git rebase --abort && exit 1)
 
-            if git push; then
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
               echo "Push succeeded."
               exit 0
             fi

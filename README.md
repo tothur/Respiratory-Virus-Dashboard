@@ -44,6 +44,10 @@ python3 nngyk_agent.py --interval-hours 3
 
 # force re-download all listed PDFs before extracting
 python3 nngyk_agent.py --sync-all --once
+
+# CI-friendly: merge only newly downloaded PDFs into an existing nngyk_all.json
+# (useful when you don't persist the nngyk_pdfs/ folder between runs)
+python3 nngyk_agent.py --once --incremental
 ```
 
 Outputs:
