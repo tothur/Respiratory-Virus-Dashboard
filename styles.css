@@ -168,7 +168,7 @@ main {
 }
 
 main.grid {
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
   align-items: start;
 }
 
@@ -223,6 +223,7 @@ main.grid {
   padding: 12px 14px;
   box-shadow: var(--shadow);
   min-height: 78px;
+  min-width: 0;
 }
 
 .alert-critical {
@@ -391,6 +392,7 @@ html[data-theme="light"] .alert-ok .pill {
   border-radius: var(--radius);
   padding: 16px;
   box-shadow: var(--shadow);
+  min-width: 0;
 }
 
 .card h2 {
@@ -487,7 +489,7 @@ html[data-theme="light"] .pill {
 .chart-card {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 14px;
 }
 
@@ -498,6 +500,7 @@ html[data-theme="light"] .pill {
   padding: 14px;
   box-shadow: var(--shadow);
   box-shadow: var(--glow);
+  min-width: 0;
 }
 
 .context-header {
@@ -506,6 +509,16 @@ html[data-theme="light"] .pill {
   align-items: center;
   gap: 12px;
   margin-bottom: 8px;
+  flex-wrap: wrap;
+  row-gap: 6px;
+}
+
+.context-header > * {
+  min-width: 0;
+}
+
+.context-header h2 {
+  overflow-wrap: anywhere;
 }
 
 .chart-controls {
@@ -521,6 +534,12 @@ html[data-theme="light"] .pill {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
+  row-gap: 6px;
+}
+
+.card-header-row > * {
+  min-width: 0;
 }
 
 .card-header-row-baseline {
