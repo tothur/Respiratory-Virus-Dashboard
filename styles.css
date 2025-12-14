@@ -859,7 +859,7 @@ canvas {
   }
 
   .alert-card .pill {
-    grid-column: 1 / -1;
+    grid-column: 2 / -1;
     justify-self: start;
     padding: 6px 12px;
     font-size: 0.9rem;
