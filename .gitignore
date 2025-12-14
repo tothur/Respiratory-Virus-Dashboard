@@ -1,0 +1,80 @@
+# =========================
+# OS / editor junk
+# =========================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Desktop.ini
+
+# VS Code / JetBrains
+.vscode/
+.idea/
+*.iml
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.pyre/
+ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# =========================
+# Node / frontend tooling (just in case)
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Your generated / downloaded artifacts
+# =========================
+
+# PDFs can bloat the repo fast — keep the folder, ignore the files
+nngyk_pdfs/*.pdf
+nngyk_pdfs/*.PDF
+nngyk_pdfs/*.zip
+nngyk_pdfs/*.tmp
+
+# If any temp download dirs appear
+tmp/
+temp/
+
+# If you ever generate these locally, don't commit
+.DS_Store
