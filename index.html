@@ -66,6 +66,62 @@
         </section>
       </section>
 
+      <section class="card glance-card" aria-label="Season at a glance" data-i18n-attr="aria-label:glance.aria">
+        <div class="context-header">
+          <div>
+            <h2 data-i18n="glance.title">Season at a glance</h2>
+            <p class="footer-note" data-i18n="glance.note">Latest vs peak and short-term slope (last 3 weeks).</p>
+          </div>
+        </div>
+        <div class="glance-grid">
+          <div class="glance-metric">
+            <div class="glance-label" data-i18n="glance.ili">Flu-like illness</div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.peak">Peak</span>
+              <span class="glance-value" id="glance-ili-peak">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.latest">Latest</span>
+              <span class="glance-value" id="glance-ili-latest">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.slope">3-week slope</span>
+              <span class="glance-value" id="glance-ili-slope">–</span>
+            </div>
+          </div>
+          <div class="glance-metric">
+            <div class="glance-label" data-i18n="glance.sari">SARI hospitalizations</div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.peak">Peak</span>
+              <span class="glance-value" id="glance-sari-peak">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.latest">Latest</span>
+              <span class="glance-value" id="glance-sari-latest">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.slope">3-week slope</span>
+              <span class="glance-value" id="glance-sari-slope">–</span>
+            </div>
+          </div>
+          <div class="glance-metric">
+            <div class="glance-label" data-i18n="glance.icu">SARI ICU</div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.peak">Peak</span>
+              <span class="glance-value" id="glance-icu-peak">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.latest">Latest</span>
+              <span class="glance-value" id="glance-icu-latest">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.slope">3-week slope</span>
+              <span class="glance-value" id="glance-icu-slope">–</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div class="grid metrics">
         <article class="card">
           <h2 data-i18n="metrics.total.title">Total cases</h2>
@@ -136,6 +192,44 @@
         </div>
       </section>
 
+      <section class="card historical-card" id="historical-card" hidden>
+        <div class="context-header">
+          <div>
+            <h2 data-i18n="historical.title">Historical trends</h2>
+          </div>
+          <div class="badge" data-i18n="status.latestSeason">Latest season</div>
+        </div>
+        <div class="historical-grid">
+          <div class="chart-container">
+            <div class="chart-subtitle" data-i18n="historical.metrics.ili">Flu-like illness</div>
+            <canvas
+              id="historical-ili-chart"
+              role="img"
+              aria-label="Historical flu-like illness comparison"
+              data-i18n-attr="aria-label:historical.ili.aria"
+            ></canvas>
+          </div>
+          <div class="chart-container">
+            <div class="chart-subtitle" data-i18n="historical.metrics.sariAdmissions">SARI hospitalizations</div>
+            <canvas
+              id="historical-sari-chart"
+              role="img"
+              aria-label="Historical SARI admissions comparison"
+              data-i18n-attr="aria-label:historical.sari.aria"
+            ></canvas>
+          </div>
+          <div class="chart-container">
+            <div class="chart-subtitle" data-i18n="historical.metrics.sariIcu">SARI ICU</div>
+            <canvas
+              id="historical-icu-chart"
+              role="img"
+              aria-label="Historical SARI ICU comparison"
+              data-i18n-attr="aria-label:historical.icu.aria"
+            ></canvas>
+          </div>
+        </div>
+      </section>
+
       <section class="context-grid" aria-label="Virology detections and positivity" data-i18n-attr="aria-label:sections.virology">
         <article class="card">
           <div class="context-header">
@@ -143,7 +237,18 @@
               <h2 data-i18n="viro.detections.title">Sentinel Virus Detections</h2>
               <p class="footer-note" data-i18n="viro.detections.note">Latest detections among sentinel samples.</p>
             </div>
-            <div class="badge" id="viro-week-badge" data-i18n="status.latestWeek">Latest week</div>
+            <div class="chart-controls">
+              <label class="header-picker">
+                <span class="sr-only" data-i18n="controls.pathogen">Pathogen</span>
+                <select
+                  id="viro-virus"
+                  class="select select-compact"
+                  aria-label="Pathogen"
+                  data-i18n-attr="aria-label:controls.pathogen"
+                ></select>
+              </label>
+              <div class="badge" id="viro-week-badge" data-i18n="status.latestWeek">Latest week</div>
+            </div>
           </div>
           <ul class="context-list" id="viro-detections" aria-label="Sentinel detections" data-i18n-attr="aria-label:viro.detections.list.aria"></ul>
           <canvas id="viro-detections-chart" aria-label="Sentinel detections trend" role="img" data-i18n-attr="aria-label:viro.detections.chart.aria"></canvas>

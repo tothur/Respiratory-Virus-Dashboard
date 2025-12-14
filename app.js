@@ -2,9 +2,12 @@ import { respiratoryData, seasonLabels } from "./data.js";
 
 const SUPPORTED_LANGS = ["en", "hu"];
 const STORAGE_LANG_KEY = "rvd-lang";
+const INFLUENZA_ALL_KEY = "__influenza_all__";
+const VIRO_ALL_KEY = "__all_viruses__";
 
 const yearSelect = document.getElementById("year");
 const langSelect = document.getElementById("lang");
+const viroVirusSelect = document.getElementById("viro-virus");
 const totalCases = document.getElementById("total-cases");
 const peakWeek = document.getElementById("peak-week");
 const datasetDescription = document.getElementById("dataset-description");
@@ -38,6 +41,19 @@ const euPositivityList = document.getElementById("eu-positivity");
 const euWeekBadge = document.getElementById("eu-week-badge");
 let euDetectionsChart;
 let euPositivityChart;
+const historicalCard = document.getElementById("historical-card");
+let historicalILIChart;
+let historicalSariChart;
+let historicalIcuChart;
+const glanceIliPeak = document.getElementById("glance-ili-peak");
+const glanceIliLatest = document.getElementById("glance-ili-latest");
+const glanceIliSlope = document.getElementById("glance-ili-slope");
+const glanceSariPeak = document.getElementById("glance-sari-peak");
+const glanceSariLatest = document.getElementById("glance-sari-latest");
+const glanceSariSlope = document.getElementById("glance-sari-slope");
+const glanceIcuPeak = document.getElementById("glance-icu-peak");
+const glanceIcuLatest = document.getElementById("glance-icu-latest");
+const glanceIcuSlope = document.getElementById("glance-icu-slope");
 
 const STRINGS = {
   en: {
@@ -47,6 +63,7 @@ const STRINGS = {
     "header.controls": "Header controls",
     "controls.language": "Language",
     "controls.year": "Year",
+    "controls.pathogen": "Pathogen",
     "sections.alerts": "Key alerts",
     "sections.trends": "Weekly trend highlights",
     "sections.charts": "Visual summaries",
@@ -112,6 +129,32 @@ const STRINGS = {
     "table.headers.sariIcu": "SARI ICU",
     "table.headers.topPositivity": "Top positivity",
     "dataset.note": "Aggregated national respiratory virus surveillance shared by the National Public Health Center.",
+    "glance.aria": "Season at a glance",
+    "glance.title": "Season at a glance",
+    "glance.note": "Latest vs peak and short-term slope (last 3 weeks).",
+    "glance.ili": "Flu-like illness",
+    "glance.sari": "SARI hospitalizations",
+    "glance.icu": "SARI ICU",
+    "glance.peak": "Peak",
+    "glance.latest": "Latest",
+    "glance.slope": "3-week slope",
+    "coverage.nngyk": "NNGYK latest",
+    "coverage.sari": "SARI latest",
+    "coverage.erviss": "ERVISS latest",
+    "coverage.missing": "Missing weeks",
+    "markers.seasonStart": "Season start",
+    "markers.holidays": "Holidays",
+    "markers.threshold": "Threshold",
+    "markers.crossing": "Crossing",
+    "virus.all": "All viruses",
+    "virus.influenzaAll": "Influenza (all)",
+    "historical.title": "Historical trends",
+    "historical.metrics.ili": "Flu-like illness",
+    "historical.metrics.sariAdmissions": "SARI hospitalizations",
+    "historical.metrics.sariIcu": "SARI ICU",
+    "historical.ili.aria": "Historical flu-like illness comparison",
+    "historical.sari.aria": "Historical SARI admissions comparison",
+    "historical.icu.aria": "Historical SARI ICU comparison",
     // Dynamic strings
     "status.awaitingData": "Awaiting data",
     "status.noData": "No data",
@@ -151,6 +194,7 @@ const STRINGS = {
     "header.controls": "Fejléc vezérlők",
     "controls.language": "Nyelv",
     "controls.year": "Év",
+    "controls.pathogen": "Kórokozó",
     "sections.alerts": "Fő riasztások",
     "sections.trends": "Heti trend kiemelések",
     "sections.charts": "Vizuális összefoglalók",
@@ -216,6 +260,32 @@ const STRINGS = {
     "table.headers.sariIcu": "SARI intenzív",
     "table.headers.topPositivity": "Legmagasabb pozitivitás",
     "dataset.note": "Az NNGYK által közzétett országos légúti járványügyi felügyeleti adatok összesítve.",
+    "glance.aria": "Szezon áttekintés",
+    "glance.title": "Szezon áttekintés",
+    "glance.note": "Legfrissebb vs csúcs és rövidtávú trend (utolsó 3 hét).",
+    "glance.ili": "Influenzaszerű megbetegedés (ILI)",
+    "glance.sari": "SARI felvételek",
+    "glance.icu": "SARI intenzív",
+    "glance.peak": "Csúcs",
+    "glance.latest": "Legfrissebb",
+    "glance.slope": "3 hetes trend",
+    "coverage.nngyk": "NNGYK legfrissebb",
+    "coverage.sari": "SARI legfrissebb",
+    "coverage.erviss": "ERVISS legfrissebb",
+    "coverage.missing": "Hiányzó hetek",
+    "markers.seasonStart": "Szezon kezdete",
+    "markers.holidays": "Ünnepek",
+    "markers.threshold": "Küszöb",
+    "markers.crossing": "Átlépés",
+    "virus.all": "Összes vírus",
+    "virus.influenzaAll": "Influenza (mind)",
+    "historical.title": "Történeti trendek",
+    "historical.metrics.ili": "Influenzaszerű megbetegedés (ILI)",
+    "historical.metrics.sariAdmissions": "SARI felvételek",
+    "historical.metrics.sariIcu": "SARI intenzív",
+    "historical.ili.aria": "Történeti ILI összehasonlítás",
+    "historical.sari.aria": "Történeti SARI felvételek összehasonlítás",
+    "historical.icu.aria": "Történeti SARI intenzív összehasonlítás",
     // Dynamic strings
     "status.awaitingData": "Adatra vár",
     "status.noData": "Nincs adat",
@@ -315,6 +385,13 @@ function setLanguage(lang, { persist = true, updateUrl = false } = {}) {
   const normalized = normalizeLang(lang) || "en";
   currentLang = normalized;
   if (langSelect) langSelect.value = normalized;
+  if (viroVirusSelect && viroVirusSelect.options.length) {
+    const previous = viroVirusSelect.value;
+    Array.from(viroVirusSelect.options).forEach((opt) => {
+      opt.textContent = displayVirus(opt.value);
+    });
+    viroVirusSelect.value = previous;
+  }
   if (persist) {
     try {
       localStorage.setItem(STORAGE_LANG_KEY, normalized);
@@ -375,6 +452,8 @@ const VIRUS_LABELS_HU = {
 const REGION_LABELS_HU = { National: "Országos" };
 
 function displayVirus(name) {
+  if (name === VIRO_ALL_KEY) return t("virus.all");
+  if (name === INFLUENZA_ALL_KEY) return t("virus.influenzaAll");
   if (currentLang !== "hu") return name;
   return VIRUS_LABELS_HU[name] || name;
 }
@@ -429,13 +508,98 @@ function summarize(data) {
   return { total, peakWeek: peak.week ?? "–" };
 }
 
+function viroVirusesForSeason(year) {
+  const detections = aggregateDetectionsWithInfluenzaAll(respiratoryData.virologyDetections || [], year);
+  return Array.from(new Set(detections.map((row) => row.virus))).sort((a, b) => {
+    if (a === INFLUENZA_ALL_KEY) return -1;
+    if (b === INFLUENZA_ALL_KEY) return 1;
+    return String(a).localeCompare(String(b));
+  });
+}
+
+function populateViroVirusSelect(year, preferred = null) {
+  if (!viroVirusSelect) return;
+  const viruses = viroVirusesForSeason(year);
+  viroVirusSelect.innerHTML = "";
+  {
+    const option = document.createElement("option");
+    option.value = VIRO_ALL_KEY;
+    option.textContent = displayVirus(VIRO_ALL_KEY);
+    viroVirusSelect.appendChild(option);
+  }
+  viruses.forEach((virus) => {
+    const option = document.createElement("option");
+    option.value = virus;
+    option.textContent = displayVirus(virus);
+    viroVirusSelect.appendChild(option);
+  });
+  const next = (preferred && (preferred === VIRO_ALL_KEY || viruses.includes(preferred)) ? preferred : null) || VIRO_ALL_KEY;
+  viroVirusSelect.value = next;
+}
+
 function renderChips(data) {
   chipsRow.innerHTML = "";
   const summary = summarize(data);
+  const selectedYear = Number(yearSelect?.value);
+  const iliLatest = latestILITotals(DATASET, selectedYear);
+  const iliLatestLabel = iliLatest ? formatWeek(iliLatest.latestWeek) : "–";
+  const sariLatest = latestSariForSeason(selectedYear);
+  const sariLatestLabel = sariLatest ? formatWeek(sariLatest.week) : "–";
+
+  const ervissDet = respiratoryData.ervissDetections || [];
+  const ervissPos = respiratoryData.ervissPositivity || [];
+  const ervissCandidates = [...ervissDet, ...ervissPos]
+    .map((row) => ({ year: Number(row.year), week: Number(row.week) }))
+    .filter((row) => Number.isFinite(row.year) && Number.isFinite(row.week));
+  const ervissLatest = ervissCandidates.reduce(
+    (best, row) =>
+      !best || row.year > best.year || (row.year === best.year && row.week > best.week) ? row : best,
+    null
+  );
+  const ervissLatestLabel = ervissLatest ? `${ervissLatest.year}-${formatWeek(ervissLatest.week)}` : "–";
+
+  const missingWeekList = (weeks) => {
+    const unique = Array.from(new Set(weeks.map((w) => Number(w)).filter((w) => Number.isFinite(w))));
+    if (unique.length < 2) return [];
+    const sorted = unique.slice().sort(seasonWeekCompare);
+    const min = sorted[0];
+    const max = sorted[sorted.length - 1];
+    const idxMin = seasonWeekIndex(min);
+    const idxMax = seasonWeekIndex(max);
+    const expected = [];
+    for (let idx = idxMin; idx <= idxMax; idx += 1) {
+      const week = idx >= 53 ? idx - 53 : idx;
+      expected.push(week);
+    }
+    const present = new Set(unique);
+    return expected.filter((w) => !present.has(w));
+  };
+
+  const iliMissing = iliLatest
+    ? missingWeekList(
+        respiratoryData.weekly
+          .filter((row) => row.dataset === DATASET && row.year === selectedYear && row.virus === DEFAULT_VIRUS)
+          .map((row) => row.week)
+      )
+    : [];
+  const sariMissing = sariLatest
+    ? missingWeekList((respiratoryData.sariWeekly || []).filter((r) => Number(r.year) === selectedYear).map((r) => r.week))
+    : [];
+
   const chips = [
     { label: t("chips.dataPoints"), value: data.length },
     { label: t("chips.peakWeek"), value: summary.peakWeek },
     { label: t("chips.medianCases"), value: median(data.map((d) => d.cases)) },
+    { label: t("coverage.nngyk"), value: iliLatestLabel },
+    { label: t("coverage.sari"), value: sariLatestLabel },
+    { label: t("coverage.erviss"), value: ervissLatestLabel },
+    {
+      label: `${t("coverage.missing")} (ILI/SARI)`,
+      value:
+        (iliMissing.length || sariMissing.length)
+          ? `${iliMissing.length}/${sariMissing.length}`
+          : "0/0",
+    },
   ];
 
   chips.forEach((chip) => {
@@ -757,6 +921,69 @@ function renderILIChart(year) {
 
   iliYearBadge.textContent = rows.length ? formatSeasonLabel(year) : t("status.awaitingData");
 
+  const thresholdSeries = {
+    label: t("markers.threshold"),
+    type: "line",
+    data: labels.length ? labels.map(() => ILI_THRESHOLD) : [ILI_THRESHOLD],
+    borderColor: "rgba(244, 63, 94, 0.9)",
+    borderWidth: 1.5,
+    borderDash: [6, 6],
+    pointRadius: 0,
+    tension: 0,
+  };
+
+  const crossingPoint = (() => {
+    if (values.length < 2) return null;
+    for (let i = 1; i < values.length; i += 1) {
+      if (values[i] >= ILI_THRESHOLD && values[i - 1] < ILI_THRESHOLD) {
+        return { x: labels[i], y: values[i] };
+      }
+    }
+    return null;
+  })();
+
+  const crossingSeries = crossingPoint
+    ? {
+        label: t("markers.crossing"),
+        type: "scatter",
+        data: [crossingPoint],
+        backgroundColor: "rgba(244, 63, 94, 1)",
+        borderColor: "rgba(244, 63, 94, 1)",
+        pointRadius: 5,
+        pointHoverRadius: 7,
+      }
+    : null;
+
+  const seasonMarkerPlugin = {
+    id: "seasonMarkers",
+    afterDraw: (chart) => {
+      const { ctx } = chart;
+      const xScale = chart.scales.x;
+      const yScale = chart.scales.y;
+      if (!xScale || !yScale) return;
+      const drawLine = (label, text) => {
+        const idx = chart.data.labels.indexOf(label);
+        if (idx < 0) return;
+        const x = xScale.getPixelForValue(idx);
+        ctx.save();
+        ctx.strokeStyle = "rgba(148, 163, 184, 0.35)";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(x, yScale.top);
+        ctx.lineTo(x, yScale.bottom);
+        ctx.stroke();
+        ctx.fillStyle = "rgba(148, 163, 184, 0.85)";
+        ctx.font = "12px Inter, system-ui, sans-serif";
+        ctx.textAlign = "left";
+        ctx.fillText(text, x + 6, yScale.top + 14);
+        ctx.restore();
+      };
+      drawLine("W40", t("markers.seasonStart"));
+      drawLine("W52", t("markers.holidays"));
+      drawLine("W01", t("markers.holidays"));
+    },
+  };
+
   trendChart = new Chart(ctx, {
     type: "bar",
     data: {
@@ -771,6 +998,8 @@ function renderILIChart(year) {
           borderRadius: 6,
           hoverBackgroundColor: "rgba(6, 182, 212, 0.8)",
         },
+        thresholdSeries,
+        ...(crossingSeries ? [crossingSeries] : []),
       ],
     },
     options: {
@@ -784,6 +1013,7 @@ function renderILIChart(year) {
         y: { beginAtZero: true, ticks: { color: "#9ca3af" }, grid: { color: "rgba(255,255,255,0.05)" } },
       },
     },
+    plugins: [seasonMarkerPlugin],
   });
 }
 
@@ -791,6 +1021,75 @@ function latestSariForSeason(year) {
   const rows = (respiratoryData.sariWeekly || []).filter((row) => matchesSeasonYear(row.year, year));
   if (!rows.length) return null;
   return rows.reduce((best, row) => (seasonWeekIndex(row.week) > seasonWeekIndex(best.week) ? row : best), rows[0]);
+}
+
+function computeGlance(values) {
+  const rows = values.filter((row) => Number.isFinite(Number(row.week))).slice().sort((a, b) => seasonWeekCompare(a.week, b.week));
+  if (!rows.length) return null;
+  const peak = rows.reduce((best, row) => (Number(row.value ?? 0) > Number(best.value ?? -Infinity) ? row : best), rows[0]);
+  const latest = rows[rows.length - 1];
+  const lastPoints = rows.slice(Math.max(0, rows.length - 3));
+  let slope = null;
+  if (lastPoints.length >= 2) {
+    const first = lastPoints[0];
+    const last = lastPoints[lastPoints.length - 1];
+    const delta = Number(last.value ?? 0) - Number(first.value ?? 0);
+    slope = delta / (lastPoints.length - 1);
+  }
+  const pctOfPeak = peak && Number(peak.value) ? (Number(latest.value ?? 0) / Number(peak.value)) * 100 : null;
+  return { peak, latest, pctOfPeak, slope };
+}
+
+function formatGlanceLine(glance) {
+  if (!glance) return "–";
+  const week = formatWeek(glance.week);
+  const value = Number(glance.value ?? 0);
+  return `${week}: ${value.toLocaleString()}`;
+}
+
+function renderSeasonAtGlance(year) {
+  const iliTotals = respiratoryData.weekly
+    .filter((row) => row.dataset === DATASET && Number(row.year) === Number(year) && row.virus === DEFAULT_VIRUS)
+    .reduce((map, row) => {
+      const week = Number(row.week);
+      if (!Number.isFinite(week)) return map;
+      map.set(week, (map.get(week) || 0) + Number(row.cases ?? 0));
+      return map;
+    }, new Map());
+  const iliSeries = Array.from(iliTotals.entries()).map(([week, value]) => ({ week, value }));
+  const iliGlance = computeGlance(iliSeries);
+
+  const sariRows = (respiratoryData.sariWeekly || []).filter((row) => Number(row.year) === Number(year));
+  const sariSeries = sariRows.map((row) => ({ week: Number(row.week), value: Number(row.admissions ?? 0) }));
+  const icuSeries = sariRows.map((row) => ({ week: Number(row.week), value: Number(row.icu ?? 0) }));
+  const sariGlance = computeGlance(sariSeries);
+  const icuGlance = computeGlance(icuSeries);
+
+  const renderBlock = (peakEl, latestEl, slopeEl, glance) => {
+    if (!peakEl || !latestEl || !slopeEl) return;
+    if (!glance) {
+      peakEl.textContent = "–";
+      latestEl.textContent = "–";
+      slopeEl.textContent = "–";
+      return;
+    }
+    peakEl.textContent = formatGlanceLine(glance.peak);
+    const latestLine = `${formatWeek(glance.latest.week)}: ${Number(glance.latest.value ?? 0).toLocaleString()}${
+      glance.pctOfPeak != null ? ` (${Math.round(glance.pctOfPeak)}%)` : ""
+    }`;
+    latestEl.textContent = latestLine;
+    if (glance.slope == null) {
+      slopeEl.textContent = "–";
+    } else {
+      const rounded = Math.round(glance.slope);
+      const sign = rounded > 0 ? "+" : "";
+      slopeEl.textContent = `${sign}${rounded.toLocaleString()}/week`;
+    }
+  };
+
+  renderBlock(glanceIliPeak, glanceIliLatest, glanceIliSlope, iliGlance);
+  renderBlock(glanceSariPeak, glanceSariLatest, glanceSariSlope, sariGlance);
+  renderBlock(glanceIcuPeak, glanceIcuLatest, glanceIcuSlope, icuGlance);
 }
 
 function renderSariCards(year) {
@@ -820,6 +1119,36 @@ function renderSariChart(year) {
   const icu = rows.map((d) => d.icu);
 
   if (sariChart) sariChart.destroy();
+
+  const seasonMarkerPlugin = {
+    id: "seasonMarkersSari",
+    afterDraw: (chart) => {
+      const { ctx } = chart;
+      const xScale = chart.scales.x;
+      const yScale = chart.scales.y;
+      if (!xScale || !yScale) return;
+      const drawLine = (label, text) => {
+        const idx = chart.data.labels.indexOf(label);
+        if (idx < 0) return;
+        const x = xScale.getPixelForValue(idx);
+        ctx.save();
+        ctx.strokeStyle = "rgba(148, 163, 184, 0.35)";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(x, yScale.top);
+        ctx.lineTo(x, yScale.bottom);
+        ctx.stroke();
+        ctx.fillStyle = "rgba(148, 163, 184, 0.85)";
+        ctx.font = "12px Inter, system-ui, sans-serif";
+        ctx.textAlign = "left";
+        ctx.fillText(text, x + 6, yScale.top + 14);
+        ctx.restore();
+      };
+      drawLine("W40", t("markers.seasonStart"));
+      drawLine("W52", t("markers.holidays"));
+      drawLine("W01", t("markers.holidays"));
+    },
+  };
 
   sariChart = new Chart(ctx, {
     type: "bar",
@@ -863,6 +1192,7 @@ function renderSariChart(year) {
         },
       },
     },
+    plugins: [seasonMarkerPlugin],
   });
 }
 
@@ -881,9 +1211,37 @@ function aggregateDetections(detections = respiratoryData.virologyDetections || 
   return Array.from(byKey.values());
 }
 
+function isInfluenzaVirus(name) {
+  if (!name || typeof name !== "string") return false;
+  if (name === INFLUENZA_ALL_KEY) return false;
+  return name.startsWith("Influenza");
+}
+
+function aggregateDetectionsWithInfluenzaAll(detections = respiratoryData.virologyDetections || [], yearFilter = null) {
+  const aggregated = aggregateDetections(detections, yearFilter);
+  const byWeek = new Map();
+  aggregated.forEach((row) => {
+    if (!isInfluenzaVirus(row.virus)) return;
+    const week = Number(row.week);
+    if (!Number.isFinite(week)) return;
+    byWeek.set(week, (byWeek.get(week) || 0) + Number(row.detections ?? 0));
+  });
+
+  const influenzaRows = Array.from(byWeek.entries())
+    .filter(([, total]) => Number.isFinite(total) && total > 0)
+    .map(([week, detections]) => ({ year: yearFilter ?? undefined, week, virus: INFLUENZA_ALL_KEY, detections }));
+
+  return aggregated.concat(influenzaRows);
+}
+
 function renderVirology(year) {
-  const detections = aggregateDetections(respiratoryData.virologyDetections || [], year);
+  const detections = aggregateDetectionsWithInfluenzaAll(respiratoryData.virologyDetections || [], year);
   const positivity = (respiratoryData.virologyPositivity || []).filter((row) => matchesSeasonYear(row.year, year));
+
+  if (viroVirusSelect) {
+    populateViroVirusSelect(year, viroVirusSelect.value);
+  }
+  const selectedDetVirus = viroVirusSelect?.value || VIRO_ALL_KEY;
 
   const candidateWeeks = Array.from(
     new Set([...detections.map((d) => d.week), ...positivity.map((p) => p.week)].filter((w) => Number.isFinite(Number(w))))
@@ -895,14 +1253,21 @@ function renderVirology(year) {
     latestWeek === "–" ? t("viro.week.latest") : t("viro.week.week", { week: formatWeek(latestWeek) });
 
   viroDetectionsList.innerHTML = "";
-  detections
+  const latestDetectionRows = detections
     .filter((d) => d.week === latestWeek)
-    .slice(0, 6)
-    .forEach((row) => {
-      const li = document.createElement("li");
-      li.innerHTML = `<span>${displayVirus(row.virus)}</span><strong>${Number(row.detections ?? 0).toLocaleString()}</strong>`;
-      viroDetectionsList.appendChild(li);
-    });
+    .slice()
+    .sort((a, b) => Number(b.detections ?? 0) - Number(a.detections ?? 0));
+  const influenzaAllRow = latestDetectionRows.find((row) => row.virus === INFLUENZA_ALL_KEY);
+  const detectionRowsForList = [
+    ...(influenzaAllRow ? [influenzaAllRow] : []),
+    ...latestDetectionRows.filter((row) => row.virus !== INFLUENZA_ALL_KEY),
+  ].slice(0, 6);
+
+  detectionRowsForList.forEach((row) => {
+    const li = document.createElement("li");
+    li.innerHTML = `<span>${displayVirus(row.virus)}</span><strong>${Number(row.detections ?? 0).toLocaleString()}</strong>`;
+    viroDetectionsList.appendChild(li);
+  });
   if (!viroDetectionsList.children.length) {
     const li = document.createElement("li");
     li.textContent = t("viro.detections.empty");
@@ -929,17 +1294,27 @@ function renderVirology(year) {
   const posCtx = document.getElementById("viro-positivity-chart").getContext("2d");
 
   const detWeeks = Array.from(new Set(detections.map((d) => d.week))).sort(seasonWeekCompare);
-  const detViruses = Array.from(new Set(detections.map((d) => d.virus)));
+  const detViruses =
+    selectedDetVirus === VIRO_ALL_KEY
+      ? Array.from(new Set(detections.map((d) => d.virus))).sort((a, b) => {
+          if (a === INFLUENZA_ALL_KEY) return -1;
+          if (b === INFLUENZA_ALL_KEY) return 1;
+          return String(a).localeCompare(String(b));
+        })
+      : [selectedDetVirus];
   const detectionPalette = {
     "SARS-CoV-2": "#22c55e",
     "Influenza A(H1N1pdm09)": "#f97316",
     "Influenza A(NT)": "#38bdf8",
     "Influenza B": "#a855f7",
+    [INFLUENZA_ALL_KEY]: "#ec4899",
   };
   const detectionFallback = ["#eab308", "#14b8a6", "#ef4444", "#6366f1"];
   const detSeries = detViruses.map((virus, idx) => {
     const color = detectionPalette[virus] || detectionFallback[idx % detectionFallback.length];
-    const points = detections.filter((d) => d.virus === virus).reduce((acc, row) => {
+    const points = detections
+      .filter((d) => d.virus === virus)
+      .reduce((acc, row) => {
       acc[row.week] = row.detections;
       return acc;
     }, {});
@@ -958,7 +1333,7 @@ function renderVirology(year) {
   if (viroDetectionsChart) viroDetectionsChart.destroy();
   viroDetectionsChart = new Chart(detCtx, {
     type: "line",
-    data: { labels: detWeeks.map((w) => formatWeek(w)), datasets: detSeries },
+    data: { labels: detWeeks.length ? detWeeks.map((w) => formatWeek(w)) : [t("status.noData")], datasets: detSeries },
     options: {
       responsive: true,
       interaction: { mode: "index", intersect: false },
@@ -1157,6 +1532,175 @@ function renderEuVirology() {
   });
 }
 
+function destroyHistoricalCharts() {
+  if (historicalILIChart) historicalILIChart.destroy();
+  if (historicalSariChart) historicalSariChart.destroy();
+  if (historicalIcuChart) historicalIcuChart.destroy();
+  historicalILIChart = null;
+  historicalSariChart = null;
+  historicalIcuChart = null;
+}
+
+function sumByWeek(rows, valueKey) {
+  const byWeek = new Map();
+  rows.forEach((row) => {
+    const week = Number(row.week);
+    if (!Number.isFinite(week)) return;
+    const value = Number(row[valueKey] ?? 0);
+    if (!Number.isFinite(value)) return;
+    byWeek.set(week, (byWeek.get(week) || 0) + value);
+  });
+  return byWeek;
+}
+
+function renderHistoricalTrends(selectedYear) {
+  if (!historicalCard) return;
+
+  const compareYear = selectedYear - 1;
+  const hasCompareYear = Array.isArray(respiratoryData.years) && respiratoryData.years.includes(compareYear);
+  const show = selectedYear === 2025 && hasCompareYear;
+  historicalCard.hidden = !show;
+  if (!show) {
+    destroyHistoricalCharts();
+    return;
+  }
+
+  const iliRowsA = respiratoryData.weekly.filter(
+    (row) => row.dataset === DATASET && row.year === compareYear && row.virus === DEFAULT_VIRUS
+  );
+  const iliRowsB = respiratoryData.weekly.filter(
+    (row) => row.dataset === DATASET && row.year === selectedYear && row.virus === DEFAULT_VIRUS
+  );
+  const iliA = sumByWeek(iliRowsA, "cases");
+  const iliB = sumByWeek(iliRowsB, "cases");
+
+  const sariRows = respiratoryData.sariWeekly || [];
+  const sariA = sumByWeek(sariRows.filter((row) => Number(row.year) === compareYear), "admissions");
+  const sariB = sumByWeek(sariRows.filter((row) => Number(row.year) === selectedYear), "admissions");
+  const icuA = sumByWeek(sariRows.filter((row) => Number(row.year) === compareYear), "icu");
+  const icuB = sumByWeek(sariRows.filter((row) => Number(row.year) === selectedYear), "icu");
+
+  const weeks = Array.from(
+    new Set([
+      ...iliA.keys(),
+      ...iliB.keys(),
+      ...sariA.keys(),
+      ...sariB.keys(),
+      ...icuA.keys(),
+      ...icuB.keys(),
+    ])
+  ).sort(seasonWeekCompare);
+
+  const labels = weeks.length ? weeks.map((w) => formatWeek(w)) : [t("status.noData")];
+  const makeSeries = (map) => (weeks.length ? weeks.map((w) => (map.has(w) ? map.get(w) : null)) : [0]);
+
+  const seasonA = formatSeasonLabel(compareYear);
+  const seasonB = formatSeasonLabel(selectedYear);
+  const muted = "rgba(148, 163, 184, 0.9)";
+  const accent = "rgba(125, 211, 252, 0.95)";
+
+  const iliCtx = document.getElementById("historical-ili-chart")?.getContext("2d");
+  const sariCtx = document.getElementById("historical-sari-chart")?.getContext("2d");
+  const icuCtx = document.getElementById("historical-icu-chart")?.getContext("2d");
+  if (!iliCtx || !sariCtx || !icuCtx) return;
+
+  destroyHistoricalCharts();
+
+  const baseOptions = {
+    responsive: true,
+    interaction: { mode: "index", intersect: false },
+    plugins: { legend: { labels: { color: "#e5e7eb" } } },
+    scales: {
+      x: { ticks: { color: "#9ca3af" }, grid: { display: false } },
+      y: { beginAtZero: true, ticks: { color: "#9ca3af" }, grid: { color: "rgba(255,255,255,0.05)" } },
+    },
+  };
+
+  historicalILIChart = new Chart(iliCtx, {
+    type: "line",
+    data: {
+      labels,
+      datasets: [
+        {
+          label: seasonA,
+          data: makeSeries(iliA),
+          borderColor: muted,
+          backgroundColor: muted,
+          pointRadius: 2.5,
+          pointHoverRadius: 4,
+          tension: 0.25,
+        },
+        {
+          label: seasonB,
+          data: makeSeries(iliB),
+          borderColor: accent,
+          backgroundColor: accent,
+          pointRadius: 2.5,
+          pointHoverRadius: 4,
+          tension: 0.25,
+        },
+      ],
+    },
+    options: baseOptions,
+  });
+
+  historicalSariChart = new Chart(sariCtx, {
+    type: "line",
+    data: {
+      labels,
+      datasets: [
+        {
+          label: seasonA,
+          data: makeSeries(sariA),
+          borderColor: muted,
+          backgroundColor: muted,
+          pointRadius: 2.5,
+          pointHoverRadius: 4,
+          tension: 0.25,
+        },
+        {
+          label: seasonB,
+          data: makeSeries(sariB),
+          borderColor: "rgba(251, 146, 60, 0.95)",
+          backgroundColor: "rgba(251, 146, 60, 0.95)",
+          pointRadius: 2.5,
+          pointHoverRadius: 4,
+          tension: 0.25,
+        },
+      ],
+    },
+    options: baseOptions,
+  });
+
+  historicalIcuChart = new Chart(icuCtx, {
+    type: "line",
+    data: {
+      labels,
+      datasets: [
+        {
+          label: seasonA,
+          data: makeSeries(icuA),
+          borderColor: muted,
+          backgroundColor: muted,
+          pointRadius: 2.5,
+          pointHoverRadius: 4,
+          tension: 0.25,
+        },
+        {
+          label: seasonB,
+          data: makeSeries(icuB),
+          borderColor: "rgba(250, 204, 21, 0.95)",
+          backgroundColor: "rgba(250, 204, 21, 0.95)",
+          pointRadius: 2.5,
+          pointHoverRadius: 4,
+          tension: 0.25,
+        },
+      ],
+    },
+    options: baseOptions,
+  });
+}
+
 function handleSort(column) {
   if (sortColumn === column) {
     sortDirection = sortDirection === "asc" ? "desc" : "asc";
@@ -1204,11 +1748,13 @@ function applyFilters() {
   renderLeaderAlert(year);
   renderEuLeaderAlert();
   renderFluAlert(dataset, year);
+  renderSeasonAtGlance(year);
   renderILIChart(year);
   renderSariCards(year);
   renderSariChart(year);
   renderVirology(year);
   renderEuVirology();
+  renderHistoricalTrends(year);
 }
 
 async function loadNNGYKData() {
@@ -1388,6 +1934,9 @@ async function main() {
   applyFilters();
 
   yearSelect.addEventListener("change", applyFilters);
+  if (viroVirusSelect) {
+    viroVirusSelect.addEventListener("change", applyFilters);
+  }
   if (langSelect) {
     langSelect.addEventListener("change", () => {
       setLanguage(langSelect.value, { persist: true, updateUrl: true });
