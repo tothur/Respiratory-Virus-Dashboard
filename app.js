@@ -4,9 +4,11 @@ const SUPPORTED_LANGS = ["en", "hu"];
 const STORAGE_LANG_KEY = "rvd-lang";
 const INFLUENZA_ALL_KEY = "__influenza_all__";
 const VIRO_ALL_KEY = "__all_viruses__";
+const STORAGE_THEME_KEY = "rvd-theme";
 
 const yearSelect = document.getElementById("year");
 const langSelect = document.getElementById("lang");
+const themeSelect = document.getElementById("theme");
 const viroVirusSelect = document.getElementById("viro-virus");
 const totalCases = document.getElementById("total-cases");
 const peakWeek = document.getElementById("peak-week");
@@ -31,6 +33,7 @@ const iliYearBadge = document.getElementById("ili-year-badge");
 const sariAdmissionsValue = document.getElementById("sari-admissions");
 const sariIcuValue = document.getElementById("sari-icu");
 const sariWeekBadge = document.getElementById("sari-week-badge");
+const sariIcuWeekBadge = document.getElementById("sari-icu-week-badge");
 const viroWeekBadge = document.getElementById("viro-week-badge");
 const viroDetectionsList = document.getElementById("viro-detections");
 const viroPositivityList = document.getElementById("viro-positivity");
@@ -57,13 +60,17 @@ const glanceIcuSlope = document.getElementById("glance-icu-slope");
 
 const STRINGS = {
   en: {
-    "meta.title": "Seasonal Respiratory Virus Dashboard – Hungary/EU",
-    "header.title": "Seasonal Respiratory Virus Dashboard – Hungary/EU",
-    "header.subtitle": "Respiratory pandemic dashboard for Hungary & EU/EEA powered by NNGYK and ECDC data",
+    "meta.title": "Seasonal Respiratory Pathogen Dashboard",
+    "header.title": "Seasonal Respiratory Pathogen Dashboard",
+    "header.subtitle": "Hungarian and European situation overview based on NNGYK and ECDC data",
     "header.controls": "Header controls",
     "controls.language": "Language",
     "controls.year": "Year",
     "controls.pathogen": "Pathogen",
+    "controls.theme": "Theme",
+    "theme.system": "System",
+    "theme.dark": "Dark",
+    "theme.light": "Light",
     "sections.alerts": "Key alerts",
     "sections.trends": "Weekly trend highlights",
     "sections.charts": "Visual summaries",
@@ -71,6 +78,14 @@ const STRINGS = {
     "sections.eu": "EU/EEA virology detections and positivity",
     "sections.table": "Weekly table",
     "sections.dataset": "Dataset notes",
+    "sections.huBanner.aria": "Hungary section",
+    "sections.huBanner.kicker": "Section",
+    "sections.huBanner.title": "Hungary",
+    "sections.huBanner.note": "National surveillance and sentinel signals.",
+    "sections.euBanner.aria": "EU/EEA section",
+    "sections.euBanner.kicker": "Section",
+    "sections.euBanner.title": "EU/EEA",
+    "sections.euBanner.note": "ECDC ERVISS detections and positivity.",
     "alerts.flu.title": "Seasonal influenza threshold",
     "alerts.loading": "Awaiting data…",
     "alerts.loadingPos": "Awaiting positivity data…",
@@ -188,13 +203,17 @@ const STRINGS = {
     "week.label": "Week {week}",
   },
   hu: {
-    "meta.title": "Szezonális Légúti Kórokozó Dashboard – Magyarország/EU",
-    "header.title": "Szezonális Légúti Kórokozó Dashboard – Magyarország/EU",
-    "header.subtitle": "Magyarországi és EU/EGT légúti helyzetkép az NNGYK és ECDC adatai alapján",
+    "meta.title": "Szezonális Légúti Kórokozó Dashboard",
+    "header.title": "Szezonális Légúti Kórokozó Dashboard",
+    "header.subtitle": "A magyarországi és európai helyzetkép az NNGYK és ECDC adatai alapján",
     "header.controls": "Fejléc vezérlők",
     "controls.language": "Nyelv",
     "controls.year": "Év",
     "controls.pathogen": "Kórokozó",
+    "controls.theme": "Téma",
+    "theme.system": "Rendszer",
+    "theme.dark": "Sötét",
+    "theme.light": "Világos",
     "sections.alerts": "Fő riasztások",
     "sections.trends": "Heti trend kiemelések",
     "sections.charts": "Vizuális összefoglalók",
@@ -202,6 +221,14 @@ const STRINGS = {
     "sections.eu": "EU/EGT virológiai kimutatások és pozitivitás",
     "sections.table": "Heti táblázat",
     "sections.dataset": "Adatkészletek megjegyzései",
+    "sections.huBanner.aria": "Magyarország szekció",
+    "sections.huBanner.kicker": "Szekció",
+    "sections.huBanner.title": "Magyarország",
+    "sections.huBanner.note": "Országos felügyeleti adatok és őrszem jelzések.",
+    "sections.euBanner.aria": "EU/EGT szekció",
+    "sections.euBanner.kicker": "Szekció",
+    "sections.euBanner.title": "EU/EGT",
+    "sections.euBanner.note": "ECDC ERVISS kimutatások és tesztpozitivitás.",
     "alerts.flu.title": "Szezonális influenzaküszöb",
     "alerts.loading": "Adatok betöltése…",
     "alerts.loadingPos": "Pozitivitási adatok betöltése…",
@@ -411,6 +438,133 @@ function setLanguage(lang, { persist = true, updateUrl = false } = {}) {
   applyStaticI18n();
 }
 
+function applyTheme(theme) {
+  const value = String(theme || "system");
+  const normalized = value === "dark" || value === "light" ? value : "system";
+  if (normalized === "system") {
+    const prefersLight = typeof window !== "undefined" && window.matchMedia
+      ? window.matchMedia("(prefers-color-scheme: light)").matches
+      : false;
+    if (prefersLight) document.documentElement.setAttribute("data-theme", "light");
+    else document.documentElement.removeAttribute("data-theme");
+  } else {
+    document.documentElement.setAttribute("data-theme", normalized);
+  }
+  configureChartDefaults();
+}
+
+function initThemeControls() {
+  const storedTheme = (() => {
+    try {
+      return localStorage.getItem(STORAGE_THEME_KEY);
+    } catch {
+      return null;
+    }
+  })();
+
+  const theme = storedTheme || "system";
+  applyTheme(theme);
+  if (themeSelect) themeSelect.value = theme;
+
+  if (themeSelect) {
+    themeSelect.addEventListener("change", () => {
+      const next = themeSelect.value;
+      applyTheme(next);
+      try {
+        localStorage.setItem(STORAGE_THEME_KEY, next);
+      } catch {
+        // ignore
+      }
+      applyFilters();
+    });
+  }
+
+  if (typeof window !== "undefined" && window.matchMedia) {
+    const mql = window.matchMedia("(prefers-color-scheme: light)");
+    const handler = () => {
+      const current = themeSelect?.value || theme;
+      if (current === "system") {
+        applyTheme("system");
+        applyFilters();
+      }
+    };
+    try {
+      mql.addEventListener("change", handler);
+    } catch {
+      // Safari fallback
+      mql.addListener(handler);
+    }
+  }
+}
+
+let chartsConfigured = false;
+
+function chartTheme() {
+  const styles = getComputedStyle(document.documentElement);
+  const theme = document.documentElement.getAttribute("data-theme");
+  const text = styles.getPropertyValue("--text").trim() || "#e8edf7";
+  const muted = styles.getPropertyValue("--muted").trim() || "#9fb3c8";
+  const grid = theme === "light" ? "rgba(15, 23, 42, 0.10)" : "rgba(255, 255, 255, 0.05)";
+  const tooltipBg = theme === "light" ? "rgba(255, 255, 255, 0.94)" : "rgba(2, 6, 23, 0.92)";
+  const tooltipBorder = theme === "light" ? "rgba(15, 23, 42, 0.18)" : "rgba(255, 255, 255, 0.14)";
+  return { text, muted, grid, tooltipBg, tooltipBorder, theme };
+}
+
+function configureChartDefaults() {
+  if (typeof Chart === "undefined") return;
+  const colors = chartTheme();
+
+  Chart.defaults.font.family = '"Inter", system-ui, -apple-system, sans-serif';
+  Chart.defaults.color = colors.muted;
+  Chart.defaults.borderColor = colors.grid;
+  Chart.defaults.plugins.legend.labels.color = colors.text;
+  Chart.defaults.plugins.legend.labels.boxWidth = 10;
+  Chart.defaults.plugins.legend.labels.usePointStyle = true;
+  Chart.defaults.plugins.tooltip.backgroundColor = colors.tooltipBg;
+  Chart.defaults.plugins.tooltip.borderColor = colors.tooltipBorder;
+  Chart.defaults.plugins.tooltip.borderWidth = 1;
+  Chart.defaults.plugins.tooltip.titleColor = colors.text;
+  Chart.defaults.plugins.tooltip.bodyColor = colors.text;
+  Chart.defaults.plugins.tooltip.titleSpacing = 6;
+  Chart.defaults.plugins.tooltip.padding = 10;
+  Chart.defaults.plugins.tooltip.cornerRadius = 12;
+
+  if (!chartsConfigured && typeof Chart.register === "function") {
+    Chart.register({
+      id: "focusDim",
+      beforeDatasetsDraw: (chart) => {
+        if (chart.config.type !== "line") return;
+        if ((chart.data?.datasets || []).length < 2) return;
+        const active = chart.getActiveElements ? chart.getActiveElements() : [];
+        chart.$focusDim = active && active.length ? active[0].datasetIndex : null;
+      },
+      beforeDatasetDraw: (chart, args) => {
+        if (chart.$focusDim == null) return;
+        if (chart.config.type !== "line") return;
+        chart.ctx.save();
+        if (args.index !== chart.$focusDim) chart.ctx.globalAlpha = 0.18;
+      },
+      afterDatasetDraw: (chart) => {
+        if (chart.$focusDim == null) return;
+        if (chart.config.type !== "line") return;
+        chart.ctx.restore();
+      },
+      afterDatasetsDraw: (chart) => {
+        chart.$focusDim = null;
+      },
+    });
+    chartsConfigured = true;
+  }
+}
+
+function markChartRendered(canvasEl) {
+  if (!canvasEl) return;
+  canvasEl.classList.remove("chart-fade");
+  // Restart animation.
+  void canvasEl.offsetWidth;
+  canvasEl.classList.add("chart-fade");
+}
+
 // National epidemic threshold set to ~28,900 cases (approx. 289 per 100k for ~10M population).
 const ILI_THRESHOLD = 28900;
 const DEFAULT_VIRUS = "ILI (flu-like illness)";
@@ -537,6 +691,33 @@ function populateViroVirusSelect(year, preferred = null) {
   viroVirusSelect.value = next;
 }
 
+function chipIconSvg(id) {
+  const base = (path) =>
+    `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="${path}"/></svg>`;
+  switch (id) {
+    case "points":
+      return base(
+        "M7 3a4 4 0 1 0 0 8a4 4 0 0 0 0-8Zm0 2a2 2 0 1 1 0 4a2 2 0 0 1 0-4Zm10-2a4 4 0 1 0 0 8a4 4 0 0 0 0-8Zm0 2a2 2 0 1 1 0 4a2 2 0 0 1 0-4ZM4 21a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v0.5H4V21Zm10 0a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v0.5h-10V21Z"
+      );
+    case "peak":
+      return base("M12 3l2.2 5.6L20 9.2l-4.4 3.7L17 19l-5-3l-5 3l1.4-6.1L4 9.2l5.8-.6L12 3Z");
+    case "median":
+      return base("M5 6h14v2H5V6Zm0 5h9v2H5v-2Zm0 5h14v2H5v-2Z");
+    case "nngyk":
+      return base("M4 20V8l8-4l8 4v12h-2V9.3l-6-3l-6 3V20H4Z");
+    case "sari":
+      return base("M12 2a7 7 0 0 1 7 7c0 4.2-3 7.7-7 13c-4-5.3-7-8.8-7-13a7 7 0 0 1 7-7Zm0 4a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z");
+    case "erviss":
+      return base(
+        "M12 2.5a9.5 9.5 0 1 0 0 19a9.5 9.5 0 0 0 0-19Zm6.9 8h-2.8a16.4 16.4 0 0 0-1-4.4a7.54 7.54 0 0 1 3.8 4.4ZM12 4.6c.8 1.1 1.5 2.9 1.9 5.9H10.1c.4-3 1.1-4.8 1.9-5.9ZM5.3 6.1a7.54 7.54 0 0 1 3.8-1.5a16.4 16.4 0 0 0-1 4.4H5.3Zm0 11.8h2.8a16.4 16.4 0 0 0 1 4.4a7.54 7.54 0 0 1-3.8-4.4Zm4.8 0h3.8c-.4 3-1.1 4.8-1.9 5.9c-.8-1.1-1.5-2.9-1.9-5.9Zm0-2h3.8a19 19 0 0 0 0-3.8h-3.8a19 19 0 0 0 0 3.8Zm5.8 6.4a16.4 16.4 0 0 0 1-4.4h2.8a7.54 7.54 0 0 1-3.8 4.4Z"
+      );
+    case "missing":
+      return base("M12 2a10 10 0 1 0 0 20a10 10 0 0 0 0-20Zm1 5v6h-2V7h2Zm-1 11a1.25 1.25 0 1 1 0-2.5a1.25 1.25 0 0 1 0 2.5Z");
+    default:
+      return base("M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0-18Z");
+  }
+}
+
 function renderChips(data) {
   chipsRow.innerHTML = "";
   const summary = summarize(data);
@@ -587,13 +768,14 @@ function renderChips(data) {
     : [];
 
   const chips = [
-    { label: t("chips.dataPoints"), value: data.length },
-    { label: t("chips.peakWeek"), value: summary.peakWeek },
-    { label: t("chips.medianCases"), value: median(data.map((d) => d.cases)) },
-    { label: t("coverage.nngyk"), value: iliLatestLabel },
-    { label: t("coverage.sari"), value: sariLatestLabel },
-    { label: t("coverage.erviss"), value: ervissLatestLabel },
+    { id: "points", label: t("chips.dataPoints"), value: data.length },
+    { id: "peak", label: t("chips.peakWeek"), value: summary.peakWeek },
+    { id: "median", label: t("chips.medianCases"), value: median(data.map((d) => d.cases)) },
+    { id: "nngyk", label: t("coverage.nngyk"), value: iliLatestLabel },
+    { id: "sari", label: t("coverage.sari"), value: sariLatestLabel },
+    { id: "erviss", label: t("coverage.erviss"), value: ervissLatestLabel },
     {
+      id: "missing",
       label: `${t("coverage.missing")} (ILI/SARI)`,
       value:
         (iliMissing.length || sariMissing.length)
@@ -605,8 +787,29 @@ function renderChips(data) {
   chips.forEach((chip) => {
     const span = document.createElement("span");
     span.className = "chip";
-    span.textContent = `${chip.label}: ${chip.value}`;
+    span.innerHTML = `<span class="chip-icon">${chipIconSvg(chip.id)}</span><span class="chip-label">${chip.label}</span><span class="chip-value">${chip.value}</span>`;
     chipsRow.appendChild(span);
+  });
+}
+
+function updateLoadingIndicators() {
+  const isLoadingText = (text) => {
+    if (!text) return false;
+    return /Awaiting|Adatok betöltése|Adatra vár|betöltése/i.test(text);
+  };
+  const candidates = [
+    fluAlertText,
+    leaderAlertText,
+    leaderEuAlertText,
+    latestWeekBadge,
+    sariWeekBadge,
+    viroWeekBadge,
+    euWeekBadge,
+    iliYearBadge,
+  ].filter(Boolean);
+  candidates.forEach((el) => {
+    const loading = isLoadingText(el.textContent);
+    el.classList.toggle("loading-sheen", loading);
   });
 }
 
@@ -909,7 +1112,9 @@ function renderTable(data, seasonYear) {
 }
 
 function renderILIChart(year) {
-  const ctx = document.getElementById("ili-chart").getContext("2d");
+  const canvas = document.getElementById("ili-chart");
+  const ctx = canvas.getContext("2d");
+  const colors = chartTheme();
   const rows = respiratoryData.weekly
     .filter((row) => row.dataset === DATASET && row.year === year && row.virus === DEFAULT_VIRUS)
     .sort((a, b) => seasonWeekCompare(a.week, b.week));
@@ -961,18 +1166,20 @@ function renderILIChart(year) {
       const xScale = chart.scales.x;
       const yScale = chart.scales.y;
       if (!xScale || !yScale) return;
+      const stroke = colors.theme === "light" ? "rgba(15, 23, 42, 0.16)" : "rgba(148, 163, 184, 0.35)";
+      const labelColor = colors.muted;
       const drawLine = (label, text) => {
         const idx = chart.data.labels.indexOf(label);
         if (idx < 0) return;
         const x = xScale.getPixelForValue(idx);
         ctx.save();
-        ctx.strokeStyle = "rgba(148, 163, 184, 0.35)";
+        ctx.strokeStyle = stroke;
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(x, yScale.top);
         ctx.lineTo(x, yScale.bottom);
         ctx.stroke();
-        ctx.fillStyle = "rgba(148, 163, 184, 0.85)";
+        ctx.fillStyle = labelColor;
         ctx.font = "12px Inter, system-ui, sans-serif";
         ctx.textAlign = "left";
         ctx.fillText(text, x + 6, yScale.top + 14);
@@ -1005,16 +1212,16 @@ function renderILIChart(year) {
     options: {
       responsive: true,
       plugins: {
-        legend: { labels: { color: "#e5e7eb" } },
         tooltip: { mode: "index", intersect: false },
       },
       scales: {
-        x: { ticks: { color: "#9ca3af" }, grid: { display: false } },
-        y: { beginAtZero: true, ticks: { color: "#9ca3af" }, grid: { color: "rgba(255,255,255,0.05)" } },
+        x: { ticks: { color: colors.muted }, grid: { display: false } },
+        y: { beginAtZero: true, ticks: { color: colors.muted }, grid: { color: colors.grid } },
       },
     },
     plugins: [seasonMarkerPlugin],
   });
+  markChartRendered(canvas);
 }
 
 function latestSariForSeason(year) {
@@ -1098,6 +1305,7 @@ function renderSariCards(year) {
     sariAdmissionsValue.textContent = "–";
     sariIcuValue.textContent = "–";
     sariWeekBadge.textContent = t("status.awaitingData");
+    if (sariIcuWeekBadge) sariIcuWeekBadge.textContent = t("status.awaitingData");
     return;
   }
   sariAdmissionsValue.textContent =
@@ -1105,10 +1313,13 @@ function renderSariCards(year) {
   sariIcuValue.textContent =
     latest.icu != null && Number.isFinite(Number(latest.icu)) ? Number(latest.icu).toLocaleString() : "–";
   sariWeekBadge.textContent = formatWeekBadge(latest.week);
+  if (sariIcuWeekBadge) sariIcuWeekBadge.textContent = formatWeekBadge(latest.week);
 }
 
 function renderSariChart(year) {
-  const ctx = document.getElementById("sari-chart").getContext("2d");
+  const canvas = document.getElementById("sari-chart");
+  const ctx = canvas.getContext("2d");
+  const colors = chartTheme();
   const rows =
     respiratoryData.sariWeekly
       ?.filter((row) => matchesSeasonYear(row.year, year))
@@ -1127,18 +1338,20 @@ function renderSariChart(year) {
       const xScale = chart.scales.x;
       const yScale = chart.scales.y;
       if (!xScale || !yScale) return;
+      const stroke = colors.theme === "light" ? "rgba(15, 23, 42, 0.16)" : "rgba(148, 163, 184, 0.35)";
+      const labelColor = colors.muted;
       const drawLine = (label, text) => {
         const idx = chart.data.labels.indexOf(label);
         if (idx < 0) return;
         const x = xScale.getPixelForValue(idx);
         ctx.save();
-        ctx.strokeStyle = "rgba(148, 163, 184, 0.35)";
+        ctx.strokeStyle = stroke;
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(x, yScale.top);
         ctx.lineTo(x, yScale.bottom);
         ctx.stroke();
-        ctx.fillStyle = "rgba(148, 163, 184, 0.85)";
+        ctx.fillStyle = labelColor;
         ctx.font = "12px Inter, system-ui, sans-serif";
         ctx.textAlign = "left";
         ctx.fillText(text, x + 6, yScale.top + 14);
@@ -1180,20 +1393,20 @@ function renderSariChart(year) {
     options: {
       responsive: true,
       plugins: {
-        legend: { labels: { color: "#e5e7eb" } },
         tooltip: { mode: "index", intersect: false },
       },
       scales: {
-        x: { ticks: { color: "#9ca3af" }, grid: { display: false } },
+        x: { ticks: { color: colors.muted }, grid: { display: false } },
         y: {
           beginAtZero: true,
-          ticks: { color: "#9ca3af" },
-          grid: { color: "rgba(255,255,255,0.05)" },
+          ticks: { color: colors.muted },
+          grid: { color: colors.grid },
         },
       },
     },
     plugins: [seasonMarkerPlugin],
   });
+  markChartRendered(canvas);
 }
 
 function aggregateDetections(detections = respiratoryData.virologyDetections || [], yearFilter = null) {
@@ -1235,6 +1448,7 @@ function aggregateDetectionsWithInfluenzaAll(detections = respiratoryData.virolo
 }
 
 function renderVirology(year) {
+  const colors = chartTheme();
   const detections = aggregateDetectionsWithInfluenzaAll(respiratoryData.virologyDetections || [], year);
   const positivity = (respiratoryData.virologyPositivity || []).filter((row) => matchesSeasonYear(row.year, year));
 
@@ -1315,9 +1529,9 @@ function renderVirology(year) {
     const points = detections
       .filter((d) => d.virus === virus)
       .reduce((acc, row) => {
-      acc[row.week] = row.detections;
-      return acc;
-    }, {});
+        acc[row.week] = row.detections;
+        return acc;
+      }, {});
     return {
       label: displayVirus(virus),
       data: detWeeks.map((w) => points[w] ?? null),
@@ -1327,6 +1541,7 @@ function renderVirology(year) {
       fill: false,
       pointRadius: 3,
       pointHoverRadius: 5,
+      borderWidth: 2,
     };
   });
 
@@ -1337,13 +1552,13 @@ function renderVirology(year) {
     options: {
       responsive: true,
       interaction: { mode: "index", intersect: false },
-      plugins: { legend: { labels: { color: "#e5e7eb" } } },
       scales: {
-        x: { ticks: { color: "#9ca3af" }, grid: { display: false } },
-        y: { ticks: { color: "#9ca3af" }, grid: { color: "rgba(255,255,255,0.05)" } },
+        x: { ticks: { color: colors.muted }, grid: { display: false } },
+        y: { ticks: { color: colors.muted }, grid: { color: colors.grid } },
       },
     },
   });
+  markChartRendered(document.getElementById("viro-detections-chart"));
 
   const posWeeks = Array.from(new Set(positivity.map((d) => d.week))).sort(seasonWeekCompare);
   const posViruses = Array.from(new Set(positivity.map((d) => d.virus)));
@@ -1362,6 +1577,7 @@ function renderVirology(year) {
       fill: false,
       pointRadius: 3,
       pointHoverRadius: 5,
+      borderWidth: 2,
     };
   });
 
@@ -1373,7 +1589,6 @@ function renderVirology(year) {
       responsive: true,
       interaction: { mode: "index", intersect: false },
       plugins: {
-        legend: { labels: { color: "#e5e7eb" } },
         tooltip: {
           callbacks: {
             label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y?.toFixed(1)}%`,
@@ -1381,14 +1596,16 @@ function renderVirology(year) {
         },
       },
       scales: {
-        x: { ticks: { color: "#9ca3af" }, grid: { display: false } },
-        y: { ticks: { color: "#9ca3af", callback: (v) => `${v}%` }, grid: { color: "rgba(255,255,255,0.05)" } },
+        x: { ticks: { color: colors.muted }, grid: { display: false } },
+        y: { ticks: { color: colors.muted, callback: (v) => `${v}%` }, grid: { color: colors.grid } },
       },
     },
   });
+  markChartRendered(document.getElementById("viro-positivity-chart"));
 }
 
 function renderEuVirology() {
+  const colors = chartTheme();
   const allDetections = respiratoryData.ervissDetections || [];
   const allPositivity = respiratoryData.ervissPositivity?.slice() || [];
   const yearCandidates = Array.from(
@@ -1471,6 +1688,7 @@ function renderEuVirology() {
       fill: false,
       pointRadius: 3,
       pointHoverRadius: 5,
+      borderWidth: 2,
     };
   });
 
@@ -1481,13 +1699,13 @@ function renderEuVirology() {
     options: {
       responsive: true,
       interaction: { mode: "index", intersect: false },
-      plugins: { legend: { labels: { color: "#e5e7eb" } } },
       scales: {
-        x: { ticks: { color: "#9ca3af" }, grid: { display: false } },
-        y: { ticks: { color: "#9ca3af" }, grid: { color: "rgba(255,255,255,0.05)" } },
+        x: { ticks: { color: colors.muted }, grid: { display: false } },
+        y: { ticks: { color: colors.muted }, grid: { color: colors.grid } },
       },
     },
   });
+  markChartRendered(document.getElementById("eu-detections-chart"));
 
   const posWeeks = Array.from(new Set(positivity.map((d) => d.week))).sort((a, b) => a - b);
   const posViruses = Array.from(new Set(positivity.map((d) => d.virus)));
@@ -1506,6 +1724,7 @@ function renderEuVirology() {
       fill: false,
       pointRadius: 3,
       pointHoverRadius: 5,
+      borderWidth: 2,
     };
   });
 
@@ -1517,7 +1736,6 @@ function renderEuVirology() {
       responsive: true,
       interaction: { mode: "index", intersect: false },
       plugins: {
-        legend: { labels: { color: "#e5e7eb" } },
         tooltip: {
           callbacks: {
             label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y?.toFixed(1)}%`,
@@ -1525,11 +1743,12 @@ function renderEuVirology() {
         },
       },
       scales: {
-        x: { ticks: { color: "#9ca3af" }, grid: { display: false } },
-        y: { ticks: { color: "#9ca3af", callback: (v) => `${v}%` }, grid: { color: "rgba(255,255,255,0.05)" } },
+        x: { ticks: { color: colors.muted }, grid: { display: false } },
+        y: { ticks: { color: colors.muted, callback: (v) => `${v}%` }, grid: { color: colors.grid } },
       },
     },
   });
+  markChartRendered(document.getElementById("eu-positivity-chart"));
 }
 
 function destroyHistoricalCharts() {
@@ -1555,6 +1774,8 @@ function sumByWeek(rows, valueKey) {
 
 function renderHistoricalTrends(selectedYear) {
   if (!historicalCard) return;
+  const colors = chartTheme();
+  const accent = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() || "rgba(125, 211, 252, 0.95)";
 
   const compareYear = selectedYear - 1;
   const hasCompareYear = Array.isArray(respiratoryData.years) && respiratoryData.years.includes(compareYear);
@@ -1596,8 +1817,7 @@ function renderHistoricalTrends(selectedYear) {
 
   const seasonA = formatSeasonLabel(compareYear);
   const seasonB = formatSeasonLabel(selectedYear);
-  const muted = "rgba(148, 163, 184, 0.9)";
-  const accent = "rgba(125, 211, 252, 0.95)";
+  const muted = colors.theme === "light" ? "rgba(15, 23, 42, 0.55)" : "rgba(148, 163, 184, 0.9)";
 
   const iliCtx = document.getElementById("historical-ili-chart")?.getContext("2d");
   const sariCtx = document.getElementById("historical-sari-chart")?.getContext("2d");
@@ -1609,10 +1829,9 @@ function renderHistoricalTrends(selectedYear) {
   const baseOptions = {
     responsive: true,
     interaction: { mode: "index", intersect: false },
-    plugins: { legend: { labels: { color: "#e5e7eb" } } },
     scales: {
-      x: { ticks: { color: "#9ca3af" }, grid: { display: false } },
-      y: { beginAtZero: true, ticks: { color: "#9ca3af" }, grid: { color: "rgba(255,255,255,0.05)" } },
+      x: { ticks: { color: colors.muted }, grid: { display: false } },
+      y: { beginAtZero: true, ticks: { color: colors.muted }, grid: { color: colors.grid } },
     },
   };
 
@@ -1629,6 +1848,7 @@ function renderHistoricalTrends(selectedYear) {
           pointRadius: 2.5,
           pointHoverRadius: 4,
           tension: 0.25,
+          borderWidth: 2,
         },
         {
           label: seasonB,
@@ -1638,11 +1858,13 @@ function renderHistoricalTrends(selectedYear) {
           pointRadius: 2.5,
           pointHoverRadius: 4,
           tension: 0.25,
+          borderWidth: 2,
         },
       ],
     },
     options: baseOptions,
   });
+  markChartRendered(document.getElementById("historical-ili-chart"));
 
   historicalSariChart = new Chart(sariCtx, {
     type: "line",
@@ -1657,6 +1879,7 @@ function renderHistoricalTrends(selectedYear) {
           pointRadius: 2.5,
           pointHoverRadius: 4,
           tension: 0.25,
+          borderWidth: 2,
         },
         {
           label: seasonB,
@@ -1666,11 +1889,13 @@ function renderHistoricalTrends(selectedYear) {
           pointRadius: 2.5,
           pointHoverRadius: 4,
           tension: 0.25,
+          borderWidth: 2,
         },
       ],
     },
     options: baseOptions,
   });
+  markChartRendered(document.getElementById("historical-sari-chart"));
 
   historicalIcuChart = new Chart(icuCtx, {
     type: "line",
@@ -1685,6 +1910,7 @@ function renderHistoricalTrends(selectedYear) {
           pointRadius: 2.5,
           pointHoverRadius: 4,
           tension: 0.25,
+          borderWidth: 2,
         },
         {
           label: seasonB,
@@ -1694,11 +1920,13 @@ function renderHistoricalTrends(selectedYear) {
           pointRadius: 2.5,
           pointHoverRadius: 4,
           tension: 0.25,
+          borderWidth: 2,
         },
       ],
     },
     options: baseOptions,
   });
+  markChartRendered(document.getElementById("historical-icu-chart"));
 }
 
 function handleSort(column) {
@@ -1755,6 +1983,7 @@ function applyFilters() {
   renderVirology(year);
   renderEuVirology();
   renderHistoricalTrends(year);
+  updateLoadingIndicators();
 }
 
 async function loadNNGYKData() {
@@ -1916,7 +2145,9 @@ async function loadERVISSSari() {
 }
 
 async function main() {
+  document.documentElement.classList.add("is-loading");
   setLanguage(resolveInitialLang(), { persist: false });
+  initThemeControls();
   await loadNNGYKData();
   await loadERVISSSari();
   populateFilters();
@@ -1943,6 +2174,8 @@ async function main() {
       applyFilters();
     });
   }
+
+  document.documentElement.classList.remove("is-loading");
 }
 
 main();

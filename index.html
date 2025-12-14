@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seasonal Respiratory Virus Dashboard – Hungary/EU</title>
+    <title>Seasonal Respiratory Pathogen Dashboard</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,10 +17,18 @@
     <header>
       <div class="header-bar">
         <div class="brand">
-          <h1 data-i18n="header.title">Seasonal Respiratory Virus Dashboard – Hungary/EU</h1>
-          <span data-i18n="header.subtitle">Respiratory pandemic dashboard for Hungary &amp; EU/EEA powered by NNGYK and ECDC data</span>
+          <h1 data-i18n="header.title">Seasonal Respiratory Pathogen Dashboard</h1>
+          <span data-i18n="header.subtitle">Hungarian and European situation overview based on NNGYK and ECDC data</span>
         </div>
         <div class="header-controls" aria-label="Header controls" data-i18n-attr="aria-label:header.controls">
+          <label class="header-picker">
+            <span class="sr-only" data-i18n="controls.theme">Theme</span>
+            <select id="theme" class="select select-compact" aria-label="Theme" data-i18n-attr="aria-label:controls.theme">
+              <option value="system" data-i18n="theme.system">System</option>
+              <option value="dark" data-i18n="theme.dark">Dark</option>
+              <option value="light" data-i18n="theme.light">Light</option>
+            </select>
+          </label>
           <label class="header-picker">
             <span class="sr-only" data-i18n="controls.language">Language</span>
             <select id="lang" class="select select-compact" aria-label="Language" data-i18n-attr="aria-label:controls.language">
@@ -39,7 +47,13 @@
     <main class="grid" aria-live="polite">
       <section class="alert-stack" aria-label="Key alerts" data-i18n-attr="aria-label:sections.alerts">
         <section class="alert-card" id="flu-alert" aria-live="polite" role="status">
-          <div class="alert-icon" aria-hidden="true">⚠️</div>
+          <div class="alert-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3.5l9 16H3l9-16Z" />
+              <path d="M12 9v4.5" />
+              <path d="M12 17.25h.01" />
+            </svg>
+          </div>
           <div>
             <h2 data-i18n="alerts.flu.title">Seasonal influenza threshold</h2>
             <p class="footer-note" id="flu-alert-text" data-i18n="alerts.loading">Awaiting data…</p>
@@ -48,7 +62,12 @@
         </section>
 
         <section class="alert-card" id="leader-alert" aria-live="polite" role="status">
-          <div class="alert-icon" aria-hidden="true">📈</div>
+          <div class="alert-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 17l6-6 4 4 7-7" />
+              <path d="M14 8h6v6" />
+            </svg>
+          </div>
           <div>
             <h2 data-i18n="alerts.leaderHu.title">Leading virus by positivity in Hungary</h2>
             <p class="footer-note" id="leader-alert-text" data-i18n="alerts.loadingPos">Awaiting positivity data…</p>
@@ -57,13 +76,28 @@
         </section>
 
         <section class="alert-card" id="leader-eu-alert" aria-live="polite" role="status">
-          <div class="alert-icon" aria-hidden="true">🌐</div>
+          <div class="alert-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18" />
+              <path d="M12 3c2.6 2.6 2.6 15.4 0 18" />
+              <path d="M12 3c-2.6 2.6-2.6 15.4 0 18" />
+            </svg>
+          </div>
           <div>
             <h2 data-i18n="alerts.leaderEu.title">Leading virus by positivity in the EU/EEA</h2>
             <p class="footer-note" id="leader-eu-alert-text" data-i18n="alerts.loadingEuPos">Awaiting EU/EEA positivity data…</p>
           </div>
           <span class="pill" id="leader-eu-alert-chip" data-i18n="status.monitoring">Monitoring</span>
         </section>
+      </section>
+
+      <section class="section-banner" aria-label="Hungary section" data-i18n-attr="aria-label:sections.huBanner.aria">
+        <div class="section-kicker" data-i18n="sections.huBanner.kicker">Section</div>
+        <div>
+          <h2 data-i18n="sections.huBanner.title">Hungary</h2>
+          <p class="footer-note" data-i18n="sections.huBanner.note">National surveillance and sentinel signals.</p>
+        </div>
       </section>
 
       <section class="card glance-card" aria-label="Season at a glance" data-i18n-attr="aria-label:glance.aria">
@@ -134,7 +168,7 @@
           <p class="footer-note" data-i18n="metrics.peak.note">Calendar week with the highest activity.</p>
         </article>
         <article class="card">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div class="card-header-row">
             <h2 data-i18n="metrics.latest.title">Latest week cases</h2>
             <span class="badge" id="latest-week-badge" data-i18n="status.latestWeek">Latest week</span>
           </div>
@@ -142,7 +176,7 @@
           <p class="footer-note" data-i18n="metrics.latest.note">Most recent reported week for the selected pathogen.</p>
         </article>
         <article class="card">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div class="card-header-row">
             <h2 data-i18n="metrics.sariAdmissions.title">SARI admissions</h2>
             <span class="badge" id="sari-week-badge" data-i18n="status.latestWeek">Latest week</span>
           </div>
@@ -150,24 +184,14 @@
           <p class="footer-note" data-i18n="metrics.sariAdmissions.note">Severe acute respiratory infection hospitalizations (sentinel hospitals).</p>
         </article>
         <article class="card">
-          <h2 data-i18n="metrics.sariIcu.title">SARI ICU</h2>
+          <div class="card-header-row">
+            <h2 data-i18n="metrics.sariIcu.title">SARI ICU</h2>
+            <span class="badge" id="sari-icu-week-badge" data-i18n="status.latestWeek">Latest week</span>
+          </div>
           <div class="value" id="sari-icu">–</div>
           <p class="footer-note" data-i18n="metrics.sariIcu.note">ICU/sub-intensive admissions among SARI hospitalizations.</p>
         </article>
       </div>
-
-      <section class="context-grid" aria-label="Weekly trend highlights" data-i18n-attr="aria-label:sections.trends">
-        <article class="card">
-          <div class="context-header">
-            <div>
-              <h2 data-i18n="trend.title">Weekly trend signals</h2>
-              <p class="footer-note" data-i18n="trend.note">Fast view of which pathogens are currently surging or easing.</p>
-            </div>
-            <div class="badge" data-i18n="trend.badge">Live selection</div>
-          </div>
-          <ul class="trend-list" id="surge-list"></ul>
-        </article>
-      </section>
 
       <section class="card chart-card" aria-label="Visual summaries" data-i18n-attr="aria-label:sections.charts">
         <div class="chart-container">
@@ -266,33 +290,21 @@
         </article>
       </section>
 
-      <section class="eu-stack" aria-label="EU/EEA virology detections and positivity" data-i18n-attr="aria-label:sections.eu">
-        <article class="card card-wide">
+      <section class="context-grid" aria-label="Weekly trend highlights" data-i18n-attr="aria-label:sections.trends">
+        <article class="card">
           <div class="context-header">
             <div>
-              <h2 data-i18n="eu.detections.title">EU/EEA Virus Detections</h2>
-              <p class="footer-note" data-i18n="eu.detections.note">SARI virological detections (ERVISS, EU/EEA).</p>
+              <h2 data-i18n="trend.title">Weekly trend signals</h2>
+              <p class="footer-note" data-i18n="trend.note">Fast view of which pathogens are currently surging or easing.</p>
             </div>
-            <div class="badge" id="eu-week-badge" data-i18n="status.latestWeek">Latest week</div>
+            <div class="badge" data-i18n="trend.badge">Live selection</div>
           </div>
-          <ul class="context-list" id="eu-detections" aria-label="EU detections" data-i18n-attr="aria-label:eu.detections.list.aria"></ul>
-          <canvas id="eu-detections-chart" aria-label="EU detections trend" role="img" data-i18n-attr="aria-label:eu.detections.chart.aria"></canvas>
-        </article>
-        <article class="card card-wide">
-          <div class="context-header">
-            <div>
-              <h2 data-i18n="eu.positivity.title">EU/EEA Test Positivity</h2>
-              <p class="footer-note" data-i18n="eu.positivity.note">Positivity rates in SARI samples (ERVISS, EU/EEA).</p>
-            </div>
-            <div class="badge" data-i18n="eu.badge">EU/EEA</div>
-          </div>
-          <ul class="context-list" id="eu-positivity" aria-label="EU positivity" data-i18n-attr="aria-label:eu.positivity.list.aria"></ul>
-          <canvas id="eu-positivity-chart" aria-label="EU positivity trend" role="img" data-i18n-attr="aria-label:eu.positivity.chart.aria"></canvas>
+          <ul class="trend-list" id="surge-list"></ul>
         </article>
       </section>
 
       <section class="card table-card" aria-label="Weekly table" data-i18n-attr="aria-label:sections.table">
-        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+        <div class="card-header-row card-header-row-baseline">
           <div>
             <h2 data-i18n="table.title">Respiratory viruses week-by-week in Hungary</h2>
             <p class="footer-note" data-i18n="table.note">Click Week or Cases to sort; shows matching SARI and positivity context.</p>
@@ -317,6 +329,39 @@
           </thead>
           <tbody id="table-body"></tbody>
         </table>
+      </section>
+
+      <section class="section-banner" aria-label="EU/EEA section" data-i18n-attr="aria-label:sections.euBanner.aria">
+        <div class="section-kicker" data-i18n="sections.euBanner.kicker">Section</div>
+        <div>
+          <h2 data-i18n="sections.euBanner.title">EU/EEA</h2>
+          <p class="footer-note" data-i18n="sections.euBanner.note">ECDC ERVISS detections and positivity.</p>
+        </div>
+      </section>
+
+      <section class="eu-stack" aria-label="EU/EEA virology detections and positivity" data-i18n-attr="aria-label:sections.eu">
+        <article class="card card-wide">
+          <div class="context-header">
+            <div>
+              <h2 data-i18n="eu.detections.title">EU/EEA Virus Detections</h2>
+              <p class="footer-note" data-i18n="eu.detections.note">SARI virological detections (ERVISS, EU/EEA).</p>
+            </div>
+            <div class="badge" id="eu-week-badge" data-i18n="status.latestWeek">Latest week</div>
+          </div>
+          <ul class="context-list" id="eu-detections" aria-label="EU detections" data-i18n-attr="aria-label:eu.detections.list.aria"></ul>
+          <canvas id="eu-detections-chart" aria-label="EU detections trend" role="img" data-i18n-attr="aria-label:eu.detections.chart.aria"></canvas>
+        </article>
+        <article class="card card-wide">
+          <div class="context-header">
+            <div>
+              <h2 data-i18n="eu.positivity.title">EU/EEA Test Positivity</h2>
+              <p class="footer-note" data-i18n="eu.positivity.note">Positivity rates in SARI samples (ERVISS, EU/EEA).</p>
+            </div>
+            <div class="badge" data-i18n="eu.badge">EU/EEA</div>
+          </div>
+          <ul class="context-list" id="eu-positivity" aria-label="EU positivity" data-i18n-attr="aria-label:eu.positivity.list.aria"></ul>
+          <canvas id="eu-positivity-chart" aria-label="EU positivity trend" role="img" data-i18n-attr="aria-label:eu.positivity.chart.aria"></canvas>
+        </article>
       </section>
 
       <footer class="page-footer" aria-label="Dataset notes" data-i18n-attr="aria-label:sections.dataset">
