@@ -32,7 +32,7 @@ jobs:
 
       - name: Run updater
         run: |
-          python nngyk_agent.py --once
+          python3 nngyk_agent.py --sync-all --once
 
       - name: Commit & push if changed
         run: |
