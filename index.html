@@ -311,24 +311,26 @@
           </div>
           <div class="badge" data-i18n="table.badge">Accessible table view</div>
         </div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col" id="week-header" class="sortable" tabindex="0" aria-sort="ascending">
-                <span data-i18n="table.headers.week">Week</span><span class="sort-indicator" aria-hidden="true"></span>
-              </th>
-              <th scope="col" data-i18n="table.headers.virus">Virus</th>
-              <th scope="col" data-i18n="table.headers.region">Region</th>
-              <th scope="col" id="cases-header" class="sortable" tabindex="0" aria-sort="none">
-                <span data-i18n="table.headers.cases">Cases</span><span class="sort-indicator" aria-hidden="true"></span>
-              </th>
-              <th scope="col" data-i18n="table.headers.sariAdmissions">SARI admissions</th>
-              <th scope="col" data-i18n="table.headers.sariIcu">SARI ICU</th>
-              <th scope="col" data-i18n="table.headers.topPositivity">Top positivity</th>
-            </tr>
-          </thead>
-          <tbody id="table-body"></tbody>
-        </table>
+        <div class="table-scroll" role="region" aria-label="Scrollable table" data-i18n-attr="aria-label:table.scroll.aria">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" id="week-header" class="sortable" tabindex="0" aria-sort="ascending">
+                  <span data-i18n="table.headers.week">Week</span><span class="sort-indicator" aria-hidden="true"></span>
+                </th>
+                <th scope="col" data-i18n="table.headers.virus">Virus</th>
+                <th scope="col" data-i18n="table.headers.region">Region</th>
+                <th scope="col" id="cases-header" class="sortable" tabindex="0" aria-sort="none">
+                  <span data-i18n="table.headers.cases">Cases</span><span class="sort-indicator" aria-hidden="true"></span>
+                </th>
+                <th scope="col" data-i18n="table.headers.sariAdmissions">SARI admissions</th>
+                <th scope="col" data-i18n="table.headers.sariIcu">SARI ICU</th>
+                <th scope="col" data-i18n="table.headers.topPositivity">Top positivity</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
       </section>
 
       <section class="section-banner" aria-label="EU/EEA section" data-i18n-attr="aria-label:sections.euBanner.aria">

@@ -84,7 +84,7 @@
           <p class="footer-note">A legmagasabb aktivitású naptári hét.</p>
         </article>
         <article class="card">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div class="card-header-row">
             <h2>Legfrissebb heti esetszám</h2>
             <span class="badge" id="latest-week-badge">Legfrissebb hét</span>
           </div>
@@ -92,7 +92,7 @@
           <p class="footer-note">A kiválasztott kórokozó legfrissebb jelentett hete.</p>
         </article>
         <article class="card">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div class="card-header-row">
             <h2>SARI felvételek</h2>
             <span class="badge" id="sari-week-badge">Legfrissebb hét</span>
           </div>
@@ -193,31 +193,33 @@
       </section>
 
       <section class="card table-card" aria-label="Heti táblázat">
-        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+        <div class="card-header-row card-header-row-baseline">
           <div>
             <h2>Légúti vírusok heti bontásban (Magyarország)</h2>
             <p class="footer-note">Kattints a Hét vagy Esetszám oszlopra a rendezéshez; SARI és pozitivitási kontextussal.</p>
           </div>
           <div class="badge">Akadálymentes táblázat</div>
         </div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col" id="week-header" class="sortable" tabindex="0" aria-sort="ascending">
-                <span>Hét</span><span class="sort-indicator" aria-hidden="true"></span>
-              </th>
-              <th scope="col">Vírus</th>
-              <th scope="col">Régió</th>
-              <th scope="col" id="cases-header" class="sortable" tabindex="0" aria-sort="none">
-                <span>Esetszám</span><span class="sort-indicator" aria-hidden="true"></span>
-              </th>
-              <th scope="col">SARI felvételek</th>
-              <th scope="col">SARI intenzív</th>
-              <th scope="col">Legmagasabb pozitivitás</th>
-            </tr>
-          </thead>
-          <tbody id="table-body"></tbody>
-        </table>
+        <div class="table-scroll" role="region" aria-label="Görgethető táblázat">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" id="week-header" class="sortable" tabindex="0" aria-sort="ascending">
+                  <span>Hét</span><span class="sort-indicator" aria-hidden="true"></span>
+                </th>
+                <th scope="col">Vírus</th>
+                <th scope="col">Régió</th>
+                <th scope="col" id="cases-header" class="sortable" tabindex="0" aria-sort="none">
+                  <span>Esetszám</span><span class="sort-indicator" aria-hidden="true"></span>
+                </th>
+                <th scope="col">SARI felvételek</th>
+                <th scope="col">SARI intenzív</th>
+                <th scope="col">Legmagasabb pozitivitás</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
       </section>
 
       <footer class="page-footer" aria-label="Adatkészletek megjegyzései">
