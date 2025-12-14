@@ -35,6 +35,7 @@ def extract_folder(pdf_dir: Path, output: Path) -> int:
         return 1
 
     aggregated: List[dict] = []
+    deduped: dict[tuple[int | None, int | None], tuple[float, dict]] = {}
     for pdf_path in pdfs:
         try:
             text = extract_text(pdf_path)
@@ -42,17 +43,31 @@ def extract_folder(pdf_dir: Path, output: Path) -> int:
             if result.season_year is None:
                 result.season_year = infer_season_year_from_filename(pdf_path, result.week)
             payload = result.to_dashboard_payload()
-            aggregated.append(
-                {
-                    "file": str(pdf_path),
-                    "week": result.week,
-                    "season_year": result.season_year,
-                    "payload": payload,
-                }
-            )
+            entry = {
+                "file": str(pdf_path),
+                "week": result.week,
+                "season_year": result.season_year,
+                "payload": payload,
+            }
+            key = (result.season_year, result.week)
+            if key == (None, None):
+                aggregated.append(entry)
+            else:
+                mtime = pdf_path.stat().st_mtime
+                previous = deduped.get(key)
+                if previous is None or mtime >= previous[0]:
+                    deduped[key] = (mtime, entry)
             print(f"[ok] {pdf_path.name} -> week {result.week or 'unknown'}, season {result.season_year or 'unknown'}")
         except Exception as exc:  # noqa: BLE001
             print(f"[fail] {pdf_path}: {exc}", file=sys.stderr)
+
+    aggregated.extend(
+        entry
+        for _mtime, entry in sorted(
+            deduped.values(),
+            key=lambda item: (item[1].get("season_year") or 0, item[1].get("week") or 0, item[1].get("file") or ""),
+        )
+    )
 
     output.write_text(json.dumps(aggregated, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Parsed {len(aggregated)} PDFs from {pdf_dir} -> {output}")
@@ -84,6 +99,12 @@ def check_and_extract(
 
     target_urls = all_urls if sync_all else [u for u in all_urls if u not in state.seen_urls]
     if target_urls:
+        if sync_all and download_dir.exists():
+            for existing in download_dir.glob("*.pdf"):
+                try:
+                    existing.unlink()
+                except Exception as exc:  # noqa: BLE001
+                    print(f"[warn] Failed to remove {existing}: {exc}", file=sys.stderr)
         download_pdfs(target_urls, download_dir)
     else:
         print("No new PDFs to download.")
