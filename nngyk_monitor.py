@@ -21,7 +21,7 @@ from urllib.parse import parse_qs, urljoin, urlparse
 from urllib.request import Request, urlopen
 
 CURRENT_SEASON_URL = (
-    "https://nnk.gov.hu/index.php/leguti-figyeloszolgalat-2/"
+    "https://www.nnk.gov.hu/index.php/leguti-figyeloszolgalat-2/"
     "category/420-leguti-figyeloszolgalat-adatai-2025-2026-evi-szezon.html"
 )
 HISTORICAL_SEASON_URLS = (
@@ -62,14 +62,20 @@ def fetch_pdf_links(urls: str | Iterable[str] = CATEGORY_URLS, timeout: int = 20
     """Return all absolute PDF URLs from one or more category pages."""
     url_list = [urls] if isinstance(urls, str) else list(urls)
     all_candidates: Set[str] = set()
+    errors: List[tuple[str, Exception]] = []
 
     for url in url_list:
         parser = _PdfLinkParser(url)
 
         req = Request(url, headers={"User-Agent": USER_AGENT})
-        with urlopen(req, timeout=timeout) as resp:
-            content_type = resp.headers.get_content_charset() or "utf-8"
-            html = resp.read().decode(content_type, errors="replace")
+        try:
+            with urlopen(req, timeout=timeout) as resp:
+                content_type = resp.headers.get_content_charset() or "utf-8"
+                html = resp.read().decode(content_type, errors="replace")
+        except (HTTPError, URLError) as exc:
+            errors.append((url, exc))
+            print(f"[warn] Failed to fetch {url}: {exc}", file=sys.stderr)
+            continue
         parser.feed(html)
 
         # Some NNGYK season pages link to intermediate download handlers without a
@@ -86,6 +92,9 @@ def fetch_pdf_links(urls: str | Iterable[str] = CATEGORY_URLS, timeout: int = 20
             }
 
         all_candidates.update(candidates)
+
+    if not all_candidates and errors:
+        print("[warn] No PDF links fetched from any NNGYK season page.", file=sys.stderr)
 
     return sorted(all_candidates)
 
