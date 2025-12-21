@@ -51,61 +51,41 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # Only commit the generated outputs you actually want in the repo
-          git add -A nngyk_all.json nngyk_seen.json erviss_data
-
-          # If nothing changed, exit cleanly
-          if ! git status --porcelain | grep -q .; then
-            echo "No data changes to commit."
-            exit 0
-          fi
-
-          git commit -m "Auto-update data [skip ci]"
-
-          # Rebase onto the latest default branch and retry push a few times to avoid non-fast-forward failures.
-          # Prefer the generated data if conflicts occur during rebase.
-          resolve_generated_conflicts() {
-            local conflicted
-            conflicted=$(git diff --name-only --diff-filter=U)
-            if [ -z "$conflicted" ]; then
-              return 0
-            fi
-            for file in $conflicted; do
-              case "$file" in
-                nngyk_all.json|nngyk_seen.json|erviss_data/*) ;;
-                *)
-                  echo "Non-generated conflict detected: $file"
-                  return 1
-                  ;;
-              esac
-            done
-            for file in $conflicted; do
-              # Keep the freshly generated version from this run.
-              git restore --ours "$file"
-            done
-            git add $conflicted
-            return 0
+          run_updater() {
+            python nngyk_agent.py --once --incremental
           }
+
+          commit_changes() {
+            # Only commit the generated outputs you actually want in the repo
+            git add -A nngyk_all.json nngyk_seen.json erviss_data
+
+            # If nothing changed, exit cleanly
+            if ! git status --porcelain | grep -q .; then
+              echo "No data changes to commit."
+              return 1
+            fi
+
+            git commit -m "Auto-update data [skip ci]" || true
+          }
+
+          # Prepare the first commit from the already-run updater
+          commit_changes || true
 
           for i in 1 2 3; do
             echo "Push attempt $i..."
-            git fetch origin "${GITHUB_REF_NAME}"
-            if ! git rebase --merge "origin/${GITHUB_REF_NAME}"; then
-              if resolve_generated_conflicts; then
-                git rebase --continue || (git rebase --abort && exit 1)
-              else
-                git rebase --abort
-                exit 1
-              fi
-            fi
-
             if git push origin "HEAD:${GITHUB_REF_NAME}"; then
               echo "Push succeeded."
               exit 0
             fi
 
-            echo "Push failed; retrying in 5s..."
-            sleep 5
+            echo "Push failed; refreshing from origin and regenerating data..."
+            git fetch origin "${GITHUB_REF_NAME}"
+            git reset --hard "origin/${GITHUB_REF_NAME}"
+
+            run_updater
+            commit_changes || true
+
+            echo "Retrying push after refresh..."
           done
 
           echo "Push failed after retries."
