@@ -3,7 +3,6 @@ name: Update data (every 3 hours)
 on:
   workflow_dispatch: {}
   schedule:
-    # Every 3 hours (cron is UTC). Using minute 17 avoids top-of-hour congestion.
     - cron: "17 */3 * * *"
 
 permissions:
@@ -11,7 +10,7 @@ permissions:
 
 concurrency:
   group: data-update
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -24,6 +23,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -37,63 +37,55 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Commit & push updated data
+      - name: Generate, commit & push updated data (no rebase/merge)
+        shell: bash
         run: |
           set -euo pipefail
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          BRANCH="${GITHUB_REF_NAME:-main}"
+          BRANCH="main"
 
-          # Always start from the latest origin branch to avoid merge/rebase conflicts.
-          git fetch origin "$BRANCH"
-          git checkout -B "$BRANCH" "origin/$BRANCH"
-          git reset --hard "origin/$BRANCH"
+          sync_to_remote() {
+            git fetch origin "$BRANCH"
+            git checkout "$BRANCH"
+            git reset --hard "origin/$BRANCH"
+            git clean -fd
+          }
 
           run_updater() {
-            # CI runners don't keep the nngyk_pdfs/ download folder between runs,
-            # so use incremental mode to merge newly downloaded PDFs into the
-            # already-versioned nngyk_all.json output.
             python nngyk_agent.py --once --incremental
           }
 
           commit_changes() {
-            # Only commit the generated outputs you actually want in the repo
             git add -A nngyk_all.json nngyk_seen.json erviss_data
 
-            # If nothing changed, exit cleanly
             if git diff --cached --quiet; then
               echo "No data changes to commit."
               return 1
             fi
 
-            git commit -m "Auto-update data [skip ci]" || true
+            git commit -m "Auto-update data [skip ci]"
             return 0
           }
 
-          run_updater
-          if ! commit_changes; then
-            exit 0
-          fi
-
           for i in 1 2 3; do
-            echo "Push attempt $i..."
+            echo "Attempt $i: sync -> generate -> commit -> push"
+
+            sync_to_remote
+            run_updater
+
+            if ! commit_changes; then
+              exit 0
+            fi
+
             if git push origin "HEAD:${BRANCH}"; then
               echo "Push succeeded."
               exit 0
             fi
 
-            echo "Push failed; refreshing from origin and regenerating data..."
-            git fetch origin "$BRANCH"
-            git reset --hard "origin/$BRANCH"
-
-            run_updater
-            if ! commit_changes; then
-              exit 0
-            fi
-
-            echo "Retrying push after refresh..."
+            echo "Push rejected (remote moved). Retrying..."
           done
 
           echo "Push failed after retries."
