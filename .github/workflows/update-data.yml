@@ -64,10 +64,39 @@ jobs:
 
           # Rebase onto the latest default branch and retry push a few times to avoid non-fast-forward failures.
           # Prefer the generated data if conflicts occur during rebase.
+          resolve_generated_conflicts() {
+            local conflicted
+            conflicted=$(git diff --name-only --diff-filter=U)
+            if [ -z "$conflicted" ]; then
+              return 0
+            fi
+            for file in $conflicted; do
+              case "$file" in
+                nngyk_all.json|nngyk_seen.json|erviss_data/*) ;;
+                *)
+                  echo "Non-generated conflict detected: $file"
+                  return 1
+                  ;;
+              esac
+            done
+            for file in $conflicted; do
+              git restore --theirs "$file"
+            done
+            git add $conflicted
+            return 0
+          }
+
           for i in 1 2 3; do
             echo "Push attempt $i..."
             git fetch origin "${GITHUB_REF_NAME}"
-            git rebase --merge -X theirs "origin/${GITHUB_REF_NAME}" || (git rebase --abort && exit 1)
+            if ! git rebase --merge -X theirs "origin/${GITHUB_REF_NAME}"; then
+              if resolve_generated_conflicts; then
+                git rebase --continue || (git rebase --abort && exit 1)
+              else
+                git rebase --abort
+                exit 1
+              fi
+            fi
 
             if git push origin "HEAD:${GITHUB_REF_NAME}"; then
               echo "Push succeeded."
