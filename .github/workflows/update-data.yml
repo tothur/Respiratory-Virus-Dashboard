@@ -37,21 +37,24 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run updater
-        run: |
-          # CI runners don't keep the nngyk_pdfs/ download folder between runs,
-          # so use incremental mode to merge newly downloaded PDFs into the
-          # already-versioned nngyk_all.json output.
-          python nngyk_agent.py --once --incremental
-
       - name: Commit & push updated data
         run: |
-          set -e
+          set -euo pipefail
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          BRANCH="${GITHUB_REF_NAME:-main}"
+
+          # Always start from the latest origin branch to avoid merge/rebase conflicts.
+          git fetch origin "$BRANCH"
+          git checkout -B "$BRANCH" "origin/$BRANCH"
+          git reset --hard "origin/$BRANCH"
+
           run_updater() {
+            # CI runners don't keep the nngyk_pdfs/ download folder between runs,
+            # so use incremental mode to merge newly downloaded PDFs into the
+            # already-versioned nngyk_all.json output.
             python nngyk_agent.py --once --incremental
           }
 
@@ -60,30 +63,35 @@ jobs:
             git add -A nngyk_all.json nngyk_seen.json erviss_data
 
             # If nothing changed, exit cleanly
-            if ! git status --porcelain | grep -q .; then
+            if git diff --cached --quiet; then
               echo "No data changes to commit."
               return 1
             fi
 
             git commit -m "Auto-update data [skip ci]" || true
+            return 0
           }
 
-          # Prepare the first commit from the already-run updater
-          commit_changes || true
+          run_updater
+          if ! commit_changes; then
+            exit 0
+          fi
 
           for i in 1 2 3; do
             echo "Push attempt $i..."
-            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+            if git push origin "HEAD:${BRANCH}"; then
               echo "Push succeeded."
               exit 0
             fi
 
             echo "Push failed; refreshing from origin and regenerating data..."
-            git fetch origin "${GITHUB_REF_NAME}"
-            git reset --hard "origin/${GITHUB_REF_NAME}"
+            git fetch origin "$BRANCH"
+            git reset --hard "origin/$BRANCH"
 
             run_updater
-            commit_changes || true
+            if ! commit_changes; then
+              exit 0
+            fi
 
             echo "Retrying push after refresh..."
           done
