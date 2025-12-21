@@ -9,6 +9,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
+import ssl
 import sys
 import time
 from dataclasses import dataclass, field
@@ -38,6 +40,17 @@ USER_AGENT = "NNGYK-PDF-Monitor/1.0 (contact: dashboard script)"
 DEFAULT_INTERVAL_MINUTES = 120
 
 
+def _build_ssl_context() -> ssl.SSLContext:
+    disable_verify = os.getenv("NNGYK_SSL_NO_VERIFY", "").lower() in {"1", "true", "yes"}
+    if disable_verify:
+        return ssl._create_unverified_context()
+    try:
+        import certifi
+    except Exception:  # noqa: BLE001
+        return ssl.create_default_context()
+    return ssl.create_default_context(cafile=certifi.where())
+
+
 class _PdfLinkParser(HTMLParser):
     def __init__(self, base_url: str) -> None:
         super().__init__()
@@ -63,13 +76,14 @@ def fetch_pdf_links(urls: str | Iterable[str] = CATEGORY_URLS, timeout: int = 20
     url_list = [urls] if isinstance(urls, str) else list(urls)
     all_candidates: Set[str] = set()
     errors: List[tuple[str, Exception]] = []
+    context = _build_ssl_context()
 
     for url in url_list:
         parser = _PdfLinkParser(url)
 
         req = Request(url, headers={"User-Agent": USER_AGENT})
         try:
-            with urlopen(req, timeout=timeout) as resp:
+            with urlopen(req, timeout=timeout, context=context) as resp:
                 content_type = resp.headers.get_content_charset() or "utf-8"
                 html = resp.read().decode(content_type, errors="replace")
         except (HTTPError, URLError) as exc:
@@ -131,9 +145,10 @@ def _download_pdf(url: str, directory: Path, timeout: int = 30) -> Path:
     """Download a PDF to the target directory and return the saved path."""
     directory.mkdir(parents=True, exist_ok=True)
     parsed = urlparse(url)
+    context = _build_ssl_context()
 
     req = Request(url, headers={"User-Agent": USER_AGENT})
-    with urlopen(req, timeout=timeout) as resp:
+    with urlopen(req, timeout=timeout, context=context) as resp:
         content_type = (resp.headers.get("Content-Type") or "").lower()
         disposition = resp.headers.get("Content-Disposition", "")
         body = resp.read()
