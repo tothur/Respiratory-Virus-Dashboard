@@ -80,7 +80,8 @@ jobs:
               esac
             done
             for file in $conflicted; do
-              git restore --theirs "$file"
+              # Keep the freshly generated version from this run.
+              git restore --ours "$file"
             done
             git add $conflicted
             return 0
@@ -89,7 +90,7 @@ jobs:
           for i in 1 2 3; do
             echo "Push attempt $i..."
             git fetch origin "${GITHUB_REF_NAME}"
-            if ! git rebase --merge -X theirs "origin/${GITHUB_REF_NAME}"; then
+            if ! git rebase --merge "origin/${GITHUB_REF_NAME}"; then
               if resolve_generated_conflicts; then
                 git rebase --continue || (git rebase --abort && exit 1)
               else
