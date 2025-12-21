@@ -67,7 +67,7 @@ jobs:
           for i in 1 2 3; do
             echo "Push attempt $i..."
             git fetch origin "${GITHUB_REF_NAME}"
-            git rebase -X ours "origin/${GITHUB_REF_NAME}" || (git rebase --abort && exit 1)
+            git rebase --merge -X theirs "origin/${GITHUB_REF_NAME}" || (git rebase --abort && exit 1)
 
             if git push origin "HEAD:${GITHUB_REF_NAME}"; then
               echo "Push succeeded."
