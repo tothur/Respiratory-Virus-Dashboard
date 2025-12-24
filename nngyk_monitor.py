@@ -27,7 +27,7 @@ CURRENT_SEASON_URL = (
     "category/420-leguti-figyeloszolgalat-adatai-2025-2026-evi-szezon.html"
 )
 HISTORICAL_SEASON_URLS = (
-    "https://www.nnk.gov.hu/index.php/leguti-figyeloszolgalat-2/"
+    "https://nnk.gov.hu/index.php/leguti-figyeloszolgalat-2/"
     "category/390-leguti-figyeloszolgalat-adatai-2024-2025-evi-szezon.html",
 )
 
