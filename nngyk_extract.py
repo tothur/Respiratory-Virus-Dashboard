@@ -376,7 +376,8 @@ def detect_virology(text: str) -> Dict[str, object]:
 
     count_pattern = re.compile(
         r"(?P<count_token>(?:\d{1,3}(?:[ .]\d{3})*)|[A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű-]+)"
-        r"\s+betegn[ée]l[\s\S]{0,140}?(?P<virus>influenza\s+[A-Za-z0-9()]+|influenza|RSV|SARS[-\s]?CoV[-\s]?2)",
+        r"\s+betegn[ée]l[\s\S]{0,140}?"
+        r"(?P<virus>influenza\s+[A-Za-z0-9()]+|influenza|RSV|SARS[-\s]?CoV[-\s]?2|HMPV|hum[aá]n\s+metapneumov[ií]rus|metapneumov[ií]rus)",
         re.IGNORECASE,
     )
     for m in count_pattern.finditer(text):
@@ -394,27 +395,36 @@ def detect_virology(text: str) -> Dict[str, object]:
                 virus_label = "RSV"
             elif "sars" in virus_label.lower():
                 virus_label = "SARS-CoV-2"
+            elif "metapneumov" in virus_label.lower() or "hmpv" in virus_label.lower():
+                virus_label = "HMPV"
             detections.append({"virus": virus_label, "detections": val})
 
     positivity_patterns = [
         (
             "Influenza",
             re.compile(
-                r"influenza(?:\s+virus)?\s+pozitivit[aá]si\s+ar[aá]ny(?:a)?\s+(?P<val>\d{1,2}(?:[.,]\d)?)%",
+                r"influenza(?:\s+v[ií]rus)?\s+pozitivit[aá]si\s+ar[aá]ny(?:a)?\s+(?P<val>\d{1,2}(?:[.,]\d)?)%",
                 re.IGNORECASE,
             ),
         ),
         (
             "RSV",
             re.compile(
-                r"RSV(?:\s+virus)?\s+pozitivit[aá]si\s+ar[aá]ny(?:a)?\s+(?P<val>\d{1,2}(?:[.,]\d)?)%",
+                r"RSV(?:\s+v[ií]rus)?\s+pozitivit[aá]si\s+ar[aá]ny(?:a)?\s+(?P<val>\d{1,2}(?:[.,]\d)?)%",
                 re.IGNORECASE,
             ),
         ),
         (
             "SARS-CoV-2",
             re.compile(
-                r"SARS[-\s]?CoV[-\s]?2(?:\s+virus)?\s+pozitivit[aá]si\s+ar[aá]ny(?:a)?\s+(?P<val>\d{1,2}(?:[.,]\d)?)%",
+                r"SARS[-\s]?CoV[-\s]?2(?:\s+v[ií]rus)?\s+pozitivit[aá]si\s+ar[aá]ny(?:a)?\s+(?P<val>\d{1,2}(?:[.,]\d)?)%",
+                re.IGNORECASE,
+            ),
+        ),
+        (
+            "HMPV",
+            re.compile(
+                r"HMPV(?:\s+v[ií]rus)?\s+pozitivit[aá]si\s+ar[aá]ny(?:a)?\s+(?P<val>\d{1,2}(?:[.,]\d)?)%",
                 re.IGNORECASE,
             ),
         ),
