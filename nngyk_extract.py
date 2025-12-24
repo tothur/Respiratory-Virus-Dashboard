@@ -95,21 +95,21 @@ METRIC_PATTERNS: List[Tuple[str, re.Pattern[str]]] = [
     (
         "pos_influenza",
         re.compile(
-            r"influenza[\s\S]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<value>\d{1,2}(?:[.,]\d)?)%",
+            r"influenza(?:\s+virus)?\s+pozitivit[aá]si\s+ar[aá]ny(?:a)?\s+(?P<value>\d{1,2}(?:[.,]\d)?)%",
             re.IGNORECASE,
         ),
     ),
     (
         "pos_rsv",
         re.compile(
-            r"RSV[\s\S]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<value>\d{1,2}(?:[.,]\d)?)%",
+            r"RSV(?:\s+virus)?\s+pozitivit[aá]si\s+ar[aá]ny(?:a)?\s+(?P<value>\d{1,2}(?:[.,]\d)?)%",
             re.IGNORECASE,
         ),
     ),
     (
         "pos_sars2",
         re.compile(
-            r"SARS[-\s]?CoV[-\s]?2[\s\S]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<value>\d{1,2}(?:[.,]\d)?)%",
+            r"SARS[-\s]?CoV[-\s]?2(?:\s+virus)?\s+pozitivit[aá]si\s+ar[aá]ny(?:a)?\s+(?P<value>\d{1,2}(?:[.,]\d)?)%",
             re.IGNORECASE,
         ),
     ),
@@ -400,21 +400,21 @@ def detect_virology(text: str) -> Dict[str, object]:
         (
             "Influenza",
             re.compile(
-                r"influenza[\s\S]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<val>\d{1,2}(?:[.,]\d)?)%",
+                r"influenza(?:\s+virus)?\s+pozitivit[aá]si\s+ar[aá]ny(?:a)?\s+(?P<val>\d{1,2}(?:[.,]\d)?)%",
                 re.IGNORECASE,
             ),
         ),
         (
             "RSV",
             re.compile(
-                r"RSV[\s\S]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<val>\d{1,2}(?:[.,]\d)?)%",
+                r"RSV(?:\s+virus)?\s+pozitivit[aá]si\s+ar[aá]ny(?:a)?\s+(?P<val>\d{1,2}(?:[.,]\d)?)%",
                 re.IGNORECASE,
             ),
         ),
         (
             "SARS-CoV-2",
             re.compile(
-                r"SARS[-\s]?CoV[-\s]?2[\s\S]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<val>\d{1,2}(?:[.,]\d)?)%",
+                r"SARS[-\s]?CoV[-\s]?2(?:\s+virus)?\s+pozitivit[aá]si\s+ar[aá]ny(?:a)?\s+(?P<val>\d{1,2}(?:[.,]\d)?)%",
                 re.IGNORECASE,
             ),
         ),
