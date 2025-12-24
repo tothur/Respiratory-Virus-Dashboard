@@ -94,15 +94,24 @@ METRIC_PATTERNS: List[Tuple[str, re.Pattern[str]]] = [
     ),
     (
         "pos_influenza",
-        re.compile(r"influenza[^\\n]{0,20}pozitivit[aá]si\\s+ar[aá]ny\\s+(?P<value>\\d{1,2}(?:[.,]\\d)?)%", re.IGNORECASE),
+        re.compile(
+            r"influenza[\s\S]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<value>\d{1,2}(?:[.,]\d)?)%",
+            re.IGNORECASE,
+        ),
     ),
     (
         "pos_rsv",
-        re.compile(r"RSV[^\\n]{0,20}pozitivit[aá]si\\s+ar[aá]ny\\s+(?P<value>\\d{1,2}(?:[.,]\\d)?)%", re.IGNORECASE),
+        re.compile(
+            r"RSV[\s\S]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<value>\d{1,2}(?:[.,]\d)?)%",
+            re.IGNORECASE,
+        ),
     ),
     (
         "pos_sars2",
-        re.compile(r"SARS[-\\s]?CoV[-\\s]?2[^\\n]{0,20}pozitivit[aá]si\\s+ar[aá]ny\\s+(?P<value>\\d{1,2}(?:[.,]\\d)?)%", re.IGNORECASE),
+        re.compile(
+            r"SARS[-\s]?CoV[-\s]?2[\s\S]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<value>\d{1,2}(?:[.,]\d)?)%",
+            re.IGNORECASE,
+        ),
     ),
 ]
 
@@ -251,7 +260,43 @@ def _parse_hu_number(token: str) -> int | None:
         "tizenkilenc": 19,
         "husz": 20,
     }
-    return mapping.get(norm)
+    if norm in mapping:
+        return mapping[norm]
+
+    units = {
+        "egy": 1,
+        "ket": 2,
+        "kett": 2,
+        "ketto": 2,
+        "harom": 3,
+        "negy": 4,
+        "ot": 5,
+        "hat": 6,
+        "het": 7,
+        "nyolc": 8,
+        "kilenc": 9,
+    }
+    tens = {
+        "huszon": 20,
+        "husz": 20,
+        "harminc": 30,
+        "negyven": 40,
+        "otven": 50,
+        "hatvan": 60,
+        "hetven": 70,
+        "nyolcvan": 80,
+        "kilencven": 90,
+    }
+    for prefix in sorted(tens, key=len, reverse=True):
+        if not norm.startswith(prefix):
+            continue
+        remainder = norm[len(prefix) :]
+        if not remainder:
+            return tens[prefix]
+        unit_val = units.get(remainder)
+        if unit_val is not None:
+            return tens[prefix] + unit_val
+    return None
 
 
 def detect_virus_counts(text: str) -> Dict[str, int]:
@@ -352,9 +397,27 @@ def detect_virology(text: str) -> Dict[str, object]:
             detections.append({"virus": virus_label, "detections": val})
 
     positivity_patterns = [
-        ("Influenza", re.compile(r"influenza[^\n]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<val>\d{1,2}(?:[.,]\d)?)%", re.IGNORECASE)),
-        ("RSV", re.compile(r"RSV[^\n]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<val>\d{1,2}(?:[.,]\d)?)%", re.IGNORECASE)),
-        ("SARS-CoV-2", re.compile(r"SARS[-\s]?CoV[-\s]?2[^\n]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<val>\d{1,2}(?:[.,]\d)?)%", re.IGNORECASE)),
+        (
+            "Influenza",
+            re.compile(
+                r"influenza[\s\S]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<val>\d{1,2}(?:[.,]\d)?)%",
+                re.IGNORECASE,
+            ),
+        ),
+        (
+            "RSV",
+            re.compile(
+                r"RSV[\s\S]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<val>\d{1,2}(?:[.,]\d)?)%",
+                re.IGNORECASE,
+            ),
+        ),
+        (
+            "SARS-CoV-2",
+            re.compile(
+                r"SARS[-\s]?CoV[-\s]?2[\s\S]{0,120}?pozitivit[aá]si\s+ar[aá]ny\s+(?P<val>\d{1,2}(?:[.,]\d)?)%",
+                re.IGNORECASE,
+            ),
+        ),
     ]
     for virus_label, pat in positivity_patterns:
         m = pat.search(text)
