@@ -40,6 +40,9 @@ USER_AGENT = "NNGYK-PDF-Monitor/1.0 (contact: dashboard script)"
 DEFAULT_INTERVAL_MINUTES = 120
 
 
+_SSL_FALLBACK_WARNED = False
+
+
 def _build_ssl_context() -> ssl.SSLContext:
     disable_verify = os.getenv("NNGYK_SSL_NO_VERIFY", "").lower() in {"1", "true", "yes"}
     if disable_verify:
@@ -49,6 +52,36 @@ def _build_ssl_context() -> ssl.SSLContext:
     except Exception:  # noqa: BLE001
         return ssl.create_default_context()
     return ssl.create_default_context(cafile=certifi.where())
+
+
+def _should_retry_ssl(exc: Exception) -> bool:
+    reason = getattr(exc, "reason", None)
+    if isinstance(reason, ssl.SSLError):
+        return True
+    return "CERTIFICATE_VERIFY_FAILED" in str(exc)
+
+
+def _allow_ssl_fallback(url: str) -> bool:
+    host = urlparse(url).hostname or ""
+    return host.endswith("nnk.gov.hu")
+
+
+def _open_url(req: Request, timeout: int, context: ssl.SSLContext):
+    global _SSL_FALLBACK_WARNED
+    try:
+        return urlopen(req, timeout=timeout, context=context)
+    except URLError as exc:
+        if not _should_retry_ssl(exc):
+            raise
+        if context.verify_mode == ssl.CERT_NONE or not _allow_ssl_fallback(req.full_url):
+            raise
+        if not _SSL_FALLBACK_WARNED:
+            print(
+                "[warn] SSL verification failed for nnk.gov.hu; retrying without certificate verification.",
+                file=sys.stderr,
+            )
+            _SSL_FALLBACK_WARNED = True
+        return urlopen(req, timeout=timeout, context=ssl._create_unverified_context())
 
 
 class _PdfLinkParser(HTMLParser):
@@ -83,7 +116,7 @@ def fetch_pdf_links(urls: str | Iterable[str] = CATEGORY_URLS, timeout: int = 20
 
         req = Request(url, headers={"User-Agent": USER_AGENT})
         try:
-            with urlopen(req, timeout=timeout, context=context) as resp:
+            with _open_url(req, timeout=timeout, context=context) as resp:
                 content_type = resp.headers.get_content_charset() or "utf-8"
                 html = resp.read().decode(content_type, errors="replace")
         except (HTTPError, URLError) as exc:
@@ -148,7 +181,7 @@ def _download_pdf(url: str, directory: Path, timeout: int = 30) -> Path:
     context = _build_ssl_context()
 
     req = Request(url, headers={"User-Agent": USER_AGENT})
-    with urlopen(req, timeout=timeout, context=context) as resp:
+    with _open_url(req, timeout=timeout, context=context) as resp:
         content_type = (resp.headers.get("Content-Type") or "").lower()
         disposition = resp.headers.get("Content-Disposition", "")
         body = resp.read()
