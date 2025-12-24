@@ -23,7 +23,7 @@ from urllib.parse import parse_qs, urljoin, urlparse
 from urllib.request import Request, urlopen
 
 CURRENT_SEASON_URL = (
-    "https://www.nnk.gov.hu/index.php/leguti-figyeloszolgalat-2/"
+    "https://nnk.gov.hu/index.php/leguti-figyeloszolgalat-2/"
     "category/420-leguti-figyeloszolgalat-adatai-2025-2026-evi-szezon.html"
 )
 HISTORICAL_SEASON_URLS = (
