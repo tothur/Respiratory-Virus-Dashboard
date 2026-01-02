@@ -48,6 +48,9 @@ const historicalCard = document.getElementById("historical-card");
 let historicalILIChart;
 let historicalSariChart;
 let historicalIcuChart;
+const historicalIliDelta = document.getElementById("historical-ili-delta");
+const historicalSariDelta = document.getElementById("historical-sari-delta");
+const historicalIcuDelta = document.getElementById("historical-icu-delta");
 const glanceIliPeak = document.getElementById("glance-ili-peak");
 const glanceIliLatest = document.getElementById("glance-ili-latest");
 const glanceIliSlope = document.getElementById("glance-ili-slope");
@@ -191,6 +194,7 @@ const STRINGS = {
     "historical.sari.aria": "Historical SARI admissions comparison",
     "historical.icu.aria": "Historical SARI ICU comparison",
     "historical.delta.label": "Change vs last season",
+    "historical.delta.summary": "Change vs last season: {value}",
     // Dynamic strings
     "status.awaitingData": "Awaiting data",
     "status.noData": "No data",
@@ -347,6 +351,7 @@ const STRINGS = {
     "historical.sari.aria": "Történeti SARI felvételek összehasonlítás",
     "historical.icu.aria": "Történeti SARI intenzív összehasonlítás",
     "historical.delta.label": "Előző szezonhoz képest",
+    "historical.delta.summary": "Előző szezonhoz képest: {value}",
     // Dynamic strings
     "status.awaitingData": "Adatra vár",
     "status.noData": "Nincs adat",
@@ -1930,6 +1935,24 @@ function sumByWeek(rows, valueKey) {
   return byWeek;
 }
 
+function latestPercentChange(currentMap, previousMap, weeks) {
+  if (!weeks.length) return null;
+  for (let i = weeks.length - 1; i >= 0; i -= 1) {
+    const week = weeks[i];
+    const currentValue = currentMap.get(week);
+    const previousValue = previousMap.get(week);
+    if (!Number.isFinite(currentValue) || !Number.isFinite(previousValue) || previousValue === 0) continue;
+    return ((currentValue - previousValue) / previousValue) * 100;
+  }
+  return null;
+}
+
+function setHistoricalDelta(el, value) {
+  if (!el) return;
+  const valueLabel = Number.isFinite(value) ? formatSignedPercent(value) : "–";
+  el.textContent = t("historical.delta.summary", { value: valueLabel });
+}
+
 function renderHistoricalTrends(selectedYear) {
   if (!historicalCard) return;
   const colors = chartTheme();
@@ -1941,6 +1964,9 @@ function renderHistoricalTrends(selectedYear) {
   historicalCard.hidden = !show;
   if (!show) {
     destroyHistoricalCharts();
+    setHistoricalDelta(historicalIliDelta, null);
+    setHistoricalDelta(historicalSariDelta, null);
+    setHistoricalDelta(historicalIcuDelta, null);
     return;
   }
 
@@ -1970,6 +1996,10 @@ function renderHistoricalTrends(selectedYear) {
     ])
   ).sort(seasonWeekCompare);
 
+  const iliDelta = latestPercentChange(iliB, iliA, weeks);
+  const sariDelta = latestPercentChange(sariB, sariA, weeks);
+  const icuDelta = latestPercentChange(icuB, icuA, weeks);
+
   const labels = weeks.length ? weeks.map((w) => formatWeek(w)) : [t("status.noData")];
   const makeSeries = (map) => (weeks.length ? weeks.map((w) => (map.has(w) ? map.get(w) : null)) : [0]);
   const makeDeltaSeries = (current, previous) =>
@@ -1994,6 +2024,10 @@ function renderHistoricalTrends(selectedYear) {
   if (!iliCtx || !sariCtx || !icuCtx) return;
 
   destroyHistoricalCharts();
+
+  setHistoricalDelta(historicalIliDelta, iliDelta);
+  setHistoricalDelta(historicalSariDelta, sariDelta);
+  setHistoricalDelta(historicalIcuDelta, icuDelta);
 
   const baseOptions = {
     responsive: true,
