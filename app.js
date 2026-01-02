@@ -190,6 +190,7 @@ const STRINGS = {
     "historical.ili.aria": "Historical flu-like illness comparison",
     "historical.sari.aria": "Historical SARI admissions comparison",
     "historical.icu.aria": "Historical SARI ICU comparison",
+    "historical.delta.label": "Change vs last season",
     // Dynamic strings
     "status.awaitingData": "Awaiting data",
     "status.noData": "No data",
@@ -345,6 +346,7 @@ const STRINGS = {
     "historical.ili.aria": "Történeti ILI összehasonlítás",
     "historical.sari.aria": "Történeti SARI felvételek összehasonlítás",
     "historical.icu.aria": "Történeti SARI intenzív összehasonlítás",
+    "historical.delta.label": "Előző szezonhoz képest",
     // Dynamic strings
     "status.awaitingData": "Adatra vár",
     "status.noData": "Nincs adat",
@@ -1970,10 +1972,21 @@ function renderHistoricalTrends(selectedYear) {
 
   const labels = weeks.length ? weeks.map((w) => formatWeek(w)) : [t("status.noData")];
   const makeSeries = (map) => (weeks.length ? weeks.map((w) => (map.has(w) ? map.get(w) : null)) : [0]);
+  const makeDeltaSeries = (current, previous) =>
+    weeks.length
+      ? weeks.map((w) => {
+          const currentValue = current.get(w);
+          const previousValue = previous.get(w);
+          if (!Number.isFinite(currentValue) || !Number.isFinite(previousValue) || previousValue === 0) return null;
+          return ((currentValue - previousValue) / previousValue) * 100;
+        })
+      : [0];
 
   const seasonA = formatSeasonLabel(compareYear);
   const seasonB = formatSeasonLabel(selectedYear);
   const muted = colors.theme === "light" ? "rgba(15, 23, 42, 0.55)" : "rgba(148, 163, 184, 0.9)";
+  const deltaColor = colors.theme === "light" ? "rgba(37, 99, 235, 0.6)" : "rgba(96, 165, 250, 0.75)";
+  const deltaLabel = t("historical.delta.label");
 
   const iliCtx = document.getElementById("historical-ili-chart")?.getContext("2d");
   const sariCtx = document.getElementById("historical-sari-chart")?.getContext("2d");
@@ -1985,9 +1998,31 @@ function renderHistoricalTrends(selectedYear) {
   const baseOptions = {
     responsive: true,
     interaction: { mode: "index", intersect: false },
+    plugins: {
+      tooltip: {
+        callbacks: {
+          label: (ctx) => {
+            const label = ctx.dataset.label || "";
+            const value = ctx.parsed.y;
+            if (ctx.dataset.isDelta) {
+              if (!Number.isFinite(value)) return `${label}: –`;
+              const sign = value > 0 ? "+" : "";
+              return `${label}: ${sign}${value.toFixed(1)}%`;
+            }
+            if (!Number.isFinite(value)) return `${label}: –`;
+            return `${label}: ${Number(value).toLocaleString()}`;
+          },
+        },
+      },
+    },
     scales: {
       x: { ticks: { color: colors.muted }, grid: { display: false } },
       y: { beginAtZero: true, ticks: { color: colors.muted }, grid: { color: colors.grid } },
+      y1: {
+        position: "right",
+        ticks: { color: colors.muted, callback: (v) => `${v}%` },
+        grid: { drawOnChartArea: false },
+      },
     },
   };
 
@@ -2015,6 +2050,19 @@ function renderHistoricalTrends(selectedYear) {
           pointHoverRadius: 4,
           tension: 0.25,
           borderWidth: 2,
+        },
+        {
+          label: deltaLabel,
+          data: makeDeltaSeries(iliB, iliA),
+          borderColor: deltaColor,
+          backgroundColor: deltaColor,
+          pointRadius: 0,
+          pointHoverRadius: 3,
+          tension: 0.25,
+          borderWidth: 2,
+          borderDash: [6, 6],
+          yAxisID: "y1",
+          isDelta: true,
         },
       ],
     },
@@ -2047,6 +2095,19 @@ function renderHistoricalTrends(selectedYear) {
           tension: 0.25,
           borderWidth: 2,
         },
+        {
+          label: deltaLabel,
+          data: makeDeltaSeries(sariB, sariA),
+          borderColor: deltaColor,
+          backgroundColor: deltaColor,
+          pointRadius: 0,
+          pointHoverRadius: 3,
+          tension: 0.25,
+          borderWidth: 2,
+          borderDash: [6, 6],
+          yAxisID: "y1",
+          isDelta: true,
+        },
       ],
     },
     options: baseOptions,
@@ -2077,6 +2138,19 @@ function renderHistoricalTrends(selectedYear) {
           pointHoverRadius: 4,
           tension: 0.25,
           borderWidth: 2,
+        },
+        {
+          label: deltaLabel,
+          data: makeDeltaSeries(icuB, icuA),
+          borderColor: deltaColor,
+          backgroundColor: deltaColor,
+          pointRadius: 0,
+          pointHoverRadius: 3,
+          tension: 0.25,
+          borderWidth: 2,
+          borderDash: [6, 6],
+          yAxisID: "y1",
+          isDelta: true,
         },
       ],
     },
