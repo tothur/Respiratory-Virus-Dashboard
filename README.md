@@ -2,6 +2,8 @@
 
 A modern, static browser dashboard for visualizing Hungarian NNGYK flu-like illness (ILI), SARI, and virology trends with EU/EEA ERVISS context. The page includes bilingual UI and theme controls alongside weekly signals, alerts, and trend charts.
 
+Live dashboard: https://tothur.github.io/Respiratory-Virus-Dashboard/
+
 ## What you see on the page
 
 - **Header controls:** Theme, language, and season selector.
