@@ -51,12 +51,20 @@ let historicalIcuChart;
 const glanceIliPeak = document.getElementById("glance-ili-peak");
 const glanceIliLatest = document.getElementById("glance-ili-latest");
 const glanceIliSlope = document.getElementById("glance-ili-slope");
+const glanceIliWow = document.getElementById("glance-ili-wow");
 const glanceSariPeak = document.getElementById("glance-sari-peak");
 const glanceSariLatest = document.getElementById("glance-sari-latest");
 const glanceSariSlope = document.getElementById("glance-sari-slope");
+const glanceSariWow = document.getElementById("glance-sari-wow");
 const glanceIcuPeak = document.getElementById("glance-icu-peak");
 const glanceIcuLatest = document.getElementById("glance-icu-latest");
 const glanceIcuSlope = document.getElementById("glance-icu-slope");
+const glancePhase = document.getElementById("glance-phase");
+const glanceWeeksAbove = document.getElementById("glance-weeks-above");
+const glanceIliSeasonToDate = document.getElementById("glance-ili-std");
+const glanceSariSeasonToDate = document.getElementById("glance-sari-std");
+const glanceSariPer100 = document.getElementById("glance-sari-per-100");
+const glanceIcuShare = document.getElementById("glance-icu-share");
 
 const STRINGS = {
   en: {
@@ -147,13 +155,31 @@ const STRINGS = {
     "dataset.note": "Aggregated national respiratory virus surveillance shared by the National Public Health Center.",
     "glance.aria": "Season at a glance",
     "glance.title": "Season at a glance",
-    "glance.note": "Latest vs peak and short-term slope (last 3 weeks).",
+    "glance.note": "Phase, growth, and burden signals alongside peak and recent trend.",
     "glance.ili": "Flu-like illness",
     "glance.sari": "SARI hospitalizations",
     "glance.icu": "SARI ICU",
     "glance.peak": "Peak",
     "glance.latest": "Latest",
     "glance.slope": "3-week slope",
+    "glance.wow": "WoW change",
+    "glance.phase.title": "Season phase",
+    "glance.phase.current": "Current phase",
+    "glance.phase.weeksAbove": "Weeks above threshold",
+    "glance.phase.pre": "Pre-epidemic",
+    "glance.phase.rising": "Rising",
+    "glance.phase.peak": "Peak",
+    "glance.phase.declining": "Declining",
+    "glance.phase.noData": "No data",
+    "glance.seasonToDate.title": "Season-to-date burden",
+    "glance.seasonToDate.ili": "ILI cumulative",
+    "glance.seasonToDate.sari": "SARI cumulative",
+    "glance.seasonToDate.median": "Median",
+    "glance.seasonToDate.lastSeason": "Last season",
+    "glance.seasonToDate.noBaseline": "No baseline",
+    "glance.severity.title": "Severity ratios",
+    "glance.severity.sariPer100": "SARI per 100 ILI",
+    "glance.severity.icuShare": "ICU share of SARI",
     "coverage.nngyk": "NNGYK latest",
     "coverage.sari": "SARI latest",
     "coverage.erviss": "ERVISS latest",
@@ -291,13 +317,31 @@ const STRINGS = {
     "dataset.note": "Az NNGYK által közzétett országos légúti járványügyi felügyeleti adatok összesítve.",
     "glance.aria": "Szezon áttekintés",
     "glance.title": "Szezon áttekintés",
-    "glance.note": "Legfrissebb vs csúcs és rövidtávú trend (utolsó 3 hét).",
+    "glance.note": "Fázis, növekedés és terhelés a csúcs és a rövid távú trend mellett.",
     "glance.ili": "Influenzaszerű megbetegedés (ILI)",
     "glance.sari": "SARI felvételek",
     "glance.icu": "SARI intenzív",
     "glance.peak": "Csúcs",
     "glance.latest": "Legfrissebb",
     "glance.slope": "3 hetes trend",
+    "glance.wow": "Heti változás",
+    "glance.phase.title": "Szezon fázis",
+    "glance.phase.current": "Jelenlegi fázis",
+    "glance.phase.weeksAbove": "Küszöb feletti hetek",
+    "glance.phase.pre": "Járvány előtt",
+    "glance.phase.rising": "Erősödő",
+    "glance.phase.peak": "Csúcs",
+    "glance.phase.declining": "Csökkenő",
+    "glance.phase.noData": "Nincs adat",
+    "glance.seasonToDate.title": "Szezon eddig",
+    "glance.seasonToDate.ili": "ILI kumulatív",
+    "glance.seasonToDate.sari": "SARI kumulatív",
+    "glance.seasonToDate.median": "Medián",
+    "glance.seasonToDate.lastSeason": "Előző szezon",
+    "glance.seasonToDate.noBaseline": "Nincs összehasonlítás",
+    "glance.severity.title": "Súlyossági arányok",
+    "glance.severity.sariPer100": "SARI / 100 ILI",
+    "glance.severity.icuShare": "SARI ICU arány",
     "coverage.nngyk": "NNGYK legfrissebb",
     "coverage.sari": "SARI legfrissebb",
     "coverage.erviss": "ERVISS legfrissebb",
@@ -1249,6 +1293,120 @@ function computeGlance(values) {
   return { peak, latest, pctOfPeak, slope };
 }
 
+function computeWeekOverWeekChange(values) {
+  const rows = values.filter((row) => Number.isFinite(Number(row.week))).slice().sort((a, b) => seasonWeekCompare(a.week, b.week));
+  if (rows.length < 2) return null;
+  const latest = rows[rows.length - 1];
+  const previous = rows[rows.length - 2];
+  const latestValue = Number(latest.value ?? 0);
+  const previousValue = Number(previous.value ?? 0);
+  if (!Number.isFinite(latestValue) || !Number.isFinite(previousValue) || previousValue <= 0) return null;
+  return ((latestValue - previousValue) / previousValue) * 100;
+}
+
+function formatSignedPercent(value) {
+  if (!Number.isFinite(value)) return "–";
+  const rounded = Math.round(value * 10) / 10;
+  const sign = rounded > 0 ? "+" : "";
+  return `${sign}${rounded.toLocaleString(undefined, { maximumFractionDigits: 1 })}%`;
+}
+
+function resolveSeasonPhase(glance, weeksAbove) {
+  if (!glance || !glance.latest || !Number.isFinite(Number(glance.latest.value))) {
+    return "glance.phase.noData";
+  }
+  const latestValue = Number(glance.latest.value ?? 0);
+  const slope = Number.isFinite(glance.slope) ? glance.slope : 0;
+  const pctOfPeak = Number.isFinite(glance.pctOfPeak) ? glance.pctOfPeak : null;
+  const aboveThreshold = latestValue >= ILI_THRESHOLD;
+  const atPeak = pctOfPeak != null && pctOfPeak >= 95;
+
+  if (!aboveThreshold && slope <= 0 && (!weeksAbove || weeksAbove === 0)) {
+    return "glance.phase.pre";
+  }
+  if (aboveThreshold && atPeak) {
+    return "glance.phase.peak";
+  }
+  if (slope < 0) {
+    return "glance.phase.declining";
+  }
+  return "glance.phase.rising";
+}
+
+function sumThroughWeek(values, targetWeek) {
+  if (!Number.isFinite(targetWeek)) return null;
+  return values
+    .filter((row) => Number.isFinite(row.week) && Number.isFinite(row.value))
+    .filter((row) => seasonWeekCompare(row.week, targetWeek) <= 0)
+    .reduce((sum, row) => sum + row.value, 0);
+}
+
+function computeSeasonToDateComparison(seriesForYear, currentYear, targetWeek) {
+  const currentSeries = seriesForYear(currentYear);
+  const currentTotal = sumThroughWeek(currentSeries, targetWeek);
+  if (!Number.isFinite(currentTotal)) {
+    return { currentTotal: null, baselineCount: 0, median: null, lastSeason: null, percentile: null };
+  }
+
+  const years = (respiratoryData.years || []).map((year) => Number(year)).filter(Number.isFinite);
+  const baselineYears = years.filter((year) => year < Number(currentYear));
+  const baselineTotals = baselineYears
+    .map((year) => sumThroughWeek(seriesForYear(year), targetWeek))
+    .filter((total) => Number.isFinite(total) && total > 0);
+  const lastSeasonYear = baselineYears.length ? Math.max(...baselineYears) : null;
+  const lastSeason = lastSeasonYear != null ? sumThroughWeek(seriesForYear(lastSeasonYear), targetWeek) : null;
+  const medianValue = baselineTotals.length >= 2 ? median(baselineTotals) : null;
+  const percentile =
+    baselineTotals.length >= 2
+      ? Math.round((baselineTotals.filter((value) => value <= currentTotal).length / baselineTotals.length) * 100)
+      : null;
+
+  return {
+    currentTotal,
+    baselineCount: baselineTotals.length,
+    median: medianValue,
+    lastSeason: Number.isFinite(lastSeason) ? lastSeason : null,
+    percentile,
+  };
+}
+
+function formatSeasonToDateValue(summary) {
+  if (!summary || !Number.isFinite(summary.currentTotal)) return "–";
+  const currentLabel = summary.currentTotal.toLocaleString();
+  if (!summary.baselineCount) {
+    return `${currentLabel} (${t("glance.seasonToDate.noBaseline")})`;
+  }
+  const extras = [];
+  if (summary.baselineCount >= 2 && Number.isFinite(summary.median)) {
+    extras.push(`${t("glance.seasonToDate.median")} ${summary.median.toLocaleString()}`);
+  } else if (Number.isFinite(summary.lastSeason)) {
+    extras.push(`${t("glance.seasonToDate.lastSeason")} ${summary.lastSeason.toLocaleString()}`);
+  }
+  if (summary.percentile != null) {
+    extras.push(`P${summary.percentile}`);
+  }
+  return extras.length ? `${currentLabel} (${extras.join(", ")})` : currentLabel;
+}
+
+function computeSeverityRatios(iliSeries, sariRows) {
+  if (!iliSeries.length || !sariRows.length) return null;
+  const iliByWeek = new Map(iliSeries.map((row) => [Number(row.week), Number(row.value ?? 0)]));
+  const sharedWeeks = sariRows
+    .map((row) => Number(row.week))
+    .filter((week) => Number.isFinite(week) && iliByWeek.has(week))
+    .sort(seasonWeekCompare);
+  if (!sharedWeeks.length) return null;
+  const week = sharedWeeks[sharedWeeks.length - 1];
+  const iliValue = Number(iliByWeek.get(week) ?? 0);
+  const sariRow = sariRows.find((row) => Number(row.week) === week);
+  const admissions = Number(sariRow?.admissions ?? 0);
+  const icu = Number(sariRow?.icu ?? 0);
+  if (!Number.isFinite(iliValue) || iliValue <= 0 || !Number.isFinite(admissions) || admissions <= 0) return null;
+  const per100 = (admissions / iliValue) * 100;
+  const icuShare = Number.isFinite(icu) && admissions > 0 ? (icu / admissions) * 100 : null;
+  return { week, per100, icuShare };
+}
+
 function formatGlanceLine(glance) {
   if (!glance) return "–";
   const week = formatWeek(glance.week);
@@ -1257,22 +1415,38 @@ function formatGlanceLine(glance) {
 }
 
 function renderSeasonAtGlance(year) {
-  const iliTotals = respiratoryData.weekly
-    .filter((row) => row.dataset === DATASET && Number(row.year) === Number(year) && row.virus === DEFAULT_VIRUS)
-    .reduce((map, row) => {
-      const week = Number(row.week);
-      if (!Number.isFinite(week)) return map;
-      map.set(week, (map.get(week) || 0) + Number(row.cases ?? 0));
-      return map;
-    }, new Map());
-  const iliSeries = Array.from(iliTotals.entries()).map(([week, value]) => ({ week, value }));
+  const buildIliSeries = (targetYear) => {
+    const iliTotals = respiratoryData.weekly
+      .filter((row) => row.dataset === DATASET && Number(row.year) === Number(targetYear) && row.virus === DEFAULT_VIRUS)
+      .reduce((map, row) => {
+        const week = Number(row.week);
+        if (!Number.isFinite(week)) return map;
+        map.set(week, (map.get(week) || 0) + Number(row.cases ?? 0));
+        return map;
+      }, new Map());
+    return Array.from(iliTotals.entries()).map(([week, value]) => ({ week, value }));
+  };
+
+  const iliSeries = buildIliSeries(year);
   const iliGlance = computeGlance(iliSeries);
 
-  const sariRows = (respiratoryData.sariWeekly || []).filter((row) => Number(row.year) === Number(year));
+  const sariRows = (respiratoryData.sariWeekly || []).filter((row) => matchesSeasonYear(row.year, year));
   const sariSeries = sariRows.map((row) => ({ week: Number(row.week), value: Number(row.admissions ?? 0) }));
   const icuSeries = sariRows.map((row) => ({ week: Number(row.week), value: Number(row.icu ?? 0) }));
   const sariGlance = computeGlance(sariSeries);
   const icuGlance = computeGlance(icuSeries);
+  const iliWow = computeWeekOverWeekChange(iliSeries);
+  const sariWow = computeWeekOverWeekChange(sariSeries);
+  const weeksAboveThreshold = iliSeries.filter((row) => Number(row.value ?? 0) >= ILI_THRESHOLD).length;
+  const phaseKey = resolveSeasonPhase(iliGlance, weeksAboveThreshold);
+  const severity = computeSeverityRatios(iliSeries, sariRows) || {};
+
+  const buildSariSeries = (targetYear) =>
+    (respiratoryData.sariWeekly || [])
+      .filter((row) => Number(row.year) === Number(targetYear))
+      .map((row) => ({ week: Number(row.week), value: Number(row.admissions ?? 0) }));
+  const iliSeasonToDate = computeSeasonToDateComparison(buildIliSeries, year, iliGlance?.latest?.week);
+  const sariSeasonToDate = computeSeasonToDateComparison(buildSariSeries, year, sariGlance?.latest?.week);
 
   const renderBlock = (peakEl, latestEl, slopeEl, glance) => {
     if (!peakEl || !latestEl || !slopeEl) return;
@@ -1299,6 +1473,22 @@ function renderSeasonAtGlance(year) {
   renderBlock(glanceIliPeak, glanceIliLatest, glanceIliSlope, iliGlance);
   renderBlock(glanceSariPeak, glanceSariLatest, glanceSariSlope, sariGlance);
   renderBlock(glanceIcuPeak, glanceIcuLatest, glanceIcuSlope, icuGlance);
+  if (glanceIliWow) glanceIliWow.textContent = formatSignedPercent(iliWow);
+  if (glanceSariWow) glanceSariWow.textContent = formatSignedPercent(sariWow);
+  if (glancePhase) glancePhase.textContent = t(phaseKey);
+  if (glanceWeeksAbove) {
+    glanceWeeksAbove.textContent = iliSeries.length ? weeksAboveThreshold.toLocaleString() : "–";
+  }
+  if (glanceIliSeasonToDate) glanceIliSeasonToDate.textContent = formatSeasonToDateValue(iliSeasonToDate);
+  if (glanceSariSeasonToDate) glanceSariSeasonToDate.textContent = formatSeasonToDateValue(sariSeasonToDate);
+  if (glanceSariPer100) {
+    glanceSariPer100.textContent =
+      Number.isFinite(severity.per100) ? `${formatWeek(severity.week)}: ${severity.per100.toFixed(1)}` : "–";
+  }
+  if (glanceIcuShare) {
+    glanceIcuShare.textContent =
+      Number.isFinite(severity.icuShare) ? `${formatWeek(severity.week)}: ${severity.icuShare.toFixed(1)}%` : "–";
+  }
 }
 
 function renderSariCards(year) {
