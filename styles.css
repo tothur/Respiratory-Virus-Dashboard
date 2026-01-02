@@ -560,6 +560,13 @@ html[data-theme="light"] .pill {
   align-items: baseline;
 }
 
+.card-header-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
 .glance-card {
   grid-column: 1 / -1;
 }
