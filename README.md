@@ -1,24 +1,27 @@
 # Respiratory Virus Dashboard
 
-A modern, static browser dashboard for visualizing Hungarian NNGYK flu-like illness (ILI) trends. The page highlights weekly surges, totals, and (when provided) variant/lineage shares for the selected season.
+A modern, static browser dashboard for visualizing Hungarian NNGYK flu-like illness (ILI), SARI, and virology trends with EU/EEA ERVISS context. The page includes bilingual UI and theme controls alongside weekly signals, alerts, and trend charts.
 
 ## What you see on the page
 
-- **Sticky header + filter:** Top bar with title and season selector plus quick badges.
-- **ILI alert:** Color-coded alert banner when the latest ILI total exceeds the threshold.
-- **Metric cards:** ILI totals (cases, peak week, median) plus SARI hospital and ICU counts, and a “rising vs easing” surge callout.
-- **Surge + variant panels:** Highlights which pathogens are surging or easing; lineage pane shows data when provided.
-- **ILI trend chart:** Weekly ILI curve for the selected season.
-- **SARI trend chart:** Weekly SARI admissions and ICU load from sentinel hospitals.
-- **Accessible data table:** Full record list with sorting and filter-aware totals.
+- **Header controls:** Theme, language, and season selector.
+- **Alerts:** ILI threshold status plus leading virus by positivity (Hungary and EU/EEA).
+- **Season at a glance:** Peak vs latest, 3-week slope, WoW change, season phase, season-to-date burden, and severity ratios.
+- **Metric cards:** Total cases, peak week, latest week cases, SARI admissions, and SARI ICU.
+- **Weekly trend signals:** Which pathogens are surging or easing.
+- **ILI + SARI trend charts:** Weekly ILI curve and SARI admissions/ICU load.
+- **Historical comparisons:** Prior-season vs current-season charts (when multiple seasons are available).
+- **Virology panels:** Hungary sentinel detections/positivity with pathogen picker, plus EU/EEA detections and positivity.
+- **Accessible data table:** Full record list with sorting and context columns.
 
-Open `index.html` in a browser to see the full layout with the bundled sample; if `nngyk_all.json` exists, it will replace the sample with parsed bulletin data.  
-Hungarian UI: open `index.hu.html` (uses the same data with full magyar felület).
+Open `index.html` in a browser to see the full layout with the bundled sample; if `nngyk_all.json` exists, it replaces the sample with parsed bulletin data.  
+Hungarian UI: open `index.html?lang=hu` (or `index.hu.html`, which redirects with the same language toggle).  
+If `erviss_data/erviss_sari.json` exists, EU/EEA detection and positivity panels will populate automatically.
 
 ## Running locally
 
-1. Open `dashboard/index.html` directly in a modern browser, or serve the folder with any static file server.
-2. Select the season to update the visuals and table. The ILI chart is pinned to NNGYK data for the selected season (2025/2026 sample provided, or parsed PDFs if `nngyk_all.json` exists).
+1. Open `index.html` directly in a modern browser, or serve the folder with any static file server.
+2. Select the season to update the visuals and table. The ILI chart and Season at a glance card are pinned to NNGYK data for the selected season (2025/2026 sample provided, or parsed PDFs if `nngyk_all.json` exists).
 
 ## Serving over HTTP
 
@@ -87,7 +90,7 @@ Shape of each row in `nngyk_all.json` payload:
 }
 ```
 
-The dashboard automatically recalculates totals, peak week, median, and the ILI trend chart when `nngyk_all.json` is present.
+The dashboard automatically recalculates totals, season-at-a-glance metrics, and all ILI/SARI charts when `nngyk_all.json` is present.
 
 ### Seasonal influenza alerting
 
