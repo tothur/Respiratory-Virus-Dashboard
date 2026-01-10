@@ -369,14 +369,11 @@ def detect_sari_icu_fallback(text: str) -> int | None:
     return matches[0][1]
 
 
-def detect_virology(text: str) -> Dict[str, object]:
-    """Extract sentinel detections (with subtypes) and positivity percentages."""
+def _extract_virology_detections(text: str) -> list[dict]:
     detections = []
-    positivity = []
-
     count_pattern = re.compile(
         r"(?P<count_token>(?:\d{1,3}(?:[ .]\d{3})*)|[A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű-]+)"
-        r"\s+betegn[ée]l[\s\S]{0,140}?"
+        r"\s+betegn[ée]l[^.]{0,120}?"
         r"(?P<virus>influenza\s+[A-Za-z0-9()]+|influenza|RSV|SARS[-\s]?CoV[-\s]?2|HMPV|hum[aá]n\s+metapneumov[ií]rus|metapneumov[ií]rus)",
         re.IGNORECASE,
     )
@@ -398,6 +395,41 @@ def detect_virology(text: str) -> Dict[str, object]:
             elif "metapneumov" in virus_label.lower() or "hmpv" in virus_label.lower():
                 virus_label = "HMPV"
             detections.append({"virus": virus_label, "detections": val})
+    if detections:
+        collapsed = {}
+        for entry in detections:
+            virus = entry["virus"]
+            val = entry["detections"]
+            current = collapsed.get(virus)
+            if current is None or val > current["detections"]:
+                collapsed[virus] = entry
+        detections = list(collapsed.values())
+    return detections
+
+
+def _sentinel_orvosok_segment(text: str) -> str | None:
+    pattern = re.compile(
+        r"sentinel\s+orvosok[\s\S]{0,220}?minta\s+k[öo]z[üu]l\s+(?P<segment>[\s\S]+?)"
+        r"(?:A\s+sentinel\s+k[óo]rh[aá]z|A\s+hagyom[aá]nyos|A\s+l[eé]g[úu]ti|$)",
+        re.IGNORECASE,
+    )
+    match = pattern.search(text)
+    if not match:
+        return None
+    segment = match.group("segment").strip()
+    return segment or None
+
+
+def detect_virology(text: str) -> Dict[str, object]:
+    """Extract sentinel detections (with subtypes) and positivity percentages."""
+    detections = []
+    positivity = []
+
+    sentinel_segment = _sentinel_orvosok_segment(text)
+    if sentinel_segment:
+        detections = _extract_virology_detections(sentinel_segment)
+    if not detections:
+        detections = _extract_virology_detections(text)
 
     positivity_patterns = [
         (
@@ -436,16 +468,6 @@ def detect_virology(text: str) -> Dict[str, object]:
                 positivity.append({"virus": virus_label, "positivity": _parse_float(m.group("val"))})
             except Exception:  # noqa: BLE001
                 continue
-
-    if detections:
-        collapsed = {}
-        for entry in detections:
-            virus = entry["virus"]
-            val = entry["detections"]
-            current = collapsed.get(virus)
-            if current is None or val > current["detections"]:
-                collapsed[virus] = entry
-        detections = list(collapsed.values())
 
     return {"detections": detections, "positivity": positivity}
 

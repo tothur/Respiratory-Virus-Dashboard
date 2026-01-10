@@ -341,10 +341,35 @@ function updateSortHeaders() {
   }
 }
 
-function renderTable(data, seasonYear) {
+function renderTable(data, seasonYear, selectedVirus) {
   tableBody.innerHTML = "";
   updateSortHeaders();
-  const sorted = [...data].sort((a, b) => {
+  const sariRows = (respiratoryData.sariWeekly || []).filter((row) => matchesSeasonYear(row.year, seasonYear));
+  const positivityRows = (respiratoryData.virologyPositivity || []).filter((row) => matchesSeasonYear(row.year, seasonYear));
+  const detectionsRows = (respiratoryData.virologyDetections || []).filter((row) => matchesSeasonYear(row.year, seasonYear));
+  const weeksWithRows = new Set(data.map((row) => Number(row.week)).filter(Number.isFinite));
+  const allWeeks = new Set([
+    ...weeksWithRows,
+    ...sariRows.map((row) => Number(row.week)).filter(Number.isFinite),
+    ...positivityRows.map((row) => Number(row.week)).filter(Number.isFinite),
+    ...detectionsRows.map((row) => Number(row.week)).filter(Number.isFinite),
+  ]);
+  const placeholderRegion = data[0]?.region || "National";
+  const placeholderVirus = selectedVirus || DEFAULT_VIRUS;
+  const merged = [
+    ...data,
+    ...Array.from(allWeeks)
+      .filter((week) => !weeksWithRows.has(week))
+      .map((week) => ({
+        dataset: DATASET,
+        year: seasonYear,
+        virus: placeholderVirus,
+        week,
+        cases: null,
+        region: placeholderRegion,
+      })),
+  ];
+  const sorted = [...merged].sort((a, b) => {
     const key = sortColumn === "cases" ? "cases" : "week";
     const valA = key === "week" ? seasonWeekIndex(a.week) : Number(a[key] ?? 0);
     const valB = key === "week" ? seasonWeekIndex(b.week) : Number(b[key] ?? 0);
@@ -356,14 +381,12 @@ function renderTable(data, seasonYear) {
     if (weekDiff !== 0) return weekDiff;
     return (a.virus || "").localeCompare(b.virus || "");
   });
-  const sariByWeek = (respiratoryData.sariWeekly || [])
-    .filter((row) => matchesSeasonYear(row.year, seasonYear))
+  const sariByWeek = sariRows
     .reduce((map, row) => {
       map.set(row.week, row);
       return map;
     }, new Map());
-  const positivityByWeek = (respiratoryData.virologyPositivity || [])
-    .filter((row) => matchesSeasonYear(row.year, seasonYear))
+  const positivityByWeek = positivityRows
     .reduce((map, row) => {
       const current = map.get(row.week);
       if (!current || Number(row.positivity ?? 0) > Number(current.positivity ?? 0)) {
@@ -385,12 +408,14 @@ function renderTable(data, seasonYear) {
       pos && pos.positivity != null && Number.isFinite(Number(pos.positivity))
         ? `${translateVirus(pos.virus)} (${Number(pos.positivity).toFixed(1)}%)`
         : "–";
+    const casesLabel =
+      row.cases != null && Number.isFinite(Number(row.cases)) ? Number(row.cases).toLocaleString() : "–";
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>W${row.week.toString().padStart(2, "0")}</td>
       <td>${translateVirus(row.virus)}</td>
       <td>${translateRegion(row.region)}</td>
-      <td>${row.cases.toLocaleString()}</td>
+      <td>${casesLabel}</td>
       <td>${admissionsLabel}</td>
       <td>${icuLabel}</td>
       <td>${posLabel}</td>
@@ -853,7 +878,7 @@ function applyFilters() {
   peakWeek.textContent = peak;
   datasetDescription.textContent = DATASET_DESCRIPTIONS[dataset] || respiratoryData.datasets[dataset].description;
 
-  renderTable(filtered, year);
+  renderTable(filtered, year, virus);
   renderChips(filtered);
   renderLatestWeekCases(filtered);
   renderSurgeSignals(dataset, year);
