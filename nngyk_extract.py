@@ -38,6 +38,8 @@ VIRUS_PATTERNS: Dict[str, List[re.Pattern[str]]] = {
     "RSV": [
         re.compile(r"RSV[^\d]*(?P<count>\d{1,3}(?:[ .]\d{3})*)"),
         re.compile(r"respirat[oó]ri\s+syncytial[^\d]*(?P<count>\d{1,3}(?:[ .]\d{3})*)", re.IGNORECASE),
+        re.compile(r"RS\s+v[ií]rus[^\d]*(?P<count>\d{1,3}(?:[ .]\d{3})*)", re.IGNORECASE),
+        re.compile(r"l[eé]g[uú]ti\s+[oó]ri[aá]ssejtes\s+v[ií]rus[^\d]*(?P<count>\d{1,3}(?:[ .]\d{3})*)", re.IGNORECASE),
     ],
     "SARS-CoV-2": [
         re.compile(r"SARS[-\s]?CoV[-\s]?2[^\d]*(?P<count>\d{1,3}(?:[ .]\d{3})*)", re.IGNORECASE),
@@ -374,7 +376,7 @@ def _extract_virology_detections(text: str) -> list[dict]:
     count_pattern = re.compile(
         r"(?P<count_token>(?:\d{1,3}(?:[ .]\d{3})*)|[A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű-]+)"
         r"\s+betegn[ée]l[^.]{0,120}?"
-        r"(?P<virus>influenza\s+[A-Za-z0-9()]+|influenza|RSV|SARS[-\s]?CoV[-\s]?2|HMPV|hum[aá]n\s+metapneumov[ií]rus|metapneumov[ií]rus)",
+        r"(?P<virus>influenza\s+[A-Za-z0-9()]+|influenza|RSV|RS\s+v[ií]rus|l[eé]g[uú]ti\s+[oó]ri[aá]ssejtes\s+v[ií]rus|SARS[-\s]?CoV[-\s]?2|HMPV|hum[aá]n\s+metapneumov[ií]rus|metapneumov[ií]rus)",
         re.IGNORECASE,
     )
     for m in count_pattern.finditer(text):
@@ -388,7 +390,7 @@ def _extract_virology_detections(text: str) -> list[dict]:
         if val is not None:
             if virus_label.lower().startswith("influenza"):
                 virus_label = virus_label.replace("influenza", "Influenza").replace("  ", " ").strip()
-            elif "rsv" in virus_label.lower():
+            elif "rsv" in virus_label.lower() or "rs virus" in virus_label.lower() or "légúti óriássejtes" in virus_label.lower():
                 virus_label = "RSV"
             elif "sars" in virus_label.lower():
                 virus_label = "SARS-CoV-2"
