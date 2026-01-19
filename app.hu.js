@@ -58,7 +58,18 @@ const VIRUS_LABELS = {
   "SARS-CoV-2": "SARS-CoV-2",
 };
 
-const translateVirus = (name) => VIRUS_LABELS[name] || name;
+function normalizeVirusName(name) {
+  if (!name) return name;
+  const value = String(name).trim();
+  if (!value) return value;
+  const lower = value.toLowerCase();
+  if (lower === "rsv") return "RSV";
+  if (/^rs[-\s]*v[ií]rus$/i.test(value)) return "RSV";
+  if (/^l[eé]g[uú]ti\s+[oó]ri[aá]ssejtes\s+v[ií]rus$/i.test(value)) return "RSV";
+  return value;
+}
+
+const translateVirus = (name) => VIRUS_LABELS[normalizeVirusName(name)] || normalizeVirusName(name);
 const REGION_LABELS = { National: "Országos" };
 const translateRegion = (name) => REGION_LABELS[name] || name;
 const formatWeek = (week) => `W${week.toString().padStart(2, "0")}`;
@@ -913,12 +924,13 @@ async function loadNNGYKData() {
       const seasonYear = Number(entry.season_year ?? entry?.payload?.metadata?.season_year ?? rows[0]?.year);
       const normalizedYear = Number.isFinite(seasonYear) ? seasonYear : undefined;
       rows.forEach((row) => {
-        weekly.push(row);
+        const normalizedVirus = normalizeVirusName(row.virus);
+        weekly.push({ ...row, virus: normalizedVirus });
         if (Number.isFinite(row.year)) {
           years.add(row.year);
         }
-        if (row.virus) {
-          viruses.add(row.virus);
+        if (normalizedVirus) {
+          viruses.add(normalizedVirus);
         }
       });
       if (sari && sari.week != null) {
@@ -939,12 +951,22 @@ async function loadNNGYKData() {
         const week = Number(weekVal);
         (viro.detections || []).forEach((d) => {
           if (d.virus && d.detections != null) {
-            viroDetections.push({ year: normalizedYear, week, virus: d.virus, detections: Number(d.detections) });
+            viroDetections.push({
+              year: normalizedYear,
+              week,
+              virus: normalizeVirusName(d.virus),
+              detections: Number(d.detections),
+            });
           }
         });
         (viro.positivity || []).forEach((p) => {
           if (p.virus && p.positivity != null) {
-            viroPositivity.push({ year: normalizedYear, week, virus: p.virus, positivity: Number(p.positivity) });
+            viroPositivity.push({
+              year: normalizedYear,
+              week,
+              virus: normalizeVirusName(p.virus),
+              positivity: Number(p.positivity),
+            });
           }
         });
       }
