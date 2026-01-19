@@ -1,7 +1,6 @@
 {
   "source": "https://raw.githubusercontent.com/EU-ECDC/Respiratory_viruses_weekly_data/main/data/SARITestsDetectionsPositivity.csv",
-  "generated_at": "2026-01-19T11:06:28.712027+00:00",
-  "generated_at": "2026-01-19T11:25:41.773649+00:00",
+  "generated_at": "2026-01-19T11:27:31.077728+00:00",
   "region": "EU/EEA",
   "latest_year": 2026,
   "latest_week": 52,
