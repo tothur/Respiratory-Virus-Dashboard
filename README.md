@@ -25,6 +25,19 @@ If `erviss_data/erviss_sari.json` exists, EU/EEA detection and positivity panels
 1. Open `index.html` directly in a modern browser, or serve the folder with any static file server.
 2. Select the season to update the visuals and table. The ILI chart and Season at a glance card are pinned to NNGYK data for the selected season (2025/2026 sample provided, or parsed PDFs if `nngyk_all.json` exists).
 
+## Parallel Next-Gen App (Phase 1C)
+
+A new React + TypeScript + Vite scaffold is available in `new-dashboard/`.  
+It is intentionally isolated so the current dashboard keeps running unchanged.
+
+```bash
+cd new-dashboard
+npm install
+npm run dev
+```
+
+See `new-dashboard/README.md` for details.
+
 ## Serving over HTTP
 
 If you prefer hitting the dashboard via `http://localhost:8000`, you can serve the repo root with Python’s built-in static server:
