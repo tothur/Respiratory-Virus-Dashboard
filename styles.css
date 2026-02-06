@@ -172,20 +172,6 @@ main.grid {
   align-items: start;
 }
 
-/* Prioritize top-of-page signal for decision-oriented reading flow. */
-main.grid > #alerts-section { order: 10; }
-main.grid > #hu-section-banner { order: 20; }
-main.grid > #trend-section { order: 30; }
-main.grid > #glance-section { order: 40; }
-main.grid > #core-charts { order: 50; }
-main.grid > #metrics-section { order: 60; }
-main.grid > #virology-section { order: 70; }
-main.grid > #table-section { order: 80; }
-main.grid > #historical-card { order: 90; }
-main.grid > #eu-section-banner { order: 100; }
-main.grid > #eu-section { order: 110; }
-main.grid > .page-footer { order: 120; }
-
 .section-banner {
   grid-column: 1 / -1;
   display: flex;
