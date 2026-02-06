@@ -827,12 +827,12 @@ function normalizeVirusName(name) {
     .trim();
   if (!value) return value;
   const normalized = value
-    .replace(/\s*\(\s*/g, "(")
-    .replace(/\s*\)\s*/g, ")")
     .replace(/\s*-\s*/g, "-")
     .replace(/\s*\/\s*/g, "/")
     .trim();
   const lower = normalized.toLowerCase();
+
+  if (/^ili\s*\(\s*flu[-\s]*like illness\s*\)$/i.test(normalized)) return DEFAULT_VIRUS;
 
   if (lower === "rsv") return "RSV";
   if (/^rs[-\s]*v[ií]rus$/i.test(normalized)) return "RSV";
@@ -842,18 +842,18 @@ function normalizeVirusName(name) {
   if (/^hmpv$/i.test(normalized)) return "HMPV";
 
   if (/^influenza$/i.test(normalized)) return "Influenza";
-  if (/^influenza a$/i.test(normalized)) return "Influenza A";
-  if (/^influenza b$/i.test(normalized)) return "Influenza B";
-  if (/^influenza a\(h1n1pdm09\)$/i.test(normalized) || /^influenza a\(h1pdm09\)$/i.test(normalized)) {
+  if (/^influenza\s+a$/i.test(normalized)) return "Influenza A";
+  if (/^influenza\s+b$/i.test(normalized)) return "Influenza B";
+  if (/^influenza\s+a\s*\(\s*h1n1pdm09\s*\)$/i.test(normalized) || /^influenza\s+a\s*\(\s*h1pdm09\s*\)$/i.test(normalized)) {
     return "Influenza A(H1N1pdm09)";
   }
-  if (/^influenza a h1n1pdm09$/i.test(normalized) || /^influenza a h1pdm09$/i.test(normalized)) {
+  if (/^influenza\s+a\s+h1n1pdm09$/i.test(normalized) || /^influenza\s+a\s+h1pdm09$/i.test(normalized)) {
     return "Influenza A(H1N1pdm09)";
   }
-  if (/^influenza a\(h3\)$/i.test(normalized) || /^influenza a h3$/i.test(normalized)) {
+  if (/^influenza\s+a\s*\(\s*h3\s*\)$/i.test(normalized) || /^influenza\s+a\s+h3$/i.test(normalized)) {
     return "Influenza A(H3)";
   }
-  if (/^influenza a\(nt\)$/i.test(normalized) || /^influenza a nt$/i.test(normalized)) {
+  if (/^influenza\s+a\s*\(\s*nt\s*\)$/i.test(normalized) || /^influenza\s+a\s+nt$/i.test(normalized)) {
     return "Influenza A(NT)";
   }
 
