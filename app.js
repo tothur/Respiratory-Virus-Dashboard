@@ -543,10 +543,16 @@ function chartTheme() {
   const theme = document.documentElement.getAttribute("data-theme");
   const text = styles.getPropertyValue("--text").trim() || "#e8edf7";
   const muted = styles.getPropertyValue("--muted").trim() || "#9fb3c8";
-  const grid = theme === "light" ? "rgba(15, 23, 42, 0.10)" : "rgba(255, 255, 255, 0.05)";
+  const neutral = styles.getPropertyValue("--state-neutral").trim() || "#60a5fa";
+  const neutralSoft = styles.getPropertyValue("--state-neutral-soft").trim() || "rgba(96, 165, 250, 0.16)";
+  const improving = styles.getPropertyValue("--state-improving").trim() || "#22c55e";
+  const improvingSoft = styles.getPropertyValue("--state-improving-soft").trim() || "rgba(34, 197, 94, 0.14)";
+  const worsening = styles.getPropertyValue("--state-worsening").trim() || "#ef4444";
+  const worseningSoft = styles.getPropertyValue("--state-worsening-soft").trim() || "rgba(239, 68, 68, 0.14)";
+  const grid = theme === "light" ? "rgba(15, 23, 42, 0.12)" : "rgba(255, 255, 255, 0.08)";
   const tooltipBg = theme === "light" ? "rgba(255, 255, 255, 0.94)" : "rgba(2, 6, 23, 0.92)";
   const tooltipBorder = theme === "light" ? "rgba(15, 23, 42, 0.18)" : "rgba(255, 255, 255, 0.14)";
-  return { text, muted, grid, tooltipBg, tooltipBorder, theme };
+  return { text, muted, grid, tooltipBg, tooltipBorder, neutral, neutralSoft, improving, improvingSoft, worsening, worseningSoft, theme };
 }
 
 function configureChartDefaults() {
@@ -1456,7 +1462,7 @@ function renderILIChart(year) {
     label: t("markers.threshold"),
     type: "line",
     data: labels.length ? labels.map(() => ILI_THRESHOLD) : [ILI_THRESHOLD],
-    borderColor: "rgba(244, 63, 94, 0.9)",
+    borderColor: colors.worsening,
     borderWidth: 1.5,
     borderDash: [6, 6],
     pointRadius: 0,
@@ -1478,8 +1484,8 @@ function renderILIChart(year) {
         label: t("markers.crossing"),
         type: "scatter",
         data: [crossingPoint],
-        backgroundColor: "rgba(244, 63, 94, 1)",
-        borderColor: "rgba(244, 63, 94, 1)",
+        backgroundColor: colors.worsening,
+        borderColor: colors.worsening,
         pointRadius: 5,
         pointHoverRadius: 7,
       }
@@ -1525,11 +1531,11 @@ function renderILIChart(year) {
         {
           label: t("charts.ili.datasetLabel"),
           data: values.length ? values : [0],
-          backgroundColor: "rgba(6, 182, 212, 0.6)",
-          borderColor: "#06b6d4",
+          backgroundColor: colors.neutralSoft,
+          borderColor: colors.neutral,
           borderWidth: 1.5,
           borderRadius: 6,
-          hoverBackgroundColor: "rgba(6, 182, 212, 0.8)",
+          hoverBackgroundColor: colors.neutral,
         },
         thresholdSeries,
         ...(crossingSeries ? [crossingSeries] : []),
@@ -1818,21 +1824,21 @@ function renderSariChart(year) {
         {
           label: t("charts.sari.admissionsLabel"),
           data: admissions.length ? admissions : [0],
-          backgroundColor: "rgba(249, 115, 22, 0.7)",
-          borderColor: "#f97316",
+          backgroundColor: colors.neutralSoft,
+          borderColor: colors.neutral,
           borderWidth: 1.5,
           borderRadius: 6,
-          hoverBackgroundColor: "rgba(249, 115, 22, 0.85)",
+          hoverBackgroundColor: colors.neutral,
           maxBarThickness: 26,
         },
         {
           label: t("charts.sari.icuLabel"),
           data: icu.length ? icu : [0],
-          backgroundColor: "rgba(250, 204, 21, 0.7)",
-          borderColor: "#facc15",
+          backgroundColor: colors.worseningSoft,
+          borderColor: colors.worsening,
           borderWidth: 1.5,
           borderRadius: 6,
-          hoverBackgroundColor: "rgba(250, 204, 21, 0.85)",
+          hoverBackgroundColor: colors.worsening,
           maxBarThickness: 26,
         },
       ],
@@ -2242,7 +2248,7 @@ function renderHistoricalTrends(selectedYear) {
   if (!historicalCard) return;
   const colors = chartTheme();
   const compact = isCompactViewport();
-  const accent = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() || "rgba(125, 211, 252, 0.95)";
+  const accent = colors.neutral;
 
   const compareYear = selectedYear - 1;
   const hasCompareYear = Array.isArray(respiratoryData.years) && respiratoryData.years.includes(compareYear);
@@ -2298,7 +2304,7 @@ function renderHistoricalTrends(selectedYear) {
   const seasonA = formatSeasonLabel(compareYear);
   const seasonB = formatSeasonLabel(selectedYear);
   const muted = colors.theme === "light" ? "rgba(15, 23, 42, 0.55)" : "rgba(148, 163, 184, 0.9)";
-  const deltaColor = colors.theme === "light" ? "rgba(37, 99, 235, 0.6)" : "rgba(96, 165, 250, 0.75)";
+  const deltaColor = colors.worsening;
   const deltaLabel = t("historical.delta.label");
 
   const iliCtx = document.getElementById("historical-ili-chart")?.getContext("2d");
@@ -2406,8 +2412,8 @@ function renderHistoricalTrends(selectedYear) {
         {
           label: seasonB,
           data: makeSeries(sariB),
-          borderColor: "rgba(251, 146, 60, 0.95)",
-          backgroundColor: "rgba(251, 146, 60, 0.95)",
+          borderColor: accent,
+          backgroundColor: accent,
           pointRadius: 2.5,
           pointHoverRadius: 4,
           tension: 0.25,
@@ -2450,8 +2456,8 @@ function renderHistoricalTrends(selectedYear) {
         {
           label: seasonB,
           data: makeSeries(icuB),
-          borderColor: "rgba(250, 204, 21, 0.95)",
-          backgroundColor: "rgba(250, 204, 21, 0.95)",
+          borderColor: accent,
+          backgroundColor: accent,
           pointRadius: 2.5,
           pointHoverRadius: 4,
           tension: 0.25,
