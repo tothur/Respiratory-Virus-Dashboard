@@ -604,12 +604,23 @@ function markChartRendered(canvasEl) {
   canvasEl.classList.add("chart-fade");
 }
 
+function upsertChart(existingChart, ctx, config) {
+  if (typeof Chart === "undefined" || !ctx) return existingChart || null;
+  if (!existingChart) return new Chart(ctx, config);
+
+  existingChart.config.type = config.type;
+  existingChart.data = config.data;
+  existingChart.options = config.options || {};
+  existingChart.config.plugins = config.plugins || [];
+  existingChart.update("none");
+  return existingChart;
+}
+
 // National epidemic threshold set to ~28,900 cases (approx. 289 per 100k for ~10M population).
 const ILI_THRESHOLD = 28900;
 const DEFAULT_VIRUS = "ILI (flu-like illness)";
 const DATASET = "NNGYK";
 const ERVISS_DATASET = "ERVISS";
-const ERVISS_YEAR_PRIORITY = [2026, 2025];
 let sortColumn = "week";
 let sortDirection = "asc";
 let latestFiltered = [];
@@ -625,10 +636,142 @@ const seasonWeekIndex = (week) => {
 
 const seasonWeekCompare = (a, b) => seasonWeekIndex(a) - seasonWeekIndex(b);
 
-const matchesSeasonYear = (rowYear, selectedYear) => {
-  const value = Number(rowYear);
-  return !Number.isFinite(value) || value === selectedYear;
+const derivedData = {
+  weeklyByDataset: new Map(),
+  weeklyByDatasetVirus: new Map(),
+  weeklyYearsByDataset: new Map(),
+  sariByYear: new Map(),
+  virologyDetectionsByYear: new Map(),
+  virologyPositivityByYear: new Map(),
+  ervissDetectionsByYear: new Map(),
+  ervissPositivityByYear: new Map(),
+  ervissYears: [],
 };
+
+function datasetVirusKey(dataset, virus) {
+  return `${dataset}::${virus}`;
+}
+
+function pushYearBucket(yearMap, yearValue, row) {
+  const yearKey = Number.isFinite(yearValue) ? yearValue : null;
+  if (!yearMap.has(yearKey)) yearMap.set(yearKey, []);
+  yearMap.get(yearKey).push(row);
+}
+
+function sortYearMap(yearMap, compareFn) {
+  yearMap.forEach((rows) => rows.sort(compareFn));
+}
+
+function numericWeekCompare(a, b) {
+  return Number(a.week) - Number(b.week);
+}
+
+function weeklyRowCompare(a, b) {
+  const weekDiff = seasonWeekCompare(a.week, b.week);
+  if (weekDiff !== 0) return weekDiff;
+  const virusDiff = String(a.virus || "").localeCompare(String(b.virus || ""));
+  if (virusDiff !== 0) return virusDiff;
+  return String(a.region || "").localeCompare(String(b.region || ""));
+}
+
+function rowsForYear(yearMap, year, { includeAnyYear = false } = {}) {
+  if (!yearMap) return [];
+  const selectedYear = Number(year);
+  const rowsForSelectedYear = Number.isFinite(selectedYear) ? yearMap.get(selectedYear) || [] : [];
+  if (!includeAnyYear) return rowsForSelectedYear;
+  const rowsForAnyYear = yearMap.get(null) || [];
+  if (!rowsForAnyYear.length) return rowsForSelectedYear;
+  if (!rowsForSelectedYear.length) return rowsForAnyYear;
+  return rowsForSelectedYear.concat(rowsForAnyYear);
+}
+
+function yearsFromYearMap(yearMap) {
+  return Array.from(yearMap.keys())
+    .filter((year) => Number.isFinite(year))
+    .sort((a, b) => a - b);
+}
+
+function rebuildDerivedData() {
+  derivedData.weeklyByDataset = new Map();
+  derivedData.weeklyByDatasetVirus = new Map();
+  derivedData.weeklyYearsByDataset = new Map();
+  derivedData.sariByYear = new Map();
+  derivedData.virologyDetectionsByYear = new Map();
+  derivedData.virologyPositivityByYear = new Map();
+  derivedData.ervissDetectionsByYear = new Map();
+  derivedData.ervissPositivityByYear = new Map();
+  derivedData.ervissYears = [];
+
+  (respiratoryData.weekly || []).forEach((row) => {
+    const dataset = row.dataset || DATASET;
+    const virus = row.virus || DEFAULT_VIRUS;
+    const year = Number(row.year);
+
+    if (!derivedData.weeklyByDataset.has(dataset)) derivedData.weeklyByDataset.set(dataset, new Map());
+    pushYearBucket(derivedData.weeklyByDataset.get(dataset), year, row);
+
+    const key = datasetVirusKey(dataset, virus);
+    if (!derivedData.weeklyByDatasetVirus.has(key)) derivedData.weeklyByDatasetVirus.set(key, new Map());
+    pushYearBucket(derivedData.weeklyByDatasetVirus.get(key), year, row);
+  });
+
+  const addRowsToYearMap = (rows, targetYearMap) => {
+    (rows || []).forEach((row) => {
+      pushYearBucket(targetYearMap, Number(row.year), row);
+    });
+  };
+
+  addRowsToYearMap(respiratoryData.sariWeekly, derivedData.sariByYear);
+  addRowsToYearMap(respiratoryData.virologyDetections, derivedData.virologyDetectionsByYear);
+  addRowsToYearMap(respiratoryData.virologyPositivity, derivedData.virologyPositivityByYear);
+  addRowsToYearMap(respiratoryData.ervissDetections, derivedData.ervissDetectionsByYear);
+  addRowsToYearMap(respiratoryData.ervissPositivity, derivedData.ervissPositivityByYear);
+
+  derivedData.weeklyByDataset.forEach((yearMap, dataset) => {
+    sortYearMap(yearMap, weeklyRowCompare);
+    derivedData.weeklyYearsByDataset.set(dataset, yearsFromYearMap(yearMap));
+  });
+  derivedData.weeklyByDatasetVirus.forEach((yearMap) => sortYearMap(yearMap, weeklyRowCompare));
+  sortYearMap(derivedData.sariByYear, weeklyRowCompare);
+  sortYearMap(derivedData.virologyDetectionsByYear, weeklyRowCompare);
+  sortYearMap(derivedData.virologyPositivityByYear, weeklyRowCompare);
+  sortYearMap(derivedData.ervissDetectionsByYear, numericWeekCompare);
+  sortYearMap(derivedData.ervissPositivityByYear, numericWeekCompare);
+
+  const ervissYears = new Set([
+    ...yearsFromYearMap(derivedData.ervissDetectionsByYear),
+    ...yearsFromYearMap(derivedData.ervissPositivityByYear),
+  ]);
+  derivedData.ervissYears = Array.from(ervissYears).sort((a, b) => a - b);
+}
+
+function weeklyRowsForDataset(dataset, year) {
+  return rowsForYear(derivedData.weeklyByDataset.get(dataset), year);
+}
+
+function weeklyRowsForDatasetVirus(dataset, year, virus) {
+  return rowsForYear(derivedData.weeklyByDatasetVirus.get(datasetVirusKey(dataset, virus)), year);
+}
+
+function sariRowsForYear(year, { includeAnyYear = true } = {}) {
+  return rowsForYear(derivedData.sariByYear, year, { includeAnyYear });
+}
+
+function virologyDetectionsRowsForYear(year) {
+  return rowsForYear(derivedData.virologyDetectionsByYear, year, { includeAnyYear: true });
+}
+
+function virologyPositivityRowsForYear(year) {
+  return rowsForYear(derivedData.virologyPositivityByYear, year, { includeAnyYear: true });
+}
+
+function ervissDetectionsRowsForYear(year) {
+  return rowsForYear(derivedData.ervissDetectionsByYear, year);
+}
+
+function ervissPositivityRowsForYear(year) {
+  return rowsForYear(derivedData.ervissPositivityByYear, year);
+}
 
 const VIRUS_LABELS_HU = {
   "ILI (flu-like illness)": "ILI (influenzaszerű megbetegedés)",
@@ -686,7 +829,9 @@ function formatWeekBadge(week) {
 function formatSeasonLabel(year) {
   const known = seasonLabels[year];
   if (known) return known;
-  return currentLang === "hu" ? `${year} szezon` : `${year} season`;
+  const numericYear = Number(year);
+  if (Number.isFinite(numericYear)) return `${numericYear}-${numericYear + 1}`;
+  return String(year);
 }
 
 function populateFilters() {
@@ -694,7 +839,7 @@ function populateFilters() {
   respiratoryData.years.forEach((year) => {
     const option = document.createElement("option");
     option.value = year;
-    option.textContent = seasonLabels[year] || year;
+    option.textContent = formatSeasonLabel(year);
     yearSelect.appendChild(option);
   });
 }
@@ -714,7 +859,7 @@ function summarize(data) {
 }
 
 function viroVirusesForSeason(year) {
-  const detections = aggregateDetectionsWithInfluenzaAll(respiratoryData.virologyDetections || [], year);
+  const detections = aggregateDetectionsWithInfluenzaAll(virologyDetectionsRowsForYear(year));
   return Array.from(new Set(detections.map((row) => row.virus))).sort((a, b) => {
     if (a === INFLUENZA_ALL_KEY) return -1;
     if (b === INFLUENZA_ALL_KEY) return 1;
@@ -742,31 +887,55 @@ function populateViroVirusSelect(year, preferred = null) {
   viroVirusSelect.value = next;
 }
 
-function chipIconSvg(id) {
-  const base = (path) =>
-    `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="${path}"/></svg>`;
+function chipIconPath(id) {
   switch (id) {
     case "points":
-      return base(
-        "M7 3a4 4 0 1 0 0 8a4 4 0 0 0 0-8Zm0 2a2 2 0 1 1 0 4a2 2 0 0 1 0-4Zm10-2a4 4 0 1 0 0 8a4 4 0 0 0 0-8Zm0 2a2 2 0 1 1 0 4a2 2 0 0 1 0-4ZM4 21a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v0.5H4V21Zm10 0a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v0.5h-10V21Z"
-      );
+      return "M7 3a4 4 0 1 0 0 8a4 4 0 0 0 0-8Zm0 2a2 2 0 1 1 0 4a2 2 0 0 1 0-4Zm10-2a4 4 0 1 0 0 8a4 4 0 0 0 0-8Zm0 2a2 2 0 1 1 0 4a2 2 0 0 1 0-4ZM4 21a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v0.5H4V21Zm10 0a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v0.5h-10V21Z";
     case "peak":
-      return base("M12 3l2.2 5.6L20 9.2l-4.4 3.7L17 19l-5-3l-5 3l1.4-6.1L4 9.2l5.8-.6L12 3Z");
+      return "M12 3l2.2 5.6L20 9.2l-4.4 3.7L17 19l-5-3l-5 3l1.4-6.1L4 9.2l5.8-.6L12 3Z";
     case "median":
-      return base("M5 6h14v2H5V6Zm0 5h9v2H5v-2Zm0 5h14v2H5v-2Z");
+      return "M5 6h14v2H5V6Zm0 5h9v2H5v-2Zm0 5h14v2H5v-2Z";
     case "nngyk":
-      return base("M4 20V8l8-4l8 4v12h-2V9.3l-6-3l-6 3V20H4Z");
+      return "M4 20V8l8-4l8 4v12h-2V9.3l-6-3l-6 3V20H4Z";
     case "sari":
-      return base("M12 2a7 7 0 0 1 7 7c0 4.2-3 7.7-7 13c-4-5.3-7-8.8-7-13a7 7 0 0 1 7-7Zm0 4a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z");
+      return "M12 2a7 7 0 0 1 7 7c0 4.2-3 7.7-7 13c-4-5.3-7-8.8-7-13a7 7 0 0 1 7-7Zm0 4a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z";
     case "erviss":
-      return base(
-        "M12 2.5a9.5 9.5 0 1 0 0 19a9.5 9.5 0 0 0 0-19Zm6.9 8h-2.8a16.4 16.4 0 0 0-1-4.4a7.54 7.54 0 0 1 3.8 4.4ZM12 4.6c.8 1.1 1.5 2.9 1.9 5.9H10.1c.4-3 1.1-4.8 1.9-5.9ZM5.3 6.1a7.54 7.54 0 0 1 3.8-1.5a16.4 16.4 0 0 0-1 4.4H5.3Zm0 11.8h2.8a16.4 16.4 0 0 0 1 4.4a7.54 7.54 0 0 1-3.8-4.4Zm4.8 0h3.8c-.4 3-1.1 4.8-1.9 5.9c-.8-1.1-1.5-2.9-1.9-5.9Zm0-2h3.8a19 19 0 0 0 0-3.8h-3.8a19 19 0 0 0 0 3.8Zm5.8 6.4a16.4 16.4 0 0 0 1-4.4h2.8a7.54 7.54 0 0 1-3.8 4.4Z"
-      );
+      return "M12 2.5a9.5 9.5 0 1 0 0 19a9.5 9.5 0 0 0 0-19Zm6.9 8h-2.8a16.4 16.4 0 0 0-1-4.4a7.54 7.54 0 0 1 3.8 4.4ZM12 4.6c.8 1.1 1.5 2.9 1.9 5.9H10.1c.4-3 1.1-4.8 1.9-5.9ZM5.3 6.1a7.54 7.54 0 0 1 3.8-1.5a16.4 16.4 0 0 0-1 4.4H5.3Zm0 11.8h2.8a16.4 16.4 0 0 0 1 4.4a7.54 7.54 0 0 1-3.8-4.4Zm4.8 0h3.8c-.4 3-1.1 4.8-1.9 5.9c-.8-1.1-1.5-2.9-1.9-5.9Zm0-2h3.8a19 19 0 0 0 0-3.8h-3.8a19 19 0 0 0 0 3.8Zm5.8 6.4a16.4 16.4 0 0 0 1-4.4h2.8a7.54 7.54 0 0 1-3.8 4.4Z";
     case "missing":
-      return base("M12 2a10 10 0 1 0 0 20a10 10 0 0 0 0-20Zm1 5v6h-2V7h2Zm-1 11a1.25 1.25 0 1 1 0-2.5a1.25 1.25 0 0 1 0 2.5Z");
+      return "M12 2a10 10 0 1 0 0 20a10 10 0 0 0 0-20Zm1 5v6h-2V7h2Zm-1 11a1.25 1.25 0 1 1 0-2.5a1.25 1.25 0 0 1 0 2.5Z";
     default:
-      return base("M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0-18Z");
+      return "M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0-18Z";
   }
+}
+
+function createChipIcon(id) {
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", "0 0 24 24");
+  svg.setAttribute("aria-hidden", "true");
+  svg.setAttribute("focusable", "false");
+
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("fill", "currentColor");
+  path.setAttribute("d", chipIconPath(id));
+  svg.appendChild(path);
+
+  return svg;
+}
+
+function appendLabelValueListItem(listEl, label, value) {
+  const li = document.createElement("li");
+  const labelEl = document.createElement("span");
+  const valueEl = document.createElement("strong");
+  labelEl.textContent = label;
+  valueEl.textContent = value;
+  li.append(labelEl, valueEl);
+  listEl.appendChild(li);
+}
+
+function appendTableCell(rowEl, value) {
+  const td = document.createElement("td");
+  td.textContent = value;
+  rowEl.appendChild(td);
 }
 
 function renderChips(data) {
@@ -809,13 +978,11 @@ function renderChips(data) {
 
   const iliMissing = iliLatest
     ? missingWeekList(
-        respiratoryData.weekly
-          .filter((row) => row.dataset === DATASET && row.year === selectedYear && row.virus === DEFAULT_VIRUS)
-          .map((row) => row.week)
+        weeklyRowsForDatasetVirus(DATASET, selectedYear, DEFAULT_VIRUS).map((row) => row.week)
       )
     : [];
   const sariMissing = sariLatest
-    ? missingWeekList((respiratoryData.sariWeekly || []).filter((r) => Number(r.year) === selectedYear).map((r) => r.week))
+    ? missingWeekList(sariRowsForYear(selectedYear).map((row) => row.week))
     : [];
 
   const chips = [
@@ -838,7 +1005,19 @@ function renderChips(data) {
   chips.forEach((chip) => {
     const span = document.createElement("span");
     span.className = "chip";
-    span.innerHTML = `<span class="chip-icon">${chipIconSvg(chip.id)}</span><span class="chip-label">${chip.label}</span><span class="chip-value">${chip.value}</span>`;
+    const icon = document.createElement("span");
+    icon.className = "chip-icon";
+    icon.appendChild(createChipIcon(chip.id));
+
+    const label = document.createElement("span");
+    label.className = "chip-label";
+    label.textContent = chip.label;
+
+    const value = document.createElement("span");
+    value.className = "chip-value";
+    value.textContent = String(chip.value);
+
+    span.append(icon, label, value);
     chipsRow.appendChild(span);
   });
 }
@@ -872,7 +1051,7 @@ function median(values) {
 }
 
 function latestPositivityLeader(year) {
-  const positivity = (respiratoryData.virologyPositivity || []).filter((row) => matchesSeasonYear(row.year, year));
+  const positivity = virologyPositivityRowsForYear(year);
   if (!positivity.length) return null;
   const latestWeek = positivity.reduce(
     (best, row) => (seasonWeekIndex(row.week) > seasonWeekIndex(best) ? row.week : best),
@@ -888,22 +1067,19 @@ function latestPositivityLeader(year) {
   return { week: latestWeek, virus: leader.virus, positivity: Number(leader.positivity) };
 }
 
-function latestEuPositivityLeader() {
-  const detections = respiratoryData.ervissDetections || [];
-  const positivity = respiratoryData.ervissPositivity || [];
-  if (!detections.length && !positivity.length) return null;
-  const yearCandidates = Array.from(
-    new Set(
-      [...detections, ...positivity]
-        .map((row) => Number(row.year))
-        .filter((year) => Number.isFinite(year))
-    )
-  );
-  const targetYear =
-    ERVISS_YEAR_PRIORITY.find((yr) => yearCandidates.includes(yr)) ||
-    (yearCandidates.length ? Math.max(...yearCandidates) : null);
+function ervissTargetYear(preferredYear = null) {
+  const yearCandidates = derivedData.ervissYears || [];
+  if (!yearCandidates.length) return null;
+  const preferred = Number(preferredYear);
+  if (Number.isFinite(preferred) && yearCandidates.includes(preferred)) return preferred;
+  return yearCandidates[yearCandidates.length - 1];
+}
+
+function latestEuPositivityLeader(preferredYear = null) {
+  if (!derivedData.ervissYears.length) return null;
+  const targetYear = ervissTargetYear(preferredYear);
   if (!targetYear) return null;
-  const targetPositivity = positivity.filter((p) => Number(p.year) === targetYear);
+  const targetPositivity = ervissPositivityRowsForYear(targetYear);
   if (!targetPositivity.length) return null;
   const latestWeek = Math.max(...targetPositivity.map((p) => p.week));
   const latestRows = targetPositivity.filter((p) => p.week === latestWeek);
@@ -935,8 +1111,8 @@ function renderLeaderAlert(year) {
   leaderAlertChip.textContent = virusLabel;
 }
 
-function renderEuLeaderAlert() {
-  const leader = latestEuPositivityLeader();
+function renderEuLeaderAlert(preferredYear = null) {
+  const leader = latestEuPositivityLeader(preferredYear);
   if (!leader) {
     leaderEuAlert.hidden = true;
     return;
@@ -962,8 +1138,7 @@ function latestILITotals(dataset, year) {
     return Number.isFinite(num) ? num : 0;
   };
 
-  const rows = respiratoryData.weekly
-    .filter((row) => row.dataset === dataset && row.year === year && row.virus === DEFAULT_VIRUS)
+  const rows = weeklyRowsForDatasetVirus(dataset, year, DEFAULT_VIRUS)
     .map((row) => ({
       week: Number(row.week),
       cases: toNumber(row.cases),
@@ -1040,9 +1215,11 @@ function formatSurgeLabel(direction, pct, previousWeek) {
 }
 
 function computeSurgeSignals(dataset, year) {
-  const rows = respiratoryData.weekly.filter((row) => row.dataset === dataset && row.year === year);
+  const rows = weeklyRowsForDataset(dataset, year);
   const byVirus = rows.reduce((map, row) => {
-    map.set(row.virus, [...(map.get(row.virus) || []), row]);
+    const bucket = map.get(row.virus);
+    if (bucket) bucket.push(row);
+    else map.set(row.virus, [row]);
     return map;
   }, new Map());
 
@@ -1085,7 +1262,18 @@ function renderSurgeSignals(dataset, year) {
     li.className = `trend-${direction}`;
     const virusLabel = displayVirus(signal.virus);
     const weekLabel = Number.isFinite(Number(signal.week)) ? formatWeekLabel(signal.week) : "–";
-    li.innerHTML = `<div><strong>${virusLabel}</strong><span>${weekLabel}</span></div><span class="pill">${signal.label}</span>`;
+    const left = document.createElement("div");
+    const virus = document.createElement("strong");
+    virus.textContent = virusLabel;
+    const week = document.createElement("span");
+    week.textContent = weekLabel;
+    left.append(virus, week);
+
+    const pill = document.createElement("span");
+    pill.className = "pill";
+    pill.textContent = signal.label;
+
+    li.append(left, pill);
     surgeList.appendChild(li);
   });
 }
@@ -1107,9 +1295,9 @@ function updateSortHeaders() {
 function renderTable(data, seasonYear, selectedVirus) {
   tableBody.innerHTML = "";
   updateSortHeaders();
-  const sariRows = (respiratoryData.sariWeekly || []).filter((row) => matchesSeasonYear(row.year, seasonYear));
-  const positivityRows = (respiratoryData.virologyPositivity || []).filter((row) => matchesSeasonYear(row.year, seasonYear));
-  const detectionsRows = (respiratoryData.virologyDetections || []).filter((row) => matchesSeasonYear(row.year, seasonYear));
+  const sariRows = sariRowsForYear(seasonYear);
+  const positivityRows = virologyPositivityRowsForYear(seasonYear);
+  const detectionsRows = virologyDetectionsRowsForYear(seasonYear);
   const weeksWithRows = new Set(data.map((row) => Number(row.week)).filter(Number.isFinite));
   const allWeeks = new Set([
     ...weeksWithRows,
@@ -1174,15 +1362,14 @@ function renderTable(data, seasonYear, selectedVirus) {
     const casesLabel =
       row.cases != null && Number.isFinite(Number(row.cases)) ? Number(row.cases).toLocaleString() : "–";
     const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>W${row.week.toString().padStart(2, "0")}</td>
-      <td>${displayVirus(row.virus)}</td>
-      <td>${displayRegion(row.region)}</td>
-      <td>${casesLabel}</td>
-      <td>${admissionsLabel}</td>
-      <td>${icuLabel}</td>
-      <td>${posLabel}</td>
-    `;
+    const weekLabel = Number.isFinite(Number(row.week)) ? formatWeek(row.week) : "–";
+    appendTableCell(tr, weekLabel);
+    appendTableCell(tr, displayVirus(row.virus));
+    appendTableCell(tr, displayRegion(row.region));
+    appendTableCell(tr, casesLabel);
+    appendTableCell(tr, admissionsLabel);
+    appendTableCell(tr, icuLabel);
+    appendTableCell(tr, posLabel);
     tableBody.appendChild(tr);
   });
 }
@@ -1191,14 +1378,10 @@ function renderILIChart(year) {
   const canvas = document.getElementById("ili-chart");
   const ctx = canvas.getContext("2d");
   const colors = chartTheme();
-  const rows = respiratoryData.weekly
-    .filter((row) => row.dataset === DATASET && row.year === year && row.virus === DEFAULT_VIRUS)
-    .sort((a, b) => seasonWeekCompare(a.week, b.week));
+  const rows = weeklyRowsForDatasetVirus(DATASET, year, DEFAULT_VIRUS);
 
   const labels = rows.map((d) => formatWeek(d.week));
   const values = rows.map((d) => d.cases);
-
-  if (trendChart) trendChart.destroy();
 
   iliYearBadge.textContent = rows.length ? formatSeasonLabel(year) : t("status.awaitingData");
 
@@ -1267,7 +1450,7 @@ function renderILIChart(year) {
     },
   };
 
-  trendChart = new Chart(ctx, {
+  trendChart = upsertChart(trendChart, ctx, {
     type: "bar",
     data: {
       labels: labels.length ? labels : [t("status.noData")],
@@ -1301,7 +1484,7 @@ function renderILIChart(year) {
 }
 
 function latestSariForSeason(year) {
-  const rows = (respiratoryData.sariWeekly || []).filter((row) => matchesSeasonYear(row.year, year));
+  const rows = sariRowsForYear(year);
   if (!rows.length) return null;
   return rows.reduce((best, row) => (seasonWeekIndex(row.week) > seasonWeekIndex(best.week) ? row : best), rows[0]);
 }
@@ -1424,21 +1607,19 @@ function formatGlanceLine(glance) {
 
 function renderSeasonAtGlance(year) {
   const buildIliSeries = (targetYear) => {
-    const iliTotals = respiratoryData.weekly
-      .filter((row) => row.dataset === DATASET && Number(row.year) === Number(targetYear) && row.virus === DEFAULT_VIRUS)
-      .reduce((map, row) => {
-        const week = Number(row.week);
-        if (!Number.isFinite(week)) return map;
-        map.set(week, (map.get(week) || 0) + Number(row.cases ?? 0));
-        return map;
-      }, new Map());
+    const iliTotals = weeklyRowsForDatasetVirus(DATASET, targetYear, DEFAULT_VIRUS).reduce((map, row) => {
+      const week = Number(row.week);
+      if (!Number.isFinite(week)) return map;
+      map.set(week, (map.get(week) || 0) + Number(row.cases ?? 0));
+      return map;
+    }, new Map());
     return Array.from(iliTotals.entries()).map(([week, value]) => ({ week, value }));
   };
 
   const iliSeries = buildIliSeries(year);
   const iliGlance = computeGlance(iliSeries);
 
-  const sariRows = (respiratoryData.sariWeekly || []).filter((row) => matchesSeasonYear(row.year, year));
+  const sariRows = sariRowsForYear(year);
   const sariSeries = sariRows.map((row) => ({ week: Number(row.week), value: Number(row.admissions ?? 0) }));
   const icuSeries = sariRows.map((row) => ({ week: Number(row.week), value: Number(row.icu ?? 0) }));
   const sariGlance = computeGlance(sariSeries);
@@ -1450,9 +1631,10 @@ function renderSeasonAtGlance(year) {
   const severity = computeSeverityRatios(iliSeries, sariRows) || {};
 
   const buildSariSeries = (targetYear) =>
-    (respiratoryData.sariWeekly || [])
-      .filter((row) => Number(row.year) === Number(targetYear))
-      .map((row) => ({ week: Number(row.week), value: Number(row.admissions ?? 0) }));
+    sariRowsForYear(targetYear, { includeAnyYear: false }).map((row) => ({
+      week: Number(row.week),
+      value: Number(row.admissions ?? 0),
+    }));
   const iliSeasonToDate = computeSeasonToDateComparison(buildIliSeries, year, iliGlance?.latest?.week);
   const sariSeasonToDate = computeSeasonToDateComparison(buildSariSeries, year, sariGlance?.latest?.week);
 
@@ -1520,16 +1702,10 @@ function renderSariChart(year) {
   const canvas = document.getElementById("sari-chart");
   const ctx = canvas.getContext("2d");
   const colors = chartTheme();
-  const rows =
-    respiratoryData.sariWeekly
-      ?.filter((row) => matchesSeasonYear(row.year, year))
-      .slice()
-      .sort((a, b) => seasonWeekCompare(a.week, b.week)) ?? [];
+  const rows = sariRowsForYear(year);
   const labels = rows.map((d) => formatWeek(d.week));
   const admissions = rows.map((d) => d.admissions);
   const icu = rows.map((d) => d.icu);
-
-  if (sariChart) sariChart.destroy();
 
   const seasonMarkerPlugin = {
     id: "seasonMarkersSari",
@@ -1563,7 +1739,7 @@ function renderSariChart(year) {
     },
   };
 
-  sariChart = new Chart(ctx, {
+  sariChart = upsertChart(sariChart, ctx, {
     type: "bar",
     data: {
       labels: labels.length ? labels : [t("status.noData")],
@@ -1649,8 +1825,8 @@ function aggregateDetectionsWithInfluenzaAll(detections = respiratoryData.virolo
 
 function renderVirology(year) {
   const colors = chartTheme();
-  const detections = aggregateDetectionsWithInfluenzaAll(respiratoryData.virologyDetections || [], year);
-  const positivity = (respiratoryData.virologyPositivity || []).filter((row) => matchesSeasonYear(row.year, year));
+  const detections = aggregateDetectionsWithInfluenzaAll(virologyDetectionsRowsForYear(year));
+  const positivity = virologyPositivityRowsForYear(year);
 
   if (viroVirusSelect) {
     populateViroVirusSelect(year, viroVirusSelect.value);
@@ -1678,9 +1854,7 @@ function renderVirology(year) {
   ].slice(0, 6);
 
   detectionRowsForList.forEach((row) => {
-    const li = document.createElement("li");
-    li.innerHTML = `<span>${displayVirus(row.virus)}</span><strong>${Number(row.detections ?? 0).toLocaleString()}</strong>`;
-    viroDetectionsList.appendChild(li);
+    appendLabelValueListItem(viroDetectionsList, displayVirus(row.virus), Number(row.detections ?? 0).toLocaleString());
   });
   if (!viroDetectionsList.children.length) {
     const li = document.createElement("li");
@@ -1693,9 +1867,7 @@ function renderVirology(year) {
     .filter((p) => p.week === latestWeek)
     .slice(0, 6)
     .forEach((row) => {
-      const li = document.createElement("li");
-      li.innerHTML = `<span>${displayVirus(row.virus)}</span><strong>${Number(row.positivity ?? 0).toFixed(1)}%</strong>`;
-      viroPositivityList.appendChild(li);
+      appendLabelValueListItem(viroPositivityList, displayVirus(row.virus), `${Number(row.positivity ?? 0).toFixed(1)}%`);
     });
   if (!viroPositivityList.children.length) {
     const li = document.createElement("li");
@@ -1745,8 +1917,7 @@ function renderVirology(year) {
     };
   });
 
-  if (viroDetectionsChart) viroDetectionsChart.destroy();
-  viroDetectionsChart = new Chart(detCtx, {
+  viroDetectionsChart = upsertChart(viroDetectionsChart, detCtx, {
     type: "line",
     data: { labels: detWeeks.length ? detWeeks.map((w) => formatWeek(w)) : [t("status.noData")], datasets: detSeries },
     options: {
@@ -1781,8 +1952,7 @@ function renderVirology(year) {
     };
   });
 
-  if (viroPositivityChart) viroPositivityChart.destroy();
-  viroPositivityChart = new Chart(posCtx, {
+  viroPositivityChart = upsertChart(viroPositivityChart, posCtx, {
     type: "line",
     data: { labels: posWeeks.map((w) => formatWeek(w)), datasets: posSeries },
     options: {
@@ -1804,23 +1974,12 @@ function renderVirology(year) {
   markChartRendered(document.getElementById("viro-positivity-chart"));
 }
 
-function renderEuVirology() {
+function renderEuVirology(preferredYear = null) {
   const colors = chartTheme();
-  const allDetections = respiratoryData.ervissDetections || [];
-  const allPositivity = respiratoryData.ervissPositivity?.slice() || [];
-  const yearCandidates = Array.from(
-    new Set(
-      [...allDetections, ...allPositivity]
-        .map((row) => Number(row.year))
-        .filter((year) => Number.isFinite(year))
-    )
-  );
-  const targetYear =
-    ERVISS_YEAR_PRIORITY.find((yr) => yearCandidates.includes(yr)) ||
-    (yearCandidates.length ? Math.max(...yearCandidates) : null);
+  const targetYear = ervissTargetYear(preferredYear);
 
-  const detections = targetYear ? aggregateDetections(allDetections, targetYear) : [];
-  const positivity = targetYear ? allPositivity.filter((p) => Number(p.year) === targetYear) : [];
+  const detections = targetYear ? aggregateDetections(ervissDetectionsRowsForYear(targetYear)) : [];
+  const positivity = targetYear ? ervissPositivityRowsForYear(targetYear) : [];
 
   const latestWeek =
     detections.length || positivity.length
@@ -1836,9 +1995,7 @@ function renderEuVirology() {
     .filter((d) => (hasLatestWeek ? d.week === latestWeek : false))
     .slice(0, 6)
     .forEach((row) => {
-      const li = document.createElement("li");
-      li.innerHTML = `<span>${displayVirus(row.virus)}</span><strong>${Number(row.detections ?? 0).toLocaleString()}</strong>`;
-      euDetectionsList.appendChild(li);
+      appendLabelValueListItem(euDetectionsList, displayVirus(row.virus), Number(row.detections ?? 0).toLocaleString());
     });
   if (!euDetectionsList.children.length) {
     const li = document.createElement("li");
@@ -1851,9 +2008,7 @@ function renderEuVirology() {
     .filter((p) => (hasLatestWeek ? p.week === latestWeek : false))
     .slice(0, 6)
     .forEach((row) => {
-      const li = document.createElement("li");
-      li.innerHTML = `<span>${displayVirus(row.virus)}</span><strong>${Number(row.positivity ?? 0).toFixed(1)}%</strong>`;
-      euPositivityList.appendChild(li);
+      appendLabelValueListItem(euPositivityList, displayVirus(row.virus), `${Number(row.positivity ?? 0).toFixed(1)}%`);
     });
   if (!euPositivityList.children.length) {
     const li = document.createElement("li");
@@ -1892,8 +2047,7 @@ function renderEuVirology() {
     };
   });
 
-  if (euDetectionsChart) euDetectionsChart.destroy();
-  euDetectionsChart = new Chart(detCtx, {
+  euDetectionsChart = upsertChart(euDetectionsChart, detCtx, {
     type: "line",
     data: { labels: detWeeks.map((w) => formatWeek(w)), datasets: detSeries },
     options: {
@@ -1928,8 +2082,7 @@ function renderEuVirology() {
     };
   });
 
-  if (euPositivityChart) euPositivityChart.destroy();
-  euPositivityChart = new Chart(posCtx, {
+  euPositivityChart = upsertChart(euPositivityChart, posCtx, {
     type: "line",
     data: { labels: posWeeks.map((w) => formatWeek(w)), datasets: posSeries },
     options: {
@@ -1997,7 +2150,7 @@ function renderHistoricalTrends(selectedYear) {
 
   const compareYear = selectedYear - 1;
   const hasCompareYear = Array.isArray(respiratoryData.years) && respiratoryData.years.includes(compareYear);
-  const show = selectedYear === 2025 && hasCompareYear;
+  const show = hasCompareYear;
   historicalCard.hidden = !show;
   if (!show) {
     destroyHistoricalCharts();
@@ -2007,20 +2160,17 @@ function renderHistoricalTrends(selectedYear) {
     return;
   }
 
-  const iliRowsA = respiratoryData.weekly.filter(
-    (row) => row.dataset === DATASET && row.year === compareYear && row.virus === DEFAULT_VIRUS
-  );
-  const iliRowsB = respiratoryData.weekly.filter(
-    (row) => row.dataset === DATASET && row.year === selectedYear && row.virus === DEFAULT_VIRUS
-  );
+  const iliRowsA = weeklyRowsForDatasetVirus(DATASET, compareYear, DEFAULT_VIRUS);
+  const iliRowsB = weeklyRowsForDatasetVirus(DATASET, selectedYear, DEFAULT_VIRUS);
   const iliA = sumByWeek(iliRowsA, "cases");
   const iliB = sumByWeek(iliRowsB, "cases");
 
-  const sariRows = respiratoryData.sariWeekly || [];
-  const sariA = sumByWeek(sariRows.filter((row) => Number(row.year) === compareYear), "admissions");
-  const sariB = sumByWeek(sariRows.filter((row) => Number(row.year) === selectedYear), "admissions");
-  const icuA = sumByWeek(sariRows.filter((row) => Number(row.year) === compareYear), "icu");
-  const icuB = sumByWeek(sariRows.filter((row) => Number(row.year) === selectedYear), "icu");
+  const sariRowsA = sariRowsForYear(compareYear, { includeAnyYear: false });
+  const sariRowsB = sariRowsForYear(selectedYear, { includeAnyYear: false });
+  const sariA = sumByWeek(sariRowsA, "admissions");
+  const sariB = sumByWeek(sariRowsB, "admissions");
+  const icuA = sumByWeek(sariRowsA, "icu");
+  const icuB = sumByWeek(sariRowsB, "icu");
 
   const weeks = Array.from(
     new Set([
@@ -2060,8 +2210,6 @@ function renderHistoricalTrends(selectedYear) {
   const icuCtx = document.getElementById("historical-icu-chart")?.getContext("2d");
   if (!iliCtx || !sariCtx || !icuCtx) return;
 
-  destroyHistoricalCharts();
-
   setHistoricalDelta(historicalIliDelta, iliDelta);
   setHistoricalDelta(historicalSariDelta, sariDelta);
   setHistoricalDelta(historicalIcuDelta, icuDelta);
@@ -2097,7 +2245,7 @@ function renderHistoricalTrends(selectedYear) {
     },
   };
 
-  historicalILIChart = new Chart(iliCtx, {
+  historicalILIChart = upsertChart(historicalILIChart, iliCtx, {
     type: "line",
     data: {
       labels,
@@ -2141,7 +2289,7 @@ function renderHistoricalTrends(selectedYear) {
   });
   markChartRendered(document.getElementById("historical-ili-chart"));
 
-  historicalSariChart = new Chart(sariCtx, {
+  historicalSariChart = upsertChart(historicalSariChart, sariCtx, {
     type: "line",
     data: {
       labels,
@@ -2185,7 +2333,7 @@ function renderHistoricalTrends(selectedYear) {
   });
   markChartRendered(document.getElementById("historical-sari-chart"));
 
-  historicalIcuChart = new Chart(icuCtx, {
+  historicalIcuChart = upsertChart(historicalIcuChart, icuCtx, {
     type: "line",
     data: {
       labels,
@@ -2260,9 +2408,7 @@ function bindSortControls() {
 
 function applyFilters() {
   const { dataset, year, virus } = currentSelection();
-  const filtered = respiratoryData.weekly.filter(
-    (row) => row.dataset === dataset && row.year === year && row.virus === virus
-  );
+  const filtered = weeklyRowsForDatasetVirus(dataset, year, virus);
   latestFiltered = filtered;
 
   const { total, peakWeek: peak } = summarize(filtered);
@@ -2275,14 +2421,14 @@ function applyFilters() {
   renderLatestWeekCases(filtered);
   renderSurgeSignals(dataset, year);
   renderLeaderAlert(year);
-  renderEuLeaderAlert();
+  renderEuLeaderAlert(year);
   renderFluAlert(dataset, year);
   renderSeasonAtGlance(year);
   renderILIChart(year);
   renderSariCards(year);
   renderSariChart(year);
   renderVirology(year);
-  renderEuVirology();
+  renderEuVirology(year);
   renderHistoricalTrends(year);
   updateLoadingIndicators();
 }
@@ -2462,14 +2608,12 @@ async function main() {
   initThemeControls();
   await loadNNGYKData();
   await loadERVISSSari();
+  rebuildDerivedData();
   populateFilters();
 
   const fallbackYear = respiratoryData.years[respiratoryData.years.length - 1];
-  const latestNNGYKYear =
-    Math.max(
-      ...respiratoryData.weekly.filter((row) => row.dataset === DATASET).map((row) => row.year),
-      fallbackYear
-    ) || fallbackYear;
+  const nngykYears = derivedData.weeklyYearsByDataset.get(DATASET) || [];
+  const latestNNGYKYear = (nngykYears.length ? nngykYears[nngykYears.length - 1] : fallbackYear) || fallbackYear;
 
   yearSelect.value = latestNNGYKYear;
 
