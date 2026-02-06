@@ -631,6 +631,10 @@ function chartYTicks(colors, { percent = false } = {}) {
   return ticks;
 }
 
+function chartAspectRatio({ compact = 1.15, regular = 2.2 } = {}) {
+  return isCompactViewport() ? compact : regular;
+}
+
 function upsertChart(existingChart, ctx, config) {
   if (typeof Chart === "undefined" || !ctx) return existingChart || null;
   if (!existingChart) return new Chart(ctx, config);
@@ -1498,7 +1502,8 @@ function renderILIChart(year) {
     },
     options: {
       responsive: true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: true,
+      aspectRatio: chartAspectRatio({ compact: 1.1, regular: 2.2 }),
       plugins: {
         tooltip: { mode: "index", intersect: false },
         legend: { display: !compact },
@@ -1799,7 +1804,8 @@ function renderSariChart(year) {
     },
     options: {
       responsive: true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: true,
+      aspectRatio: chartAspectRatio({ compact: 1.1, regular: 2.2 }),
       plugins: {
         tooltip: { mode: "index", intersect: false },
         legend: { display: !compact },
@@ -1956,7 +1962,8 @@ function renderVirology(year) {
     data: { labels: detWeeks.length ? detWeeks.map((w) => formatWeek(w)) : [t("status.noData")], datasets: detSeries },
     options: {
       responsive: true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: true,
+      aspectRatio: chartAspectRatio({ compact: 1.1, regular: 2.25 }),
       interaction: { mode: "index", intersect: false },
       plugins: {
         legend: { display: !compact },
@@ -1995,7 +2002,8 @@ function renderVirology(year) {
     data: { labels: posWeeks.map((w) => formatWeek(w)), datasets: posSeries },
     options: {
       responsive: true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: true,
+      aspectRatio: chartAspectRatio({ compact: 1.1, regular: 2.25 }),
       interaction: { mode: "index", intersect: false },
       plugins: {
         legend: { display: !compact },
@@ -2093,7 +2101,8 @@ function renderEuVirology(preferredYear = null) {
     data: { labels: detWeeks.map((w) => formatWeek(w)), datasets: detSeries },
     options: {
       responsive: true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: true,
+      aspectRatio: chartAspectRatio({ compact: 1.1, regular: 2.25 }),
       interaction: { mode: "index", intersect: false },
       plugins: {
         legend: { display: !compact },
@@ -2132,7 +2141,8 @@ function renderEuVirology(preferredYear = null) {
     data: { labels: posWeeks.map((w) => formatWeek(w)), datasets: posSeries },
     options: {
       responsive: true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: true,
+      aspectRatio: chartAspectRatio({ compact: 1.1, regular: 2.25 }),
       interaction: { mode: "index", intersect: false },
       plugins: {
         legend: { display: !compact },
@@ -2264,7 +2274,8 @@ function renderHistoricalTrends(selectedYear) {
 
   const baseOptions = {
     responsive: true,
-    maintainAspectRatio: false,
+    maintainAspectRatio: true,
+    aspectRatio: chartAspectRatio({ compact: 1.05, regular: 2.0 }),
     interaction: { mode: "index", intersect: false },
     plugins: {
       legend: { display: !compact },
