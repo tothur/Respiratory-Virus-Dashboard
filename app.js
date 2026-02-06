@@ -555,6 +555,28 @@ function chartTheme() {
   return { text, muted, grid, tooltipBg, tooltipBorder, neutral, neutralSoft, improving, improvingSoft, worsening, worseningSoft, theme };
 }
 
+function chartLegendColor(colors) {
+  return colors.theme === "light" ? "#0f172a" : "#dbe7f5";
+}
+
+function chartLegendOptions(colors, { display = true, filter = null } = {}) {
+  const labels = {
+    color: chartLegendColor(colors),
+    usePointStyle: true,
+    boxWidth: 10,
+    padding: 14,
+    font: { weight: "600" },
+  };
+  if (typeof filter === "function") {
+    labels.filter = filter;
+  }
+  return {
+    display,
+    position: "bottom",
+    labels,
+  };
+}
+
 function configureChartDefaults() {
   if (typeof Chart === "undefined") return;
   const colors = chartTheme();
@@ -562,7 +584,7 @@ function configureChartDefaults() {
   Chart.defaults.font.family = '"Inter", system-ui, -apple-system, sans-serif';
   Chart.defaults.color = colors.muted;
   Chart.defaults.borderColor = colors.grid;
-  Chart.defaults.plugins.legend.labels.color = colors.text;
+  Chart.defaults.plugins.legend.labels.color = chartLegendColor(colors);
   Chart.defaults.plugins.legend.labels.boxWidth = 10;
   Chart.defaults.plugins.legend.labels.usePointStyle = true;
   Chart.defaults.plugins.tooltip.backgroundColor = colors.tooltipBg;
@@ -1488,6 +1510,7 @@ function renderILIChart(year) {
         borderColor: colors.worsening,
         pointRadius: 5,
         pointHoverRadius: 7,
+        legendHidden: true,
       }
     : null;
 
@@ -1547,7 +1570,13 @@ function renderILIChart(year) {
       aspectRatio: chartAspectRatio({ compact: 1.1, regular: 2.2 }),
       plugins: {
         tooltip: { mode: "index", intersect: false },
-        legend: { display: !compact },
+        legend: chartLegendOptions(colors, {
+          display: !compact,
+          filter: (item, data) => {
+            const dataset = data?.datasets?.[item.datasetIndex];
+            return !dataset?.legendHidden;
+          },
+        }),
       },
       scales: {
         x: { ticks: chartXTicks(colors), grid: { display: false } },
@@ -1849,7 +1878,7 @@ function renderSariChart(year) {
       aspectRatio: chartAspectRatio({ compact: 1.1, regular: 2.2 }),
       plugins: {
         tooltip: { mode: "index", intersect: false },
-        legend: { display: !compact },
+        legend: chartLegendOptions(colors, { display: !compact }),
       },
       scales: {
         x: { ticks: chartXTicks(colors), grid: { display: false } },
@@ -2010,7 +2039,7 @@ function renderVirology(year) {
       aspectRatio: chartAspectRatio({ compact: 1.1, regular: 2.25 }),
       interaction: { mode: "index", intersect: false },
       plugins: {
-        legend: { display: !compact },
+        legend: chartLegendOptions(colors, { display: !compact }),
       },
       scales: {
         x: { ticks: chartXTicks(colors), grid: { display: false } },
@@ -2050,7 +2079,7 @@ function renderVirology(year) {
       aspectRatio: chartAspectRatio({ compact: 1.1, regular: 2.25 }),
       interaction: { mode: "index", intersect: false },
       plugins: {
-        legend: { display: !compact },
+        legend: chartLegendOptions(colors, { display: !compact }),
         tooltip: {
           callbacks: {
             label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y?.toFixed(1)}%`,
@@ -2149,7 +2178,7 @@ function renderEuVirology(preferredYear = null) {
       aspectRatio: chartAspectRatio({ compact: 1.1, regular: 2.25 }),
       interaction: { mode: "index", intersect: false },
       plugins: {
-        legend: { display: !compact },
+        legend: chartLegendOptions(colors, { display: !compact }),
       },
       scales: {
         x: { ticks: chartXTicks(colors), grid: { display: false } },
@@ -2189,7 +2218,7 @@ function renderEuVirology(preferredYear = null) {
       aspectRatio: chartAspectRatio({ compact: 1.1, regular: 2.25 }),
       interaction: { mode: "index", intersect: false },
       plugins: {
-        legend: { display: !compact },
+        legend: chartLegendOptions(colors, { display: !compact }),
         tooltip: {
           callbacks: {
             label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y?.toFixed(1)}%`,
@@ -2322,7 +2351,7 @@ function renderHistoricalTrends(selectedYear) {
     aspectRatio: chartAspectRatio({ compact: 1.05, regular: 2.0 }),
     interaction: { mode: "index", intersect: false },
     plugins: {
-      legend: { display: !compact },
+      legend: chartLegendOptions(colors, { display: !compact }),
       tooltip: {
         callbacks: {
           label: (ctx) => {

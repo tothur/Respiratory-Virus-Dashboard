@@ -541,6 +541,15 @@ main.grid {
   gap: 14px;
 }
 
+.chart-card > .chart-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-card > .chart-container .context-header {
+  min-height: 72px;
+}
+
 .priority-chart {
   border-color: color-mix(in oklab, var(--state-neutral-border) 52%, var(--border));
   background: linear-gradient(170deg, color-mix(in oklab, var(--card) 94%, var(--state-neutral-soft)), var(--card-strong));
