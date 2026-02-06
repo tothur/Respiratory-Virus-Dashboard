@@ -604,6 +604,33 @@ function markChartRendered(canvasEl) {
   canvasEl.classList.add("chart-fade");
 }
 
+function isCompactViewport() {
+  return typeof window !== "undefined" && window.matchMedia && window.matchMedia("(max-width: 820px)").matches;
+}
+
+function chartXTicks(colors) {
+  const compact = isCompactViewport();
+  return {
+    color: colors.muted,
+    autoSkip: true,
+    maxTicksLimit: compact ? 8 : 14,
+    maxRotation: 0,
+    minRotation: 0,
+  };
+}
+
+function chartYTicks(colors, { percent = false } = {}) {
+  const compact = isCompactViewport();
+  const ticks = {
+    color: colors.muted,
+    maxTicksLimit: compact ? 6 : 9,
+  };
+  if (percent) {
+    ticks.callback = (value) => `${value}%`;
+  }
+  return ticks;
+}
+
 function upsertChart(existingChart, ctx, config) {
   if (typeof Chart === "undefined" || !ctx) return existingChart || null;
   if (!existingChart) return new Chart(ctx, config);
@@ -1378,6 +1405,7 @@ function renderILIChart(year) {
   const canvas = document.getElementById("ili-chart");
   const ctx = canvas.getContext("2d");
   const colors = chartTheme();
+  const compact = isCompactViewport();
   const rows = weeklyRowsForDatasetVirus(DATASET, year, DEFAULT_VIRUS);
 
   const labels = rows.map((d) => formatWeek(d.week));
@@ -1470,12 +1498,14 @@ function renderILIChart(year) {
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       plugins: {
         tooltip: { mode: "index", intersect: false },
+        legend: { display: !compact },
       },
       scales: {
-        x: { ticks: { color: colors.muted }, grid: { display: false } },
-        y: { beginAtZero: true, ticks: { color: colors.muted }, grid: { color: colors.grid } },
+        x: { ticks: chartXTicks(colors), grid: { display: false } },
+        y: { beginAtZero: true, ticks: chartYTicks(colors), grid: { color: colors.grid } },
       },
     },
     plugins: [seasonMarkerPlugin],
@@ -1702,6 +1732,7 @@ function renderSariChart(year) {
   const canvas = document.getElementById("sari-chart");
   const ctx = canvas.getContext("2d");
   const colors = chartTheme();
+  const compact = isCompactViewport();
   const rows = sariRowsForYear(year);
   const labels = rows.map((d) => formatWeek(d.week));
   const admissions = rows.map((d) => d.admissions);
@@ -1768,14 +1799,16 @@ function renderSariChart(year) {
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       plugins: {
         tooltip: { mode: "index", intersect: false },
+        legend: { display: !compact },
       },
       scales: {
-        x: { ticks: { color: colors.muted }, grid: { display: false } },
+        x: { ticks: chartXTicks(colors), grid: { display: false } },
         y: {
           beginAtZero: true,
-          ticks: { color: colors.muted },
+          ticks: chartYTicks(colors),
           grid: { color: colors.grid },
         },
       },
@@ -1825,6 +1858,7 @@ function aggregateDetectionsWithInfluenzaAll(detections = respiratoryData.virolo
 
 function renderVirology(year) {
   const colors = chartTheme();
+  const compact = isCompactViewport();
   const detections = aggregateDetectionsWithInfluenzaAll(virologyDetectionsRowsForYear(year));
   const positivity = virologyPositivityRowsForYear(year);
 
@@ -1922,10 +1956,14 @@ function renderVirology(year) {
     data: { labels: detWeeks.length ? detWeeks.map((w) => formatWeek(w)) : [t("status.noData")], datasets: detSeries },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       interaction: { mode: "index", intersect: false },
+      plugins: {
+        legend: { display: !compact },
+      },
       scales: {
-        x: { ticks: { color: colors.muted }, grid: { display: false } },
-        y: { ticks: { color: colors.muted }, grid: { color: colors.grid } },
+        x: { ticks: chartXTicks(colors), grid: { display: false } },
+        y: { ticks: chartYTicks(colors), grid: { color: colors.grid } },
       },
     },
   });
@@ -1957,8 +1995,10 @@ function renderVirology(year) {
     data: { labels: posWeeks.map((w) => formatWeek(w)), datasets: posSeries },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       interaction: { mode: "index", intersect: false },
       plugins: {
+        legend: { display: !compact },
         tooltip: {
           callbacks: {
             label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y?.toFixed(1)}%`,
@@ -1966,8 +2006,8 @@ function renderVirology(year) {
         },
       },
       scales: {
-        x: { ticks: { color: colors.muted }, grid: { display: false } },
-        y: { ticks: { color: colors.muted, callback: (v) => `${v}%` }, grid: { color: colors.grid } },
+        x: { ticks: chartXTicks(colors), grid: { display: false } },
+        y: { ticks: chartYTicks(colors, { percent: true }), grid: { color: colors.grid } },
       },
     },
   });
@@ -1976,6 +2016,7 @@ function renderVirology(year) {
 
 function renderEuVirology(preferredYear = null) {
   const colors = chartTheme();
+  const compact = isCompactViewport();
   const targetYear = ervissTargetYear(preferredYear);
 
   const detections = targetYear ? aggregateDetections(ervissDetectionsRowsForYear(targetYear)) : [];
@@ -2052,10 +2093,14 @@ function renderEuVirology(preferredYear = null) {
     data: { labels: detWeeks.map((w) => formatWeek(w)), datasets: detSeries },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       interaction: { mode: "index", intersect: false },
+      plugins: {
+        legend: { display: !compact },
+      },
       scales: {
-        x: { ticks: { color: colors.muted }, grid: { display: false } },
-        y: { ticks: { color: colors.muted }, grid: { color: colors.grid } },
+        x: { ticks: chartXTicks(colors), grid: { display: false } },
+        y: { ticks: chartYTicks(colors), grid: { color: colors.grid } },
       },
     },
   });
@@ -2087,8 +2132,10 @@ function renderEuVirology(preferredYear = null) {
     data: { labels: posWeeks.map((w) => formatWeek(w)), datasets: posSeries },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       interaction: { mode: "index", intersect: false },
       plugins: {
+        legend: { display: !compact },
         tooltip: {
           callbacks: {
             label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y?.toFixed(1)}%`,
@@ -2096,8 +2143,8 @@ function renderEuVirology(preferredYear = null) {
         },
       },
       scales: {
-        x: { ticks: { color: colors.muted }, grid: { display: false } },
-        y: { ticks: { color: colors.muted, callback: (v) => `${v}%` }, grid: { color: colors.grid } },
+        x: { ticks: chartXTicks(colors), grid: { display: false } },
+        y: { ticks: chartYTicks(colors, { percent: true }), grid: { color: colors.grid } },
       },
     },
   });
@@ -2146,6 +2193,7 @@ function setHistoricalDelta(el, value) {
 function renderHistoricalTrends(selectedYear) {
   if (!historicalCard) return;
   const colors = chartTheme();
+  const compact = isCompactViewport();
   const accent = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() || "rgba(125, 211, 252, 0.95)";
 
   const compareYear = selectedYear - 1;
@@ -2216,8 +2264,10 @@ function renderHistoricalTrends(selectedYear) {
 
   const baseOptions = {
     responsive: true,
+    maintainAspectRatio: false,
     interaction: { mode: "index", intersect: false },
     plugins: {
+      legend: { display: !compact },
       tooltip: {
         callbacks: {
           label: (ctx) => {
@@ -2235,11 +2285,11 @@ function renderHistoricalTrends(selectedYear) {
       },
     },
     scales: {
-      x: { ticks: { color: colors.muted }, grid: { display: false } },
-      y: { beginAtZero: true, ticks: { color: colors.muted }, grid: { color: colors.grid } },
+      x: { ticks: chartXTicks(colors), grid: { display: false } },
+      y: { beginAtZero: true, ticks: chartYTicks(colors), grid: { color: colors.grid } },
       y1: {
         position: "right",
-        ticks: { color: colors.muted, callback: (v) => `${v}%` },
+        ticks: chartYTicks(colors, { percent: true }),
         grid: { drawOnChartArea: false },
       },
     },
@@ -2628,6 +2678,16 @@ async function main() {
     langSelect.addEventListener("change", () => {
       setLanguage(langSelect.value, { persist: true, updateUrl: true });
       applyFilters();
+    });
+  }
+
+  if (typeof window !== "undefined") {
+    let resizeTimer = null;
+    window.addEventListener("resize", () => {
+      if (resizeTimer) window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(() => {
+        applyFilters();
+      }, 140);
     });
   }
 

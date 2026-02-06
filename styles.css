@@ -852,11 +852,23 @@ canvas {
   }
 
   canvas {
-    height: 240px !important;
+    height: 320px !important;
+  }
+
+  .historical-grid canvas {
+    height: 280px !important;
   }
 }
 
 @media (max-width: 640px) {
+  canvas {
+    height: 300px !important;
+  }
+
+  .historical-grid canvas {
+    height: 260px !important;
+  }
+
   main {
     padding: 16px;
   }
