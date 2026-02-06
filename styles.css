@@ -172,6 +172,22 @@ main.grid {
   align-items: start;
 }
 
+@media (min-width: 1200px) {
+  main.grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  main.grid > .context-grid.trend-priority {
+    grid-column: 1 / span 4;
+    align-self: stretch;
+  }
+
+  main.grid > .grid.metrics.briefing-metrics {
+    grid-column: 5 / -1;
+    align-self: stretch;
+  }
+}
+
 .section-banner {
   grid-column: 1 / -1;
   display: flex;
@@ -322,11 +338,31 @@ html[data-theme="light"] .alert-ok .pill {
   grid-column: 1 / -1;
 }
 
+.briefing-metrics .card {
+  border-color: color-mix(in oklab, var(--border) 68%, var(--accent) 32%);
+  background: linear-gradient(165deg, color-mix(in oklab, var(--card) 90%, rgba(125, 211, 252, 0.12)), var(--card-strong));
+}
+
 .context-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 14px;
   grid-column: 1 / -1;
+}
+
+.trend-priority .card {
+  border-color: color-mix(in oklab, rgba(125, 211, 252, 0.45) 60%, var(--border));
+  background: linear-gradient(165deg, color-mix(in oklab, var(--card) 82%, rgba(125, 211, 252, 0.12)), var(--card-strong));
+}
+
+.trend-priority .trend-list li {
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.trend-priority .trend-list .pill {
+  font-size: 0.9rem;
+  line-height: 1.2;
 }
 
 .eu-stack {
@@ -505,6 +541,11 @@ html[data-theme="light"] .pill {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 14px;
+}
+
+.priority-chart {
+  border-color: color-mix(in oklab, rgba(125, 211, 252, 0.42) 56%, var(--border));
+  background: linear-gradient(170deg, color-mix(in oklab, var(--card) 88%, rgba(125, 211, 252, 0.1)), var(--card-strong));
 }
 
 .chart-container {
@@ -746,6 +787,11 @@ canvas {
 
 .historical-card {
   grid-column: 1 / -1;
+}
+
+.priority-historical {
+  border-color: color-mix(in oklab, rgba(52, 211, 153, 0.42) 56%, var(--border));
+  background: linear-gradient(170deg, color-mix(in oklab, var(--card) 88%, rgba(52, 211, 153, 0.1)), var(--card-strong));
 }
 
 .historical-grid {

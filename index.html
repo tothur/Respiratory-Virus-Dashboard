@@ -102,7 +102,20 @@
         </div>
       </section>
 
-      <div class="grid metrics">
+      <section class="context-grid trend-priority" aria-label="Weekly trend highlights" data-i18n-attr="aria-label:sections.trends">
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2 data-i18n="trend.title">Weekly trend signals</h2>
+              <p class="footer-note" data-i18n="trend.note">Fast view of which pathogens are currently surging or easing.</p>
+            </div>
+            <div class="badge" data-i18n="trend.badge">Live selection</div>
+          </div>
+          <ul class="trend-list" id="surge-list"></ul>
+        </article>
+      </section>
+
+      <div class="grid metrics briefing-metrics">
         <article class="card">
           <h2 data-i18n="metrics.total.title">Total cases</h2>
           <div class="value" id="total-cases">0</div>
@@ -139,7 +152,7 @@
         </article>
       </div>
 
-      <section class="card chart-card" aria-label="Visual summaries" data-i18n-attr="aria-label:sections.charts">
+      <section class="card chart-card priority-chart" aria-label="Visual summaries" data-i18n-attr="aria-label:sections.charts">
         <div class="chart-container">
           <div class="context-header">
             <div>
@@ -162,7 +175,7 @@
         </div>
       </section>
 
-      <section class="card historical-card" id="historical-card" hidden>
+      <section class="card historical-card priority-historical" id="historical-card" hidden>
         <div class="context-header">
           <div>
             <h2 data-i18n="historical.title">Historical trends</h2>
@@ -330,19 +343,6 @@
           </div>
           <ul class="context-list" id="viro-positivity" aria-label="Sentinel positivity" data-i18n-attr="aria-label:viro.positivity.list.aria"></ul>
           <canvas id="viro-positivity-chart" aria-label="Sentinel positivity trend" role="img" data-i18n-attr="aria-label:viro.positivity.chart.aria"></canvas>
-        </article>
-      </section>
-
-      <section class="context-grid" aria-label="Weekly trend highlights" data-i18n-attr="aria-label:sections.trends">
-        <article class="card">
-          <div class="context-header">
-            <div>
-              <h2 data-i18n="trend.title">Weekly trend signals</h2>
-              <p class="footer-note" data-i18n="trend.note">Fast view of which pathogens are currently surging or easing.</p>
-            </div>
-            <div class="badge" data-i18n="trend.badge">Live selection</div>
-          </div>
-          <ul class="trend-list" id="surge-list"></ul>
         </article>
       </section>
 
