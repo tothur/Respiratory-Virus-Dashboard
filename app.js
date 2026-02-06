@@ -820,13 +820,44 @@ const REGION_LABELS_HU = { National: "Országos" };
 
 function normalizeVirusName(name) {
   if (!name) return name;
-  const value = String(name).trim();
+  const value = String(name)
+    .normalize("NFKC")
+    .replace(/\u00a0/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
   if (!value) return value;
-  const lower = value.toLowerCase();
+  const normalized = value
+    .replace(/\s*\(\s*/g, "(")
+    .replace(/\s*\)\s*/g, ")")
+    .replace(/\s*-\s*/g, "-")
+    .replace(/\s*\/\s*/g, "/")
+    .trim();
+  const lower = normalized.toLowerCase();
+
   if (lower === "rsv") return "RSV";
-  if (/^rs[-\s]*v[ií]rus$/i.test(value)) return "RSV";
-  if (/^l[eé]g[uú]ti\s+[oó]ri[aá]ssejtes\s+v[ií]rus$/i.test(value)) return "RSV";
-  return value;
+  if (/^rs[-\s]*v[ií]rus$/i.test(normalized)) return "RSV";
+  if (/^l[eé]g[uú]ti\s+[oó]ri[aá]ssejtes\s+v[ií]rus$/i.test(normalized)) return "RSV";
+
+  if (/^sars[-\s]*cov[-\s]*2$/i.test(normalized)) return "SARS-CoV-2";
+  if (/^hmpv$/i.test(normalized)) return "HMPV";
+
+  if (/^influenza$/i.test(normalized)) return "Influenza";
+  if (/^influenza a$/i.test(normalized)) return "Influenza A";
+  if (/^influenza b$/i.test(normalized)) return "Influenza B";
+  if (/^influenza a\(h1n1pdm09\)$/i.test(normalized) || /^influenza a\(h1pdm09\)$/i.test(normalized)) {
+    return "Influenza A(H1N1pdm09)";
+  }
+  if (/^influenza a h1n1pdm09$/i.test(normalized) || /^influenza a h1pdm09$/i.test(normalized)) {
+    return "Influenza A(H1N1pdm09)";
+  }
+  if (/^influenza a\(h3\)$/i.test(normalized) || /^influenza a h3$/i.test(normalized)) {
+    return "Influenza A(H3)";
+  }
+  if (/^influenza a\(nt\)$/i.test(normalized) || /^influenza a nt$/i.test(normalized)) {
+    return "Influenza A(NT)";
+  }
+
+  return normalized;
 }
 
 function displayVirus(name) {
@@ -1831,8 +1862,10 @@ function aggregateDetections(detections = respiratoryData.virologyDetections || 
     if (!Number.isFinite(week)) return;
     const year = Number(row.year);
     if (yearFilter !== null && Number.isFinite(year) && year !== yearFilter) return;
-    const key = `${Number.isFinite(year) ? year : "NA"}-${week}-${row.virus}`;
-    const current = byKey.get(key) || { year: Number.isFinite(year) ? year : undefined, week, virus: row.virus, detections: 0 };
+    const virus = normalizeVirusName(row.virus);
+    if (!virus) return;
+    const key = `${Number.isFinite(year) ? year : "NA"}-${week}-${virus}`;
+    const current = byKey.get(key) || { year: Number.isFinite(year) ? year : undefined, week, virus, detections: 0 };
     current.detections += Number(row.detections ?? 0);
     byKey.set(key, current);
   });
@@ -1840,9 +1873,10 @@ function aggregateDetections(detections = respiratoryData.virologyDetections || 
 }
 
 function isInfluenzaVirus(name) {
-  if (!name || typeof name !== "string") return false;
-  if (name === INFLUENZA_ALL_KEY) return false;
-  return name.startsWith("Influenza");
+  const normalized = normalizeVirusName(name);
+  if (!normalized || typeof normalized !== "string") return false;
+  if (normalized === INFLUENZA_ALL_KEY) return false;
+  return normalized.startsWith("Influenza");
 }
 
 function aggregateDetectionsWithInfluenzaAll(detections = respiratoryData.virologyDetections || [], yearFilter = null) {
@@ -2637,7 +2671,7 @@ async function loadERVISSSari() {
       return {
         year: Number.isFinite(year) ? year : undefined,
         week: Number(row.week),
-        virus: row.virus,
+        virus: normalizeVirusName(row.virus),
         detections: Number(row.detections ?? 0),
       };
     });
@@ -2646,7 +2680,7 @@ async function loadERVISSSari() {
       return {
         year: Number.isFinite(year) ? year : undefined,
         week: Number(row.week),
-        virus: row.virus,
+        virus: normalizeVirusName(row.virus),
         positivity: Number(row.positivity ?? 0),
       };
     });
