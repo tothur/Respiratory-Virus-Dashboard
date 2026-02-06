@@ -784,6 +784,10 @@ function weeklyRowsForDatasetVirus(dataset, year, virus) {
   return rowsForYear(derivedData.weeklyByDatasetVirus.get(datasetVirusKey(dataset, virus)), year);
 }
 
+function yearsForDatasetVirus(dataset, virus) {
+  return yearsFromYearMap(derivedData.weeklyByDatasetVirus.get(datasetVirusKey(dataset, virus)));
+}
+
 function sariRowsForYear(year, { includeAnyYear = true } = {}) {
   return rowsForYear(derivedData.sariByYear, year, { includeAnyYear });
 }
@@ -2502,8 +2506,17 @@ function bindSortControls() {
 }
 
 function applyFilters() {
-  const { dataset, year, virus } = currentSelection();
-  const filtered = weeklyRowsForDatasetVirus(dataset, year, virus);
+  let { dataset, year, virus } = currentSelection();
+  let filtered = weeklyRowsForDatasetVirus(dataset, year, virus);
+  if (!filtered.length && virus === DEFAULT_VIRUS) {
+    const iliYears = yearsForDatasetVirus(dataset, virus);
+    const fallbackYear = iliYears.length ? iliYears[iliYears.length - 1] : null;
+    if (Number.isFinite(fallbackYear) && fallbackYear !== year) {
+      year = fallbackYear;
+      yearSelect.value = String(fallbackYear);
+      filtered = weeklyRowsForDatasetVirus(dataset, year, virus);
+    }
+  }
   latestFiltered = filtered;
 
   const { total, peakWeek: peak } = summarize(filtered);
@@ -2707,8 +2720,11 @@ async function main() {
   populateFilters();
 
   const fallbackYear = respiratoryData.years[respiratoryData.years.length - 1];
+  const iliYears = yearsForDatasetVirus(DATASET, DEFAULT_VIRUS);
   const nngykYears = derivedData.weeklyYearsByDataset.get(DATASET) || [];
-  const latestNNGYKYear = (nngykYears.length ? nngykYears[nngykYears.length - 1] : fallbackYear) || fallbackYear;
+  const latestNNGYKYear =
+    (iliYears.length ? iliYears[iliYears.length - 1] : nngykYears.length ? nngykYears[nngykYears.length - 1] : fallbackYear) ||
+    fallbackYear;
 
   yearSelect.value = latestNNGYKYear;
 
