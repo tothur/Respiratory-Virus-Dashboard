@@ -121,6 +121,9 @@ export function buildVirologyDetectionsOption({
         sliderBorder: "rgba(148, 163, 184, 0.35)",
         sliderFill: "rgba(59, 130, 246, 0.35)",
         sliderText: "#cbd5e1",
+        legendBg: "rgba(15, 23, 42, 0.82)",
+        legendBorder: "rgba(148, 163, 184, 0.32)",
+        legendPage: "#93c5fd",
       }
     : {
         axisLine: "rgba(15, 23, 42, 0.20)",
@@ -130,6 +133,9 @@ export function buildVirologyDetectionsOption({
         sliderBorder: "rgba(15, 23, 42, 0.18)",
         sliderFill: "rgba(37, 99, 235, 0.20)",
         sliderText: "#475569",
+        legendBg: "rgba(248, 250, 252, 0.92)",
+        legendBorder: "rgba(148, 163, 184, 0.38)",
+        legendPage: "#1d4ed8",
       };
   const compareWeeks = weekOrder === "numeric" ? numericWeekCompare : seasonWeekCompare;
   const weeks = Array.from(new Set(rows.map((row) => row.week))).sort((a, b) => compareWeeks(a, b));
@@ -170,7 +176,7 @@ export function buildVirologyDetectionsOption({
     animation: false,
     aria: { enabled: true },
     grid: {
-      top: 40,
+      top: compact ? 40 : 90,
       right: 18,
       bottom: compact && dataZoom ? 58 : 36,
       left: 48,
@@ -193,14 +199,28 @@ export function buildVirologyDetectionsOption({
     },
     legend: {
       show: !compact,
-      bottom: 2,
-      textStyle: { color: palette.legend, fontWeight: 600 },
+      type: "scroll",
+      top: 4,
+      left: 8,
+      right: 8,
+      itemWidth: 10,
+      itemHeight: 10,
+      itemGap: 10,
+      padding: [6, 10],
+      backgroundColor: palette.legendBg,
+      borderColor: palette.legendBorder,
+      borderWidth: 1,
+      borderRadius: 10,
+      pageIconColor: palette.legendPage,
+      pageIconInactiveColor: palette.axisLine,
+      pageTextStyle: { color: palette.axisLabel },
+      textStyle: { color: palette.legend, fontWeight: 600, fontSize: 12, lineHeight: 16 },
     },
     xAxis: {
       type: "category",
       data: labels.length ? labels : [noDataLabel],
       axisLine: { lineStyle: { color: palette.axisLine } },
-      axisLabel: { color: palette.axisLabel, interval: compact ? "auto" : 0 },
+      axisLabel: { color: palette.axisLabel, interval: compact ? "auto" : 0, hideOverlap: true },
     },
     yAxis: {
       type: "value",
@@ -229,6 +249,9 @@ export function buildVirologyPositivityOption({
         sliderBorder: "rgba(148, 163, 184, 0.35)",
         sliderFill: "rgba(59, 130, 246, 0.35)",
         sliderText: "#cbd5e1",
+        legendBg: "rgba(15, 23, 42, 0.82)",
+        legendBorder: "rgba(148, 163, 184, 0.32)",
+        legendPage: "#93c5fd",
       }
     : {
         axisLine: "rgba(15, 23, 42, 0.20)",
@@ -238,6 +261,9 @@ export function buildVirologyPositivityOption({
         sliderBorder: "rgba(15, 23, 42, 0.18)",
         sliderFill: "rgba(37, 99, 235, 0.20)",
         sliderText: "#475569",
+        legendBg: "rgba(248, 250, 252, 0.92)",
+        legendBorder: "rgba(148, 163, 184, 0.38)",
+        legendPage: "#1d4ed8",
       };
   const compareWeeks = weekOrder === "numeric" ? numericWeekCompare : seasonWeekCompare;
   const weeks = Array.from(new Set(rows.map((row) => row.week))).sort((a, b) => compareWeeks(a, b));
@@ -270,7 +296,7 @@ export function buildVirologyPositivityOption({
     animation: false,
     aria: { enabled: true },
     grid: {
-      top: 40,
+      top: compact ? 40 : 90,
       right: 18,
       bottom: compact && dataZoom ? 58 : 36,
       left: 48,
@@ -293,14 +319,28 @@ export function buildVirologyPositivityOption({
     },
     legend: {
       show: !compact,
-      bottom: 2,
-      textStyle: { color: palette.legend, fontWeight: 600 },
+      type: "scroll",
+      top: 4,
+      left: 8,
+      right: 8,
+      itemWidth: 10,
+      itemHeight: 10,
+      itemGap: 10,
+      padding: [6, 10],
+      backgroundColor: palette.legendBg,
+      borderColor: palette.legendBorder,
+      borderWidth: 1,
+      borderRadius: 10,
+      pageIconColor: palette.legendPage,
+      pageIconInactiveColor: palette.axisLine,
+      pageTextStyle: { color: palette.axisLabel },
+      textStyle: { color: palette.legend, fontWeight: 600, fontSize: 12, lineHeight: 16 },
     },
     xAxis: {
       type: "category",
       data: labels.length ? labels : [noDataLabel],
       axisLine: { lineStyle: { color: palette.axisLine } },
-      axisLabel: { color: palette.axisLabel, interval: compact ? "auto" : 0 },
+      axisLabel: { color: palette.axisLabel, interval: compact ? "auto" : 0, hideOverlap: true },
     },
     yAxis: {
       type: "value",

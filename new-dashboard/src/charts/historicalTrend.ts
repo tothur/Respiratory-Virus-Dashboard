@@ -37,6 +37,8 @@ export function buildHistoricalTrendOption({
         legend: "#e2e8f0",
         grid: "rgba(148, 163, 184, 0.22)",
         baseline: "rgba(203, 213, 225, 0.58)",
+        legendBg: "rgba(15, 23, 42, 0.82)",
+        legendBorder: "rgba(148, 163, 184, 0.32)",
       }
     : {
         axisLine: "rgba(15, 23, 42, 0.20)",
@@ -44,6 +46,8 @@ export function buildHistoricalTrendOption({
         legend: "#0f172a",
         grid: "rgba(15, 23, 42, 0.14)",
         baseline: "rgba(15, 23, 42, 0.52)",
+        legendBg: "rgba(248, 250, 252, 0.92)",
+        legendBorder: "rgba(148, 163, 184, 0.38)",
       };
   const text = labelsOverride ?? { delta: "Delta %", noData: "No data" };
   const xLabels = metric.points.map((point) => point.label);
@@ -69,7 +73,7 @@ export function buildHistoricalTrendOption({
     animation: false,
     aria: { enabled: true },
     grid: {
-      top: 36,
+      top: compact ? 36 : 72,
       right: 54,
       bottom: compact ? 26 : 46,
       left: 50,
@@ -103,9 +107,21 @@ export function buildHistoricalTrendOption({
     },
     legend: {
       show: !compact,
-      bottom: 2,
+      top: 2,
+      left: 8,
+      right: 8,
+      itemWidth: 12,
+      itemHeight: 8,
+      itemGap: 10,
+      padding: [6, 10],
+      backgroundColor: palette.legendBg,
+      borderColor: palette.legendBorder,
+      borderWidth: 1,
+      borderRadius: 10,
       textStyle: {
         color: palette.legend,
+        fontSize: 12,
+        lineHeight: 16,
         fontWeight: 600,
       },
     },
@@ -116,6 +132,7 @@ export function buildHistoricalTrendOption({
       axisLabel: {
         color: palette.axisLabel,
         interval: compact ? "auto" : 0,
+        hideOverlap: true,
       },
     },
     yAxis: [

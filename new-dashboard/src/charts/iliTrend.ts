@@ -1,4 +1,5 @@
 import type { DataZoomComponentOption, EChartsOption, SeriesOption } from "echarts";
+import { graphic } from "echarts";
 import type { WeeklyIliPoint } from "../domain/model";
 
 interface BuildIliTrendOptionArgs {
@@ -54,6 +55,8 @@ export function buildIliTrendOption({
         sliderBorder: "rgba(148, 163, 184, 0.35)",
         sliderFill: "rgba(59, 130, 246, 0.35)",
         sliderText: "#cbd5e1",
+        legendBg: "rgba(15, 23, 42, 0.82)",
+        legendBorder: "rgba(148, 163, 184, 0.32)",
       }
     : {
         axisLine: "rgba(15, 23, 42, 0.20)",
@@ -66,6 +69,8 @@ export function buildIliTrendOption({
         sliderBorder: "rgba(15, 23, 42, 0.18)",
         sliderFill: "rgba(37, 99, 235, 0.20)",
         sliderText: "#475569",
+        legendBg: "rgba(248, 250, 252, 0.92)",
+        legendBorder: "rgba(148, 163, 184, 0.38)",
       };
   const text = labelsOverride ?? {
     iliCases: "ILI cases",
@@ -99,14 +104,24 @@ export function buildIliTrendOption({
       data: hasData ? values : [0],
       barMaxWidth: 24,
       itemStyle: {
-        color: "rgba(37, 99, 235, 0.18)",
-        borderColor: "#2563eb",
-        borderWidth: 1.2,
-        borderRadius: [6, 6, 2, 2],
+        color: new graphic.LinearGradient(0, 0, 0, 1, [
+          { offset: 0, color: dark ? "rgba(96, 165, 250, 0.96)" : "rgba(37, 99, 235, 0.95)" },
+          { offset: 1, color: dark ? "rgba(96, 165, 250, 0.38)" : "rgba(147, 197, 253, 0.56)" },
+        ]),
+        borderColor: dark ? "rgba(191, 219, 254, 0.74)" : "rgba(29, 78, 216, 0.72)",
+        borderWidth: 1,
+        borderRadius: [10, 10, 3, 3],
+        shadowBlur: dark ? 12 : 9,
+        shadowColor: dark ? "rgba(30, 64, 175, 0.36)" : "rgba(30, 64, 175, 0.24)",
       },
       emphasis: {
         itemStyle: {
-          color: "rgba(37, 99, 235, 0.32)",
+          color: new graphic.LinearGradient(0, 0, 0, 1, [
+            { offset: 0, color: dark ? "rgba(125, 211, 252, 0.98)" : "rgba(37, 99, 235, 0.98)" },
+            { offset: 1, color: dark ? "rgba(96, 165, 250, 0.54)" : "rgba(147, 197, 253, 0.68)" },
+          ]),
+          shadowBlur: dark ? 16 : 12,
+          shadowColor: dark ? "rgba(14, 116, 144, 0.42)" : "rgba(37, 99, 235, 0.28)",
         },
       },
       z: 2,
@@ -205,7 +220,7 @@ export function buildIliTrendOption({
     animation: false,
     aria: { enabled: true },
     grid: {
-      top: compact ? 42 : 46,
+      top: compact ? 42 : 78,
       right: 20,
       bottom: compact && dataZoom ? 58 : 36,
       left: 54,
@@ -231,10 +246,22 @@ export function buildIliTrendOption({
     },
     legend: {
       show: !compact,
-      bottom: 2,
+      top: 2,
+      left: 8,
+      right: 8,
       data: [text.iliCases, text.alertThreshold],
+      itemWidth: 14,
+      itemHeight: 8,
+      itemGap: 12,
+      padding: [6, 10],
+      backgroundColor: palette.legendBg,
+      borderColor: palette.legendBorder,
+      borderWidth: 1,
+      borderRadius: 10,
       textStyle: {
         color: palette.legend,
+        fontSize: 12,
+        lineHeight: 16,
         fontWeight: 600,
       },
       icon: "roundRect",
@@ -247,6 +274,7 @@ export function buildIliTrendOption({
       axisLabel: {
         color: palette.axisLabel,
         interval: compact ? "auto" : 0,
+        hideOverlap: true,
       },
     },
     yAxis: {

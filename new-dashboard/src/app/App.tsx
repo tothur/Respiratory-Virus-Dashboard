@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import type { EChartsOption } from "echarts";
+import { graphic, type EChartsOption } from "echarts";
 import { buildDashboardSnapshot, createBundledDataSource, INFLUENZA_ALL_KEY, VIRO_ALL_KEY } from "../data/adapter";
 import type { DashboardDataSource } from "../data/adapter";
 import { loadRuntimeDataSource } from "../data/runtime-source";
@@ -676,26 +676,44 @@ export function App() {
           axisLine: "rgba(148, 163, 184, 0.45)",
           grid: "rgba(148, 163, 184, 0.22)",
           legend: "#e2e8f0",
+          legendBg: "rgba(15, 23, 42, 0.82)",
+          legendBorder: "rgba(148, 163, 184, 0.32)",
         }
       : {
           axisLabel: "#334155",
           axisLine: "rgba(15, 23, 42, 0.20)",
           grid: "rgba(15, 23, 42, 0.15)",
           legend: "#0f172a",
+          legendBg: "rgba(248, 250, 252, 0.92)",
+          legendBorder: "rgba(148, 163, 184, 0.38)",
         };
     return {
       animation: false,
-      grid: { top: 40, right: 18, bottom: 34, left: 42 },
-      tooltip: { trigger: "axis", axisPointer: { type: "shadow" } },
+      grid: { top: compact ? 40 : 78, right: 18, bottom: 34, left: 42 },
+      tooltip: {
+        trigger: "axis",
+        axisPointer: { type: "shadow" },
+      },
       legend: {
-        bottom: 0,
-        textStyle: { color: palette.legend, fontWeight: 600 },
+        show: !compact,
+        top: 2,
+        left: 8,
+        right: 8,
+        itemWidth: 12,
+        itemHeight: 8,
+        itemGap: 12,
+        padding: [6, 10],
+        backgroundColor: palette.legendBg,
+        borderColor: palette.legendBorder,
+        borderWidth: 1,
+        borderRadius: 10,
+        textStyle: { color: palette.legend, fontWeight: 600, fontSize: 12, lineHeight: 16 },
       },
       xAxis: {
         type: "category",
         data: snapshot.sariSeries.map((point) => point.label),
         axisLine: { lineStyle: { color: palette.axisLine } },
-        axisLabel: { color: palette.axisLabel },
+        axisLabel: { color: palette.axisLabel, hideOverlap: true },
       },
       yAxis: {
         type: "value",
@@ -707,19 +725,55 @@ export function App() {
           name: t.tableSariAdmissions,
           type: "bar",
           data: snapshot.sariSeries.map((point) => point.admissions),
-          itemStyle: { color: "rgba(37, 99, 235, 0.45)", borderColor: "#2563eb", borderWidth: 1.2 },
-          barMaxWidth: 24,
+          barMaxWidth: 22,
+          itemStyle: {
+            color: new graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: isDark ? "rgba(125, 211, 252, 0.95)" : "rgba(37, 99, 235, 0.95)" },
+              { offset: 1, color: isDark ? "rgba(56, 189, 248, 0.42)" : "rgba(147, 197, 253, 0.55)" },
+            ]),
+            borderColor: isDark ? "rgba(191, 219, 254, 0.75)" : "rgba(29, 78, 216, 0.72)",
+            borderWidth: 1,
+            borderRadius: [10, 10, 3, 3],
+            shadowBlur: isDark ? 12 : 9,
+            shadowColor: isDark ? "rgba(14, 116, 144, 0.38)" : "rgba(30, 64, 175, 0.22)",
+          },
+          emphasis: {
+            itemStyle: {
+              shadowBlur: isDark ? 16 : 12,
+              shadowColor: isDark ? "rgba(6, 182, 212, 0.44)" : "rgba(37, 99, 235, 0.28)",
+            },
+          },
+          barGap: "20%",
+          barCategoryGap: "34%",
         },
         {
           name: t.tableSariIcu,
           type: "bar",
           data: snapshot.sariSeries.map((point) => point.icu),
-          itemStyle: { color: "rgba(220, 38, 38, 0.35)", borderColor: "#dc2626", borderWidth: 1.2 },
-          barMaxWidth: 24,
+          barMaxWidth: 22,
+          itemStyle: {
+            color: new graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: isDark ? "rgba(251, 146, 60, 0.93)" : "rgba(220, 38, 38, 0.9)" },
+              { offset: 1, color: isDark ? "rgba(248, 113, 113, 0.38)" : "rgba(252, 165, 165, 0.52)" },
+            ]),
+            borderColor: isDark ? "rgba(254, 205, 211, 0.72)" : "rgba(185, 28, 28, 0.72)",
+            borderWidth: 1,
+            borderRadius: [10, 10, 3, 3],
+            shadowBlur: isDark ? 10 : 8,
+            shadowColor: isDark ? "rgba(249, 115, 22, 0.32)" : "rgba(185, 28, 28, 0.2)",
+          },
+          emphasis: {
+            itemStyle: {
+              shadowBlur: isDark ? 14 : 11,
+              shadowColor: isDark ? "rgba(251, 113, 133, 0.42)" : "rgba(220, 38, 38, 0.26)",
+            },
+          },
+          barGap: "20%",
+          barCategoryGap: "34%",
         },
       ],
     };
-  }, [isDark, snapshot.sariSeries, t.tableSariAdmissions, t.tableSariIcu]);
+  }, [compact, isDark, snapshot.sariSeries, t.tableSariAdmissions, t.tableSariIcu]);
 
   const virologyDetectionsOption = useMemo<EChartsOption>(
     () =>
