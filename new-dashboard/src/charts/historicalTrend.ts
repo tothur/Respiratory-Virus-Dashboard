@@ -81,21 +81,22 @@ export function buildHistoricalTrendOption({
 
   let dataZoom: DataZoomComponentOption[] | undefined;
   if (compact && xLabels.length > 12) {
-    const startIndex = Math.max(0, xLabels.length - 12);
+    const startValue = xLabels[0];
+    const endValue = xLabels[xLabels.length - 1];
     dataZoom = [
       {
         type: "inside",
         xAxisIndex: 0,
-        startValue: xLabels[startIndex],
-        endValue: xLabels[xLabels.length - 1],
+        startValue,
+        endValue,
       },
       {
         type: "slider",
         xAxisIndex: 0,
         bottom: 8,
         height: 18,
-        startValue: xLabels[startIndex],
-        endValue: xLabels[xLabels.length - 1],
+        startValue,
+        endValue,
         brushSelect: false,
         showDataShadow: false,
         borderColor: palette.sliderBorder,
