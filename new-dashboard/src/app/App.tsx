@@ -250,9 +250,9 @@ const STRINGS = {
     historicalDelta: "Latest delta: {value}",
     historicalUnavailable: "Historical comparison is unavailable because the previous season is missing from the loaded data source.",
     warningsTitle: "Data warnings",
-    footerLastUpdateTitle: "Last data refresh",
+    footerUpdatedShort: "Updated",
+    footerWarningsShort: "Warn",
     footerLastUpdateLoading: "Loading data...",
-    footerLastUpdateContext: "Reporting context: NNGYK {iliWeek} · ERVISS {euWeek}",
     noDataShort: "No data",
     regionNational: "National",
   },
@@ -422,9 +422,9 @@ const STRINGS = {
     historicalDelta: "Legfrissebb eltérés: {value}",
     historicalUnavailable: "A történeti összevetés nem érhető el, mert hiányzik az előző szezon a betöltött adatforrásból.",
     warningsTitle: "Adat figyelmeztetések",
-    footerLastUpdateTitle: "Adatfrissítés ideje",
+    footerUpdatedShort: "Frissítve",
+    footerWarningsShort: "Figy.",
     footerLastUpdateLoading: "Adatok betöltése...",
-    footerLastUpdateContext: "Jelentési kontextus: NNGYK {iliWeek} · ERVISS {euWeek}",
     noDataShort: "Nincs adat",
     regionNational: "Országos",
   },
@@ -1775,7 +1775,9 @@ export function App() {
     : dataLoadedAt
       ? formatDateTime(dataLoadedAt, language)
       : t.noDataShort;
-  const dataLastUpdateContext = formatText(t.footerLastUpdateContext, { iliWeek: iliLatestWeekLabel, euWeek: latestEuWeekLabel });
+  const dataLastUpdatePill = `${t.footerUpdatedShort}: ${dataLastUpdateLabel}`;
+  const warningsPill = `${t.footerWarningsShort}: ${snapshot.warnings.length.toLocaleString()}`;
+  const warningsTitle = snapshot.warnings.length ? `${t.warningsTitle}: ${snapshot.warnings.join(" · ")}` : undefined;
 
   return (
     <div className={`app-shell theme-${resolvedTheme}`}>
@@ -2565,19 +2567,13 @@ export function App() {
           <span className={`footer-chip ${iliMissingWeeks.length + sariMissingWeeks.length ? "warn" : "ok"}`}>
             {t.coverageMissing}: {iliMissingWeeks.length}/{sariMissingWeeks.length}
           </span>
+          <span className="footer-chip">
+            {dataLastUpdatePill}
+          </span>
+          <span className={`footer-chip ${snapshot.warnings.length ? "warn" : "ok"}`} title={warningsTitle}>
+            {warningsPill}
+          </span>
         </div>
-
-        {snapshot.warnings.length ? (
-          <p className="footer-warnings-inline">
-            <strong>{t.warningsTitle}:</strong> {snapshot.warnings.join(" · ")}
-          </p>
-        ) : null}
-
-        <article className="footer-update-card" role="status" aria-live="polite">
-          <h3>{t.footerLastUpdateTitle}</h3>
-          <strong>{dataLastUpdateLabel}</strong>
-          <p>{dataLastUpdateContext}</p>
-        </article>
       </footer>
     </div>
   );
