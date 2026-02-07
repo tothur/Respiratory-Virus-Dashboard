@@ -1785,7 +1785,7 @@ export function App() {
     <div className={`app-shell theme-${resolvedTheme}`}>
       <header className="topbar">
         <div className="topbar-brand">
-          <img className="topbar-logo" src="/virusicon.jpeg" alt="" aria-hidden="true" />
+          <img className="topbar-logo" src={`${import.meta.env.BASE_URL}virusicon.jpeg`} alt="" aria-hidden="true" />
           <div className="topbar-copy">
             <h1>{t.appTitle}</h1>
             <p className="subtitle">{t.appSubtitle}</p>
