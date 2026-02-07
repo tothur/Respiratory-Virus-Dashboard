@@ -17,6 +17,7 @@ const STORAGE_THEME_KEY = "rvd-theme";
 type SortColumn = "week" | "cases";
 type SortDirection = "asc" | "desc";
 type TrendDirection = "surging" | "declining" | "flat";
+type ConfidenceLevel = "high" | "medium" | "low";
 type Language = "en" | "hu";
 type ThemeMode = "system" | "dark" | "light";
 type ResolvedTheme = "dark" | "light";
@@ -103,6 +104,20 @@ const STRINGS = {
     alertsLoading: "Awaiting data",
     alertsLoadingPos: "Awaiting positivity data",
     alertsLoadingEuPos: "Awaiting EU/EEA positivity data",
+    decisionTitle: "Weekly situation",
+    decisionIncreasing: "Influenza pressure is increasing",
+    decisionEasing: "Influenza pressure is easing",
+    decisionStableHigh: "Influenza pressure remains high",
+    decisionRisingBelow: "Influenza activity is rising",
+    decisionStableLow: "No influenza epidemic signal",
+    decisionConfidence: "Confidence",
+    decisionFreshness: "Updated",
+    decisionEvidenceIli: "View ILI and SARI charts",
+    decisionEvidenceHuPositivity: "View sentinel positivity",
+    decisionEvidenceEuPositivity: "View EU positivity",
+    decisionConfidenceHigh: "High",
+    decisionConfidenceMedium: "Moderate",
+    decisionConfidenceLow: "Limited",
     coverageNngyk: "Coverage · NNGYK",
     coverageNngykNote: "Latest ILI week in selected season",
     coverageSari: "Coverage · SARI",
@@ -235,6 +250,20 @@ const STRINGS = {
     alertsLoading: "Adatok betöltése",
     alertsLoadingPos: "Pozitivitási adatok betöltése",
     alertsLoadingEuPos: "EU/EGT pozitivitási adatok betöltése",
+    decisionTitle: "Heti helyzetkép",
+    decisionIncreasing: "Az influenzaaktivitás erősödik",
+    decisionEasing: "Az influenzaaktivitás gyengül",
+    decisionStableHigh: "Az influenzaaktivitás továbbra is magas",
+    decisionRisingBelow: "Az influenzaaktivitás emelkedik",
+    decisionStableLow: "Nincs influenza járványjelzés",
+    decisionConfidence: "Megbízhatóság",
+    decisionFreshness: "Frissítés",
+    decisionEvidenceIli: "ILI és SARI grafikon",
+    decisionEvidenceHuPositivity: "Sentinel pozitivitás",
+    decisionEvidenceEuPositivity: "EU pozitivitás",
+    decisionConfidenceHigh: "Magas",
+    decisionConfidenceMedium: "Közepes",
+    decisionConfidenceLow: "Korlátozott",
     coverageNngyk: "Lefedettség · NNGYK",
     coverageNngykNote: "A kiválasztott szezon legfrissebb ILI hete",
     coverageSari: "Lefedettség · SARI",
@@ -580,6 +609,12 @@ function formatTrendBubble(changePercent: number): string {
   const rounded = Math.round(changePercent);
   const sign = rounded > 0 ? "+" : "";
   return `${sign}${rounded}%`;
+}
+
+function confidenceLevelFromScore(score: number): ConfidenceLevel {
+  if (score >= 70) return "high";
+  if (score >= 45) return "medium";
+  return "low";
 }
 
 function virusClassName(virus: string | null | undefined): `pathogen-${PathogenFamily}` {
@@ -1339,6 +1374,88 @@ export function App() {
     cases: snapshot.stats.latestIliCases.toLocaleString(),
     threshold: snapshot.iliThreshold.toLocaleString(),
   });
+  const iliTrendSignal = surgeSignals.find((signal) => signal.virus === DEFAULT_ILI_VIRUS) ?? null;
+  const weeklySituationHeadline = (() => {
+    const delta = iliTrendSignal?.change;
+    if (isAboveThreshold) {
+      if (delta != null && delta >= 8) return t.decisionIncreasing;
+      if (delta != null && delta <= -8) return t.decisionEasing;
+      return t.decisionStableHigh;
+    }
+    if (delta != null && delta >= 12) return t.decisionRisingBelow;
+    return t.decisionStableLow;
+  })();
+
+  const confidenceLabelFor = (level: ConfidenceLevel): string => {
+    if (level === "high") return t.decisionConfidenceHigh;
+    if (level === "medium") return t.decisionConfidenceMedium;
+    return t.decisionConfidenceLow;
+  };
+
+  const confidenceFromInputs = ({
+    hasData,
+    missingWeeks,
+    warningCount,
+  }: {
+    hasData: boolean;
+    missingWeeks: number;
+    warningCount: number;
+  }): ConfidenceLevel => {
+    let score = 100;
+    if (isDataLoading) score -= 28;
+    if (!hasData) score -= 30;
+    score -= Math.min(26, missingWeeks * 6);
+    score -= Math.min(24, warningCount * 8);
+    return confidenceLevelFromScore(score);
+  };
+
+  const coreMissingWeeks = iliMissingWeeks.length + sariMissingWeeks.length;
+  const epidemicConfidenceLevel = confidenceFromInputs({
+    hasData: snapshot.iliSeries.length > 1,
+    missingWeeks: coreMissingWeeks,
+    warningCount: snapshot.warnings.length,
+  });
+  const huLeaderConfidenceLevel = confidenceFromInputs({
+    hasData: huLeader != null && snapshot.virology.latestWeek != null,
+    missingWeeks: Math.ceil(coreMissingWeeks / 2),
+    warningCount: snapshot.warnings.length,
+  });
+  const euLeaderConfidenceLevel = confidenceFromInputs({
+    hasData: euLeader != null && snapshot.euVirology.latestWeek != null,
+    missingWeeks: 0,
+    warningCount: snapshot.warnings.length,
+  });
+  const epidemicConfidenceLabel = confidenceLabelFor(epidemicConfidenceLevel);
+  const huLeaderConfidenceLabel = confidenceLabelFor(huLeaderConfidenceLevel);
+  const euLeaderConfidenceLabel = confidenceLabelFor(euLeaderConfidenceLevel);
+
+  const queueEvidenceScroll = (targetId: string, attempt = 0) => {
+    if (typeof window === "undefined") return;
+    const node = document.getElementById(targetId);
+    if (node) {
+      node.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+    if (attempt >= 10) return;
+    window.setTimeout(() => queueEvidenceScroll(targetId, attempt + 1), 80);
+  };
+
+  const jumpToEvidence = (target: "hu-ili-sari-charts" | "hu-sentinel-positivity" | "eu-positivity-chart") => {
+    if (target === "hu-ili-sari-charts") {
+      setIsHungarySectionOpen(true);
+      queueEvidenceScroll(target);
+      return;
+    }
+    if (target === "hu-sentinel-positivity") {
+      setIsHungarySectionOpen(true);
+      setIsSentinelVirologyOpen(true);
+      queueEvidenceScroll(target);
+      return;
+    }
+    setIsEuSectionOpen(true);
+    queueEvidenceScroll(target);
+  };
+
   const sourceChipTone = dataSource.source === "nngyk_all" ? "live" : "sample";
   const sourceLabel = dataSource.source === "nngyk_all" ? t.sourceLive : t.sourceFallback;
   const latestVirologyWeekLabel = snapshot.virology.latestWeek == null ? "–" : formatWeek(snapshot.virology.latestWeek, language);
@@ -1411,15 +1528,28 @@ export function App() {
 
       <section className="alerts-grid" aria-label={t.alertsAria}>
         <article className={`alert-card primary epidemic ${signalClassName}`} role="status" aria-live="polite">
+          <span className="alert-kicker">{t.decisionTitle}</span>
           <h2>
             {isAboveThreshold ? (
               <span className="alert-status-icon" aria-hidden="true">
                 !
               </span>
             ) : null}
-            <span>{signalHeadline}</span>
+            <span>{weeklySituationHeadline}</span>
           </h2>
+          <p className="alert-standfirst">{signalHeadline}</p>
           <p>{fluAlertText}</p>
+          <div className="alert-meta">
+            <span className={`alert-meta-chip confidence-${epidemicConfidenceLevel}`}>
+              {t.decisionConfidence}: {epidemicConfidenceLabel}
+            </span>
+            <span className="alert-meta-chip">
+              {t.decisionFreshness}: {formatWeek(snapshot.stats.latestWeek, language)}
+            </span>
+          </div>
+          <button type="button" className="alert-evidence-btn" onClick={() => jumpToEvidence("hu-ili-sari-charts")}>
+            {t.decisionEvidenceIli}
+          </button>
         </article>
         <article className={`alert-card leader summary ${huLeaderClass}`} role="status" aria-live="polite">
           <h2>{t.leaderHuTitle}</h2>
@@ -1428,6 +1558,17 @@ export function App() {
             <strong className="alert-emphasis">{huLeaderVirus}</strong>
           </div>
           <p>{huLeaderText}</p>
+          <div className="alert-meta">
+            <span className={`alert-meta-chip confidence-${huLeaderConfidenceLevel}`}>
+              {t.decisionConfidence}: {huLeaderConfidenceLabel}
+            </span>
+            <span className="alert-meta-chip">
+              {t.decisionFreshness}: {latestVirologyWeekLabel}
+            </span>
+          </div>
+          <button type="button" className="alert-evidence-btn" onClick={() => jumpToEvidence("hu-sentinel-positivity")}>
+            {t.decisionEvidenceHuPositivity}
+          </button>
         </article>
         <article className={`alert-card leader summary ${euLeaderClass}`} role="status" aria-live="polite">
           <h2>{t.leaderEuTitle}</h2>
@@ -1436,6 +1577,17 @@ export function App() {
             <strong className="alert-emphasis">{euLeaderVirus}</strong>
           </div>
           <p>{euLeaderText}</p>
+          <div className="alert-meta">
+            <span className={`alert-meta-chip confidence-${euLeaderConfidenceLevel}`}>
+              {t.decisionConfidence}: {euLeaderConfidenceLabel}
+            </span>
+            <span className="alert-meta-chip">
+              {t.decisionFreshness}: {latestEuWeekLabel}
+            </span>
+          </div>
+          <button type="button" className="alert-evidence-btn" onClick={() => jumpToEvidence("eu-positivity-chart")}>
+            {t.decisionEvidenceEuPositivity}
+          </button>
         </article>
       </section>
 
@@ -1543,7 +1695,7 @@ export function App() {
         </section>
       </section>
 
-      <section className="charts-grid">
+      <section id="hu-ili-sari-charts" className="charts-grid">
         <EChartsPanel
           title={t.chartIli}
           subtitle={formatText(t.chartIliSubtitle, {
@@ -1647,11 +1799,13 @@ export function App() {
                 subtitle={formatText(t.virologyDetectionsSubtitle, { week: latestVirologyWeekLabel })}
                 option={virologyDetectionsOption}
               />
-              <EChartsPanel
-                title={t.virologyPositivityTrend}
-                subtitle={formatText(t.virologyDetectionsSubtitle, { week: latestVirologyWeekLabel })}
-                option={virologyPositivityOption}
-              />
+              <div id="hu-sentinel-positivity">
+                <EChartsPanel
+                  title={t.virologyPositivityTrend}
+                  subtitle={formatText(t.virologyDetectionsSubtitle, { week: latestVirologyWeekLabel })}
+                  option={virologyPositivityOption}
+                />
+              </div>
             </div>
 
             <div className="virology-lists">
@@ -1973,11 +2127,13 @@ export function App() {
             subtitle={formatText(t.euTrendSubtitle, { season: euSeasonLabel })}
             option={euDetectionsOption}
           />
-          <EChartsPanel
-            title={t.euPositivityTrend}
-            subtitle={formatText(t.euTrendSubtitle, { season: euSeasonLabel })}
-            option={euPositivityOption}
-          />
+          <div id="eu-positivity-chart">
+            <EChartsPanel
+              title={t.euPositivityTrend}
+              subtitle={formatText(t.euTrendSubtitle, { season: euSeasonLabel })}
+              option={euPositivityOption}
+            />
+          </div>
         </div>
 
         <div className="virology-lists eu-summary-lists">
