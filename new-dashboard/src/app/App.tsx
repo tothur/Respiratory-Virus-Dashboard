@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { graphic, type EChartsOption } from "echarts";
+import type { EChartsOption } from "echarts";
+import { graphic } from "echarts/core";
 import { buildDashboardSnapshot, createBundledDataSource, INFLUENZA_ALL_KEY, VIRO_ALL_KEY } from "../data/adapter";
 import type { DashboardDataSource } from "../data/adapter";
 import { loadRuntimeDataSource } from "../data/runtime-source";

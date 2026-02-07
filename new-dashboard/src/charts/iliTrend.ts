@@ -1,5 +1,5 @@
 import type { DataZoomComponentOption, EChartsOption, SeriesOption } from "echarts";
-import { graphic } from "echarts";
+import { graphic } from "echarts/core";
 import type { WeeklyIliPoint } from "../domain/model";
 
 interface BuildIliTrendOptionArgs {
