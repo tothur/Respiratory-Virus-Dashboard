@@ -1784,9 +1784,12 @@ export function App() {
   return (
     <div className={`app-shell theme-${resolvedTheme}`}>
       <header className="topbar">
-        <div>
-          <h1>{t.appTitle}</h1>
-          <p className="subtitle">{t.appSubtitle}</p>
+        <div className="topbar-brand">
+          <img className="topbar-logo" src="/virusicon.jpeg" alt="" aria-hidden="true" />
+          <div className="topbar-copy">
+            <h1>{t.appTitle}</h1>
+            <p className="subtitle">{t.appSubtitle}</p>
+          </div>
         </div>
         <div className="controls">
           <div className="control-group">

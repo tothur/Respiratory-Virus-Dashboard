@@ -149,6 +149,28 @@ h3 {
   z-index: 1;
 }
 
+.topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.topbar-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.16);
+  background: #ffffff;
+  flex: 0 0 auto;
+}
+
+.topbar-copy {
+  min-width: 0;
+}
+
 .topbar h1 {
   margin: 0;
   font-size: clamp(1.55rem, 2.6vw, 2rem);
@@ -1703,6 +1725,11 @@ h3 {
   color: #f1f5f9;
 }
 
+[data-theme="dark"] .topbar-logo {
+  border-color: rgba(148, 163, 184, 0.36);
+  box-shadow: 0 8px 16px rgba(2, 6, 23, 0.5);
+}
+
 [data-theme="dark"] .controls {
   background: rgba(15, 23, 42, 0.62);
   border-color: rgba(96, 165, 250, 0.26);
@@ -2121,6 +2148,12 @@ h3 {
     padding: 16px;
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .topbar-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
   }
 
   .controls {
