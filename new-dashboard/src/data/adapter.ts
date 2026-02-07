@@ -1,20 +1,42 @@
 import { respiratoryData as rawRespiratoryData, seasonLabels as rawSeasonLabels } from "@legacy-data";
 import {
   DashboardSnapshot,
+  EuVirologySnapshot,
   HistoricalComparisonPoint,
   HistoricalComparisonSnapshot,
   HistoricalMetricComparison,
+  VirologyDetectionRow,
+  VirologyPositivityRow,
+  VirologySnapshot,
   WeeklyIliPoint,
   WeeklySariPoint,
 } from "../domain/model";
-import { RespiratoryDataSchema, SeasonLabelsSchema } from "./contracts";
+import { RespiratoryData, RespiratoryDataSchema, SeasonLabelsSchema } from "./contracts";
 
 const DEFAULT_DATASET = "NNGYK";
 const DEFAULT_ILI_VIRUS = "ILI (flu-like illness)";
+export const VIRO_ALL_KEY = "__all_viruses__";
+export const INFLUENZA_ALL_KEY = "__influenza_all__";
 export const ILI_THRESHOLD = 28900;
 
-const respiratoryData = RespiratoryDataSchema.parse(rawRespiratoryData);
-const seasonLabels = SeasonLabelsSchema.parse(rawSeasonLabels);
+const bundledRespiratoryData = RespiratoryDataSchema.parse(rawRespiratoryData);
+const bundledSeasonLabels = SeasonLabelsSchema.parse(rawSeasonLabels);
+
+export interface DashboardDataSource {
+  source: "bundled" | "nngyk_all";
+  respiratoryData: RespiratoryData;
+  seasonLabels: Record<string, string>;
+  note?: string;
+}
+
+export function createBundledDataSource(note?: string): DashboardDataSource {
+  return {
+    source: "bundled",
+    respiratoryData: bundledRespiratoryData,
+    seasonLabels: bundledSeasonLabels,
+    note,
+  };
+}
 
 function seasonWeekIndex(week: number): number {
   return week >= 40 ? week : week + 53;
@@ -28,13 +50,269 @@ function weekLabel(week: number): string {
   return `W${String(week).padStart(2, "0")}`;
 }
 
-function normalizeSeasonLabel(year: number): string {
+function normalizeSeasonLabel(seasonLabels: Record<string, string>, year: number): string {
   const fromSource = seasonLabels[String(year)];
   if (fromSource) return fromSource;
   return `${year}-${year + 1}`;
 }
 
-function aggregateIliSeries(year: number): WeeklyIliPoint[] {
+function normalizeVirusName(name: string | null | undefined): string {
+  if (!name) return "";
+  const normalized = String(name)
+    .normalize("NFKC")
+    .replace(/\u00a0/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!normalized) return "";
+
+  if (/^ili\s*\(\s*flu[-\s]*like illness\s*\)$/i.test(normalized)) return DEFAULT_ILI_VIRUS;
+  if (/^influenza$/i.test(normalized)) return "Influenza";
+  if (/^influenza\s+a$/i.test(normalized)) return "Influenza A";
+  if (/^influenza\s+b$/i.test(normalized)) return "Influenza B";
+  if (/^influenza\s+untyped$/i.test(normalized)) return "Influenza (untyped)";
+  if (/^influenza\s+a\s*\(\s*h1n1pdm09\s*\)$/i.test(normalized) || /^influenza\s+a\s*\(\s*h1pdm09\s*\)$/i.test(normalized)) {
+    return "Influenza A(H1N1pdm09)";
+  }
+  if (/^influenza\s+a\s+h1n1pdm09$/i.test(normalized) || /^influenza\s+a\s+h1pdm09$/i.test(normalized)) {
+    return "Influenza A(H1N1pdm09)";
+  }
+  if (/^influenza\s+a\s*\(\s*h3\s*\)$/i.test(normalized) || /^influenza\s+a\s+h3$/i.test(normalized)) {
+    return "Influenza A(H3)";
+  }
+  if (/^influenza\s+a\s*\(\s*nt\s*\)$/i.test(normalized) || /^influenza\s+a\s+nt$/i.test(normalized)) {
+    return "Influenza A(NT)";
+  }
+  if (/^a\s*\(\s*h1\s*\)\s*pdm09$/i.test(normalized)) return "Influenza A(H1N1pdm09)";
+  if (/^a\s*\(\s*h3\s*\)$/i.test(normalized)) return "Influenza A(H3)";
+  if (/^a\s*\(\s*unknown\s*\)$/i.test(normalized)) return "Influenza A(NT)";
+  if (/^sars[-\s]*cov[-\s]*2$/i.test(normalized)) return "SARS-CoV-2";
+  if (/^rs[-\s]*v(i[íi]rus)?$/i.test(normalized)) return "RSV";
+
+  return normalized;
+}
+
+function isInfluenzaVirus(name: string): boolean {
+  if (name === INFLUENZA_ALL_KEY) return false;
+  return normalizeVirusName(name).startsWith("Influenza");
+}
+
+function aggregateVirologyDetections(respiratoryData: RespiratoryData, year: number): VirologyDetectionRow[] {
+  const buckets = new Map<string, VirologyDetectionRow>();
+  for (const row of respiratoryData.virologyDetections) {
+    const rowYear = Number(row.year);
+    if (Number.isFinite(rowYear) && rowYear !== year) continue;
+
+    const week = Number(row.week);
+    if (!Number.isFinite(week)) continue;
+
+    const detections = Number(row.detections ?? 0);
+    if (!Number.isFinite(detections)) continue;
+
+    const virus = normalizeVirusName(row.virus);
+    if (!virus) continue;
+
+    const key = `${week}::${virus}`;
+    const current = buckets.get(key);
+    if (current) {
+      current.detections += detections;
+      continue;
+    }
+    buckets.set(key, {
+      week,
+      label: weekLabel(week),
+      virus,
+      detections,
+    });
+  }
+
+  const influenzaTotals = new Map<number, number>();
+  for (const row of buckets.values()) {
+    if (!isInfluenzaVirus(row.virus)) continue;
+    influenzaTotals.set(row.week, (influenzaTotals.get(row.week) ?? 0) + row.detections);
+  }
+  for (const [week, detections] of influenzaTotals.entries()) {
+    if (!Number.isFinite(detections) || detections <= 0) continue;
+    buckets.set(`${week}::${INFLUENZA_ALL_KEY}`, {
+      week,
+      label: weekLabel(week),
+      virus: INFLUENZA_ALL_KEY,
+      detections,
+    });
+  }
+
+  return Array.from(buckets.values()).sort(
+    (a, b) => seasonWeekCompare(a.week, b.week) || a.virus.localeCompare(b.virus)
+  );
+}
+
+function aggregateVirologyPositivity(respiratoryData: RespiratoryData, year: number): VirologyPositivityRow[] {
+  const buckets = new Map<string, VirologyPositivityRow>();
+  for (const row of respiratoryData.virologyPositivity) {
+    const rowYear = Number(row.year);
+    if (Number.isFinite(rowYear) && rowYear !== year) continue;
+
+    const week = Number(row.week);
+    if (!Number.isFinite(week)) continue;
+
+    const positivity = Number(row.positivity ?? 0);
+    if (!Number.isFinite(positivity)) continue;
+
+    const virus = normalizeVirusName(row.virus);
+    if (!virus) continue;
+
+    const key = `${week}::${virus}`;
+    const current = buckets.get(key);
+    if (!current || positivity > current.positivity) {
+      buckets.set(key, {
+        week,
+        label: weekLabel(week),
+        virus,
+        positivity,
+      });
+    }
+  }
+
+  return Array.from(buckets.values()).sort(
+    (a, b) => seasonWeekCompare(a.week, b.week) || a.virus.localeCompare(b.virus)
+  );
+}
+
+function buildVirologySnapshot(respiratoryData: RespiratoryData, year: number): VirologySnapshot {
+  const detectionRows = aggregateVirologyDetections(respiratoryData, year);
+  const positivityRows = aggregateVirologyPositivity(respiratoryData, year);
+
+  const availableDetectionViruses = Array.from(new Set(detectionRows.map((row) => row.virus))).sort((a, b) => {
+    if (a === INFLUENZA_ALL_KEY) return -1;
+    if (b === INFLUENZA_ALL_KEY) return 1;
+    return a.localeCompare(b);
+  });
+
+  const weekCandidates = Array.from(
+    new Set(
+      detectionRows
+        .map((row) => row.week)
+        .concat(positivityRows.map((row) => row.week))
+        .filter((week) => Number.isFinite(week))
+    )
+  );
+
+  const latestWeek = weekCandidates.length
+    ? weekCandidates.reduce((best, week) => (seasonWeekCompare(week, best) > 0 ? week : best), weekCandidates[0])
+    : null;
+
+  return {
+    available: detectionRows.length > 0 || positivityRows.length > 0,
+    latestWeek,
+    availableDetectionViruses,
+    detectionRows,
+    positivityRows,
+  };
+}
+
+function aggregateEuVirologyDetections(respiratoryData: RespiratoryData, year: number): VirologyDetectionRow[] {
+  const buckets = new Map<string, VirologyDetectionRow>();
+  for (const row of respiratoryData.ervissDetections) {
+    const rowYear = Number(row.year);
+    if (!Number.isFinite(rowYear) || rowYear !== year) continue;
+
+    const week = Number(row.week);
+    if (!Number.isFinite(week)) continue;
+
+    const detections = Number(row.detections ?? 0);
+    if (!Number.isFinite(detections)) continue;
+
+    const virus = normalizeVirusName(row.virus);
+    if (!virus) continue;
+
+    const key = `${week}::${virus}`;
+    const current = buckets.get(key);
+    if (current) {
+      current.detections += detections;
+      continue;
+    }
+    buckets.set(key, {
+      week,
+      label: weekLabel(week),
+      virus,
+      detections,
+    });
+  }
+
+  return Array.from(buckets.values()).sort((a, b) => a.week - b.week || a.virus.localeCompare(b.virus));
+}
+
+function aggregateEuVirologyPositivity(respiratoryData: RespiratoryData, year: number): VirologyPositivityRow[] {
+  const buckets = new Map<string, VirologyPositivityRow>();
+  for (const row of respiratoryData.ervissPositivity) {
+    const rowYear = Number(row.year);
+    if (!Number.isFinite(rowYear) || rowYear !== year) continue;
+
+    const week = Number(row.week);
+    if (!Number.isFinite(week)) continue;
+
+    const positivity = Number(row.positivity ?? 0);
+    if (!Number.isFinite(positivity)) continue;
+
+    const virus = normalizeVirusName(row.virus);
+    if (!virus) continue;
+
+    const key = `${week}::${virus}`;
+    const current = buckets.get(key);
+    if (!current || positivity > current.positivity) {
+      buckets.set(key, {
+        week,
+        label: weekLabel(week),
+        virus,
+        positivity,
+      });
+    }
+  }
+
+  return Array.from(buckets.values()).sort((a, b) => a.week - b.week || a.virus.localeCompare(b.virus));
+}
+
+function buildEuVirologySnapshot(respiratoryData: RespiratoryData, preferredYear: number): EuVirologySnapshot {
+  const yearCandidates = Array.from(
+    new Set(
+      respiratoryData.ervissDetections
+        .map((row) => Number(row.year))
+        .concat(respiratoryData.ervissPositivity.map((row) => Number(row.year)))
+        .filter((year) => Number.isFinite(year))
+    )
+  ).sort((a, b) => a - b);
+
+  if (!yearCandidates.length) {
+    return {
+      available: false,
+      availableYears: [],
+      targetYear: null,
+      latestWeek: null,
+      detectionRows: [],
+      positivityRows: [],
+    };
+  }
+
+  const targetYear = yearCandidates.includes(preferredYear) ? preferredYear : yearCandidates[yearCandidates.length - 1];
+  const detectionRows = aggregateEuVirologyDetections(respiratoryData, targetYear);
+  const positivityRows = aggregateEuVirologyPositivity(respiratoryData, targetYear);
+
+  const latestWeek = (() => {
+    const candidates = detectionRows.map((row) => row.week).concat(positivityRows.map((row) => row.week));
+    if (!candidates.length) return null;
+    return Math.max(...candidates);
+  })();
+
+  return {
+    available: detectionRows.length > 0 || positivityRows.length > 0,
+    availableYears: yearCandidates,
+    targetYear,
+    latestWeek,
+    detectionRows,
+    positivityRows,
+  };
+}
+
+function aggregateIliSeries(respiratoryData: RespiratoryData, year: number): WeeklyIliPoint[] {
   const buckets = new Map<number, number>();
 
   for (const row of respiratoryData.weekly) {
@@ -53,7 +331,7 @@ function aggregateIliSeries(year: number): WeeklyIliPoint[] {
     .map(([week, cases]) => ({ week, label: weekLabel(week), cases }));
 }
 
-function aggregateSariSeries(year: number): WeeklySariPoint[] {
+function aggregateSariSeries(respiratoryData: RespiratoryData, year: number): WeeklySariPoint[] {
   const buckets = new Map<number, { admissions: number; icu: number }>();
 
   for (const row of respiratoryData.sariWeekly) {
@@ -81,7 +359,7 @@ function aggregateSariSeries(year: number): WeeklySariPoint[] {
     }));
 }
 
-function pickAvailableYears(): number[] {
+function pickAvailableYears(respiratoryData: RespiratoryData): number[] {
   const sourceYears = new Set<number>(respiratoryData.years);
   for (const row of respiratoryData.weekly) sourceYears.add(Number(row.year));
   for (const row of respiratoryData.sariWeekly) sourceYears.add(Number(row.year));
@@ -154,10 +432,15 @@ function buildHistoricalMetric(previous: Map<number, number>, current: Map<numbe
   };
 }
 
-function buildHistoricalComparisonSnapshot(selectedYear: number, availableYears: number[]): HistoricalComparisonSnapshot {
+function buildHistoricalComparisonSnapshot(
+  respiratoryData: RespiratoryData,
+  seasonLabels: Record<string, string>,
+  selectedYear: number,
+  availableYears: number[]
+): HistoricalComparisonSnapshot {
   const compareYear = availableYears.includes(selectedYear - 1) ? selectedYear - 1 : null;
-  const currentSeasonLabel = normalizeSeasonLabel(selectedYear);
-  const compareSeasonLabel = compareYear == null ? null : normalizeSeasonLabel(compareYear);
+  const currentSeasonLabel = normalizeSeasonLabel(seasonLabels, selectedYear);
+  const compareSeasonLabel = compareYear == null ? null : normalizeSeasonLabel(seasonLabels, compareYear);
 
   if (compareYear == null) {
     return {
@@ -171,10 +454,10 @@ function buildHistoricalComparisonSnapshot(selectedYear: number, availableYears:
     };
   }
 
-  const iliPrevious = aggregateIliSeries(compareYear);
-  const iliCurrent = aggregateIliSeries(selectedYear);
-  const sariPrevious = aggregateSariSeries(compareYear);
-  const sariCurrent = aggregateSariSeries(selectedYear);
+  const iliPrevious = aggregateIliSeries(respiratoryData, compareYear);
+  const iliCurrent = aggregateIliSeries(respiratoryData, selectedYear);
+  const sariPrevious = aggregateSariSeries(respiratoryData, compareYear);
+  const sariCurrent = aggregateSariSeries(respiratoryData, selectedYear);
 
   const iliPreviousMap = buildWeekMap(iliPrevious, (row) => row.cases);
   const iliCurrentMap = buildWeekMap(iliCurrent, (row) => row.cases);
@@ -215,17 +498,20 @@ function buildHistoricalComparisonSnapshot(selectedYear: number, availableYears:
   };
 }
 
-export function buildDashboardSnapshot(selectedYear?: number): DashboardSnapshot {
-  const availableYears = pickAvailableYears();
+export function buildDashboardSnapshot(dataSource: DashboardDataSource, selectedYear?: number): DashboardSnapshot {
+  const { respiratoryData, seasonLabels } = dataSource;
+  const availableYears = pickAvailableYears(respiratoryData);
   const fallbackYear = availableYears.length ? availableYears[availableYears.length - 1] : new Date().getFullYear();
   const year =
     typeof selectedYear === "number" && Number.isFinite(selectedYear) && availableYears.includes(selectedYear)
       ? selectedYear
       : fallbackYear;
 
-  const iliSeries = aggregateIliSeries(year);
-  const sariSeries = aggregateSariSeries(year);
-  const historical = buildHistoricalComparisonSnapshot(year, availableYears);
+  const iliSeries = aggregateIliSeries(respiratoryData, year);
+  const sariSeries = aggregateSariSeries(respiratoryData, year);
+  const virology = buildVirologySnapshot(respiratoryData, year);
+  const euVirology = buildEuVirologySnapshot(respiratoryData, year);
+  const historical = buildHistoricalComparisonSnapshot(respiratoryData, seasonLabels, year, availableYears);
 
   const totalIliCases = iliSeries.reduce((sum, point) => sum + point.cases, 0);
   const peak = iliSeries.reduce<WeeklyIliPoint | null>((max, point) => (!max || point.cases > max.cases ? point : max), null);
@@ -242,16 +528,21 @@ export function buildDashboardSnapshot(selectedYear?: number): DashboardSnapshot
   })();
 
   const warnings: string[] = [];
-  if (!iliSeries.length) warnings.push("No ILI rows for this season in legacy source.");
-  if (!sariSeries.length) warnings.push("No SARI rows for this season in legacy source.");
+  if (!iliSeries.length) warnings.push("No ILI rows for this season in loaded source.");
+  if (!sariSeries.length) warnings.push("No SARI rows for this season in loaded source.");
+  if (!virology.available) warnings.push("No virology rows for this season in loaded source.");
+  if (!euVirology.available) warnings.push("No EU/EEA ERVISS rows available.");
+  if (dataSource.note) warnings.push(dataSource.note);
 
   return {
     selectedYear: year,
-    seasonLabel: normalizeSeasonLabel(year),
+    seasonLabel: normalizeSeasonLabel(seasonLabels, year),
     availableYears,
     iliThreshold: ILI_THRESHOLD,
     iliSeries,
     sariSeries,
+    virology,
+    euVirology,
     historical,
     stats: {
       totalIliCases,

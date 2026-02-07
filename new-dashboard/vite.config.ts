@@ -7,6 +7,8 @@ export default defineConfig({
   resolve: {
     alias: {
       "@legacy-data": resolve(__dirname, "../data.js"),
+      "@nngyk-all": resolve(__dirname, "../nngyk_all.json"),
+      "@erviss-sari": resolve(__dirname, "../erviss_data/erviss_sari.json"),
     },
   },
   server: {

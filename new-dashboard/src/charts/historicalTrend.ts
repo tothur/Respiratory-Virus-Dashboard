@@ -6,6 +6,11 @@ interface BuildHistoricalTrendOptionArgs {
   compareSeasonLabel: string;
   currentSeasonLabel: string;
   compact: boolean;
+  dark?: boolean;
+  labels?: {
+    delta: string;
+    noData: string;
+  };
 }
 
 const numberFormatter = new Intl.NumberFormat("en-US");
@@ -22,22 +27,40 @@ export function buildHistoricalTrendOption({
   compareSeasonLabel,
   currentSeasonLabel,
   compact,
+  dark = false,
+  labels: labelsOverride,
 }: BuildHistoricalTrendOptionArgs): EChartsOption {
-  const labels = metric.points.map((point) => point.label);
+  const palette = dark
+    ? {
+        axisLine: "rgba(148, 163, 184, 0.45)",
+        axisLabel: "#cbd5e1",
+        legend: "#e2e8f0",
+        grid: "rgba(148, 163, 184, 0.22)",
+        baseline: "rgba(203, 213, 225, 0.58)",
+      }
+    : {
+        axisLine: "rgba(15, 23, 42, 0.20)",
+        axisLabel: "#334155",
+        legend: "#0f172a",
+        grid: "rgba(15, 23, 42, 0.14)",
+        baseline: "rgba(15, 23, 42, 0.52)",
+      };
+  const text = labelsOverride ?? { delta: "Delta %", noData: "No data" };
+  const xLabels = metric.points.map((point) => point.label);
   const previousValues = metric.points.map((point) => point.previous);
   const currentValues = metric.points.map((point) => point.current);
   const deltaValues = metric.points.map((point) => point.deltaPercent);
-  const hasData = labels.length > 0;
+  const hasData = xLabels.length > 0;
 
   let dataZoom: DataZoomComponentOption[] | undefined;
-  if (compact && labels.length > 12) {
-    const startIndex = Math.max(0, labels.length - 12);
+  if (compact && xLabels.length > 12) {
+    const startIndex = Math.max(0, xLabels.length - 12);
     dataZoom = [
       {
         type: "inside",
         xAxisIndex: 0,
-        startValue: labels[startIndex],
-        endValue: labels[labels.length - 1],
+        startValue: xLabels[startIndex],
+        endValue: xLabels[xLabels.length - 1],
       },
     ];
   }
@@ -82,16 +105,16 @@ export function buildHistoricalTrendOption({
       show: !compact,
       bottom: 2,
       textStyle: {
-        color: "#0f172a",
+        color: palette.legend,
         fontWeight: 600,
       },
     },
     xAxis: {
       type: "category",
-      data: hasData ? labels : ["No data"],
-      axisLine: { lineStyle: { color: "rgba(15, 23, 42, 0.20)" } },
+      data: hasData ? xLabels : [text.noData],
+      axisLine: { lineStyle: { color: palette.axisLine } },
       axisLabel: {
-        color: "#334155",
+        color: palette.axisLabel,
         interval: compact ? "auto" : 0,
       },
     },
@@ -100,18 +123,18 @@ export function buildHistoricalTrendOption({
         type: "value",
         min: 0,
         axisLabel: {
-          color: "#334155",
+          color: palette.axisLabel,
           formatter: (value: number) => numberFormatter.format(value),
         },
         splitLine: {
-          lineStyle: { color: "rgba(15, 23, 42, 0.14)" },
+          lineStyle: { color: palette.grid },
         },
       },
       {
         type: "value",
         position: "right",
         axisLabel: {
-          color: "#334155",
+          color: palette.axisLabel,
           formatter: (value: number) => `${value}%`,
         },
         splitLine: {
@@ -129,11 +152,11 @@ export function buildHistoricalTrendOption({
         connectNulls: false,
         symbolSize: 5,
         lineStyle: {
-          color: "rgba(15, 23, 42, 0.52)",
+          color: palette.baseline,
           width: 2,
         },
         itemStyle: {
-          color: "rgba(15, 23, 42, 0.52)",
+          color: palette.baseline,
         },
       },
       {
@@ -152,7 +175,7 @@ export function buildHistoricalTrendOption({
         },
       },
       {
-        name: "Delta %",
+        name: text.delta,
         type: "line",
         yAxisIndex: 1,
         data: hasData ? deltaValues : [null],

@@ -11,6 +11,37 @@ export interface WeeklySariPoint {
   icu: number;
 }
 
+export interface VirologyDetectionRow {
+  week: number;
+  label: string;
+  virus: string;
+  detections: number;
+}
+
+export interface VirologyPositivityRow {
+  week: number;
+  label: string;
+  virus: string;
+  positivity: number;
+}
+
+export interface VirologySnapshot {
+  available: boolean;
+  latestWeek: number | null;
+  availableDetectionViruses: string[];
+  detectionRows: VirologyDetectionRow[];
+  positivityRows: VirologyPositivityRow[];
+}
+
+export interface EuVirologySnapshot {
+  available: boolean;
+  availableYears: number[];
+  targetYear: number | null;
+  latestWeek: number | null;
+  detectionRows: VirologyDetectionRow[];
+  positivityRows: VirologyPositivityRow[];
+}
+
 export interface HistoricalComparisonPoint {
   week: number;
   label: string;
@@ -53,6 +84,8 @@ export interface DashboardSnapshot {
   iliThreshold: number;
   iliSeries: WeeklyIliPoint[];
   sariSeries: WeeklySariPoint[];
+  virology: VirologySnapshot;
+  euVirology: EuVirologySnapshot;
   historical: HistoricalComparisonSnapshot;
   stats: DashboardStats;
   warnings: string[];
