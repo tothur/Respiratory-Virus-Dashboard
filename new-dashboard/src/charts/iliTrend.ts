@@ -14,6 +14,7 @@ interface BuildIliTrendOptionArgs {
     noData: string;
     seasonStart: string;
     holidays: string;
+    weekPrefix?: string;
   };
 }
 
@@ -24,16 +25,18 @@ interface SeasonMarker {
 
 const numberFormatter = new Intl.NumberFormat("en-US");
 
-function weekLabel(week: number): string {
-  return `W${String(week).padStart(2, "0")}`;
+function weekLabel(week: number, weekPrefix = "W"): string {
+  const code = String(week).padStart(2, "0");
+  if (weekPrefix === "W") return `W${code}`;
+  return `${weekPrefix}${code}`;
 }
 
-function findThresholdCrossing(points: WeeklyIliPoint[], threshold: number): WeeklyIliPoint | null {
-  if (points.length < 2) return null;
-  for (let idx = 1; idx < points.length; idx += 1) {
-    if (points[idx].cases >= threshold && points[idx - 1].cases < threshold) return points[idx];
-  }
-  return null;
+function localizeWeekToken(token: string, weekPrefix: string): string {
+  const match = /^W(\d{1,2})$/i.exec(String(token ?? "").trim());
+  if (!match) return token;
+  const code = String(match[1]).padStart(2, "0");
+  if (weekPrefix === "W") return `W${code}`;
+  return `${weekPrefix}${code}`;
 }
 
 export function buildIliTrendOption({
@@ -48,29 +51,37 @@ export function buildIliTrendOption({
         axisLine: "rgba(148, 163, 184, 0.45)",
         axisLabel: "#cbd5e1",
         legend: "#e2e8f0",
-        grid: "rgba(148, 163, 184, 0.22)",
+        grid: "rgba(148, 163, 184, 0.16)",
         markerLine: "rgba(148, 163, 184, 0.38)",
         markerLabel: "#cbd5e1",
         markerBg: "rgba(15, 23, 42, 0.88)",
+        currentWeekLine: "rgba(125, 211, 252, 0.55)",
         sliderBorder: "rgba(148, 163, 184, 0.35)",
         sliderFill: "rgba(59, 130, 246, 0.35)",
         sliderText: "#cbd5e1",
         legendBg: "rgba(15, 23, 42, 0.82)",
         legendBorder: "rgba(148, 163, 184, 0.32)",
+        tooltipBg: "rgba(15, 23, 42, 0.96)",
+        tooltipBorder: "rgba(148, 163, 184, 0.48)",
+        tooltipText: "#e2e8f0",
       }
     : {
         axisLine: "rgba(15, 23, 42, 0.20)",
         axisLabel: "#334155",
         legend: "#0f172a",
-        grid: "rgba(15, 23, 42, 0.14)",
+        grid: "rgba(15, 23, 42, 0.1)",
         markerLine: "rgba(15, 23, 42, 0.16)",
         markerLabel: "#64748b",
         markerBg: "rgba(255, 255, 255, 0.85)",
+        currentWeekLine: "rgba(37, 99, 235, 0.45)",
         sliderBorder: "rgba(15, 23, 42, 0.18)",
         sliderFill: "rgba(37, 99, 235, 0.20)",
         sliderText: "#475569",
         legendBg: "rgba(248, 250, 252, 0.92)",
         legendBorder: "rgba(148, 163, 184, 0.38)",
+        tooltipBg: "rgba(15, 23, 42, 0.94)",
+        tooltipBorder: "rgba(30, 41, 59, 0.24)",
+        tooltipText: "#f8fafc",
       };
   const text = labelsOverride ?? {
     iliCases: "ILI cases",
@@ -80,19 +91,21 @@ export function buildIliTrendOption({
     seasonStart: "Season start",
     holidays: "Holiday period",
   };
+  const weekPrefix = labelsOverride?.weekPrefix ?? "W";
   const seasonMarkers: SeasonMarker[] = [
     { week: 40, text: text.seasonStart },
     { week: 52, text: text.holidays },
     { week: 1, text: text.holidays },
   ];
 
-  const xLabels = points.map((point) => point.label);
+  const xLabelsRaw = points.map((point) => point.label);
+  const xLabels = xLabelsRaw.map((label) => localizeWeekToken(label, weekPrefix));
   const values = points.map((point) => point.cases);
   const hasData = xLabels.length > 0;
-  const crossing = findThresholdCrossing(points, threshold);
+  const currentWeekLabel = hasData ? xLabels[xLabels.length - 1] : null;
 
   const markerLines = seasonMarkers.map((marker) => {
-    const label = weekLabel(marker.week);
+    const label = weekLabel(marker.week, weekPrefix);
     if (!xLabels.includes(label)) return null;
     return { name: marker.text, xAxis: label };
   }).filter((entry): entry is { name: string; xAxis: string } => entry !== null);
@@ -100,41 +113,62 @@ export function buildIliTrendOption({
   const series: SeriesOption[] = [
     {
       name: text.iliCases,
-      type: "bar",
+      type: "line",
       data: hasData ? values : [0],
-      barMaxWidth: 24,
-      itemStyle: {
+      smooth: 0.24,
+      showSymbol: false,
+      symbol: "circle",
+      symbolSize: 7,
+      lineStyle: {
+        width: 3,
+        color: dark ? "#7dd3fc" : "#2563eb",
+        cap: "round",
+      },
+      areaStyle: {
         color: new graphic.LinearGradient(0, 0, 0, 1, [
-          { offset: 0, color: dark ? "rgba(96, 165, 250, 0.96)" : "rgba(37, 99, 235, 0.95)" },
-          { offset: 1, color: dark ? "rgba(96, 165, 250, 0.38)" : "rgba(147, 197, 253, 0.56)" },
+          { offset: 0, color: dark ? "rgba(125, 211, 252, 0.42)" : "rgba(59, 130, 246, 0.28)" },
+          { offset: 1, color: dark ? "rgba(56, 189, 248, 0.06)" : "rgba(147, 197, 253, 0.03)" },
         ]),
-        borderColor: dark ? "rgba(191, 219, 254, 0.74)" : "rgba(29, 78, 216, 0.72)",
-        borderWidth: 1,
-        borderRadius: [10, 10, 3, 3],
-        shadowBlur: dark ? 12 : 9,
-        shadowColor: dark ? "rgba(30, 64, 175, 0.36)" : "rgba(30, 64, 175, 0.24)",
       },
       emphasis: {
-        itemStyle: {
-          color: new graphic.LinearGradient(0, 0, 0, 1, [
-            { offset: 0, color: dark ? "rgba(125, 211, 252, 0.98)" : "rgba(37, 99, 235, 0.98)" },
-            { offset: 1, color: dark ? "rgba(96, 165, 250, 0.54)" : "rgba(147, 197, 253, 0.68)" },
-          ]),
-          shadowBlur: dark ? 16 : 12,
-          shadowColor: dark ? "rgba(14, 116, 144, 0.42)" : "rgba(37, 99, 235, 0.28)",
+        focus: "series",
+        lineStyle: {
+          width: 3.6,
         },
       },
-      z: 2,
+      markLine: currentWeekLabel
+        ? {
+            symbol: ["none", "none"],
+            silent: true,
+            lineStyle: {
+              color: palette.currentWeekLine,
+              width: 1.3,
+              type: "dashed",
+            },
+            label: { show: false },
+            data: [{ xAxis: currentWeekLabel }],
+          }
+        : undefined,
+      z: 3,
     },
     {
       name: text.alertThreshold,
       type: "line",
       data: hasData ? xLabels.map(() => threshold) : [threshold],
       symbol: "none",
+      itemStyle: {
+        color: "#dc2626",
+      },
       lineStyle: {
         color: "#dc2626",
         type: "dashed",
         width: 2,
+      },
+      emphasis: {
+        lineStyle: {
+          color: "#dc2626",
+          width: 2.2,
+        },
       },
       markLine: markerLines.length
         ? {
@@ -156,36 +190,9 @@ export function buildIliTrendOption({
             data: markerLines,
           }
         : undefined,
-      z: 4,
+      z: 5,
     },
   ];
-
-  if (crossing) {
-    series.push({
-      name: text.crossing,
-      type: "scatter",
-      data: [{ value: [crossing.label, crossing.cases] }],
-      symbolSize: 10,
-      itemStyle: {
-        color: "#dc2626",
-        borderColor: "#7f1d1d",
-        borderWidth: 1,
-      },
-      label: compact
-        ? undefined
-        : {
-            show: true,
-            position: "top",
-            formatter: text.crossing,
-            color: "#7f1d1d",
-            fontWeight: 700,
-            backgroundColor: "rgba(255, 255, 255, 0.9)",
-            borderRadius: 5,
-            padding: [2, 6],
-          },
-      z: 6,
-    });
-  }
 
   let dataZoom: DataZoomComponentOption[] | undefined;
   if (compact && xLabels.length > 12) {
@@ -227,13 +234,29 @@ export function buildIliTrendOption({
     },
     tooltip: {
       trigger: "axis",
-      axisPointer: { type: "shadow" },
+      axisPointer: {
+        type: "line",
+        lineStyle: {
+          color: palette.currentWeekLine,
+          type: "dashed",
+          width: 1.1,
+        },
+      },
+      backgroundColor: palette.tooltipBg,
+      borderColor: palette.tooltipBorder,
+      borderWidth: 1,
+      textStyle: { color: palette.tooltipText, fontWeight: 600 },
+      extraCssText: "box-shadow: 0 14px 30px rgba(2, 6, 23, 0.28);",
       formatter: (params: unknown) => {
         const rows = Array.isArray(params) ? params : [];
         if (!rows.length) return "";
         const first = rows[0] as { axisValueLabel?: string };
         const header = first.axisValueLabel ?? "";
         const lines = rows
+          .filter((row) => {
+            const item = row as { seriesName?: string };
+            return item.seriesName !== text.crossing;
+          })
           .map((row) => {
             const item = row as { marker?: string; seriesName?: string; data?: number | [string, number] | null };
             const valueRaw = Array.isArray(item.data) ? item.data[1] : item.data;
@@ -241,7 +264,7 @@ export function buildIliTrendOption({
             return `${item.marker ?? ""} ${item.seriesName ?? ""}: ${value}`;
           })
           .join("<br/>");
-        return `${header}<br/>${lines}`;
+        return lines ? `${header}<br/>${lines}` : header;
       },
     },
     legend: {
@@ -264,12 +287,13 @@ export function buildIliTrendOption({
         lineHeight: 16,
         fontWeight: 600,
       },
-      icon: "roundRect",
+      icon: "circle",
     },
     xAxis: {
       type: "category",
       data: hasData ? xLabels : [text.noData],
-      axisTick: { alignWithLabel: true },
+      boundaryGap: false,
+      axisTick: { show: false },
       axisLine: { lineStyle: { color: palette.axisLine } },
       axisLabel: {
         color: palette.axisLabel,
@@ -285,7 +309,7 @@ export function buildIliTrendOption({
         formatter: (value: number) => numberFormatter.format(value),
       },
       splitLine: {
-        lineStyle: { color: palette.grid },
+        lineStyle: { color: palette.grid, type: [4, 5] },
       },
     },
     dataZoom,

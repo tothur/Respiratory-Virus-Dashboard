@@ -7,6 +7,7 @@ interface BuildHistoricalTrendOptionArgs {
   currentSeasonLabel: string;
   compact: boolean;
   dark?: boolean;
+  language?: "en" | "hu";
   labels?: {
     delta: string;
     noData: string;
@@ -14,6 +15,13 @@ interface BuildHistoricalTrendOptionArgs {
 }
 
 const numberFormatter = new Intl.NumberFormat("en-US");
+
+function localizeWeekToken(token: string, language: "en" | "hu"): string {
+  const match = /^W(\d{1,2})$/i.exec(String(token ?? "").trim());
+  if (!match) return token;
+  const code = String(match[1]).padStart(2, "0");
+  return language === "hu" ? `H${code}` : `W${code}`;
+}
 
 export function formatSignedPercent(value: number | null): string {
   if (value == null || !Number.isFinite(value)) return "–";
@@ -28,6 +36,7 @@ export function buildHistoricalTrendOption({
   currentSeasonLabel,
   compact,
   dark = false,
+  language = "en",
   labels: labelsOverride,
 }: BuildHistoricalTrendOptionArgs): EChartsOption {
   const palette = dark
@@ -35,19 +44,27 @@ export function buildHistoricalTrendOption({
         axisLine: "rgba(148, 163, 184, 0.45)",
         axisLabel: "#cbd5e1",
         legend: "#e2e8f0",
-        grid: "rgba(148, 163, 184, 0.22)",
+        grid: "rgba(148, 163, 184, 0.16)",
         baseline: "rgba(203, 213, 225, 0.58)",
         legendBg: "rgba(15, 23, 42, 0.82)",
         legendBorder: "rgba(148, 163, 184, 0.32)",
+        currentWeekLine: "rgba(125, 211, 252, 0.55)",
+        tooltipBg: "rgba(15, 23, 42, 0.96)",
+        tooltipBorder: "rgba(148, 163, 184, 0.48)",
+        tooltipText: "#e2e8f0",
       }
     : {
         axisLine: "rgba(15, 23, 42, 0.20)",
         axisLabel: "#334155",
         legend: "#0f172a",
-        grid: "rgba(15, 23, 42, 0.14)",
+        grid: "rgba(15, 23, 42, 0.1)",
         baseline: "rgba(15, 23, 42, 0.52)",
         legendBg: "rgba(248, 250, 252, 0.92)",
         legendBorder: "rgba(148, 163, 184, 0.38)",
+        currentWeekLine: "rgba(37, 99, 235, 0.45)",
+        tooltipBg: "rgba(15, 23, 42, 0.94)",
+        tooltipBorder: "rgba(30, 41, 59, 0.24)",
+        tooltipText: "#f8fafc",
       };
   const text = labelsOverride ?? { delta: "Delta %", noData: "No data" };
   const xLabels = metric.points.map((point) => point.label);
@@ -55,6 +72,7 @@ export function buildHistoricalTrendOption({
   const currentValues = metric.points.map((point) => point.current);
   const deltaValues = metric.points.map((point) => point.deltaPercent);
   const hasData = xLabels.length > 0;
+  const currentWeekLabel = hasData ? xLabels[xLabels.length - 1] : null;
 
   let dataZoom: DataZoomComponentOption[] | undefined;
   if (compact && xLabels.length > 12) {
@@ -80,11 +98,16 @@ export function buildHistoricalTrendOption({
     },
     tooltip: {
       trigger: "axis",
+      backgroundColor: palette.tooltipBg,
+      borderColor: palette.tooltipBorder,
+      borderWidth: 1,
+      textStyle: { color: palette.tooltipText, fontWeight: 600 },
+      extraCssText: "box-shadow: 0 14px 30px rgba(2, 6, 23, 0.28);",
       formatter: (params: unknown) => {
         const rows = Array.isArray(params) ? params : [];
         if (!rows.length) return "";
         const first = rows[0] as { axisValueLabel?: string };
-        const header = first.axisValueLabel ?? "";
+        const header = localizeWeekToken(first.axisValueLabel ?? "", language);
         const lines = rows
           .map((row) => {
             const item = row as {
@@ -133,6 +156,7 @@ export function buildHistoricalTrendOption({
         color: palette.axisLabel,
         interval: compact ? "auto" : 0,
         hideOverlap: true,
+        formatter: (value: string) => localizeWeekToken(String(value), language),
       },
     },
     yAxis: [
@@ -144,7 +168,7 @@ export function buildHistoricalTrendOption({
           formatter: (value: number) => numberFormatter.format(value),
         },
         splitLine: {
-          lineStyle: { color: palette.grid },
+          lineStyle: { color: palette.grid, type: [4, 5] },
         },
       },
       {
@@ -175,6 +199,15 @@ export function buildHistoricalTrendOption({
         itemStyle: {
           color: palette.baseline,
         },
+        markLine: currentWeekLabel
+          ? {
+              symbol: ["none", "none"],
+              silent: true,
+              lineStyle: { color: palette.currentWeekLine, width: 1.3, type: "dashed" },
+              label: { show: false },
+              data: [{ xAxis: currentWeekLabel }],
+            }
+          : undefined,
       },
       {
         name: currentSeasonLabel,

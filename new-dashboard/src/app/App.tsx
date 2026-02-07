@@ -16,10 +16,10 @@ const STORAGE_THEME_KEY = "rvd-theme";
 type SortColumn = "week" | "cases";
 type SortDirection = "asc" | "desc";
 type TrendDirection = "surging" | "declining" | "flat";
-type VirusTone = "flu" | "rsv" | "cov" | "hmpv" | "other";
 type Language = "en" | "hu";
 type ThemeMode = "system" | "dark" | "light";
 type ResolvedTheme = "dark" | "light";
+type PathogenFamily = "influenza" | "sarscov2" | "rsv" | "hmpv" | "other";
 
 interface MetricPoint {
   week: number;
@@ -84,17 +84,17 @@ const STRINGS = {
     sourceLoading: "loading",
     sectionKicker: "Section",
     sectionHuTitle: "Hungarian situation",
-    sectionHuNote: "NNGYK and sentinel indicators for the selected season.",
+    sectionHuNote: "NNGYK surveillance and sentinel indicators for the selected season.",
     sectionEuTitle: "European (EU/EEA) context",
-    sectionEuNote: "ECDC ERVISS sentinel virology context.",
+    sectionEuNote: "ECDC ERVISS sentinel virology indicators.",
     alertsAria: "Key alerts",
     signalTitle: "Seasonal influenza threshold",
     signalEpidemicYes: "Influenza epidemic ongoing",
     signalEpidemicNo: "No influenza epidemic",
     signalAbove: "Above threshold",
     signalBelow: "Below threshold",
-    fluTextAbove: "Week {week}: ILI activity ({cases} cases) is above the alert threshold ({threshold}).",
-    fluTextBelow: "Week {week}: ILI activity ({cases} cases) remains below the alert threshold ({threshold}).",
+    fluTextAbove: "{week}: ILI activity ({cases} estimated cases) is above the alert threshold ({threshold}).",
+    fluTextBelow: "{week}: ILI activity ({cases} estimated cases) remains below the alert threshold ({threshold}).",
     fluChipAbove: "Epidemic signal",
     fluChipBelow: "Below threshold",
     alertThreshold: "Alert threshold",
@@ -112,13 +112,13 @@ const STRINGS = {
     coverageMissingNote: "Gaps within each season timeline",
     coverageAria: "Data coverage indicators",
     trendTitle: "Weekly trend signals",
-    trendNote: "Fast view of which pathogens are currently surging or easing.",
+    trendNote: "Weekly change in ILI cases and sentinel positivity.",
     trendAria: "Weekly trend signals",
-    trendNoRecentChange: "No recent change",
+    trendNoRecentChange: "No notable change",
     trendSurging: "Surging",
     trendDeclining: "Declining",
     trendFlat: "Flat",
-    trendEmpty: "No weekly trend data yet.",
+    trendEmpty: "No recent ILI or positivity trend data.",
     glanceTitle: "Season at a glance",
     glanceNote: "Growth and burden signals alongside peak and recent trend.",
     glanceAria: "Season at a glance",
@@ -127,7 +127,7 @@ const STRINGS = {
     glanceIcu: "SARI ICU",
     glancePeak: "Peak",
     glanceLatest: "Latest",
-    glanceSlope: "3-week slope",
+    glanceSlope: "3-week trend",
     glanceWow: "WoW change",
     glanceWeeksAbove: "Weeks above threshold",
     glanceStdTitle: "Season-to-date burden",
@@ -140,21 +140,24 @@ const STRINGS = {
     stdMedian: "Median",
     stdLastSeason: "Last season",
     statsTotalIli: "Total ILI cases",
-    statsPeakIli: "Peak ILI week / cases",
+    statsPeakIli: "ILI peak week / cases",
+    statsIliVsPrev: "Latest ILI vs previous season",
+    statsIliVsPrevBaseline: "{season}: {value}",
+    statsIliVsPrevNoBaseline: "No previous-season value for this week.",
     statsFirstCrossing: "First threshold crossing",
     statsWeeksAbove: "Weeks above threshold",
-    statsLatestSari: "Latest SARI admissions / ICU",
+    statsLatestSari: "Latest SARI admissions / ICU cases",
     chartIli: "Flu-like illness",
     chartIliSubtitle: "Season {season} (threshold {threshold})",
     chartSari: "SARI hospital admissions",
     chartSariSubtitle: "Season {season}",
     leaderHuTitle: "Leading virus by positivity in Hungary",
     leaderEuTitle: "Leading virus by positivity in the EU/EEA",
-    leaderHuText: "Week {week}: {virus} shows the highest sentinel test positivity ({pos}%).",
-    leaderEuText: "Week {week} ({year}): {virus} leads EU/EEA sentinel positivity ({pos}%).",
+    leaderHuText: "{week}: {virus} shows the highest sentinel positivity ({pos}%).",
+    leaderEuText: "{week} ({year}): {virus} shows the highest EU/EEA sentinel positivity ({pos}%).",
     leadersAria: "Latest virology leaders",
     virologyTitle: "Sentinel virology",
-    virologyWeek: "Latest week: {week}",
+    virologyWeek: "Latest: {week}",
     virologyFilter: "Detections filter",
     virologyAllViruses: "All viruses",
     virologyTopDetections: "Top detections",
@@ -162,7 +165,7 @@ const STRINGS = {
     virologyNoDetections: "No detections available.",
     virologyNoPositivity: "No positivity data available.",
     virologyDetectionsTrend: "Sentinel detections trend",
-    virologyDetectionsSubtitle: "Week {week} focus",
+    virologyDetectionsSubtitle: "{week} focus",
     virologyPositivityTrend: "Sentinel positivity trend",
     euVirologyTitle: "EU/EEA ERVISS virology",
     euTopDetections: "Top EU detections",
@@ -171,9 +174,9 @@ const STRINGS = {
     euNoPositivity: "No EU positivity data available.",
     euDetectionsTrend: "EU detections trend",
     euPositivityTrend: "EU positivity trend",
-    euTrendSubtitle: "Target season year {year}",
+    euTrendSubtitle: "Target NH respiratory season: {season}",
     tableTitle: "Respiratory viruses week-by-week in Hungary",
-    tableNote: "Click Week or Cases to sort; shows matching SARI and positivity context.",
+    tableNote: "Click Week or Cases to sort; includes matching SARI and positivity context.",
     tableBadge: "Accessible table view",
     tableAria: "Weekly table",
     tableScrollAria: "Scrollable table",
@@ -213,17 +216,17 @@ const STRINGS = {
     sourceLoading: "betöltés",
     sectionKicker: "Szekció",
     sectionHuTitle: "Magyarországi helyzet",
-    sectionHuNote: "NNGYK és sentinel mutatók a kiválasztott szezonra.",
+    sectionHuNote: "NNGYK rutinfelügyeleti és sentinel mutatók a kiválasztott szezonban.",
     sectionEuTitle: "Európai (EU/EGT) kitekintés",
-    sectionEuNote: "ECDC ERVISS sentinel virológiai kontextus.",
+    sectionEuNote: "ECDC ERVISS sentinel virológiai mutatók.",
     alertsAria: "Fő riasztások",
     signalTitle: "Szezonális influenzaküszöb",
     signalEpidemicYes: "Influenza járvány van",
     signalEpidemicNo: "Nincs influenza járvány",
     signalAbove: "Küszöb felett",
     signalBelow: "Küszöb alatt",
-    fluTextAbove: "{week}. hét: az ILI aktivitás ({cases} eset) meghaladja a riasztási küszöböt ({threshold}).",
-    fluTextBelow: "{week}. hét: az ILI aktivitás ({cases} eset) a riasztási küszöb ({threshold}) alatt marad.",
+    fluTextAbove: "{week}: az ILI-aktivitás ({cases} becsült eset) meghaladja a riasztási küszöböt ({threshold}).",
+    fluTextBelow: "{week}: az ILI-aktivitás ({cases} becsült eset) a riasztási küszöb ({threshold}) alatt marad.",
     fluChipAbove: "Járványjelzés",
     fluChipBelow: "Küszöb alatt",
     alertThreshold: "Riasztási küszöb",
@@ -241,19 +244,19 @@ const STRINGS = {
     coverageMissingNote: "Rések az egyes szezonidősorokban",
     coverageAria: "Adatlefedettségi jelzők",
     trendTitle: "Heti trendszignálok",
-    trendNote: "Gyors áttekintés arról, mely kórokozók erősödnek vagy enyhülnek.",
+    trendNote: "Heti változás az ILI-esetszámban és a sentinel pozitivitásban.",
     trendAria: "Heti trendszignálok",
     trendNoRecentChange: "Nincs friss változás",
     trendSurging: "Erősödik",
-    trendDeclining: "Enyhül",
+    trendDeclining: "Gyengül",
     trendFlat: "Változatlan",
-    trendEmpty: "Még nincs heti trendadat.",
+    trendEmpty: "Nincs friss ILI- vagy pozitivitási trendadat.",
     glanceTitle: "Szezon pillanatkép",
-    glanceNote: "Növekedési és terhelési jelzések a csúcs és a friss trend mellett.",
+    glanceNote: "Terhelési és növekedési jelzések a szezon alakulásáról.",
     glanceAria: "Szezon pillanatkép",
     glanceIli: "Influenzaszerű megbetegedés (ILI)",
     glanceSari: "SARI felvételek",
-    glanceIcu: "SARI intenzív",
+    glanceIcu: "SARI ICU",
     glancePeak: "Csúcs",
     glanceLatest: "Legfrissebb",
     glanceSlope: "3 hetes trend",
@@ -270,20 +273,23 @@ const STRINGS = {
     stdLastSeason: "Előző szezon",
     statsTotalIli: "Összes ILI eset",
     statsPeakIli: "ILI csúcs hét / eset",
+    statsIliVsPrev: "Legfrissebb ILI vs előző szezon",
+    statsIliVsPrevBaseline: "{season}: {value}",
+    statsIliVsPrevNoBaseline: "Ehhez a héthez nincs előző szezonos érték.",
     statsFirstCrossing: "Első küszöbátlépés",
     statsWeeksAbove: "Küszöb feletti hetek",
-    statsLatestSari: "Legfrissebb SARI felvétel / ICU",
-    chartIli: "Influenzaszerű megbetegedések",
+    statsLatestSari: "Legfrissebb SARI felvételek / ICU",
+    chartIli: "Influenzaszerű megbetegedés (ILI)",
     chartIliSubtitle: "Szezon: {season} (küszöb {threshold})",
     chartSari: "SARI kórházi felvételek",
     chartSariSubtitle: "Szezon: {season}",
-    leaderHuTitle: "Vezető kórokozó pozitivitás szerint (Magyarország)",
-    leaderEuTitle: "Vezető kórokozó pozitivitás szerint (EU/EGT)",
-    leaderHuText: "{week}. hét: {virus} a legmagasabb sentinel tesztpozitivitású ({pos}%).",
-    leaderEuText: "{week}. hét ({year}): {virus} vezeti az EU/EGT sentinel pozitivitást ({pos}%).",
+    leaderHuTitle: "Legmagasabb sentinel pozitivitás (Magyarország)",
+    leaderEuTitle: "Legmagasabb sentinel pozitivitás (EU/EGT)",
+    leaderHuText: "{week}: {virus} mutatja a legmagasabb sentinel pozitivitást ({pos}%).",
+    leaderEuText: "{week} ({year}): {virus} mutatja a legmagasabb EU/EGT sentinel pozitivitást ({pos}%).",
     leadersAria: "Legfrissebb virológiai vezetők",
     virologyTitle: "Sentinel virológia",
-    virologyWeek: "Legfrissebb hét: {week}",
+    virologyWeek: "Legfrissebb: {week}",
     virologyFilter: "Detekció szűrő",
     virologyAllViruses: "Összes vírus",
     virologyTopDetections: "Legmagasabb detekciók",
@@ -291,7 +297,7 @@ const STRINGS = {
     virologyNoDetections: "Nincs detekciós adat.",
     virologyNoPositivity: "Nincs pozitivitási adat.",
     virologyDetectionsTrend: "Sentinel detekciós trend",
-    virologyDetectionsSubtitle: "{week}. hét fókusz",
+    virologyDetectionsSubtitle: "{week} fókusz",
     virologyPositivityTrend: "Sentinel pozitivitási trend",
     euVirologyTitle: "EU/EGT ERVISS virológia",
     euTopDetections: "Legmagasabb EU detekciók",
@@ -300,7 +306,7 @@ const STRINGS = {
     euNoPositivity: "Nincs EU pozitivitási adat.",
     euDetectionsTrend: "EU detekciós trend",
     euPositivityTrend: "EU pozitivitási trend",
-    euTrendSubtitle: "Cél szezonév: {year}",
+    euTrendSubtitle: "Cél NH légúti szezon: {season}",
     tableTitle: "Légúti vírusok heti bontásban (Magyarország)",
     tableNote: "Kattints a Hét vagy Esetszám oszlopra a rendezéshez; SARI és pozitivitási kontextussal.",
     tableBadge: "Akadálymentes táblázat",
@@ -317,7 +323,7 @@ const STRINGS = {
     historicalTitle: "Történeti szezon összevetés",
     historicalEmptyHeader: "Válassz olyan szezont, amelyhez elérhető előző év.",
     historicalIli: "ILI összevetés",
-    historicalSari: "SARI felvétel összevetés",
+    historicalSari: "SARI felvételek összevetése",
     historicalIcu: "SARI ICU összevetés",
     historicalDelta: "Legfrissebb eltérés: {value}",
     historicalUnavailable: "A történeti összevetés nem érhető el, mert hiányzik az előző szezon a betöltött adatforrásból.",
@@ -349,9 +355,47 @@ function formatText(template: string, values: Record<string, string | number>): 
   return template.replace(/\{(\w+)\}/g, (_, key) => String(values[key] ?? ""));
 }
 
-function formatWeek(week: number | null): string {
+function formatWeek(week: number | null, language: Language = "en"): string {
   if (typeof week !== "number" || !Number.isFinite(week)) return "-";
-  return `W${String(week).padStart(2, "0")}`;
+  const code = String(week).padStart(2, "0");
+  return language === "hu" ? `Hét ${code}` : `W${code}`;
+}
+
+function formatWeekToken(label: string, language: Language): string {
+  const match = /^W(\d{1,2})$/i.exec(String(label ?? "").trim());
+  if (!match) return label;
+  const code = String(Number(match[1])).padStart(2, "0");
+  return language === "hu" ? `H${code}` : `W${code}`;
+}
+
+function resolvePathogenFamily(virus: string | null | undefined): PathogenFamily {
+  const normalized = String(virus ?? "").trim().toLowerCase();
+  if (!normalized) return "other";
+  if (
+    normalized === INFLUENZA_ALL_KEY.toLowerCase() ||
+    normalized.includes("influenza") ||
+    normalized.includes("flu-like") ||
+    normalized.startsWith("ili")
+  ) {
+    return "influenza";
+  }
+  if (normalized.includes("sars") || normalized.includes("cov")) return "sarscov2";
+  if (/\brsv\b/.test(normalized)) return "rsv";
+  if (normalized.includes("hmpv") || normalized.includes("metapneumo")) return "hmpv";
+  return "other";
+}
+
+function pathogenClassName(virus: string | null | undefined): `pathogen-${PathogenFamily}` {
+  return `pathogen-${resolvePathogenFamily(virus)}`;
+}
+
+function formatNhSeasonLabel(seasonStartYear: number, language: Language): string {
+  const nextYear = seasonStartYear + 1;
+  return language === "hu" ? `${seasonStartYear}/${nextYear}` : `${seasonStartYear}/${nextYear}`;
+}
+
+function calendarYearFromNhSeasonWeek(seasonStartYear: number, week: number): number {
+  return week >= 40 ? seasonStartYear : seasonStartYear + 1;
 }
 
 function seasonWeekIndex(week: number): number {
@@ -511,59 +555,40 @@ function computeSeverityRatios(iliSeries: MetricPoint[], sariSeries: { week: num
   };
 }
 
-function formatGlanceLine(point: MetricPoint | null): string {
+function formatGlanceLine(point: MetricPoint | null, language: Language): string {
   if (!point) return "–";
-  return `${formatWeek(point.week)}: ${Number(point.value).toLocaleString()}`;
+  return `${formatWeek(point.week, language)}: ${Number(point.value).toLocaleString()}`;
 }
 
-function formatGlanceLatest(glance: GlanceSummary | null): string {
+function formatGlanceLatest(glance: GlanceSummary | null, language: Language): string {
   if (!glance) return "–";
-  const latest = `${formatWeek(glance.latest.week)}: ${Number(glance.latest.value).toLocaleString()}`;
+  const latest = `${formatWeek(glance.latest.week, language)}: ${Number(glance.latest.value).toLocaleString()}`;
   if (!Number.isFinite(glance.pctOfPeak)) return latest;
   return `${latest} (${Math.round(Number(glance.pctOfPeak))}%)`;
 }
 
-function formatSlopePerWeek(slope: number | null): string {
+function formatSlopePerWeek(slope: number | null, language: Language): string {
   if (!Number.isFinite(slope)) return "–";
   const rounded = Math.round(Number(slope));
   const sign = rounded > 0 ? "+" : "";
-  return `${sign}${rounded.toLocaleString()}/week`;
+  return language === "hu" ? `${sign}${rounded.toLocaleString()}/hét` : `${sign}${rounded.toLocaleString()}/week`;
 }
 
-function surgeDirectionLabel(
-  direction: TrendDirection,
-  labels: { surging: string; declining: string; flat: string }
-): string {
-  if (direction === "surging") return labels.surging;
-  if (direction === "declining") return labels.declining;
-  return labels.flat;
+function formatTrendBubble(changePercent: number): string {
+  if (!Number.isFinite(changePercent)) return "0%";
+  const rounded = Math.round(changePercent);
+  const sign = rounded > 0 ? "+" : "";
+  return `${sign}${rounded}%`;
 }
 
-function formatSurgeLabel(
-  direction: TrendDirection,
-  pct: number,
-  previousWeek: number,
-  labels: { surging: string; declining: string; flat: string; compare: string }
-): string {
-  const sign = pct >= 0 ? "+" : "";
-  return `${surgeDirectionLabel(direction, labels)} (${sign}${pct}% ${formatText(labels.compare, {
-    week: formatWeek(previousWeek),
-  })})`;
+function virusClassName(virus: string | null | undefined): `pathogen-${PathogenFamily}` {
+  return pathogenClassName(virus);
 }
 
-function resolveVirusTone(virus: string | null | undefined): VirusTone {
-  const normalized = String(virus ?? "").toLowerCase();
-  if (!normalized) return "other";
-  if (normalized.includes("sars") || normalized.includes("cov")) return "cov";
-  if (normalized.includes("rsv")) return "rsv";
-  if (normalized.includes("hmpv")) return "hmpv";
-  if (normalized.includes("influenza")) return "flu";
-  return "other";
-}
-
-function VirusIcon({ tone }: { tone: VirusTone }) {
+function VirusIcon({ virus }: { virus: string | null | undefined }) {
+  const pathogenClass = virusClassName(virus);
   return (
-    <span className={`virus-icon tone-${tone}`} aria-hidden="true">
+    <span className={`virus-icon ${pathogenClass}`} aria-hidden="true">
       <svg viewBox="0 0 24 24" focusable="false">
         <circle cx="12" cy="12" r="4.5" />
         <line x1="12" y1="2.5" x2="12" y2="5.8" />
@@ -706,35 +731,74 @@ export function App() {
           noData: t.noDataShort,
           seasonStart: language === "hu" ? "Szezonkezdet" : "Season start",
           holidays: language === "hu" ? "Ünnepi időszak" : "Holiday period",
+          weekPrefix: language === "hu" ? "H" : "W",
         },
       }),
     [compact, isDark, language, snapshot.iliSeries, snapshot.iliThreshold, t.alertThreshold, t.crossingLabel, t.glanceIli, t.noDataShort]
   );
 
   const sariOption = useMemo<EChartsOption>(() => {
+    const hasData = snapshot.sariSeries.length > 0;
+    const currentWeekLabel = hasData ? snapshot.sariSeries[snapshot.sariSeries.length - 1].label : null;
+    const admissionsValues = snapshot.sariSeries.map((point) => point.admissions);
+    const icuValues = snapshot.sariSeries.map((point) => point.icu);
     const palette = isDark
       ? {
           axisLabel: "#cbd5e1",
           axisLine: "rgba(148, 163, 184, 0.45)",
-          grid: "rgba(148, 163, 184, 0.22)",
+          grid: "rgba(148, 163, 184, 0.16)",
           legend: "#e2e8f0",
           legendBg: "rgba(15, 23, 42, 0.82)",
           legendBorder: "rgba(148, 163, 184, 0.32)",
+          currentWeekLine: "rgba(125, 211, 252, 0.55)",
+          tooltipBg: "rgba(15, 23, 42, 0.96)",
+          tooltipBorder: "rgba(148, 163, 184, 0.48)",
+          tooltipText: "#e2e8f0",
         }
       : {
           axisLabel: "#334155",
           axisLine: "rgba(15, 23, 42, 0.20)",
-          grid: "rgba(15, 23, 42, 0.15)",
+          grid: "rgba(15, 23, 42, 0.1)",
           legend: "#0f172a",
           legendBg: "rgba(248, 250, 252, 0.92)",
           legendBorder: "rgba(148, 163, 184, 0.38)",
+          currentWeekLine: "rgba(37, 99, 235, 0.45)",
+          tooltipBg: "rgba(15, 23, 42, 0.94)",
+          tooltipBorder: "rgba(30, 41, 59, 0.24)",
+          tooltipText: "#f8fafc",
         };
     return {
       animation: false,
-      grid: { top: compact ? 40 : 78, right: 18, bottom: 34, left: 42 },
+      grid: { top: compact ? 40 : 78, right: 18, bottom: 34, left: 54 },
       tooltip: {
         trigger: "axis",
-        axisPointer: { type: "shadow" },
+        axisPointer: {
+          type: "line",
+          lineStyle: {
+            color: palette.currentWeekLine,
+            type: "dashed",
+            width: 1.1,
+          },
+        },
+        backgroundColor: palette.tooltipBg,
+        borderColor: palette.tooltipBorder,
+        borderWidth: 1,
+        textStyle: { color: palette.tooltipText, fontWeight: 600 },
+        extraCssText: "box-shadow: 0 14px 30px rgba(2, 6, 23, 0.28);",
+        formatter: (params: unknown) => {
+          const rows = Array.isArray(params) ? params : [];
+          if (!rows.length) return "";
+          const first = rows[0] as { axisValueLabel?: string };
+          const header = formatWeekToken(first.axisValueLabel ?? "", language);
+          const lines = rows
+            .map((entry) => {
+              const row = entry as { marker?: string; seriesName?: string; data?: number | null };
+              const value = typeof row.data === "number" && Number.isFinite(row.data) ? row.data.toLocaleString() : "–";
+              return `${row.marker ?? ""} ${row.seriesName ?? ""}: ${value}`;
+            })
+            .join("<br/>");
+          return `${header}<br/>${lines}`;
+        },
       },
       legend: {
         show: !compact,
@@ -750,72 +814,102 @@ export function App() {
         borderWidth: 1,
         borderRadius: 10,
         textStyle: { color: palette.legend, fontWeight: 600, fontSize: 12, lineHeight: 16 },
+        icon: "circle",
       },
       xAxis: {
         type: "category",
         data: snapshot.sariSeries.map((point) => point.label),
+        boundaryGap: false,
         axisLine: { lineStyle: { color: palette.axisLine } },
-        axisLabel: { color: palette.axisLabel, hideOverlap: true },
+        axisTick: { show: false },
+        axisLabel: {
+          color: palette.axisLabel,
+          hideOverlap: true,
+          formatter: (value: string) => formatWeekToken(String(value), language),
+        },
       },
       yAxis: {
         type: "value",
-        axisLabel: { color: palette.axisLabel },
-        splitLine: { lineStyle: { color: palette.grid } },
+        min: 0,
+        axisLabel: {
+          color: palette.axisLabel,
+          formatter: (value: number) => value.toLocaleString(),
+        },
+        splitLine: { lineStyle: { color: palette.grid, type: [4, 5] } },
       },
       series: [
         {
           name: t.tableSariAdmissions,
-          type: "bar",
-          data: snapshot.sariSeries.map((point) => point.admissions),
-          barMaxWidth: 22,
+          type: "line",
+          data: hasData ? admissionsValues : [0],
+          smooth: 0.22,
+          showSymbol: false,
+          symbol: "circle",
+          symbolSize: 6,
+          lineStyle: {
+            width: 2.8,
+            color: isDark ? "#7dd3fc" : "#2563eb",
+            cap: "round",
+          },
           itemStyle: {
+            color: isDark ? "#7dd3fc" : "#2563eb",
+          },
+          areaStyle: {
             color: new graphic.LinearGradient(0, 0, 0, 1, [
-              { offset: 0, color: isDark ? "rgba(125, 211, 252, 0.95)" : "rgba(37, 99, 235, 0.95)" },
-              { offset: 1, color: isDark ? "rgba(56, 189, 248, 0.42)" : "rgba(147, 197, 253, 0.55)" },
+              { offset: 0, color: isDark ? "rgba(125, 211, 252, 0.34)" : "rgba(59, 130, 246, 0.22)" },
+              { offset: 1, color: isDark ? "rgba(56, 189, 248, 0.05)" : "rgba(147, 197, 253, 0.03)" },
             ]),
-            borderColor: isDark ? "rgba(191, 219, 254, 0.75)" : "rgba(29, 78, 216, 0.72)",
-            borderWidth: 1,
-            borderRadius: [10, 10, 3, 3],
-            shadowBlur: isDark ? 12 : 9,
-            shadowColor: isDark ? "rgba(14, 116, 144, 0.38)" : "rgba(30, 64, 175, 0.22)",
           },
           emphasis: {
-            itemStyle: {
-              shadowBlur: isDark ? 16 : 12,
-              shadowColor: isDark ? "rgba(6, 182, 212, 0.44)" : "rgba(37, 99, 235, 0.28)",
+            focus: "series",
+            lineStyle: {
+              width: 3.4,
             },
           },
-          barGap: "20%",
-          barCategoryGap: "34%",
+          markLine: currentWeekLabel
+            ? {
+                symbol: ["none", "none"],
+                silent: true,
+                lineStyle: { color: palette.currentWeekLine, width: 1.3, type: "dashed" },
+                label: { show: false },
+                data: [{ xAxis: currentWeekLabel }],
+              }
+            : undefined,
+          z: 4,
         },
         {
           name: t.tableSariIcu,
-          type: "bar",
-          data: snapshot.sariSeries.map((point) => point.icu),
-          barMaxWidth: 22,
+          type: "line",
+          data: hasData ? icuValues : [0],
+          smooth: 0.2,
+          showSymbol: false,
+          symbol: "circle",
+          symbolSize: 6,
+          lineStyle: {
+            width: 2.4,
+            color: isDark ? "#fb923c" : "#dc2626",
+            cap: "round",
+          },
           itemStyle: {
+            color: isDark ? "#fb923c" : "#dc2626",
+          },
+          areaStyle: {
             color: new graphic.LinearGradient(0, 0, 0, 1, [
-              { offset: 0, color: isDark ? "rgba(251, 146, 60, 0.93)" : "rgba(220, 38, 38, 0.9)" },
-              { offset: 1, color: isDark ? "rgba(248, 113, 113, 0.38)" : "rgba(252, 165, 165, 0.52)" },
+              { offset: 0, color: isDark ? "rgba(251, 146, 60, 0.24)" : "rgba(248, 113, 113, 0.18)" },
+              { offset: 1, color: isDark ? "rgba(249, 115, 22, 0.04)" : "rgba(252, 165, 165, 0.03)" },
             ]),
-            borderColor: isDark ? "rgba(254, 205, 211, 0.72)" : "rgba(185, 28, 28, 0.72)",
-            borderWidth: 1,
-            borderRadius: [10, 10, 3, 3],
-            shadowBlur: isDark ? 10 : 8,
-            shadowColor: isDark ? "rgba(249, 115, 22, 0.32)" : "rgba(185, 28, 28, 0.2)",
           },
           emphasis: {
-            itemStyle: {
-              shadowBlur: isDark ? 14 : 11,
-              shadowColor: isDark ? "rgba(251, 113, 133, 0.42)" : "rgba(220, 38, 38, 0.26)",
+            focus: "series",
+            lineStyle: {
+              width: 3,
             },
           },
-          barGap: "20%",
-          barCategoryGap: "34%",
+          z: 5,
         },
       ],
     };
-  }, [compact, isDark, snapshot.sariSeries, t.tableSariAdmissions, t.tableSariIcu]);
+  }, [compact, isDark, language, snapshot.sariSeries, t.tableSariAdmissions, t.tableSariIcu]);
 
   const virologyDetectionsOption = useMemo<EChartsOption>(
     () =>
@@ -846,7 +940,7 @@ export function App() {
         rows: snapshot.euVirology.detectionRows,
         selectedVirus: VIRO_ALL_KEY,
         compact,
-        weekOrder: "numeric",
+        weekOrder: "season",
         language,
         dark: isDark,
       }),
@@ -858,7 +952,7 @@ export function App() {
       buildVirologyPositivityOption({
         rows: snapshot.euVirology.positivityRows,
         compact,
-        weekOrder: "numeric",
+        weekOrder: "season",
         language,
         dark: isDark,
       }),
@@ -915,6 +1009,7 @@ export function App() {
       currentSeasonLabel: snapshot.historical.currentSeasonLabel,
       compact,
       dark: isDark,
+      language,
       labels: {
         delta: language === "hu" ? "Eltérés %" : "Delta %",
         noData: t.noDataShort,
@@ -930,6 +1025,7 @@ export function App() {
       currentSeasonLabel: snapshot.historical.currentSeasonLabel,
       compact,
       dark: isDark,
+      language,
       labels: {
         delta: language === "hu" ? "Eltérés %" : "Delta %",
         noData: t.noDataShort,
@@ -945,6 +1041,7 @@ export function App() {
       currentSeasonLabel: snapshot.historical.currentSeasonLabel,
       compact,
       dark: isDark,
+      language,
       labels: {
         delta: language === "hu" ? "Eltérés %" : "Delta %",
         noData: t.noDataShort,
@@ -970,20 +1067,23 @@ export function App() {
 
   const euLeader = useMemo(() => {
     if (snapshot.euVirology.targetYear == null || !snapshot.euVirology.positivityRows.length) return null;
-    const latestWeek = Math.max(...snapshot.euVirology.positivityRows.map((row) => row.week));
+    const latestWeek = snapshot.euVirology.positivityRows.reduce(
+      (best, row) => (seasonWeekCompare(row.week, best) > 0 ? row.week : best),
+      snapshot.euVirology.positivityRows[0].week
+    );
     const latestRows = snapshot.euVirology.positivityRows.filter((row) => row.week === latestWeek);
     if (!latestRows.length) return null;
     const leader = latestRows.reduce((best, row) => (row.positivity > best.positivity ? row : best), latestRows[0]);
     return {
-      year: snapshot.euVirology.targetYear,
+      year: calendarYearFromNhSeasonWeek(snapshot.euVirology.targetYear, latestWeek),
       week: latestWeek,
       virus: leader.virus,
       positivity: leader.positivity,
     };
   }, [snapshot.euVirology.positivityRows, snapshot.euVirology.targetYear]);
 
-  const iliLatestWeekLabel = snapshot.iliSeries.length ? formatWeek(snapshot.iliSeries[snapshot.iliSeries.length - 1].week) : "–";
-  const sariLatestWeekLabel = snapshot.sariSeries.length ? formatWeek(snapshot.sariSeries[snapshot.sariSeries.length - 1].week) : "–";
+  const iliLatestWeekLabel = snapshot.iliSeries.length ? formatWeek(snapshot.iliSeries[snapshot.iliSeries.length - 1].week, language) : "–";
+  const sariLatestWeekLabel = snapshot.sariSeries.length ? formatWeek(snapshot.sariSeries[snapshot.sariSeries.length - 1].week, language) : "–";
   const iliMissingWeeks = useMemo(() => missingWeekList(snapshot.iliSeries.map((row) => row.week)), [snapshot.iliSeries]);
   const sariMissingWeeks = useMemo(() => missingWeekList(snapshot.sariSeries.map((row) => row.week)), [snapshot.sariSeries]);
 
@@ -1069,61 +1169,93 @@ export function App() {
     snapshot.selectedYear,
   ]);
 
-  const surgeSignals = useMemo<SurgeSignal[]>(() => {
-    const weeklyRows = dataSource.respiratoryData.weekly.filter((row) => {
-      const rowYear = Number(row.year);
-      if (!Number.isFinite(rowYear) || rowYear !== snapshot.selectedYear) return false;
-      return (row.dataset ?? DEFAULT_DATASET) === DEFAULT_DATASET;
-    });
-    if (!weeklyRows.length) return [];
+  const latestIliVsPreviousSeason = useMemo(() => {
+    const latest = snapshot.iliSeries.length ? snapshot.iliSeries[snapshot.iliSeries.length - 1] : null;
+    if (!latest) return null;
 
-    const byVirus = new Map<string, Map<number, number>>();
-    for (const row of weeklyRows) {
-      const virus = row.virus ?? DEFAULT_ILI_VIRUS;
-      const week = Number(row.week);
-      if (!Number.isFinite(week)) continue;
-      const cases = Number(row.cases ?? 0);
-      if (!Number.isFinite(cases)) continue;
-      const weekMap = byVirus.get(virus) ?? new Map<number, number>();
-      weekMap.set(week, (weekMap.get(week) ?? 0) + cases);
-      byVirus.set(virus, weekMap);
+    const historicalPoint = snapshot.historical.ili.points.find((point) => point.week === latest.week) ?? null;
+    const previousCases =
+      historicalPoint && typeof historicalPoint.previous === "number" && Number.isFinite(historicalPoint.previous)
+        ? historicalPoint.previous
+        : null;
+    const deltaPercent =
+      previousCases != null && previousCases !== 0 ? ((latest.cases - previousCases) / previousCases) * 100 : null;
+    const direction: TrendDirection =
+      deltaPercent == null ? "flat" : deltaPercent > 0 ? "surging" : deltaPercent < 0 ? "declining" : "flat";
+
+    return {
+      week: latest.week,
+      currentCases: latest.cases,
+      previousCases,
+      deltaPercent,
+      direction,
+    };
+  }, [snapshot.historical.ili.points, snapshot.iliSeries]);
+
+  const surgeSignals = useMemo<SurgeSignal[]>(() => {
+    const signals: SurgeSignal[] = [];
+
+    const iliOrdered = snapshot.iliSeries
+      .map((row) => ({ week: row.week, value: row.cases }))
+      .filter((row) => Number.isFinite(row.week) && Number.isFinite(row.value))
+      .sort((a, b) => seasonWeekCompare(a.week, b.week));
+    const iliLatest = iliOrdered[iliOrdered.length - 1];
+    const iliPrevious = iliOrdered[iliOrdered.length - 2];
+    if (iliLatest && iliPrevious) {
+      const pctChange = iliPrevious.value > 0 ? ((iliLatest.value - iliPrevious.value) / iliPrevious.value) * 100 : 0;
+      const direction: TrendDirection = pctChange > 0 ? "surging" : pctChange < 0 ? "declining" : "flat";
+      signals.push({
+        virus: DEFAULT_ILI_VIRUS,
+        label: formatTrendBubble(pctChange),
+        change: pctChange,
+        week: iliLatest.week,
+        direction,
+      });
     }
 
-    return Array.from(byVirus.entries())
-      .map(([virus, values]) => {
-        const ordered = Array.from(values.entries())
-          .map(([week, value]) => ({ week, value }))
-          .sort((a, b) => seasonWeekCompare(a.week, b.week));
-        const latest = ordered[ordered.length - 1];
-        const previous = ordered[ordered.length - 2];
-        if (!latest || !previous) {
-          return {
-            virus,
-            label: t.trendNoRecentChange,
-            change: 0,
-            week: latest?.week ?? null,
-            direction: "flat" as TrendDirection,
-          };
-        }
-        const change = latest.value - previous.value;
-        const pct = previous.value ? Math.round((change / previous.value) * 100) : 0;
-        const direction: TrendDirection = change > 0 ? "surging" : change < 0 ? "declining" : "flat";
-        return {
-          virus,
-          label: formatSurgeLabel(direction, pct, previous.week, {
-            surging: t.trendSurging,
-            declining: t.trendDeclining,
-            flat: t.trendFlat,
-            compare: language === "hu" ? "{week} héthez képest" : "vs {week}",
-          }),
-          change,
-          week: latest.week,
-          direction,
-        };
-      })
-      .sort((a, b) => b.change - a.change)
-      .slice(0, 4);
-  }, [dataSource.respiratoryData.weekly, language, snapshot.selectedYear, t.trendDeclining, t.trendFlat, t.trendNoRecentChange, t.trendSurging]);
+    const positivityRows = snapshot.virology.positivityRows
+      .filter((row) => row.virus !== INFLUENZA_ALL_KEY)
+      .filter((row) => Number.isFinite(row.week) && Number.isFinite(row.positivity));
+    if (!positivityRows.length) return signals;
+
+    const latestPositivityWeek = positivityRows.reduce(
+      (best, row) => (seasonWeekCompare(row.week, best) > 0 ? row.week : best),
+      positivityRows[0].week
+    );
+    const latestWeekTopViruses = positivityRows
+      .filter((row) => row.week === latestPositivityWeek)
+      .slice()
+      .sort((a, b) => b.positivity - a.positivity)
+      .map((row) => row.virus);
+
+    const historyByVirus = new Map<string, Array<{ week: number; positivity: number }>>();
+    for (const row of positivityRows) {
+      const list = historyByVirus.get(row.virus) ?? [];
+      list.push({ week: row.week, positivity: row.positivity });
+      historyByVirus.set(row.virus, list);
+    }
+
+    for (const virus of latestWeekTopViruses) {
+      if (signals.length >= 4) break;
+      const history = historyByVirus.get(virus);
+      if (!history || history.length < 2) continue;
+      const ordered = history.slice().sort((a, b) => seasonWeekCompare(a.week, b.week));
+      const latest = ordered[ordered.length - 1];
+      const previous = ordered[ordered.length - 2];
+      if (!latest || !previous) continue;
+      const pctChange = previous.positivity > 0 ? ((latest.positivity - previous.positivity) / previous.positivity) * 100 : 0;
+      const direction: TrendDirection = pctChange > 0 ? "surging" : pctChange < 0 ? "declining" : "flat";
+      signals.push({
+        virus,
+        label: formatTrendBubble(pctChange),
+        change: pctChange,
+        week: latest.week,
+        direction,
+      });
+    }
+
+    return signals.slice(0, 4);
+  }, [snapshot.iliSeries, snapshot.virology.positivityRows]);
 
   const topPositivityByWeek = useMemo(() => {
     const byWeek = new Map<number, { virus: string; positivity: number }>();
@@ -1202,36 +1334,39 @@ export function App() {
   const signalClassName = isAboveThreshold ? "critical" : "ok";
   const signalHeadline = isAboveThreshold ? t.signalEpidemicYes : t.signalEpidemicNo;
   const fluAlertText = formatText(isAboveThreshold ? t.fluTextAbove : t.fluTextBelow, {
-    week: formatWeek(snapshot.stats.latestWeek),
+    week: formatWeek(snapshot.stats.latestWeek, language),
     cases: snapshot.stats.latestIliCases.toLocaleString(),
     threshold: snapshot.iliThreshold.toLocaleString(),
   });
   const sourceChipTone = dataSource.source === "nngyk_all" ? "live" : "sample";
   const sourceLabel = dataSource.source === "nngyk_all" ? t.sourceLive : t.sourceFallback;
-  const latestVirologyWeekLabel = snapshot.virology.latestWeek == null ? "–" : formatWeek(snapshot.virology.latestWeek);
+  const latestVirologyWeekLabel = snapshot.virology.latestWeek == null ? "–" : formatWeek(snapshot.virology.latestWeek, language);
+  const euSeasonLabel = snapshot.euVirology.targetYear == null ? "–" : formatNhSeasonLabel(snapshot.euVirology.targetYear, language);
   const latestEuWeekLabel =
     snapshot.euVirology.targetYear != null && snapshot.euVirology.latestWeek != null
-      ? `${snapshot.euVirology.targetYear}-${formatWeek(snapshot.euVirology.latestWeek)}`
+      ? language === "hu"
+        ? `${calendarYearFromNhSeasonWeek(snapshot.euVirology.targetYear, snapshot.euVirology.latestWeek)} · ${formatWeek(snapshot.euVirology.latestWeek, language)}`
+        : `${calendarYearFromNhSeasonWeek(snapshot.euVirology.targetYear, snapshot.euVirology.latestWeek)}-${formatWeek(snapshot.euVirology.latestWeek, language)}`
       : "–";
   const huLeaderText = huLeader
     ? formatText(t.leaderHuText, {
-        week: formatWeek(huLeader.week),
+        week: formatWeek(huLeader.week, language),
         virus: displayVirusLabel(huLeader.virus, language),
         pos: huLeader.positivity.toFixed(1),
       })
     : t.alertsLoadingPos;
   const huLeaderVirus = huLeader ? displayVirusLabel(huLeader.virus, language) : t.noDataShort;
-  const huLeaderTone = huLeader ? resolveVirusTone(huLeader.virus) : "other";
+  const huLeaderClass = virusClassName(huLeader?.virus);
   const euLeaderText = euLeader
     ? formatText(t.leaderEuText, {
-        week: formatWeek(euLeader.week),
+        week: formatWeek(euLeader.week, language),
         year: euLeader.year,
         virus: displayVirusLabel(euLeader.virus, language),
         pos: euLeader.positivity.toFixed(1),
       })
     : t.alertsLoadingEuPos;
   const euLeaderVirus = euLeader ? displayVirusLabel(euLeader.virus, language) : t.noDataShort;
-  const euLeaderTone = euLeader ? resolveVirusTone(euLeader.virus) : "other";
+  const euLeaderClass = virusClassName(euLeader?.virus);
 
   return (
     <div className={`app-shell theme-${resolvedTheme}`}>
@@ -1285,18 +1420,18 @@ export function App() {
           </h2>
           <p>{fluAlertText}</p>
         </article>
-        <article className="alert-card leader summary" role="status" aria-live="polite">
+        <article className={`alert-card leader summary ${huLeaderClass}`} role="status" aria-live="polite">
           <h2>{t.leaderHuTitle}</h2>
           <div className="alert-emphasis-row">
-            {huLeader ? <VirusIcon tone={huLeaderTone} /> : null}
+            {huLeader ? <VirusIcon virus={huLeader.virus} /> : null}
             <strong className="alert-emphasis">{huLeaderVirus}</strong>
           </div>
           <p>{huLeaderText}</p>
         </article>
-        <article className="alert-card leader summary" role="status" aria-live="polite">
+        <article className={`alert-card leader summary ${euLeaderClass}`} role="status" aria-live="polite">
           <h2>{t.leaderEuTitle}</h2>
           <div className="alert-emphasis-row">
-            {euLeader ? <VirusIcon tone={euLeaderTone} /> : null}
+            {euLeader ? <VirusIcon virus={euLeader.virus} /> : null}
             <strong className="alert-emphasis">{euLeaderVirus}</strong>
           </div>
           <p>{euLeaderText}</p>
@@ -1338,10 +1473,13 @@ export function App() {
           <ul className="surge-list">
             {surgeSignals.length ? (
               surgeSignals.map((signal) => (
-                <li key={signal.virus} className={`surge-item trend-${signal.direction}`}>
+                <li key={`${signal.virus}-${signal.week ?? "na"}`} className={`surge-item trend-${signal.direction}`}>
                   <div>
-                    <strong>{displayVirusLabel(signal.virus, language)}</strong>
-                    <span>{signal.week != null ? formatWeek(signal.week) : "–"}</span>
+                    <span className={`pathogen-name ${virusClassName(signal.virus)}`}>
+                      <span className="virus-dot" aria-hidden="true" />
+                      <strong>{displayVirusLabel(signal.virus, language)}</strong>
+                    </span>
+                    <span>{signal.week != null ? formatWeek(signal.week, language) : "–"}</span>
                   </div>
                   <span className="pill">{signal.label}</span>
                 </li>
@@ -1360,12 +1498,36 @@ export function App() {
           <article className="stat-card">
             <h3>{t.statsPeakIli}</h3>
             <strong>
-              {formatWeek(snapshot.stats.peakIliWeek)} / {snapshot.stats.peakIliCases?.toLocaleString() ?? "-"}
+              {formatWeek(snapshot.stats.peakIliWeek, language)} / {snapshot.stats.peakIliCases?.toLocaleString() ?? "-"}
             </strong>
+          </article>
+          <article className="stat-card stat-card-ili-compare">
+            <div className="stat-card-ili-head">
+              <h3>{t.statsIliVsPrev}</h3>
+              <span className="stat-week-chip">
+                {latestIliVsPreviousSeason ? formatWeek(latestIliVsPreviousSeason.week, language) : "–"}
+              </span>
+            </div>
+            <div className="stat-card-ili-main">
+              <strong>{latestIliVsPreviousSeason ? latestIliVsPreviousSeason.currentCases.toLocaleString() : "–"}</strong>
+              {latestIliVsPreviousSeason?.deltaPercent != null && latestIliVsPreviousSeason.previousCases != null ? (
+                <span className={`stat-delta-pill trend-${latestIliVsPreviousSeason.direction}`}>
+                  {formatTrendBubble(latestIliVsPreviousSeason.deltaPercent)}
+                </span>
+              ) : null}
+            </div>
+            <p className="stat-compare-baseline">
+              {latestIliVsPreviousSeason?.deltaPercent != null && latestIliVsPreviousSeason.previousCases != null
+                ? formatText(t.statsIliVsPrevBaseline, {
+                    season: snapshot.historical.compareSeasonLabel ?? String(snapshot.selectedYear - 1),
+                    value: latestIliVsPreviousSeason.previousCases.toLocaleString(),
+                  })
+                : t.statsIliVsPrevNoBaseline}
+            </p>
           </article>
           <article className="stat-card">
             <h3>{t.statsFirstCrossing}</h3>
-            <strong>{formatWeek(snapshot.stats.firstIliThresholdCrossingWeek)}</strong>
+            <strong>{formatWeek(snapshot.stats.firstIliThresholdCrossingWeek, language)}</strong>
           </article>
           <article className="stat-card">
             <h3>{t.statsWeeksAbove}</h3>
@@ -1401,7 +1563,9 @@ export function App() {
           <h2>{t.historicalTitle}</h2>
           {snapshot.historical.available && snapshot.historical.compareSeasonLabel ? (
             <p>
-              {snapshot.historical.currentSeasonLabel} vs {snapshot.historical.compareSeasonLabel}
+              {language === "hu"
+                ? `${snapshot.historical.currentSeasonLabel} összevetve: ${snapshot.historical.compareSeasonLabel}`
+                : `${snapshot.historical.currentSeasonLabel} vs ${snapshot.historical.compareSeasonLabel}`}
             </p>
           ) : (
             <p>{t.historicalEmptyHeader}</p>
@@ -1495,8 +1659,11 @@ export function App() {
                 {virologyDetectionList.length ? (
                   <ul>
                     {virologyDetectionList.map((row) => (
-                      <li key={`${row.virus}-${row.week}`}>
-                        <span>{displayVirusLabel(row.virus, language)}</span>
+                      <li key={`${row.virus}-${row.week}`} className={virusClassName(row.virus)}>
+                        <span className="pathogen-name">
+                          <span className="virus-dot" aria-hidden="true" />
+                          {displayVirusLabel(row.virus, language)}
+                        </span>
                         <strong>{row.detections.toLocaleString()}</strong>
                       </li>
                     ))}
@@ -1510,8 +1677,11 @@ export function App() {
                 {virologyPositivityList.length ? (
                   <ul>
                     {virologyPositivityList.map((row) => (
-                      <li key={`${row.virus}-${row.week}`}>
-                        <span>{displayVirusLabel(row.virus, language)}</span>
+                      <li key={`${row.virus}-${row.week}`} className={virusClassName(row.virus)}>
+                        <span className="pathogen-name">
+                          <span className="virus-dot" aria-hidden="true" />
+                          {displayVirusLabel(row.virus, language)}
+                        </span>
                         <strong>{row.positivity.toFixed(1)}%</strong>
                       </li>
                     ))}
@@ -1551,15 +1721,15 @@ export function App() {
               <h3>{t.glanceIli}</h3>
               <div className="glance-row">
                 <span className="glance-key">{t.glancePeak}</span>
-                <span className="glance-value">{formatGlanceLine(seasonAtGlance.iliGlance?.peak ?? null)}</span>
+                <span className="glance-value">{formatGlanceLine(seasonAtGlance.iliGlance?.peak ?? null, language)}</span>
               </div>
               <div className="glance-row">
                 <span className="glance-key">{t.glanceLatest}</span>
-                <span className="glance-value">{formatGlanceLatest(seasonAtGlance.iliGlance)}</span>
+                <span className="glance-value">{formatGlanceLatest(seasonAtGlance.iliGlance, language)}</span>
               </div>
               <div className="glance-row">
                 <span className="glance-key">{t.glanceSlope}</span>
-                <span className="glance-value">{formatSlopePerWeek(seasonAtGlance.iliGlance?.slope ?? null)}</span>
+                <span className="glance-value">{formatSlopePerWeek(seasonAtGlance.iliGlance?.slope ?? null, language)}</span>
               </div>
               <div className="glance-row">
                 <span className="glance-key">{t.glanceWow}</span>
@@ -1576,15 +1746,15 @@ export function App() {
               <h3>{t.glanceSari}</h3>
               <div className="glance-row">
                 <span className="glance-key">{t.glancePeak}</span>
-                <span className="glance-value">{formatGlanceLine(seasonAtGlance.sariGlance?.peak ?? null)}</span>
+                <span className="glance-value">{formatGlanceLine(seasonAtGlance.sariGlance?.peak ?? null, language)}</span>
               </div>
               <div className="glance-row">
                 <span className="glance-key">{t.glanceLatest}</span>
-                <span className="glance-value">{formatGlanceLatest(seasonAtGlance.sariGlance)}</span>
+                <span className="glance-value">{formatGlanceLatest(seasonAtGlance.sariGlance, language)}</span>
               </div>
               <div className="glance-row">
                 <span className="glance-key">{t.glanceSlope}</span>
-                <span className="glance-value">{formatSlopePerWeek(seasonAtGlance.sariGlance?.slope ?? null)}</span>
+                <span className="glance-value">{formatSlopePerWeek(seasonAtGlance.sariGlance?.slope ?? null, language)}</span>
               </div>
               <div className="glance-row">
                 <span className="glance-key">{t.glanceWow}</span>
@@ -1595,15 +1765,15 @@ export function App() {
               <h3>{t.glanceIcu}</h3>
               <div className="glance-row">
                 <span className="glance-key">{t.glancePeak}</span>
-                <span className="glance-value">{formatGlanceLine(seasonAtGlance.icuGlance?.peak ?? null)}</span>
+                <span className="glance-value">{formatGlanceLine(seasonAtGlance.icuGlance?.peak ?? null, language)}</span>
               </div>
               <div className="glance-row">
                 <span className="glance-key">{t.glanceLatest}</span>
-                <span className="glance-value">{formatGlanceLatest(seasonAtGlance.icuGlance)}</span>
+                <span className="glance-value">{formatGlanceLatest(seasonAtGlance.icuGlance, language)}</span>
               </div>
               <div className="glance-row">
                 <span className="glance-key">{t.glanceSlope}</span>
-                <span className="glance-value">{formatSlopePerWeek(seasonAtGlance.icuGlance?.slope ?? null)}</span>
+                <span className="glance-value">{formatSlopePerWeek(seasonAtGlance.icuGlance?.slope ?? null, language)}</span>
               </div>
               <div className="glance-row">
                 <span className="glance-key">{t.glanceWow}</span>
@@ -1639,7 +1809,7 @@ export function App() {
                 <span className="glance-key">{t.glanceSeveritySari}</span>
                 <span className="glance-value">
                   {seasonAtGlance.severity
-                    ? `${formatWeek(seasonAtGlance.severity.week)}: ${seasonAtGlance.severity.sariPercent.toFixed(1)}%`
+                    ? `${formatWeek(seasonAtGlance.severity.week, language)}: ${seasonAtGlance.severity.sariPercent.toFixed(1)}%`
                     : "–"}
                 </span>
               </div>
@@ -1647,7 +1817,7 @@ export function App() {
                 <span className="glance-key">{t.glanceSeverityIcu}</span>
                 <span className="glance-value">
                   {seasonAtGlance.severity && Number.isFinite(seasonAtGlance.severity.icuShare)
-                    ? `${formatWeek(seasonAtGlance.severity.week)}: ${Number(seasonAtGlance.severity.icuShare).toFixed(1)}%`
+                    ? `${formatWeek(seasonAtGlance.severity.week, language)}: ${Number(seasonAtGlance.severity.icuShare).toFixed(1)}%`
                     : "–"}
                 </span>
               </div>
@@ -1728,16 +1898,23 @@ export function App() {
                 {tableRows.length ? (
                   tableRows.map((row) => (
                     <tr key={row.week}>
-                      <td>{formatWeek(row.week)}</td>
+                      <td>{formatWeek(row.week, language)}</td>
                       <td>{displayVirusLabel(row.virus, language)}</td>
                       <td>{row.region === "National" ? t.regionNational : row.region}</td>
                       <td>{Number.isFinite(row.cases) ? Number(row.cases).toLocaleString() : "–"}</td>
                       <td>{Number.isFinite(row.sariAdmissions) ? Number(row.sariAdmissions).toLocaleString() : "–"}</td>
                       <td>{Number.isFinite(row.sariIcu) ? Number(row.sariIcu).toLocaleString() : "–"}</td>
                       <td>
-                        {row.topPositivityVirus && Number.isFinite(row.topPositivity)
-                          ? `${displayVirusLabel(row.topPositivityVirus, language)} (${Number(row.topPositivity).toFixed(1)}%)`
-                          : "–"}
+                        {row.topPositivityVirus && Number.isFinite(row.topPositivity) ? (
+                          <span className={`table-top-positivity ${virusClassName(row.topPositivityVirus)}`}>
+                            <span className="virus-dot" aria-hidden="true" />
+                            <span>
+                              {displayVirusLabel(row.topPositivityVirus, language)} ({Number(row.topPositivity).toFixed(1)}%)
+                            </span>
+                          </span>
+                        ) : (
+                          "–"
+                        )}
                       </td>
                     </tr>
                   ))
@@ -1792,12 +1969,12 @@ export function App() {
         <div className="virology-grid">
           <EChartsPanel
             title={t.euDetectionsTrend}
-            subtitle={formatText(t.euTrendSubtitle, { year: snapshot.euVirology.targetYear ?? "–" })}
+            subtitle={formatText(t.euTrendSubtitle, { season: euSeasonLabel })}
             option={euDetectionsOption}
           />
           <EChartsPanel
             title={t.euPositivityTrend}
-            subtitle={formatText(t.euTrendSubtitle, { year: snapshot.euVirology.targetYear ?? "–" })}
+            subtitle={formatText(t.euTrendSubtitle, { season: euSeasonLabel })}
             option={euPositivityOption}
           />
         </div>
@@ -1808,8 +1985,11 @@ export function App() {
             {euDetectionsList.length ? (
               <ul>
                 {euDetectionsList.map((row) => (
-                  <li key={`${row.virus}-${row.week}`}>
-                    <span>{displayVirusLabel(row.virus, language)}</span>
+                  <li key={`${row.virus}-${row.week}`} className={virusClassName(row.virus)}>
+                    <span className="pathogen-name">
+                      <span className="virus-dot" aria-hidden="true" />
+                      {displayVirusLabel(row.virus, language)}
+                    </span>
                     <strong>{row.detections.toLocaleString()}</strong>
                   </li>
                 ))}
@@ -1823,8 +2003,11 @@ export function App() {
             {euPositivityList.length ? (
               <ul>
                 {euPositivityList.map((row) => (
-                  <li key={`${row.virus}-${row.week}`}>
-                    <span>{displayVirusLabel(row.virus, language)}</span>
+                  <li key={`${row.virus}-${row.week}`} className={virusClassName(row.virus)}>
+                    <span className="pathogen-name">
+                      <span className="virus-dot" aria-hidden="true" />
+                      {displayVirusLabel(row.virus, language)}
+                    </span>
                     <strong>{row.positivity.toFixed(1)}%</strong>
                   </li>
                 ))}
