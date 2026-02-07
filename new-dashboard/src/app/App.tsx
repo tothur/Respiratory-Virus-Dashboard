@@ -13,6 +13,7 @@ const DEFAULT_DATASET = "NNGYK";
 const DEFAULT_ILI_VIRUS = "ILI (flu-like illness)";
 const STORAGE_LANG_KEY = "rvd-lang";
 const STORAGE_THEME_KEY = "rvd-theme";
+const HUNGARY_POPULATION_DENOMINATOR = 9_600_000;
 
 type SortColumn = "week" | "cases";
 type SortDirection = "asc" | "desc";
@@ -55,6 +56,20 @@ interface SurgeSignal {
   change: number;
   week: number | null;
   direction: TrendDirection;
+}
+
+interface EpiBaselineStats {
+  zScore: number | null;
+  baselineCount: number;
+  baselineMean: number | null;
+}
+
+interface EpiMetricSnapshot {
+  latestWeek: number | null;
+  latestValue: number | null;
+  ratePer100k: number | null;
+  weekOverWeekPercent: number | null;
+  baseline: EpiBaselineStats;
 }
 
 interface TableRow {
@@ -135,6 +150,29 @@ const STRINGS = {
     trendDeclining: "Declining",
     trendFlat: "Flat",
     trendEmpty: "No recent ILI or positivity trend data.",
+    rigorTitle: "Epidemiological rigor",
+    rigorNote: "Comparable indicators using rates, baseline z-scores, age split and data-quality signals.",
+    rigorAria: "Epidemiological rigor indicators",
+    rigorIliRateCard: "ILI rate (per 100k)",
+    rigorSariRateCard: "SARI admissions rate (per 100k)",
+    rigorWoW: "WoW",
+    rigorZScore: "Z-score vs baseline",
+    rigorBaselineSample: "Baseline seasons",
+    rigorBaselineMean: "Baseline mean",
+    rigorAgeSplitTitle: "ILI age split (latest week)",
+    rigorAgeMissing: "Age split is unavailable in the current data source.",
+    rigorAge0to14: "Age 0-14",
+    rigorAge15to34: "Age 15-34",
+    rigorAge35to59: "Age 35-59",
+    rigorAge60plus: "Age 60+",
+    rigorQualityTitle: "Uncertainty and data quality",
+    rigorQualityCoverage: "Coverage",
+    rigorQualityBaseline: "Baseline robustness",
+    rigorQualityAge: "Age split availability",
+    rigorQualityGood: "Good",
+    rigorQualityModerate: "Moderate",
+    rigorQualityLimited: "Limited",
+    rigorPer100kSuffix: "/100k",
     glanceTitle: "Season at a glance",
     glanceNote: "Growth and burden signals alongside peak and recent trend.",
     glanceAria: "Season at a glance",
@@ -281,6 +319,29 @@ const STRINGS = {
     trendDeclining: "Gyengül",
     trendFlat: "Változatlan",
     trendEmpty: "Nincs friss ILI- vagy pozitivitási trendadat.",
+    rigorTitle: "Epidemiológiai megalapozottság",
+    rigorNote: "Összehasonlítható mutatók: 100 ezer főre vetített ráta, bázis z-score, korcsoporti megoszlás és adatminőségi jelzések.",
+    rigorAria: "Epidemiológiai megalapozottsági mutatók",
+    rigorIliRateCard: "ILI ráta (100 ezer főre)",
+    rigorSariRateCard: "SARI felvételi ráta (100 ezer főre)",
+    rigorWoW: "Heti változás",
+    rigorZScore: "Z-score a bázishoz",
+    rigorBaselineSample: "Bázis szezonok",
+    rigorBaselineMean: "Bázis átlag",
+    rigorAgeSplitTitle: "ILI korcsoporti megoszlás (legfrissebb hét)",
+    rigorAgeMissing: "A korcsoporti megoszlás nem elérhető az aktuális adatforrásban.",
+    rigorAge0to14: "0-14 év",
+    rigorAge15to34: "15-34 év",
+    rigorAge35to59: "35-59 év",
+    rigorAge60plus: "60+ év",
+    rigorQualityTitle: "Bizonytalanság és adatminőség",
+    rigorQualityCoverage: "Lefedettség",
+    rigorQualityBaseline: "Bázis megbízhatóság",
+    rigorQualityAge: "Korcsoporti adat",
+    rigorQualityGood: "Jó",
+    rigorQualityModerate: "Közepes",
+    rigorQualityLimited: "Korlátozott",
+    rigorPer100kSuffix: "/100 ezer",
     glanceTitle: "Szezon pillanatkép",
     glanceNote: "Terhelési és növekedési jelzések a szezon alakulásáról.",
     glanceAria: "Szezon pillanatkép",
@@ -609,6 +670,99 @@ function formatTrendBubble(changePercent: number): string {
   const rounded = Math.round(changePercent);
   const sign = rounded > 0 ? "+" : "";
   return `${sign}${rounded}%`;
+}
+
+function ratePer100k(value: number | null, population = HUNGARY_POPULATION_DENOMINATOR): number | null {
+  if (!Number.isFinite(value) || !Number.isFinite(population) || population <= 0) return null;
+  return (Number(value) / population) * 100000;
+}
+
+function coverageRatioFromSeries(points: MetricPoint[]): number | null {
+  if (!points.length) return null;
+  const weeks = Array.from(new Set(points.map((point) => point.week))).sort((a, b) => seasonWeekCompare(a, b));
+  if (!weeks.length) return null;
+  const first = weeks[0];
+  const last = weeks[weeks.length - 1];
+  const span = seasonWeekCompare(last, first) + 1;
+  if (!Number.isFinite(span) || span <= 0) return null;
+  return Math.min(1, weeks.length / span);
+}
+
+function computeBaselineStatsForWeek(
+  currentValue: number | null,
+  week: number | null,
+  currentYear: number,
+  availableYears: number[],
+  seriesForYear: (year: number) => MetricPoint[]
+): EpiBaselineStats {
+  if (!Number.isFinite(currentValue) || !Number.isFinite(week)) {
+    return { zScore: null, baselineCount: 0, baselineMean: null };
+  }
+
+  const baselineValues = availableYears
+    .filter((year) => year < currentYear)
+    .map((year) => seriesForYear(year).find((point) => point.week === week)?.value ?? null)
+    .filter((value): value is number => Number.isFinite(value));
+
+  if (!baselineValues.length) {
+    return { zScore: null, baselineCount: 0, baselineMean: null };
+  }
+
+  const baselineMean = baselineValues.reduce((sum, value) => sum + value, 0) / baselineValues.length;
+  if (baselineValues.length < 2) {
+    return { zScore: null, baselineCount: baselineValues.length, baselineMean };
+  }
+
+  const variance =
+    baselineValues.reduce((sum, value) => sum + (value - baselineMean) * (value - baselineMean), 0) / baselineValues.length;
+  const stdDev = Math.sqrt(variance);
+  if (!Number.isFinite(stdDev) || stdDev === 0) {
+    return {
+      zScore: Math.abs(Number(currentValue) - baselineMean) < 1e-9 ? 0 : null,
+      baselineCount: baselineValues.length,
+      baselineMean,
+    };
+  }
+
+  return {
+    zScore: (Number(currentValue) - baselineMean) / stdDev,
+    baselineCount: baselineValues.length,
+    baselineMean,
+  };
+}
+
+function buildEpiMetricSnapshot(
+  series: MetricPoint[],
+  currentYear: number,
+  availableYears: number[],
+  seriesForYear: (year: number) => MetricPoint[]
+): EpiMetricSnapshot {
+  const ordered = series
+    .filter((point) => Number.isFinite(point.week) && Number.isFinite(point.value))
+    .slice()
+    .sort((a, b) => seasonWeekCompare(a.week, b.week));
+  const latest = ordered.length ? ordered[ordered.length - 1] : null;
+  const weekOverWeekPercent = computeWeekOverWeekChange(ordered);
+  const baseline = computeBaselineStatsForWeek(latest?.value ?? null, latest?.week ?? null, currentYear, availableYears, seriesForYear);
+  return {
+    latestWeek: latest?.week ?? null,
+    latestValue: latest?.value ?? null,
+    ratePer100k: latest ? ratePer100k(latest.value) : null,
+    weekOverWeekPercent,
+    baseline,
+  };
+}
+
+function formatRatePer100kLabel(value: number | null, suffix: string): string {
+  if (!Number.isFinite(value)) return "–";
+  return `${Number(value).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ${suffix}`;
+}
+
+function formatZScore(value: number | null): string {
+  if (!Number.isFinite(value)) return "–";
+  const rounded = Math.round(Number(value) * 100) / 100;
+  const sign = rounded > 0 ? "+" : "";
+  return `${sign}${rounded.toFixed(2)}`;
 }
 
 function confidenceLevelFromScore(score: number): ConfidenceLevel {
@@ -1205,6 +1359,103 @@ export function App() {
     snapshot.selectedYear,
   ]);
 
+  const epidemiology = useMemo(() => {
+    const buildIliSeriesForYear = (year: number): MetricPoint[] => {
+      const buckets = new Map<number, number>();
+      for (const row of dataSource.respiratoryData.weekly) {
+        const rowYear = Number(row.year);
+        if (!Number.isFinite(rowYear) || rowYear !== year) continue;
+        const dataset = row.dataset ?? DEFAULT_DATASET;
+        if (dataset !== DEFAULT_DATASET) continue;
+        const virus = row.virus ?? DEFAULT_ILI_VIRUS;
+        if (virus !== DEFAULT_ILI_VIRUS) continue;
+        const week = Number(row.week);
+        if (!Number.isFinite(week)) continue;
+        const cases = Number(row.cases ?? 0);
+        if (!Number.isFinite(cases)) continue;
+        buckets.set(week, (buckets.get(week) ?? 0) + cases);
+      }
+      return Array.from(buckets.entries())
+        .sort((a, b) => seasonWeekCompare(a[0], b[0]))
+        .map(([week, value]) => ({ week, value }));
+    };
+
+    const buildSariAdmissionsSeriesForYear = (year: number): MetricPoint[] => {
+      const buckets = new Map<number, number>();
+      for (const row of dataSource.respiratoryData.sariWeekly) {
+        const rowYear = Number(row.year);
+        if (!Number.isFinite(rowYear) || rowYear !== year) continue;
+        const week = Number(row.week);
+        if (!Number.isFinite(week)) continue;
+        const admissions = Number(row.admissions ?? 0);
+        if (!Number.isFinite(admissions)) continue;
+        buckets.set(week, (buckets.get(week) ?? 0) + admissions);
+      }
+      return Array.from(buckets.entries())
+        .sort((a, b) => seasonWeekCompare(a[0], b[0]))
+        .map(([week, value]) => ({ week, value }));
+    };
+
+    const currentIliSeries = buildIliSeriesForYear(snapshot.selectedYear);
+    const currentSariSeries = buildSariAdmissionsSeriesForYear(snapshot.selectedYear);
+    const iliMetric = buildEpiMetricSnapshot(
+      currentIliSeries,
+      snapshot.selectedYear,
+      snapshot.availableYears,
+      buildIliSeriesForYear
+    );
+    const sariMetric = buildEpiMetricSnapshot(
+      currentSariSeries,
+      snapshot.selectedYear,
+      snapshot.availableYears,
+      buildSariAdmissionsSeriesForYear
+    );
+
+    const ageSplitCandidates = dataSource.iliAgeSplits
+      .filter((point) => point.year === snapshot.selectedYear)
+      .slice()
+      .sort((a, b) => seasonWeekCompare(a.week, b.week));
+    const preferredAgeSplitWeek = iliMetric.latestWeek;
+    const ageSplit =
+      ageSplitCandidates.find((point) => point.week === preferredAgeSplitWeek) ??
+      (ageSplitCandidates.length ? ageSplitCandidates[ageSplitCandidates.length - 1] : null);
+
+    const iliCoverageRatio = coverageRatioFromSeries(currentIliSeries);
+    const sariCoverageRatio = coverageRatioFromSeries(currentSariSeries);
+    const combinedCoverageRatio =
+      iliCoverageRatio != null && sariCoverageRatio != null
+        ? (iliCoverageRatio + sariCoverageRatio) / 2
+        : iliCoverageRatio ?? sariCoverageRatio;
+    const baselineCount = Math.min(iliMetric.baseline.baselineCount, sariMetric.baseline.baselineCount);
+    const ageSplitAvailable = ageSplit != null;
+
+    const coverageLevel: "good" | "moderate" | "limited" =
+      combinedCoverageRatio == null ? "limited" : combinedCoverageRatio >= 0.9 ? "good" : combinedCoverageRatio >= 0.75 ? "moderate" : "limited";
+    const baselineLevel: "good" | "moderate" | "limited" =
+      baselineCount >= 5 ? "good" : baselineCount >= 3 ? "moderate" : "limited";
+    const ageLevel: "good" | "moderate" | "limited" = ageSplitAvailable ? "good" : "limited";
+
+    return {
+      iliMetric,
+      sariMetric,
+      ageSplit,
+      quality: {
+        coverageRatio: combinedCoverageRatio,
+        baselineCount,
+        ageSplitAvailable,
+        coverageLevel,
+        baselineLevel,
+        ageLevel,
+      },
+    };
+  }, [
+    dataSource.iliAgeSplits,
+    dataSource.respiratoryData.sariWeekly,
+    dataSource.respiratoryData.weekly,
+    snapshot.availableYears,
+    snapshot.selectedYear,
+  ]);
+
   const latestIliVsPreviousSeason = useMemo(() => {
     const latest = snapshot.iliSeries.length ? snapshot.iliSeries[snapshot.iliSeries.length - 1] : null;
     if (!latest) return null;
@@ -1485,6 +1736,18 @@ export function App() {
     : t.alertsLoadingEuPos;
   const euLeaderVirus = euLeader ? displayVirusLabel(euLeader.virus, language) : t.noDataShort;
   const euLeaderClass = virusClassName(euLeader?.virus);
+  const qualityLabelFor = (level: "good" | "moderate" | "limited"): string => {
+    if (level === "good") return t.rigorQualityGood;
+    if (level === "moderate") return t.rigorQualityModerate;
+    return t.rigorQualityLimited;
+  };
+  const qualityCardClass = (level: "good" | "moderate" | "limited"): "ok" | "warn" => (level === "good" ? "ok" : "warn");
+  const coveragePercentLabel =
+    epidemiology.quality.coverageRatio == null
+      ? "–"
+      : `${Math.round(epidemiology.quality.coverageRatio * 100).toLocaleString()}%`;
+  const baselineSampleLabel =
+    epidemiology.iliMetric.baseline.baselineCount > 0 ? epidemiology.iliMetric.baseline.baselineCount.toLocaleString() : "–";
 
   return (
     <div className={`app-shell theme-${resolvedTheme}`}>
@@ -1693,6 +1956,83 @@ export function App() {
             </strong>
           </article>
         </section>
+      </section>
+
+      <section className="quality-section" aria-label={t.rigorAria}>
+        <header className="quality-header">
+          <h2>{t.rigorTitle}</h2>
+          <p>{t.rigorNote}</p>
+        </header>
+
+        <div className="quality-grid">
+          <article
+            className={`quality-card ${qualityCardClass(
+              epidemiology.iliMetric.baseline.zScore != null && Math.abs(epidemiology.iliMetric.baseline.zScore) >= 2 ? "moderate" : "good"
+            )}`}
+          >
+            <h3>{t.rigorIliRateCard}</h3>
+            <strong>{formatRatePer100kLabel(epidemiology.iliMetric.ratePer100k, t.rigorPer100kSuffix)}</strong>
+            <p>
+              {t.rigorWoW}: {formatSignedPercent(epidemiology.iliMetric.weekOverWeekPercent)} · {t.rigorZScore}:{" "}
+              {formatZScore(epidemiology.iliMetric.baseline.zScore)}
+            </p>
+            <p>
+              {t.rigorBaselineSample}: {baselineSampleLabel}
+              {epidemiology.iliMetric.baseline.baselineMean != null
+                ? ` · ${t.rigorBaselineMean}: ${formatRatePer100kLabel(
+                    ratePer100k(epidemiology.iliMetric.baseline.baselineMean),
+                    t.rigorPer100kSuffix
+                  )}`
+                : ""}
+            </p>
+          </article>
+
+          <article
+            className={`quality-card ${qualityCardClass(
+              epidemiology.sariMetric.baseline.zScore != null && Math.abs(epidemiology.sariMetric.baseline.zScore) >= 2 ? "moderate" : "good"
+            )}`}
+          >
+            <h3>{t.rigorSariRateCard}</h3>
+            <strong>{formatRatePer100kLabel(epidemiology.sariMetric.ratePer100k, t.rigorPer100kSuffix)}</strong>
+            <p>
+              {t.rigorWoW}: {formatSignedPercent(epidemiology.sariMetric.weekOverWeekPercent)} · {t.rigorZScore}:{" "}
+              {formatZScore(epidemiology.sariMetric.baseline.zScore)}
+            </p>
+            <p>{t.rigorBaselineSample}: {epidemiology.sariMetric.baseline.baselineCount.toLocaleString()}</p>
+          </article>
+
+          <article className={`quality-card ${qualityCardClass(epidemiology.quality.ageLevel)}`}>
+            <h3>{t.rigorAgeSplitTitle}</h3>
+            {epidemiology.ageSplit ? (
+              <>
+                <strong>{formatWeek(epidemiology.ageSplit.week, language)}</strong>
+                <div className="age-split-grid">
+                  <span>{t.rigorAge0to14}: {epidemiology.ageSplit.age0to14.toFixed(1)}%</span>
+                  <span>{t.rigorAge15to34}: {epidemiology.ageSplit.age15to34.toFixed(1)}%</span>
+                  <span>{t.rigorAge35to59}: {epidemiology.ageSplit.age35to59.toFixed(1)}%</span>
+                  <span>{t.rigorAge60plus}: {epidemiology.ageSplit.age60plus.toFixed(1)}%</span>
+                </div>
+              </>
+            ) : (
+              <p>{t.rigorAgeMissing}</p>
+            )}
+          </article>
+
+          <article className={`quality-card ${qualityCardClass(epidemiology.quality.coverageLevel)}`}>
+            <h3>{t.rigorQualityTitle}</h3>
+            <div className="rigor-quality-list">
+              <span className={`rigor-pill ${qualityCardClass(epidemiology.quality.coverageLevel)}`}>
+                {t.rigorQualityCoverage}: {qualityLabelFor(epidemiology.quality.coverageLevel)} ({coveragePercentLabel})
+              </span>
+              <span className={`rigor-pill ${qualityCardClass(epidemiology.quality.baselineLevel)}`}>
+                {t.rigorQualityBaseline}: {qualityLabelFor(epidemiology.quality.baselineLevel)} (n={epidemiology.quality.baselineCount})
+              </span>
+              <span className={`rigor-pill ${qualityCardClass(epidemiology.quality.ageLevel)}`}>
+                {t.rigorQualityAge}: {qualityLabelFor(epidemiology.quality.ageLevel)}
+              </span>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section id="hu-ili-sari-charts" className="charts-grid">

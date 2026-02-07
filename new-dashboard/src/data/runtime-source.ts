@@ -1,4 +1,4 @@
-import type { DashboardDataSource } from "./adapter";
+import type { DashboardDataSource, IliAgeSplitPoint } from "./adapter";
 import { createBundledDataSource } from "./adapter";
 import { RespiratoryDataSchema } from "./contracts";
 
@@ -49,6 +49,48 @@ function normalizeVirusName(name: unknown): string {
   if (/^rs[-\s]*v(i[íi]rus)?$/i.test(normalized)) return "RSV";
 
   return normalized;
+}
+
+function parsePercentToken(value: string): number | null {
+  const parsed = Number(String(value).replace(",", "."));
+  if (!Number.isFinite(parsed)) return null;
+  if (parsed < 0 || parsed > 100) return null;
+  return parsed;
+}
+
+function extractIliAgeSplit(rawText: unknown): Omit<IliAgeSplitPoint, "year" | "week"> | null {
+  if (typeof rawText !== "string") return null;
+
+  const normalized = rawText
+    .normalize("NFKC")
+    .replace(/\u00a0/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!normalized) return null;
+
+  const context =
+    /Az influenzaszer[űu] megbeteged[ée]s[\s\S]{0,560}/i.exec(normalized)?.[0] ?? normalized.slice(0, 900);
+  const match =
+    /(\d{1,2}(?:[.,]\d+)?)%\S*\s*0-14[\s\S]{0,140}?(\d{1,2}(?:[.,]\d+)?)%\S*\s*15-34[\s\S]{0,140}?(\d{1,2}(?:[.,]\d+)?)%\S*[\s\S]{0,140}?35-59[\s\S]{0,140}?(\d{1,2}(?:[.,]\d+)?)%\S*[\s\S]{0,140}?60/i.exec(
+      context
+    );
+  if (!match) return null;
+
+  const age0to14 = parsePercentToken(match[1]);
+  const age15to34 = parsePercentToken(match[2]);
+  const age35to59 = parsePercentToken(match[3]);
+  const age60plus = parsePercentToken(match[4]);
+  if (age0to14 == null || age15to34 == null || age35to59 == null || age60plus == null) return null;
+
+  const total = age0to14 + age15to34 + age35to59 + age60plus;
+  if (total < 85 || total > 115) return null;
+
+  return {
+    age0to14,
+    age15to34,
+    age35to59,
+    age60plus,
+  };
 }
 
 function weekSortValue(week: number): number {
@@ -124,6 +166,7 @@ function buildDataSourceFromNngyk(payload: unknown, location: string): Dashboard
   const sari = new Map<string, { year: number; week: number; admissions: number | null; icu: number | null }>();
   const viroDetections = new Map<string, { year: number; week: number; virus: string; detections: number }>();
   const viroPositivity = new Map<string, { year: number; week: number; virus: string; positivity: number }>();
+  const iliAgeSplits = new Map<string, IliAgeSplitPoint>();
   const years = new Set<number>();
   const viruses = new Set<string>();
 
@@ -140,6 +183,17 @@ function buildDataSourceFromNngyk(payload: unknown, location: string): Dashboard
       toFiniteNumber(isRecord(weeklyRowsRaw[0]) ? weeklyRowsRaw[0].year : null);
     const baseWeek =
       toFiniteNumber(entry.week) ?? toFiniteNumber(isRecord(weeklyRowsRaw[0]) ? weeklyRowsRaw[0].week : null);
+
+    if (seasonYear != null && baseWeek != null) {
+      const ageSplit = extractIliAgeSplit(payloadObj.raw_text);
+      if (ageSplit) {
+        iliAgeSplits.set(`${seasonYear}::${baseWeek}`, {
+          year: seasonYear,
+          week: baseWeek,
+          ...ageSplit,
+        });
+      }
+    }
 
     for (const rowValue of weeklyRowsRaw) {
       if (!isRecord(rowValue)) continue;
@@ -246,6 +300,7 @@ function buildDataSourceFromNngyk(payload: unknown, location: string): Dashboard
     source: "nngyk_all",
     respiratoryData: candidate,
     seasonLabels: inferredSeasonLabels,
+    iliAgeSplits: Array.from(iliAgeSplits.values()).sort((a, b) => a.year - b.year || weekCompare(a.week, b.week)),
     note: `Loaded live bulletin extract from ${location}.`,
   };
 }

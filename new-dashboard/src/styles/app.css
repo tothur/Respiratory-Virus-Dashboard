@@ -668,6 +668,36 @@ h3 {
   gap: 16px;
 }
 
+.quality-section {
+  display: grid;
+  gap: 14px;
+  padding: 12px;
+  border-radius: calc(var(--radius) + 2px);
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.07), rgba(59, 130, 246, 0.02));
+}
+
+.quality-header {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px 16px;
+}
+
+.quality-header h2 {
+  margin: 0;
+  font-size: var(--type-section-title-size);
+  font-weight: var(--type-section-title-weight);
+  letter-spacing: -0.012em;
+}
+
+.quality-header p {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: var(--type-section-subtitle-size);
+}
+
 .quality-card {
   background: var(--panel);
   border: 1px solid var(--border);
@@ -694,6 +724,45 @@ h3 {
   margin: 6px 0 0;
   color: var(--muted);
   font-size: var(--type-body-size);
+}
+
+.age-split-grid {
+  margin-top: 8px;
+  display: grid;
+  gap: 6px;
+  font-size: 0.81rem;
+  color: var(--text);
+}
+
+.rigor-quality-list {
+  margin-top: 10px;
+  display: grid;
+  gap: 7px;
+}
+
+.rigor-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  background: rgba(148, 163, 184, 0.12);
+  color: var(--text);
+  padding: 4px 9px;
+  font-size: 0.74rem;
+  font-weight: 620;
+  line-height: 1.25;
+}
+
+.rigor-pill.ok {
+  border-color: rgba(16, 185, 129, 0.28);
+  background: rgba(16, 185, 129, 0.12);
+  color: #065f46;
+}
+
+.rigor-pill.warn {
+  border-color: rgba(245, 158, 11, 0.34);
+  background: rgba(245, 158, 11, 0.14);
+  color: #92400e;
 }
 
 .quality-card.ok {
@@ -1928,6 +1997,33 @@ h3 {
 [data-theme="dark"] .quality-card.warn {
   border-color: rgba(245, 158, 11, 0.42);
   background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(15, 23, 42, 0.82));
+}
+
+[data-theme="dark"] .quality-section {
+  border-color: rgba(96, 165, 250, 0.32);
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.2), rgba(30, 41, 59, 0.32));
+}
+
+[data-theme="dark"] .age-split-grid {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .rigor-pill {
+  border-color: rgba(148, 163, 184, 0.32);
+  background: rgba(51, 65, 85, 0.54);
+  color: #dbeafe;
+}
+
+[data-theme="dark"] .rigor-pill.ok {
+  border-color: rgba(52, 211, 153, 0.44);
+  background: rgba(6, 95, 70, 0.48);
+  color: #a7f3d0;
+}
+
+[data-theme="dark"] .rigor-pill.warn {
+  border-color: rgba(251, 191, 36, 0.46);
+  background: rgba(146, 64, 14, 0.5);
+  color: #fde68a;
 }
 
 [data-theme="dark"] .surge-item {

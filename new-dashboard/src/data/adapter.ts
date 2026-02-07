@@ -24,10 +24,20 @@ const NH_RESP_SEASON_END_WEEK = 20;
 const bundledRespiratoryData = RespiratoryDataSchema.parse(rawRespiratoryData);
 const bundledSeasonLabels = SeasonLabelsSchema.parse(rawSeasonLabels);
 
+export interface IliAgeSplitPoint {
+  year: number;
+  week: number;
+  age0to14: number;
+  age15to34: number;
+  age35to59: number;
+  age60plus: number;
+}
+
 export interface DashboardDataSource {
   source: "bundled" | "nngyk_all";
   respiratoryData: RespiratoryData;
   seasonLabels: Record<string, string>;
+  iliAgeSplits: IliAgeSplitPoint[];
   note?: string;
 }
 
@@ -36,6 +46,7 @@ export function createBundledDataSource(note?: string): DashboardDataSource {
     source: "bundled",
     respiratoryData: bundledRespiratoryData,
     seasonLabels: bundledSeasonLabels,
+    iliAgeSplits: [],
     note,
   };
 }
