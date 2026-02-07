@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seasonal Respiratory Pathogen Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/jpeg" href="./virusicon.jpeg" />
+    <link rel="apple-touch-icon" sizes="1231x1231" href="./virusicon.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-bar">
+        <div class="brand">
+          <h1 data-i18n="header.title">Seasonal Respiratory Pathogen Dashboard</h1>
+          <span data-i18n="header.subtitle">Hungarian and European situation overview based on NNGYK and ECDC data</span>
+        </div>
+        <div class="header-controls" aria-label="Header controls" data-i18n-attr="aria-label:header.controls">
+          <label class="header-picker">
+            <span class="sr-only" data-i18n="controls.theme">Theme</span>
+            <select id="theme" class="select select-compact" aria-label="Theme" data-i18n-attr="aria-label:controls.theme">
+              <option value="system" data-i18n="theme.system">System</option>
+              <option value="dark" data-i18n="theme.dark">Dark</option>
+              <option value="light" data-i18n="theme.light">Light</option>
+            </select>
+          </label>
+          <label class="header-picker">
+            <span class="sr-only" data-i18n="controls.language">Language</span>
+            <select id="lang" class="select select-compact" aria-label="Language" data-i18n-attr="aria-label:controls.language">
+              <option value="en">English</option>
+              <option value="hu">Magyar</option>
+            </select>
+          </label>
+          <label class="header-picker">
+            <span class="sr-only" data-i18n="controls.year">Year</span>
+            <select id="year" class="select" aria-label="Year" data-i18n-attr="aria-label:controls.year"></select>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid" aria-live="polite">
+      <section class="alert-stack" aria-label="Key alerts" data-i18n-attr="aria-label:sections.alerts">
+        <section class="alert-card" id="flu-alert" aria-live="polite" role="status">
+          <div class="alert-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3.5l9 16H3l9-16Z" />
+              <path d="M12 9v4.5" />
+              <path d="M12 17.25h.01" />
+            </svg>
+          </div>
+          <div>
+            <h2 data-i18n="alerts.flu.title">Seasonal influenza threshold</h2>
+            <p class="footer-note" id="flu-alert-text" data-i18n="alerts.loading">Awaiting data…</p>
+          </div>
+          <span class="pill" id="flu-alert-chip" data-i18n="status.monitoring">Monitoring</span>
+        </section>
+
+        <section class="alert-card" id="leader-alert" aria-live="polite" role="status">
+          <div class="alert-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 17l6-6 4 4 7-7" />
+              <path d="M14 8h6v6" />
+            </svg>
+          </div>
+          <div>
+            <h2 data-i18n="alerts.leaderHu.title">Leading virus by positivity in Hungary</h2>
+            <p class="footer-note" id="leader-alert-text" data-i18n="alerts.loadingPos">Awaiting positivity data…</p>
+          </div>
+          <span class="pill" id="leader-alert-chip" data-i18n="status.monitoring">Monitoring</span>
+        </section>
+
+        <section class="alert-card" id="leader-eu-alert" aria-live="polite" role="status">
+          <div class="alert-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18" />
+              <path d="M12 3c2.6 2.6 2.6 15.4 0 18" />
+              <path d="M12 3c-2.6 2.6-2.6 15.4 0 18" />
+            </svg>
+          </div>
+          <div>
+            <h2 data-i18n="alerts.leaderEu.title">Leading virus by positivity in the EU/EEA</h2>
+            <p class="footer-note" id="leader-eu-alert-text" data-i18n="alerts.loadingEuPos">Awaiting EU/EEA positivity data…</p>
+          </div>
+          <span class="pill" id="leader-eu-alert-chip" data-i18n="status.monitoring">Monitoring</span>
+        </section>
+      </section>
+
+      <section class="section-banner" aria-label="Hungary section" data-i18n-attr="aria-label:sections.huBanner.aria">
+        <div class="section-kicker" data-i18n="sections.huBanner.kicker">Section</div>
+        <div>
+          <h2 data-i18n="sections.huBanner.title">Hungary</h2>
+          <p class="footer-note" data-i18n="sections.huBanner.note">National surveillance and sentinel signals.</p>
+        </div>
+      </section>
+
+      <section class="context-grid trend-priority" aria-label="Weekly trend highlights" data-i18n-attr="aria-label:sections.trends">
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2 data-i18n="trend.title">Weekly trend signals</h2>
+              <p class="footer-note" data-i18n="trend.note">Fast view of which pathogens are currently surging or easing.</p>
+            </div>
+            <div class="badge" data-i18n="trend.badge">Live selection</div>
+          </div>
+          <ul class="trend-list" id="surge-list"></ul>
+        </article>
+      </section>
+
+      <div class="grid metrics briefing-metrics">
+        <article class="card">
+          <h2 data-i18n="metrics.total.title">Total cases</h2>
+          <div class="value" id="total-cases">0</div>
+          <p class="footer-note" data-i18n="metrics.total.note">Based on selected dataset, year and pathogen.</p>
+        </article>
+        <article class="card">
+          <h2 data-i18n="metrics.peak.title">Peak week</h2>
+          <div class="value" id="peak-week">–</div>
+          <p class="footer-note" data-i18n="metrics.peak.note">Calendar week with the highest activity.</p>
+        </article>
+        <article class="card">
+          <div class="card-header-row">
+            <h2 data-i18n="metrics.latest.title">Latest week cases</h2>
+            <span class="badge" id="latest-week-badge" data-i18n="status.latestWeek">Latest week</span>
+          </div>
+          <div class="value" id="latest-week-cases">–</div>
+          <p class="footer-note" data-i18n="metrics.latest.note">Most recent reported week for the selected pathogen.</p>
+        </article>
+        <article class="card">
+          <div class="card-header-row">
+            <h2 data-i18n="metrics.sariAdmissions.title">SARI admissions</h2>
+            <span class="badge" id="sari-week-badge" data-i18n="status.latestWeek">Latest week</span>
+          </div>
+          <div class="value" id="sari-admissions">–</div>
+          <p class="footer-note" data-i18n="metrics.sariAdmissions.note">Severe acute respiratory infection hospitalizations (sentinel hospitals).</p>
+        </article>
+        <article class="card">
+          <div class="card-header-stack">
+            <h2 data-i18n="metrics.sariIcu.title">SARI ICU</h2>
+            <span class="badge" id="sari-icu-week-badge" data-i18n="status.latestWeek">Latest week</span>
+          </div>
+          <div class="value" id="sari-icu">–</div>
+          <p class="footer-note" data-i18n="metrics.sariIcu.note">ICU/sub-intensive admissions among SARI hospitalizations.</p>
+        </article>
+      </div>
+
+      <section class="card chart-card priority-chart" aria-label="Visual summaries" data-i18n-attr="aria-label:sections.charts">
+        <div class="chart-container">
+          <div class="context-header">
+            <div>
+              <h2 data-i18n="charts.ili.title">Flu-like illness (NNGYK)</h2>
+              <p class="footer-note" data-i18n="charts.ili.note">Weekly ILI counts from Hungarian sentinel reports.</p>
+            </div>
+            <div class="badge" id="ili-year-badge" data-i18n="status.latestSeason">Latest season</div>
+          </div>
+          <canvas id="ili-chart" aria-label="ILI trend" role="img" data-i18n-attr="aria-label:charts.ili.aria"></canvas>
+        </div>
+        <div class="chart-container">
+          <div class="context-header">
+            <div>
+              <h2 data-i18n="charts.sari.title">SARI hospitalizations</h2>
+              <p class="footer-note" data-i18n="charts.sari.note">Weekly SARI admissions and ICU load from sentinel hospitals.</p>
+            </div>
+            <div class="badge" data-i18n="charts.sari.badge">Hospital trend</div>
+          </div>
+          <canvas id="sari-chart" aria-label="SARI hospitalizations trend" role="img" data-i18n-attr="aria-label:charts.sari.aria"></canvas>
+        </div>
+      </section>
+
+      <section class="card historical-card priority-historical" id="historical-card" hidden>
+        <div class="context-header">
+          <div>
+            <h2 data-i18n="historical.title">Historical trends</h2>
+          </div>
+          <div class="badge" data-i18n="status.latestSeason">Latest season</div>
+        </div>
+        <div class="historical-grid">
+          <div class="chart-container">
+            <div class="chart-subtitle" data-i18n="historical.metrics.ili">Flu-like illness</div>
+            <canvas
+              id="historical-ili-chart"
+              role="img"
+              aria-label="Historical flu-like illness comparison"
+              data-i18n-attr="aria-label:historical.ili.aria"
+            ></canvas>
+            <p class="footer-note" id="historical-ili-delta">Change vs last season: –</p>
+          </div>
+          <div class="chart-container">
+            <div class="chart-subtitle" data-i18n="historical.metrics.sariAdmissions">SARI hospitalizations</div>
+            <canvas
+              id="historical-sari-chart"
+              role="img"
+              aria-label="Historical SARI admissions comparison"
+              data-i18n-attr="aria-label:historical.sari.aria"
+            ></canvas>
+            <p class="footer-note" id="historical-sari-delta">Change vs last season: –</p>
+          </div>
+          <div class="chart-container">
+            <div class="chart-subtitle" data-i18n="historical.metrics.sariIcu">SARI ICU</div>
+            <canvas
+              id="historical-icu-chart"
+              role="img"
+              aria-label="Historical SARI ICU comparison"
+              data-i18n-attr="aria-label:historical.icu.aria"
+            ></canvas>
+            <p class="footer-note" id="historical-icu-delta">Change vs last season: –</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card glance-card" aria-label="Season at a glance" data-i18n-attr="aria-label:glance.aria">
+        <div class="context-header">
+          <div>
+            <h2 data-i18n="glance.title">Season at a glance</h2>
+            <p class="footer-note" data-i18n="glance.note">Latest vs peak and short-term slope (last 3 weeks).</p>
+          </div>
+        </div>
+        <div class="glance-grid">
+          <div class="glance-metric">
+            <div class="glance-label" data-i18n="glance.ili">Flu-like illness</div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.peak">Peak</span>
+              <span class="glance-value" id="glance-ili-peak">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.latest">Latest</span>
+              <span class="glance-value" id="glance-ili-latest">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.slope">3-week slope</span>
+              <span class="glance-value" id="glance-ili-slope">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.wow">WoW change</span>
+              <span class="glance-value" id="glance-ili-wow">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.ili.weeksAbove">Weeks above threshold</span>
+              <span class="glance-value" id="glance-ili-weeks-above">–</span>
+            </div>
+          </div>
+          <div class="glance-metric">
+            <div class="glance-label" data-i18n="glance.sari">SARI hospitalizations</div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.peak">Peak</span>
+              <span class="glance-value" id="glance-sari-peak">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.latest">Latest</span>
+              <span class="glance-value" id="glance-sari-latest">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.slope">3-week slope</span>
+              <span class="glance-value" id="glance-sari-slope">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.wow">WoW change</span>
+              <span class="glance-value" id="glance-sari-wow">–</span>
+            </div>
+          </div>
+          <div class="glance-metric">
+            <div class="glance-label" data-i18n="glance.icu">SARI ICU</div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.peak">Peak</span>
+              <span class="glance-value" id="glance-icu-peak">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.latest">Latest</span>
+              <span class="glance-value" id="glance-icu-latest">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.slope">3-week slope</span>
+              <span class="glance-value" id="glance-icu-slope">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.wow">WoW change</span>
+              <span class="glance-value" id="glance-icu-wow">–</span>
+            </div>
+          </div>
+          <div class="glance-metric">
+            <div class="glance-label" data-i18n="glance.seasonToDate.title">Season-to-date burden</div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.seasonToDate.ili">ILI cumulative</span>
+              <span class="glance-value" id="glance-ili-std">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.seasonToDate.sari">SARI cumulative</span>
+              <span class="glance-value" id="glance-sari-std">–</span>
+            </div>
+          </div>
+          <div class="glance-metric">
+            <div class="glance-label" data-i18n="glance.severity.title">Severity ratios</div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.severity.sariPer100">SARI per 100 ILI</span>
+              <span class="glance-value" id="glance-sari-per-100">–</span>
+            </div>
+            <div class="glance-row">
+              <span class="glance-key" data-i18n="glance.severity.icuShare">ICU share of SARI</span>
+              <span class="glance-value" id="glance-icu-share">–</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="context-grid" aria-label="Virology detections and positivity" data-i18n-attr="aria-label:sections.virology">
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2 data-i18n="viro.detections.title">Sentinel Virus Detections</h2>
+              <p class="footer-note" data-i18n="viro.detections.note">Latest detections among sentinel samples.</p>
+            </div>
+            <div class="chart-controls">
+              <label class="header-picker">
+                <span class="sr-only" data-i18n="controls.pathogen">Pathogen</span>
+                <select
+                  id="viro-virus"
+                  class="select select-compact"
+                  aria-label="Pathogen"
+                  data-i18n-attr="aria-label:controls.pathogen"
+                ></select>
+              </label>
+              <div class="badge" id="viro-week-badge" data-i18n="status.latestWeek">Latest week</div>
+            </div>
+          </div>
+          <ul class="context-list" id="viro-detections" aria-label="Sentinel detections" data-i18n-attr="aria-label:viro.detections.list.aria"></ul>
+          <canvas id="viro-detections-chart" aria-label="Sentinel detections trend" role="img" data-i18n-attr="aria-label:viro.detections.chart.aria"></canvas>
+        </article>
+        <article class="card">
+          <div class="context-header">
+            <div>
+              <h2 data-i18n="viro.positivity.title">Test positivity</h2>
+              <p class="footer-note" data-i18n="viro.positivity.note">Positivity rates in sentinel samples.</p>
+            </div>
+            <div class="badge" data-i18n="viro.badge">Virology</div>
+          </div>
+          <ul class="context-list" id="viro-positivity" aria-label="Sentinel positivity" data-i18n-attr="aria-label:viro.positivity.list.aria"></ul>
+          <canvas id="viro-positivity-chart" aria-label="Sentinel positivity trend" role="img" data-i18n-attr="aria-label:viro.positivity.chart.aria"></canvas>
+        </article>
+      </section>
+
+      <section class="card table-card" aria-label="Weekly table" data-i18n-attr="aria-label:sections.table">
+        <div class="card-header-row card-header-row-baseline">
+          <div>
+            <h2 data-i18n="table.title">Respiratory viruses week-by-week in Hungary</h2>
+            <p class="footer-note" data-i18n="table.note">Click Week or Cases to sort; shows matching SARI and positivity context.</p>
+          </div>
+          <div class="badge" data-i18n="table.badge">Accessible table view</div>
+        </div>
+        <div class="table-scroll" role="region" aria-label="Scrollable table" data-i18n-attr="aria-label:table.scroll.aria">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" id="week-header" class="sortable" tabindex="0" aria-sort="ascending">
+                  <span data-i18n="table.headers.week">Week</span><span class="sort-indicator" aria-hidden="true"></span>
+                </th>
+                <th scope="col" data-i18n="table.headers.virus">Virus</th>
+                <th scope="col" data-i18n="table.headers.region">Region</th>
+                <th scope="col" id="cases-header" class="sortable" tabindex="0" aria-sort="none">
+                  <span data-i18n="table.headers.cases">Cases</span><span class="sort-indicator" aria-hidden="true"></span>
+                </th>
+                <th scope="col" data-i18n="table.headers.sariAdmissions">SARI admissions</th>
+                <th scope="col" data-i18n="table.headers.sariIcu">SARI ICU</th>
+                <th scope="col" data-i18n="table.headers.topPositivity">Top positivity</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section-banner" aria-label="EU/EEA section" data-i18n-attr="aria-label:sections.euBanner.aria">
+        <div class="section-kicker" data-i18n="sections.euBanner.kicker">Section</div>
+        <div>
+          <h2 data-i18n="sections.euBanner.title">EU/EEA</h2>
+          <p class="footer-note" data-i18n="sections.euBanner.note">ECDC ERVISS detections and positivity.</p>
+        </div>
+      </section>
+
+      <section class="eu-stack" aria-label="EU/EEA virology detections and positivity" data-i18n-attr="aria-label:sections.eu">
+        <article class="card card-wide">
+          <div class="context-header">
+            <div>
+              <h2 data-i18n="eu.detections.title">EU/EEA Virus Detections</h2>
+              <p class="footer-note" data-i18n="eu.detections.note">SARI virological detections (ERVISS, EU/EEA).</p>
+            </div>
+            <div class="badge" id="eu-week-badge" data-i18n="status.latestWeek">Latest week</div>
+          </div>
+          <ul class="context-list" id="eu-detections" aria-label="EU detections" data-i18n-attr="aria-label:eu.detections.list.aria"></ul>
+          <canvas id="eu-detections-chart" aria-label="EU detections trend" role="img" data-i18n-attr="aria-label:eu.detections.chart.aria"></canvas>
+        </article>
+        <article class="card card-wide">
+          <div class="context-header">
+            <div>
+              <h2 data-i18n="eu.positivity.title">EU/EEA Test Positivity</h2>
+              <p class="footer-note" data-i18n="eu.positivity.note">Positivity rates in SARI samples (ERVISS, EU/EEA).</p>
+            </div>
+            <div class="badge" data-i18n="eu.badge">EU/EEA</div>
+          </div>
+          <ul class="context-list" id="eu-positivity" aria-label="EU positivity" data-i18n-attr="aria-label:eu.positivity.list.aria"></ul>
+          <canvas id="eu-positivity-chart" aria-label="EU positivity trend" role="img" data-i18n-attr="aria-label:eu.positivity.chart.aria"></canvas>
+        </article>
+      </section>
+
+      <footer class="page-footer" aria-label="Dataset notes" data-i18n-attr="aria-label:sections.dataset">
+        <div>
+          <p id="dataset-description" class="footer-note" data-i18n="dataset.note">
+            Aggregated national respiratory virus surveillance shared by the National Public Health Center.
+          </p>
+          <div class="chip-row" id="chips"></div>
+        </div>
+      </footer>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
