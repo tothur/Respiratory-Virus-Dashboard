@@ -46,6 +46,9 @@ export function buildHistoricalTrendOption({
         legend: "#e2e8f0",
         grid: "rgba(148, 163, 184, 0.16)",
         baseline: "rgba(203, 213, 225, 0.58)",
+        sliderBorder: "rgba(148, 163, 184, 0.35)",
+        sliderFill: "rgba(59, 130, 246, 0.35)",
+        sliderText: "#cbd5e1",
         legendBg: "rgba(15, 23, 42, 0.82)",
         legendBorder: "rgba(148, 163, 184, 0.32)",
         currentWeekLine: "rgba(125, 211, 252, 0.55)",
@@ -59,6 +62,9 @@ export function buildHistoricalTrendOption({
         legend: "#0f172a",
         grid: "rgba(15, 23, 42, 0.1)",
         baseline: "rgba(15, 23, 42, 0.52)",
+        sliderBorder: "rgba(15, 23, 42, 0.18)",
+        sliderFill: "rgba(37, 99, 235, 0.20)",
+        sliderText: "#475569",
         legendBg: "rgba(248, 250, 252, 0.92)",
         legendBorder: "rgba(148, 163, 184, 0.38)",
         currentWeekLine: "rgba(37, 99, 235, 0.45)",
@@ -83,6 +89,22 @@ export function buildHistoricalTrendOption({
         startValue: xLabels[startIndex],
         endValue: xLabels[xLabels.length - 1],
       },
+      {
+        type: "slider",
+        xAxisIndex: 0,
+        bottom: 8,
+        height: 18,
+        startValue: xLabels[startIndex],
+        endValue: xLabels[xLabels.length - 1],
+        brushSelect: false,
+        showDataShadow: false,
+        borderColor: palette.sliderBorder,
+        fillerColor: palette.sliderFill,
+        moveHandleSize: 6,
+        textStyle: {
+          color: palette.sliderText,
+        },
+      },
     ];
   }
 
@@ -92,7 +114,7 @@ export function buildHistoricalTrendOption({
     grid: {
       top: compact ? 36 : 72,
       right: 18,
-      bottom: compact ? 26 : 46,
+      bottom: compact && dataZoom ? 58 : 46,
       left: 50,
     },
     tooltip: {
