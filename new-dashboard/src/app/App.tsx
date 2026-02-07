@@ -250,6 +250,9 @@ const STRINGS = {
     historicalDelta: "Latest delta: {value}",
     historicalUnavailable: "Historical comparison is unavailable because the previous season is missing from the loaded data source.",
     warningsTitle: "Data warnings",
+    footerLastUpdateTitle: "Last data refresh",
+    footerLastUpdateLoading: "Loading data...",
+    footerLastUpdateContext: "Reporting context: NNGYK {iliWeek} · ERVISS {euWeek}",
     noDataShort: "No data",
     regionNational: "National",
   },
@@ -419,6 +422,9 @@ const STRINGS = {
     historicalDelta: "Legfrissebb eltérés: {value}",
     historicalUnavailable: "A történeti összevetés nem érhető el, mert hiányzik az előző szezon a betöltött adatforrásból.",
     warningsTitle: "Adat figyelmeztetések",
+    footerLastUpdateTitle: "Adatfrissítés ideje",
+    footerLastUpdateLoading: "Adatok betöltése...",
+    footerLastUpdateContext: "Jelentési kontextus: NNGYK {iliWeek} · ERVISS {euWeek}",
     noDataShort: "Nincs adat",
     regionNational: "Országos",
   },
@@ -457,6 +463,18 @@ function formatWeekToken(label: string, language: Language): string {
   if (!match) return label;
   const code = String(Number(match[1])).padStart(2, "0");
   return language === "hu" ? `H${code}` : `W${code}`;
+}
+
+function formatDateTime(value: Date, language: Language): string {
+  const locale = language === "hu" ? "hu-HU" : "en-US";
+  return new Intl.DateTimeFormat(locale, {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  }).format(value);
 }
 
 function resolvePathogenFamily(virus: string | null | undefined): PathogenFamily {
@@ -834,6 +852,7 @@ export function App() {
   const [tableSortColumn, setTableSortColumn] = useState<SortColumn>("week");
   const [tableSortDirection, setTableSortDirection] = useState<SortDirection>("asc");
   const [isDataLoading, setIsDataLoading] = useState<boolean>(true);
+  const [dataLoadedAt, setDataLoadedAt] = useState<Date | null>(null);
   const [isSentinelVirologyOpen, setIsSentinelVirologyOpen] = useState<boolean>(true);
   const [isSeasonGlanceOpen, setIsSeasonGlanceOpen] = useState<boolean>(true);
   const [isWeeklyTableOpen, setIsWeeklyTableOpen] = useState<boolean>(true);
@@ -882,7 +901,10 @@ export function App() {
         if (!active) return;
         setDataSource(createBundledDataSource("Runtime loading failed; using bundled sample."));
       } finally {
-        if (active) setIsDataLoading(false);
+        if (active) {
+          setIsDataLoading(false);
+          setDataLoadedAt(new Date());
+        }
       }
     })();
     return () => {
@@ -1748,6 +1770,12 @@ export function App() {
       : `${Math.round(epidemiology.quality.coverageRatio * 100).toLocaleString()}%`;
   const baselineSampleLabel =
     epidemiology.iliMetric.baseline.baselineCount > 0 ? epidemiology.iliMetric.baseline.baselineCount.toLocaleString() : "–";
+  const dataLastUpdateLabel = isDataLoading
+    ? t.footerLastUpdateLoading
+    : dataLoadedAt
+      ? formatDateTime(dataLoadedAt, language)
+      : t.noDataShort;
+  const dataLastUpdateContext = formatText(t.footerLastUpdateContext, { iliWeek: iliLatestWeekLabel, euWeek: latestEuWeekLabel });
 
   return (
     <div className={`app-shell theme-${resolvedTheme}`}>
@@ -1956,83 +1984,6 @@ export function App() {
             </strong>
           </article>
         </section>
-      </section>
-
-      <section className="quality-section" aria-label={t.rigorAria}>
-        <header className="quality-header">
-          <h2>{t.rigorTitle}</h2>
-          <p>{t.rigorNote}</p>
-        </header>
-
-        <div className="quality-grid">
-          <article
-            className={`quality-card ${qualityCardClass(
-              epidemiology.iliMetric.baseline.zScore != null && Math.abs(epidemiology.iliMetric.baseline.zScore) >= 2 ? "moderate" : "good"
-            )}`}
-          >
-            <h3>{t.rigorIliRateCard}</h3>
-            <strong>{formatRatePer100kLabel(epidemiology.iliMetric.ratePer100k, t.rigorPer100kSuffix)}</strong>
-            <p>
-              {t.rigorWoW}: {formatSignedPercent(epidemiology.iliMetric.weekOverWeekPercent)} · {t.rigorZScore}:{" "}
-              {formatZScore(epidemiology.iliMetric.baseline.zScore)}
-            </p>
-            <p>
-              {t.rigorBaselineSample}: {baselineSampleLabel}
-              {epidemiology.iliMetric.baseline.baselineMean != null
-                ? ` · ${t.rigorBaselineMean}: ${formatRatePer100kLabel(
-                    ratePer100k(epidemiology.iliMetric.baseline.baselineMean),
-                    t.rigorPer100kSuffix
-                  )}`
-                : ""}
-            </p>
-          </article>
-
-          <article
-            className={`quality-card ${qualityCardClass(
-              epidemiology.sariMetric.baseline.zScore != null && Math.abs(epidemiology.sariMetric.baseline.zScore) >= 2 ? "moderate" : "good"
-            )}`}
-          >
-            <h3>{t.rigorSariRateCard}</h3>
-            <strong>{formatRatePer100kLabel(epidemiology.sariMetric.ratePer100k, t.rigorPer100kSuffix)}</strong>
-            <p>
-              {t.rigorWoW}: {formatSignedPercent(epidemiology.sariMetric.weekOverWeekPercent)} · {t.rigorZScore}:{" "}
-              {formatZScore(epidemiology.sariMetric.baseline.zScore)}
-            </p>
-            <p>{t.rigorBaselineSample}: {epidemiology.sariMetric.baseline.baselineCount.toLocaleString()}</p>
-          </article>
-
-          <article className={`quality-card ${qualityCardClass(epidemiology.quality.ageLevel)}`}>
-            <h3>{t.rigorAgeSplitTitle}</h3>
-            {epidemiology.ageSplit ? (
-              <>
-                <strong>{formatWeek(epidemiology.ageSplit.week, language)}</strong>
-                <div className="age-split-grid">
-                  <span>{t.rigorAge0to14}: {epidemiology.ageSplit.age0to14.toFixed(1)}%</span>
-                  <span>{t.rigorAge15to34}: {epidemiology.ageSplit.age15to34.toFixed(1)}%</span>
-                  <span>{t.rigorAge35to59}: {epidemiology.ageSplit.age35to59.toFixed(1)}%</span>
-                  <span>{t.rigorAge60plus}: {epidemiology.ageSplit.age60plus.toFixed(1)}%</span>
-                </div>
-              </>
-            ) : (
-              <p>{t.rigorAgeMissing}</p>
-            )}
-          </article>
-
-          <article className={`quality-card ${qualityCardClass(epidemiology.quality.coverageLevel)}`}>
-            <h3>{t.rigorQualityTitle}</h3>
-            <div className="rigor-quality-list">
-              <span className={`rigor-pill ${qualityCardClass(epidemiology.quality.coverageLevel)}`}>
-                {t.rigorQualityCoverage}: {qualityLabelFor(epidemiology.quality.coverageLevel)} ({coveragePercentLabel})
-              </span>
-              <span className={`rigor-pill ${qualityCardClass(epidemiology.quality.baselineLevel)}`}>
-                {t.rigorQualityBaseline}: {qualityLabelFor(epidemiology.quality.baselineLevel)} (n={epidemiology.quality.baselineCount})
-              </span>
-              <span className={`rigor-pill ${qualityCardClass(epidemiology.quality.ageLevel)}`}>
-                {t.rigorQualityAge}: {qualityLabelFor(epidemiology.quality.ageLevel)}
-              </span>
-            </div>
-          </article>
-        </div>
       </section>
 
       <section id="hu-ili-sari-charts" className="charts-grid">
@@ -2321,6 +2272,83 @@ export function App() {
         ) : null}
       </section>
 
+      <section className="quality-section" aria-label={t.rigorAria}>
+        <header className="quality-header">
+          <h2>{t.rigorTitle}</h2>
+          <p>{t.rigorNote}</p>
+        </header>
+
+        <div className="quality-grid">
+          <article
+            className={`quality-card ${qualityCardClass(
+              epidemiology.iliMetric.baseline.zScore != null && Math.abs(epidemiology.iliMetric.baseline.zScore) >= 2 ? "moderate" : "good"
+            )}`}
+          >
+            <h3>{t.rigorIliRateCard}</h3>
+            <strong>{formatRatePer100kLabel(epidemiology.iliMetric.ratePer100k, t.rigorPer100kSuffix)}</strong>
+            <p>
+              {t.rigorWoW}: {formatSignedPercent(epidemiology.iliMetric.weekOverWeekPercent)} · {t.rigorZScore}:{" "}
+              {formatZScore(epidemiology.iliMetric.baseline.zScore)}
+            </p>
+            <p>
+              {t.rigorBaselineSample}: {baselineSampleLabel}
+              {epidemiology.iliMetric.baseline.baselineMean != null
+                ? ` · ${t.rigorBaselineMean}: ${formatRatePer100kLabel(
+                    ratePer100k(epidemiology.iliMetric.baseline.baselineMean),
+                    t.rigorPer100kSuffix
+                  )}`
+                : ""}
+            </p>
+          </article>
+
+          <article
+            className={`quality-card ${qualityCardClass(
+              epidemiology.sariMetric.baseline.zScore != null && Math.abs(epidemiology.sariMetric.baseline.zScore) >= 2 ? "moderate" : "good"
+            )}`}
+          >
+            <h3>{t.rigorSariRateCard}</h3>
+            <strong>{formatRatePer100kLabel(epidemiology.sariMetric.ratePer100k, t.rigorPer100kSuffix)}</strong>
+            <p>
+              {t.rigorWoW}: {formatSignedPercent(epidemiology.sariMetric.weekOverWeekPercent)} · {t.rigorZScore}:{" "}
+              {formatZScore(epidemiology.sariMetric.baseline.zScore)}
+            </p>
+            <p>{t.rigorBaselineSample}: {epidemiology.sariMetric.baseline.baselineCount.toLocaleString()}</p>
+          </article>
+
+          <article className={`quality-card ${qualityCardClass(epidemiology.quality.ageLevel)}`}>
+            <h3>{t.rigorAgeSplitTitle}</h3>
+            {epidemiology.ageSplit ? (
+              <>
+                <strong>{formatWeek(epidemiology.ageSplit.week, language)}</strong>
+                <div className="age-split-grid">
+                  <span>{t.rigorAge0to14}: {epidemiology.ageSplit.age0to14.toFixed(1)}%</span>
+                  <span>{t.rigorAge15to34}: {epidemiology.ageSplit.age15to34.toFixed(1)}%</span>
+                  <span>{t.rigorAge35to59}: {epidemiology.ageSplit.age35to59.toFixed(1)}%</span>
+                  <span>{t.rigorAge60plus}: {epidemiology.ageSplit.age60plus.toFixed(1)}%</span>
+                </div>
+              </>
+            ) : (
+              <p>{t.rigorAgeMissing}</p>
+            )}
+          </article>
+
+          <article className={`quality-card ${qualityCardClass(epidemiology.quality.coverageLevel)}`}>
+            <h3>{t.rigorQualityTitle}</h3>
+            <div className="rigor-quality-list">
+              <span className={`rigor-pill ${qualityCardClass(epidemiology.quality.coverageLevel)}`}>
+                {t.rigorQualityCoverage}: {qualityLabelFor(epidemiology.quality.coverageLevel)} ({coveragePercentLabel})
+              </span>
+              <span className={`rigor-pill ${qualityCardClass(epidemiology.quality.baselineLevel)}`}>
+                {t.rigorQualityBaseline}: {qualityLabelFor(epidemiology.quality.baselineLevel)} (n={epidemiology.quality.baselineCount})
+              </span>
+              <span className={`rigor-pill ${qualityCardClass(epidemiology.quality.ageLevel)}`}>
+                {t.rigorQualityAge}: {qualityLabelFor(epidemiology.quality.ageLevel)}
+              </span>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section className="table-section collapsible-section" aria-label={t.tableAria}>
         <header className="table-header">
           <div>
@@ -2544,6 +2572,12 @@ export function App() {
             <strong>{t.warningsTitle}:</strong> {snapshot.warnings.join(" · ")}
           </p>
         ) : null}
+
+        <article className="footer-update-card" role="status" aria-live="polite">
+          <h3>{t.footerLastUpdateTitle}</h3>
+          <strong>{dataLastUpdateLabel}</strong>
+          <p>{dataLastUpdateContext}</p>
+        </article>
       </footer>
     </div>
   );
