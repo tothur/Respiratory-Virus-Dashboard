@@ -845,17 +845,19 @@ h3 {
 
 .footer-update-card {
   margin-top: 4px;
+  width: min(100%, 520px);
+  justify-self: start;
   border: 1px solid rgba(37, 99, 235, 0.3);
   border-radius: var(--radius);
   background: linear-gradient(145deg, rgba(37, 99, 235, 0.16), rgba(255, 255, 255, 0.95));
   box-shadow: var(--shadow-1);
-  padding: 14px 16px;
+  padding: 10px 12px;
 }
 
 .footer-update-card h3 {
   margin: 0;
   color: #1e3a8a;
-  font-size: 0.8rem;
+  font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.01em;
   text-transform: uppercase;
@@ -863,17 +865,17 @@ h3 {
 
 .footer-update-card strong {
   display: block;
-  margin-top: 8px;
-  font-size: clamp(1.05rem, 1.9vw, 1.35rem);
+  margin-top: 6px;
+  font-size: clamp(0.98rem, 1.6vw, 1.18rem);
   line-height: 1.1;
   letter-spacing: -0.012em;
   color: #0f172a;
 }
 
 .footer-update-card p {
-  margin: 8px 0 0;
+  margin: 6px 0 0;
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   line-height: 1.35;
 }
 
