@@ -16,6 +16,7 @@ const STORAGE_THEME_KEY = "rvd-theme";
 type SortColumn = "week" | "cases";
 type SortDirection = "asc" | "desc";
 type TrendDirection = "surging" | "declining" | "flat";
+type VirusTone = "flu" | "rsv" | "cov" | "hmpv" | "other";
 type Language = "en" | "hu";
 type ThemeMode = "system" | "dark" | "light";
 type ResolvedTheme = "dark" | "light";
@@ -75,6 +76,8 @@ const STRINGS = {
     themeSystem: "System",
     themeDark: "Dark",
     themeLight: "Light",
+    sectionCollapse: "Collapse",
+    sectionExpand: "Expand",
     sourceTitle: "Data source",
     sourceLive: "Live source: nngyk_all.json",
     sourceFallback: "Fallback source: bundled sample",
@@ -86,6 +89,8 @@ const STRINGS = {
     sectionEuNote: "ECDC ERVISS sentinel virology context.",
     alertsAria: "Key alerts",
     signalTitle: "Seasonal influenza threshold",
+    signalEpidemicYes: "Influenza epidemic ongoing",
+    signalEpidemicNo: "No influenza epidemic",
     signalAbove: "Above threshold",
     signalBelow: "Below threshold",
     fluTextAbove: "Week {week}: ILI activity ({cases} cases) is above the alert threshold ({threshold}).",
@@ -200,6 +205,8 @@ const STRINGS = {
     themeSystem: "Rendszer",
     themeDark: "Sötét",
     themeLight: "Világos",
+    sectionCollapse: "Összecsuk",
+    sectionExpand: "Kinyit",
     sourceTitle: "Adatforrás",
     sourceLive: "Élő forrás: nngyk_all.json",
     sourceFallback: "Tartalék forrás: beépített minta",
@@ -211,6 +218,8 @@ const STRINGS = {
     sectionEuNote: "ECDC ERVISS sentinel virológiai kontextus.",
     alertsAria: "Fő riasztások",
     signalTitle: "Szezonális influenzaküszöb",
+    signalEpidemicYes: "Influenza járvány van",
+    signalEpidemicNo: "Nincs influenza járvány",
     signalAbove: "Küszöb felett",
     signalBelow: "Küszöb alatt",
     fluTextAbove: "{week}. hét: az ILI aktivitás ({cases} eset) meghaladja a riasztási küszöböt ({threshold}).",
@@ -542,6 +551,34 @@ function formatSurgeLabel(
   })})`;
 }
 
+function resolveVirusTone(virus: string | null | undefined): VirusTone {
+  const normalized = String(virus ?? "").toLowerCase();
+  if (!normalized) return "other";
+  if (normalized.includes("sars") || normalized.includes("cov")) return "cov";
+  if (normalized.includes("rsv")) return "rsv";
+  if (normalized.includes("hmpv")) return "hmpv";
+  if (normalized.includes("influenza")) return "flu";
+  return "other";
+}
+
+function VirusIcon({ tone }: { tone: VirusTone }) {
+  return (
+    <span className={`virus-icon tone-${tone}`} aria-hidden="true">
+      <svg viewBox="0 0 24 24" focusable="false">
+        <circle cx="12" cy="12" r="4.5" />
+        <line x1="12" y1="2.5" x2="12" y2="5.8" />
+        <line x1="12" y1="18.2" x2="12" y2="21.5" />
+        <line x1="2.5" y1="12" x2="5.8" y2="12" />
+        <line x1="18.2" y1="12" x2="21.5" y2="12" />
+        <line x1="5.3" y1="5.3" x2="7.8" y2="7.8" />
+        <line x1="16.2" y1="16.2" x2="18.7" y2="18.7" />
+        <line x1="18.7" y1="5.3" x2="16.2" y2="7.8" />
+        <line x1="7.8" y1="16.2" x2="5.3" y2="18.7" />
+      </svg>
+    </span>
+  );
+}
+
 function useCompactViewport(maxWidth = 820): boolean {
   const query = `(max-width: ${maxWidth}px)`;
   const [compact, setCompact] = useState<boolean>(() => {
@@ -582,6 +619,11 @@ export function App() {
   const [tableSortColumn, setTableSortColumn] = useState<SortColumn>("week");
   const [tableSortDirection, setTableSortDirection] = useState<SortDirection>("asc");
   const [isDataLoading, setIsDataLoading] = useState<boolean>(true);
+  const [isSentinelVirologyOpen, setIsSentinelVirologyOpen] = useState<boolean>(true);
+  const [isSeasonGlanceOpen, setIsSeasonGlanceOpen] = useState<boolean>(true);
+  const [isWeeklyTableOpen, setIsWeeklyTableOpen] = useState<boolean>(true);
+  const [isHungarySectionOpen, setIsHungarySectionOpen] = useState<boolean>(true);
+  const [isEuSectionOpen, setIsEuSectionOpen] = useState<boolean>(true);
 
   const text = STRINGS[language];
   const t = text;
@@ -1158,13 +1200,13 @@ export function App() {
 
   const isAboveThreshold = snapshot.stats.latestIliCases >= snapshot.iliThreshold;
   const signalClassName = isAboveThreshold ? "critical" : "ok";
+  const signalHeadline = isAboveThreshold ? t.signalEpidemicYes : t.signalEpidemicNo;
   const fluAlertText = formatText(isAboveThreshold ? t.fluTextAbove : t.fluTextBelow, {
     week: formatWeek(snapshot.stats.latestWeek),
     cases: snapshot.stats.latestIliCases.toLocaleString(),
     threshold: snapshot.iliThreshold.toLocaleString(),
   });
-  const fluAlertChip = isAboveThreshold ? t.fluChipAbove : t.fluChipBelow;
-  const sourceChipClass = dataSource.source === "nngyk_all" ? "source-chip live" : "source-chip sample";
+  const sourceChipTone = dataSource.source === "nngyk_all" ? "live" : "sample";
   const sourceLabel = dataSource.source === "nngyk_all" ? t.sourceLive : t.sourceFallback;
   const latestVirologyWeekLabel = snapshot.virology.latestWeek == null ? "–" : formatWeek(snapshot.virology.latestWeek);
   const latestEuWeekLabel =
@@ -1178,6 +1220,8 @@ export function App() {
         pos: huLeader.positivity.toFixed(1),
       })
     : t.alertsLoadingPos;
+  const huLeaderVirus = huLeader ? displayVirusLabel(huLeader.virus, language) : t.noDataShort;
+  const huLeaderTone = huLeader ? resolveVirusTone(huLeader.virus) : "other";
   const euLeaderText = euLeader
     ? formatText(t.leaderEuText, {
         week: formatWeek(euLeader.week),
@@ -1186,6 +1230,8 @@ export function App() {
         pos: euLeader.positivity.toFixed(1),
       })
     : t.alertsLoadingEuPos;
+  const euLeaderVirus = euLeader ? displayVirusLabel(euLeader.virus, language) : t.noDataShort;
+  const euLeaderTone = euLeader ? resolveVirusTone(euLeader.virus) : "other";
 
   return (
     <div className={`app-shell theme-${resolvedTheme}`}>
@@ -1195,258 +1241,143 @@ export function App() {
           <p className="subtitle">{t.appSubtitle}</p>
         </div>
         <div className="controls">
-          <label htmlFor="year-select">{t.season}</label>
-          <select
-            id="year-select"
-            value={snapshot.selectedYear}
-            onChange={(event) => setSelectedYear(Number(event.target.value))}
-          >
-            {snapshot.availableYears.map((year) => (
-              <option key={year} value={year}>
-                {year}-{year + 1}
-              </option>
-            ))}
-          </select>
-          <label htmlFor="lang-select">{t.language}</label>
-          <select id="lang-select" value={language} onChange={(event) => setLanguage(normalizeLanguage(event.target.value))}>
-            <option value="en">English</option>
-            <option value="hu">Magyar</option>
-          </select>
-          <label htmlFor="theme-select">{t.theme}</label>
-          <select id="theme-select" value={themeMode} onChange={(event) => setThemeMode(normalizeThemeMode(event.target.value))}>
-            <option value="system">{t.themeSystem}</option>
-            <option value="dark">{t.themeDark}</option>
-            <option value="light">{t.themeLight}</option>
-          </select>
+          <div className="control-group">
+            <label htmlFor="year-select">{t.season}</label>
+            <select
+              id="year-select"
+              value={snapshot.selectedYear}
+              onChange={(event) => setSelectedYear(Number(event.target.value))}
+            >
+              {snapshot.availableYears.map((year) => (
+                <option key={year} value={year}>
+                  {year}-{year + 1}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="control-group">
+            <label htmlFor="lang-select">{t.language}</label>
+            <select id="lang-select" value={language} onChange={(event) => setLanguage(normalizeLanguage(event.target.value))}>
+              <option value="en">English</option>
+              <option value="hu">Magyar</option>
+            </select>
+          </div>
+          <div className="control-group">
+            <label htmlFor="theme-select">{t.theme}</label>
+            <select id="theme-select" value={themeMode} onChange={(event) => setThemeMode(normalizeThemeMode(event.target.value))}>
+              <option value="system">{t.themeSystem}</option>
+              <option value="dark">{t.themeDark}</option>
+              <option value="light">{t.themeLight}</option>
+            </select>
+          </div>
         </div>
       </header>
 
       <section className="alerts-grid" aria-label={t.alertsAria}>
-        <article className={`alert-card primary ${signalClassName}`} role="status" aria-live="polite">
-          <div className="alert-card-header">
-            <h2>{t.signalTitle}</h2>
-            <span className="alert-chip">{fluAlertChip}</span>
-          </div>
+        <article className={`alert-card primary epidemic ${signalClassName}`} role="status" aria-live="polite">
+          <h2>
+            {isAboveThreshold ? (
+              <span className="alert-status-icon" aria-hidden="true">
+                !
+              </span>
+            ) : null}
+            <span>{signalHeadline}</span>
+          </h2>
           <p>{fluAlertText}</p>
         </article>
-        <article className="alert-card leader" role="status" aria-live="polite">
-          <div className="alert-card-header">
-            <h2>{t.leaderHuTitle}</h2>
-            <span className="alert-chip">{huLeader ? displayVirusLabel(huLeader.virus, language) : t.noDataShort}</span>
+        <article className="alert-card leader summary" role="status" aria-live="polite">
+          <h2>{t.leaderHuTitle}</h2>
+          <div className="alert-emphasis-row">
+            {huLeader ? <VirusIcon tone={huLeaderTone} /> : null}
+            <strong className="alert-emphasis">{huLeaderVirus}</strong>
           </div>
           <p>{huLeaderText}</p>
         </article>
-        <article className="alert-card leader" role="status" aria-live="polite">
-          <div className="alert-card-header">
-            <h2>{t.leaderEuTitle}</h2>
-            <span className="alert-chip">{euLeader ? displayVirusLabel(euLeader.virus, language) : t.noDataShort}</span>
+        <article className="alert-card leader summary" role="status" aria-live="polite">
+          <h2>{t.leaderEuTitle}</h2>
+          <div className="alert-emphasis-row">
+            {euLeader ? <VirusIcon tone={euLeaderTone} /> : null}
+            <strong className="alert-emphasis">{euLeaderVirus}</strong>
           </div>
           <p>{euLeaderText}</p>
         </article>
       </section>
 
-      <section className={sourceChipClass} role="status" aria-live="polite">
-        <h2>{t.sourceTitle}</h2>
-        <p>
-          {sourceLabel}
-          {isDataLoading ? ` (${t.sourceLoading})` : ""}
-        </p>
-      </section>
+      <section className="region-block hu-block" aria-label={t.sectionHuTitle}>
+        <section className="region-divider hu" aria-label={t.sectionHuTitle}>
+          <div className="region-divider-main">
+            <span className="region-divider-kicker">{t.sectionKicker}</span>
+            <div>
+              <h2>{t.sectionHuTitle}</h2>
+              <p>{t.sectionHuNote}</p>
+            </div>
+          </div>
+          <button
+            type="button"
+            className="section-toggle region-toggle"
+            aria-expanded={isHungarySectionOpen}
+            aria-controls="hu-region-content"
+            aria-label={`${isHungarySectionOpen ? t.sectionCollapse : t.sectionExpand}: ${t.sectionHuTitle}`}
+            onClick={() => setIsHungarySectionOpen((open) => !open)}
+          >
+            <span className={`section-toggle-icon ${isHungarySectionOpen ? "open" : ""}`} aria-hidden="true">
+              ▾
+            </span>
+            <span>{isHungarySectionOpen ? t.sectionCollapse : t.sectionExpand}</span>
+          </button>
+        </section>
 
-      <section className="region-divider hu" aria-label={t.sectionHuTitle}>
-        <span className="region-divider-kicker">{t.sectionKicker}</span>
-        <div>
-          <h2>{t.sectionHuTitle}</h2>
-          <p>{t.sectionHuNote}</p>
-        </div>
-      </section>
+        {isHungarySectionOpen ? (
+          <div id="hu-region-content" className="region-content">
+      <section className="briefing-grid">
+        <section className="surge-section" aria-label={t.trendAria}>
+          <header className="surge-header">
+            <h2>{t.trendTitle}</h2>
+            <p>{t.trendNote}</p>
+          </header>
+          <ul className="surge-list">
+            {surgeSignals.length ? (
+              surgeSignals.map((signal) => (
+                <li key={signal.virus} className={`surge-item trend-${signal.direction}`}>
+                  <div>
+                    <strong>{displayVirusLabel(signal.virus, language)}</strong>
+                    <span>{signal.week != null ? formatWeek(signal.week) : "–"}</span>
+                  </div>
+                  <span className="pill">{signal.label}</span>
+                </li>
+              ))
+            ) : (
+              <li className="surge-empty">{t.trendEmpty}</li>
+            )}
+          </ul>
+        </section>
 
-      <section className="quality-grid" aria-label={t.coverageAria}>
-        <article className="quality-card">
-          <h3>{t.coverageNngyk}</h3>
-          <strong>{iliLatestWeekLabel}</strong>
-          <p>{t.coverageNngykNote}</p>
-        </article>
-        <article className="quality-card">
-          <h3>{t.coverageSari}</h3>
-          <strong>{sariLatestWeekLabel}</strong>
-          <p>{t.coverageSariNote}</p>
-        </article>
-        <article className="quality-card">
-          <h3>{t.coverageErviss}</h3>
-          <strong>{latestEuWeekLabel}</strong>
-          <p>{t.coverageErvissNote}</p>
-        </article>
-        <article className={`quality-card ${iliMissingWeeks.length + sariMissingWeeks.length ? "warn" : "ok"}`}>
-          <h3>{t.coverageMissing}</h3>
-          <strong>
-            {iliMissingWeeks.length}/{sariMissingWeeks.length}
-          </strong>
-          <p>{t.coverageMissingNote}</p>
-        </article>
-      </section>
-
-      <section className="surge-section" aria-label={t.trendAria}>
-        <header className="surge-header">
-          <h2>{t.trendTitle}</h2>
-          <p>{t.trendNote}</p>
-        </header>
-        <ul className="surge-list">
-          {surgeSignals.length ? (
-            surgeSignals.map((signal) => (
-              <li key={signal.virus} className={`surge-item trend-${signal.direction}`}>
-                <div>
-                  <strong>{displayVirusLabel(signal.virus, language)}</strong>
-                  <span>{signal.week != null ? formatWeek(signal.week) : "–"}</span>
-                </div>
-                <span className="pill">{signal.label}</span>
-              </li>
-            ))
-          ) : (
-            <li className="surge-empty">{t.trendEmpty}</li>
-          )}
-        </ul>
-      </section>
-
-      <section className="glance-section" aria-label={t.glanceAria}>
-        <header className="glance-header">
-          <h2>{t.glanceTitle}</h2>
-          <p>{t.glanceNote}</p>
-        </header>
-        <div className="glance-grid">
-          <article className="glance-card">
-            <h3>{t.glanceIli}</h3>
-            <div className="glance-row">
-              <span className="glance-key">{t.glancePeak}</span>
-              <span className="glance-value">{formatGlanceLine(seasonAtGlance.iliGlance?.peak ?? null)}</span>
-            </div>
-            <div className="glance-row">
-              <span className="glance-key">{t.glanceLatest}</span>
-              <span className="glance-value">{formatGlanceLatest(seasonAtGlance.iliGlance)}</span>
-            </div>
-            <div className="glance-row">
-              <span className="glance-key">{t.glanceSlope}</span>
-              <span className="glance-value">{formatSlopePerWeek(seasonAtGlance.iliGlance?.slope ?? null)}</span>
-            </div>
-            <div className="glance-row">
-              <span className="glance-key">{t.glanceWow}</span>
-              <span className="glance-value">{formatSignedPercent(seasonAtGlance.iliWow)}</span>
-            </div>
-            <div className="glance-row">
-              <span className="glance-key">{t.glanceWeeksAbove}</span>
-              <span className="glance-value">
-                {snapshot.iliSeries.length ? seasonAtGlance.weeksAboveThreshold.toLocaleString() : "–"}
-              </span>
-            </div>
+        <section className="stats-grid briefing-stats-grid">
+          <article className="stat-card">
+            <h3>{t.statsTotalIli}</h3>
+            <strong>{snapshot.stats.totalIliCases.toLocaleString()}</strong>
           </article>
-          <article className="glance-card">
-            <h3>{t.glanceSari}</h3>
-            <div className="glance-row">
-              <span className="glance-key">{t.glancePeak}</span>
-              <span className="glance-value">{formatGlanceLine(seasonAtGlance.sariGlance?.peak ?? null)}</span>
-            </div>
-            <div className="glance-row">
-              <span className="glance-key">{t.glanceLatest}</span>
-              <span className="glance-value">{formatGlanceLatest(seasonAtGlance.sariGlance)}</span>
-            </div>
-            <div className="glance-row">
-              <span className="glance-key">{t.glanceSlope}</span>
-              <span className="glance-value">{formatSlopePerWeek(seasonAtGlance.sariGlance?.slope ?? null)}</span>
-            </div>
-            <div className="glance-row">
-              <span className="glance-key">{t.glanceWow}</span>
-              <span className="glance-value">{formatSignedPercent(seasonAtGlance.sariWow)}</span>
-            </div>
+          <article className="stat-card">
+            <h3>{t.statsPeakIli}</h3>
+            <strong>
+              {formatWeek(snapshot.stats.peakIliWeek)} / {snapshot.stats.peakIliCases?.toLocaleString() ?? "-"}
+            </strong>
           </article>
-          <article className="glance-card">
-            <h3>{t.glanceIcu}</h3>
-            <div className="glance-row">
-              <span className="glance-key">{t.glancePeak}</span>
-              <span className="glance-value">{formatGlanceLine(seasonAtGlance.icuGlance?.peak ?? null)}</span>
-            </div>
-            <div className="glance-row">
-              <span className="glance-key">{t.glanceLatest}</span>
-              <span className="glance-value">{formatGlanceLatest(seasonAtGlance.icuGlance)}</span>
-            </div>
-            <div className="glance-row">
-              <span className="glance-key">{t.glanceSlope}</span>
-              <span className="glance-value">{formatSlopePerWeek(seasonAtGlance.icuGlance?.slope ?? null)}</span>
-            </div>
-            <div className="glance-row">
-              <span className="glance-key">{t.glanceWow}</span>
-              <span className="glance-value">{formatSignedPercent(seasonAtGlance.icuWow)}</span>
-            </div>
+          <article className="stat-card">
+            <h3>{t.statsFirstCrossing}</h3>
+            <strong>{formatWeek(snapshot.stats.firstIliThresholdCrossingWeek)}</strong>
           </article>
-          <article className="glance-card">
-            <h3>{t.glanceStdTitle}</h3>
-            <div className="glance-row">
-              <span className="glance-key">{t.glanceStdIli}</span>
-              <span className="glance-value">
-                {formatSeasonToDateValue(seasonAtGlance.iliSeasonToDate, {
-                  noBaseline: t.stdNoBaseline,
-                  median: t.stdMedian,
-                  lastSeason: t.stdLastSeason,
-                })}
-              </span>
-            </div>
-            <div className="glance-row">
-              <span className="glance-key">{t.glanceStdSari}</span>
-              <span className="glance-value">
-                {formatSeasonToDateValue(seasonAtGlance.sariSeasonToDate, {
-                  noBaseline: t.stdNoBaseline,
-                  median: t.stdMedian,
-                  lastSeason: t.stdLastSeason,
-                })}
-              </span>
-            </div>
+          <article className="stat-card">
+            <h3>{t.statsWeeksAbove}</h3>
+            <strong>{snapshot.stats.weeksAboveIliThreshold.toLocaleString()}</strong>
           </article>
-          <article className="glance-card">
-            <h3>{t.glanceSeverityTitle}</h3>
-            <div className="glance-row">
-              <span className="glance-key">{t.glanceSeveritySari}</span>
-              <span className="glance-value">
-                {seasonAtGlance.severity
-                  ? `${formatWeek(seasonAtGlance.severity.week)}: ${seasonAtGlance.severity.sariPercent.toFixed(1)}%`
-                  : "–"}
-              </span>
-            </div>
-            <div className="glance-row">
-              <span className="glance-key">{t.glanceSeverityIcu}</span>
-              <span className="glance-value">
-                {seasonAtGlance.severity && Number.isFinite(seasonAtGlance.severity.icuShare)
-                  ? `${formatWeek(seasonAtGlance.severity.week)}: ${Number(seasonAtGlance.severity.icuShare).toFixed(1)}%`
-                  : "–"}
-              </span>
-            </div>
+          <article className="stat-card">
+            <h3>{t.statsLatestSari}</h3>
+            <strong>
+              {snapshot.stats.latestSariAdmissions ?? "-"} / {snapshot.stats.latestSariIcu ?? "-"}
+            </strong>
           </article>
-        </div>
-      </section>
-
-      <section className="stats-grid">
-        <article className="stat-card">
-          <h3>{t.statsTotalIli}</h3>
-          <strong>{snapshot.stats.totalIliCases.toLocaleString()}</strong>
-        </article>
-        <article className="stat-card">
-          <h3>{t.statsPeakIli}</h3>
-          <strong>
-            {formatWeek(snapshot.stats.peakIliWeek)} / {snapshot.stats.peakIliCases?.toLocaleString() ?? "-"}
-          </strong>
-        </article>
-        <article className="stat-card">
-          <h3>{t.statsFirstCrossing}</h3>
-          <strong>{formatWeek(snapshot.stats.firstIliThresholdCrossingWeek)}</strong>
-        </article>
-        <article className="stat-card">
-          <h3>{t.statsWeeksAbove}</h3>
-          <strong>{snapshot.stats.weeksAboveIliThreshold.toLocaleString()}</strong>
-        </article>
-        <article className="stat-card">
-          <h3>{t.statsLatestSari}</h3>
-          <strong>
-            {snapshot.stats.latestSariAdmissions ?? "-"} / {snapshot.stats.latestSariIcu ?? "-"}
-          </strong>
-        </article>
+        </section>
       </section>
 
       <section className="charts-grid">
@@ -1463,158 +1394,6 @@ export function App() {
           subtitle={formatText(t.chartSariSubtitle, { season: snapshot.seasonLabel })}
           option={sariOption}
         />
-      </section>
-
-      <section className="virology-section">
-        <header className="virology-header">
-          <div>
-            <h2>{t.virologyTitle}</h2>
-            <p>{formatText(t.virologyWeek, { week: latestVirologyWeekLabel })}</p>
-          </div>
-          <div className="virology-controls">
-            <label htmlFor="virology-virus-select">{t.virologyFilter}</label>
-            <select
-              id="virology-virus-select"
-              value={selectedVirologyVirus}
-              onChange={(event) => setSelectedVirologyVirus(event.target.value)}
-            >
-              <option value={VIRO_ALL_KEY}>{t.virologyAllViruses}</option>
-              {snapshot.virology.availableDetectionViruses.map((virus) => (
-                <option key={virus} value={virus}>
-                  {displayVirusLabel(virus, language)}
-                </option>
-              ))}
-            </select>
-          </div>
-        </header>
-
-        <div className="virology-lists">
-          <article className="virology-list-card">
-            <h3>{t.virologyTopDetections}</h3>
-            {virologyDetectionList.length ? (
-              <ul>
-                {virologyDetectionList.map((row) => (
-                  <li key={`${row.virus}-${row.week}`}>
-                    <span>{displayVirusLabel(row.virus, language)}</span>
-                    <strong>{row.detections.toLocaleString()}</strong>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="virology-empty">{t.virologyNoDetections}</p>
-            )}
-          </article>
-          <article className="virology-list-card">
-            <h3>{t.virologyTopPositivity}</h3>
-            {virologyPositivityList.length ? (
-              <ul>
-                {virologyPositivityList.map((row) => (
-                  <li key={`${row.virus}-${row.week}`}>
-                    <span>{displayVirusLabel(row.virus, language)}</span>
-                    <strong>{row.positivity.toFixed(1)}%</strong>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="virology-empty">{t.virologyNoPositivity}</p>
-            )}
-          </article>
-        </div>
-
-        <div className="virology-grid">
-          <EChartsPanel
-            title={t.virologyDetectionsTrend}
-            subtitle={formatText(t.virologyDetectionsSubtitle, { week: latestVirologyWeekLabel })}
-            option={virologyDetectionsOption}
-          />
-          <EChartsPanel
-            title={t.virologyPositivityTrend}
-            subtitle={formatText(t.virologyDetectionsSubtitle, { week: latestVirologyWeekLabel })}
-            option={virologyPositivityOption}
-          />
-        </div>
-      </section>
-
-      <section className="table-section" aria-label={t.tableAria}>
-        <header className="table-header">
-          <div>
-            <h2>{t.tableTitle}</h2>
-            <p>{t.tableNote}</p>
-          </div>
-          <div className="table-badge">{t.tableBadge}</div>
-        </header>
-        <div className="table-scroll" role="region" aria-label={t.tableScrollAria}>
-          <table className="data-table">
-            <thead>
-              <tr>
-                <th
-                  scope="col"
-                  className="sortable"
-                  tabIndex={0}
-                  aria-sort={weekSortAria}
-                  onClick={() => toggleTableSort("week")}
-                  onKeyDown={(event) => {
-                    if (event.key === "Enter" || event.key === " ") {
-                      event.preventDefault();
-                      toggleTableSort("week");
-                    }
-                  }}
-                >
-                  <span>{t.tableWeek}</span>
-                  <span className="sort-indicator" aria-hidden="true">
-                    {weekSortIndicator}
-                  </span>
-                </th>
-                <th scope="col">{t.tableVirus}</th>
-                <th scope="col">{t.tableRegion}</th>
-                <th
-                  scope="col"
-                  className="sortable"
-                  tabIndex={0}
-                  aria-sort={casesSortAria}
-                  onClick={() => toggleTableSort("cases")}
-                  onKeyDown={(event) => {
-                    if (event.key === "Enter" || event.key === " ") {
-                      event.preventDefault();
-                      toggleTableSort("cases");
-                    }
-                  }}
-                >
-                  <span>{t.tableCases}</span>
-                  <span className="sort-indicator" aria-hidden="true">
-                    {casesSortIndicator}
-                  </span>
-                </th>
-                <th scope="col">{t.tableSariAdmissions}</th>
-                <th scope="col">{t.tableSariIcu}</th>
-                <th scope="col">{t.tableTopPositivity}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {tableRows.length ? (
-                tableRows.map((row) => (
-                  <tr key={row.week}>
-                    <td>{formatWeek(row.week)}</td>
-                    <td>{displayVirusLabel(row.virus, language)}</td>
-                    <td>{row.region === "National" ? t.regionNational : row.region}</td>
-                    <td>{Number.isFinite(row.cases) ? Number(row.cases).toLocaleString() : "–"}</td>
-                    <td>{Number.isFinite(row.sariAdmissions) ? Number(row.sariAdmissions).toLocaleString() : "–"}</td>
-                    <td>{Number.isFinite(row.sariIcu) ? Number(row.sariIcu).toLocaleString() : "–"}</td>
-                    <td>
-                      {row.topPositivityVirus && Number.isFinite(row.topPositivity)
-                        ? `${displayVirusLabel(row.topPositivityVirus, language)} (${Number(row.topPositivity).toFixed(1)}%)`
-                        : "–"}
-                    </td>
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan={7}>{t.tableNoData}</td>
-                </tr>
-              )}
-            </tbody>
-          </table>
-        </div>
       </section>
 
       <section className="historical-section">
@@ -1658,14 +1437,350 @@ export function App() {
         )}
       </section>
 
-      <section className="region-divider eu" aria-label={t.sectionEuTitle}>
-        <span className="region-divider-kicker">{t.sectionKicker}</span>
-        <div>
-          <h2>{t.sectionEuTitle}</h2>
-          <p>{t.sectionEuNote}</p>
-        </div>
+      <section className="virology-section collapsible-section">
+        <header className="virology-header">
+          <div>
+            <h2>{t.virologyTitle}</h2>
+            <p>{formatText(t.virologyWeek, { week: latestVirologyWeekLabel })}</p>
+          </div>
+          <div className="virology-header-actions">
+            <div className="virology-controls">
+              <label htmlFor="virology-virus-select">{t.virologyFilter}</label>
+              <select
+                id="virology-virus-select"
+                value={selectedVirologyVirus}
+                onChange={(event) => setSelectedVirologyVirus(event.target.value)}
+              >
+                <option value={VIRO_ALL_KEY}>{t.virologyAllViruses}</option>
+                {snapshot.virology.availableDetectionViruses.map((virus) => (
+                  <option key={virus} value={virus}>
+                    {displayVirusLabel(virus, language)}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <button
+              type="button"
+              className="section-toggle"
+              aria-expanded={isSentinelVirologyOpen}
+              aria-controls="sentinel-virology-content"
+              aria-label={`${isSentinelVirologyOpen ? t.sectionCollapse : t.sectionExpand}: ${t.virologyTitle}`}
+              onClick={() => setIsSentinelVirologyOpen((open) => !open)}
+            >
+              <span className={`section-toggle-icon ${isSentinelVirologyOpen ? "open" : ""}`} aria-hidden="true">
+                ▾
+              </span>
+              <span>{isSentinelVirologyOpen ? t.sectionCollapse : t.sectionExpand}</span>
+            </button>
+          </div>
+        </header>
+        {isSentinelVirologyOpen ? (
+          <div id="sentinel-virology-content" className="section-content">
+            <div className="virology-grid">
+              <EChartsPanel
+                title={t.virologyDetectionsTrend}
+                subtitle={formatText(t.virologyDetectionsSubtitle, { week: latestVirologyWeekLabel })}
+                option={virologyDetectionsOption}
+              />
+              <EChartsPanel
+                title={t.virologyPositivityTrend}
+                subtitle={formatText(t.virologyDetectionsSubtitle, { week: latestVirologyWeekLabel })}
+                option={virologyPositivityOption}
+              />
+            </div>
+
+            <div className="virology-lists">
+              <article className="virology-list-card compact">
+                <h3>{t.virologyTopDetections}</h3>
+                {virologyDetectionList.length ? (
+                  <ul>
+                    {virologyDetectionList.map((row) => (
+                      <li key={`${row.virus}-${row.week}`}>
+                        <span>{displayVirusLabel(row.virus, language)}</span>
+                        <strong>{row.detections.toLocaleString()}</strong>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="virology-empty">{t.virologyNoDetections}</p>
+                )}
+              </article>
+              <article className="virology-list-card compact">
+                <h3>{t.virologyTopPositivity}</h3>
+                {virologyPositivityList.length ? (
+                  <ul>
+                    {virologyPositivityList.map((row) => (
+                      <li key={`${row.virus}-${row.week}`}>
+                        <span>{displayVirusLabel(row.virus, language)}</span>
+                        <strong>{row.positivity.toFixed(1)}%</strong>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="virology-empty">{t.virologyNoPositivity}</p>
+                )}
+              </article>
+            </div>
+          </div>
+        ) : null}
       </section>
 
+      <section className="glance-section collapsible-section" aria-label={t.glanceAria}>
+        <header className="glance-header">
+          <div>
+            <h2>{t.glanceTitle}</h2>
+            <p>{t.glanceNote}</p>
+          </div>
+          <button
+            type="button"
+            className="section-toggle"
+            aria-expanded={isSeasonGlanceOpen}
+            aria-controls="season-glance-content"
+            aria-label={`${isSeasonGlanceOpen ? t.sectionCollapse : t.sectionExpand}: ${t.glanceTitle}`}
+            onClick={() => setIsSeasonGlanceOpen((open) => !open)}
+          >
+            <span className={`section-toggle-icon ${isSeasonGlanceOpen ? "open" : ""}`} aria-hidden="true">
+              ▾
+            </span>
+            <span>{isSeasonGlanceOpen ? t.sectionCollapse : t.sectionExpand}</span>
+          </button>
+        </header>
+        {isSeasonGlanceOpen ? (
+          <div id="season-glance-content" className="glance-grid">
+            <article className="glance-card">
+              <h3>{t.glanceIli}</h3>
+              <div className="glance-row">
+                <span className="glance-key">{t.glancePeak}</span>
+                <span className="glance-value">{formatGlanceLine(seasonAtGlance.iliGlance?.peak ?? null)}</span>
+              </div>
+              <div className="glance-row">
+                <span className="glance-key">{t.glanceLatest}</span>
+                <span className="glance-value">{formatGlanceLatest(seasonAtGlance.iliGlance)}</span>
+              </div>
+              <div className="glance-row">
+                <span className="glance-key">{t.glanceSlope}</span>
+                <span className="glance-value">{formatSlopePerWeek(seasonAtGlance.iliGlance?.slope ?? null)}</span>
+              </div>
+              <div className="glance-row">
+                <span className="glance-key">{t.glanceWow}</span>
+                <span className="glance-value">{formatSignedPercent(seasonAtGlance.iliWow)}</span>
+              </div>
+              <div className="glance-row">
+                <span className="glance-key">{t.glanceWeeksAbove}</span>
+                <span className="glance-value">
+                  {snapshot.iliSeries.length ? seasonAtGlance.weeksAboveThreshold.toLocaleString() : "–"}
+                </span>
+              </div>
+            </article>
+            <article className="glance-card">
+              <h3>{t.glanceSari}</h3>
+              <div className="glance-row">
+                <span className="glance-key">{t.glancePeak}</span>
+                <span className="glance-value">{formatGlanceLine(seasonAtGlance.sariGlance?.peak ?? null)}</span>
+              </div>
+              <div className="glance-row">
+                <span className="glance-key">{t.glanceLatest}</span>
+                <span className="glance-value">{formatGlanceLatest(seasonAtGlance.sariGlance)}</span>
+              </div>
+              <div className="glance-row">
+                <span className="glance-key">{t.glanceSlope}</span>
+                <span className="glance-value">{formatSlopePerWeek(seasonAtGlance.sariGlance?.slope ?? null)}</span>
+              </div>
+              <div className="glance-row">
+                <span className="glance-key">{t.glanceWow}</span>
+                <span className="glance-value">{formatSignedPercent(seasonAtGlance.sariWow)}</span>
+              </div>
+            </article>
+            <article className="glance-card">
+              <h3>{t.glanceIcu}</h3>
+              <div className="glance-row">
+                <span className="glance-key">{t.glancePeak}</span>
+                <span className="glance-value">{formatGlanceLine(seasonAtGlance.icuGlance?.peak ?? null)}</span>
+              </div>
+              <div className="glance-row">
+                <span className="glance-key">{t.glanceLatest}</span>
+                <span className="glance-value">{formatGlanceLatest(seasonAtGlance.icuGlance)}</span>
+              </div>
+              <div className="glance-row">
+                <span className="glance-key">{t.glanceSlope}</span>
+                <span className="glance-value">{formatSlopePerWeek(seasonAtGlance.icuGlance?.slope ?? null)}</span>
+              </div>
+              <div className="glance-row">
+                <span className="glance-key">{t.glanceWow}</span>
+                <span className="glance-value">{formatSignedPercent(seasonAtGlance.icuWow)}</span>
+              </div>
+            </article>
+            <article className="glance-card">
+              <h3>{t.glanceStdTitle}</h3>
+              <div className="glance-row">
+                <span className="glance-key">{t.glanceStdIli}</span>
+                <span className="glance-value">
+                  {formatSeasonToDateValue(seasonAtGlance.iliSeasonToDate, {
+                    noBaseline: t.stdNoBaseline,
+                    median: t.stdMedian,
+                    lastSeason: t.stdLastSeason,
+                  })}
+                </span>
+              </div>
+              <div className="glance-row">
+                <span className="glance-key">{t.glanceStdSari}</span>
+                <span className="glance-value">
+                  {formatSeasonToDateValue(seasonAtGlance.sariSeasonToDate, {
+                    noBaseline: t.stdNoBaseline,
+                    median: t.stdMedian,
+                    lastSeason: t.stdLastSeason,
+                  })}
+                </span>
+              </div>
+            </article>
+            <article className="glance-card">
+              <h3>{t.glanceSeverityTitle}</h3>
+              <div className="glance-row">
+                <span className="glance-key">{t.glanceSeveritySari}</span>
+                <span className="glance-value">
+                  {seasonAtGlance.severity
+                    ? `${formatWeek(seasonAtGlance.severity.week)}: ${seasonAtGlance.severity.sariPercent.toFixed(1)}%`
+                    : "–"}
+                </span>
+              </div>
+              <div className="glance-row">
+                <span className="glance-key">{t.glanceSeverityIcu}</span>
+                <span className="glance-value">
+                  {seasonAtGlance.severity && Number.isFinite(seasonAtGlance.severity.icuShare)
+                    ? `${formatWeek(seasonAtGlance.severity.week)}: ${Number(seasonAtGlance.severity.icuShare).toFixed(1)}%`
+                    : "–"}
+                </span>
+              </div>
+            </article>
+          </div>
+        ) : null}
+      </section>
+
+      <section className="table-section collapsible-section" aria-label={t.tableAria}>
+        <header className="table-header">
+          <div>
+            <h2>{t.tableTitle}</h2>
+            <p>{t.tableNote}</p>
+          </div>
+          <button
+            type="button"
+            className="section-toggle"
+            aria-expanded={isWeeklyTableOpen}
+            aria-controls="weekly-table-content"
+            aria-label={`${isWeeklyTableOpen ? t.sectionCollapse : t.sectionExpand}: ${t.tableTitle}`}
+            onClick={() => setIsWeeklyTableOpen((open) => !open)}
+          >
+            <span className={`section-toggle-icon ${isWeeklyTableOpen ? "open" : ""}`} aria-hidden="true">
+              ▾
+            </span>
+            <span>{isWeeklyTableOpen ? t.sectionCollapse : t.sectionExpand}</span>
+          </button>
+        </header>
+        {isWeeklyTableOpen ? (
+          <div id="weekly-table-content" className="table-scroll" role="region" aria-label={t.tableScrollAria}>
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th
+                    scope="col"
+                    className="sortable"
+                    tabIndex={0}
+                    aria-sort={weekSortAria}
+                    onClick={() => toggleTableSort("week")}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        toggleTableSort("week");
+                      }
+                    }}
+                  >
+                    <span>{t.tableWeek}</span>
+                    <span className="sort-indicator" aria-hidden="true">
+                      {weekSortIndicator}
+                    </span>
+                  </th>
+                  <th scope="col">{t.tableVirus}</th>
+                  <th scope="col">{t.tableRegion}</th>
+                  <th
+                    scope="col"
+                    className="sortable"
+                    tabIndex={0}
+                    aria-sort={casesSortAria}
+                    onClick={() => toggleTableSort("cases")}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        toggleTableSort("cases");
+                      }
+                    }}
+                  >
+                    <span>{t.tableCases}</span>
+                    <span className="sort-indicator" aria-hidden="true">
+                      {casesSortIndicator}
+                    </span>
+                  </th>
+                  <th scope="col">{t.tableSariAdmissions}</th>
+                  <th scope="col">{t.tableSariIcu}</th>
+                  <th scope="col">{t.tableTopPositivity}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tableRows.length ? (
+                  tableRows.map((row) => (
+                    <tr key={row.week}>
+                      <td>{formatWeek(row.week)}</td>
+                      <td>{displayVirusLabel(row.virus, language)}</td>
+                      <td>{row.region === "National" ? t.regionNational : row.region}</td>
+                      <td>{Number.isFinite(row.cases) ? Number(row.cases).toLocaleString() : "–"}</td>
+                      <td>{Number.isFinite(row.sariAdmissions) ? Number(row.sariAdmissions).toLocaleString() : "–"}</td>
+                      <td>{Number.isFinite(row.sariIcu) ? Number(row.sariIcu).toLocaleString() : "–"}</td>
+                      <td>
+                        {row.topPositivityVirus && Number.isFinite(row.topPositivity)
+                          ? `${displayVirusLabel(row.topPositivityVirus, language)} (${Number(row.topPositivity).toFixed(1)}%)`
+                          : "–"}
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan={7}>{t.tableNoData}</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+        ) : null}
+      </section>
+
+          </div>
+        ) : null}
+      </section>
+      <section className="region-block eu-block" aria-label={t.sectionEuTitle}>
+        <section className="region-divider eu" aria-label={t.sectionEuTitle}>
+          <div className="region-divider-main">
+            <span className="region-divider-kicker">{t.sectionKicker}</span>
+            <div>
+              <h2>{t.sectionEuTitle}</h2>
+              <p>{t.sectionEuNote}</p>
+            </div>
+          </div>
+          <button
+            type="button"
+            className="section-toggle region-toggle"
+            aria-expanded={isEuSectionOpen}
+            aria-controls="eu-region-content"
+            aria-label={`${isEuSectionOpen ? t.sectionCollapse : t.sectionExpand}: ${t.sectionEuTitle}`}
+            onClick={() => setIsEuSectionOpen((open) => !open)}
+          >
+            <span className={`section-toggle-icon ${isEuSectionOpen ? "open" : ""}`} aria-hidden="true">
+              ▾
+            </span>
+            <span>{isEuSectionOpen ? t.sectionCollapse : t.sectionExpand}</span>
+          </button>
+        </section>
+
+        {isEuSectionOpen ? (
+          <div id="eu-region-content" className="region-content">
       <section className="virology-section eu-section">
         <header className="virology-header">
           <div>
@@ -1674,8 +1789,21 @@ export function App() {
           </div>
         </header>
 
-        <div className="virology-lists">
-          <article className="virology-list-card">
+        <div className="virology-grid">
+          <EChartsPanel
+            title={t.euDetectionsTrend}
+            subtitle={formatText(t.euTrendSubtitle, { year: snapshot.euVirology.targetYear ?? "–" })}
+            option={euDetectionsOption}
+          />
+          <EChartsPanel
+            title={t.euPositivityTrend}
+            subtitle={formatText(t.euTrendSubtitle, { year: snapshot.euVirology.targetYear ?? "–" })}
+            option={euPositivityOption}
+          />
+        </div>
+
+        <div className="virology-lists eu-summary-lists">
+          <article className="virology-list-card compact">
             <h3>{t.euTopDetections}</h3>
             {euDetectionsList.length ? (
               <ul>
@@ -1690,7 +1818,7 @@ export function App() {
               <p className="virology-empty">{t.euNoDetections}</p>
             )}
           </article>
-          <article className="virology-list-card">
+          <article className="virology-list-card compact">
             <h3>{t.euTopPositivity}</h3>
             {euPositivityList.length ? (
               <ul>
@@ -1706,31 +1834,37 @@ export function App() {
             )}
           </article>
         </div>
-
-        <div className="virology-grid">
-          <EChartsPanel
-            title={t.euDetectionsTrend}
-            subtitle={formatText(t.euTrendSubtitle, { year: snapshot.euVirology.targetYear ?? "–" })}
-            option={euDetectionsOption}
-          />
-          <EChartsPanel
-            title={t.euPositivityTrend}
-            subtitle={formatText(t.euTrendSubtitle, { year: snapshot.euVirology.targetYear ?? "–" })}
-            option={euPositivityOption}
-          />
-        </div>
+      </section>
+          </div>
+        ) : null}
       </section>
 
-      {snapshot.warnings.length ? (
-        <section className="warning-panel" role="status" aria-live="polite">
-          <h3>{t.warningsTitle}</h3>
-          <ul>
-            {snapshot.warnings.map((warning) => (
-              <li key={warning}>{warning}</li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
+      <footer className="dashboard-footer" aria-label={t.coverageAria}>
+        <div className="footer-strip" role="status" aria-live="polite">
+          <span className={`footer-chip source ${sourceChipTone}`}>
+            {sourceLabel}
+            {isDataLoading ? ` (${t.sourceLoading})` : ""}
+          </span>
+          <span className="footer-chip">
+            {t.coverageNngyk}: {iliLatestWeekLabel}
+          </span>
+          <span className="footer-chip">
+            {t.coverageSari}: {sariLatestWeekLabel}
+          </span>
+          <span className="footer-chip">
+            {t.coverageErviss}: {latestEuWeekLabel}
+          </span>
+          <span className={`footer-chip ${iliMissingWeeks.length + sariMissingWeeks.length ? "warn" : "ok"}`}>
+            {t.coverageMissing}: {iliMissingWeeks.length}/{sariMissingWeeks.length}
+          </span>
+        </div>
+
+        {snapshot.warnings.length ? (
+          <p className="footer-warnings-inline">
+            <strong>{t.warningsTitle}:</strong> {snapshot.warnings.join(" · ")}
+          </p>
+        ) : null}
+      </footer>
     </div>
   );
 }
