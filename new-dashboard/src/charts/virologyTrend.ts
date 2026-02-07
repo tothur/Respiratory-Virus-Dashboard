@@ -42,7 +42,7 @@ function formatWeekLabel(week: number, language: UiLanguage): string {
 }
 
 const VIRUS_LABELS_HU: Record<string, string> = {
-  "ILI (flu-like illness)": "ILI (influenzaszerű megbetegedés)",
+  "ILI (flu-like illness)": "Influenzaszerű megbetegedés (ILI)",
   Influenza: "Influenza",
   "Influenza A": "Influenza A",
   "Influenza B": "Influenza B",
