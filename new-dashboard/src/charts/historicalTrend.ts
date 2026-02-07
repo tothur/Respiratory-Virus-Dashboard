@@ -70,7 +70,6 @@ export function buildHistoricalTrendOption({
   const xLabels = metric.points.map((point) => point.label);
   const previousValues = metric.points.map((point) => point.previous);
   const currentValues = metric.points.map((point) => point.current);
-  const deltaValues = metric.points.map((point) => point.deltaPercent);
   const hasData = xLabels.length > 0;
   const currentWeekLabel = hasData ? xLabels[xLabels.length - 1] : null;
 
@@ -92,7 +91,7 @@ export function buildHistoricalTrendOption({
     aria: { enabled: true },
     grid: {
       top: compact ? 36 : 72,
-      right: 54,
+      right: 18,
       bottom: compact ? 26 : 46,
       left: 50,
     },
@@ -110,17 +109,7 @@ export function buildHistoricalTrendOption({
         const header = localizeWeekToken(first.axisValueLabel ?? "", language);
         const lines = rows
           .map((row) => {
-            const item = row as {
-              marker?: string;
-              seriesName?: string;
-              data?: number | null;
-              seriesIndex?: number;
-            };
-            if (item.seriesIndex === 2) {
-              return `${item.marker ?? ""} ${item.seriesName ?? ""}: ${formatSignedPercent(
-                typeof item.data === "number" ? item.data : null
-              )}`;
-            }
+            const item = row as { marker?: string; seriesName?: string; data?: number | null };
             const value = typeof item.data === "number" && Number.isFinite(item.data) ? numberFormatter.format(item.data) : "–";
             return `${item.marker ?? ""} ${item.seriesName ?? ""}: ${value}`;
           })
@@ -159,30 +148,17 @@ export function buildHistoricalTrendOption({
         formatter: (value: string) => localizeWeekToken(String(value), language),
       },
     },
-    yAxis: [
-      {
-        type: "value",
-        min: 0,
-        axisLabel: {
-          color: palette.axisLabel,
-          formatter: (value: number) => numberFormatter.format(value),
-        },
-        splitLine: {
-          lineStyle: { color: palette.grid, type: [4, 5] },
-        },
+    yAxis: {
+      type: "value",
+      min: 0,
+      axisLabel: {
+        color: palette.axisLabel,
+        formatter: (value: number) => numberFormatter.format(value),
       },
-      {
-        type: "value",
-        position: "right",
-        axisLabel: {
-          color: palette.axisLabel,
-          formatter: (value: number) => `${value}%`,
-        },
-        splitLine: {
-          show: false,
-        },
+      splitLine: {
+        lineStyle: { color: palette.grid, type: [4, 5] },
       },
-    ],
+    },
     dataZoom,
     series: [
       {
@@ -222,23 +198,6 @@ export function buildHistoricalTrendOption({
         },
         itemStyle: {
           color: "#2563eb",
-        },
-      },
-      {
-        name: text.delta,
-        type: "line",
-        yAxisIndex: 1,
-        data: hasData ? deltaValues : [null],
-        smooth: 0.2,
-        connectNulls: false,
-        symbolSize: 0,
-        lineStyle: {
-          color: "#dc2626",
-          width: 2,
-          type: "dashed",
-        },
-        itemStyle: {
-          color: "#dc2626",
         },
       },
     ],
