@@ -4237,6 +4237,122 @@
     }
   },
   {
+    "file": "nngyk_pdfs/figyel_2026.06.ht_honlapra.pdf",
+    "week": 6,
+    "season_year": 2025,
+    "payload": {
+      "datasets": {
+        "NNGYK": {
+          "name": "NNGYK (Hungary)",
+          "description": "Structured from NNGYK Légúti Figyelőszolgálat PDF bulletin."
+        }
+      },
+      "years": [
+        2025
+      ],
+      "viruses": [
+        "Influenza A",
+        "Influenza B",
+        "RSV",
+        "SARS-CoV-2",
+        "ILI (flu-like illness)"
+      ],
+      "weekly": [
+        {
+          "dataset": "NNGYK",
+          "year": 2025,
+          "virus": "Influenza A",
+          "week": 6,
+          "cases": 1,
+          "region": "National"
+        },
+        {
+          "dataset": "NNGYK",
+          "year": 2025,
+          "virus": "Influenza B",
+          "week": 6,
+          "cases": 2,
+          "region": "National"
+        },
+        {
+          "dataset": "NNGYK",
+          "year": 2025,
+          "virus": "RSV",
+          "week": 6,
+          "cases": 5,
+          "region": "National"
+        },
+        {
+          "dataset": "NNGYK",
+          "year": 2025,
+          "virus": "SARS-CoV-2",
+          "week": 6,
+          "cases": 38,
+          "region": "National"
+        },
+        {
+          "dataset": "NNGYK",
+          "year": 2025,
+          "virus": "ILI (flu-like illness)",
+          "week": 6,
+          "cases": 76800,
+          "region": "National"
+        }
+      ],
+      "metrics": {
+        "sari_admissions": 242,
+        "sari_icu": 22,
+        "pos_influenza": 38.1,
+        "pos_rsv": 5.3,
+        "pos_sars2": 5.3
+      },
+      "sari": {
+        "week": 6,
+        "admissions": 242,
+        "icu": 22
+      },
+      "virology": {
+        "detections": [
+          {
+            "virus": "Influenza A(H1N1pdm09)",
+            "detections": 15
+          },
+          {
+            "virus": "Influenza A(H3)",
+            "detections": 70
+          },
+          {
+            "virus": "Influenza \nB",
+            "detections": 1
+          },
+          {
+            "virus": "HMPV",
+            "detections": 1
+          }
+        ],
+        "positivity": [
+          {
+            "virus": "Influenza",
+            "positivity": 38.1
+          },
+          {
+            "virus": "RSV",
+            "positivity": 5.3
+          },
+          {
+            "virus": "SARS-CoV-2",
+            "positivity": 5.3
+          }
+        ]
+      },
+      "metadata": {
+        "week": 6,
+        "season_year": 2025
+      },
+      "raw_text": "NEMZETI NÉPEGÉSZSÉGÜGYI ÉS GYÓGYSZERÉSZETI KÖZPONT \n\nTájékoztató a légúti figyelőszolgálat adatairól  \nMagyarország \n2026. 06. hét \n\nA  figyelőszolgálatban  résztvevő  orvosok  jelentései  alapján  végzett  becslés  szerint \nmegállapítható, hogy 2026. február 2 – 8. között az országban 76 800 fő fordult orvoshoz \ninfluenzaszerű és 283 700 fő akut légúti fertőzés tüneteivel. \n\nA hatodik naptári héten orvoshoz fordult betegek kormegoszlása az alábbiak szerint alakult:  \n\nAz  akut  légúti  fertőzés:  a  betegek  49,5%-a  0-14  éves  gyermek,  24,3%-a  15-34  éves  fiatal \nfelnőtt  volt.  17,9%-uk  a  35-59  évesek,  8,3%-uk  pedig  a  60  éven  felüliek  korcsoportjába \ntartozott. \n\nAz influenzaszerű megbetegedés: a betegek 43,8%-a 0-14 éves gyermek, 29,1%-a 15-34 éves \nfiatal felnőtt volt. 20,5%-uk a 35-59 évesek, 6,6%-uk pedig a 60 éven felüliek korcsoportjába \ntartozott.  Országosan  100 000  lakosból  801  fő  kereste  fel  orvosát  influenzás  panaszokkal. \nA 100 000  azonos  korcsoportba \nszáma  a \n3-5 évesek (2 725) körében volt a legmagasabb, ezt követte az 6-14 évesek (2 184) érintettsége. \n\njutó  megbetegedések \n\nlakosra \n\ntartozó \n\nA  6.  héten  hat  közigazgatási  területen  nőtt,  nyolc  közigazgatási  területen  csökkent  és  hat \nközigazgatási  területen  nem  változott  az  influenzás  tünetekkel  orvoshoz  fordulók  száma  az \nelőző héten regisztrálthoz viszonyítva. A  100 000  lakosra jutó orvoshoz fordult betegek száma \n(1 164) \nFejér \nvármegyében  volt  a  legmagasabb,  Zala  (378),  Bács-Kiskun  (410)  és  Baranya  (500) \nvármegyében  a  legalacsonyabb.  Laboratóriumi  vizsgálattal  igazolt,  influenzavírus  által \nokozott megbetegedéseket valamennyi vármegye területén diagnosztizáltak. \n\n(1 257)   és  Szabolcs-Szatmár-Bereg \n\n(1 303),  Komárom-Esztergom \n\nés  Gyógyszerészeti  Központ  Nemzeti \n\nA  hatodik  héten  összesen  326  betegtől  érkezett  értékelhető  légúti  minta  a  Nemzeti \nNépegészségügyi \nInfluenza  Referencia \nLaboratóriumába.  A sentinel  orvosok  által  beküldött  226  minta  közül  tizenöt  betegnél  az \ninfluenza A(H1N1pdm09), 70 betegnél az influenza A(H3) vírus, egy betegnél az influenza \nB vírus,  tizenkét betegnél  az  RS  vírus,  egy betegnél  a humán  metapneumovírus,  tizenkét \nbetegnél  a  SARS-CoV-2  vírus  kóroki  szerepét  igazolták.  Az  influenza  pozitivitási  arány \n38,1%,  a  SARS-CoV-2  pozitivitási  arány  5,3%,  az  RSV  pozitivitási  arány  5,3%,  a  human \nmetapneumovírus pozitivitási arány 0,4% volt.  \n\nForrás: Nemzeti Népegészségügyi és Gyógyszerészeti Központ \n\n \n \n \n \n \n \n \n\f2 \n\nsentinel  kórházak \n\náltal  beküldött  28 \n\nA \nlégúti  minta  közül  öt  betegnél \ninfluenza A(H1N1pdm09),  nyolc  betegnél  influenza  A(H3),  kettő  betegnél  RS  vírust,  egy \nbetegnél  SARS-CoV-2  vírust  mutattak  ki.  A hagyományos  diagnosztikus  célú  vizsgálat \nkeretében érkezett 72 légúti minta közül hét influenza A(H1N1pdm09), huszonnégy influenza \nA(H3), négy RSV, egy adenovírus pozitív volt.  \n\nA hatodik héten akut légúti megbetegedések halmozódásáról huszonnégy jelentés érkezett \nFejér  (1),  Hajdú-Bihar  (1),  Komárom-Esztergom  (6),  Nógrád  (4),  Szabolcs-Szatmár-\nBereg (6), Vas (1) és Veszprém (5) vármegye területéről, melyek három bölcsődét, tizenkét \nóvodát, nyolc általános iskolát és egy idősek otthonát érintettek. Hat járványban történt légúti \nmintavételezés,  melyből  a  tájékoztató  megírásáig  négy  járvány  esetében  a  laboratóriumi \nvizsgálatok az influenza A vírus, egy járványban az influenza A és a légúti óriássejtes vírus \negyüttes kóroki szerepét igazolták. \n\nA légúti figyelőszolgálat keretében kijelölt 24 kórház adatai alapján, a 6. naptári héten 242 főt \nvettek  fel  kórházba  súlyos,  akut  légúti  fertőzés  (SARI)  miatt,  közülük  22 fő  részesült \nintenzív/szubintenzív ellátásban.  \nA  kórházi  ápolást  igénylő  242 SARI  beteg  32,2%-a  (78  fő)  2 éves  vagy  annál  fiatalabb, \n36,4%-a (88 fő) 60 éves vagy annál idősebb volt. A kórházi ápolást igénylő betegek közül \n89 főnél  influenza  (88 A,  1 B)  31 főnél  RSV,  5 főnél  a  SARS-CoV-2  vírus  állt  a \nmegbetegedések hátterében. A COVID-19 fertőzöttek 60,0%-a (3 fő) 2 év alatti volt, 40,0%-a \n(2 fő) 60 éves vagy annál idősebb volt. Az RS vírus okozta SARI megbetegedések 90,3%-a \n(28  fő)  a  0-5 évesek  között  fordult  elő.  Influenza  okozta  megbetegedést  a  40-49  évesek \nkivételével minden korosztályban diagnosztizáltak. \n\nA 2025. év 40. és 2026. év 06. hete között összesen 3 981 vizsgálati anyag érkezett az NNGYK \nNemzeti Influenza Referencia Laboratóriumban,  melyből hat feldolgozásra alkalmatlan volt. \nHétszázhuszonkilenc  főnél  influenza A  [123 influenza A(H1pdm09),  605  influenza A(H3). \negy influenza A(NT)], két főnél influenza B, 57 főnél RSV, 511 főnél COVID-19 fertőzést \nigazoltak. Harmincnyolc megbetegedés hátterében rhinovírus állt, tizennégyet parainfluenza \nvírus, négyet bocavírus, ötöt adenovírus, kilencet humán metapneumovírus okozott.  \n\n \n \n \n\fInfluenzaszerű megbetegedés miatt orvoshoz fordult betegek\n becsült száma 100.000 lakosra területenként\n\n2025/2026. ÉVI SZEZON\n2026.05. - 2026.06. HÉT\n\nTerület\n\nIncidencia 100.000 lakosra\n\n05. hét\n\n06. hét\n\nBudapest\n\nBaranya\n\nBács-Kiskun\n\nBékés\n\nBorsod-A.-Z.\n\nCsongrád\n\nFejér\n\nGyőr-Moson-S.\n\nHajdú-Bihar\n\nHeves\n\nJász-Nagykun-Szolnok\n\nKomárom-Esztergom\n\nNógrád\n\nPest\n\nSomogy\n\nSzabolcs-Szatmár-B.\n\nTolna \n\nVas\n\nVeszprém\n\nZala\n\nOrszág\n\n679,4\n\n728,0\n\n399,6\n\n992,8\n\n815,5\n\n604,9\n\n1309,9\n\n823,2\n\n1117,5\n\n541,1\n\n747,9\n\n1288,8\n\n1016,8\n\n878,8\n\n559,3\n\n1145,8\n\n597,5\n\n824,8\n\n836,7\n\n460,4\n\n810,2\n\n638,2\n\n499,6\n\n410,5\n\n933,5\n\n1010,2\n\n554,6\n\n1302,6\n\n807,0\n\n977,0\n\n721,6\n\n860,7\n\n1256,7\n\n788,4\n\n831,2\n\n649,1\n\n1164,2\n\n623,4\n\n898,3\n\n893,6\n\n378,0\n\n801,1\n\nForrás: Nemzeti Népegészségügyi és Gyógyszerészeti Központ\n\n\fInfluenzaszerű megbetegedés miatt orvoshoz fordulók száma 100 000 lakosra \nés a sentinel influenza pozitív minták száma Magyarországon\n2025. 40. - 2026. 06. hét\n\n1000,0\n\n900,0\n\n800,0\n\n700,0\n\n600,0\n\n500,0\n\n400,0\n\n300,0\n\n200,0\n\n100,0\n\n0,0\n\ni\n\nP\no\nz\ni\nt\ní\nv\nm\nn\nt\ná\nk\ns\nz\ná\nm\na\n\n200\n\n180\n\n160\n\n140\n\n120\n\n100\n\n80\n\n60\n\n40\n\n20\n\n0\n\n)\no\no\no\n\n%\n\n(\ns\ná\nt\ni\nd\nb\nr\no\nM\n\ni\n\n40. 41. 42. 43. 44. 45. 46. 47. 48. 49. 50. 51. 52. 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. 11. 12. 13. 14. 15. 16. 17. 18. 19. 20.\n\nhetek\n\nInfluenza A (NT)\n\nInfl. A(H1)\n\nInfl. A(H3)\n\nInfluenza B\n\n2024/2025\n\n2025/2026\n\nJárványküszöb\n\nForrás: Nemzeti Népegészségügyi és Gyógyszerészeti Központ\n\n \n \n \n\fAkut légúti megbetegedés miatt orvoshoz fordult betegek\n becsült száma 100.000 lakosra területenként\n\n2025/2026. ÉVI SZEZON\n2026.05. - 2026.06. HÉT\n\nTerület\n\nIncidencia 100.000 lakosra\n\n05. hét\n\n06. hét\n\nBudapest\n\nBaranya\n\nBács-Kiskun\n\nBékés\n\nBorsod-A.-Z.\n\nCsongrád\n\nFejér\n\nGyőr-Moson-S.\n\nHajdú-Bihar\n\nHeves\n\nJász-Nagykun-Szolnok\n\nKomárom-Esztergom\n\nNógrád\n\nPest\n\nSomogy\n\nSzabolcs-Szatmár-B.\n\nTolna \n\nVas\n\nVeszprém\n\nZala\n\nOrszág\n\n2 270,8\n\n2 897,7\n\n2 439,4\n\n3 652,3\n\n3 578,0\n\n3 103,6\n\n3 159,8\n\n2 601,7\n\n3 529,0\n\n2 722,5\n\n3 391,3\n\n3 422,4\n\n3 156,4\n\n3 693,2\n\n2 744,2\n\n3 864,6\n\n2 741,5\n\n2 809,6\n\n2 964,7\n\n1 420,7\n\n2 993,8\n\n2 178,5\n\n2 540,9\n\n2 481,7\n\n3 849,1\n\n3 686,9\n\n3 074,7\n\n3 216,8\n\n2 575,1\n\n3 347,7\n\n2 836,9\n\n3 592,6\n\n3 506,6\n\n2 890,0\n\n3 545,0\n\n2 828,7\n\n3 898,6\n\n2 965,3\n\n2 538,9\n\n3 070,7\n\n1 275,6\n\n2 960,4\n\nForrás: Nemzeti Népegészségügyi és Gyógyszerészeti Központ\n\n\fAkut légúti megbetegedés miatt orvoshoz fordulók száma 100 000 lakosra \nés a sentinel pozitív minták száma Magyarországon\n2025. 40. - 2026. 06. hét\n\n)\no\no\no\n%\n\n(\ns\ná\nt\ni\nd\nb\nr\no\nM\n\ni\n\n5 000,0\n\n4 500,0\n\n4 000,0\n\n3 500,0\n\n3 000,0\n\n2 500,0\n\n2 000,0\n\n1 500,0\n\n1 000,0\n\n500,0\n\n0,0\n\n40. 41. 42. 43. 44. 45. 46. 47. 48. 49. 50. 51. 52. 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. 11. 12. 13. 14. 15. 16. 17. 18. 19. 20.\n\nRSV\n\nInfluenza\n\nSARS-CoV-2\n\n2024/2025 ARI\n\n2025/2026 ARI\n\nhetek\n\nForrás: Nemzeti Népegészségügyi és Gyógyszerészeti Központ\n\n300\n\n280\n\n260\n\n240\n\n220\n\n200\n\n180\n\n160\n\n140\n\n120\n\n100\n\n80\n\n60\n\n40\n\n20\n\n0\n\np\no\nz\ni\nt\ní\nv\nm\nn\nt\ná\nk\n\ni\n\ns\nz\ná\nm\na\n\n \n \n \n\fSARI kórházba felvettek száma a kimutatott"
+    }
+  },
+  {
     "file": "nngyk_pdfs/Figyelo_2025_40.pdf",
     "week": 40,
     "season_year": 2025,
