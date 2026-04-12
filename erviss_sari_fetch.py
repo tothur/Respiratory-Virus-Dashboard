@@ -25,7 +25,21 @@ DEFAULT_URL = "https://raw.githubusercontent.com/EU-ECDC/Respiratory_viruses_wee
 DEFAULT_DIR = "erviss_data"
 DEFAULT_OUTPUT = f"{DEFAULT_DIR}/erviss_sari.json"
 DEFAULT_CSV_COPY = f"{DEFAULT_DIR}/SARITestsDetectionsPositivity.csv"
-DEFAULT_YEARS = [2025, 2026]
+NH_RESP_SEASON_START_WEEK = 40
+
+
+def current_nh_resp_season_start_year(now: datetime | None = None) -> int:
+  current = now or datetime.now(timezone.utc)
+  iso_year, iso_week, _ = current.isocalendar()
+  return iso_year if iso_week >= NH_RESP_SEASON_START_WEEK else iso_year - 1
+
+
+def default_years(now: datetime | None = None) -> List[int]:
+  season_start_year = current_nh_resp_season_start_year(now)
+  return [season_start_year, season_start_year + 1]
+
+
+DEFAULT_YEARS = default_years()
 
 
 def fetch_csv(url: str) -> Tuple[str, List[Dict[str, str]]]:
@@ -201,8 +215,8 @@ def build_payload(rows: List[SariRow]) -> Dict[str, object]:
         entry["tests"] = row.total_tests
       positivity.append(entry)
 
-  latest_week = max((r.week for r in rows), default=None)
-  latest_year = max((r.year for r in rows), default=None)
+  latest_pair = max(((row.year, row.week) for row in rows), default=(None, None))
+  latest_year, latest_week = latest_pair
 
   return {
     "source": DEFAULT_URL,
@@ -234,7 +248,7 @@ def main(argv: List[str] | None = None) -> int:
     type=int,
     nargs="+",
     default=DEFAULT_YEARS,
-    help="Restrict rows to these ISO years (space separated; default: 2025 2026)",
+    help="Restrict rows to these ISO years (defaults to the active NH respiratory season years)",
   )
   args = parser.parse_args(argv)
 

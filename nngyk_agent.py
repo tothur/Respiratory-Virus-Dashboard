@@ -20,7 +20,7 @@ from pathlib import Path
 from typing import Iterable, List
 from urllib.error import HTTPError, URLError
 
-from nngyk_monitor import CATEGORY_URLS, MonitorState, _download_pdf, fetch_pdf_links
+from nngyk_monitor import MonitorState, _download_pdf, discover_category_urls, fetch_pdf_links
 from erviss_sari_fetch import DEFAULT_URL as ERVISS_URL, DEFAULT_OUTPUT as ERVISS_OUTPUT, DEFAULT_CSV_COPY, main as fetch_erviss
 from nngyk_extract import ExtractionResult, extract_text, infer_season_year_from_filename, parse_bulletin
 
@@ -263,7 +263,7 @@ def main(argv: Iterable[str] | None = None) -> int:
 
     def run_cycle() -> int:
         print("Checking NNGYK season pages:")
-        for url in CATEGORY_URLS:
+        for url in discover_category_urls():
             print(f"- {url}")
         fetch_url = None if args.skip_erviss else (args.erviss_url or None)
         if fetch_url:

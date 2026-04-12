@@ -38,6 +38,16 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 Then open `http://127.0.0.1:8000/index.html` in your browser. Any updated `nngyk_all.json` or `erviss_data/erviss_sari.json` files will be read on refresh.
 
+If you change the React frontend in `new-dashboard/` and want to refresh the published root site locally, rebuild and sync the generated files back to the repo root:
+
+```bash
+cd new-dashboard
+npm install
+npm run build
+cd ..
+python3 scripts/sync_frontend_dist.py --dist new-dashboard/dist --repo-root .
+```
+
 ## Connecting real data (one-shot or continuous)
 
 Use the combined agent to monitor, download, and extract PDFs into the dashboard JSON:
@@ -98,7 +108,7 @@ The dashboard automatically recalculates totals, season-at-a-glance metrics, and
 
 ### Seasonal influenza alerting
 
-The dashboard computes the latest ILI total for the selected season. If the most recent week exceeds the default alert threshold of 28,900 cases (≈289/100k for a ~10M population), a warning banner appears above the metric cards. Adjust the threshold in `app.js` (`ILI_THRESHOLD`) to match official guidance.
+The dashboard computes the latest ILI total for the selected season. If the most recent week exceeds the default alert threshold of 28,900 cases (≈289/100k for a ~10M population), a warning banner appears above the metric cards. Adjust the threshold in `new-dashboard/src/data/adapter.ts` (`ILI_THRESHOLD`) to match official guidance.
 
 ## Background scheduling
 

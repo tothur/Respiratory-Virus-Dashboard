@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import ssl
 import sys
 import time
@@ -22,20 +23,27 @@ from urllib.error import URLError, HTTPError
 from urllib.parse import parse_qs, urljoin, urlparse
 from urllib.request import Request, urlopen
 
-CURRENT_SEASON_URL = (
+SEASON_START_WEEK = 40
+SEASON_CATEGORY_RE = re.compile(
+    r"/leguti-figyeloszolgalat-2/category/\d+-leguti-figyeloszolgalat-adatai-(\d{4})-(\d{4})-evi-szezon\.html$",
+    re.IGNORECASE,
+)
+
+# Seed pages used to discover the active and previous season pages dynamically.
+CURRENT_SEASON_SEED_URL = (
     "https://nnk.gov.hu/index.php/leguti-figyeloszolgalat-2/"
     "category/420-leguti-figyeloszolgalat-adatai-2025-2026-evi-szezon.html"
 )
-HISTORICAL_SEASON_URLS = (
+HISTORICAL_SEASON_SEED_URLS = (
     "https://nnk.gov.hu/index.php/leguti-figyeloszolgalat-2/"
     "category/390-leguti-figyeloszolgalat-adatai-2024-2025-evi-szezon.html",
 )
 
-# Fetch links from all configured season pages by default.
-CATEGORY_URLS = (CURRENT_SEASON_URL, *HISTORICAL_SEASON_URLS)
+# Fetch links from dynamically resolved season pages, starting from these seeds.
+CATEGORY_URLS = (CURRENT_SEASON_SEED_URL, *HISTORICAL_SEASON_SEED_URLS)
 
 # Backwards compatible alias used by older callers / log messages.
-CATEGORY_URL = CURRENT_SEASON_URL
+CATEGORY_URL = CURRENT_SEASON_SEED_URL
 USER_AGENT = "NNGYK-PDF-Monitor/1.0 (contact: dashboard script)"
 DEFAULT_INTERVAL_MINUTES = 120
 
@@ -90,6 +98,7 @@ class _PdfLinkParser(HTMLParser):
         self.base_url = base_url
         self.pdf_links: Set[str] = set()
         self.all_links: Set[str] = set()
+        self.category_links: Set[str] = set()
 
     def handle_starttag(self, tag: str, attrs: List[tuple[str, str]]) -> None:
         if tag.lower() != "a":
@@ -99,26 +108,112 @@ class _PdfLinkParser(HTMLParser):
             return
         absolute = urljoin(self.base_url, href)
         self.all_links.add(absolute)
+        category_url = _canonicalize_category_url(absolute)
+        if _season_start_year_from_url(category_url) is not None:
+            self.category_links.add(category_url)
         href_lower = href.lower()
         if ".pdf" in href_lower:
             self.pdf_links.add(absolute)
 
 
-def fetch_pdf_links(urls: str | Iterable[str] = CATEGORY_URLS, timeout: int = 20) -> List[str]:
+def _canonicalize_category_url(url: str) -> str:
+    parsed = urlparse(url)
+    return parsed._replace(query="", fragment="").geturl()
+
+
+def _season_start_year_from_url(url: str) -> int | None:
+    match = SEASON_CATEGORY_RE.search(_canonicalize_category_url(url))
+    if not match:
+        return None
+
+    start_year = int(match.group(1))
+    end_year = int(match.group(2))
+    if end_year != start_year + 1:
+        return None
+    return start_year
+
+
+def _current_resp_season_start_year(now: datetime | None = None) -> int:
+    current = now or datetime.now(timezone.utc)
+    iso_year, iso_week, _ = current.isocalendar()
+    return iso_year if iso_week >= SEASON_START_WEEK else iso_year - 1
+
+
+def _target_category_start_years(now: datetime | None = None) -> Set[int]:
+    active = _current_resp_season_start_year(now)
+    return {active - 1, active}
+
+
+def _fetch_html(url: str, timeout: int, context: ssl.SSLContext) -> str:
+    req = Request(url, headers={"User-Agent": USER_AGENT})
+    with _open_url(req, timeout=timeout, context=context) as resp:
+        content_type = resp.headers.get_content_charset() or "utf-8"
+        return resp.read().decode(content_type, errors="replace")
+
+
+def discover_category_urls(
+    urls: str | Iterable[str] = CATEGORY_URLS,
+    timeout: int = 20,
+    *,
+    now: datetime | None = None,
+) -> List[str]:
+    """Discover the active and previous season category pages from the known seeds."""
+    seed_urls = [
+        _canonicalize_category_url(url)
+        for url in ([urls] if isinstance(urls, str) else list(urls))
+    ]
+    discovered: Set[str] = set(seed_urls)
+    target_years = _target_category_start_years(now)
+    context = _build_ssl_context()
+
+    for url in seed_urls:
+        parser = _PdfLinkParser(url)
+        try:
+            html = _fetch_html(url, timeout=timeout, context=context)
+        except (HTTPError, URLError) as exc:
+            print(f"[warn] Failed to discover season pages from {url}: {exc}", file=sys.stderr)
+            continue
+        parser.feed(html)
+        discovered.update(parser.category_links)
+
+    filtered = {
+        url
+        for url in discovered
+        if (_season_start_year_from_url(url) or -1) in target_years
+    }
+    if not filtered:
+        filtered = {
+            url
+            for url in seed_urls
+            if (_season_start_year_from_url(url) or -1) in target_years
+        } or set(seed_urls)
+
+    return sorted(
+        filtered,
+        key=lambda item: (_season_start_year_from_url(item) or 0, item),
+    )
+
+
+def fetch_pdf_links(
+    urls: str | Iterable[str] = CATEGORY_URLS,
+    timeout: int = 20,
+    *,
+    discover_categories: bool = True,
+) -> List[str]:
     """Return all absolute PDF URLs from one or more category pages."""
-    url_list = [urls] if isinstance(urls, str) else list(urls)
+    category_urls = (
+        discover_category_urls(urls, timeout=timeout)
+        if discover_categories
+        else [urls] if isinstance(urls, str) else list(urls)
+    )
     all_candidates: Set[str] = set()
     errors: List[tuple[str, Exception]] = []
     context = _build_ssl_context()
 
-    for url in url_list:
+    for url in category_urls:
         parser = _PdfLinkParser(url)
-
-        req = Request(url, headers={"User-Agent": USER_AGENT})
         try:
-            with _open_url(req, timeout=timeout, context=context) as resp:
-                content_type = resp.headers.get_content_charset() or "utf-8"
-                html = resp.read().decode(content_type, errors="replace")
+            html = _fetch_html(url, timeout=timeout, context=context)
         except (HTTPError, URLError) as exc:
             errors.append((url, exc))
             print(f"[warn] Failed to fetch {url}: {exc}", file=sys.stderr)
@@ -168,6 +263,7 @@ class MonitorState:
 
 @dataclass
 class MonitorResult:
+    category_pages: List[str]
     new_urls: List[str]
     all_urls: List[str]
     timestamp: datetime
@@ -225,7 +321,8 @@ def _download_pdf(url: str, directory: Path, timeout: int = 30) -> Path:
 def check_once(state_path: Path, download_dir: Path | None = None) -> MonitorResult:
     state = MonitorState.load(state_path)
     timestamp = datetime.now(timezone.utc)
-    all_urls = fetch_pdf_links()
+    category_pages = discover_category_urls(now=timestamp)
+    all_urls = fetch_pdf_links(category_pages, discover_categories=False)
     new_urls = [url for url in all_urls if url not in state.seen_urls]
     downloaded: List[Path] = []
 
@@ -239,7 +336,13 @@ def check_once(state_path: Path, download_dir: Path | None = None) -> MonitorRes
     state.seen_urls.update(all_urls)
     state.last_checked = timestamp.isoformat()
     state.save(state_path)
-    return MonitorResult(new_urls=new_urls, all_urls=all_urls, timestamp=timestamp, downloaded_files=downloaded)
+    return MonitorResult(
+        category_pages=category_pages,
+        new_urls=new_urls,
+        all_urls=all_urls,
+        timestamp=timestamp,
+        downloaded_files=downloaded,
+    )
 
 
 def print_report(result: MonitorResult) -> None:
@@ -247,7 +350,7 @@ def print_report(result: MonitorResult) -> None:
     header = f"Checked NNGYK season pages at {dt}"
     print(header)
     print("-" * len(header))
-    for url in CATEGORY_URLS:
+    for url in result.category_pages:
         print(f"- {url}")
     if result.new_urls:
         print("New PDF links detected:")
@@ -314,7 +417,7 @@ def main(argv: Iterable[str] | None = None) -> int:
         return 0
 
     print("Starting continuous monitor of NNGYK season pages:")
-    for url in CATEGORY_URLS:
+    for url in discover_category_urls():
         print(f"- {url}")
     print(f"Polling every {args.interval_minutes} minutes.")
     monitor_loop(args.state_file, args.interval_minutes, args.download_dir)
