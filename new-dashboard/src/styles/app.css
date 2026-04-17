@@ -700,6 +700,10 @@ h3 {
 }
 
 .quality-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 12px;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -1642,6 +1646,10 @@ h3 {
 }
 
 .historical-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 12px;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -2186,6 +2194,12 @@ h3 {
   }
 
   .glance-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .historical-header,
+  .quality-header {
     flex-direction: column;
     align-items: flex-start;
   }

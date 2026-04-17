@@ -855,11 +855,13 @@ export function App() {
   const [tableSortDirection, setTableSortDirection] = useState<SortDirection>("asc");
   const [isDataLoading, setIsDataLoading] = useState<boolean>(true);
   const [dataLoadedAt, setDataLoadedAt] = useState<Date | null>(null);
-  const [isSentinelVirologyOpen, setIsSentinelVirologyOpen] = useState<boolean>(true);
-  const [isSeasonGlanceOpen, setIsSeasonGlanceOpen] = useState<boolean>(true);
-  const [isWeeklyTableOpen, setIsWeeklyTableOpen] = useState<boolean>(true);
+  const [isSentinelVirologyOpen, setIsSentinelVirologyOpen] = useState<boolean>(false);
+  const [isSeasonGlanceOpen, setIsSeasonGlanceOpen] = useState<boolean>(false);
+  const [isWeeklyTableOpen, setIsWeeklyTableOpen] = useState<boolean>(false);
   const [isHungarySectionOpen, setIsHungarySectionOpen] = useState<boolean>(true);
-  const [isEuSectionOpen, setIsEuSectionOpen] = useState<boolean>(true);
+  const [isEuSectionOpen, setIsEuSectionOpen] = useState<boolean>(false);
+  const [isHistoricalOpen, setIsHistoricalOpen] = useState<boolean>(false);
+  const [isRigorOpen, setIsRigorOpen] = useState<boolean>(false);
 
   const text = STRINGS[language];
   const t = text;
@@ -1982,24 +1984,6 @@ export function App() {
                 : t.statsIliVsPrevNoBaseline}
             </p>
           </article>
-          <article className="stat-card stat-card-age-split">
-            <div className="stat-card-ili-head">
-              <h3>{t.statsAgeSplit}</h3>
-              <span className="stat-week-chip">
-                {epidemiology.ageSplit ? formatWeek(epidemiology.ageSplit.week, language) : "–"}
-              </span>
-            </div>
-            {epidemiology.ageSplit ? (
-              <div className="age-split-grid">
-                <span>{t.rigorAge0to14}: {epidemiology.ageSplit.age0to14.toFixed(1)}%</span>
-                <span>{t.rigorAge15to34}: {epidemiology.ageSplit.age15to34.toFixed(1)}%</span>
-                <span>{t.rigorAge35to59}: {epidemiology.ageSplit.age35to59.toFixed(1)}%</span>
-                <span>{t.rigorAge60plus}: {epidemiology.ageSplit.age60plus.toFixed(1)}%</span>
-              </div>
-            ) : (
-              <p className="stat-compare-baseline">{t.rigorAgeMissing}</p>
-            )}
-          </article>
         </section>
       </section>
 
@@ -2019,47 +2003,66 @@ export function App() {
         />
       </section>
 
-      <section className="historical-section">
+      <section className="historical-section collapsible-section">
         <header className="historical-header">
-          <h2>{t.historicalTitle}</h2>
-          {snapshot.historical.available && snapshot.historical.compareSeasonLabel ? (
-            <p>
-              {language === "hu"
-                ? `${snapshot.historical.currentSeasonLabel} összevetve: ${snapshot.historical.compareSeasonLabel}`
-                : `${snapshot.historical.currentSeasonLabel} vs ${snapshot.historical.compareSeasonLabel}`}
-            </p>
-          ) : (
-            <p>{t.historicalEmptyHeader}</p>
-          )}
+          <div>
+            <h2>{t.historicalTitle}</h2>
+            {snapshot.historical.available && snapshot.historical.compareSeasonLabel ? (
+              <p>
+                {language === "hu"
+                  ? `${snapshot.historical.currentSeasonLabel} összevetve: ${snapshot.historical.compareSeasonLabel}`
+                  : `${snapshot.historical.currentSeasonLabel} vs ${snapshot.historical.compareSeasonLabel}`}
+              </p>
+            ) : (
+              <p>{t.historicalEmptyHeader}</p>
+            )}
+          </div>
+          <button
+            type="button"
+            className="section-toggle"
+            aria-expanded={isHistoricalOpen}
+            aria-controls="historical-comparison-content"
+            aria-label={`${isHistoricalOpen ? t.sectionCollapse : t.sectionExpand}: ${t.historicalTitle}`}
+            onClick={() => setIsHistoricalOpen((open) => !open)}
+          >
+            <span className={`section-toggle-icon ${isHistoricalOpen ? "open" : ""}`} aria-hidden="true">
+              ▾
+            </span>
+            <span>{isHistoricalOpen ? t.sectionCollapse : t.sectionExpand}</span>
+          </button>
         </header>
 
-        {snapshot.historical.available &&
-        snapshot.historical.compareSeasonLabel &&
-        historicalIliOption &&
-        historicalSariOption &&
-        historicalIcuOption ? (
-          <div className="historical-grid">
-            <EChartsPanel
-              title={t.historicalIli}
-              subtitle={formatText(t.historicalDelta, { value: formatSignedPercent(snapshot.historical.ili.latestDeltaPercent) })}
-              option={historicalIliOption}
-            />
-            <EChartsPanel
-              title={t.historicalSari}
-              subtitle={formatText(t.historicalDelta, { value: formatSignedPercent(snapshot.historical.sariAdmissions.latestDeltaPercent) })}
-              option={historicalSariOption}
-            />
-            <EChartsPanel
-              title={t.historicalIcu}
-              subtitle={formatText(t.historicalDelta, { value: formatSignedPercent(snapshot.historical.sariIcu.latestDeltaPercent) })}
-              option={historicalIcuOption}
-            />
+        {isHistoricalOpen ? (
+          <div id="historical-comparison-content" className="section-content">
+            {snapshot.historical.available &&
+            snapshot.historical.compareSeasonLabel &&
+            historicalIliOption &&
+            historicalSariOption &&
+            historicalIcuOption ? (
+              <div className="historical-grid">
+                <EChartsPanel
+                  title={t.historicalIli}
+                  subtitle={formatText(t.historicalDelta, { value: formatSignedPercent(snapshot.historical.ili.latestDeltaPercent) })}
+                  option={historicalIliOption}
+                />
+                <EChartsPanel
+                  title={t.historicalSari}
+                  subtitle={formatText(t.historicalDelta, { value: formatSignedPercent(snapshot.historical.sariAdmissions.latestDeltaPercent) })}
+                  option={historicalSariOption}
+                />
+                <EChartsPanel
+                  title={t.historicalIcu}
+                  subtitle={formatText(t.historicalDelta, { value: formatSignedPercent(snapshot.historical.sariIcu.latestDeltaPercent) })}
+                  option={historicalIcuOption}
+                />
+              </div>
+            ) : (
+              <article className="historical-empty">
+                {t.historicalUnavailable}
+              </article>
+            )}
           </div>
-        ) : (
-          <article className="historical-empty">
-            {t.historicalUnavailable}
-          </article>
-        )}
+        ) : null}
       </section>
 
       <section className="virology-section collapsible-section">
@@ -2289,81 +2292,98 @@ export function App() {
         ) : null}
       </section>
 
-      <section className="quality-section" aria-label={t.rigorAria}>
+      <section className="quality-section collapsible-section" aria-label={t.rigorAria}>
         <header className="quality-header">
-          <h2>{t.rigorTitle}</h2>
-          <p>{t.rigorNote}</p>
+          <div>
+            <h2>{t.rigorTitle}</h2>
+            <p>{t.rigorNote}</p>
+          </div>
+          <button
+            type="button"
+            className="section-toggle"
+            aria-expanded={isRigorOpen}
+            aria-controls="rigor-content"
+            aria-label={`${isRigorOpen ? t.sectionCollapse : t.sectionExpand}: ${t.rigorTitle}`}
+            onClick={() => setIsRigorOpen((open) => !open)}
+          >
+            <span className={`section-toggle-icon ${isRigorOpen ? "open" : ""}`} aria-hidden="true">
+              ▾
+            </span>
+            <span>{isRigorOpen ? t.sectionCollapse : t.sectionExpand}</span>
+          </button>
         </header>
 
-        <div className="quality-grid">
-          <article
-            className={`quality-card ${qualityCardClass(
-              epidemiology.iliMetric.baseline.zScore != null && Math.abs(epidemiology.iliMetric.baseline.zScore) >= 2 ? "moderate" : "good"
-            )}`}
-          >
-            <h3>{t.rigorIliRateCard}</h3>
-            <strong>{formatRatePer100kLabel(epidemiology.iliMetric.ratePer100k, t.rigorPer100kSuffix)}</strong>
-            <p>
-              {t.rigorWoW}: {formatSignedPercent(epidemiology.iliMetric.weekOverWeekPercent)} · {t.rigorZScore}:{" "}
-              {formatZScore(epidemiology.iliMetric.baseline.zScore)}
-            </p>
-            <p>
-              {t.rigorBaselineSample}: {baselineSampleLabel}
-              {epidemiology.iliMetric.baseline.baselineMean != null
-                ? ` · ${t.rigorBaselineMean}: ${formatRatePer100kLabel(
-                    ratePer100k(epidemiology.iliMetric.baseline.baselineMean),
-                    t.rigorPer100kSuffix
-                  )}`
-                : ""}
-            </p>
-          </article>
+        {isRigorOpen ? (
+          <div id="rigor-content" className="quality-grid">
+            <article
+              className={`quality-card ${qualityCardClass(
+                epidemiology.iliMetric.baseline.zScore != null && Math.abs(epidemiology.iliMetric.baseline.zScore) >= 2 ? "moderate" : "good"
+              )}`}
+            >
+              <h3>{t.rigorIliRateCard}</h3>
+              <strong>{formatRatePer100kLabel(epidemiology.iliMetric.ratePer100k, t.rigorPer100kSuffix)}</strong>
+              <p>
+                {t.rigorWoW}: {formatSignedPercent(epidemiology.iliMetric.weekOverWeekPercent)} · {t.rigorZScore}:{" "}
+                {formatZScore(epidemiology.iliMetric.baseline.zScore)}
+              </p>
+              <p>
+                {t.rigorBaselineSample}: {baselineSampleLabel}
+                {epidemiology.iliMetric.baseline.baselineMean != null
+                  ? ` · ${t.rigorBaselineMean}: ${formatRatePer100kLabel(
+                      ratePer100k(epidemiology.iliMetric.baseline.baselineMean),
+                      t.rigorPer100kSuffix
+                    )}`
+                  : ""}
+              </p>
+            </article>
 
-          <article
-            className={`quality-card ${qualityCardClass(
-              epidemiology.sariMetric.baseline.zScore != null && Math.abs(epidemiology.sariMetric.baseline.zScore) >= 2 ? "moderate" : "good"
-            )}`}
-          >
-            <h3>{t.rigorSariRateCard}</h3>
-            <strong>{formatRatePer100kLabel(epidemiology.sariMetric.ratePer100k, t.rigorPer100kSuffix)}</strong>
-            <p>
-              {t.rigorWoW}: {formatSignedPercent(epidemiology.sariMetric.weekOverWeekPercent)} · {t.rigorZScore}:{" "}
-              {formatZScore(epidemiology.sariMetric.baseline.zScore)}
-            </p>
-            <p>{t.rigorBaselineSample}: {epidemiology.sariMetric.baseline.baselineCount.toLocaleString()}</p>
-          </article>
+            <article
+              className={`quality-card ${qualityCardClass(
+                epidemiology.sariMetric.baseline.zScore != null && Math.abs(epidemiology.sariMetric.baseline.zScore) >= 2 ? "moderate" : "good"
+              )}`}
+            >
+              <h3>{t.rigorSariRateCard}</h3>
+              <strong>{formatRatePer100kLabel(epidemiology.sariMetric.ratePer100k, t.rigorPer100kSuffix)}</strong>
+              <p>
+                {t.rigorWoW}: {formatSignedPercent(epidemiology.sariMetric.weekOverWeekPercent)} · {t.rigorZScore}:{" "}
+                {formatZScore(epidemiology.sariMetric.baseline.zScore)}
+              </p>
+              <p>{t.rigorBaselineSample}: {epidemiology.sariMetric.baseline.baselineCount.toLocaleString()}</p>
+            </article>
 
-          <article className={`quality-card ${qualityCardClass(epidemiology.quality.ageLevel)}`}>
-            <h3>{t.rigorAgeSplitTitle}</h3>
-            {epidemiology.ageSplit ? (
-              <>
-                <strong>{formatWeek(epidemiology.ageSplit.week, language)}</strong>
-                <div className="age-split-grid">
-                  <span>{t.rigorAge0to14}: {epidemiology.ageSplit.age0to14.toFixed(1)}%</span>
-                  <span>{t.rigorAge15to34}: {epidemiology.ageSplit.age15to34.toFixed(1)}%</span>
-                  <span>{t.rigorAge35to59}: {epidemiology.ageSplit.age35to59.toFixed(1)}%</span>
-                  <span>{t.rigorAge60plus}: {epidemiology.ageSplit.age60plus.toFixed(1)}%</span>
-                </div>
-              </>
-            ) : (
-              <p>{t.rigorAgeMissing}</p>
-            )}
-          </article>
+            <article className={`quality-card ${qualityCardClass(epidemiology.quality.ageLevel)}`}>
+              <h3>{t.rigorAgeSplitTitle}</h3>
+              {epidemiology.ageSplit ? (
+                <>
+                  <strong>{formatWeek(epidemiology.ageSplit.week, language)}</strong>
+                  <div className="age-split-grid">
+                    <span>{t.rigorAge0to14}: {epidemiology.ageSplit.age0to14.toFixed(1)}%</span>
+                    <span>{t.rigorAge15to34}: {epidemiology.ageSplit.age15to34.toFixed(1)}%</span>
+                    <span>{t.rigorAge35to59}: {epidemiology.ageSplit.age35to59.toFixed(1)}%</span>
+                    <span>{t.rigorAge60plus}: {epidemiology.ageSplit.age60plus.toFixed(1)}%</span>
+                  </div>
+                </>
+              ) : (
+                <p>{t.rigorAgeMissing}</p>
+              )}
+            </article>
 
-          <article className={`quality-card ${qualityCardClass(epidemiology.quality.coverageLevel)}`}>
-            <h3>{t.rigorQualityTitle}</h3>
-            <div className="rigor-quality-list">
-              <span className={`rigor-pill ${qualityCardClass(epidemiology.quality.coverageLevel)}`}>
-                {t.rigorQualityCoverage}: {qualityLabelFor(epidemiology.quality.coverageLevel)} ({coveragePercentLabel})
-              </span>
-              <span className={`rigor-pill ${qualityCardClass(epidemiology.quality.baselineLevel)}`}>
-                {t.rigorQualityBaseline}: {qualityLabelFor(epidemiology.quality.baselineLevel)} (n={epidemiology.quality.baselineCount})
-              </span>
-              <span className={`rigor-pill ${qualityCardClass(epidemiology.quality.ageLevel)}`}>
-                {t.rigorQualityAge}: {qualityLabelFor(epidemiology.quality.ageLevel)}
-              </span>
-            </div>
-          </article>
-        </div>
+            <article className={`quality-card ${qualityCardClass(epidemiology.quality.coverageLevel)}`}>
+              <h3>{t.rigorQualityTitle}</h3>
+              <div className="rigor-quality-list">
+                <span className={`rigor-pill ${qualityCardClass(epidemiology.quality.coverageLevel)}`}>
+                  {t.rigorQualityCoverage}: {qualityLabelFor(epidemiology.quality.coverageLevel)} ({coveragePercentLabel})
+                </span>
+                <span className={`rigor-pill ${qualityCardClass(epidemiology.quality.baselineLevel)}`}>
+                  {t.rigorQualityBaseline}: {qualityLabelFor(epidemiology.quality.baselineLevel)} (n={epidemiology.quality.baselineCount})
+                </span>
+                <span className={`rigor-pill ${qualityCardClass(epidemiology.quality.ageLevel)}`}>
+                  {t.rigorQualityAge}: {qualityLabelFor(epidemiology.quality.ageLevel)}
+                </span>
+              </div>
+            </article>
+          </div>
+        ) : null}
       </section>
 
       <section className="table-section collapsible-section" aria-label={t.tableAria}>
