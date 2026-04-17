@@ -142,6 +142,12 @@ const STRINGS = {
     coverageMissing: "Missing weeks (ILI/SARI)",
     coverageMissingNote: "Gaps within each season timeline",
     coverageAria: "Data coverage indicators",
+    alertRegionHu: "Hungary",
+    alertRegionEu: "EU/EEA",
+    alertMetricWeek: "Week",
+    alertMetricPositivity: "Positivity",
+    alertLeaderLabel: "Leading virus",
+    alertInfluenzaLabel: "Influenza",
     trendTitle: "Weekly trend signals",
     trendNote: "Weekly change in ILI cases and sentinel positivity.",
     trendAria: "Weekly trend signals",
@@ -315,6 +321,12 @@ const STRINGS = {
     coverageMissing: "Hiányzó hetek (ILI/SARI)",
     coverageMissingNote: "Rések az egyes szezonidősorokban",
     coverageAria: "Adatlefedettségi jelzők",
+    alertRegionHu: "Magyarország",
+    alertRegionEu: "EU/EGT",
+    alertMetricWeek: "Hét",
+    alertMetricPositivity: "Pozitivitás",
+    alertLeaderLabel: "Vezető vírus",
+    alertInfluenzaLabel: "Influenza",
     trendTitle: "Heti trendek",
     trendNote: "ILI esetszám és sentinel vírus pozitivitások változásai",
     trendAria: "Heti trendek",
@@ -1646,11 +1658,8 @@ export function App() {
   const isAboveThreshold = snapshot.stats.latestIliCases >= snapshot.iliThreshold;
   const signalClassName = isAboveThreshold ? "critical" : "ok";
   const signalHeadline = isAboveThreshold ? t.signalEpidemicYes : t.signalEpidemicNo;
-  const fluAlertText = formatText(isAboveThreshold ? t.fluTextAbove : t.fluTextBelow, {
-    week: formatWeek(snapshot.stats.latestWeek, language),
-    cases: snapshot.stats.latestIliCases.toLocaleString(),
-    threshold: snapshot.iliThreshold.toLocaleString(),
-  });
+  const latestIliCasesLabel = snapshot.stats.latestIliCases.toLocaleString();
+  const iliThresholdLabel = snapshot.iliThreshold.toLocaleString();
   const iliTrendSignal = surgeSignals.find((signal) => signal.virus === DEFAULT_ILI_VIRUS) ?? null;
   const weeklySituationHeadline = (() => {
     const delta = iliTrendSignal?.change;
@@ -1743,25 +1752,18 @@ export function App() {
         ? `${calendarYearFromNhSeasonWeek(snapshot.euVirology.targetYear, snapshot.euVirology.latestWeek)} · ${formatWeek(snapshot.euVirology.latestWeek, language)}`
         : `${calendarYearFromNhSeasonWeek(snapshot.euVirology.targetYear, snapshot.euVirology.latestWeek)}-${formatWeek(snapshot.euVirology.latestWeek, language)}`
       : "–";
-  const huLeaderText = huLeader
-    ? formatText(t.leaderHuText, {
-        week: formatWeek(huLeader.week, language),
-        virus: displayVirusLabel(huLeader.virus, language),
-        pos: huLeader.positivity.toFixed(1),
-      })
-    : t.alertsLoadingPos;
   const huLeaderVirus = huLeader ? displayVirusLabel(huLeader.virus, language) : t.noDataShort;
   const huLeaderClass = virusClassName(huLeader?.virus);
-  const euLeaderText = euLeader
-    ? formatText(t.leaderEuText, {
-        week: formatWeek(euLeader.week, language),
-        year: euLeader.year,
-        virus: displayVirusLabel(euLeader.virus, language),
-        pos: euLeader.positivity.toFixed(1),
-      })
-    : t.alertsLoadingEuPos;
+  const huLeaderPositivityLabel = huLeader ? `${huLeader.positivity.toFixed(1)}%` : "–";
+  const huLeaderWeekLabel = huLeader ? formatWeek(huLeader.week, language) : "–";
   const euLeaderVirus = euLeader ? displayVirusLabel(euLeader.virus, language) : t.noDataShort;
   const euLeaderClass = virusClassName(euLeader?.virus);
+  const euLeaderPositivityLabel = euLeader ? `${euLeader.positivity.toFixed(1)}%` : "–";
+  const euLeaderWeekLabel = euLeader
+    ? language === "hu"
+      ? `${euLeader.year} · ${formatWeek(euLeader.week, language)}`
+      : `${euLeader.year}-${formatWeek(euLeader.week, language)}`
+    : "–";
   const qualityLabelFor = (level: "good" | "moderate" | "limited"): string => {
     if (level === "good") return t.rigorQualityGood;
     if (level === "moderate") return t.rigorQualityModerate;
@@ -1827,67 +1829,123 @@ export function App() {
       </header>
 
       <section className="alerts-grid" aria-label={t.alertsAria}>
-        <article className={`alert-card primary epidemic ${signalClassName}`} role="status" aria-live="polite">
-          <span className="alert-kicker">{t.decisionTitle}</span>
-          <h2>
-            {isAboveThreshold ? (
-              <span className="alert-status-icon" aria-hidden="true">
-                !
+        <article
+          className={`alert-card primary epidemic region-hu ${signalClassName} ${virusClassName(DEFAULT_ILI_VIRUS)}`}
+          role="status"
+          aria-live="polite"
+        >
+          <div className="alert-topline">
+            <span className="alert-region-badge">{t.alertRegionHu}</span>
+            <span className={`alert-state-pill ${signalClassName}`}>{signalHeadline}</span>
+          </div>
+          <div className="alert-main">
+            <span className="alert-scope">{t.alertInfluenzaLabel}</span>
+            <h2>
+              {isAboveThreshold ? (
+                <span className="alert-status-icon" aria-hidden="true">
+                  !
+                </span>
+              ) : null}
+              <span>{weeklySituationHeadline}</span>
+            </h2>
+          </div>
+          <div className="alert-stat-row">
+            <span className="alert-stat">
+              <span>{t.statsTotalIli}</span>
+              <strong>{latestIliCasesLabel}</strong>
+            </span>
+            <span className="alert-stat">
+              <span>{t.alertThreshold}</span>
+              <strong>{iliThresholdLabel}</strong>
+            </span>
+          </div>
+          <div className="alert-actions-row">
+            <div className="alert-meta">
+              <span className={`alert-meta-chip confidence-${epidemicConfidenceLevel}`}>
+                {t.decisionConfidence}: {epidemicConfidenceLabel}
               </span>
-            ) : null}
-            <span>{weeklySituationHeadline}</span>
-          </h2>
-          <p className="alert-standfirst">{signalHeadline}</p>
-          <p>{fluAlertText}</p>
-          <div className="alert-meta">
-            <span className={`alert-meta-chip confidence-${epidemicConfidenceLevel}`}>
-              {t.decisionConfidence}: {epidemicConfidenceLabel}
-            </span>
-            <span className="alert-meta-chip">
-              {t.decisionFreshness}: {formatWeek(snapshot.stats.latestWeek, language)}
-            </span>
+              <span className="alert-meta-chip">
+                {t.decisionFreshness}: {formatWeek(snapshot.stats.latestWeek, language)}
+              </span>
+            </div>
+            <button type="button" className="alert-evidence-btn" onClick={() => jumpToEvidence("hu-ili-sari-charts")}>
+              {t.decisionEvidenceIli}
+            </button>
           </div>
-          <button type="button" className="alert-evidence-btn" onClick={() => jumpToEvidence("hu-ili-sari-charts")}>
-            {t.decisionEvidenceIli}
-          </button>
         </article>
-        <article className={`alert-card leader summary ${huLeaderClass}`} role="status" aria-live="polite">
-          <h2>{t.leaderHuTitle}</h2>
-          <div className="alert-emphasis-row">
-            {huLeader ? <VirusIcon virus={huLeader.virus} /> : null}
-            <strong className="alert-emphasis">{huLeaderVirus}</strong>
+
+        <article className={`alert-card leader summary region-hu ${huLeaderClass}`} role="status" aria-live="polite">
+          <div className="alert-topline">
+            <span className="alert-region-badge">{t.alertRegionHu}</span>
+            <span className="alert-scope-pill">{t.alertLeaderLabel}</span>
           </div>
-          <p>{huLeaderText}</p>
-          <div className="alert-meta">
-            <span className={`alert-meta-chip confidence-${huLeaderConfidenceLevel}`}>
-              {t.decisionConfidence}: {huLeaderConfidenceLabel}
+          <div className="alert-virus-readout">
+            <VirusIcon virus={huLeader?.virus} />
+            <div>
+              <span className="alert-scope">{t.virologyTopPositivity}</span>
+              <strong className="alert-virus-name">{huLeaderVirus}</strong>
+            </div>
+          </div>
+          <div className="alert-stat-row compact">
+            <span className="alert-stat pathogen-stat">
+              <span>{t.alertMetricPositivity}</span>
+              <strong>{huLeaderPositivityLabel}</strong>
             </span>
-            <span className="alert-meta-chip">
-              {t.decisionFreshness}: {latestVirologyWeekLabel}
+            <span className="alert-stat">
+              <span>{t.alertMetricWeek}</span>
+              <strong>{huLeaderWeekLabel}</strong>
             </span>
           </div>
-          <button type="button" className="alert-evidence-btn" onClick={() => jumpToEvidence("hu-sentinel-positivity")}>
-            {t.decisionEvidenceHuPositivity}
-          </button>
+          <div className="alert-actions-row">
+            <div className="alert-meta">
+              <span className={`alert-meta-chip confidence-${huLeaderConfidenceLevel}`}>
+                {t.decisionConfidence}: {huLeaderConfidenceLabel}
+              </span>
+              <span className="alert-meta-chip">
+                {t.decisionFreshness}: {latestVirologyWeekLabel}
+              </span>
+            </div>
+            <button type="button" className="alert-evidence-btn" onClick={() => jumpToEvidence("hu-sentinel-positivity")}>
+              {t.decisionEvidenceHuPositivity}
+            </button>
+          </div>
         </article>
-        <article className={`alert-card leader summary ${euLeaderClass}`} role="status" aria-live="polite">
-          <h2>{t.leaderEuTitle}</h2>
-          <div className="alert-emphasis-row">
-            {euLeader ? <VirusIcon virus={euLeader.virus} /> : null}
-            <strong className="alert-emphasis">{euLeaderVirus}</strong>
+
+        <article className={`alert-card leader summary region-eu ${euLeaderClass}`} role="status" aria-live="polite">
+          <div className="alert-topline">
+            <span className="alert-region-badge">{t.alertRegionEu}</span>
+            <span className="alert-scope-pill">{t.alertLeaderLabel}</span>
           </div>
-          <p>{euLeaderText}</p>
-          <div className="alert-meta">
-            <span className={`alert-meta-chip confidence-${euLeaderConfidenceLevel}`}>
-              {t.decisionConfidence}: {euLeaderConfidenceLabel}
+          <div className="alert-virus-readout">
+            <VirusIcon virus={euLeader?.virus} />
+            <div>
+              <span className="alert-scope">{t.euTopPositivity}</span>
+              <strong className="alert-virus-name">{euLeaderVirus}</strong>
+            </div>
+          </div>
+          <div className="alert-stat-row compact">
+            <span className="alert-stat pathogen-stat">
+              <span>{t.alertMetricPositivity}</span>
+              <strong>{euLeaderPositivityLabel}</strong>
             </span>
-            <span className="alert-meta-chip">
-              {t.decisionFreshness}: {latestEuWeekLabel}
+            <span className="alert-stat">
+              <span>{t.alertMetricWeek}</span>
+              <strong>{euLeaderWeekLabel}</strong>
             </span>
           </div>
-          <button type="button" className="alert-evidence-btn" onClick={() => jumpToEvidence("eu-positivity-chart")}>
-            {t.decisionEvidenceEuPositivity}
-          </button>
+          <div className="alert-actions-row">
+            <div className="alert-meta">
+              <span className={`alert-meta-chip confidence-${euLeaderConfidenceLevel}`}>
+                {t.decisionConfidence}: {euLeaderConfidenceLabel}
+              </span>
+              <span className="alert-meta-chip">
+                {t.decisionFreshness}: {latestEuWeekLabel}
+              </span>
+            </div>
+            <button type="button" className="alert-evidence-btn" onClick={() => jumpToEvidence("eu-positivity-chart")}>
+              {t.decisionEvidenceEuPositivity}
+            </button>
+          </div>
         </article>
       </section>
 

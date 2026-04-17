@@ -250,16 +250,51 @@ h3 {
   animation-delay: 50ms;
 }
 
+@media (min-width: 980px) {
+  .alerts-grid {
+    grid-template-columns: minmax(320px, 1.14fr) repeat(2, minmax(250px, 0.93fr));
+  }
+}
+
 .alert-card {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
+  display: grid;
+  gap: 12px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  padding: 15px 17px 17px;
+  padding: 16px 17px 17px 20px;
   background: var(--panel);
-  min-height: 110px;
+  min-height: 174px;
   transition: transform 180ms ease, box-shadow 220ms ease, border-color 180ms ease;
+}
+
+.alert-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: var(--region-accent, var(--accent));
+  z-index: 0;
+}
+
+.alert-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.alert-card.region-hu {
+  --region-accent: #16a34a;
+  --region-soft: rgba(22, 163, 74, 0.12);
+  --region-ink: #166534;
+}
+
+.alert-card.region-eu {
+  --region-accent: #2563eb;
+  --region-soft: rgba(37, 99, 235, 0.12);
+  --region-ink: #1d4ed8;
 }
 
 .alert-card:hover {
@@ -307,6 +342,85 @@ h3 {
   text-transform: uppercase;
 }
 
+.alert-topline,
+.alert-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.alert-actions-row {
+  align-items: flex-end;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+.alert-actions-row .alert-meta {
+  margin-top: 0;
+}
+
+.alert-actions-row .alert-evidence-btn {
+  margin-top: 0;
+}
+
+.alert-region-badge,
+.alert-scope-pill,
+.alert-state-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.alert-region-badge {
+  border: 1px solid color-mix(in srgb, var(--region-accent, var(--accent)) 50%, transparent);
+  background: var(--region-accent, var(--accent));
+  color: #ffffff;
+  padding: 5px 9px;
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--region-accent, var(--accent)) 18%, transparent);
+}
+
+.alert-scope-pill,
+.alert-state-pill {
+  border: 1px solid color-mix(in srgb, var(--pathogen-accent, var(--accent)) 34%, transparent);
+  background: color-mix(in srgb, var(--pathogen-soft, rgba(148, 163, 184, 0.14)) 82%, var(--panel));
+  color: var(--pathogen-emphasis, var(--text));
+  padding: 5px 9px;
+}
+
+.alert-state-pill.critical {
+  border-color: rgba(185, 28, 28, 0.42);
+  background: rgba(220, 38, 38, 0.12);
+  color: #991b1b;
+}
+
+.alert-state-pill.ok {
+  border-color: rgba(15, 118, 110, 0.36);
+  background: rgba(20, 184, 166, 0.12);
+  color: #0f766e;
+}
+
+.alert-main {
+  display: grid;
+  gap: 5px;
+}
+
+.alert-scope {
+  display: block;
+  color: color-mix(in srgb, var(--muted) 86%, var(--text));
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
 .alert-standfirst {
   margin-top: 8px;
   font-size: 0.82rem;
@@ -319,6 +433,56 @@ h3 {
   flex-wrap: wrap;
   gap: 6px;
   margin-top: 10px;
+}
+
+.alert-stat-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.alert-stat {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--region-accent, var(--accent)) 22%, var(--border));
+  background: color-mix(in srgb, var(--region-soft, rgba(37, 99, 235, 0.08)) 68%, var(--panel));
+  padding: 9px 10px;
+}
+
+.alert-stat span {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 760;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.alert-stat strong {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--text);
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  font-weight: 820;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.alert-stat.pathogen-stat {
+  border-color: color-mix(in srgb, var(--pathogen-accent, var(--accent)) 38%, var(--border));
+  background: color-mix(in srgb, var(--pathogen-soft, rgba(148, 163, 184, 0.12)) 76%, var(--panel));
+}
+
+.alert-stat.pathogen-stat strong {
+  color: var(--pathogen-emphasis, var(--text));
 }
 
 .alert-meta-chip {
@@ -398,25 +562,32 @@ h3 {
 
 .alert-card.ok {
   border-color: rgba(15, 118, 110, 0.28);
-  background: linear-gradient(135deg, rgba(15, 118, 110, 0.08), rgba(255, 255, 255, 0.88));
+  background:
+    radial-gradient(circle at 92% 10%, rgba(20, 184, 166, 0.14), transparent 34%),
+    linear-gradient(135deg, rgba(15, 118, 110, 0.08), rgba(255, 255, 255, 0.9));
 }
 
 .alert-card.critical {
   border-color: rgba(185, 28, 28, 0.44);
-  background: linear-gradient(135deg, rgba(239, 68, 68, 0.18), rgba(255, 245, 245, 0.94));
+  background:
+    radial-gradient(circle at 92% 10%, rgba(239, 68, 68, 0.2), transparent 34%),
+    linear-gradient(135deg, rgba(239, 68, 68, 0.18), rgba(255, 245, 245, 0.94));
 }
 
 .alert-card.leader {
-  border-color: color-mix(in srgb, var(--pathogen-accent, #2563eb) 28%, transparent);
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--pathogen-soft, rgba(37, 99, 235, 0.1)) 78%, transparent),
-    rgba(255, 255, 255, 0.9)
-  );
+  border-color: color-mix(in srgb, var(--region-accent, var(--accent)) 25%, var(--pathogen-accent, #2563eb));
+  background:
+    radial-gradient(
+      circle at 92% 12%,
+      color-mix(in srgb, var(--pathogen-accent, #2563eb) 18%, transparent),
+      transparent 36%
+    ),
+    linear-gradient(135deg, var(--region-soft, rgba(37, 99, 235, 0.08)), rgba(255, 255, 255, 0.92) 48%),
+    linear-gradient(180deg, color-mix(in srgb, var(--pathogen-soft, rgba(37, 99, 235, 0.1)) 46%, transparent), transparent);
 }
 
 .alert-card.summary {
-  padding-top: 14px;
+  padding-top: 16px;
 }
 
 .alert-card.summary h2 {
@@ -437,10 +608,37 @@ h3 {
   color: var(--pathogen-emphasis, var(--text));
 }
 
-.alert-emphasis-row {
+.alert-emphasis-row,
+.alert-virus-readout {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.alert-virus-readout {
+  gap: 12px;
+  min-height: 54px;
+}
+
+.alert-virus-readout .virus-icon {
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--pathogen-accent, #64748b) 16%, transparent);
+}
+
+.alert-virus-readout .virus-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.alert-virus-name {
+  display: block;
+  margin-top: 3px;
+  color: var(--pathogen-emphasis, var(--text));
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  font-weight: 840;
+  letter-spacing: -0.035em;
+  line-height: 1;
 }
 
 .virus-icon {
@@ -1772,21 +1970,28 @@ h3 {
 
 [data-theme="dark"] .alert-card.ok {
   border-color: rgba(45, 212, 191, 0.35);
-  background: linear-gradient(135deg, rgba(20, 184, 166, 0.2), rgba(15, 23, 42, 0.84));
+  background:
+    radial-gradient(circle at 92% 10%, rgba(45, 212, 191, 0.22), transparent 34%),
+    linear-gradient(135deg, rgba(20, 184, 166, 0.2), rgba(15, 23, 42, 0.86));
 }
 
 [data-theme="dark"] .alert-card.critical {
   border-color: rgba(248, 113, 113, 0.5);
-  background: linear-gradient(135deg, rgba(220, 38, 38, 0.32), rgba(15, 23, 42, 0.84));
+  background:
+    radial-gradient(circle at 92% 10%, rgba(248, 113, 113, 0.24), transparent 34%),
+    linear-gradient(135deg, rgba(220, 38, 38, 0.32), rgba(15, 23, 42, 0.86));
 }
 
 [data-theme="dark"] .alert-card.leader {
   border-color: color-mix(in srgb, var(--pathogen-accent, #60a5fa) 38%, transparent);
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--pathogen-soft, rgba(59, 130, 246, 0.28)) 82%, transparent),
-    rgba(15, 23, 42, 0.84)
-  );
+  background:
+    radial-gradient(
+      circle at 92% 12%,
+      color-mix(in srgb, var(--pathogen-accent, #60a5fa) 24%, transparent),
+      transparent 36%
+    ),
+    linear-gradient(135deg, color-mix(in srgb, var(--region-soft, rgba(37, 99, 235, 0.2)) 80%, transparent), rgba(15, 23, 42, 0.86) 50%),
+    linear-gradient(180deg, color-mix(in srgb, var(--pathogen-soft, rgba(59, 130, 246, 0.28)) 55%, transparent), transparent);
 }
 
 [data-theme="dark"] .alert-card.primary {
@@ -1873,7 +2078,9 @@ h3 {
 
 [data-theme="dark"] .alert-card.epidemic.critical {
   border-color: rgba(248, 113, 113, 0.64);
-  background: linear-gradient(140deg, rgba(220, 38, 38, 0.4), rgba(15, 23, 42, 0.9));
+  background:
+    radial-gradient(circle at 92% 10%, rgba(248, 113, 113, 0.28), transparent 34%),
+    linear-gradient(140deg, rgba(220, 38, 38, 0.4), rgba(15, 23, 42, 0.9));
 }
 
 [data-theme="dark"] .alert-card.epidemic.critical h2 {
@@ -1902,6 +2109,49 @@ h3 {
 
 [data-theme="dark"] .alert-standfirst {
   color: #dbeafe;
+}
+
+[data-theme="dark"] .alert-scope {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .alert-scope-pill,
+[data-theme="dark"] .alert-state-pill {
+  background: color-mix(in srgb, var(--pathogen-soft, rgba(51, 65, 85, 0.7)) 78%, rgba(15, 23, 42, 0.84));
+}
+
+[data-theme="dark"] .alert-state-pill.critical {
+  border-color: rgba(248, 113, 113, 0.48);
+  background: rgba(127, 29, 29, 0.52);
+  color: #fecaca;
+}
+
+[data-theme="dark"] .alert-state-pill.ok {
+  border-color: rgba(45, 212, 191, 0.42);
+  background: rgba(19, 78, 74, 0.58);
+  color: #ccfbf1;
+}
+
+[data-theme="dark"] .alert-stat {
+  border-color: color-mix(in srgb, var(--region-accent, var(--accent)) 34%, rgba(148, 163, 184, 0.28));
+  background: color-mix(in srgb, var(--region-soft, rgba(30, 41, 59, 0.72)) 65%, rgba(15, 23, 42, 0.78));
+}
+
+[data-theme="dark"] .alert-stat span {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .alert-stat strong {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .alert-stat.pathogen-stat {
+  border-color: color-mix(in srgb, var(--pathogen-accent, #94a3b8) 48%, rgba(148, 163, 184, 0.28));
+  background: color-mix(in srgb, var(--pathogen-soft, rgba(51, 65, 85, 0.72)) 78%, rgba(15, 23, 42, 0.78));
+}
+
+[data-theme="dark"] .alert-stat.pathogen-stat strong {
+  color: var(--pathogen-emphasis, #f8fafc);
 }
 
 [data-theme="dark"] .alert-meta-chip {
@@ -2229,6 +2479,19 @@ h3 {
 
   .section-toggle {
     align-self: flex-start;
+  }
+
+  .alert-topline,
+  .alert-actions-row {
+    align-items: flex-start;
+  }
+
+  .alert-actions-row {
+    flex-direction: column;
+  }
+
+  .alert-stat-row {
+    grid-template-columns: 1fr;
   }
 
   .panel-chart {
