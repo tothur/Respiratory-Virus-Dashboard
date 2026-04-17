@@ -2609,6 +2609,7 @@ export function App() {
             {warningsPill}
           </span>
         </div>
+        <p className="footer-credit">Made by András Tóth and GPT-5.3-Codex.</p>
       </footer>
     </div>
   );

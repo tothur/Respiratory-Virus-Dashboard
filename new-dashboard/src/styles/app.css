@@ -858,6 +858,13 @@ h3 {
   color: #92400e;
 }
 
+.footer-credit {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
 .surge-section {
   background: linear-gradient(165deg, color-mix(in srgb, var(--panel) 92%, #ffffff 8%), var(--panel));
   border: 1px solid var(--border);
