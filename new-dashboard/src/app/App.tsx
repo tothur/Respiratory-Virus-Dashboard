@@ -1621,6 +1621,10 @@ export function App() {
       ? "–"
       : formatYearWeek(calendarYearFromNhSeasonWeek(snapshot.selectedYear, snapshot.stats.latestWeek), snapshot.stats.latestWeek);
   const iliTrendSignal = surgeSignals.find((signal) => signal.virus === DEFAULT_ILI_VIRUS) ?? null;
+  const primaryTrendSignal = iliTrendSignal ?? surgeSignals[0] ?? null;
+  const secondaryTrendSignals = primaryTrendSignal
+    ? surgeSignals.filter((signal) => signal !== primaryTrendSignal).slice(0, 3)
+    : [];
   const weeklySituationHeadline = (() => {
     const delta = iliTrendSignal?.change;
     if (isAboveThreshold) {
@@ -1893,30 +1897,46 @@ export function App() {
                     <p className="stat-card-note">{t.rigorAgeMissing}</p>
                   )}
                 </article>
-              </section>
-
-              <section className="surge-section compact briefing-trend-card" aria-label={t.trendAria}>
-                <header className="surge-header">
-                  <h2>{t.trendTitle}</h2>
-                </header>
-                <ul className="surge-list">
-                  {surgeSignals.length ? (
-                    surgeSignals.map((signal) => (
-                      <li key={`${signal.virus}-${signal.week ?? "na"}`} className={`surge-item trend-${signal.direction}`}>
-                        <div className="surge-signal-main">
-                          <span className={`pathogen-name ${virusClassName(signal.virus)}`}>
-                            <span className="virus-dot" aria-hidden="true" />
-                            <strong>{displayVirusLabel(signal.virus, language)}</strong>
-                          </span>
-                          <span className="pill">{signal.label}</span>
+                <article
+                  className={`stat-card trend-summary-card ${
+                    primaryTrendSignal ? virusClassName(primaryTrendSignal.virus) : "pathogen-other"
+                  } trend-${primaryTrendSignal?.direction ?? "flat"}`}
+                  aria-label={t.trendAria}
+                >
+                  <div className="stat-card-ili-head">
+                    <h3>{t.trendTitle}</h3>
+                    <span className="stat-week-chip">
+                      {primaryTrendSignal?.week != null ? formatWeek(primaryTrendSignal.week, language) : "–"}
+                    </span>
+                  </div>
+                  {primaryTrendSignal ? (
+                    <>
+                      <div className={`trend-summary-primary ${virusClassName(primaryTrendSignal.virus)}`}>
+                        <span className="pathogen-name">
+                          <span className="virus-dot" aria-hidden="true" />
+                          <strong>{displayVirusLabel(primaryTrendSignal.virus, language)}</strong>
+                        </span>
+                        <strong className="trend-summary-value">{primaryTrendSignal.label}</strong>
+                      </div>
+                      {secondaryTrendSignals.length ? (
+                        <div className="trend-summary-chips" aria-label={t.trendAria}>
+                          {secondaryTrendSignals.map((signal) => (
+                            <span
+                              key={`${signal.virus}-${signal.week ?? "na"}`}
+                              className={`trend-summary-chip ${virusClassName(signal.virus)} trend-${signal.direction}`}
+                            >
+                              <span className="virus-dot" aria-hidden="true" />
+                              <span>{displayVirusLabel(signal.virus, language)}</span>
+                              <strong>{signal.label}</strong>
+                            </span>
+                          ))}
                         </div>
-                        <span className="surge-week">{signal.week != null ? formatWeek(signal.week, language) : "–"}</span>
-                      </li>
-                    ))
+                      ) : null}
+                    </>
                   ) : (
-                    <li className="surge-empty">{t.trendEmpty}</li>
+                    <p className="stat-card-note">{t.trendEmpty}</p>
                   )}
-                </ul>
+                </article>
               </section>
             </section>
 

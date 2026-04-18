@@ -1009,62 +1009,6 @@ h3 {
   font-weight: 600;
 }
 
-.surge-section {
-  background: linear-gradient(165deg, color-mix(in srgb, var(--panel) 92%, #ffffff 8%), var(--panel));
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 16px;
-  display: grid;
-  gap: 8px;
-  transition: transform 180ms ease, box-shadow 220ms ease, border-color 180ms ease;
-}
-
-.surge-section.compact {
-  padding: 12px;
-  gap: 10px;
-}
-
-.briefing-trend-card {
-  border: 0;
-  background: color-mix(in srgb, var(--panel) 72%, rgba(13, 148, 136, 0.08));
-  box-shadow: none;
-  overflow: hidden;
-}
-
-.surge-section.briefing-trend-card:hover {
-  box-shadow: none;
-  transform: none;
-}
-
-.surge-section:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-2);
-}
-
-.surge-header h2 {
-  margin: 0;
-  font-size: var(--type-section-title-size);
-  font-weight: var(--type-section-title-weight);
-  letter-spacing: -0.012em;
-}
-
-.surge-section.compact .surge-header h2 {
-  font-size: 0.96rem;
-}
-
-.surge-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 8px;
-}
-
-.surge-section.compact .surge-list {
-  gap: 7px;
-}
-
 .pathogen-name {
   display: inline-flex;
   align-items: center;
@@ -1087,142 +1031,6 @@ h3 {
   flex: 0 0 auto;
 }
 
-.surge-item {
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: 12px;
-  padding: 10px 12px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 10px;
-  align-items: center;
-  background: rgba(248, 250, 252, 0.8);
-  transition: transform 170ms ease, border-color 170ms ease, background-color 170ms ease;
-}
-
-.surge-section.compact .surge-item {
-  position: relative;
-  grid-template-columns: minmax(0, 1fr);
-  padding: 8px 10px 8px 12px;
-  border-color: color-mix(in srgb, var(--pathogen-accent, #64748b) 18%, var(--border));
-  border-radius: 13px;
-  gap: 5px;
-  background: color-mix(in srgb, var(--pathogen-soft, rgba(148, 163, 184, 0.12)) 38%, var(--panel));
-  box-shadow: inset 3px 0 0 var(--pathogen-accent, #64748b);
-}
-
-.surge-item > div {
-  display: grid;
-  gap: 3px;
-}
-
-.surge-signal-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  min-width: 0;
-}
-
-.surge-week {
-  color: var(--muted);
-  flex: 0 0 auto;
-  font-size: 0.74rem;
-  font-weight: 680;
-  line-height: 1;
-}
-
-.briefing-trend-card .surge-signal-main {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-}
-
-.briefing-trend-card .surge-signal-main .pathogen-name {
-  color: var(--pathogen-emphasis, var(--text));
-  gap: 6px;
-}
-
-.briefing-trend-card .surge-signal-main .virus-dot {
-  height: 8px;
-  width: 8px;
-}
-
-.briefing-trend-card .pathogen-name strong {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.briefing-trend-card .surge-signal-main .pill {
-  min-width: 0;
-  padding: 3px 8px;
-  font-size: 0.7rem;
-  line-height: 1.05;
-}
-
-.briefing-trend-card .surge-week {
-  margin-left: 16px;
-  color: var(--muted);
-  font-size: 0.68rem;
-  font-weight: 720;
-  letter-spacing: 0.045em;
-  text-transform: uppercase;
-}
-
-.surge-item .pathogen-name strong {
-  font-size: 0.92rem;
-}
-
-.surge-item > div > span {
-  color: var(--muted);
-  font-size: 0.82rem;
-}
-
-.surge-item:hover {
-  transform: translateY(-1px);
-  border-color: color-mix(in srgb, var(--pathogen-accent, #64748b) 30%, var(--border));
-  background: color-mix(in srgb, var(--pathogen-soft, rgba(148, 163, 184, 0.1)) 70%, var(--panel));
-}
-
-.pill {
-  border-radius: 999px;
-  padding: 4px 10px;
-  min-width: 56px;
-  text-align: center;
-  font-size: 0.8rem;
-  font-weight: 720;
-  white-space: nowrap;
-  line-height: 1.2;
-  border: 1px solid rgba(71, 85, 105, 0.22);
-  background: rgba(148, 163, 184, 0.12);
-  color: #334155;
-}
-
-.trend-surging .pill {
-  border-color: rgba(220, 38, 38, 0.4);
-  background: rgba(220, 38, 38, 0.14);
-  color: #b91c1c;
-}
-
-.trend-declining .pill {
-  border-color: rgba(5, 150, 105, 0.38);
-  background: rgba(16, 185, 129, 0.14);
-  color: #047857;
-}
-
-.trend-flat .pill {
-  border-color: rgba(71, 85, 105, 0.28);
-  background: rgba(148, 163, 184, 0.16);
-  color: #334155;
-}
-
-.surge-empty {
-  border: 1px dashed rgba(15, 23, 42, 0.2);
-  border-radius: 12px;
-  padding: 10px 12px;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
 .briefing-grid {
   display: grid;
   gap: 16px;
@@ -1230,21 +1038,6 @@ h3 {
   border-radius: calc(var(--radius) + 2px);
   border: 1px solid rgba(13, 148, 136, 0.2);
   background: linear-gradient(180deg, rgba(13, 148, 136, 0.06), rgba(13, 148, 136, 0.01));
-}
-
-.briefing-grid > .surge-section .pill {
-  max-width: none;
-  white-space: nowrap;
-  line-height: 1.05;
-}
-
-.briefing-grid > .surge-section .surge-item {
-  align-items: center;
-}
-
-.briefing-grid > .surge-section .surge-item > div {
-  min-width: 0;
-  flex: 1;
 }
 
 .collapsible-section {
@@ -1477,6 +1270,101 @@ h3 {
 
 .briefing-stats-grid .stat-card-age-split {
   min-height: 112px;
+}
+
+.trend-summary-card {
+  display: grid;
+  gap: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.trend-summary-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: color-mix(in srgb, var(--pathogen-accent, #64748b) 74%, var(--accent));
+}
+
+.trend-summary-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.trend-summary-primary {
+  align-items: end;
+  border-bottom: 1px dashed color-mix(in srgb, var(--pathogen-accent, #64748b) 22%, var(--border));
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin-top: 2px;
+  padding-bottom: 8px;
+}
+
+.trend-summary-primary .pathogen-name {
+  gap: 6px;
+}
+
+.trend-summary-primary .pathogen-name strong {
+  color: var(--pathogen-emphasis, var(--text));
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.trend-summary-primary .virus-dot {
+  height: 9px;
+  width: 9px;
+}
+
+.trend-summary-value {
+  color: var(--pathogen-emphasis, var(--text));
+  font-size: 1.35rem !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  white-space: nowrap;
+}
+
+.trend-summary-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.trend-summary-chip {
+  align-items: center;
+  background: color-mix(in srgb, var(--pathogen-soft, rgba(148, 163, 184, 0.14)) 58%, var(--panel));
+  border: 1px solid color-mix(in srgb, var(--pathogen-accent, #64748b) 24%, var(--border));
+  border-radius: 999px;
+  color: var(--pathogen-emphasis, var(--text));
+  display: inline-flex;
+  gap: 5px;
+  max-width: 100%;
+  padding: 4px 8px;
+}
+
+.trend-summary-chip .virus-dot {
+  height: 7px;
+  width: 7px;
+}
+
+.trend-summary-chip span:not(.virus-dot) {
+  font-size: 0.72rem;
+  font-weight: 680;
+  max-width: 8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.trend-summary-chip strong {
+  color: inherit;
+  font-size: 0.72rem;
+  line-height: 1;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .charts-grid {
@@ -1769,7 +1657,6 @@ h3 {
 .stat-card strong,
 .glance-value,
 .footer-chip,
-.pill,
 .data-table td,
 .table-top-positivity {
   font-variant-numeric: tabular-nums;
@@ -2250,16 +2137,6 @@ h3 {
   color: #fde68a;
 }
 
-[data-theme="dark"] .surge-item {
-  border-color: rgba(148, 163, 184, 0.25);
-  background: rgba(15, 23, 42, 0.68);
-}
-
-[data-theme="dark"] .briefing-trend-card .surge-item {
-  border-color: color-mix(in srgb, var(--pathogen-accent, #94a3b8) 34%, rgba(148, 163, 184, 0.24));
-  background: color-mix(in srgb, var(--pathogen-soft, rgba(30, 41, 59, 0.74)) 34%, rgba(15, 23, 42, 0.78));
-}
-
 @media (prefers-reduced-motion: reduce) {
   .topbar,
   .alerts-grid,
@@ -2269,8 +2146,6 @@ h3 {
   }
 
   .alert-card,
-  .surge-section,
-  .surge-item,
   .stat-card,
   .glance-card,
   .virology-list-card,
@@ -2279,8 +2154,6 @@ h3 {
   }
 
   .alert-card:hover,
-  .surge-section:hover,
-  .surge-item:hover,
   .stat-card:hover,
   .glance-card:hover,
   .virology-list-card:hover,
@@ -2303,30 +2176,6 @@ h3 {
     min-height: 112px;
   }
 
-  .briefing-trend-card {
-    justify-self: stretch;
-    width: 100%;
-    max-width: none;
-    min-height: 112px;
-  }
-}
-
-[data-theme="dark"] .trend-flat .pill {
-  border-color: rgba(148, 163, 184, 0.4);
-  background: rgba(51, 65, 85, 0.6);
-  color: #cbd5e1;
-}
-
-[data-theme="dark"] .trend-surging .pill {
-  border-color: rgba(248, 113, 113, 0.6);
-  background: rgba(239, 68, 68, 0.24);
-  color: #fecaca;
-}
-
-[data-theme="dark"] .trend-declining .pill {
-  border-color: rgba(52, 211, 153, 0.58);
-  background: rgba(16, 185, 129, 0.22);
-  color: #a7f3d0;
 }
 
 [data-theme="dark"] .stat-week-chip {
@@ -2443,15 +2292,6 @@ h3 {
 
   .historical-grid .panel-chart {
     height: 300px;
-  }
-
-  .surge-item {
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-  }
-
-  .pill {
-    white-space: nowrap;
   }
 
   .alert-evidence-btn {
