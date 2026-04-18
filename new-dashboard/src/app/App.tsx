@@ -192,11 +192,11 @@ const STRINGS = {
     stdNoBaseline: "No baseline",
     stdMedian: "Median",
     stdLastSeason: "Last season",
-    statsTotalIli: "This-week ILI cases",
+    statsTotalIli: "Flu-like cases",
     statsPeakIli: "ILI peak week / cases",
     statsFirstCrossing: "First threshold crossing",
     statsWeeksAbove: "Weeks above threshold",
-    statsLatestSari: "This-week hospital SARI/ICU",
+    statsLatestSari: "Hospital SARI/ICU",
     statsAgeSplit: "This-week ILI age split",
     chartIli: "Flu-like illness",
     chartIliSubtitle: "Season {season} (threshold {threshold})",
@@ -361,11 +361,11 @@ const STRINGS = {
     stdNoBaseline: "Nincs összehasonlítás",
     stdMedian: "Medián",
     stdLastSeason: "Előző szezon",
-    statsTotalIli: "Eheti ILI esetszám",
+    statsTotalIli: "Influenzaszerű esetek",
     statsPeakIli: "ILI csúcs hét / eset",
     statsFirstCrossing: "Első küszöbátlépés",
     statsWeeksAbove: "Küszöb feletti hetek",
-    statsLatestSari: "Eheti kórházi SARI/ICU",
+    statsLatestSari: "Kórházi SARI/ICU",
     statsAgeSplit: "Eheti ILI korcsoporti megoszlás",
     chartIli: "Influenzaszerű megbetegedés (ILI)",
     chartIliSubtitle: "Szezon: {season} (küszöb {threshold})",
@@ -1863,52 +1863,6 @@ export function App() {
           <div id="hu-region-content" className="region-content">
             <section className="briefing-grid">
               <section className="stats-grid briefing-stats-grid">
-                <article className="stat-card">
-                  <div className="stat-card-ili-head">
-                    <h3>{t.statsTotalIli}</h3>
-                    <span className="stat-week-chip">{formatWeek(snapshot.stats.latestWeek, language)}</span>
-                  </div>
-                  <strong>{snapshot.stats.latestIliCases.toLocaleString()}</strong>
-                </article>
-                <article className="stat-card">
-                  <div className="stat-card-ili-head">
-                    <h3>{t.statsLatestSari}</h3>
-                    <span className="stat-week-chip">{sariLatestWeekLabel}</span>
-                  </div>
-                  <strong>
-                    {snapshot.stats.latestSariAdmissions ?? "-"} / {snapshot.stats.latestSariIcu ?? "-"}
-                  </strong>
-                </article>
-                <article className="stat-card stat-card-age-split">
-                  <div className="stat-card-ili-head">
-                    <h3>{t.rigorAgeSplitTitle}</h3>
-                    <span className="stat-week-chip">
-                      {epidemiology.ageSplit ? formatWeek(epidemiology.ageSplit.week, language) : "–"}
-                    </span>
-                  </div>
-                  {epidemiology.ageSplit ? (
-                    <div className="age-bracket-grid">
-                      <div className="age-bracket age-bracket-child">
-                        <span>{t.rigorAge0to14}</span>
-                        <strong>{epidemiology.ageSplit.age0to14.toFixed(1)}%</strong>
-                      </div>
-                      <div className="age-bracket age-bracket-young">
-                        <span>{t.rigorAge15to34}</span>
-                        <strong>{epidemiology.ageSplit.age15to34.toFixed(1)}%</strong>
-                      </div>
-                      <div className="age-bracket age-bracket-adult">
-                        <span>{t.rigorAge35to59}</span>
-                        <strong>{epidemiology.ageSplit.age35to59.toFixed(1)}%</strong>
-                      </div>
-                      <div className="age-bracket age-bracket-senior">
-                        <span>{t.rigorAge60plus}</span>
-                        <strong>{epidemiology.ageSplit.age60plus.toFixed(1)}%</strong>
-                      </div>
-                    </div>
-                  ) : (
-                    <p className="stat-card-note">{t.rigorAgeMissing}</p>
-                  )}
-                </article>
                 <article
                   className={`stat-card trend-summary-card ${
                     primaryTrendSignal ? virusClassName(primaryTrendSignal.virus) : "pathogen-other"
@@ -1947,6 +1901,52 @@ export function App() {
                     </>
                   ) : (
                     <p className="stat-card-note">{t.trendEmpty}</p>
+                  )}
+                </article>
+                <article className="stat-card stat-card-flu-like">
+                  <div className="stat-card-ili-head">
+                    <h3>{t.statsTotalIli}</h3>
+                    <span className="stat-week-chip">{formatWeek(snapshot.stats.latestWeek, language)}</span>
+                  </div>
+                  <strong>{snapshot.stats.latestIliCases.toLocaleString()}</strong>
+                </article>
+                <article className="stat-card stat-card-hospital">
+                  <div className="stat-card-ili-head">
+                    <h3>{t.statsLatestSari}</h3>
+                    <span className="stat-week-chip">{sariLatestWeekLabel}</span>
+                  </div>
+                  <strong>
+                    {snapshot.stats.latestSariAdmissions ?? "-"} / {snapshot.stats.latestSariIcu ?? "-"}
+                  </strong>
+                </article>
+                <article className="stat-card stat-card-age-split">
+                  <div className="stat-card-ili-head">
+                    <h3>{t.rigorAgeSplitTitle}</h3>
+                    <span className="stat-week-chip">
+                      {epidemiology.ageSplit ? formatWeek(epidemiology.ageSplit.week, language) : "–"}
+                    </span>
+                  </div>
+                  {epidemiology.ageSplit ? (
+                    <div className="age-bracket-grid">
+                      <div className="age-bracket age-bracket-child">
+                        <span>{t.rigorAge0to14}</span>
+                        <strong>{epidemiology.ageSplit.age0to14.toFixed(1)}%</strong>
+                      </div>
+                      <div className="age-bracket age-bracket-young">
+                        <span>{t.rigorAge15to34}</span>
+                        <strong>{epidemiology.ageSplit.age15to34.toFixed(1)}%</strong>
+                      </div>
+                      <div className="age-bracket age-bracket-adult">
+                        <span>{t.rigorAge35to59}</span>
+                        <strong>{epidemiology.ageSplit.age35to59.toFixed(1)}%</strong>
+                      </div>
+                      <div className="age-bracket age-bracket-senior">
+                        <span>{t.rigorAge60plus}</span>
+                        <strong>{epidemiology.ageSplit.age60plus.toFixed(1)}%</strong>
+                      </div>
+                    </div>
+                  ) : (
+                    <p className="stat-card-note">{t.rigorAgeMissing}</p>
                   )}
                 </article>
               </section>

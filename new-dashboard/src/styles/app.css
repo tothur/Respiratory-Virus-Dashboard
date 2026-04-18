@@ -1311,6 +1311,8 @@ h3 {
   min-height: 112px;
 }
 
+.stat-card-flu-like,
+.stat-card-hospital,
 .stat-card-age-split,
 .trend-summary-card {
   grid-column: 1 / -1;
