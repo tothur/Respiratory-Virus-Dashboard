@@ -88,7 +88,9 @@ function resolvePathogenFamily(virus: string | null | undefined): PathogenFamily
     return "influenza";
   }
   if (normalized.includes("sars") || normalized.includes("cov")) return "sarscov2";
-  if (/\brsv\b/.test(normalized)) return "rsv";
+  if (/\brsv\b/.test(normalized) || /^rs\s+v[íi]rus$/.test(normalized) || normalized.includes("óriássejtes")) {
+    return "rsv";
+  }
   if (normalized.includes("hmpv") || normalized.includes("metapneumo")) return "hmpv";
   return "other";
 }

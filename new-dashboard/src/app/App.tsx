@@ -218,7 +218,6 @@ const STRINGS = {
     virologyDetectionsTrend: "Sentinel detections trend",
     virologyDetectionsSubtitle: "{week} focus",
     virologyPositivityTrend: "Sentinel positivity trend",
-    euVirologyTitle: "EU/EEA ERVISS virology",
     euTopDetections: "Top EU detections",
     euTopPositivity: "Top EU positivity",
     euNoDetections: "No EU detections available.",
@@ -388,7 +387,6 @@ const STRINGS = {
     virologyDetectionsTrend: "Sentinel detekciós trend",
     virologyDetectionsSubtitle: "{week} fókusz",
     virologyPositivityTrend: "Sentinel pozitivitási trend",
-    euVirologyTitle: "EU/EGT ERVISS virológia",
     euTopDetections: "Legmagasabb EU detekciók",
     euTopPositivity: "Legmagasabb EU pozitivitás",
     euNoDetections: "Nincs EU detekciós adat.",
@@ -1877,6 +1875,24 @@ export function App() {
                     {snapshot.stats.latestSariAdmissions ?? "-"} / {snapshot.stats.latestSariIcu ?? "-"}
                   </strong>
                 </article>
+                <article className="stat-card stat-card-age-split">
+                  <div className="stat-card-ili-head">
+                    <h3>{t.rigorAgeSplitTitle}</h3>
+                    <span className="stat-week-chip">
+                      {epidemiology.ageSplit ? formatWeek(epidemiology.ageSplit.week, language) : "–"}
+                    </span>
+                  </div>
+                  {epidemiology.ageSplit ? (
+                    <div className="age-split-grid compact">
+                      <span>{t.rigorAge0to14}: {epidemiology.ageSplit.age0to14.toFixed(1)}%</span>
+                      <span>{t.rigorAge15to34}: {epidemiology.ageSplit.age15to34.toFixed(1)}%</span>
+                      <span>{t.rigorAge35to59}: {epidemiology.ageSplit.age35to59.toFixed(1)}%</span>
+                      <span>{t.rigorAge60plus}: {epidemiology.ageSplit.age60plus.toFixed(1)}%</span>
+                    </div>
+                  ) : (
+                    <p className="stat-card-note">{t.rigorAgeMissing}</p>
+                  )}
+                </article>
               </section>
 
               <section className="surge-section compact briefing-trend-card" aria-label={t.trendAria}>
@@ -2268,23 +2284,6 @@ export function App() {
               <p>{t.rigorBaselineSample}: {epidemiology.sariMetric.baseline.baselineCount.toLocaleString()}</p>
             </article>
 
-            <article className={`quality-card ${qualityCardClass(epidemiology.quality.ageLevel)}`}>
-              <h3>{t.rigorAgeSplitTitle}</h3>
-              {epidemiology.ageSplit ? (
-                <>
-                  <strong>{formatWeek(epidemiology.ageSplit.week, language)}</strong>
-                  <div className="age-split-grid">
-                    <span>{t.rigorAge0to14}: {epidemiology.ageSplit.age0to14.toFixed(1)}%</span>
-                    <span>{t.rigorAge15to34}: {epidemiology.ageSplit.age15to34.toFixed(1)}%</span>
-                    <span>{t.rigorAge35to59}: {epidemiology.ageSplit.age35to59.toFixed(1)}%</span>
-                    <span>{t.rigorAge60plus}: {epidemiology.ageSplit.age60plus.toFixed(1)}%</span>
-                  </div>
-                </>
-              ) : (
-                <p>{t.rigorAgeMissing}</p>
-              )}
-            </article>
-
             <article className={`quality-card ${qualityCardClass(epidemiology.quality.coverageLevel)}`}>
               <h3>{t.rigorQualityTitle}</h3>
               <div className="rigor-quality-list">
@@ -2436,13 +2435,6 @@ export function App() {
         {isEuSectionOpen ? (
           <div id="eu-region-content" className="region-content">
       <section className="virology-section eu-section">
-        <header className="virology-header">
-          <div>
-            <h2>{t.euVirologyTitle}</h2>
-            <p>{formatText(t.virologyWeek, { week: latestEuWeekLabel })}</p>
-          </div>
-        </header>
-
         <div className="virology-grid">
           <EChartsPanel
             title={t.euDetectionsTrend}

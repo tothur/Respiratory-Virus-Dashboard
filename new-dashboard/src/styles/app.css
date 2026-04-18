@@ -897,6 +897,13 @@ h3 {
   color: var(--text);
 }
 
+.age-split-grid.compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px 10px;
+  font-size: 0.76rem;
+  line-height: 1.2;
+}
+
 .rigor-quality-list {
   margin-top: 10px;
   display: grid;
@@ -1019,7 +1026,15 @@ h3 {
 }
 
 .briefing-trend-card {
+  border: 0;
+  background: color-mix(in srgb, var(--panel) 72%, rgba(13, 148, 136, 0.08));
+  box-shadow: none;
   overflow: hidden;
+}
+
+.surge-section.briefing-trend-card:hover {
+  box-shadow: none;
+  transform: none;
 }
 
 .surge-section:hover {
@@ -1422,6 +1437,12 @@ h3 {
   letter-spacing: -0.01em;
 }
 
+.stat-card-note {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: var(--type-body-size);
+}
+
 .stat-week-chip {
   display: inline-flex;
   align-items: center;
@@ -1452,6 +1473,10 @@ h3 {
 .briefing-stats-grid .stat-card {
   min-height: 104px;
   align-content: start;
+}
+
+.briefing-stats-grid .stat-card-age-split {
+  min-height: 112px;
 }
 
 .charts-grid {
@@ -2266,19 +2291,23 @@ h3 {
 
 @media (min-width: 1080px) {
   .briefing-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
     align-items: start;
   }
 
   .briefing-grid > .stats-grid {
-    grid-template-columns: repeat(2, minmax(220px, 1fr));
-    align-content: start;
+    display: contents;
+  }
+
+  .briefing-grid > .stats-grid .stat-card {
+    min-height: 112px;
   }
 
   .briefing-trend-card {
-    justify-self: end;
+    justify-self: stretch;
     width: 100%;
-    max-width: 320px;
+    max-width: none;
+    min-height: 112px;
   }
 }
 

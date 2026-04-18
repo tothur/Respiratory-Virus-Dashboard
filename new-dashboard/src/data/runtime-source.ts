@@ -46,7 +46,13 @@ function normalizeVirusName(name: unknown): string {
   if (/^influenza\s+a\s*\(\s*nt\s*\)$/i.test(normalized)) return "Influenza A(NT)";
   if (/^a\s*\(\s*unknown\s*\)$/i.test(normalized)) return "Influenza A(NT)";
   if (/^sars[-\s]*cov[-\s]*2$/i.test(normalized)) return "SARS-CoV-2";
-  if (/^rs[-\s]*v(i[íi]rus)?$/i.test(normalized)) return "RSV";
+  if (
+    /^rs[-\s]*v(i[íi]rus)?$/i.test(normalized) ||
+    /^rs\s+v[íi]rus$/i.test(normalized) ||
+    /^l[eé]g[uú]ti\s+[oó]ri[aá]ssejtes\s+v[íi]rus$/i.test(normalized)
+  ) {
+    return "RSV";
+  }
 
   return normalized;
 }
