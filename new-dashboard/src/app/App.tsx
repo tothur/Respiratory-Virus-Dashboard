@@ -1879,7 +1879,7 @@ export function App() {
                 </article>
               </section>
 
-              <section className="surge-section compact" aria-label={t.trendAria}>
+              <section className="surge-section compact briefing-trend-card" aria-label={t.trendAria}>
                 <header className="surge-header">
                   <h2>{t.trendTitle}</h2>
                 </header>
@@ -1892,11 +1892,9 @@ export function App() {
                             <span className="virus-dot" aria-hidden="true" />
                             <strong>{displayVirusLabel(signal.virus, language)}</strong>
                           </span>
-                          <span className="surge-week">
-                            {signal.week != null ? formatWeek(signal.week, language) : "–"}
-                          </span>
+                          <span className="pill">{signal.label}</span>
                         </div>
-                        <span className="pill">{signal.label}</span>
+                        <span className="surge-week">{signal.week != null ? formatWeek(signal.week, language) : "–"}</span>
                       </li>
                     ))
                   ) : (

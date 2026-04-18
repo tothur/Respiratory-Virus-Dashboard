@@ -1015,7 +1015,11 @@ h3 {
 
 .surge-section.compact {
   padding: 12px;
-  gap: 8px;
+  gap: 10px;
+}
+
+.briefing-trend-card {
+  overflow: hidden;
 }
 
 .surge-section:hover {
@@ -1043,7 +1047,7 @@ h3 {
 }
 
 .surge-section.compact .surge-list {
-  gap: 6px;
+  gap: 7px;
 }
 
 .pathogen-name {
@@ -1081,9 +1085,14 @@ h3 {
 }
 
 .surge-section.compact .surge-item {
-  padding: 7px 9px;
-  border-radius: 10px;
-  gap: 8px;
+  position: relative;
+  grid-template-columns: minmax(0, 1fr);
+  padding: 8px 10px 8px 12px;
+  border-color: color-mix(in srgb, var(--pathogen-accent, #64748b) 18%, var(--border));
+  border-radius: 13px;
+  gap: 5px;
+  background: color-mix(in srgb, var(--pathogen-soft, rgba(148, 163, 184, 0.12)) 38%, var(--panel));
+  box-shadow: inset 3px 0 0 var(--pathogen-accent, #64748b);
 }
 
 .surge-item > div {
@@ -1105,6 +1114,43 @@ h3 {
   font-size: 0.74rem;
   font-weight: 680;
   line-height: 1;
+}
+
+.briefing-trend-card .surge-signal-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.briefing-trend-card .surge-signal-main .pathogen-name {
+  color: var(--pathogen-emphasis, var(--text));
+  gap: 6px;
+}
+
+.briefing-trend-card .surge-signal-main .virus-dot {
+  height: 8px;
+  width: 8px;
+}
+
+.briefing-trend-card .pathogen-name strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.briefing-trend-card .surge-signal-main .pill {
+  min-width: 0;
+  padding: 3px 8px;
+  font-size: 0.7rem;
+  line-height: 1.05;
+}
+
+.briefing-trend-card .surge-week {
+  margin-left: 16px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 720;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
 }
 
 .surge-item .pathogen-name strong {
@@ -2184,6 +2230,11 @@ h3 {
   background: rgba(15, 23, 42, 0.68);
 }
 
+[data-theme="dark"] .briefing-trend-card .surge-item {
+  border-color: color-mix(in srgb, var(--pathogen-accent, #94a3b8) 34%, rgba(148, 163, 184, 0.24));
+  background: color-mix(in srgb, var(--pathogen-soft, rgba(30, 41, 59, 0.74)) 34%, rgba(15, 23, 42, 0.78));
+}
+
 @media (prefers-reduced-motion: reduce) {
   .topbar,
   .alerts-grid,
@@ -2214,13 +2265,20 @@ h3 {
 }
 
 @media (min-width: 1080px) {
+  .briefing-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+    align-items: start;
+  }
+
   .briefing-grid > .stats-grid {
     grid-template-columns: repeat(2, minmax(220px, 1fr));
     align-content: start;
   }
 
-  .briefing-grid > .surge-section .surge-list {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  .briefing-trend-card {
+    justify-self: end;
+    width: 100%;
+    max-width: 320px;
   }
 }
 
