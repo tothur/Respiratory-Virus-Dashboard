@@ -1013,6 +1013,11 @@ h3 {
   transition: transform 180ms ease, box-shadow 220ms ease, border-color 180ms ease;
 }
 
+.surge-section.compact {
+  padding: 12px;
+  gap: 8px;
+}
+
 .surge-section:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-2);
@@ -1025,10 +1030,8 @@ h3 {
   letter-spacing: -0.012em;
 }
 
-.surge-header p {
-  margin: 3px 0 0;
-  color: var(--muted);
-  font-size: var(--type-section-subtitle-size);
+.surge-section.compact .surge-header h2 {
+  font-size: 0.96rem;
 }
 
 .surge-list {
@@ -1037,6 +1040,10 @@ h3 {
   padding: 0;
   display: grid;
   gap: 8px;
+}
+
+.surge-section.compact .surge-list {
+  gap: 6px;
 }
 
 .pathogen-name {
@@ -1073,9 +1080,31 @@ h3 {
   transition: transform 170ms ease, border-color 170ms ease, background-color 170ms ease;
 }
 
+.surge-section.compact .surge-item {
+  padding: 7px 9px;
+  border-radius: 10px;
+  gap: 8px;
+}
+
 .surge-item > div {
   display: grid;
   gap: 3px;
+}
+
+.surge-signal-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+
+.surge-week {
+  color: var(--muted);
+  flex: 0 0 auto;
+  font-size: 0.74rem;
+  font-weight: 680;
+  line-height: 1;
 }
 
 .surge-item .pathogen-name strong {
@@ -1362,11 +1391,6 @@ h3 {
   width: fit-content;
 }
 
-.stat-card-ili-compare {
-  display: grid;
-  gap: 6px;
-}
-
 .stat-card-ili-head {
   display: flex;
   align-items: flex-start;
@@ -1374,60 +1398,14 @@ h3 {
   gap: 8px;
 }
 
-.stat-card-ili-main {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.stat-card-ili-main strong {
-  margin-top: 0;
-  line-height: 1.06;
-}
-
-.stat-delta-pill {
-  border-radius: 999px;
-  padding: 3px 9px;
-  font-size: 0.78rem;
-  font-weight: 740;
-  line-height: 1.15;
-  border: 1px solid rgba(71, 85, 105, 0.28);
-  background: rgba(148, 163, 184, 0.16);
-  color: #334155;
-  white-space: nowrap;
-}
-
-.stat-delta-pill.trend-surging {
-  border-color: rgba(220, 38, 38, 0.42);
-  background: rgba(220, 38, 38, 0.14);
-  color: #b91c1c;
-}
-
-.stat-delta-pill.trend-declining {
-  border-color: rgba(5, 150, 105, 0.4);
-  background: rgba(16, 185, 129, 0.14);
-  color: #047857;
-}
-
-.stat-compare-baseline {
-  margin: 0;
-  font-size: 0.74rem;
-  line-height: 1.24;
-  color: var(--muted);
-}
-
 .briefing-stats-grid {
   gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
 }
 
 .briefing-stats-grid .stat-card {
-  min-height: 120px;
+  min-height: 104px;
   align-content: start;
-}
-
-.briefing-stats-grid .stat-card-ili-compare {
-  min-height: 108px;
 }
 
 .charts-grid {
@@ -2236,22 +2214,13 @@ h3 {
 }
 
 @media (min-width: 1080px) {
-  .briefing-grid {
-    grid-template-columns: minmax(420px, 1.25fr) minmax(0, 1.9fr);
-    align-items: stretch;
-  }
-
-  .briefing-grid > .surge-section {
-    height: 100%;
-  }
-
   .briefing-grid > .stats-grid {
-    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
     align-content: start;
   }
 
   .briefing-grid > .surge-section .surge-list {
-    align-content: start;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 }
 
@@ -2268,18 +2237,6 @@ h3 {
 }
 
 [data-theme="dark"] .trend-declining .pill {
-  border-color: rgba(52, 211, 153, 0.58);
-  background: rgba(16, 185, 129, 0.22);
-  color: #a7f3d0;
-}
-
-[data-theme="dark"] .stat-delta-pill.trend-surging {
-  border-color: rgba(248, 113, 113, 0.6);
-  background: rgba(239, 68, 68, 0.24);
-  color: #fecaca;
-}
-
-[data-theme="dark"] .stat-delta-pill.trend-declining {
   border-color: rgba(52, 211, 153, 0.58);
   background: rgba(16, 185, 129, 0.22);
   color: #a7f3d0;

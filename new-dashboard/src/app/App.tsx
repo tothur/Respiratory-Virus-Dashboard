@@ -143,7 +143,6 @@ const STRINGS = {
     alertHuVirusPositivity: "Top HU virus positivity",
     alertEuVirusPositivity: "Top EU virus positivity",
     trendTitle: "Weekly trend signals",
-    trendNote: "Weekly change in ILI cases and sentinel positivity.",
     trendAria: "Weekly trend signals",
     trendNoRecentChange: "No notable change",
     trendSurging: "Surging",
@@ -195,9 +194,6 @@ const STRINGS = {
     stdLastSeason: "Last season",
     statsTotalIli: "This-week ILI cases",
     statsPeakIli: "ILI peak week / cases",
-    statsIliVsPrev: "Latest ILI vs previous season",
-    statsIliVsPrevBaseline: "{season}: {value}",
-    statsIliVsPrevNoBaseline: "No previous-season value for this week.",
     statsFirstCrossing: "First threshold crossing",
     statsWeeksAbove: "Weeks above threshold",
     statsLatestSari: "This-week hospital SARI/ICU",
@@ -317,7 +313,6 @@ const STRINGS = {
     alertHuVirusPositivity: "Legmagasabb HU víruspozitivitás",
     alertEuVirusPositivity: "Legmagasabb EU víruspozitivitás",
     trendTitle: "Heti trendek",
-    trendNote: "ILI esetszám és sentinel vírus pozitivitások változásai",
     trendAria: "Heti trendek",
     trendNoRecentChange: "Nincs friss változás",
     trendSurging: "Erősödik",
@@ -369,9 +364,6 @@ const STRINGS = {
     stdLastSeason: "Előző szezon",
     statsTotalIli: "Eheti ILI esetszám",
     statsPeakIli: "ILI csúcs hét / eset",
-    statsIliVsPrev: "Legfrissebb ILI vs előző szezon",
-    statsIliVsPrevBaseline: "{season}: {value}",
-    statsIliVsPrevNoBaseline: "Ehhez a héthez nincs előző szezonos érték.",
     statsFirstCrossing: "Első küszöbátlépés",
     statsWeeksAbove: "Küszöb feletti hetek",
     statsLatestSari: "Eheti kórházi SARI/ICU",
@@ -1484,29 +1476,6 @@ export function App() {
     snapshot.selectedYear,
   ]);
 
-  const latestIliVsPreviousSeason = useMemo(() => {
-    const latest = snapshot.iliSeries.length ? snapshot.iliSeries[snapshot.iliSeries.length - 1] : null;
-    if (!latest) return null;
-
-    const historicalPoint = snapshot.historical.ili.points.find((point) => point.week === latest.week) ?? null;
-    const previousCases =
-      historicalPoint && typeof historicalPoint.previous === "number" && Number.isFinite(historicalPoint.previous)
-        ? historicalPoint.previous
-        : null;
-    const deltaPercent =
-      previousCases != null && previousCases !== 0 ? ((latest.cases - previousCases) / previousCases) * 100 : null;
-    const direction: TrendDirection =
-      deltaPercent == null ? "flat" : deltaPercent > 0 ? "surging" : deltaPercent < 0 ? "declining" : "flat";
-
-    return {
-      week: latest.week,
-      currentCases: latest.cases,
-      previousCases,
-      deltaPercent,
-      direction,
-    };
-  }, [snapshot.historical.ili.points, snapshot.iliSeries]);
-
   const surgeSignals = useMemo<SurgeSignal[]>(() => {
     const signals: SurgeSignal[] = [];
 
@@ -1890,77 +1859,54 @@ export function App() {
 
         {isHungarySectionOpen ? (
           <div id="hu-region-content" className="region-content">
-      <section className="briefing-grid">
-        <section className="surge-section" aria-label={t.trendAria}>
-          <header className="surge-header">
-            <h2>{t.trendTitle}</h2>
-            <p>{t.trendNote}</p>
-          </header>
-          <ul className="surge-list">
-            {surgeSignals.length ? (
-              surgeSignals.map((signal) => (
-                <li key={`${signal.virus}-${signal.week ?? "na"}`} className={`surge-item trend-${signal.direction}`}>
-                  <div>
-                    <span className={`pathogen-name ${virusClassName(signal.virus)}`}>
-                      <span className="virus-dot" aria-hidden="true" />
-                      <strong>{displayVirusLabel(signal.virus, language)}</strong>
-                    </span>
-                    <span>{signal.week != null ? formatWeek(signal.week, language) : "–"}</span>
+            <section className="briefing-grid">
+              <section className="stats-grid briefing-stats-grid">
+                <article className="stat-card">
+                  <div className="stat-card-ili-head">
+                    <h3>{t.statsTotalIli}</h3>
+                    <span className="stat-week-chip">{formatWeek(snapshot.stats.latestWeek, language)}</span>
                   </div>
-                  <span className="pill">{signal.label}</span>
-                </li>
-              ))
-            ) : (
-              <li className="surge-empty">{t.trendEmpty}</li>
-            )}
-          </ul>
-        </section>
+                  <strong>{snapshot.stats.latestIliCases.toLocaleString()}</strong>
+                </article>
+                <article className="stat-card">
+                  <div className="stat-card-ili-head">
+                    <h3>{t.statsLatestSari}</h3>
+                    <span className="stat-week-chip">{sariLatestWeekLabel}</span>
+                  </div>
+                  <strong>
+                    {snapshot.stats.latestSariAdmissions ?? "-"} / {snapshot.stats.latestSariIcu ?? "-"}
+                  </strong>
+                </article>
+              </section>
 
-        <section className="stats-grid briefing-stats-grid">
-          <article className="stat-card">
-            <div className="stat-card-ili-head">
-              <h3>{t.statsTotalIli}</h3>
-              <span className="stat-week-chip">{formatWeek(snapshot.stats.latestWeek, language)}</span>
-            </div>
-            <strong>{snapshot.stats.latestIliCases.toLocaleString()}</strong>
-          </article>
-          <article className="stat-card">
-            <div className="stat-card-ili-head">
-              <h3>{t.statsLatestSari}</h3>
-              <span className="stat-week-chip">{sariLatestWeekLabel}</span>
-            </div>
-            <strong>
-              {snapshot.stats.latestSariAdmissions ?? "-"} / {snapshot.stats.latestSariIcu ?? "-"}
-            </strong>
-          </article>
-          <article className="stat-card stat-card-ili-compare">
-            <div className="stat-card-ili-head">
-              <h3>{t.statsIliVsPrev}</h3>
-              <span className="stat-week-chip">
-                {latestIliVsPreviousSeason ? formatWeek(latestIliVsPreviousSeason.week, language) : "–"}
-              </span>
-            </div>
-            <div className="stat-card-ili-main">
-              <strong>{latestIliVsPreviousSeason ? latestIliVsPreviousSeason.currentCases.toLocaleString() : "–"}</strong>
-              {latestIliVsPreviousSeason?.deltaPercent != null && latestIliVsPreviousSeason.previousCases != null ? (
-                <span className={`stat-delta-pill trend-${latestIliVsPreviousSeason.direction}`}>
-                  {formatTrendBubble(latestIliVsPreviousSeason.deltaPercent)}
-                </span>
-              ) : null}
-            </div>
-            <p className="stat-compare-baseline">
-              {latestIliVsPreviousSeason?.deltaPercent != null && latestIliVsPreviousSeason.previousCases != null
-                ? formatText(t.statsIliVsPrevBaseline, {
-                    season: snapshot.historical.compareSeasonLabel ?? String(snapshot.selectedYear - 1),
-                    value: latestIliVsPreviousSeason.previousCases.toLocaleString(),
-                  })
-                : t.statsIliVsPrevNoBaseline}
-            </p>
-          </article>
-        </section>
-      </section>
+              <section className="surge-section compact" aria-label={t.trendAria}>
+                <header className="surge-header">
+                  <h2>{t.trendTitle}</h2>
+                </header>
+                <ul className="surge-list">
+                  {surgeSignals.length ? (
+                    surgeSignals.map((signal) => (
+                      <li key={`${signal.virus}-${signal.week ?? "na"}`} className={`surge-item trend-${signal.direction}`}>
+                        <div className="surge-signal-main">
+                          <span className={`pathogen-name ${virusClassName(signal.virus)}`}>
+                            <span className="virus-dot" aria-hidden="true" />
+                            <strong>{displayVirusLabel(signal.virus, language)}</strong>
+                          </span>
+                          <span className="surge-week">
+                            {signal.week != null ? formatWeek(signal.week, language) : "–"}
+                          </span>
+                        </div>
+                        <span className="pill">{signal.label}</span>
+                      </li>
+                    ))
+                  ) : (
+                    <li className="surge-empty">{t.trendEmpty}</li>
+                  )}
+                </ul>
+              </section>
+            </section>
 
-      <section id="hu-ili-sari-charts" className="charts-grid">
+            <section id="hu-ili-sari-charts" className="charts-grid">
         <EChartsPanel
           title={t.chartIli}
           subtitle={formatText(t.chartIliSubtitle, {
