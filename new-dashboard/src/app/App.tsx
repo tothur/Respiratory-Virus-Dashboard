@@ -1887,11 +1887,23 @@ export function App() {
                     </span>
                   </div>
                   {epidemiology.ageSplit ? (
-                    <div className="age-split-grid compact">
-                      <span>{t.rigorAge0to14}: {epidemiology.ageSplit.age0to14.toFixed(1)}%</span>
-                      <span>{t.rigorAge15to34}: {epidemiology.ageSplit.age15to34.toFixed(1)}%</span>
-                      <span>{t.rigorAge35to59}: {epidemiology.ageSplit.age35to59.toFixed(1)}%</span>
-                      <span>{t.rigorAge60plus}: {epidemiology.ageSplit.age60plus.toFixed(1)}%</span>
+                    <div className="age-bracket-grid">
+                      <div className="age-bracket age-bracket-child">
+                        <span>{t.rigorAge0to14}</span>
+                        <strong>{epidemiology.ageSplit.age0to14.toFixed(1)}%</strong>
+                      </div>
+                      <div className="age-bracket age-bracket-young">
+                        <span>{t.rigorAge15to34}</span>
+                        <strong>{epidemiology.ageSplit.age15to34.toFixed(1)}%</strong>
+                      </div>
+                      <div className="age-bracket age-bracket-adult">
+                        <span>{t.rigorAge35to59}</span>
+                        <strong>{epidemiology.ageSplit.age35to59.toFixed(1)}%</strong>
+                      </div>
+                      <div className="age-bracket age-bracket-senior">
+                        <span>{t.rigorAge60plus}</span>
+                        <strong>{epidemiology.ageSplit.age60plus.toFixed(1)}%</strong>
+                      </div>
                     </div>
                   ) : (
                     <p className="stat-card-note">{t.rigorAgeMissing}</p>

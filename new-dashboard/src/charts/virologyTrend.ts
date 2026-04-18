@@ -42,7 +42,7 @@ function formatWeekLabel(week: number, language: UiLanguage): string {
 }
 
 const VIRUS_LABELS_HU: Record<string, string> = {
-  "ILI (flu-like illness)": "Influenzaszerű megbetegedés (ILI)",
+  "ILI (flu-like illness)": "Influenzaszerű megbetegedés",
   Influenza: "Influenza",
   "Influenza A": "Influenza A",
   "Influenza B": "Influenza B",
@@ -52,6 +52,10 @@ const VIRUS_LABELS_HU: Record<string, string> = {
   RSV: "RSV",
   "SARS-CoV-2": "SARS-CoV-2",
   [INFLUENZA_ALL_KEY]: "Influenza (összes)",
+};
+
+const VIRUS_LABELS_EN: Record<string, string> = {
+  "ILI (flu-like illness)": "Flu-like illness",
 };
 
 type PathogenFamily = "influenza" | "sarscov2" | "rsv" | "hmpv" | "other";
@@ -108,6 +112,7 @@ function pathogenSeriesColor(virus: string | null | undefined, dark = false): st
 
 export function displayVirusLabel(virus: string, language: UiLanguage = "en"): string {
   if (language === "hu") return VIRUS_LABELS_HU[virus] ?? virus;
+  if (VIRUS_LABELS_EN[virus]) return VIRUS_LABELS_EN[virus];
   if (virus === INFLUENZA_ALL_KEY) return "Influenza (all)";
   return virus;
 }
