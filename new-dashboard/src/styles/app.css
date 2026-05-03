@@ -70,6 +70,12 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   font-family: var(--font-sans);
@@ -89,7 +95,8 @@ h3 {
 .app-shell {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 20px;
+  padding: calc(20px + env(safe-area-inset-top)) calc(20px + env(safe-area-inset-right)) calc(20px + env(safe-area-inset-bottom))
+    calc(20px + env(safe-area-inset-left));
   display: grid;
   gap: 16px;
 }
