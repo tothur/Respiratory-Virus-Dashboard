@@ -1,17 +1,73 @@
 {
   "source": "https://raw.githubusercontent.com/EU-ECDC/Respiratory_viruses_weekly_data/main/data/SARITestsDetectionsPositivity.csv",
-  "generated_at": "2026-05-08T10:48:23.266250+00:00",
+  "generated_at": "2026-05-08T14:16:08.351860+00:00",
   "region": "EU/EEA",
   "latest_year": 2026,
-  "latest_week": 17,
+  "latest_week": 18,
   "detections": [
+    {
+      "dataset": "ERVISS",
+      "region": "EU/EEA",
+      "year": 2026,
+      "week": 18,
+      "virus": "Influenza",
+      "detections": 14
+    },
+    {
+      "dataset": "ERVISS",
+      "region": "EU/EEA",
+      "year": 2026,
+      "week": 18,
+      "virus": "A (unknown)",
+      "detections": 11
+    },
+    {
+      "dataset": "ERVISS",
+      "region": "EU/EEA",
+      "year": 2026,
+      "week": 18,
+      "virus": "A(H1)pdm09",
+      "detections": 1
+    },
+    {
+      "dataset": "ERVISS",
+      "region": "EU/EEA",
+      "year": 2026,
+      "week": 18,
+      "virus": "A(H3)",
+      "detections": 1
+    },
+    {
+      "dataset": "ERVISS",
+      "region": "EU/EEA",
+      "year": 2026,
+      "week": 18,
+      "virus": "B (unknown)",
+      "detections": 1
+    },
+    {
+      "dataset": "ERVISS",
+      "region": "EU/EEA",
+      "year": 2026,
+      "week": 18,
+      "virus": "RSV",
+      "detections": 108
+    },
+    {
+      "dataset": "ERVISS",
+      "region": "EU/EEA",
+      "year": 2026,
+      "week": 18,
+      "virus": "SARS-CoV-2",
+      "detections": 9
+    },
     {
       "dataset": "ERVISS",
       "region": "EU/EEA",
       "year": 2026,
       "week": 17,
       "virus": "Influenza",
-      "detections": 18
+      "detections": 21
     },
     {
       "dataset": "ERVISS",
@@ -35,7 +91,7 @@
       "year": 2026,
       "week": 17,
       "virus": "A(H3)",
-      "detections": 1
+      "detections": 2
     },
     {
       "dataset": "ERVISS",
@@ -51,7 +107,7 @@
       "year": 2026,
       "week": 17,
       "virus": "Influenza untyped",
-      "detections": 6
+      "detections": 8
     },
     {
       "dataset": "ERVISS",
@@ -59,7 +115,7 @@
       "year": 2026,
       "week": 17,
       "virus": "RSV",
-      "detections": 106
+      "detections": 136
     },
     {
       "dataset": "ERVISS",
@@ -67,7 +123,7 @@
       "year": 2026,
       "week": 17,
       "virus": "SARS-CoV-2",
-      "detections": 7
+      "detections": 12
     },
     {
       "dataset": "ERVISS",
@@ -75,7 +131,7 @@
       "year": 2026,
       "week": 16,
       "virus": "Influenza",
-      "detections": 27
+      "detections": 29
     },
     {
       "dataset": "ERVISS",
@@ -98,8 +154,16 @@
       "region": "EU/EEA",
       "year": 2026,
       "week": 16,
+      "virus": "A(H3)",
+      "detections": 1
+    },
+    {
+      "dataset": "ERVISS",
+      "region": "EU/EEA",
+      "year": 2026,
+      "week": 16,
       "virus": "Influenza untyped",
-      "detections": 11
+      "detections": 12
     },
     {
       "dataset": "ERVISS",
@@ -107,7 +171,7 @@
       "year": 2026,
       "week": 16,
       "virus": "RSV",
-      "detections": 204
+      "detections": 220
     },
     {
       "dataset": "ERVISS",
@@ -115,7 +179,7 @@
       "year": 2026,
       "week": 16,
       "virus": "SARS-CoV-2",
-      "detections": 9
+      "detections": 11
     },
     {
       "dataset": "ERVISS",
@@ -123,7 +187,7 @@
       "year": 2026,
       "week": 15,
       "virus": "Influenza",
-      "detections": 52
+      "detections": 54
     },
     {
       "dataset": "ERVISS",
@@ -139,7 +203,7 @@
       "year": 2026,
       "week": 15,
       "virus": "A(H1)pdm09",
-      "detections": 4
+      "detections": 5
     },
     {
       "dataset": "ERVISS",
@@ -147,7 +211,7 @@
       "year": 2026,
       "week": 15,
       "virus": "A(H3)",
-      "detections": 1
+      "detections": 2
     },
     {
       "dataset": "ERVISS",
@@ -171,7 +235,7 @@
       "year": 2026,
       "week": 15,
       "virus": "RSV",
-      "detections": 296
+      "detections": 310
     },
     {
       "dataset": "ERVISS",
@@ -179,7 +243,7 @@
       "year": 2026,
       "week": 15,
       "virus": "SARS-CoV-2",
-      "detections": 16
+      "detections": 18
     },
     {
       "dataset": "ERVISS",
@@ -187,7 +251,7 @@
       "year": 2026,
       "week": 14,
       "virus": "Influenza",
-      "detections": 48
+      "detections": 51
     },
     {
       "dataset": "ERVISS",
@@ -210,8 +274,16 @@
       "region": "EU/EEA",
       "year": 2026,
       "week": 14,
+      "virus": "B (unknown)",
+      "detections": 1
+    },
+    {
+      "dataset": "ERVISS",
+      "region": "EU/EEA",
+      "year": 2026,
+      "week": 14,
       "virus": "Influenza untyped",
-      "detections": 18
+      "detections": 20
     },
     {
       "dataset": "ERVISS",
@@ -219,7 +291,7 @@
       "year": 2026,
       "week": 14,
       "virus": "RSV",
-      "detections": 408
+      "detections": 416
     },
     {
       "dataset": "ERVISS",
@@ -227,7 +299,7 @@
       "year": 2026,
       "week": 14,
       "virus": "SARS-CoV-2",
-      "detections": 21
+      "detections": 22
     },
     {
       "dataset": "ERVISS",
@@ -235,7 +307,7 @@
       "year": 2026,
       "week": 13,
       "virus": "Influenza",
-      "detections": 64
+      "detections": 68
     },
     {
       "dataset": "ERVISS",
@@ -275,7 +347,7 @@
       "year": 2026,
       "week": 13,
       "virus": "Influenza untyped",
-      "detections": 22
+      "detections": 26
     },
     {
       "dataset": "ERVISS",
@@ -283,7 +355,7 @@
       "year": 2026,
       "week": 13,
       "virus": "RSV",
-      "detections": 560
+      "detections": 564
     },
     {
       "dataset": "ERVISS",
@@ -291,7 +363,7 @@
       "year": 2026,
       "week": 13,
       "virus": "SARS-CoV-2",
-      "detections": 40
+      "detections": 39
     },
     {
       "dataset": "ERVISS",
@@ -299,7 +371,7 @@
       "year": 2026,
       "week": 12,
       "virus": "Influenza",
-      "detections": 110
+      "detections": 113
     },
     {
       "dataset": "ERVISS",
@@ -307,7 +379,7 @@
       "year": 2026,
       "week": 12,
       "virus": "A (unknown)",
-      "detections": 52
+      "detections": 53
     },
     {
       "dataset": "ERVISS",
@@ -339,7 +411,7 @@
       "year": 2026,
       "week": 12,
       "virus": "Influenza untyped",
-      "detections": 41
+      "detections": 43
     },
     {
       "dataset": "ERVISS",
@@ -347,7 +419,7 @@
       "year": 2026,
       "week": 12,
       "virus": "RSV",
-      "detections": 654
+      "detections": 656
     },
     {
       "dataset": "ERVISS",
@@ -363,7 +435,7 @@
       "year": 2026,
       "week": 11,
       "virus": "Influenza",
-      "detections": 195
+      "detections": 199
     },
     {
       "dataset": "ERVISS",
@@ -371,7 +443,7 @@
       "year": 2026,
       "week": 11,
       "virus": "A (unknown)",
-      "detections": 95
+      "detections": 98
     },
     {
       "dataset": "ERVISS",
@@ -403,7 +475,7 @@
       "year": 2026,
       "week": 11,
       "virus": "Influenza untyped",
-      "detections": 69
+      "detections": 70
     },
     {
       "dataset": "ERVISS",
@@ -411,7 +483,7 @@
       "year": 2026,
       "week": 11,
       "virus": "RSV",
-      "detections": 656
+      "detections": 654
     },
     {
       "dataset": "ERVISS",
@@ -419,7 +491,7 @@
       "year": 2026,
       "week": 11,
       "virus": "SARS-CoV-2",
-      "detections": 43
+      "detections": 44
     },
     {
       "dataset": "ERVISS",
@@ -427,7 +499,7 @@
       "year": 2026,
       "week": 10,
       "virus": "Influenza",
-      "detections": 267
+      "detections": 269
     },
     {
       "dataset": "ERVISS",
@@ -475,7 +547,7 @@
       "year": 2026,
       "week": 10,
       "virus": "Influenza untyped",
-      "detections": 108
+      "detections": 110
     },
     {
       "dataset": "ERVISS",
@@ -499,7 +571,7 @@
       "year": 2026,
       "week": 9,
       "virus": "Influenza",
-      "detections": 513
+      "detections": 515
     },
     {
       "dataset": "ERVISS",
@@ -539,7 +611,7 @@
       "year": 2026,
       "week": 9,
       "virus": "Influenza untyped",
-      "detections": 282
+      "detections": 284
     },
     {
       "dataset": "ERVISS",
@@ -563,7 +635,7 @@
       "year": 2026,
       "week": 8,
       "virus": "Influenza",
-      "detections": 631
+      "detections": 632
     },
     {
       "dataset": "ERVISS",
@@ -571,7 +643,7 @@
       "year": 2026,
       "week": 8,
       "virus": "A (unknown)",
-      "detections": 193
+      "detections": 194
     },
     {
       "dataset": "ERVISS",
@@ -611,7 +683,7 @@
       "year": 2026,
       "week": 8,
       "virus": "RSV",
-      "detections": 866
+      "detections": 868
     },
     {
       "dataset": "ERVISS",
@@ -675,7 +747,7 @@
       "year": 2026,
       "week": 7,
       "virus": "RSV",
-      "detections": 932
+      "detections": 928
     },
     {
       "dataset": "ERVISS",
@@ -755,7 +827,7 @@
       "year": 2026,
       "week": 5,
       "virus": "Influenza",
-      "detections": 1059
+      "detections": 1058
     },
     {
       "dataset": "ERVISS",
@@ -803,7 +875,7 @@
       "year": 2026,
       "week": 5,
       "virus": "Influenza untyped",
-      "detections": 584
+      "detections": 583
     },
     {
       "dataset": "ERVISS",
@@ -811,7 +883,7 @@
       "year": 2026,
       "week": 5,
       "virus": "RSV",
-      "detections": 820
+      "detections": 818
     },
     {
       "dataset": "ERVISS",
@@ -827,7 +899,7 @@
       "year": 2026,
       "week": 4,
       "virus": "Influenza",
-      "detections": 1024
+      "detections": 1025
     },
     {
       "dataset": "ERVISS",
@@ -867,7 +939,7 @@
       "year": 2026,
       "week": 4,
       "virus": "Influenza untyped",
-      "detections": 497
+      "detections": 498
     },
     {
       "dataset": "ERVISS",
@@ -875,7 +947,7 @@
       "year": 2026,
       "week": 4,
       "virus": "RSV",
-      "detections": 868
+      "detections": 870
     },
     {
       "dataset": "ERVISS",
@@ -1019,7 +1091,7 @@
       "year": 2026,
       "week": 1,
       "virus": "Influenza",
-      "detections": 1404
+      "detections": 1405
     },
     {
       "dataset": "ERVISS",
@@ -1027,7 +1099,7 @@
       "year": 2026,
       "week": 1,
       "virus": "A (unknown)",
-      "detections": 481
+      "detections": 482
     },
     {
       "dataset": "ERVISS",
@@ -1067,7 +1139,7 @@
       "year": 2026,
       "week": 1,
       "virus": "RSV",
-      "detections": 654
+      "detections": 656
     },
     {
       "dataset": "ERVISS",
@@ -1131,7 +1203,7 @@
       "year": 2025,
       "week": 52,
       "virus": "RSV",
-      "detections": 648
+      "detections": 650
     },
     {
       "dataset": "ERVISS",
@@ -1147,7 +1219,7 @@
       "year": 2025,
       "week": 51,
       "virus": "Influenza",
-      "detections": 1134
+      "detections": 1133
     },
     {
       "dataset": "ERVISS",
@@ -1155,7 +1227,7 @@
       "year": 2025,
       "week": 51,
       "virus": "A (unknown)",
-      "detections": 497
+      "detections": 496
     },
     {
       "dataset": "ERVISS",
@@ -1779,7 +1851,7 @@
       "year": 2025,
       "week": 42,
       "virus": "RSV",
-      "detections": 38
+      "detections": 36
     },
     {
       "dataset": "ERVISS",
@@ -4427,10 +4499,37 @@
       "dataset": "ERVISS",
       "region": "EU/EEA",
       "year": 2026,
+      "week": 18,
+      "virus": "Influenza",
+      "positivity": 1.2,
+      "tests": 1202
+    },
+    {
+      "dataset": "ERVISS",
+      "region": "EU/EEA",
+      "year": 2026,
+      "week": 18,
+      "virus": "RSV",
+      "positivity": 5.8,
+      "tests": 926
+    },
+    {
+      "dataset": "ERVISS",
+      "region": "EU/EEA",
+      "year": 2026,
+      "week": 18,
+      "virus": "SARS-CoV-2",
+      "positivity": 0.8,
+      "tests": 1153
+    },
+    {
+      "dataset": "ERVISS",
+      "region": "EU/EEA",
+      "year": 2026,
       "week": 17,
       "virus": "Influenza",
       "positivity": 1.4,
-      "tests": 1276
+      "tests": 1500
     },
     {
       "dataset": "ERVISS",
@@ -4438,8 +4537,8 @@
       "year": 2026,
       "week": 17,
       "virus": "RSV",
-      "positivity": 5.2,
-      "tests": 1013
+      "positivity": 5.5,
+      "tests": 1228
     },
     {
       "dataset": "ERVISS",
@@ -4447,8 +4546,8 @@
       "year": 2026,
       "week": 17,
       "virus": "SARS-CoV-2",
-      "positivity": 0.6,
-      "tests": 1241
+      "positivity": 0.8,
+      "tests": 1473
     },
     {
       "dataset": "ERVISS",
@@ -4457,7 +4556,7 @@
       "week": 16,
       "virus": "Influenza",
       "positivity": 1.6,
-      "tests": 1643
+      "tests": 1763
     },
     {
       "dataset": "ERVISS",
@@ -4466,7 +4565,7 @@
       "week": 16,
       "virus": "RSV",
       "positivity": 7.4,
-      "tests": 1371
+      "tests": 1488
     },
     {
       "dataset": "ERVISS",
@@ -4475,7 +4574,7 @@
       "week": 16,
       "virus": "SARS-CoV-2",
       "positivity": 0.6,
-      "tests": 1589
+      "tests": 1709
     },
     {
       "dataset": "ERVISS",
@@ -4484,7 +4583,7 @@
       "week": 15,
       "virus": "Influenza",
       "positivity": 2.7,
-      "tests": 1943
+      "tests": 1981
     },
     {
       "dataset": "ERVISS",
@@ -4492,8 +4591,8 @@
       "year": 2026,
       "week": 15,
       "virus": "RSV",
-      "positivity": 9.4,
-      "tests": 1574
+      "positivity": 9.6,
+      "tests": 1610
     },
     {
       "dataset": "ERVISS",
@@ -4501,8 +4600,8 @@
       "year": 2026,
       "week": 15,
       "virus": "SARS-CoV-2",
-      "positivity": 0.9,
-      "tests": 1843
+      "positivity": 1.0,
+      "tests": 1881
     },
     {
       "dataset": "ERVISS",
@@ -4510,8 +4609,8 @@
       "year": 2026,
       "week": 14,
       "virus": "Influenza",
-      "positivity": 2.5,
-      "tests": 1925
+      "positivity": 2.6,
+      "tests": 1954
     },
     {
       "dataset": "ERVISS",
@@ -4520,7 +4619,7 @@
       "week": 14,
       "virus": "RSV",
       "positivity": 12.8,
-      "tests": 1592
+      "tests": 1621
     },
     {
       "dataset": "ERVISS",
@@ -4529,7 +4628,7 @@
       "week": 14,
       "virus": "SARS-CoV-2",
       "positivity": 1.1,
-      "tests": 1898
+      "tests": 1926
     },
     {
       "dataset": "ERVISS",
@@ -4537,8 +4636,8 @@
       "year": 2026,
       "week": 13,
       "virus": "Influenza",
-      "positivity": 2.8,
-      "tests": 2256
+      "positivity": 3.0,
+      "tests": 2274
     },
     {
       "dataset": "ERVISS",
@@ -4547,7 +4646,7 @@
       "week": 13,
       "virus": "RSV",
       "positivity": 14.9,
-      "tests": 1877
+      "tests": 1892
     },
     {
       "dataset": "ERVISS",
@@ -4555,8 +4654,8 @@
       "year": 2026,
       "week": 13,
       "virus": "SARS-CoV-2",
-      "positivity": 1.9,
-      "tests": 2162
+      "positivity": 1.8,
+      "tests": 2180
     },
     {
       "dataset": "ERVISS",
@@ -4564,8 +4663,8 @@
       "year": 2026,
       "week": 12,
       "virus": "Influenza",
-      "positivity": 4.7,
-      "tests": 2321
+      "positivity": 4.8,
+      "tests": 2330
     },
     {
       "dataset": "ERVISS",
@@ -4574,7 +4673,7 @@
       "week": 12,
       "virus": "RSV",
       "positivity": 17.2,
-      "tests": 1901
+      "tests": 1908
     },
     {
       "dataset": "ERVISS",
@@ -4583,7 +4682,7 @@
       "week": 12,
       "virus": "SARS-CoV-2",
       "positivity": 1.3,
-      "tests": 2214
+      "tests": 2223
     },
     {
       "dataset": "ERVISS",
@@ -4591,8 +4690,8 @@
       "year": 2026,
       "week": 11,
       "virus": "Influenza",
-      "positivity": 8.0,
-      "tests": 2445
+      "positivity": 8.1,
+      "tests": 2447
     },
     {
       "dataset": "ERVISS",
@@ -4601,7 +4700,7 @@
       "week": 11,
       "virus": "RSV",
       "positivity": 16.5,
-      "tests": 1986
+      "tests": 1987
     },
     {
       "dataset": "ERVISS",
@@ -4610,7 +4709,7 @@
       "week": 11,
       "virus": "SARS-CoV-2",
       "positivity": 1.9,
-      "tests": 2322
+      "tests": 2324
     },
     {
       "dataset": "ERVISS",
@@ -4618,8 +4717,8 @@
       "year": 2026,
       "week": 10,
       "virus": "Influenza",
-      "positivity": 10.2,
-      "tests": 2609
+      "positivity": 10.3,
+      "tests": 2614
     },
     {
       "dataset": "ERVISS",
@@ -4627,8 +4726,8 @@
       "year": 2026,
       "week": 10,
       "virus": "RSV",
-      "positivity": 19.0,
-      "tests": 2100
+      "positivity": 18.9,
+      "tests": 2105
     },
     {
       "dataset": "ERVISS",
@@ -4637,7 +4736,7 @@
       "week": 10,
       "virus": "SARS-CoV-2",
       "positivity": 2.8,
-      "tests": 2469
+      "tests": 2474
     },
     {
       "dataset": "ERVISS",
@@ -4645,8 +4744,8 @@
       "year": 2026,
       "week": 9,
       "virus": "Influenza",
-      "positivity": 16.9,
-      "tests": 3031
+      "positivity": 17.0,
+      "tests": 3032
     },
     {
       "dataset": "ERVISS",
@@ -4655,7 +4754,7 @@
       "week": 9,
       "virus": "RSV",
       "positivity": 18.9,
-      "tests": 2450
+      "tests": 2451
     },
     {
       "dataset": "ERVISS",
@@ -4664,7 +4763,7 @@
       "week": 9,
       "virus": "SARS-CoV-2",
       "positivity": 2.4,
-      "tests": 2892
+      "tests": 2893
     },
     {
       "dataset": "ERVISS",
@@ -4672,8 +4771,8 @@
       "year": 2026,
       "week": 8,
       "virus": "Influenza",
-      "positivity": 20.6,
-      "tests": 3056
+      "positivity": 20.7,
+      "tests": 3058
     },
     {
       "dataset": "ERVISS",
@@ -4681,8 +4780,8 @@
       "year": 2026,
       "week": 8,
       "virus": "RSV",
-      "positivity": 17.3,
-      "tests": 2496
+      "positivity": 17.4,
+      "tests": 2499
     },
     {
       "dataset": "ERVISS",
@@ -4691,7 +4790,7 @@
       "week": 8,
       "virus": "SARS-CoV-2",
       "positivity": 2.1,
-      "tests": 2922
+      "tests": 2924
     },
     {
       "dataset": "ERVISS",
@@ -4700,7 +4799,7 @@
       "week": 7,
       "virus": "Influenza",
       "positivity": 25.5,
-      "tests": 3336
+      "tests": 3335
     },
     {
       "dataset": "ERVISS",
@@ -4708,8 +4807,8 @@
       "year": 2026,
       "week": 7,
       "virus": "RSV",
-      "positivity": 16.9,
-      "tests": 2761
+      "positivity": 16.8,
+      "tests": 2759
     },
     {
       "dataset": "ERVISS",
@@ -4718,7 +4817,7 @@
       "week": 7,
       "virus": "SARS-CoV-2",
       "positivity": 2.5,
-      "tests": 3134
+      "tests": 3132
     },
     {
       "dataset": "ERVISS",
@@ -4727,7 +4826,7 @@
       "week": 6,
       "virus": "Influenza",
       "positivity": 30.9,
-      "tests": 3582
+      "tests": 3581
     },
     {
       "dataset": "ERVISS",
@@ -4736,7 +4835,7 @@
       "week": 6,
       "virus": "RSV",
       "positivity": 14.2,
-      "tests": 2921
+      "tests": 2920
     },
     {
       "dataset": "ERVISS",
@@ -4745,7 +4844,7 @@
       "week": 6,
       "virus": "SARS-CoV-2",
       "positivity": 2.3,
-      "tests": 3370
+      "tests": 3369
     },
     {
       "dataset": "ERVISS",
@@ -4754,7 +4853,7 @@
       "week": 5,
       "virus": "Influenza",
       "positivity": 31.0,
-      "tests": 3412
+      "tests": 3410
     },
     {
       "dataset": "ERVISS",
@@ -4763,7 +4862,7 @@
       "week": 5,
       "virus": "RSV",
       "positivity": 14.7,
-      "tests": 2781
+      "tests": 2779
     },
     {
       "dataset": "ERVISS",
@@ -4772,7 +4871,7 @@
       "week": 5,
       "virus": "SARS-CoV-2",
       "positivity": 2.9,
-      "tests": 3171
+      "tests": 3170
     },
     {
       "dataset": "ERVISS",
@@ -4781,7 +4880,7 @@
       "week": 4,
       "virus": "Influenza",
       "positivity": 29.1,
-      "tests": 3524
+      "tests": 3523
     },
     {
       "dataset": "ERVISS",
@@ -4790,7 +4889,7 @@
       "week": 4,
       "virus": "RSV",
       "positivity": 14.9,
-      "tests": 2911
+      "tests": 2910
     },
     {
       "dataset": "ERVISS",
@@ -4799,7 +4898,7 @@
       "week": 4,
       "virus": "SARS-CoV-2",
       "positivity": 2.5,
-      "tests": 3273
+      "tests": 3272
     },
     {
       "dataset": "ERVISS",
@@ -4808,7 +4907,7 @@
       "week": 3,
       "virus": "Influenza",
       "positivity": 31.8,
-      "tests": 3485
+      "tests": 3484
     },
     {
       "dataset": "ERVISS",
@@ -4816,8 +4915,8 @@
       "year": 2026,
       "week": 3,
       "virus": "RSV",
-      "positivity": 12.1,
-      "tests": 2931
+      "positivity": 12.2,
+      "tests": 2930
     },
     {
       "dataset": "ERVISS",
@@ -4826,7 +4925,7 @@
       "week": 3,
       "virus": "SARS-CoV-2",
       "positivity": 2.9,
-      "tests": 3276
+      "tests": 3275
     },
     {
       "dataset": "ERVISS",
@@ -4835,7 +4934,7 @@
       "week": 2,
       "virus": "Influenza",
       "positivity": 32.6,
-      "tests": 3462
+      "tests": 3463
     },
     {
       "dataset": "ERVISS",
@@ -4862,7 +4961,7 @@
       "week": 1,
       "virus": "Influenza",
       "positivity": 36.8,
-      "tests": 3820
+      "tests": 3821
     },
     {
       "dataset": "ERVISS",
@@ -4871,7 +4970,7 @@
       "week": 1,
       "virus": "RSV",
       "positivity": 10.3,
-      "tests": 3170
+      "tests": 3171
     },
     {
       "dataset": "ERVISS",
@@ -4880,7 +4979,7 @@
       "week": 1,
       "virus": "SARS-CoV-2",
       "positivity": 3.8,
-      "tests": 3576
+      "tests": 3577
     },
     {
       "dataset": "ERVISS",
@@ -4889,7 +4988,7 @@
       "week": 52,
       "virus": "Influenza",
       "positivity": 35.7,
-      "tests": 3514
+      "tests": 3515
     },
     {
       "dataset": "ERVISS",
@@ -4898,7 +4997,7 @@
       "week": 52,
       "virus": "RSV",
       "positivity": 11.8,
-      "tests": 2756
+      "tests": 2757
     },
     {
       "dataset": "ERVISS",
@@ -4907,7 +5006,7 @@
       "week": 52,
       "virus": "SARS-CoV-2",
       "positivity": 4.2,
-      "tests": 3300
+      "tests": 3303
     },
     {
       "dataset": "ERVISS",
@@ -4916,7 +5015,7 @@
       "week": 51,
       "virus": "Influenza",
       "positivity": 33.8,
-      "tests": 3357
+      "tests": 3356
     },
     {
       "dataset": "ERVISS",
@@ -4925,7 +5024,7 @@
       "week": 51,
       "virus": "RSV",
       "positivity": 11.1,
-      "tests": 2637
+      "tests": 2636
     },
     {
       "dataset": "ERVISS",
@@ -4934,7 +5033,7 @@
       "week": 51,
       "virus": "SARS-CoV-2",
       "positivity": 4.8,
-      "tests": 3245
+      "tests": 3244
     },
     {
       "dataset": "ERVISS",
@@ -5105,7 +5204,7 @@
       "week": 44,
       "virus": "Influenza",
       "positivity": 7.0,
-      "tests": 1408
+      "tests": 1407
     },
     {
       "dataset": "ERVISS",
@@ -5114,7 +5213,7 @@
       "week": 44,
       "virus": "RSV",
       "positivity": 2.8,
-      "tests": 1194
+      "tests": 1193
     },
     {
       "dataset": "ERVISS",
@@ -5123,7 +5222,7 @@
       "week": 44,
       "virus": "SARS-CoV-2",
       "positivity": 9.1,
-      "tests": 1435
+      "tests": 1434
     },
     {
       "dataset": "ERVISS",
@@ -5159,7 +5258,7 @@
       "week": 42,
       "virus": "Influenza",
       "positivity": 4.6,
-      "tests": 1585
+      "tests": 1586
     },
     {
       "dataset": "ERVISS",
@@ -5167,8 +5266,8 @@
       "year": 2025,
       "week": 42,
       "virus": "RSV",
-      "positivity": 1.4,
-      "tests": 1364
+      "positivity": 1.3,
+      "tests": 1365
     },
     {
       "dataset": "ERVISS",
@@ -5177,7 +5276,7 @@
       "week": 42,
       "virus": "SARS-CoV-2",
       "positivity": 8.8,
-      "tests": 1650
+      "tests": 1651
     },
     {
       "dataset": "ERVISS",
