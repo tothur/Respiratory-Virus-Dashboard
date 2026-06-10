@@ -93,12 +93,12 @@ h3 {
 }
 
 .app-shell {
-  max-width: 1240px;
+  width: min(100%, 1760px);
   margin: 0 auto;
-  padding: calc(20px + env(safe-area-inset-top)) calc(20px + env(safe-area-inset-right)) calc(20px + env(safe-area-inset-bottom))
-    calc(20px + env(safe-area-inset-left));
+  padding: calc(clamp(20px, 1.8vw, 36px) + env(safe-area-inset-top)) calc(clamp(20px, 2.2vw, 44px) + env(safe-area-inset-right))
+    calc(clamp(20px, 1.8vw, 36px) + env(safe-area-inset-bottom)) calc(clamp(20px, 2.2vw, 44px) + env(safe-area-inset-left));
   display: grid;
-  gap: 16px;
+  gap: clamp(16px, 1.15vw, 22px);
 }
 
 @keyframes fade-lift-in {
@@ -260,6 +260,12 @@ h3 {
 @media (min-width: 980px) {
   .alerts-grid {
     grid-template-columns: minmax(320px, 1.14fr) repeat(2, minmax(250px, 0.93fr));
+  }
+}
+
+@media (min-width: 1500px) {
+  .alerts-grid {
+    grid-template-columns: minmax(420px, 1.22fr) repeat(2, minmax(320px, 0.9fr));
   }
 }
 
@@ -1811,6 +1817,56 @@ h3 {
 
 .historical-grid .panel-chart {
   height: 320px;
+}
+
+@media (min-width: 1280px) {
+  .charts-grid,
+  .virology-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .panel-chart {
+    height: 390px;
+  }
+
+  .historical-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1500px) {
+  .briefing-stats-grid {
+    grid-template-columns: minmax(340px, 1.2fr) repeat(3, minmax(230px, 1fr));
+  }
+
+  .stat-card-flu-like,
+  .stat-card-hospital,
+  .stat-card-age-split,
+  .trend-summary-card {
+    grid-column: auto;
+  }
+
+  .glance-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .quality-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .virology-lists {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1800px) {
+  .panel-chart {
+    height: 430px;
+  }
+
+  .data-table {
+    min-width: 0;
+  }
 }
 
 .historical-empty {
