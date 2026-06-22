@@ -1640,7 +1640,10 @@ export function App() {
     if (typeof window === "undefined") return;
     const node = document.getElementById(targetId);
     if (node) {
-      node.scrollIntoView({ behavior: "smooth", block: "start" });
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      node.tabIndex = -1;
+      node.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+      node.focus({ preventScroll: true });
       return;
     }
     if (attempt >= 10) return;
