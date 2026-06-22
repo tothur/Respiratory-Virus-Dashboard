@@ -75,21 +75,6 @@ function seasonStartYearFromYearWeek(year: number, week: number): number | null 
   return week >= NH_RESP_SEASON_START_WEEK ? year : year - 1;
 }
 
-function getIsoWeekYear(date: Date): { year: number; week: number } {
-  const utcDate = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
-  const dayNumber = utcDate.getUTCDay() || 7;
-  utcDate.setUTCDate(utcDate.getUTCDate() + 4 - dayNumber);
-  const isoYear = utcDate.getUTCFullYear();
-  const yearStart = new Date(Date.UTC(isoYear, 0, 1));
-  const week = Math.ceil(((utcDate.getTime() - yearStart.getTime()) / 86400000 + 1) / 7);
-  return { year: isoYear, week };
-}
-
-function currentNhRespSeasonStartYear(today = new Date()): number {
-  const { year, week } = getIsoWeekYear(today);
-  return week >= NH_RESP_SEASON_START_WEEK ? year : year - 1;
-}
-
 function weekLabel(week: number): string {
   return `W${String(week).padStart(2, "0")}`;
 }
@@ -323,7 +308,7 @@ function aggregateEuVirologyPositivity(respiratoryData: RespiratoryData, seasonS
   return Array.from(buckets.values()).sort((a, b) => seasonWeekCompare(a.week, b.week) || a.virus.localeCompare(b.virus));
 }
 
-function buildEuVirologySnapshot(respiratoryData: RespiratoryData): EuVirologySnapshot {
+function buildEuVirologySnapshot(respiratoryData: RespiratoryData, seasonStartYear: number): EuVirologySnapshot {
   const seasonCandidates = Array.from(
     new Set(
       respiratoryData.ervissDetections
@@ -337,19 +322,15 @@ function buildEuVirologySnapshot(respiratoryData: RespiratoryData): EuVirologySn
     return {
       available: false,
       availableYears: [],
-      targetYear: null,
+      targetYear: seasonStartYear,
       latestWeek: null,
       detectionRows: [],
       positivityRows: [],
     };
   }
 
-  const activeSeasonStart = currentNhRespSeasonStartYear();
-  const targetYear = seasonCandidates.includes(activeSeasonStart)
-    ? activeSeasonStart
-    : seasonCandidates[seasonCandidates.length - 1];
-  const detectionRows = aggregateEuVirologyDetections(respiratoryData, targetYear);
-  const positivityRows = aggregateEuVirologyPositivity(respiratoryData, targetYear);
+  const detectionRows = aggregateEuVirologyDetections(respiratoryData, seasonStartYear);
+  const positivityRows = aggregateEuVirologyPositivity(respiratoryData, seasonStartYear);
 
   const latestWeek = (() => {
     const candidates = detectionRows.map((row) => row.week).concat(positivityRows.map((row) => row.week));
@@ -360,7 +341,7 @@ function buildEuVirologySnapshot(respiratoryData: RespiratoryData): EuVirologySn
   return {
     available: detectionRows.length > 0 || positivityRows.length > 0,
     availableYears: seasonCandidates,
-    targetYear,
+    targetYear: seasonStartYear,
     latestWeek,
     detectionRows,
     positivityRows,
@@ -565,7 +546,7 @@ export function buildDashboardSnapshot(dataSource: DashboardDataSource, selected
   const iliSeries = aggregateIliSeries(respiratoryData, year);
   const sariSeries = aggregateSariSeries(respiratoryData, year);
   const virology = buildVirologySnapshot(respiratoryData, year);
-  const euVirology = buildEuVirologySnapshot(respiratoryData);
+  const euVirology = buildEuVirologySnapshot(respiratoryData, year);
   const historical = buildHistoricalComparisonSnapshot(respiratoryData, seasonLabels, year, availableYears);
 
   const totalIliCases = iliSeries.reduce((sum, point) => sum + point.cases, 0);
@@ -587,7 +568,7 @@ export function buildDashboardSnapshot(dataSource: DashboardDataSource, selected
   if (!sariSeries.length) warnings.push("No SARI rows for this season in loaded source.");
   if (!virology.available) warnings.push("No virology rows for this season in loaded source.");
   if (!euVirology.available) warnings.push("No EU/EEA ERVISS rows available.");
-  if (dataSource.note) warnings.push(dataSource.note);
+  if (dataSource.source === "bundled" && dataSource.note) warnings.push(dataSource.note);
 
   return {
     selectedYear: year,
