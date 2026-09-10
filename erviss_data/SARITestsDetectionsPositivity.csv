@@ -1,22 +1,30 @@
 survtype,countryname,yearweek,pathogen,pathogentype,pathogensubtype,indicator,age,value
-SARI virological,Belgium,2026-W34,Influenza,Influenza,total,detections,total,1
-SARI virological,Belgium,2026-W34,Influenza,Influenza,total,positivity,total,2
-SARI virological,Belgium,2026-W34,Influenza,Influenza,total,tests,total,50
+SARI virological,Belgium,2026-W35,Influenza,Influenza,total,detections,total,4
+SARI virological,Belgium,2026-W35,Influenza,Influenza,total,positivity,total,8
+SARI virological,Belgium,2026-W35,Influenza,Influenza,total,tests,total,50
+SARI virological,Belgium,2026-W35,Influenza,Influenza A,A(H1)pdm09,detections,total,4
+SARI virological,Belgium,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,1
+SARI virological,Belgium,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,2
+SARI virological,Belgium,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,50
+SARI virological,Belgium,2026-W34,Influenza,Influenza,total,detections,total,2
+SARI virological,Belgium,2026-W34,Influenza,Influenza,total,positivity,total,3.3
+SARI virological,Belgium,2026-W34,Influenza,Influenza,total,tests,total,61
+SARI virological,Belgium,2026-W34,Influenza,Influenza A,A(H1)pdm09,detections,total,1
 SARI virological,Belgium,2026-W34,Influenza,Influenza A,A(H3),detections,total,1
 SARI virological,Belgium,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,1
-SARI virological,Belgium,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,2
-SARI virological,Belgium,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,50
-SARI virological,Belgium,2026-W33,Influenza,Influenza,total,detections,total,2
-SARI virological,Belgium,2026-W33,Influenza,Influenza,total,positivity,total,3.4
-SARI virological,Belgium,2026-W33,Influenza,Influenza,total,tests,total,58
-SARI virological,Belgium,2026-W33,Influenza,Influenza A,A(H1)pdm09,detections,total,1
+SARI virological,Belgium,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,1.6
+SARI virological,Belgium,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,61
+SARI virological,Belgium,2026-W33,Influenza,Influenza,total,detections,total,3
+SARI virological,Belgium,2026-W33,Influenza,Influenza,total,positivity,total,5.1
+SARI virological,Belgium,2026-W33,Influenza,Influenza,total,tests,total,59
+SARI virological,Belgium,2026-W33,Influenza,Influenza A,A(H1)pdm09,detections,total,2
 SARI virological,Belgium,2026-W33,Influenza,Influenza A,A(H3),detections,total,1
 SARI virological,Belgium,2026-W33,RSV,RSV,RSV,detections,total,0
 SARI virological,Belgium,2026-W33,RSV,RSV,RSV,positivity,total,0
 SARI virological,Belgium,2026-W33,RSV,RSV,RSV,tests,total,1
 SARI virological,Belgium,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Belgium,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
-SARI virological,Belgium,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,58
+SARI virological,Belgium,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,59
 SARI virological,Belgium,2026-W32,Influenza,Influenza,total,detections,total,0
 SARI virological,Belgium,2026-W32,Influenza,Influenza,total,positivity,total,0
 SARI virological,Belgium,2026-W32,Influenza,Influenza,total,tests,total,59
@@ -31,11 +39,11 @@ SARI virological,Belgium,2026-W31,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,to
 SARI virological,Belgium,2026-W31,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,53
 SARI virological,Belgium,2026-W30,Influenza,Influenza,total,detections,total,1
 SARI virological,Belgium,2026-W30,Influenza,Influenza,total,positivity,total,2.1
-SARI virological,Belgium,2026-W30,Influenza,Influenza,total,tests,total,47
+SARI virological,Belgium,2026-W30,Influenza,Influenza,total,tests,total,48
 SARI virological,Belgium,2026-W30,Influenza,Influenza A,A(H3),detections,total,1
 SARI virological,Belgium,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,1
 SARI virological,Belgium,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,2.1
-SARI virological,Belgium,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,47
+SARI virological,Belgium,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,48
 SARI virological,Belgium,2026-W29,Influenza,Influenza,total,detections,total,1
 SARI virological,Belgium,2026-W29,Influenza,Influenza,total,positivity,total,1.6
 SARI virological,Belgium,2026-W29,Influenza,Influenza,total,tests,total,61
@@ -45,10 +53,10 @@ SARI virological,Belgium,2026-W29,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,to
 SARI virological,Belgium,2026-W29,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,61
 SARI virological,Belgium,2026-W28,Influenza,Influenza,total,detections,total,0
 SARI virological,Belgium,2026-W28,Influenza,Influenza,total,positivity,total,0
-SARI virological,Belgium,2026-W28,Influenza,Influenza,total,tests,total,53
+SARI virological,Belgium,2026-W28,Influenza,Influenza,total,tests,total,54
 SARI virological,Belgium,2026-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Belgium,2026-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
-SARI virological,Belgium,2026-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,53
+SARI virological,Belgium,2026-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,54
 SARI virological,Belgium,2026-W27,Influenza,Influenza,total,detections,total,1
 SARI virological,Belgium,2026-W27,Influenza,Influenza,total,positivity,total,1.2
 SARI virological,Belgium,2026-W27,Influenza,Influenza,total,tests,total,85
@@ -3470,6 +3478,13 @@ SARI virological,Croatia,2022-W25,RSV,RSV,RSV,tests,total,23
 SARI virological,Croatia,2022-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,9
 SARI virological,Croatia,2022-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,33.3
 SARI virological,Croatia,2022-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,27
+SARI virological,Cyprus,2026-W36,Influenza,Influenza,total,detections,total,2
+SARI virological,Cyprus,2026-W36,Influenza,Influenza,total,positivity,total,15.4
+SARI virological,Cyprus,2026-W36,Influenza,Influenza,total,tests,total,13
+SARI virological,Cyprus,2026-W36,Influenza,Influenza untyped,Influenza untyped,detections,total,2
+SARI virological,Cyprus,2026-W36,RSV,RSV,RSV,detections,total,0
+SARI virological,Cyprus,2026-W36,RSV,RSV,RSV,positivity,total,0
+SARI virological,Cyprus,2026-W36,RSV,RSV,RSV,tests,total,13
 SARI virological,Cyprus,2026-W35,Influenza,Influenza,total,detections,total,0
 SARI virological,Cyprus,2026-W35,Influenza,Influenza,total,positivity,total,0
 SARI virological,Cyprus,2026-W35,Influenza,Influenza,total,tests,total,13
@@ -4269,63 +4284,79 @@ SARI virological,Cyprus,2024-W39,Influenza,Influenza untyped,Influenza untyped,d
 SARI virological,Cyprus,2024-W39,RSV,RSV,RSV,detections,total,0
 SARI virological,Cyprus,2024-W39,RSV,RSV,RSV,positivity,total,0
 SARI virological,Cyprus,2024-W39,RSV,RSV,RSV,tests,total,35
-SARI virological,EU/EEA,2026-W35,Influenza,Influenza,total,detections,total,12
-SARI virological,EU/EEA,2026-W35,Influenza,Influenza,total,positivity,total,2.2
-SARI virological,EU/EEA,2026-W35,Influenza,Influenza,total,tests,total,556
-SARI virological,EU/EEA,2026-W35,Influenza,Influenza A,A (unknown),detections,total,7
-SARI virological,EU/EEA,2026-W35,Influenza,Influenza A,A(H3),detections,total,2
-SARI virological,EU/EEA,2026-W35,Influenza,Influenza untyped,Influenza untyped,detections,total,3
-SARI virological,EU/EEA,2026-W35,RSV,RSV,RSV,detections,total,2
+SARI virological,EU/EEA,2026-W36,Influenza,Influenza,total,detections,total,40
+SARI virological,EU/EEA,2026-W36,Influenza,Influenza,total,positivity,total,6.2
+SARI virological,EU/EEA,2026-W36,Influenza,Influenza,total,tests,total,648
+SARI virological,EU/EEA,2026-W36,Influenza,Influenza A,A (unknown),detections,total,25
+SARI virological,EU/EEA,2026-W36,Influenza,Influenza A,A(H3),detections,total,6
+SARI virological,EU/EEA,2026-W36,Influenza,Influenza B,B (unknown),detections,total,1
+SARI virological,EU/EEA,2026-W36,Influenza,Influenza untyped,Influenza untyped,detections,total,8
+SARI virological,EU/EEA,2026-W36,RSV,RSV,RSV,detections,total,3
+SARI virological,EU/EEA,2026-W36,RSV,RSV,RSV,positivity,total,0.5
+SARI virological,EU/EEA,2026-W36,RSV,RSV,RSV,tests,total,637
+SARI virological,EU/EEA,2026-W36,RSV,RSV untyped,NA,detections,total,2
+SARI virological,EU/EEA,2026-W36,RSV,RSV-A,NA,detections,total,1
+SARI virological,EU/EEA,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,33
+SARI virological,EU/EEA,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,5.2
+SARI virological,EU/EEA,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,635
+SARI virological,EU/EEA,2026-W35,Influenza,Influenza,total,detections,total,25
+SARI virological,EU/EEA,2026-W35,Influenza,Influenza,total,positivity,total,3.4
+SARI virological,EU/EEA,2026-W35,Influenza,Influenza,total,tests,total,732
+SARI virological,EU/EEA,2026-W35,Influenza,Influenza A,A (unknown),detections,total,11
+SARI virological,EU/EEA,2026-W35,Influenza,Influenza A,A(H1)pdm09,detections,total,4
+SARI virological,EU/EEA,2026-W35,Influenza,Influenza A,A(H3),detections,total,6
+SARI virological,EU/EEA,2026-W35,Influenza,Influenza untyped,Influenza untyped,detections,total,4
+SARI virological,EU/EEA,2026-W35,RSV,RSV,RSV,detections,total,3
 SARI virological,EU/EEA,2026-W35,RSV,RSV,RSV,positivity,total,0.4
-SARI virological,EU/EEA,2026-W35,RSV,RSV,RSV,tests,total,551
-SARI virological,EU/EEA,2026-W35,RSV,RSV untyped,NA,detections,total,2
-SARI virological,EU/EEA,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,20
-SARI virological,EU/EEA,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,3.7
-SARI virological,EU/EEA,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,544
-SARI virological,EU/EEA,2026-W34,Influenza,Influenza,total,detections,total,29
-SARI virological,EU/EEA,2026-W34,Influenza,Influenza,total,positivity,total,4.4
-SARI virological,EU/EEA,2026-W34,Influenza,Influenza,total,tests,total,660
+SARI virological,EU/EEA,2026-W35,RSV,RSV,RSV,tests,total,668
+SARI virological,EU/EEA,2026-W35,RSV,RSV untyped,NA,detections,total,3
+SARI virological,EU/EEA,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,25
+SARI virological,EU/EEA,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,3.5
+SARI virological,EU/EEA,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,717
+SARI virological,EU/EEA,2026-W34,Influenza,Influenza,total,detections,total,31
+SARI virological,EU/EEA,2026-W34,Influenza,Influenza,total,positivity,total,4.3
+SARI virological,EU/EEA,2026-W34,Influenza,Influenza,total,tests,total,720
 SARI virological,EU/EEA,2026-W34,Influenza,Influenza A,A (unknown),detections,total,11
-SARI virological,EU/EEA,2026-W34,Influenza,Influenza A,A(H1)pdm09,detections,total,1
-SARI virological,EU/EEA,2026-W34,Influenza,Influenza A,A(H3),detections,total,7
+SARI virological,EU/EEA,2026-W34,Influenza,Influenza A,A(H1)pdm09,detections,total,2
+SARI virological,EU/EEA,2026-W34,Influenza,Influenza A,A(H3),detections,total,8
 SARI virological,EU/EEA,2026-W34,Influenza,Influenza untyped,Influenza untyped,detections,total,10
 SARI virological,EU/EEA,2026-W34,RSV,RSV,RSV,detections,total,2
 SARI virological,EU/EEA,2026-W34,RSV,RSV,RSV,positivity,total,0.3
-SARI virological,EU/EEA,2026-W34,RSV,RSV,RSV,tests,total,605
+SARI virological,EU/EEA,2026-W34,RSV,RSV,RSV,tests,total,647
 SARI virological,EU/EEA,2026-W34,RSV,RSV untyped,NA,detections,total,1
 SARI virological,EU/EEA,2026-W34,RSV,RSV-A,NA,detections,total,1
-SARI virological,EU/EEA,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,21
-SARI virological,EU/EEA,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,3.3
-SARI virological,EU/EEA,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,643
-SARI virological,EU/EEA,2026-W33,Influenza,Influenza,total,detections,total,26
-SARI virological,EU/EEA,2026-W33,Influenza,Influenza,total,positivity,total,3.6
-SARI virological,EU/EEA,2026-W33,Influenza,Influenza,total,tests,total,727
+SARI virological,EU/EEA,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,25
+SARI virological,EU/EEA,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,3.6
+SARI virological,EU/EEA,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,702
+SARI virological,EU/EEA,2026-W33,Influenza,Influenza,total,detections,total,27
+SARI virological,EU/EEA,2026-W33,Influenza,Influenza,total,positivity,total,3.5
+SARI virological,EU/EEA,2026-W33,Influenza,Influenza,total,tests,total,766
 SARI virological,EU/EEA,2026-W33,Influenza,Influenza A,A (unknown),detections,total,10
-SARI virological,EU/EEA,2026-W33,Influenza,Influenza A,A(H1)pdm09,detections,total,1
+SARI virological,EU/EEA,2026-W33,Influenza,Influenza A,A(H1)pdm09,detections,total,2
 SARI virological,EU/EEA,2026-W33,Influenza,Influenza A,A(H3),detections,total,12
 SARI virological,EU/EEA,2026-W33,Influenza,Influenza untyped,Influenza untyped,detections,total,3
 SARI virological,EU/EEA,2026-W33,RSV,RSV,RSV,detections,total,2
 SARI virological,EU/EEA,2026-W33,RSV,RSV,RSV,positivity,total,0.3
-SARI virological,EU/EEA,2026-W33,RSV,RSV,RSV,tests,total,664
+SARI virological,EU/EEA,2026-W33,RSV,RSV,RSV,tests,total,691
 SARI virological,EU/EEA,2026-W33,RSV,RSV untyped,NA,detections,total,2
 SARI virological,EU/EEA,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,18
-SARI virological,EU/EEA,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,2.6
-SARI virological,EU/EEA,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,695
-SARI virological,EU/EEA,2026-W32,Influenza,Influenza,total,detections,total,21
+SARI virological,EU/EEA,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,2.5
+SARI virological,EU/EEA,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,732
+SARI virological,EU/EEA,2026-W32,Influenza,Influenza,total,detections,total,22
 SARI virological,EU/EEA,2026-W32,Influenza,Influenza,total,positivity,total,2.9
-SARI virological,EU/EEA,2026-W32,Influenza,Influenza,total,tests,total,720
-SARI virological,EU/EEA,2026-W32,Influenza,Influenza A,A (unknown),detections,total,7
+SARI virological,EU/EEA,2026-W32,Influenza,Influenza,total,tests,total,748
+SARI virological,EU/EEA,2026-W32,Influenza,Influenza A,A (unknown),detections,total,8
 SARI virological,EU/EEA,2026-W32,Influenza,Influenza A,A(H3),detections,total,9
 SARI virological,EU/EEA,2026-W32,Influenza,Influenza untyped,Influenza untyped,detections,total,5
 SARI virological,EU/EEA,2026-W32,RSV,RSV,RSV,detections,total,0
 SARI virological,EU/EEA,2026-W32,RSV,RSV,RSV,positivity,total,0
-SARI virological,EU/EEA,2026-W32,RSV,RSV,RSV,tests,total,655
-SARI virological,EU/EEA,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,16
-SARI virological,EU/EEA,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,2.3
-SARI virological,EU/EEA,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,705
+SARI virological,EU/EEA,2026-W32,RSV,RSV,RSV,tests,total,677
+SARI virological,EU/EEA,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,18
+SARI virological,EU/EEA,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,2.5
+SARI virological,EU/EEA,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,733
 SARI virological,EU/EEA,2026-W31,Influenza,Influenza,total,detections,total,11
 SARI virological,EU/EEA,2026-W31,Influenza,Influenza,total,positivity,total,1.5
-SARI virological,EU/EEA,2026-W31,Influenza,Influenza,total,tests,total,732
+SARI virological,EU/EEA,2026-W31,Influenza,Influenza,total,tests,total,734
 SARI virological,EU/EEA,2026-W31,Influenza,Influenza A,A (unknown),detections,total,4
 SARI virological,EU/EEA,2026-W31,Influenza,Influenza A,A(H3),detections,total,3
 SARI virological,EU/EEA,2026-W31,Influenza,Influenza untyped,Influenza untyped,detections,total,4
@@ -4337,71 +4368,71 @@ SARI virological,EU/EEA,2026-W31,RSV,RSV-A,NA,detections,total,2
 SARI virological,EU/EEA,2026-W31,RSV,RSV-B,NA,detections,total,1
 SARI virological,EU/EEA,2026-W31,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,7
 SARI virological,EU/EEA,2026-W31,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,1
-SARI virological,EU/EEA,2026-W31,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,719
-SARI virological,EU/EEA,2026-W30,Influenza,Influenza,total,detections,total,10
-SARI virological,EU/EEA,2026-W30,Influenza,Influenza,total,positivity,total,1.3
-SARI virological,EU/EEA,2026-W30,Influenza,Influenza,total,tests,total,749
+SARI virological,EU/EEA,2026-W31,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,721
+SARI virological,EU/EEA,2026-W30,Influenza,Influenza,total,detections,total,11
+SARI virological,EU/EEA,2026-W30,Influenza,Influenza,total,positivity,total,1.5
+SARI virological,EU/EEA,2026-W30,Influenza,Influenza,total,tests,total,752
 SARI virological,EU/EEA,2026-W30,Influenza,Influenza A,A(H1)pdm09,detections,total,3
 SARI virological,EU/EEA,2026-W30,Influenza,Influenza A,A(H3),detections,total,3
-SARI virological,EU/EEA,2026-W30,Influenza,Influenza untyped,Influenza untyped,detections,total,4
+SARI virological,EU/EEA,2026-W30,Influenza,Influenza untyped,Influenza untyped,detections,total,5
 SARI virological,EU/EEA,2026-W30,RSV,RSV,RSV,detections,total,3
 SARI virological,EU/EEA,2026-W30,RSV,RSV,RSV,positivity,total,0.4
-SARI virological,EU/EEA,2026-W30,RSV,RSV,RSV,tests,total,687
+SARI virological,EU/EEA,2026-W30,RSV,RSV,RSV,tests,total,691
 SARI virological,EU/EEA,2026-W30,RSV,RSV untyped,NA,detections,total,1
 SARI virological,EU/EEA,2026-W30,RSV,RSV-A,NA,detections,total,1
 SARI virological,EU/EEA,2026-W30,RSV,RSV-B,NA,detections,total,1
 SARI virological,EU/EEA,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,4
 SARI virological,EU/EEA,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.5
-SARI virological,EU/EEA,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,738
+SARI virological,EU/EEA,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,741
 SARI virological,EU/EEA,2026-W29,Influenza,Influenza,total,detections,total,4
 SARI virological,EU/EEA,2026-W29,Influenza,Influenza,total,positivity,total,0.6
-SARI virological,EU/EEA,2026-W29,Influenza,Influenza,total,tests,total,704
+SARI virological,EU/EEA,2026-W29,Influenza,Influenza,total,tests,total,702
 SARI virological,EU/EEA,2026-W29,Influenza,Influenza A,A(H3),detections,total,1
 SARI virological,EU/EEA,2026-W29,Influenza,Influenza untyped,Influenza untyped,detections,total,3
 SARI virological,EU/EEA,2026-W29,RSV,RSV,RSV,detections,total,1
 SARI virological,EU/EEA,2026-W29,RSV,RSV,RSV,positivity,total,0.2
-SARI virological,EU/EEA,2026-W29,RSV,RSV,RSV,tests,total,624
+SARI virological,EU/EEA,2026-W29,RSV,RSV,RSV,tests,total,623
 SARI virological,EU/EEA,2026-W29,RSV,RSV untyped,NA,detections,total,1
 SARI virological,EU/EEA,2026-W29,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,9
 SARI virological,EU/EEA,2026-W29,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,1.3
-SARI virological,EU/EEA,2026-W29,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,701
+SARI virological,EU/EEA,2026-W29,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,699
 SARI virological,EU/EEA,2026-W28,Influenza,Influenza,total,detections,total,1
 SARI virological,EU/EEA,2026-W28,Influenza,Influenza,total,positivity,total,0.1
-SARI virological,EU/EEA,2026-W28,Influenza,Influenza,total,tests,total,742
+SARI virological,EU/EEA,2026-W28,Influenza,Influenza,total,tests,total,745
 SARI virological,EU/EEA,2026-W28,Influenza,Influenza untyped,Influenza untyped,detections,total,1
 SARI virological,EU/EEA,2026-W28,RSV,RSV,RSV,detections,total,1
 SARI virological,EU/EEA,2026-W28,RSV,RSV,RSV,positivity,total,0.1
-SARI virological,EU/EEA,2026-W28,RSV,RSV,RSV,tests,total,677
+SARI virological,EU/EEA,2026-W28,RSV,RSV,RSV,tests,total,678
 SARI virological,EU/EEA,2026-W28,RSV,RSV-A,NA,detections,total,1
 SARI virological,EU/EEA,2026-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,2
 SARI virological,EU/EEA,2026-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.3
-SARI virological,EU/EEA,2026-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,731
+SARI virological,EU/EEA,2026-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,734
 SARI virological,EU/EEA,2026-W27,Influenza,Influenza,total,detections,total,2
 SARI virological,EU/EEA,2026-W27,Influenza,Influenza,total,positivity,total,0.2
-SARI virological,EU/EEA,2026-W27,Influenza,Influenza,total,tests,total,859
+SARI virological,EU/EEA,2026-W27,Influenza,Influenza,total,tests,total,862
 SARI virological,EU/EEA,2026-W27,Influenza,Influenza A,A(H1)pdm09,detections,total,2
 SARI virological,EU/EEA,2026-W27,RSV,RSV,RSV,detections,total,4
 SARI virological,EU/EEA,2026-W27,RSV,RSV,RSV,positivity,total,0.5
-SARI virological,EU/EEA,2026-W27,RSV,RSV,RSV,tests,total,758
+SARI virological,EU/EEA,2026-W27,RSV,RSV,RSV,tests,total,760
 SARI virological,EU/EEA,2026-W27,RSV,RSV untyped,NA,detections,total,2
 SARI virological,EU/EEA,2026-W27,RSV,RSV-A,NA,detections,total,1
 SARI virological,EU/EEA,2026-W27,RSV,RSV-B,NA,detections,total,1
 SARI virological,EU/EEA,2026-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,8
 SARI virological,EU/EEA,2026-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.9
-SARI virological,EU/EEA,2026-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,853
+SARI virological,EU/EEA,2026-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,856
 SARI virological,EU/EEA,2026-W26,Influenza,Influenza,total,detections,total,3
 SARI virological,EU/EEA,2026-W26,Influenza,Influenza,total,positivity,total,0.3
-SARI virological,EU/EEA,2026-W26,Influenza,Influenza,total,tests,total,920
+SARI virological,EU/EEA,2026-W26,Influenza,Influenza,total,tests,total,924
 SARI virological,EU/EEA,2026-W26,Influenza,Influenza A,A(H1)pdm09,detections,total,2
 SARI virological,EU/EEA,2026-W26,Influenza,Influenza B,B (unknown),detections,total,1
 SARI virological,EU/EEA,2026-W26,RSV,RSV,RSV,detections,total,4
 SARI virological,EU/EEA,2026-W26,RSV,RSV,RSV,positivity,total,0.5
-SARI virological,EU/EEA,2026-W26,RSV,RSV,RSV,tests,total,782
+SARI virological,EU/EEA,2026-W26,RSV,RSV,RSV,tests,total,786
 SARI virological,EU/EEA,2026-W26,RSV,RSV untyped,NA,detections,total,2
 SARI virological,EU/EEA,2026-W26,RSV,RSV-B,NA,detections,total,2
 SARI virological,EU/EEA,2026-W26,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,3
 SARI virological,EU/EEA,2026-W26,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.3
-SARI virological,EU/EEA,2026-W26,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,918
+SARI virological,EU/EEA,2026-W26,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,922
 SARI virological,EU/EEA,2026-W25,Influenza,Influenza,total,detections,total,9
 SARI virological,EU/EEA,2026-W25,Influenza,Influenza,total,positivity,total,0.9
 SARI virological,EU/EEA,2026-W25,Influenza,Influenza,total,tests,total,955
@@ -4415,50 +4446,50 @@ SARI virological,EU/EEA,2026-W25,RSV,RSV untyped,NA,detections,total,5
 SARI virological,EU/EEA,2026-W25,RSV,RSV-B,NA,detections,total,1
 SARI virological,EU/EEA,2026-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,9
 SARI virological,EU/EEA,2026-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,1
-SARI virological,EU/EEA,2026-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,945
+SARI virological,EU/EEA,2026-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,944
 SARI virological,EU/EEA,2026-W24,Influenza,Influenza,total,detections,total,5
 SARI virological,EU/EEA,2026-W24,Influenza,Influenza,total,positivity,total,0.6
-SARI virological,EU/EEA,2026-W24,Influenza,Influenza,total,tests,total,877
+SARI virological,EU/EEA,2026-W24,Influenza,Influenza,total,tests,total,878
 SARI virological,EU/EEA,2026-W24,Influenza,Influenza A,A (unknown),detections,total,1
 SARI virological,EU/EEA,2026-W24,Influenza,Influenza A,A(H1)pdm09,detections,total,1
 SARI virological,EU/EEA,2026-W24,Influenza,Influenza untyped,Influenza untyped,detections,total,3
 SARI virological,EU/EEA,2026-W24,RSV,RSV,RSV,detections,total,6
 SARI virological,EU/EEA,2026-W24,RSV,RSV,RSV,positivity,total,0.8
-SARI virological,EU/EEA,2026-W24,RSV,RSV,RSV,tests,total,761
+SARI virological,EU/EEA,2026-W24,RSV,RSV,RSV,tests,total,762
 SARI virological,EU/EEA,2026-W24,RSV,RSV untyped,NA,detections,total,3
 SARI virological,EU/EEA,2026-W24,RSV,RSV-B,NA,detections,total,3
 SARI virological,EU/EEA,2026-W24,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,2
 SARI virological,EU/EEA,2026-W24,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.2
-SARI virological,EU/EEA,2026-W24,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,870
+SARI virological,EU/EEA,2026-W24,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,871
 SARI virological,EU/EEA,2026-W23,Influenza,Influenza,total,detections,total,5
 SARI virological,EU/EEA,2026-W23,Influenza,Influenza,total,positivity,total,0.5
-SARI virological,EU/EEA,2026-W23,Influenza,Influenza,total,tests,total,990
+SARI virological,EU/EEA,2026-W23,Influenza,Influenza,total,tests,total,991
 SARI virological,EU/EEA,2026-W23,Influenza,Influenza A,A (unknown),detections,total,1
 SARI virological,EU/EEA,2026-W23,Influenza,Influenza A,A(H3),detections,total,1
 SARI virological,EU/EEA,2026-W23,Influenza,Influenza untyped,Influenza untyped,detections,total,3
 SARI virological,EU/EEA,2026-W23,RSV,RSV,RSV,detections,total,8
 SARI virological,EU/EEA,2026-W23,RSV,RSV,RSV,positivity,total,0.9
-SARI virological,EU/EEA,2026-W23,RSV,RSV,RSV,tests,total,847
+SARI virological,EU/EEA,2026-W23,RSV,RSV,RSV,tests,total,848
 SARI virological,EU/EEA,2026-W23,RSV,RSV untyped,NA,detections,total,7
 SARI virological,EU/EEA,2026-W23,RSV,RSV-B,NA,detections,total,1
 SARI virological,EU/EEA,2026-W23,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,6
 SARI virological,EU/EEA,2026-W23,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.6
-SARI virological,EU/EEA,2026-W23,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,977
+SARI virological,EU/EEA,2026-W23,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,978
 SARI virological,EU/EEA,2026-W22,Influenza,Influenza,total,detections,total,4
 SARI virological,EU/EEA,2026-W22,Influenza,Influenza,total,positivity,total,0.4
-SARI virological,EU/EEA,2026-W22,Influenza,Influenza,total,tests,total,1107
+SARI virological,EU/EEA,2026-W22,Influenza,Influenza,total,tests,total,1108
 SARI virological,EU/EEA,2026-W22,Influenza,Influenza A,A (unknown),detections,total,1
 SARI virological,EU/EEA,2026-W22,Influenza,Influenza A,A(H1)pdm09,detections,total,1
 SARI virological,EU/EEA,2026-W22,Influenza,Influenza B,B/Vic,detections,total,1
 SARI virological,EU/EEA,2026-W22,Influenza,Influenza untyped,Influenza untyped,detections,total,1
 SARI virological,EU/EEA,2026-W22,RSV,RSV,RSV,detections,total,16
 SARI virological,EU/EEA,2026-W22,RSV,RSV,RSV,positivity,total,1.7
-SARI virological,EU/EEA,2026-W22,RSV,RSV,RSV,tests,total,949
+SARI virological,EU/EEA,2026-W22,RSV,RSV,RSV,tests,total,950
 SARI virological,EU/EEA,2026-W22,RSV,RSV untyped,NA,detections,total,14
 SARI virological,EU/EEA,2026-W22,RSV,RSV-B,NA,detections,total,2
 SARI virological,EU/EEA,2026-W22,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,15
 SARI virological,EU/EEA,2026-W22,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,1.4
-SARI virological,EU/EEA,2026-W22,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1085
+SARI virological,EU/EEA,2026-W22,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1086
 SARI virological,EU/EEA,2026-W21,Influenza,Influenza,total,detections,total,10
 SARI virological,EU/EEA,2026-W21,Influenza,Influenza,total,positivity,total,0.9
 SARI virological,EU/EEA,2026-W21,Influenza,Influenza,total,tests,total,1164
@@ -4476,19 +4507,19 @@ SARI virological,EU/EEA,2026-W21,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,tot
 SARI virological,EU/EEA,2026-W21,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1143
 SARI virological,EU/EEA,2026-W20,Influenza,Influenza,total,detections,total,11
 SARI virological,EU/EEA,2026-W20,Influenza,Influenza,total,positivity,total,0.7
-SARI virological,EU/EEA,2026-W20,Influenza,Influenza,total,tests,total,1470
+SARI virological,EU/EEA,2026-W20,Influenza,Influenza,total,tests,total,1469
 SARI virological,EU/EEA,2026-W20,Influenza,Influenza A,A (unknown),detections,total,4
 SARI virological,EU/EEA,2026-W20,Influenza,Influenza A,A(H3),detections,total,1
 SARI virological,EU/EEA,2026-W20,Influenza,Influenza B,B/Vic,detections,total,1
 SARI virological,EU/EEA,2026-W20,Influenza,Influenza untyped,Influenza untyped,detections,total,5
 SARI virological,EU/EEA,2026-W20,RSV,RSV,RSV,detections,total,31
 SARI virological,EU/EEA,2026-W20,RSV,RSV,RSV,positivity,total,2.8
-SARI virological,EU/EEA,2026-W20,RSV,RSV,RSV,tests,total,1110
+SARI virological,EU/EEA,2026-W20,RSV,RSV,RSV,tests,total,1109
 SARI virological,EU/EEA,2026-W20,RSV,RSV untyped,NA,detections,total,30
 SARI virological,EU/EEA,2026-W20,RSV,RSV-A,NA,detections,total,1
 SARI virological,EU/EEA,2026-W20,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,7
 SARI virological,EU/EEA,2026-W20,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.5
-SARI virological,EU/EEA,2026-W20,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1462
+SARI virological,EU/EEA,2026-W20,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1461
 SARI virological,EU/EEA,2026-W19,Influenza,Influenza,total,detections,total,14
 SARI virological,EU/EEA,2026-W19,Influenza,Influenza,total,positivity,total,0.9
 SARI virological,EU/EEA,2026-W19,Influenza,Influenza,total,tests,total,1525
@@ -4539,20 +4570,20 @@ SARI virological,EU/EEA,2026-W17,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,tot
 SARI virological,EU/EEA,2026-W17,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1630
 SARI virological,EU/EEA,2026-W16,Influenza,Influenza,total,detections,total,36
 SARI virological,EU/EEA,2026-W16,Influenza,Influenza,total,positivity,total,2
-SARI virological,EU/EEA,2026-W16,Influenza,Influenza,total,tests,total,1839
+SARI virological,EU/EEA,2026-W16,Influenza,Influenza,total,tests,total,1840
 SARI virological,EU/EEA,2026-W16,Influenza,Influenza A,A (unknown),detections,total,10
 SARI virological,EU/EEA,2026-W16,Influenza,Influenza A,A(H1)pdm09,detections,total,3
 SARI virological,EU/EEA,2026-W16,Influenza,Influenza A,A(H3),detections,total,1
 SARI virological,EU/EEA,2026-W16,Influenza,Influenza untyped,Influenza untyped,detections,total,22
 SARI virological,EU/EEA,2026-W16,RSV,RSV,RSV,detections,total,114
 SARI virological,EU/EEA,2026-W16,RSV,RSV,RSV,positivity,total,7.2
-SARI virological,EU/EEA,2026-W16,RSV,RSV,RSV,tests,total,1573
+SARI virological,EU/EEA,2026-W16,RSV,RSV,RSV,tests,total,1574
 SARI virological,EU/EEA,2026-W16,RSV,RSV untyped,NA,detections,total,105
 SARI virological,EU/EEA,2026-W16,RSV,RSV-A,NA,detections,total,3
 SARI virological,EU/EEA,2026-W16,RSV,RSV-B,NA,detections,total,6
 SARI virological,EU/EEA,2026-W16,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,12
 SARI virological,EU/EEA,2026-W16,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.7
-SARI virological,EU/EEA,2026-W16,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1775
+SARI virological,EU/EEA,2026-W16,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1776
 SARI virological,EU/EEA,2026-W15,Influenza,Influenza,total,detections,total,68
 SARI virological,EU/EEA,2026-W15,Influenza,Influenza,total,positivity,total,3.3
 SARI virological,EU/EEA,2026-W15,Influenza,Influenza,total,tests,total,2055
@@ -4604,7 +4635,7 @@ SARI virological,EU/EEA,2026-W13,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,tot
 SARI virological,EU/EEA,2026-W13,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,2223
 SARI virological,EU/EEA,2026-W12,Influenza,Influenza,total,detections,total,140
 SARI virological,EU/EEA,2026-W12,Influenza,Influenza,total,positivity,total,5.9
-SARI virological,EU/EEA,2026-W12,Influenza,Influenza,total,tests,total,2369
+SARI virological,EU/EEA,2026-W12,Influenza,Influenza,total,tests,total,2372
 SARI virological,EU/EEA,2026-W12,Influenza,Influenza A,A (unknown),detections,total,34
 SARI virological,EU/EEA,2026-W12,Influenza,Influenza A,A(H1)pdm09,detections,total,6
 SARI virological,EU/EEA,2026-W12,Influenza,Influenza A,A(H3),detections,total,7
@@ -4612,13 +4643,13 @@ SARI virological,EU/EEA,2026-W12,Influenza,Influenza B,B (unknown),detections,to
 SARI virological,EU/EEA,2026-W12,Influenza,Influenza untyped,Influenza untyped,detections,total,90
 SARI virological,EU/EEA,2026-W12,RSV,RSV,RSV,detections,total,324
 SARI virological,EU/EEA,2026-W12,RSV,RSV,RSV,positivity,total,16.4
-SARI virological,EU/EEA,2026-W12,RSV,RSV,RSV,tests,total,1973
+SARI virological,EU/EEA,2026-W12,RSV,RSV,RSV,tests,total,1976
 SARI virological,EU/EEA,2026-W12,RSV,RSV untyped,NA,detections,total,296
 SARI virological,EU/EEA,2026-W12,RSV,RSV-A,NA,detections,total,11
 SARI virological,EU/EEA,2026-W12,RSV,RSV-B,NA,detections,total,17
 SARI virological,EU/EEA,2026-W12,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,28
 SARI virological,EU/EEA,2026-W12,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,1.2
-SARI virological,EU/EEA,2026-W12,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,2252
+SARI virological,EU/EEA,2026-W12,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,2255
 SARI virological,EU/EEA,2026-W11,Influenza,Influenza,total,detections,total,208
 SARI virological,EU/EEA,2026-W11,Influenza,Influenza,total,positivity,total,8.4
 SARI virological,EU/EEA,2026-W11,Influenza,Influenza,total,tests,total,2474
@@ -4657,9 +4688,9 @@ SARI virological,EU/EEA,2026-W10,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,25
 SARI virological,EU/EEA,2026-W09,Influenza,Influenza,total,detections,total,534
 SARI virological,EU/EEA,2026-W09,Influenza,Influenza,total,positivity,total,17.4
 SARI virological,EU/EEA,2026-W09,Influenza,Influenza,total,tests,total,3076
-SARI virological,EU/EEA,2026-W09,Influenza,Influenza A,A (unknown),detections,total,123
+SARI virological,EU/EEA,2026-W09,Influenza,Influenza A,A (unknown),detections,total,124
 SARI virological,EU/EEA,2026-W09,Influenza,Influenza A,A(H1)pdm09,detections,total,20
-SARI virological,EU/EEA,2026-W09,Influenza,Influenza A,A(H3),detections,total,22
+SARI virological,EU/EEA,2026-W09,Influenza,Influenza A,A(H3),detections,total,21
 SARI virological,EU/EEA,2026-W09,Influenza,Influenza untyped,Influenza untyped,detections,total,369
 SARI virological,EU/EEA,2026-W09,RSV,RSV,RSV,detections,total,458
 SARI virological,EU/EEA,2026-W09,RSV,RSV,RSV,positivity,total,18.2
@@ -4687,10 +4718,10 @@ SARI virological,EU/EEA,2026-W08,RSV,RSV-B,NA,detections,total,31
 SARI virological,EU/EEA,2026-W08,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,61
 SARI virological,EU/EEA,2026-W08,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,2.1
 SARI virological,EU/EEA,2026-W08,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,2935
-SARI virological,EU/EEA,2026-W07,Influenza,Influenza,total,detections,total,869
-SARI virological,EU/EEA,2026-W07,Influenza,Influenza,total,positivity,total,25.8
+SARI virological,EU/EEA,2026-W07,Influenza,Influenza,total,detections,total,870
+SARI virological,EU/EEA,2026-W07,Influenza,Influenza,total,positivity,total,25.9
 SARI virological,EU/EEA,2026-W07,Influenza,Influenza,total,tests,total,3363
-SARI virological,EU/EEA,2026-W07,Influenza,Influenza A,A (unknown),detections,total,141
+SARI virological,EU/EEA,2026-W07,Influenza,Influenza A,A (unknown),detections,total,142
 SARI virological,EU/EEA,2026-W07,Influenza,Influenza A,A(H1)pdm09,detections,total,49
 SARI virological,EU/EEA,2026-W07,Influenza,Influenza A,A(H3),detections,total,64
 SARI virological,EU/EEA,2026-W07,Influenza,Influenza B,B (unknown),detections,total,1
@@ -4721,10 +4752,10 @@ SARI virological,EU/EEA,2026-W06,RSV,RSV-B,NA,detections,total,54
 SARI virological,EU/EEA,2026-W06,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,78
 SARI virological,EU/EEA,2026-W06,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,2.3
 SARI virological,EU/EEA,2026-W06,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,3397
-SARI virological,EU/EEA,2026-W05,Influenza,Influenza,total,detections,total,1076
-SARI virological,EU/EEA,2026-W05,Influenza,Influenza,total,positivity,total,31.1
+SARI virological,EU/EEA,2026-W05,Influenza,Influenza,total,detections,total,1077
+SARI virological,EU/EEA,2026-W05,Influenza,Influenza,total,positivity,total,31.2
 SARI virological,EU/EEA,2026-W05,Influenza,Influenza,total,tests,total,3457
-SARI virological,EU/EEA,2026-W05,Influenza,Influenza A,A (unknown),detections,total,211
+SARI virological,EU/EEA,2026-W05,Influenza,Influenza A,A (unknown),detections,total,212
 SARI virological,EU/EEA,2026-W05,Influenza,Influenza A,A(H1)pdm09,detections,total,57
 SARI virological,EU/EEA,2026-W05,Influenza,Influenza A,A(H3),detections,total,90
 SARI virological,EU/EEA,2026-W05,Influenza,Influenza B,B (unknown),detections,total,3
@@ -4743,10 +4774,10 @@ SARI virological,EU/EEA,2026-W04,Influenza,Influenza,total,detections,total,1050
 SARI virological,EU/EEA,2026-W04,Influenza,Influenza,total,positivity,total,29.4
 SARI virological,EU/EEA,2026-W04,Influenza,Influenza,total,tests,total,3576
 SARI virological,EU/EEA,2026-W04,Influenza,Influenza A,A (unknown),detections,total,199
-SARI virological,EU/EEA,2026-W04,Influenza,Influenza A,A(H1)pdm09,detections,total,98
-SARI virological,EU/EEA,2026-W04,Influenza,Influenza A,A(H3),detections,total,137
+SARI virological,EU/EEA,2026-W04,Influenza,Influenza A,A(H1)pdm09,detections,total,96
+SARI virological,EU/EEA,2026-W04,Influenza,Influenza A,A(H3),detections,total,136
 SARI virological,EU/EEA,2026-W04,Influenza,Influenza B,B (unknown),detections,total,2
-SARI virological,EU/EEA,2026-W04,Influenza,Influenza untyped,Influenza untyped,detections,total,614
+SARI virological,EU/EEA,2026-W04,Influenza,Influenza untyped,Influenza untyped,detections,total,617
 SARI virological,EU/EEA,2026-W04,RSV,RSV,RSV,detections,total,423
 SARI virological,EU/EEA,2026-W04,RSV,RSV,RSV,positivity,total,14.1
 SARI virological,EU/EEA,2026-W04,RSV,RSV,RSV,tests,total,3009
@@ -4756,48 +4787,48 @@ SARI virological,EU/EEA,2026-W04,RSV,RSV-B,NA,detections,total,69
 SARI virological,EU/EEA,2026-W04,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,83
 SARI virological,EU/EEA,2026-W04,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,2.5
 SARI virological,EU/EEA,2026-W04,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,3325
-SARI virological,EU/EEA,2026-W03,Influenza,Influenza,total,detections,total,1144
-SARI virological,EU/EEA,2026-W03,Influenza,Influenza,total,positivity,total,32.3
+SARI virological,EU/EEA,2026-W03,Influenza,Influenza,total,detections,total,1145
+SARI virological,EU/EEA,2026-W03,Influenza,Influenza,total,positivity,total,32.4
 SARI virological,EU/EEA,2026-W03,Influenza,Influenza,total,tests,total,3538
-SARI virological,EU/EEA,2026-W03,Influenza,Influenza A,A (unknown),detections,total,200
-SARI virological,EU/EEA,2026-W03,Influenza,Influenza A,A(H1)pdm09,detections,total,123
-SARI virological,EU/EEA,2026-W03,Influenza,Influenza A,A(H3),detections,total,191
+SARI virological,EU/EEA,2026-W03,Influenza,Influenza A,A (unknown),detections,total,202
+SARI virological,EU/EEA,2026-W03,Influenza,Influenza A,A(H1)pdm09,detections,total,121
+SARI virological,EU/EEA,2026-W03,Influenza,Influenza A,A(H3),detections,total,189
 SARI virological,EU/EEA,2026-W03,Influenza,Influenza B,B (unknown),detections,total,2
-SARI virological,EU/EEA,2026-W03,Influenza,Influenza untyped,Influenza untyped,detections,total,628
+SARI virological,EU/EEA,2026-W03,Influenza,Influenza untyped,Influenza untyped,detections,total,631
 SARI virological,EU/EEA,2026-W03,RSV,RSV,RSV,detections,total,346
 SARI virological,EU/EEA,2026-W03,RSV,RSV,RSV,positivity,total,11.4
 SARI virological,EU/EEA,2026-W03,RSV,RSV,RSV,tests,total,3029
 SARI virological,EU/EEA,2026-W03,RSV,RSV untyped,NA,detections,total,179
 SARI virological,EU/EEA,2026-W03,RSV,RSV-A,NA,detections,total,80
 SARI virological,EU/EEA,2026-W03,RSV,RSV-B,NA,detections,total,87
-SARI virological,EU/EEA,2026-W03,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,95
-SARI virological,EU/EEA,2026-W03,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,2.9
+SARI virological,EU/EEA,2026-W03,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,94
+SARI virological,EU/EEA,2026-W03,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,2.8
 SARI virological,EU/EEA,2026-W03,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,3326
 SARI virological,EU/EEA,2026-W02,Influenza,Influenza,total,detections,total,1160
-SARI virological,EU/EEA,2026-W02,Influenza,Influenza,total,positivity,total,33
-SARI virological,EU/EEA,2026-W02,Influenza,Influenza,total,tests,total,3510
-SARI virological,EU/EEA,2026-W02,Influenza,Influenza A,A (unknown),detections,total,266
-SARI virological,EU/EEA,2026-W02,Influenza,Influenza A,A(H1)pdm09,detections,total,125
-SARI virological,EU/EEA,2026-W02,Influenza,Influenza A,A(H3),detections,total,188
+SARI virological,EU/EEA,2026-W02,Influenza,Influenza,total,positivity,total,33.1
+SARI virological,EU/EEA,2026-W02,Influenza,Influenza,total,tests,total,3509
+SARI virological,EU/EEA,2026-W02,Influenza,Influenza A,A (unknown),detections,total,269
+SARI virological,EU/EEA,2026-W02,Influenza,Influenza A,A(H1)pdm09,detections,total,123
+SARI virological,EU/EEA,2026-W02,Influenza,Influenza A,A(H3),detections,total,187
 SARI virological,EU/EEA,2026-W02,Influenza,Influenza B,B (unknown),detections,total,1
 SARI virological,EU/EEA,2026-W02,Influenza,Influenza untyped,Influenza untyped,detections,total,580
 SARI virological,EU/EEA,2026-W02,RSV,RSV,RSV,detections,total,281
 SARI virological,EU/EEA,2026-W02,RSV,RSV,RSV,positivity,total,9.6
-SARI virological,EU/EEA,2026-W02,RSV,RSV,RSV,tests,total,2938
+SARI virological,EU/EEA,2026-W02,RSV,RSV,RSV,tests,total,2937
 SARI virological,EU/EEA,2026-W02,RSV,RSV untyped,NA,detections,total,168
 SARI virological,EU/EEA,2026-W02,RSV,RSV-A,NA,detections,total,53
 SARI virological,EU/EEA,2026-W02,RSV,RSV-B,NA,detections,total,60
 SARI virological,EU/EEA,2026-W02,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,87
 SARI virological,EU/EEA,2026-W02,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,2.7
-SARI virological,EU/EEA,2026-W02,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,3265
-SARI virological,EU/EEA,2026-W01,Influenza,Influenza,total,detections,total,1442
+SARI virological,EU/EEA,2026-W02,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,3264
+SARI virological,EU/EEA,2026-W01,Influenza,Influenza,total,detections,total,1441
 SARI virological,EU/EEA,2026-W01,Influenza,Influenza,total,positivity,total,36.8
 SARI virological,EU/EEA,2026-W01,Influenza,Influenza,total,tests,total,3915
-SARI virological,EU/EEA,2026-W01,Influenza,Influenza A,A (unknown),detections,total,369
-SARI virological,EU/EEA,2026-W01,Influenza,Influenza A,A(H1)pdm09,detections,total,121
-SARI virological,EU/EEA,2026-W01,Influenza,Influenza A,A(H3),detections,total,253
+SARI virological,EU/EEA,2026-W01,Influenza,Influenza A,A (unknown),detections,total,380
+SARI virological,EU/EEA,2026-W01,Influenza,Influenza A,A(H1)pdm09,detections,total,113
+SARI virological,EU/EEA,2026-W01,Influenza,Influenza A,A(H3),detections,total,243
 SARI virological,EU/EEA,2026-W01,Influenza,Influenza B,B (unknown),detections,total,5
-SARI virological,EU/EEA,2026-W01,Influenza,Influenza untyped,Influenza untyped,detections,total,694
+SARI virological,EU/EEA,2026-W01,Influenza,Influenza untyped,Influenza untyped,detections,total,700
 SARI virological,EU/EEA,2026-W01,RSV,RSV,RSV,detections,total,323
 SARI virological,EU/EEA,2026-W01,RSV,RSV,RSV,positivity,total,9.7
 SARI virological,EU/EEA,2026-W01,RSV,RSV,RSV,tests,total,3337
@@ -4807,14 +4838,14 @@ SARI virological,EU/EEA,2026-W01,RSV,RSV-B,NA,detections,total,85
 SARI virological,EU/EEA,2026-W01,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,134
 SARI virological,EU/EEA,2026-W01,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,3.7
 SARI virological,EU/EEA,2026-W01,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,3652
-SARI virological,EU/EEA,2025-W52,Influenza,Influenza,total,detections,total,1309
-SARI virological,EU/EEA,2025-W52,Influenza,Influenza,total,positivity,total,36.4
+SARI virological,EU/EEA,2025-W52,Influenza,Influenza,total,detections,total,1308
+SARI virological,EU/EEA,2025-W52,Influenza,Influenza,total,positivity,total,36.3
 SARI virological,EU/EEA,2025-W52,Influenza,Influenza,total,tests,total,3601
-SARI virological,EU/EEA,2025-W52,Influenza,Influenza A,A (unknown),detections,total,358
-SARI virological,EU/EEA,2025-W52,Influenza,Influenza A,A(H1)pdm09,detections,total,84
-SARI virological,EU/EEA,2025-W52,Influenza,Influenza A,A(H3),detections,total,271
+SARI virological,EU/EEA,2025-W52,Influenza,Influenza A,A (unknown),detections,total,371
+SARI virological,EU/EEA,2025-W52,Influenza,Influenza A,A(H1)pdm09,detections,total,72
+SARI virological,EU/EEA,2025-W52,Influenza,Influenza A,A(H3),detections,total,256
 SARI virological,EU/EEA,2025-W52,Influenza,Influenza B,B (unknown),detections,total,3
-SARI virological,EU/EEA,2025-W52,Influenza,Influenza untyped,Influenza untyped,detections,total,593
+SARI virological,EU/EEA,2025-W52,Influenza,Influenza untyped,Influenza untyped,detections,total,606
 SARI virological,EU/EEA,2025-W52,RSV,RSV,RSV,detections,total,329
 SARI virological,EU/EEA,2025-W52,RSV,RSV,RSV,positivity,total,11.4
 SARI virological,EU/EEA,2025-W52,RSV,RSV,RSV,tests,total,2884
@@ -4827,11 +4858,11 @@ SARI virological,EU/EEA,2025-W52,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,33
 SARI virological,EU/EEA,2025-W51,Influenza,Influenza,total,detections,total,1157
 SARI virological,EU/EEA,2025-W51,Influenza,Influenza,total,positivity,total,33.6
 SARI virological,EU/EEA,2025-W51,Influenza,Influenza,total,tests,total,3444
-SARI virological,EU/EEA,2025-W51,Influenza,Influenza A,A (unknown),detections,total,404
-SARI virological,EU/EEA,2025-W51,Influenza,Influenza A,A(H1)pdm09,detections,total,72
-SARI virological,EU/EEA,2025-W51,Influenza,Influenza A,A(H3),detections,total,250
+SARI virological,EU/EEA,2025-W51,Influenza,Influenza A,A (unknown),detections,total,410
+SARI virological,EU/EEA,2025-W51,Influenza,Influenza A,A(H1)pdm09,detections,total,68
+SARI virological,EU/EEA,2025-W51,Influenza,Influenza A,A(H3),detections,total,245
 SARI virological,EU/EEA,2025-W51,Influenza,Influenza B,B (unknown),detections,total,3
-SARI virological,EU/EEA,2025-W51,Influenza,Influenza untyped,Influenza untyped,detections,total,428
+SARI virological,EU/EEA,2025-W51,Influenza,Influenza untyped,Influenza untyped,detections,total,431
 SARI virological,EU/EEA,2025-W51,RSV,RSV,RSV,detections,total,293
 SARI virological,EU/EEA,2025-W51,RSV,RSV,RSV,positivity,total,10.6
 SARI virological,EU/EEA,2025-W51,RSV,RSV,RSV,tests,total,2771
@@ -4841,14 +4872,14 @@ SARI virological,EU/EEA,2025-W51,RSV,RSV-B,NA,detections,total,74
 SARI virological,EU/EEA,2025-W51,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,159
 SARI virological,EU/EEA,2025-W51,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,4.8
 SARI virological,EU/EEA,2025-W51,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,3300
-SARI virological,EU/EEA,2025-W50,Influenza,Influenza,total,detections,total,1049
-SARI virological,EU/EEA,2025-W50,Influenza,Influenza,total,positivity,total,32.8
+SARI virological,EU/EEA,2025-W50,Influenza,Influenza,total,detections,total,1050
+SARI virological,EU/EEA,2025-W50,Influenza,Influenza,total,positivity,total,32.9
 SARI virological,EU/EEA,2025-W50,Influenza,Influenza,total,tests,total,3194
-SARI virological,EU/EEA,2025-W50,Influenza,Influenza A,A (unknown),detections,total,338
-SARI virological,EU/EEA,2025-W50,Influenza,Influenza A,A(H1)pdm09,detections,total,82
-SARI virological,EU/EEA,2025-W50,Influenza,Influenza A,A(H3),detections,total,248
+SARI virological,EU/EEA,2025-W50,Influenza,Influenza A,A (unknown),detections,total,342
+SARI virological,EU/EEA,2025-W50,Influenza,Influenza A,A(H1)pdm09,detections,total,74
+SARI virological,EU/EEA,2025-W50,Influenza,Influenza A,A(H3),detections,total,246
 SARI virological,EU/EEA,2025-W50,Influenza,Influenza B,B (unknown),detections,total,1
-SARI virological,EU/EEA,2025-W50,Influenza,Influenza untyped,Influenza untyped,detections,total,380
+SARI virological,EU/EEA,2025-W50,Influenza,Influenza untyped,Influenza untyped,detections,total,387
 SARI virological,EU/EEA,2025-W50,RSV,RSV,RSV,detections,total,265
 SARI virological,EU/EEA,2025-W50,RSV,RSV,RSV,positivity,total,10.3
 SARI virological,EU/EEA,2025-W50,RSV,RSV,RSV,tests,total,2572
@@ -4861,11 +4892,11 @@ SARI virological,EU/EEA,2025-W50,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,30
 SARI virological,EU/EEA,2025-W49,Influenza,Influenza,total,detections,total,712
 SARI virological,EU/EEA,2025-W49,Influenza,Influenza,total,positivity,total,25.9
 SARI virological,EU/EEA,2025-W49,Influenza,Influenza,total,tests,total,2752
-SARI virological,EU/EEA,2025-W49,Influenza,Influenza A,A (unknown),detections,total,230
-SARI virological,EU/EEA,2025-W49,Influenza,Influenza A,A(H1)pdm09,detections,total,73
-SARI virological,EU/EEA,2025-W49,Influenza,Influenza A,A(H3),detections,total,189
+SARI virological,EU/EEA,2025-W49,Influenza,Influenza A,A (unknown),detections,total,238
+SARI virological,EU/EEA,2025-W49,Influenza,Influenza A,A(H1)pdm09,detections,total,67
+SARI virological,EU/EEA,2025-W49,Influenza,Influenza A,A(H3),detections,total,184
 SARI virological,EU/EEA,2025-W49,Influenza,Influenza B,B (unknown),detections,total,5
-SARI virological,EU/EEA,2025-W49,Influenza,Influenza untyped,Influenza untyped,detections,total,215
+SARI virological,EU/EEA,2025-W49,Influenza,Influenza untyped,Influenza untyped,detections,total,218
 SARI virological,EU/EEA,2025-W49,RSV,RSV,RSV,detections,total,210
 SARI virological,EU/EEA,2025-W49,RSV,RSV,RSV,positivity,total,9.4
 SARI virological,EU/EEA,2025-W49,RSV,RSV,RSV,tests,total,2235
@@ -4878,12 +4909,12 @@ SARI virological,EU/EEA,2025-W49,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,27
 SARI virological,EU/EEA,2025-W48,Influenza,Influenza,total,detections,total,416
 SARI virological,EU/EEA,2025-W48,Influenza,Influenza,total,positivity,total,19.1
 SARI virological,EU/EEA,2025-W48,Influenza,Influenza,total,tests,total,2177
-SARI virological,EU/EEA,2025-W48,Influenza,Influenza A,A (unknown),detections,total,122
-SARI virological,EU/EEA,2025-W48,Influenza,Influenza A,A(H1)pdm09,detections,total,42
-SARI virological,EU/EEA,2025-W48,Influenza,Influenza A,A(H3),detections,total,130
+SARI virological,EU/EEA,2025-W48,Influenza,Influenza A,A (unknown),detections,total,127
+SARI virological,EU/EEA,2025-W48,Influenza,Influenza A,A(H1)pdm09,detections,total,37
+SARI virological,EU/EEA,2025-W48,Influenza,Influenza A,A(H3),detections,total,129
 SARI virological,EU/EEA,2025-W48,Influenza,Influenza B,B (unknown),detections,total,1
 SARI virological,EU/EEA,2025-W48,Influenza,Influenza B,B/Vic,detections,total,1
-SARI virological,EU/EEA,2025-W48,Influenza,Influenza untyped,Influenza untyped,detections,total,120
+SARI virological,EU/EEA,2025-W48,Influenza,Influenza untyped,Influenza untyped,detections,total,121
 SARI virological,EU/EEA,2025-W48,RSV,RSV,RSV,detections,total,145
 SARI virological,EU/EEA,2025-W48,RSV,RSV,RSV,positivity,total,8
 SARI virological,EU/EEA,2025-W48,RSV,RSV,RSV,tests,total,1813
@@ -4896,9 +4927,9 @@ SARI virological,EU/EEA,2025-W48,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,21
 SARI virological,EU/EEA,2025-W47,Influenza,Influenza,total,detections,total,249
 SARI virological,EU/EEA,2025-W47,Influenza,Influenza,total,positivity,total,12.5
 SARI virological,EU/EEA,2025-W47,Influenza,Influenza,total,tests,total,1994
-SARI virological,EU/EEA,2025-W47,Influenza,Influenza A,A (unknown),detections,total,74
-SARI virological,EU/EEA,2025-W47,Influenza,Influenza A,A(H1)pdm09,detections,total,35
-SARI virological,EU/EEA,2025-W47,Influenza,Influenza A,A(H3),detections,total,72
+SARI virological,EU/EEA,2025-W47,Influenza,Influenza A,A (unknown),detections,total,78
+SARI virological,EU/EEA,2025-W47,Influenza,Influenza A,A(H1)pdm09,detections,total,33
+SARI virological,EU/EEA,2025-W47,Influenza,Influenza A,A(H3),detections,total,70
 SARI virological,EU/EEA,2025-W47,Influenza,Influenza B,B (unknown),detections,total,1
 SARI virological,EU/EEA,2025-W47,Influenza,Influenza untyped,Influenza untyped,detections,total,67
 SARI virological,EU/EEA,2025-W47,RSV,RSV,RSV,detections,total,89
@@ -4913,9 +4944,9 @@ SARI virological,EU/EEA,2025-W47,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,19
 SARI virological,EU/EEA,2025-W46,Influenza,Influenza,total,detections,total,192
 SARI virological,EU/EEA,2025-W46,Influenza,Influenza,total,positivity,total,10.4
 SARI virological,EU/EEA,2025-W46,Influenza,Influenza,total,tests,total,1852
-SARI virological,EU/EEA,2025-W46,Influenza,Influenza A,A (unknown),detections,total,68
-SARI virological,EU/EEA,2025-W46,Influenza,Influenza A,A(H1)pdm09,detections,total,31
-SARI virological,EU/EEA,2025-W46,Influenza,Influenza A,A(H3),detections,total,46
+SARI virological,EU/EEA,2025-W46,Influenza,Influenza A,A (unknown),detections,total,72
+SARI virological,EU/EEA,2025-W46,Influenza,Influenza A,A(H1)pdm09,detections,total,28
+SARI virological,EU/EEA,2025-W46,Influenza,Influenza A,A(H3),detections,total,45
 SARI virological,EU/EEA,2025-W46,Influenza,Influenza B,B (unknown),detections,total,1
 SARI virological,EU/EEA,2025-W46,Influenza,Influenza untyped,Influenza untyped,detections,total,46
 SARI virological,EU/EEA,2025-W46,RSV,RSV,RSV,detections,total,79
@@ -4947,10 +4978,10 @@ SARI virological,EU/EEA,2025-W45,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,15
 SARI virological,EU/EEA,2025-W44,Influenza,Influenza,total,detections,total,112
 SARI virological,EU/EEA,2025-W44,Influenza,Influenza,total,positivity,total,7.2
 SARI virological,EU/EEA,2025-W44,Influenza,Influenza,total,tests,total,1560
-SARI virological,EU/EEA,2025-W44,Influenza,Influenza A,A (unknown),detections,total,25
-SARI virological,EU/EEA,2025-W44,Influenza,Influenza A,A(H1)pdm09,detections,total,31
+SARI virological,EU/EEA,2025-W44,Influenza,Influenza A,A (unknown),detections,total,28
+SARI virological,EU/EEA,2025-W44,Influenza,Influenza A,A(H1)pdm09,detections,total,25
 SARI virological,EU/EEA,2025-W44,Influenza,Influenza A,A(H3),detections,total,18
-SARI virological,EU/EEA,2025-W44,Influenza,Influenza untyped,Influenza untyped,detections,total,38
+SARI virological,EU/EEA,2025-W44,Influenza,Influenza untyped,Influenza untyped,detections,total,41
 SARI virological,EU/EEA,2025-W44,RSV,RSV,RSV,detections,total,37
 SARI virological,EU/EEA,2025-W44,RSV,RSV,RSV,positivity,total,2.8
 SARI virological,EU/EEA,2025-W44,RSV,RSV,RSV,tests,total,1337
@@ -4981,11 +5012,11 @@ SARI virological,EU/EEA,2025-W43,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,16
 SARI virological,EU/EEA,2025-W42,Influenza,Influenza,total,detections,total,83
 SARI virological,EU/EEA,2025-W42,Influenza,Influenza,total,positivity,total,5.1
 SARI virological,EU/EEA,2025-W42,Influenza,Influenza,total,tests,total,1620
-SARI virological,EU/EEA,2025-W42,Influenza,Influenza A,A (unknown),detections,total,25
-SARI virological,EU/EEA,2025-W42,Influenza,Influenza A,A(H1)pdm09,detections,total,24
+SARI virological,EU/EEA,2025-W42,Influenza,Influenza A,A (unknown),detections,total,27
+SARI virological,EU/EEA,2025-W42,Influenza,Influenza A,A(H1)pdm09,detections,total,21
 SARI virological,EU/EEA,2025-W42,Influenza,Influenza A,A(H3),detections,total,9
 SARI virological,EU/EEA,2025-W42,Influenza,Influenza B,B (unknown),detections,total,2
-SARI virological,EU/EEA,2025-W42,Influenza,Influenza untyped,Influenza untyped,detections,total,23
+SARI virological,EU/EEA,2025-W42,Influenza,Influenza untyped,Influenza untyped,detections,total,24
 SARI virological,EU/EEA,2025-W42,RSV,RSV,RSV,detections,total,18
 SARI virological,EU/EEA,2025-W42,RSV,RSV,RSV,positivity,total,1.3
 SARI virological,EU/EEA,2025-W42,RSV,RSV,RSV,tests,total,1411
@@ -4998,8 +5029,8 @@ SARI virological,EU/EEA,2025-W42,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,16
 SARI virological,EU/EEA,2025-W41,Influenza,Influenza,total,detections,total,112
 SARI virological,EU/EEA,2025-W41,Influenza,Influenza,total,positivity,total,6.9
 SARI virological,EU/EEA,2025-W41,Influenza,Influenza,total,tests,total,1635
-SARI virological,EU/EEA,2025-W41,Influenza,Influenza A,A (unknown),detections,total,38
-SARI virological,EU/EEA,2025-W41,Influenza,Influenza A,A(H1)pdm09,detections,total,28
+SARI virological,EU/EEA,2025-W41,Influenza,Influenza A,A (unknown),detections,total,40
+SARI virological,EU/EEA,2025-W41,Influenza,Influenza A,A(H1)pdm09,detections,total,26
 SARI virological,EU/EEA,2025-W41,Influenza,Influenza A,A(H3),detections,total,12
 SARI virological,EU/EEA,2025-W41,Influenza,Influenza B,B (unknown),detections,total,1
 SARI virological,EU/EEA,2025-W41,Influenza,Influenza untyped,Influenza untyped,detections,total,33
@@ -5025,7 +5056,7 @@ SARI virological,EU/EEA,2025-W40,RSV,RSV,RSV,tests,total,1265
 SARI virological,EU/EEA,2025-W40,RSV,RSV untyped,NA,detections,total,5
 SARI virological,EU/EEA,2025-W40,RSV,RSV-A,NA,detections,total,5
 SARI virological,EU/EEA,2025-W40,RSV,RSV-B,NA,detections,total,1
-SARI virological,EU/EEA,2025-W40,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,182
+SARI virological,EU/EEA,2025-W40,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,181
 SARI virological,EU/EEA,2025-W40,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,11.7
 SARI virological,EU/EEA,2025-W40,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1551
 SARI virological,EU/EEA,2025-W39,Influenza,Influenza,total,detections,total,40
@@ -5674,7 +5705,7 @@ SARI virological,EU/EEA,2025-W01,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,tot
 SARI virological,EU/EEA,2025-W01,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,3098
 SARI virological,EU/EEA,2024-W52,Influenza,Influenza,total,detections,total,523
 SARI virological,EU/EEA,2024-W52,Influenza,Influenza,total,positivity,total,19.8
-SARI virological,EU/EEA,2024-W52,Influenza,Influenza,total,tests,total,2637
+SARI virological,EU/EEA,2024-W52,Influenza,Influenza,total,tests,total,2635
 SARI virological,EU/EEA,2024-W52,Influenza,Influenza A,A (unknown),detections,total,94
 SARI virological,EU/EEA,2024-W52,Influenza,Influenza A,A(H1)pdm09,detections,total,139
 SARI virological,EU/EEA,2024-W52,Influenza,Influenza A,A(H3),detections,total,54
@@ -5683,16 +5714,16 @@ SARI virological,EU/EEA,2024-W52,Influenza,Influenza B,B/Vic,detections,total,6
 SARI virological,EU/EEA,2024-W52,Influenza,Influenza untyped,Influenza untyped,detections,total,208
 SARI virological,EU/EEA,2024-W52,RSV,RSV,RSV,detections,total,325
 SARI virological,EU/EEA,2024-W52,RSV,RSV,RSV,positivity,total,14.5
-SARI virological,EU/EEA,2024-W52,RSV,RSV,RSV,tests,total,2246
+SARI virological,EU/EEA,2024-W52,RSV,RSV,RSV,tests,total,2244
 SARI virological,EU/EEA,2024-W52,RSV,RSV untyped,NA,detections,total,179
 SARI virological,EU/EEA,2024-W52,RSV,RSV-A,NA,detections,total,66
 SARI virological,EU/EEA,2024-W52,RSV,RSV-B,NA,detections,total,80
 SARI virological,EU/EEA,2024-W52,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,177
 SARI virological,EU/EEA,2024-W52,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,6.3
-SARI virological,EU/EEA,2024-W52,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,2820
+SARI virological,EU/EEA,2024-W52,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,2818
 SARI virological,EU/EEA,2024-W51,Influenza,Influenza,total,detections,total,373
 SARI virological,EU/EEA,2024-W51,Influenza,Influenza,total,positivity,total,14.3
-SARI virological,EU/EEA,2024-W51,Influenza,Influenza,total,tests,total,2601
+SARI virological,EU/EEA,2024-W51,Influenza,Influenza,total,tests,total,2604
 SARI virological,EU/EEA,2024-W51,Influenza,Influenza A,A (unknown),detections,total,49
 SARI virological,EU/EEA,2024-W51,Influenza,Influenza A,A(H1)pdm09,detections,total,119
 SARI virological,EU/EEA,2024-W51,Influenza,Influenza A,A(H3),detections,total,53
@@ -5701,16 +5732,16 @@ SARI virological,EU/EEA,2024-W51,Influenza,Influenza B,B/Vic,detections,total,3
 SARI virological,EU/EEA,2024-W51,Influenza,Influenza untyped,Influenza untyped,detections,total,133
 SARI virological,EU/EEA,2024-W51,RSV,RSV,RSV,detections,total,365
 SARI virological,EU/EEA,2024-W51,RSV,RSV,RSV,positivity,total,16.3
-SARI virological,EU/EEA,2024-W51,RSV,RSV,RSV,tests,total,2239
+SARI virological,EU/EEA,2024-W51,RSV,RSV,RSV,tests,total,2242
 SARI virological,EU/EEA,2024-W51,RSV,RSV untyped,NA,detections,total,177
 SARI virological,EU/EEA,2024-W51,RSV,RSV-A,NA,detections,total,76
 SARI virological,EU/EEA,2024-W51,RSV,RSV-B,NA,detections,total,112
 SARI virological,EU/EEA,2024-W51,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,169
 SARI virological,EU/EEA,2024-W51,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,6
-SARI virological,EU/EEA,2024-W51,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,2836
+SARI virological,EU/EEA,2024-W51,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,2839
 SARI virological,EU/EEA,2024-W50,Influenza,Influenza,total,detections,total,204
 SARI virological,EU/EEA,2024-W50,Influenza,Influenza,total,positivity,total,8.3
-SARI virological,EU/EEA,2024-W50,Influenza,Influenza,total,tests,total,2448
+SARI virological,EU/EEA,2024-W50,Influenza,Influenza,total,tests,total,2451
 SARI virological,EU/EEA,2024-W50,Influenza,Influenza A,A (unknown),detections,total,20
 SARI virological,EU/EEA,2024-W50,Influenza,Influenza A,A(H1)pdm09,detections,total,67
 SARI virological,EU/EEA,2024-W50,Influenza,Influenza A,A(H3),detections,total,25
@@ -5719,16 +5750,16 @@ SARI virological,EU/EEA,2024-W50,Influenza,Influenza B,B/Vic,detections,total,1
 SARI virological,EU/EEA,2024-W50,Influenza,Influenza untyped,Influenza untyped,detections,total,76
 SARI virological,EU/EEA,2024-W50,RSV,RSV,RSV,detections,total,337
 SARI virological,EU/EEA,2024-W50,RSV,RSV,RSV,positivity,total,16
-SARI virological,EU/EEA,2024-W50,RSV,RSV,RSV,tests,total,2106
+SARI virological,EU/EEA,2024-W50,RSV,RSV,RSV,tests,total,2109
 SARI virological,EU/EEA,2024-W50,RSV,RSV untyped,NA,detections,total,151
 SARI virological,EU/EEA,2024-W50,RSV,RSV-A,NA,detections,total,95
 SARI virological,EU/EEA,2024-W50,RSV,RSV-B,NA,detections,total,91
 SARI virological,EU/EEA,2024-W50,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,172
 SARI virological,EU/EEA,2024-W50,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,6.2
-SARI virological,EU/EEA,2024-W50,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,2786
+SARI virological,EU/EEA,2024-W50,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,2789
 SARI virological,EU/EEA,2024-W49,Influenza,Influenza,total,detections,total,90
 SARI virological,EU/EEA,2024-W49,Influenza,Influenza,total,positivity,total,4.8
-SARI virological,EU/EEA,2024-W49,Influenza,Influenza,total,tests,total,1877
+SARI virological,EU/EEA,2024-W49,Influenza,Influenza,total,tests,total,1876
 SARI virological,EU/EEA,2024-W49,Influenza,Influenza A,A (unknown),detections,total,12
 SARI virological,EU/EEA,2024-W49,Influenza,Influenza A,A(H1)pdm09,detections,total,35
 SARI virological,EU/EEA,2024-W49,Influenza,Influenza A,A(H3),detections,total,10
@@ -5736,13 +5767,13 @@ SARI virological,EU/EEA,2024-W49,Influenza,Influenza B,B (unknown),detections,to
 SARI virological,EU/EEA,2024-W49,Influenza,Influenza untyped,Influenza untyped,detections,total,28
 SARI virological,EU/EEA,2024-W49,RSV,RSV,RSV,detections,total,280
 SARI virological,EU/EEA,2024-W49,RSV,RSV,RSV,positivity,total,15
-SARI virological,EU/EEA,2024-W49,RSV,RSV,RSV,tests,total,1872
+SARI virological,EU/EEA,2024-W49,RSV,RSV,RSV,tests,total,1871
 SARI virological,EU/EEA,2024-W49,RSV,RSV untyped,NA,detections,total,113
 SARI virological,EU/EEA,2024-W49,RSV,RSV-A,NA,detections,total,98
 SARI virological,EU/EEA,2024-W49,RSV,RSV-B,NA,detections,total,69
 SARI virological,EU/EEA,2024-W49,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,175
 SARI virological,EU/EEA,2024-W49,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,9.6
-SARI virological,EU/EEA,2024-W49,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1824
+SARI virological,EU/EEA,2024-W49,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1823
 SARI virological,EU/EEA,2024-W48,Influenza,Influenza,total,detections,total,70
 SARI virological,EU/EEA,2024-W48,Influenza,Influenza,total,positivity,total,4
 SARI virological,EU/EEA,2024-W48,Influenza,Influenza,total,tests,total,1765
@@ -5762,7 +5793,7 @@ SARI virological,EU/EEA,2024-W48,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,tot
 SARI virological,EU/EEA,2024-W48,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1736
 SARI virological,EU/EEA,2024-W47,Influenza,Influenza,total,detections,total,32
 SARI virological,EU/EEA,2024-W47,Influenza,Influenza,total,positivity,total,2
-SARI virological,EU/EEA,2024-W47,Influenza,Influenza,total,tests,total,1613
+SARI virological,EU/EEA,2024-W47,Influenza,Influenza,total,tests,total,1614
 SARI virological,EU/EEA,2024-W47,Influenza,Influenza A,A (unknown),detections,total,5
 SARI virological,EU/EEA,2024-W47,Influenza,Influenza A,A(H1)pdm09,detections,total,11
 SARI virological,EU/EEA,2024-W47,Influenza,Influenza A,A(H3),detections,total,2
@@ -5770,16 +5801,16 @@ SARI virological,EU/EEA,2024-W47,Influenza,Influenza B,B (unknown),detections,to
 SARI virological,EU/EEA,2024-W47,Influenza,Influenza untyped,Influenza untyped,detections,total,10
 SARI virological,EU/EEA,2024-W47,RSV,RSV,RSV,detections,total,185
 SARI virological,EU/EEA,2024-W47,RSV,RSV,RSV,positivity,total,11.5
-SARI virological,EU/EEA,2024-W47,RSV,RSV,RSV,tests,total,1608
+SARI virological,EU/EEA,2024-W47,RSV,RSV,RSV,tests,total,1609
 SARI virological,EU/EEA,2024-W47,RSV,RSV untyped,NA,detections,total,55
 SARI virological,EU/EEA,2024-W47,RSV,RSV-A,NA,detections,total,74
 SARI virological,EU/EEA,2024-W47,RSV,RSV-B,NA,detections,total,56
 SARI virological,EU/EEA,2024-W47,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,186
 SARI virological,EU/EEA,2024-W47,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,11.6
-SARI virological,EU/EEA,2024-W47,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1598
+SARI virological,EU/EEA,2024-W47,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1599
 SARI virological,EU/EEA,2024-W46,Influenza,Influenza,total,detections,total,25
 SARI virological,EU/EEA,2024-W46,Influenza,Influenza,total,positivity,total,1.6
-SARI virological,EU/EEA,2024-W46,Influenza,Influenza,total,tests,total,1582
+SARI virological,EU/EEA,2024-W46,Influenza,Influenza,total,tests,total,1583
 SARI virological,EU/EEA,2024-W46,Influenza,Influenza A,A (unknown),detections,total,7
 SARI virological,EU/EEA,2024-W46,Influenza,Influenza A,A(H1)pdm09,detections,total,6
 SARI virological,EU/EEA,2024-W46,Influenza,Influenza A,A(H3),detections,total,1
@@ -5788,16 +5819,16 @@ SARI virological,EU/EEA,2024-W46,Influenza,Influenza B,B/Vic,detections,total,2
 SARI virological,EU/EEA,2024-W46,Influenza,Influenza untyped,Influenza untyped,detections,total,7
 SARI virological,EU/EEA,2024-W46,RSV,RSV,RSV,detections,total,139
 SARI virological,EU/EEA,2024-W46,RSV,RSV,RSV,positivity,total,8.8
-SARI virological,EU/EEA,2024-W46,RSV,RSV,RSV,tests,total,1572
+SARI virological,EU/EEA,2024-W46,RSV,RSV,RSV,tests,total,1573
 SARI virological,EU/EEA,2024-W46,RSV,RSV untyped,NA,detections,total,32
 SARI virological,EU/EEA,2024-W46,RSV,RSV-A,NA,detections,total,75
 SARI virological,EU/EEA,2024-W46,RSV,RSV-B,NA,detections,total,32
 SARI virological,EU/EEA,2024-W46,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,171
 SARI virological,EU/EEA,2024-W46,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,11.1
-SARI virological,EU/EEA,2024-W46,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1546
+SARI virological,EU/EEA,2024-W46,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1547
 SARI virological,EU/EEA,2024-W45,Influenza,Influenza,total,detections,total,22
 SARI virological,EU/EEA,2024-W45,Influenza,Influenza,total,positivity,total,1.4
-SARI virological,EU/EEA,2024-W45,Influenza,Influenza,total,tests,total,1520
+SARI virological,EU/EEA,2024-W45,Influenza,Influenza,total,tests,total,1522
 SARI virological,EU/EEA,2024-W45,Influenza,Influenza A,A (unknown),detections,total,4
 SARI virological,EU/EEA,2024-W45,Influenza,Influenza A,A(H1)pdm09,detections,total,8
 SARI virological,EU/EEA,2024-W45,Influenza,Influenza A,A(H3),detections,total,2
@@ -5806,13 +5837,13 @@ SARI virological,EU/EEA,2024-W45,Influenza,Influenza B,B/Vic,detections,total,1
 SARI virological,EU/EEA,2024-W45,Influenza,Influenza untyped,Influenza untyped,detections,total,6
 SARI virological,EU/EEA,2024-W45,RSV,RSV,RSV,detections,total,75
 SARI virological,EU/EEA,2024-W45,RSV,RSV,RSV,positivity,total,5
-SARI virological,EU/EEA,2024-W45,RSV,RSV,RSV,tests,total,1500
+SARI virological,EU/EEA,2024-W45,RSV,RSV,RSV,tests,total,1502
 SARI virological,EU/EEA,2024-W45,RSV,RSV untyped,NA,detections,total,24
 SARI virological,EU/EEA,2024-W45,RSV,RSV-A,NA,detections,total,39
 SARI virological,EU/EEA,2024-W45,RSV,RSV-B,NA,detections,total,12
-SARI virological,EU/EEA,2024-W45,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,200
-SARI virological,EU/EEA,2024-W45,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,13.4
-SARI virological,EU/EEA,2024-W45,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1487
+SARI virological,EU/EEA,2024-W45,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,201
+SARI virological,EU/EEA,2024-W45,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,13.5
+SARI virological,EU/EEA,2024-W45,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1489
 SARI virological,EU/EEA,2024-W44,Influenza,Influenza,total,detections,total,30
 SARI virological,EU/EEA,2024-W44,Influenza,Influenza,total,positivity,total,2
 SARI virological,EU/EEA,2024-W44,Influenza,Influenza,total,tests,total,1513
@@ -5850,20 +5881,20 @@ SARI virological,EU/EEA,2024-W43,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,tot
 SARI virological,EU/EEA,2024-W43,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1462
 SARI virological,EU/EEA,2024-W42,Influenza,Influenza,total,detections,total,24
 SARI virological,EU/EEA,2024-W42,Influenza,Influenza,total,positivity,total,1.6
-SARI virological,EU/EEA,2024-W42,Influenza,Influenza,total,tests,total,1476
+SARI virological,EU/EEA,2024-W42,Influenza,Influenza,total,tests,total,1475
 SARI virological,EU/EEA,2024-W42,Influenza,Influenza A,A (unknown),detections,total,4
 SARI virological,EU/EEA,2024-W42,Influenza,Influenza A,A(H1)pdm09,detections,total,7
 SARI virological,EU/EEA,2024-W42,Influenza,Influenza B,B (unknown),detections,total,2
 SARI virological,EU/EEA,2024-W42,Influenza,Influenza untyped,Influenza untyped,detections,total,11
 SARI virological,EU/EEA,2024-W42,RSV,RSV,RSV,detections,total,38
 SARI virological,EU/EEA,2024-W42,RSV,RSV,RSV,positivity,total,2.6
-SARI virological,EU/EEA,2024-W42,RSV,RSV,RSV,tests,total,1452
+SARI virological,EU/EEA,2024-W42,RSV,RSV,RSV,tests,total,1451
 SARI virological,EU/EEA,2024-W42,RSV,RSV untyped,NA,detections,total,6
 SARI virological,EU/EEA,2024-W42,RSV,RSV-A,NA,detections,total,26
 SARI virological,EU/EEA,2024-W42,RSV,RSV-B,NA,detections,total,6
-SARI virological,EU/EEA,2024-W42,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,275
-SARI virological,EU/EEA,2024-W42,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,18.8
-SARI virological,EU/EEA,2024-W42,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1463
+SARI virological,EU/EEA,2024-W42,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,274
+SARI virological,EU/EEA,2024-W42,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,18.7
+SARI virological,EU/EEA,2024-W42,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1462
 SARI virological,EU/EEA,2024-W41,Influenza,Influenza,total,detections,total,22
 SARI virological,EU/EEA,2024-W41,Influenza,Influenza,total,positivity,total,1.6
 SARI virological,EU/EEA,2024-W41,Influenza,Influenza,total,tests,total,1413
@@ -6069,17 +6100,17 @@ SARI virological,EU/EEA,2024-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,tot
 SARI virological,EU/EEA,2024-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1055
 SARI virological,EU/EEA,2024-W27,Influenza,Influenza,total,detections,total,11
 SARI virological,EU/EEA,2024-W27,Influenza,Influenza,total,positivity,total,1
-SARI virological,EU/EEA,2024-W27,Influenza,Influenza,total,tests,total,1070
+SARI virological,EU/EEA,2024-W27,Influenza,Influenza,total,tests,total,1069
 SARI virological,EU/EEA,2024-W27,Influenza,Influenza A,A (unknown),detections,total,4
 SARI virological,EU/EEA,2024-W27,Influenza,Influenza B,B (unknown),detections,total,3
 SARI virological,EU/EEA,2024-W27,Influenza,Influenza untyped,Influenza untyped,detections,total,4
 SARI virological,EU/EEA,2024-W27,RSV,RSV,RSV,detections,total,2
 SARI virological,EU/EEA,2024-W27,RSV,RSV,RSV,positivity,total,0.2
-SARI virological,EU/EEA,2024-W27,RSV,RSV,RSV,tests,total,924
+SARI virological,EU/EEA,2024-W27,RSV,RSV,RSV,tests,total,923
 SARI virological,EU/EEA,2024-W27,RSV,RSV untyped,NA,detections,total,2
 SARI virological,EU/EEA,2024-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,218
 SARI virological,EU/EEA,2024-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,20
-SARI virological,EU/EEA,2024-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1091
+SARI virological,EU/EEA,2024-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1090
 SARI virological,EU/EEA,2024-W26,Influenza,Influenza,total,detections,total,7
 SARI virological,EU/EEA,2024-W26,Influenza,Influenza,total,positivity,total,0.6
 SARI virological,EU/EEA,2024-W26,Influenza,Influenza,total,tests,total,1109
@@ -6108,18 +6139,18 @@ SARI virological,EU/EEA,2024-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,tot
 SARI virological,EU/EEA,2024-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1248
 SARI virological,EU/EEA,2024-W24,Influenza,Influenza,total,detections,total,13
 SARI virological,EU/EEA,2024-W24,Influenza,Influenza,total,positivity,total,1.1
-SARI virological,EU/EEA,2024-W24,Influenza,Influenza,total,tests,total,1182
+SARI virological,EU/EEA,2024-W24,Influenza,Influenza,total,tests,total,1183
 SARI virological,EU/EEA,2024-W24,Influenza,Influenza A,A (unknown),detections,total,3
 SARI virological,EU/EEA,2024-W24,Influenza,Influenza A,A(H1)pdm09,detections,total,1
 SARI virological,EU/EEA,2024-W24,Influenza,Influenza A,A(H3),detections,total,1
 SARI virological,EU/EEA,2024-W24,Influenza,Influenza untyped,Influenza untyped,detections,total,8
 SARI virological,EU/EEA,2024-W24,RSV,RSV,RSV,detections,total,4
 SARI virological,EU/EEA,2024-W24,RSV,RSV,RSV,positivity,total,0.4
-SARI virological,EU/EEA,2024-W24,RSV,RSV,RSV,tests,total,998
+SARI virological,EU/EEA,2024-W24,RSV,RSV,RSV,tests,total,999
 SARI virological,EU/EEA,2024-W24,RSV,RSV untyped,NA,detections,total,4
 SARI virological,EU/EEA,2024-W24,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,165
 SARI virological,EU/EEA,2024-W24,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,13.7
-SARI virological,EU/EEA,2024-W24,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1204
+SARI virological,EU/EEA,2024-W24,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1205
 SARI virological,EU/EEA,2024-W23,Influenza,Influenza,total,detections,total,9
 SARI virological,EU/EEA,2024-W23,Influenza,Influenza,total,positivity,total,0.8
 SARI virological,EU/EEA,2024-W23,Influenza,Influenza,total,tests,total,1099
@@ -6150,18 +6181,18 @@ SARI virological,EU/EEA,2024-W22,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,tot
 SARI virological,EU/EEA,2024-W22,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1211
 SARI virological,EU/EEA,2024-W21,Influenza,Influenza,total,detections,total,14
 SARI virological,EU/EEA,2024-W21,Influenza,Influenza,total,positivity,total,1.2
-SARI virological,EU/EEA,2024-W21,Influenza,Influenza,total,tests,total,1186
+SARI virological,EU/EEA,2024-W21,Influenza,Influenza,total,tests,total,1185
 SARI virological,EU/EEA,2024-W21,Influenza,Influenza A,A (unknown),detections,total,4
 SARI virological,EU/EEA,2024-W21,Influenza,Influenza A,A(H1)pdm09,detections,total,1
 SARI virological,EU/EEA,2024-W21,Influenza,Influenza B,B (unknown),detections,total,2
 SARI virological,EU/EEA,2024-W21,Influenza,Influenza untyped,Influenza untyped,detections,total,7
 SARI virological,EU/EEA,2024-W21,RSV,RSV,RSV,detections,total,6
 SARI virological,EU/EEA,2024-W21,RSV,RSV,RSV,positivity,total,0.6
-SARI virological,EU/EEA,2024-W21,RSV,RSV,RSV,tests,total,1068
+SARI virological,EU/EEA,2024-W21,RSV,RSV,RSV,tests,total,1067
 SARI virological,EU/EEA,2024-W21,RSV,RSV untyped,NA,detections,total,6
 SARI virological,EU/EEA,2024-W21,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,87
 SARI virological,EU/EEA,2024-W21,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,7.3
-SARI virological,EU/EEA,2024-W21,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1193
+SARI virological,EU/EEA,2024-W21,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1192
 SARI virological,EU/EEA,2024-W20,Influenza,Influenza,total,detections,total,23
 SARI virological,EU/EEA,2024-W20,Influenza,Influenza,total,positivity,total,1.8
 SARI virological,EU/EEA,2024-W20,Influenza,Influenza,total,tests,total,1299
@@ -6344,7 +6375,7 @@ SARI virological,EU/EEA,2024-W10,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,tot
 SARI virological,EU/EEA,2024-W10,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1673
 SARI virological,EU/EEA,2024-W09,Influenza,Influenza,total,detections,total,273
 SARI virological,EU/EEA,2024-W09,Influenza,Influenza,total,positivity,total,15.5
-SARI virological,EU/EEA,2024-W09,Influenza,Influenza,total,tests,total,1761
+SARI virological,EU/EEA,2024-W09,Influenza,Influenza,total,tests,total,1762
 SARI virological,EU/EEA,2024-W09,Influenza,Influenza A,A (unknown),detections,total,43
 SARI virological,EU/EEA,2024-W09,Influenza,Influenza A,A(H1)pdm09,detections,total,30
 SARI virological,EU/EEA,2024-W09,Influenza,Influenza A,A(H3),detections,total,18
@@ -6352,13 +6383,13 @@ SARI virological,EU/EEA,2024-W09,Influenza,Influenza B,B (unknown),detections,to
 SARI virological,EU/EEA,2024-W09,Influenza,Influenza untyped,Influenza untyped,detections,total,176
 SARI virological,EU/EEA,2024-W09,RSV,RSV,RSV,detections,total,177
 SARI virological,EU/EEA,2024-W09,RSV,RSV,RSV,positivity,total,10.3
-SARI virological,EU/EEA,2024-W09,RSV,RSV,RSV,tests,total,1719
+SARI virological,EU/EEA,2024-W09,RSV,RSV,RSV,tests,total,1720
 SARI virological,EU/EEA,2024-W09,RSV,RSV untyped,NA,detections,total,166
 SARI virological,EU/EEA,2024-W09,RSV,RSV-A,NA,detections,total,5
 SARI virological,EU/EEA,2024-W09,RSV,RSV-B,NA,detections,total,6
 SARI virological,EU/EEA,2024-W09,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,57
 SARI virological,EU/EEA,2024-W09,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,3.2
-SARI virological,EU/EEA,2024-W09,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1760
+SARI virological,EU/EEA,2024-W09,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1761
 SARI virological,EU/EEA,2024-W08,Influenza,Influenza,total,detections,total,411
 SARI virological,EU/EEA,2024-W08,Influenza,Influenza,total,positivity,total,20.3
 SARI virological,EU/EEA,2024-W08,Influenza,Influenza,total,tests,total,2023
@@ -7655,43 +7686,56 @@ SARI virological,EU/EEA,2022-W25,RSV,RSV-B,NA,detections,total,1
 SARI virological,EU/EEA,2022-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,216
 SARI virological,EU/EEA,2022-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,37.4
 SARI virological,EU/EEA,2022-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,577
-SARI virological,Estonia,2026-W35,Influenza,Influenza,total,detections,total,0
-SARI virological,Estonia,2026-W35,Influenza,Influenza,total,positivity,total,0
-SARI virological,Estonia,2026-W35,Influenza,Influenza,total,tests,total,8
-SARI virological,Estonia,2026-W35,RSV,RSV,RSV,detections,total,0
-SARI virological,Estonia,2026-W35,RSV,RSV,RSV,positivity,total,0
-SARI virological,Estonia,2026-W35,RSV,RSV,RSV,tests,total,7
-SARI virological,Estonia,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
-SARI virological,Estonia,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
-SARI virological,Estonia,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,8
+SARI virological,Estonia,2026-W36,Influenza,Influenza,total,detections,total,1
+SARI virological,Estonia,2026-W36,Influenza,Influenza,total,positivity,total,12.5
+SARI virological,Estonia,2026-W36,Influenza,Influenza,total,tests,total,8
+SARI virological,Estonia,2026-W36,Influenza,Influenza untyped,Influenza untyped,detections,total,1
+SARI virological,Estonia,2026-W36,RSV,RSV,RSV,detections,total,1
+SARI virological,Estonia,2026-W36,RSV,RSV,RSV,positivity,total,12.5
+SARI virological,Estonia,2026-W36,RSV,RSV,RSV,tests,total,8
+SARI virological,Estonia,2026-W36,RSV,RSV untyped,NA,detections,total,1
+SARI virological,Estonia,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
+SARI virological,Estonia,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
+SARI virological,Estonia,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,9
+SARI virological,Estonia,2026-W35,Influenza,Influenza,total,detections,total,1
+SARI virological,Estonia,2026-W35,Influenza,Influenza,total,positivity,total,4.8
+SARI virological,Estonia,2026-W35,Influenza,Influenza,total,tests,total,21
+SARI virological,Estonia,2026-W35,Influenza,Influenza untyped,Influenza untyped,detections,total,1
+SARI virological,Estonia,2026-W35,RSV,RSV,RSV,detections,total,1
+SARI virological,Estonia,2026-W35,RSV,RSV,RSV,positivity,total,5.3
+SARI virological,Estonia,2026-W35,RSV,RSV,RSV,tests,total,19
+SARI virological,Estonia,2026-W35,RSV,RSV untyped,NA,detections,total,1
+SARI virological,Estonia,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,1
+SARI virological,Estonia,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,5.3
+SARI virological,Estonia,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,19
 SARI virological,Estonia,2026-W34,Influenza,Influenza,total,detections,total,1
-SARI virological,Estonia,2026-W34,Influenza,Influenza,total,positivity,total,5.9
-SARI virological,Estonia,2026-W34,Influenza,Influenza,total,tests,total,17
+SARI virological,Estonia,2026-W34,Influenza,Influenza,total,positivity,total,3.6
+SARI virological,Estonia,2026-W34,Influenza,Influenza,total,tests,total,28
 SARI virological,Estonia,2026-W34,Influenza,Influenza untyped,Influenza untyped,detections,total,1
 SARI virological,Estonia,2026-W34,RSV,RSV,RSV,detections,total,0
 SARI virological,Estonia,2026-W34,RSV,RSV,RSV,positivity,total,0
-SARI virological,Estonia,2026-W34,RSV,RSV,RSV,tests,total,14
+SARI virological,Estonia,2026-W34,RSV,RSV,RSV,tests,total,22
 SARI virological,Estonia,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Estonia,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
-SARI virological,Estonia,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,14
+SARI virological,Estonia,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,24
 SARI virological,Estonia,2026-W33,Influenza,Influenza,total,detections,total,0
 SARI virological,Estonia,2026-W33,Influenza,Influenza,total,positivity,total,0
-SARI virological,Estonia,2026-W33,Influenza,Influenza,total,tests,total,37
+SARI virological,Estonia,2026-W33,Influenza,Influenza,total,tests,total,46
 SARI virological,Estonia,2026-W33,RSV,RSV,RSV,detections,total,0
 SARI virological,Estonia,2026-W33,RSV,RSV,RSV,positivity,total,0
-SARI virological,Estonia,2026-W33,RSV,RSV,RSV,tests,total,32
+SARI virological,Estonia,2026-W33,RSV,RSV,RSV,tests,total,41
 SARI virological,Estonia,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Estonia,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
-SARI virological,Estonia,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,31
+SARI virological,Estonia,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,38
 SARI virological,Estonia,2026-W32,Influenza,Influenza,total,detections,total,0
 SARI virological,Estonia,2026-W32,Influenza,Influenza,total,positivity,total,0
-SARI virological,Estonia,2026-W32,Influenza,Influenza,total,tests,total,49
+SARI virological,Estonia,2026-W32,Influenza,Influenza,total,tests,total,50
 SARI virological,Estonia,2026-W32,RSV,RSV,RSV,detections,total,0
 SARI virological,Estonia,2026-W32,RSV,RSV,RSV,positivity,total,0
-SARI virological,Estonia,2026-W32,RSV,RSV,RSV,tests,total,44
+SARI virological,Estonia,2026-W32,RSV,RSV,RSV,tests,total,45
 SARI virological,Estonia,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Estonia,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
-SARI virological,Estonia,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,40
+SARI virological,Estonia,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,41
 SARI virological,Estonia,2026-W31,Influenza,Influenza,total,detections,total,0
 SARI virological,Estonia,2026-W31,Influenza,Influenza,total,positivity,total,0
 SARI virological,Estonia,2026-W31,Influenza,Influenza,total,tests,total,45
@@ -7703,13 +7747,13 @@ SARI virological,Estonia,2026-W31,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,to
 SARI virological,Estonia,2026-W31,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,42
 SARI virological,Estonia,2026-W30,Influenza,Influenza,total,detections,total,0
 SARI virological,Estonia,2026-W30,Influenza,Influenza,total,positivity,total,0
-SARI virological,Estonia,2026-W30,Influenza,Influenza,total,tests,total,37
+SARI virological,Estonia,2026-W30,Influenza,Influenza,total,tests,total,38
 SARI virological,Estonia,2026-W30,RSV,RSV,RSV,detections,total,0
 SARI virological,Estonia,2026-W30,RSV,RSV,RSV,positivity,total,0
-SARI virological,Estonia,2026-W30,RSV,RSV,RSV,tests,total,34
+SARI virological,Estonia,2026-W30,RSV,RSV,RSV,tests,total,35
 SARI virological,Estonia,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Estonia,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
-SARI virological,Estonia,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,33
+SARI virological,Estonia,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,34
 SARI virological,Estonia,2026-W29,Influenza,Influenza,total,detections,total,0
 SARI virological,Estonia,2026-W29,Influenza,Influenza,total,positivity,total,0
 SARI virological,Estonia,2026-W29,Influenza,Influenza,total,tests,total,41
@@ -7722,23 +7766,23 @@ SARI virological,Estonia,2026-W29,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,to
 SARI virological,Estonia,2026-W29,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,41
 SARI virological,Estonia,2026-W28,Influenza,Influenza,total,detections,total,0
 SARI virological,Estonia,2026-W28,Influenza,Influenza,total,positivity,total,0
-SARI virological,Estonia,2026-W28,Influenza,Influenza,total,tests,total,47
+SARI virological,Estonia,2026-W28,Influenza,Influenza,total,tests,total,48
 SARI virological,Estonia,2026-W28,RSV,RSV,RSV,detections,total,0
 SARI virological,Estonia,2026-W28,RSV,RSV,RSV,positivity,total,0
 SARI virological,Estonia,2026-W28,RSV,RSV,RSV,tests,total,43
 SARI virological,Estonia,2026-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Estonia,2026-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
-SARI virological,Estonia,2026-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,43
+SARI virological,Estonia,2026-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,44
 SARI virological,Estonia,2026-W27,Influenza,Influenza,total,detections,total,0
 SARI virological,Estonia,2026-W27,Influenza,Influenza,total,positivity,total,0
-SARI virological,Estonia,2026-W27,Influenza,Influenza,total,tests,total,48
+SARI virological,Estonia,2026-W27,Influenza,Influenza,total,tests,total,50
 SARI virological,Estonia,2026-W27,RSV,RSV,RSV,detections,total,1
-SARI virological,Estonia,2026-W27,RSV,RSV,RSV,positivity,total,2.5
-SARI virological,Estonia,2026-W27,RSV,RSV,RSV,tests,total,40
+SARI virological,Estonia,2026-W27,RSV,RSV,RSV,positivity,total,2.4
+SARI virological,Estonia,2026-W27,RSV,RSV,RSV,tests,total,41
 SARI virological,Estonia,2026-W27,RSV,RSV untyped,NA,detections,total,1
 SARI virological,Estonia,2026-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Estonia,2026-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
-SARI virological,Estonia,2026-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,46
+SARI virological,Estonia,2026-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,48
 SARI virological,Estonia,2026-W26,Influenza,Influenza,total,detections,total,0
 SARI virological,Estonia,2026-W26,Influenza,Influenza,total,positivity,total,0
 SARI virological,Estonia,2026-W26,Influenza,Influenza,total,tests,total,51
@@ -7751,10 +7795,10 @@ SARI virological,Estonia,2026-W26,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,to
 SARI virological,Estonia,2026-W26,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,51
 SARI virological,Estonia,2026-W25,Influenza,Influenza,total,detections,total,0
 SARI virological,Estonia,2026-W25,Influenza,Influenza,total,positivity,total,0
-SARI virological,Estonia,2026-W25,Influenza,Influenza,total,tests,total,55
+SARI virological,Estonia,2026-W25,Influenza,Influenza,total,tests,total,56
 SARI virological,Estonia,2026-W25,RSV,RSV,RSV,detections,total,2
 SARI virological,Estonia,2026-W25,RSV,RSV,RSV,positivity,total,3.8
-SARI virological,Estonia,2026-W25,RSV,RSV,RSV,tests,total,52
+SARI virological,Estonia,2026-W25,RSV,RSV,RSV,tests,total,53
 SARI virological,Estonia,2026-W25,RSV,RSV untyped,NA,detections,total,2
 SARI virological,Estonia,2026-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Estonia,2026-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
@@ -9977,26 +10021,37 @@ SARI virological,Estonia,2022-W25,RSV,RSV untyped,NA,detections,total,1
 SARI virological,Estonia,2022-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,25
 SARI virological,Estonia,2022-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,33.8
 SARI virological,Estonia,2022-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,74
+SARI virological,Germany,2026-W36,Influenza,Influenza,total,detections,total,3
+SARI virological,Germany,2026-W36,Influenza,Influenza,total,positivity,total,1.1
+SARI virological,Germany,2026-W36,Influenza,Influenza,total,tests,total,278
+SARI virological,Germany,2026-W36,Influenza,Influenza untyped,Influenza untyped,detections,total,3
+SARI virological,Germany,2026-W36,RSV,RSV,RSV,detections,total,1
+SARI virological,Germany,2026-W36,RSV,RSV,RSV,positivity,total,0.4
+SARI virological,Germany,2026-W36,RSV,RSV,RSV,tests,total,278
+SARI virological,Germany,2026-W36,RSV,RSV untyped,NA,detections,total,1
+SARI virological,Germany,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
+SARI virological,Germany,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
+SARI virological,Germany,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,278
 SARI virological,Germany,2026-W35,Influenza,Influenza,total,detections,total,3
-SARI virological,Germany,2026-W35,Influenza,Influenza,total,positivity,total,1.2
-SARI virological,Germany,2026-W35,Influenza,Influenza,total,tests,total,240
+SARI virological,Germany,2026-W35,Influenza,Influenza,total,positivity,total,1
+SARI virological,Germany,2026-W35,Influenza,Influenza,total,tests,total,304
 SARI virological,Germany,2026-W35,Influenza,Influenza untyped,Influenza untyped,detections,total,3
 SARI virological,Germany,2026-W35,RSV,RSV,RSV,detections,total,0
 SARI virological,Germany,2026-W35,RSV,RSV,RSV,positivity,total,0
-SARI virological,Germany,2026-W35,RSV,RSV,RSV,tests,total,240
-SARI virological,Germany,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,1
-SARI virological,Germany,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.4
-SARI virological,Germany,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,240
+SARI virological,Germany,2026-W35,RSV,RSV,RSV,tests,total,304
+SARI virological,Germany,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,2
+SARI virological,Germany,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.7
+SARI virological,Germany,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,304
 SARI virological,Germany,2026-W34,Influenza,Influenza,total,detections,total,3
 SARI virological,Germany,2026-W34,Influenza,Influenza,total,positivity,total,1
-SARI virological,Germany,2026-W34,Influenza,Influenza,total,tests,total,290
+SARI virological,Germany,2026-W34,Influenza,Influenza,total,tests,total,293
 SARI virological,Germany,2026-W34,Influenza,Influenza untyped,Influenza untyped,detections,total,3
 SARI virological,Germany,2026-W34,RSV,RSV,RSV,detections,total,0
 SARI virological,Germany,2026-W34,RSV,RSV,RSV,positivity,total,0
-SARI virological,Germany,2026-W34,RSV,RSV,RSV,tests,total,290
+SARI virological,Germany,2026-W34,RSV,RSV,RSV,tests,total,293
 SARI virological,Germany,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,1
 SARI virological,Germany,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.3
-SARI virological,Germany,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,290
+SARI virological,Germany,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,293
 SARI virological,Germany,2026-W33,Influenza,Influenza,total,detections,total,3
 SARI virological,Germany,2026-W33,Influenza,Influenza,total,positivity,total,1.1
 SARI virological,Germany,2026-W33,Influenza,Influenza,total,tests,total,282
@@ -10009,14 +10064,14 @@ SARI virological,Germany,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,to
 SARI virological,Germany,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,282
 SARI virological,Germany,2026-W32,Influenza,Influenza,total,detections,total,5
 SARI virological,Germany,2026-W32,Influenza,Influenza,total,positivity,total,1.7
-SARI virological,Germany,2026-W32,Influenza,Influenza,total,tests,total,295
+SARI virological,Germany,2026-W32,Influenza,Influenza,total,tests,total,294
 SARI virological,Germany,2026-W32,Influenza,Influenza untyped,Influenza untyped,detections,total,5
 SARI virological,Germany,2026-W32,RSV,RSV,RSV,detections,total,0
 SARI virological,Germany,2026-W32,RSV,RSV,RSV,positivity,total,0
-SARI virological,Germany,2026-W32,RSV,RSV,RSV,tests,total,295
+SARI virological,Germany,2026-W32,RSV,RSV,RSV,tests,total,294
 SARI virological,Germany,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,3
 SARI virological,Germany,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,1
-SARI virological,Germany,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,295
+SARI virological,Germany,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,294
 SARI virological,Germany,2026-W31,Influenza,Influenza,total,detections,total,4
 SARI virological,Germany,2026-W31,Influenza,Influenza,total,positivity,total,1.3
 SARI virological,Germany,2026-W31,Influenza,Influenza,total,tests,total,309
@@ -10028,96 +10083,96 @@ SARI virological,Germany,2026-W31,RSV,RSV untyped,NA,detections,total,1
 SARI virological,Germany,2026-W31,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Germany,2026-W31,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
 SARI virological,Germany,2026-W31,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,309
-SARI virological,Germany,2026-W30,Influenza,Influenza,total,detections,total,4
-SARI virological,Germany,2026-W30,Influenza,Influenza,total,positivity,total,1.4
-SARI virological,Germany,2026-W30,Influenza,Influenza,total,tests,total,283
-SARI virological,Germany,2026-W30,Influenza,Influenza untyped,Influenza untyped,detections,total,4
+SARI virological,Germany,2026-W30,Influenza,Influenza,total,detections,total,5
+SARI virological,Germany,2026-W30,Influenza,Influenza,total,positivity,total,1.8
+SARI virological,Germany,2026-W30,Influenza,Influenza,total,tests,total,284
+SARI virological,Germany,2026-W30,Influenza,Influenza untyped,Influenza untyped,detections,total,5
 SARI virological,Germany,2026-W30,RSV,RSV,RSV,detections,total,0
 SARI virological,Germany,2026-W30,RSV,RSV,RSV,positivity,total,0
-SARI virological,Germany,2026-W30,RSV,RSV,RSV,tests,total,283
+SARI virological,Germany,2026-W30,RSV,RSV,RSV,tests,total,284
 SARI virological,Germany,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Germany,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
-SARI virological,Germany,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,283
+SARI virological,Germany,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,284
 SARI virological,Germany,2026-W29,Influenza,Influenza,total,detections,total,1
 SARI virological,Germany,2026-W29,Influenza,Influenza,total,positivity,total,0.3
-SARI virological,Germany,2026-W29,Influenza,Influenza,total,tests,total,300
+SARI virological,Germany,2026-W29,Influenza,Influenza,total,tests,total,299
 SARI virological,Germany,2026-W29,Influenza,Influenza untyped,Influenza untyped,detections,total,1
 SARI virological,Germany,2026-W29,RSV,RSV,RSV,detections,total,0
 SARI virological,Germany,2026-W29,RSV,RSV,RSV,positivity,total,0
-SARI virological,Germany,2026-W29,RSV,RSV,RSV,tests,total,300
+SARI virological,Germany,2026-W29,RSV,RSV,RSV,tests,total,299
 SARI virological,Germany,2026-W29,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,1
 SARI virological,Germany,2026-W29,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.3
-SARI virological,Germany,2026-W29,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,300
+SARI virological,Germany,2026-W29,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,299
 SARI virological,Germany,2026-W28,Influenza,Influenza,total,detections,total,1
 SARI virological,Germany,2026-W28,Influenza,Influenza,total,positivity,total,0.3
-SARI virological,Germany,2026-W28,Influenza,Influenza,total,tests,total,315
+SARI virological,Germany,2026-W28,Influenza,Influenza,total,tests,total,316
 SARI virological,Germany,2026-W28,Influenza,Influenza untyped,Influenza untyped,detections,total,1
 SARI virological,Germany,2026-W28,RSV,RSV,RSV,detections,total,0
 SARI virological,Germany,2026-W28,RSV,RSV,RSV,positivity,total,0
-SARI virological,Germany,2026-W28,RSV,RSV,RSV,tests,total,315
+SARI virological,Germany,2026-W28,RSV,RSV,RSV,tests,total,316
 SARI virological,Germany,2026-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Germany,2026-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
-SARI virological,Germany,2026-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,315
+SARI virological,Germany,2026-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,316
 SARI virological,Germany,2026-W27,Influenza,Influenza,total,detections,total,0
 SARI virological,Germany,2026-W27,Influenza,Influenza,total,positivity,total,0
-SARI virological,Germany,2026-W27,Influenza,Influenza,total,tests,total,406
+SARI virological,Germany,2026-W27,Influenza,Influenza,total,tests,total,407
 SARI virological,Germany,2026-W27,RSV,RSV,RSV,detections,total,0
 SARI virological,Germany,2026-W27,RSV,RSV,RSV,positivity,total,0
-SARI virological,Germany,2026-W27,RSV,RSV,RSV,tests,total,406
+SARI virological,Germany,2026-W27,RSV,RSV,RSV,tests,total,407
 SARI virological,Germany,2026-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,1
 SARI virological,Germany,2026-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.2
-SARI virological,Germany,2026-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,406
+SARI virological,Germany,2026-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,407
 SARI virological,Germany,2026-W26,Influenza,Influenza,total,detections,total,0
 SARI virological,Germany,2026-W26,Influenza,Influenza,total,positivity,total,0
-SARI virological,Germany,2026-W26,Influenza,Influenza,total,tests,total,382
+SARI virological,Germany,2026-W26,Influenza,Influenza,total,tests,total,386
 SARI virological,Germany,2026-W26,RSV,RSV,RSV,detections,total,0
 SARI virological,Germany,2026-W26,RSV,RSV,RSV,positivity,total,0
-SARI virological,Germany,2026-W26,RSV,RSV,RSV,tests,total,382
+SARI virological,Germany,2026-W26,RSV,RSV,RSV,tests,total,386
 SARI virological,Germany,2026-W26,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,2
 SARI virological,Germany,2026-W26,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.5
-SARI virological,Germany,2026-W26,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,382
+SARI virological,Germany,2026-W26,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,386
 SARI virological,Germany,2026-W25,Influenza,Influenza,total,detections,total,3
 SARI virological,Germany,2026-W25,Influenza,Influenza,total,positivity,total,0.8
-SARI virological,Germany,2026-W25,Influenza,Influenza,total,tests,total,392
+SARI virological,Germany,2026-W25,Influenza,Influenza,total,tests,total,391
 SARI virological,Germany,2026-W25,Influenza,Influenza untyped,Influenza untyped,detections,total,3
 SARI virological,Germany,2026-W25,RSV,RSV,RSV,detections,total,0
 SARI virological,Germany,2026-W25,RSV,RSV,RSV,positivity,total,0
-SARI virological,Germany,2026-W25,RSV,RSV,RSV,tests,total,392
+SARI virological,Germany,2026-W25,RSV,RSV,RSV,tests,total,391
 SARI virological,Germany,2026-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,1
 SARI virological,Germany,2026-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.3
-SARI virological,Germany,2026-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,392
+SARI virological,Germany,2026-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,391
 SARI virological,Germany,2026-W24,Influenza,Influenza,total,detections,total,2
 SARI virological,Germany,2026-W24,Influenza,Influenza,total,positivity,total,0.6
-SARI virological,Germany,2026-W24,Influenza,Influenza,total,tests,total,342
+SARI virological,Germany,2026-W24,Influenza,Influenza,total,tests,total,343
 SARI virological,Germany,2026-W24,Influenza,Influenza untyped,Influenza untyped,detections,total,2
 SARI virological,Germany,2026-W24,RSV,RSV,RSV,detections,total,0
 SARI virological,Germany,2026-W24,RSV,RSV,RSV,positivity,total,0
-SARI virological,Germany,2026-W24,RSV,RSV,RSV,tests,total,342
+SARI virological,Germany,2026-W24,RSV,RSV,RSV,tests,total,343
 SARI virological,Germany,2026-W24,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Germany,2026-W24,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
-SARI virological,Germany,2026-W24,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,342
+SARI virological,Germany,2026-W24,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,343
 SARI virological,Germany,2026-W23,Influenza,Influenza,total,detections,total,1
 SARI virological,Germany,2026-W23,Influenza,Influenza,total,positivity,total,0.3
-SARI virological,Germany,2026-W23,Influenza,Influenza,total,tests,total,365
+SARI virological,Germany,2026-W23,Influenza,Influenza,total,tests,total,366
 SARI virological,Germany,2026-W23,Influenza,Influenza untyped,Influenza untyped,detections,total,1
 SARI virological,Germany,2026-W23,RSV,RSV,RSV,detections,total,3
 SARI virological,Germany,2026-W23,RSV,RSV,RSV,positivity,total,0.8
-SARI virological,Germany,2026-W23,RSV,RSV,RSV,tests,total,365
+SARI virological,Germany,2026-W23,RSV,RSV,RSV,tests,total,366
 SARI virological,Germany,2026-W23,RSV,RSV untyped,NA,detections,total,3
 SARI virological,Germany,2026-W23,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Germany,2026-W23,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
-SARI virological,Germany,2026-W23,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,365
+SARI virological,Germany,2026-W23,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,366
 SARI virological,Germany,2026-W22,Influenza,Influenza,total,detections,total,1
 SARI virological,Germany,2026-W22,Influenza,Influenza,total,positivity,total,0.2
-SARI virological,Germany,2026-W22,Influenza,Influenza,total,tests,total,404
+SARI virological,Germany,2026-W22,Influenza,Influenza,total,tests,total,405
 SARI virological,Germany,2026-W22,Influenza,Influenza untyped,Influenza untyped,detections,total,1
 SARI virological,Germany,2026-W22,RSV,RSV,RSV,detections,total,7
 SARI virological,Germany,2026-W22,RSV,RSV,RSV,positivity,total,1.7
-SARI virological,Germany,2026-W22,RSV,RSV,RSV,tests,total,404
+SARI virological,Germany,2026-W22,RSV,RSV,RSV,tests,total,405
 SARI virological,Germany,2026-W22,RSV,RSV untyped,NA,detections,total,7
 SARI virological,Germany,2026-W22,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,2
 SARI virological,Germany,2026-W22,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.5
-SARI virological,Germany,2026-W22,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,404
+SARI virological,Germany,2026-W22,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,405
 SARI virological,Germany,2026-W21,Influenza,Influenza,total,detections,total,5
 SARI virological,Germany,2026-W21,Influenza,Influenza,total,positivity,total,1.2
 SARI virological,Germany,2026-W21,Influenza,Influenza,total,tests,total,404
@@ -10131,15 +10186,15 @@ SARI virological,Germany,2026-W21,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,to
 SARI virological,Germany,2026-W21,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,404
 SARI virological,Germany,2026-W20,Influenza,Influenza,total,detections,total,2
 SARI virological,Germany,2026-W20,Influenza,Influenza,total,positivity,total,0.4
-SARI virological,Germany,2026-W20,Influenza,Influenza,total,tests,total,452
+SARI virological,Germany,2026-W20,Influenza,Influenza,total,tests,total,451
 SARI virological,Germany,2026-W20,Influenza,Influenza untyped,Influenza untyped,detections,total,2
 SARI virological,Germany,2026-W20,RSV,RSV,RSV,detections,total,11
 SARI virological,Germany,2026-W20,RSV,RSV,RSV,positivity,total,2.4
-SARI virological,Germany,2026-W20,RSV,RSV,RSV,tests,total,452
+SARI virological,Germany,2026-W20,RSV,RSV,RSV,tests,total,451
 SARI virological,Germany,2026-W20,RSV,RSV untyped,NA,detections,total,11
 SARI virological,Germany,2026-W20,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,1
 SARI virological,Germany,2026-W20,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.2
-SARI virological,Germany,2026-W20,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,452
+SARI virological,Germany,2026-W20,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,451
 SARI virological,Germany,2026-W19,Influenza,Influenza,total,detections,total,8
 SARI virological,Germany,2026-W19,Influenza,Influenza,total,positivity,total,1.6
 SARI virological,Germany,2026-W19,Influenza,Influenza,total,tests,total,492
@@ -10175,15 +10230,15 @@ SARI virological,Germany,2026-W17,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,to
 SARI virological,Germany,2026-W17,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,494
 SARI virological,Germany,2026-W16,Influenza,Influenza,total,detections,total,13
 SARI virological,Germany,2026-W16,Influenza,Influenza,total,positivity,total,2.3
-SARI virological,Germany,2026-W16,Influenza,Influenza,total,tests,total,575
+SARI virological,Germany,2026-W16,Influenza,Influenza,total,tests,total,576
 SARI virological,Germany,2026-W16,Influenza,Influenza untyped,Influenza untyped,detections,total,13
 SARI virological,Germany,2026-W16,RSV,RSV,RSV,detections,total,40
-SARI virological,Germany,2026-W16,RSV,RSV,RSV,positivity,total,7
-SARI virological,Germany,2026-W16,RSV,RSV,RSV,tests,total,575
+SARI virological,Germany,2026-W16,RSV,RSV,RSV,positivity,total,6.9
+SARI virological,Germany,2026-W16,RSV,RSV,RSV,tests,total,576
 SARI virological,Germany,2026-W16,RSV,RSV untyped,NA,detections,total,40
 SARI virological,Germany,2026-W16,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,5
 SARI virological,Germany,2026-W16,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.9
-SARI virological,Germany,2026-W16,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,575
+SARI virological,Germany,2026-W16,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,576
 SARI virological,Germany,2026-W15,Influenza,Influenza,total,detections,total,10
 SARI virological,Germany,2026-W15,Influenza,Influenza,total,positivity,total,1.8
 SARI virological,Germany,2026-W15,Influenza,Influenza,total,tests,total,549
@@ -10219,15 +10274,15 @@ SARI virological,Germany,2026-W13,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,to
 SARI virological,Germany,2026-W13,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,661
 SARI virological,Germany,2026-W12,Influenza,Influenza,total,detections,total,39
 SARI virological,Germany,2026-W12,Influenza,Influenza,total,positivity,total,6.2
-SARI virological,Germany,2026-W12,Influenza,Influenza,total,tests,total,630
+SARI virological,Germany,2026-W12,Influenza,Influenza,total,tests,total,633
 SARI virological,Germany,2026-W12,Influenza,Influenza untyped,Influenza untyped,detections,total,39
 SARI virological,Germany,2026-W12,RSV,RSV,RSV,detections,total,116
-SARI virological,Germany,2026-W12,RSV,RSV,RSV,positivity,total,18.4
-SARI virological,Germany,2026-W12,RSV,RSV,RSV,tests,total,630
+SARI virological,Germany,2026-W12,RSV,RSV,RSV,positivity,total,18.3
+SARI virological,Germany,2026-W12,RSV,RSV,RSV,tests,total,633
 SARI virological,Germany,2026-W12,RSV,RSV untyped,NA,detections,total,116
 SARI virological,Germany,2026-W12,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,4
 SARI virological,Germany,2026-W12,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.6
-SARI virological,Germany,2026-W12,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,630
+SARI virological,Germany,2026-W12,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,633
 SARI virological,Germany,2026-W11,Influenza,Influenza,total,detections,total,69
 SARI virological,Germany,2026-W11,Influenza,Influenza,total,positivity,total,10.2
 SARI virological,Germany,2026-W11,Influenza,Influenza,total,tests,total,677
@@ -10329,15 +10384,15 @@ SARI virological,Germany,2026-W03,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,to
 SARI virological,Germany,2026-W03,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1009
 SARI virological,Germany,2026-W02,Influenza,Influenza,total,detections,total,415
 SARI virological,Germany,2026-W02,Influenza,Influenza,total,positivity,total,41.4
-SARI virological,Germany,2026-W02,Influenza,Influenza,total,tests,total,1003
+SARI virological,Germany,2026-W02,Influenza,Influenza,total,tests,total,1002
 SARI virological,Germany,2026-W02,Influenza,Influenza untyped,Influenza untyped,detections,total,415
 SARI virological,Germany,2026-W02,RSV,RSV,RSV,detections,total,49
 SARI virological,Germany,2026-W02,RSV,RSV,RSV,positivity,total,4.9
-SARI virological,Germany,2026-W02,RSV,RSV,RSV,tests,total,1003
+SARI virological,Germany,2026-W02,RSV,RSV,RSV,tests,total,1002
 SARI virological,Germany,2026-W02,RSV,RSV untyped,NA,detections,total,49
 SARI virological,Germany,2026-W02,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,41
 SARI virological,Germany,2026-W02,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,4.1
-SARI virological,Germany,2026-W02,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1003
+SARI virological,Germany,2026-W02,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1002
 SARI virological,Germany,2026-W01,Influenza,Influenza,total,detections,total,520
 SARI virological,Germany,2026-W01,Influenza,Influenza,total,positivity,total,44.6
 SARI virological,Germany,2026-W01,Influenza,Influenza,total,tests,total,1166
@@ -10913,48 +10968,48 @@ SARI virological,Germany,2025-W01,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,to
 SARI virological,Germany,2025-W01,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,892
 SARI virological,Germany,2024-W52,Influenza,Influenza,total,detections,total,122
 SARI virological,Germany,2024-W52,Influenza,Influenza,total,positivity,total,14.8
-SARI virological,Germany,2024-W52,Influenza,Influenza,total,tests,total,824
+SARI virological,Germany,2024-W52,Influenza,Influenza,total,tests,total,822
 SARI virological,Germany,2024-W52,Influenza,Influenza untyped,Influenza untyped,detections,total,122
 SARI virological,Germany,2024-W52,RSV,RSV,RSV,detections,total,40
 SARI virological,Germany,2024-W52,RSV,RSV,RSV,positivity,total,4.9
-SARI virological,Germany,2024-W52,RSV,RSV,RSV,tests,total,824
+SARI virological,Germany,2024-W52,RSV,RSV,RSV,tests,total,822
 SARI virological,Germany,2024-W52,RSV,RSV untyped,NA,detections,total,40
 SARI virological,Germany,2024-W52,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,102
 SARI virological,Germany,2024-W52,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,12.4
-SARI virological,Germany,2024-W52,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,824
+SARI virological,Germany,2024-W52,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,822
 SARI virological,Germany,2024-W51,Influenza,Influenza,total,detections,total,82
 SARI virological,Germany,2024-W51,Influenza,Influenza,total,positivity,total,10.1
-SARI virological,Germany,2024-W51,Influenza,Influenza,total,tests,total,810
+SARI virological,Germany,2024-W51,Influenza,Influenza,total,tests,total,813
 SARI virological,Germany,2024-W51,Influenza,Influenza untyped,Influenza untyped,detections,total,82
 SARI virological,Germany,2024-W51,RSV,RSV,RSV,detections,total,42
 SARI virological,Germany,2024-W51,RSV,RSV,RSV,positivity,total,5.2
-SARI virological,Germany,2024-W51,RSV,RSV,RSV,tests,total,810
+SARI virological,Germany,2024-W51,RSV,RSV,RSV,tests,total,813
 SARI virological,Germany,2024-W51,RSV,RSV untyped,NA,detections,total,42
 SARI virological,Germany,2024-W51,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,101
-SARI virological,Germany,2024-W51,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,12.5
-SARI virological,Germany,2024-W51,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,810
+SARI virological,Germany,2024-W51,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,12.4
+SARI virological,Germany,2024-W51,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,813
 SARI virological,Germany,2024-W50,Influenza,Influenza,total,detections,total,46
 SARI virological,Germany,2024-W50,Influenza,Influenza,total,positivity,total,5.7
-SARI virological,Germany,2024-W50,Influenza,Influenza,total,tests,total,802
+SARI virological,Germany,2024-W50,Influenza,Influenza,total,tests,total,805
 SARI virological,Germany,2024-W50,Influenza,Influenza untyped,Influenza untyped,detections,total,46
 SARI virological,Germany,2024-W50,RSV,RSV,RSV,detections,total,28
 SARI virological,Germany,2024-W50,RSV,RSV,RSV,positivity,total,3.5
-SARI virological,Germany,2024-W50,RSV,RSV,RSV,tests,total,802
+SARI virological,Germany,2024-W50,RSV,RSV,RSV,tests,total,805
 SARI virological,Germany,2024-W50,RSV,RSV untyped,NA,detections,total,28
 SARI virological,Germany,2024-W50,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,106
 SARI virological,Germany,2024-W50,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,13.2
-SARI virological,Germany,2024-W50,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,802
+SARI virological,Germany,2024-W50,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,805
 SARI virological,Germany,2024-W49,Influenza,Influenza,total,detections,total,27
-SARI virological,Germany,2024-W49,Influenza,Influenza,total,positivity,total,3.6
-SARI virological,Germany,2024-W49,Influenza,Influenza,total,tests,total,740
+SARI virological,Germany,2024-W49,Influenza,Influenza,total,positivity,total,3.7
+SARI virological,Germany,2024-W49,Influenza,Influenza,total,tests,total,739
 SARI virological,Germany,2024-W49,Influenza,Influenza untyped,Influenza untyped,detections,total,27
 SARI virological,Germany,2024-W49,RSV,RSV,RSV,detections,total,6
 SARI virological,Germany,2024-W49,RSV,RSV,RSV,positivity,total,0.8
-SARI virological,Germany,2024-W49,RSV,RSV,RSV,tests,total,740
+SARI virological,Germany,2024-W49,RSV,RSV,RSV,tests,total,739
 SARI virological,Germany,2024-W49,RSV,RSV untyped,NA,detections,total,6
 SARI virological,Germany,2024-W49,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,125
 SARI virological,Germany,2024-W49,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,16.9
-SARI virological,Germany,2024-W49,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,740
+SARI virological,Germany,2024-W49,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,739
 SARI virological,Germany,2024-W48,Influenza,Influenza,total,detections,total,21
 SARI virological,Germany,2024-W48,Influenza,Influenza,total,positivity,total,3.1
 SARI virological,Germany,2024-W48,Influenza,Influenza,total,tests,total,680
@@ -10968,37 +11023,37 @@ SARI virological,Germany,2024-W48,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,to
 SARI virological,Germany,2024-W48,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,680
 SARI virological,Germany,2024-W47,Influenza,Influenza,total,detections,total,9
 SARI virological,Germany,2024-W47,Influenza,Influenza,total,positivity,total,1.3
-SARI virological,Germany,2024-W47,Influenza,Influenza,total,tests,total,699
+SARI virological,Germany,2024-W47,Influenza,Influenza,total,tests,total,700
 SARI virological,Germany,2024-W47,Influenza,Influenza untyped,Influenza untyped,detections,total,9
 SARI virological,Germany,2024-W47,RSV,RSV,RSV,detections,total,2
 SARI virological,Germany,2024-W47,RSV,RSV,RSV,positivity,total,0.3
-SARI virological,Germany,2024-W47,RSV,RSV,RSV,tests,total,699
+SARI virological,Germany,2024-W47,RSV,RSV,RSV,tests,total,700
 SARI virological,Germany,2024-W47,RSV,RSV untyped,NA,detections,total,2
 SARI virological,Germany,2024-W47,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,138
 SARI virological,Germany,2024-W47,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,19.7
-SARI virological,Germany,2024-W47,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,699
+SARI virological,Germany,2024-W47,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,700
 SARI virological,Germany,2024-W46,Influenza,Influenza,total,detections,total,7
 SARI virological,Germany,2024-W46,Influenza,Influenza,total,positivity,total,1
-SARI virological,Germany,2024-W46,Influenza,Influenza,total,tests,total,682
+SARI virological,Germany,2024-W46,Influenza,Influenza,total,tests,total,683
 SARI virological,Germany,2024-W46,Influenza,Influenza untyped,Influenza untyped,detections,total,7
 SARI virological,Germany,2024-W46,RSV,RSV,RSV,detections,total,4
 SARI virological,Germany,2024-W46,RSV,RSV,RSV,positivity,total,0.6
-SARI virological,Germany,2024-W46,RSV,RSV,RSV,tests,total,682
+SARI virological,Germany,2024-W46,RSV,RSV,RSV,tests,total,683
 SARI virological,Germany,2024-W46,RSV,RSV untyped,NA,detections,total,4
 SARI virological,Germany,2024-W46,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,116
 SARI virological,Germany,2024-W46,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,17
-SARI virological,Germany,2024-W46,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,682
+SARI virological,Germany,2024-W46,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,683
 SARI virological,Germany,2024-W45,Influenza,Influenza,total,detections,total,5
 SARI virological,Germany,2024-W45,Influenza,Influenza,total,positivity,total,0.7
-SARI virological,Germany,2024-W45,Influenza,Influenza,total,tests,total,697
+SARI virological,Germany,2024-W45,Influenza,Influenza,total,tests,total,699
 SARI virological,Germany,2024-W45,Influenza,Influenza untyped,Influenza untyped,detections,total,5
 SARI virological,Germany,2024-W45,RSV,RSV,RSV,detections,total,1
 SARI virological,Germany,2024-W45,RSV,RSV,RSV,positivity,total,0.1
-SARI virological,Germany,2024-W45,RSV,RSV,RSV,tests,total,697
+SARI virological,Germany,2024-W45,RSV,RSV,RSV,tests,total,699
 SARI virological,Germany,2024-W45,RSV,RSV untyped,NA,detections,total,1
-SARI virological,Germany,2024-W45,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,145
-SARI virological,Germany,2024-W45,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,20.8
-SARI virological,Germany,2024-W45,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,697
+SARI virological,Germany,2024-W45,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,146
+SARI virological,Germany,2024-W45,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,20.9
+SARI virological,Germany,2024-W45,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,699
 SARI virological,Germany,2024-W44,Influenza,Influenza,total,detections,total,9
 SARI virological,Germany,2024-W44,Influenza,Influenza,total,positivity,total,1.3
 SARI virological,Germany,2024-W44,Influenza,Influenza,total,tests,total,679
@@ -11022,15 +11077,15 @@ SARI virological,Germany,2024-W43,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,to
 SARI virological,Germany,2024-W43,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,27.8
 SARI virological,Germany,2024-W43,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,717
 SARI virological,Germany,2024-W42,Influenza,Influenza,total,detections,total,7
-SARI virological,Germany,2024-W42,Influenza,Influenza,total,positivity,total,1
-SARI virological,Germany,2024-W42,Influenza,Influenza,total,tests,total,667
+SARI virological,Germany,2024-W42,Influenza,Influenza,total,positivity,total,1.1
+SARI virological,Germany,2024-W42,Influenza,Influenza,total,tests,total,666
 SARI virological,Germany,2024-W42,Influenza,Influenza untyped,Influenza untyped,detections,total,7
 SARI virological,Germany,2024-W42,RSV,RSV,RSV,detections,total,0
 SARI virological,Germany,2024-W42,RSV,RSV,RSV,positivity,total,0
-SARI virological,Germany,2024-W42,RSV,RSV,RSV,tests,total,667
-SARI virological,Germany,2024-W42,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,179
-SARI virological,Germany,2024-W42,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,26.8
-SARI virological,Germany,2024-W42,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,667
+SARI virological,Germany,2024-W42,RSV,RSV,RSV,tests,total,666
+SARI virological,Germany,2024-W42,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,178
+SARI virological,Germany,2024-W42,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,26.7
+SARI virological,Germany,2024-W42,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,666
 SARI virological,Germany,2024-W41,Influenza,Influenza,total,detections,total,9
 SARI virological,Germany,2024-W41,Influenza,Influenza,total,positivity,total,1.4
 SARI virological,Germany,2024-W41,Influenza,Influenza,total,tests,total,658
@@ -11174,14 +11229,14 @@ SARI virological,Germany,2024-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,to
 SARI virological,Germany,2024-W28,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,469
 SARI virological,Germany,2024-W27,Influenza,Influenza,total,detections,total,4
 SARI virological,Germany,2024-W27,Influenza,Influenza,total,positivity,total,0.8
-SARI virological,Germany,2024-W27,Influenza,Influenza,total,tests,total,489
+SARI virological,Germany,2024-W27,Influenza,Influenza,total,tests,total,488
 SARI virological,Germany,2024-W27,Influenza,Influenza untyped,Influenza untyped,detections,total,4
 SARI virological,Germany,2024-W27,RSV,RSV,RSV,detections,total,0
 SARI virological,Germany,2024-W27,RSV,RSV,RSV,positivity,total,0
-SARI virological,Germany,2024-W27,RSV,RSV,RSV,tests,total,489
+SARI virological,Germany,2024-W27,RSV,RSV,RSV,tests,total,488
 SARI virological,Germany,2024-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,38
 SARI virological,Germany,2024-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,7.8
-SARI virological,Germany,2024-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,489
+SARI virological,Germany,2024-W27,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,488
 SARI virological,Germany,2024-W26,Influenza,Influenza,total,detections,total,2
 SARI virological,Germany,2024-W26,Influenza,Influenza,total,positivity,total,0.4
 SARI virological,Germany,2024-W26,Influenza,Influenza,total,tests,total,523
@@ -11204,15 +11259,15 @@ SARI virological,Germany,2024-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,to
 SARI virological,Germany,2024-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,517
 SARI virological,Germany,2024-W24,Influenza,Influenza,total,detections,total,7
 SARI virological,Germany,2024-W24,Influenza,Influenza,total,positivity,total,1.4
-SARI virological,Germany,2024-W24,Influenza,Influenza,total,tests,total,500
+SARI virological,Germany,2024-W24,Influenza,Influenza,total,tests,total,501
 SARI virological,Germany,2024-W24,Influenza,Influenza untyped,Influenza untyped,detections,total,7
 SARI virological,Germany,2024-W24,RSV,RSV,RSV,detections,total,2
 SARI virological,Germany,2024-W24,RSV,RSV,RSV,positivity,total,0.4
-SARI virological,Germany,2024-W24,RSV,RSV,RSV,tests,total,500
+SARI virological,Germany,2024-W24,RSV,RSV,RSV,tests,total,501
 SARI virological,Germany,2024-W24,RSV,RSV untyped,NA,detections,total,2
 SARI virological,Germany,2024-W24,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,23
 SARI virological,Germany,2024-W24,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,4.6
-SARI virological,Germany,2024-W24,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,500
+SARI virological,Germany,2024-W24,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,501
 SARI virological,Germany,2024-W23,Influenza,Influenza,total,detections,total,2
 SARI virological,Germany,2024-W23,Influenza,Influenza,total,positivity,total,0.4
 SARI virological,Germany,2024-W23,Influenza,Influenza,total,tests,total,473
@@ -11236,14 +11291,14 @@ SARI virological,Germany,2024-W22,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,to
 SARI virological,Germany,2024-W22,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,493
 SARI virological,Germany,2024-W21,Influenza,Influenza,total,detections,total,5
 SARI virological,Germany,2024-W21,Influenza,Influenza,total,positivity,total,1
-SARI virological,Germany,2024-W21,Influenza,Influenza,total,tests,total,506
+SARI virological,Germany,2024-W21,Influenza,Influenza,total,tests,total,505
 SARI virological,Germany,2024-W21,Influenza,Influenza untyped,Influenza untyped,detections,total,5
 SARI virological,Germany,2024-W21,RSV,RSV,RSV,detections,total,0
 SARI virological,Germany,2024-W21,RSV,RSV,RSV,positivity,total,0
-SARI virological,Germany,2024-W21,RSV,RSV,RSV,tests,total,506
+SARI virological,Germany,2024-W21,RSV,RSV,RSV,tests,total,505
 SARI virological,Germany,2024-W21,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,13
 SARI virological,Germany,2024-W21,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,2.6
-SARI virological,Germany,2024-W21,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,506
+SARI virological,Germany,2024-W21,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,505
 SARI virological,Germany,2024-W20,Influenza,Influenza,total,detections,total,6
 SARI virological,Germany,2024-W20,Influenza,Influenza,total,positivity,total,1.1
 SARI virological,Germany,2024-W20,Influenza,Influenza,total,tests,total,558
@@ -11367,15 +11422,15 @@ SARI virological,Germany,2024-W10,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,to
 SARI virological,Germany,2024-W10,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,723
 SARI virological,Germany,2024-W09,Influenza,Influenza,total,detections,total,172
 SARI virological,Germany,2024-W09,Influenza,Influenza,total,positivity,total,22.7
-SARI virological,Germany,2024-W09,Influenza,Influenza,total,tests,total,758
+SARI virological,Germany,2024-W09,Influenza,Influenza,total,tests,total,759
 SARI virological,Germany,2024-W09,Influenza,Influenza untyped,Influenza untyped,detections,total,172
 SARI virological,Germany,2024-W09,RSV,RSV,RSV,detections,total,84
 SARI virological,Germany,2024-W09,RSV,RSV,RSV,positivity,total,11.1
-SARI virological,Germany,2024-W09,RSV,RSV,RSV,tests,total,758
+SARI virological,Germany,2024-W09,RSV,RSV,RSV,tests,total,759
 SARI virological,Germany,2024-W09,RSV,RSV untyped,NA,detections,total,84
 SARI virological,Germany,2024-W09,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,21
 SARI virological,Germany,2024-W09,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,2.8
-SARI virological,Germany,2024-W09,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,758
+SARI virological,Germany,2024-W09,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,759
 SARI virological,Germany,2024-W08,Influenza,Influenza,total,detections,total,258
 SARI virological,Germany,2024-W08,Influenza,Influenza,total,positivity,total,27.2
 SARI virological,Germany,2024-W08,Influenza,Influenza,total,tests,total,949
@@ -12239,6 +12294,16 @@ SARI virological,Germany,2022-W25,Influenza,Influenza,total,tests,total,0
 SARI virological,Germany,2022-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,152
 SARI virological,Germany,2022-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,37.8
 SARI virological,Germany,2022-W25,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,402
+SARI virological,Greece,2026-W36,Influenza,Influenza,total,detections,total,1
+SARI virological,Greece,2026-W36,Influenza,Influenza,total,positivity,total,6.2
+SARI virological,Greece,2026-W36,Influenza,Influenza,total,tests,total,16
+SARI virological,Greece,2026-W36,Influenza,Influenza untyped,Influenza untyped,detections,total,1
+SARI virological,Greece,2026-W36,RSV,RSV,RSV,detections,total,0
+SARI virological,Greece,2026-W36,RSV,RSV,RSV,positivity,total,0
+SARI virological,Greece,2026-W36,RSV,RSV,RSV,tests,total,16
+SARI virological,Greece,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
+SARI virological,Greece,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
+SARI virological,Greece,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,16
 SARI virological,Greece,2026-W35,Influenza,Influenza,total,detections,total,0
 SARI virological,Greece,2026-W35,Influenza,Influenza,total,positivity,total,0
 SARI virological,Greece,2026-W35,Influenza,Influenza,total,tests,total,8
@@ -14645,6 +14710,17 @@ SARI virological,Iceland,2024-W52,RSV,RSV,RSV,tests,total,1
 SARI virological,Iceland,2024-W52,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Iceland,2024-W52,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
 SARI virological,Iceland,2024-W52,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1
+SARI virological,Ireland,2026-W36,Influenza,Influenza,total,detections,total,3
+SARI virological,Ireland,2026-W36,Influenza,Influenza,total,positivity,total,4.8
+SARI virological,Ireland,2026-W36,Influenza,Influenza,total,tests,total,63
+SARI virological,Ireland,2026-W36,Influenza,Influenza A,A (unknown),detections,total,3
+SARI virological,Ireland,2026-W36,RSV,RSV,RSV,detections,total,1
+SARI virological,Ireland,2026-W36,RSV,RSV,RSV,positivity,total,1.6
+SARI virological,Ireland,2026-W36,RSV,RSV,RSV,tests,total,63
+SARI virological,Ireland,2026-W36,RSV,RSV-A,NA,detections,total,1
+SARI virological,Ireland,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,3
+SARI virological,Ireland,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,4.8
+SARI virological,Ireland,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,63
 SARI virological,Ireland,2026-W35,Influenza,Influenza,total,detections,total,0
 SARI virological,Ireland,2026-W35,Influenza,Influenza,total,positivity,total,0
 SARI virological,Ireland,2026-W35,Influenza,Influenza,total,tests,total,45
@@ -19199,16 +19275,27 @@ SARI virological,Luxembourg,2024-W02,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,tota
 SARI virological,Luxembourg,2024-W01,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,8
 SARI virological,Luxembourg,2024-W01,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,80
 SARI virological,Luxembourg,2024-W01,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,10
-SARI virological,Malta,2026-W35,Influenza,Influenza,total,detections,total,4
-SARI virological,Malta,2026-W35,Influenza,Influenza,total,positivity,total,21.1
-SARI virological,Malta,2026-W35,Influenza,Influenza,total,tests,total,19
-SARI virological,Malta,2026-W35,Influenza,Influenza A,A (unknown),detections,total,4
+SARI virological,Malta,2026-W36,Influenza,Influenza,total,detections,total,14
+SARI virological,Malta,2026-W36,Influenza,Influenza,total,positivity,total,38.9
+SARI virological,Malta,2026-W36,Influenza,Influenza,total,tests,total,36
+SARI virological,Malta,2026-W36,Influenza,Influenza A,A (unknown),detections,total,14
+SARI virological,Malta,2026-W36,RSV,RSV,RSV,detections,total,0
+SARI virological,Malta,2026-W36,RSV,RSV,RSV,positivity,total,0
+SARI virological,Malta,2026-W36,RSV,RSV,RSV,tests,total,36
+SARI virological,Malta,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,5
+SARI virological,Malta,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,14.3
+SARI virological,Malta,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,35
+SARI virological,Malta,2026-W35,Influenza,Influenza,total,detections,total,6
+SARI virological,Malta,2026-W35,Influenza,Influenza,total,positivity,total,22.2
+SARI virological,Malta,2026-W35,Influenza,Influenza,total,tests,total,27
+SARI virological,Malta,2026-W35,Influenza,Influenza A,A (unknown),detections,total,2
+SARI virological,Malta,2026-W35,Influenza,Influenza A,A(H3),detections,total,4
 SARI virological,Malta,2026-W35,RSV,RSV,RSV,detections,total,0
 SARI virological,Malta,2026-W35,RSV,RSV,RSV,positivity,total,0
-SARI virological,Malta,2026-W35,RSV,RSV,RSV,tests,total,19
+SARI virological,Malta,2026-W35,RSV,RSV,RSV,tests,total,27
 SARI virological,Malta,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Malta,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
-SARI virological,Malta,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,18
+SARI virological,Malta,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,25
 SARI virological,Malta,2026-W34,Influenza,Influenza,total,detections,total,6
 SARI virological,Malta,2026-W34,Influenza,Influenza,total,positivity,total,19.4
 SARI virological,Malta,2026-W34,Influenza,Influenza,total,tests,total,31
@@ -23844,55 +23931,68 @@ SARI virological,Slovakia,2022-W47,RSV,RSV untyped,NA,detections,total,1
 SARI virological,Slovakia,2022-W47,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,0
 SARI virological,Slovakia,2022-W47,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0
 SARI virological,Slovakia,2022-W47,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,2
-SARI virological,Spain,2026-W35,Influenza,Influenza,total,detections,total,5
-SARI virological,Spain,2026-W35,Influenza,Influenza,total,positivity,total,2.2
-SARI virological,Spain,2026-W35,Influenza,Influenza,total,tests,total,223
-SARI virological,Spain,2026-W35,Influenza,Influenza A,A (unknown),detections,total,3
+SARI virological,Spain,2026-W36,Influenza,Influenza,total,detections,total,16
+SARI virological,Spain,2026-W36,Influenza,Influenza,total,positivity,total,6.8
+SARI virological,Spain,2026-W36,Influenza,Influenza,total,tests,total,234
+SARI virological,Spain,2026-W36,Influenza,Influenza A,A (unknown),detections,total,8
+SARI virological,Spain,2026-W36,Influenza,Influenza A,A(H3),detections,total,6
+SARI virological,Spain,2026-W36,Influenza,Influenza B,B (unknown),detections,total,1
+SARI virological,Spain,2026-W36,Influenza,Influenza untyped,Influenza untyped,detections,total,1
+SARI virological,Spain,2026-W36,RSV,RSV,RSV,detections,total,0
+SARI virological,Spain,2026-W36,RSV,RSV,RSV,positivity,total,0
+SARI virological,Spain,2026-W36,RSV,RSV,RSV,tests,total,223
+SARI virological,Spain,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,25
+SARI virological,Spain,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,10.7
+SARI virological,Spain,2026-W36,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,234
+SARI virological,Spain,2026-W35,Influenza,Influenza,total,detections,total,11
+SARI virological,Spain,2026-W35,Influenza,Influenza,total,positivity,total,4.2
+SARI virological,Spain,2026-W35,Influenza,Influenza,total,tests,total,264
+SARI virological,Spain,2026-W35,Influenza,Influenza A,A (unknown),detections,total,9
 SARI virological,Spain,2026-W35,Influenza,Influenza A,A(H3),detections,total,2
 SARI virological,Spain,2026-W35,RSV,RSV,RSV,detections,total,0
 SARI virological,Spain,2026-W35,RSV,RSV,RSV,positivity,total,0
-SARI virological,Spain,2026-W35,RSV,RSV,RSV,tests,total,219
-SARI virological,Spain,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,17
-SARI virological,Spain,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,7.6
-SARI virological,Spain,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,225
-SARI virological,Spain,2026-W34,Influenza,Influenza,total,detections,total,10
-SARI virological,Spain,2026-W34,Influenza,Influenza,total,positivity,total,4.8
-SARI virological,Spain,2026-W34,Influenza,Influenza,total,tests,total,209
+SARI virological,Spain,2026-W35,RSV,RSV,RSV,tests,total,252
+SARI virological,Spain,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,19
+SARI virological,Spain,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,7.1
+SARI virological,Spain,2026-W35,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,266
+SARI virological,Spain,2026-W34,Influenza,Influenza,total,detections,total,11
+SARI virological,Spain,2026-W34,Influenza,Influenza,total,positivity,total,4.5
+SARI virological,Spain,2026-W34,Influenza,Influenza,total,tests,total,244
 SARI virological,Spain,2026-W34,Influenza,Influenza A,A (unknown),detections,total,6
-SARI virological,Spain,2026-W34,Influenza,Influenza A,A(H3),detections,total,4
+SARI virological,Spain,2026-W34,Influenza,Influenza A,A(H3),detections,total,5
 SARI virological,Spain,2026-W34,RSV,RSV,RSV,detections,total,2
-SARI virological,Spain,2026-W34,RSV,RSV,RSV,positivity,total,1
-SARI virological,Spain,2026-W34,RSV,RSV,RSV,tests,total,207
+SARI virological,Spain,2026-W34,RSV,RSV,RSV,positivity,total,0.8
+SARI virological,Spain,2026-W34,RSV,RSV,RSV,tests,total,238
 SARI virological,Spain,2026-W34,RSV,RSV untyped,NA,detections,total,1
 SARI virological,Spain,2026-W34,RSV,RSV-A,NA,detections,total,1
-SARI virological,Spain,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,13
-SARI virological,Spain,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,6.2
-SARI virological,Spain,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,209
+SARI virological,Spain,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,17
+SARI virological,Spain,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,7
+SARI virological,Spain,2026-W34,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,244
 SARI virological,Spain,2026-W33,Influenza,Influenza,total,detections,total,5
-SARI virological,Spain,2026-W33,Influenza,Influenza,total,positivity,total,2.2
-SARI virological,Spain,2026-W33,Influenza,Influenza,total,tests,total,230
+SARI virological,Spain,2026-W33,Influenza,Influenza,total,positivity,total,1.9
+SARI virological,Spain,2026-W33,Influenza,Influenza,total,tests,total,259
 SARI virological,Spain,2026-W33,Influenza,Influenza A,A (unknown),detections,total,4
 SARI virological,Spain,2026-W33,Influenza,Influenza A,A(H3),detections,total,1
 SARI virological,Spain,2026-W33,RSV,RSV,RSV,detections,total,2
-SARI virological,Spain,2026-W33,RSV,RSV,RSV,positivity,total,0.9
-SARI virological,Spain,2026-W33,RSV,RSV,RSV,tests,total,229
+SARI virological,Spain,2026-W33,RSV,RSV,RSV,positivity,total,0.8
+SARI virological,Spain,2026-W33,RSV,RSV,RSV,tests,total,247
 SARI virological,Spain,2026-W33,RSV,RSV untyped,NA,detections,total,2
 SARI virological,Spain,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,9
-SARI virological,Spain,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,3.9
-SARI virological,Spain,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,230
-SARI virological,Spain,2026-W32,Influenza,Influenza,total,detections,total,5
-SARI virological,Spain,2026-W32,Influenza,Influenza,total,positivity,total,2.3
-SARI virological,Spain,2026-W32,Influenza,Influenza,total,tests,total,218
-SARI virological,Spain,2026-W32,Influenza,Influenza A,A (unknown),detections,total,5
+SARI virological,Spain,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,3.5
+SARI virological,Spain,2026-W33,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,259
+SARI virological,Spain,2026-W32,Influenza,Influenza,total,detections,total,6
+SARI virological,Spain,2026-W32,Influenza,Influenza,total,positivity,total,2.4
+SARI virological,Spain,2026-W32,Influenza,Influenza,total,tests,total,246
+SARI virological,Spain,2026-W32,Influenza,Influenza A,A (unknown),detections,total,6
 SARI virological,Spain,2026-W32,RSV,RSV,RSV,detections,total,0
 SARI virological,Spain,2026-W32,RSV,RSV,RSV,positivity,total,0
-SARI virological,Spain,2026-W32,RSV,RSV,RSV,tests,total,217
-SARI virological,Spain,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,7
-SARI virological,Spain,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,3.2
-SARI virological,Spain,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,217
+SARI virological,Spain,2026-W32,RSV,RSV,RSV,tests,total,239
+SARI virological,Spain,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,9
+SARI virological,Spain,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,3.7
+SARI virological,Spain,2026-W32,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,245
 SARI virological,Spain,2026-W31,Influenza,Influenza,total,detections,total,2
 SARI virological,Spain,2026-W31,Influenza,Influenza,total,positivity,total,0.8
-SARI virological,Spain,2026-W31,Influenza,Influenza,total,tests,total,238
+SARI virological,Spain,2026-W31,Influenza,Influenza,total,tests,total,240
 SARI virological,Spain,2026-W31,Influenza,Influenza A,A (unknown),detections,total,1
 SARI virological,Spain,2026-W31,Influenza,Influenza A,A(H3),detections,total,1
 SARI virological,Spain,2026-W31,RSV,RSV,RSV,detections,total,1
@@ -23901,26 +24001,26 @@ SARI virological,Spain,2026-W31,RSV,RSV,RSV,tests,total,232
 SARI virological,Spain,2026-W31,RSV,RSV untyped,NA,detections,total,1
 SARI virological,Spain,2026-W31,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,4
 SARI virological,Spain,2026-W31,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,1.7
-SARI virological,Spain,2026-W31,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,237
+SARI virological,Spain,2026-W31,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,239
 SARI virological,Spain,2026-W30,Influenza,Influenza,total,detections,total,0
 SARI virological,Spain,2026-W30,Influenza,Influenza,total,positivity,total,0
 SARI virological,Spain,2026-W30,Influenza,Influenza,total,tests,total,285
 SARI virological,Spain,2026-W30,RSV,RSV,RSV,detections,total,1
 SARI virological,Spain,2026-W30,RSV,RSV,RSV,positivity,total,0.4
-SARI virological,Spain,2026-W30,RSV,RSV,RSV,tests,total,273
+SARI virological,Spain,2026-W30,RSV,RSV,RSV,tests,total,275
 SARI virological,Spain,2026-W30,RSV,RSV untyped,NA,detections,total,1
 SARI virological,Spain,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,2
 SARI virological,Spain,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.7
 SARI virological,Spain,2026-W30,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,285
 SARI virological,Spain,2026-W29,Influenza,Influenza,total,detections,total,0
 SARI virological,Spain,2026-W29,Influenza,Influenza,total,positivity,total,0
-SARI virological,Spain,2026-W29,Influenza,Influenza,total,tests,total,229
+SARI virological,Spain,2026-W29,Influenza,Influenza,total,tests,total,228
 SARI virological,Spain,2026-W29,RSV,RSV,RSV,detections,total,0
 SARI virological,Spain,2026-W29,RSV,RSV,RSV,positivity,total,0
 SARI virological,Spain,2026-W29,RSV,RSV,RSV,tests,total,220
 SARI virological,Spain,2026-W29,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,4
 SARI virological,Spain,2026-W29,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,1.7
-SARI virological,Spain,2026-W29,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,230
+SARI virological,Spain,2026-W29,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,229
 SARI virological,Spain,2026-W28,Influenza,Influenza,total,detections,total,0
 SARI virological,Spain,2026-W28,Influenza,Influenza,total,positivity,total,0
 SARI virological,Spain,2026-W28,Influenza,Influenza,total,tests,total,246
@@ -24165,9 +24265,9 @@ SARI virological,Spain,2026-W10,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,523
 SARI virological,Spain,2026-W09,Influenza,Influenza,total,detections,total,25
 SARI virological,Spain,2026-W09,Influenza,Influenza,total,positivity,total,4.8
 SARI virological,Spain,2026-W09,Influenza,Influenza,total,tests,total,526
-SARI virological,Spain,2026-W09,Influenza,Influenza A,A (unknown),detections,total,7
+SARI virological,Spain,2026-W09,Influenza,Influenza A,A (unknown),detections,total,8
 SARI virological,Spain,2026-W09,Influenza,Influenza A,A(H1)pdm09,detections,total,1
-SARI virological,Spain,2026-W09,Influenza,Influenza A,A(H3),detections,total,5
+SARI virological,Spain,2026-W09,Influenza,Influenza A,A(H3),detections,total,4
 SARI virological,Spain,2026-W09,Influenza,Influenza untyped,Influenza untyped,detections,total,12
 SARI virological,Spain,2026-W09,RSV,RSV,RSV,detections,total,68
 SARI virological,Spain,2026-W09,RSV,RSV,RSV,positivity,total,13.2
@@ -24194,10 +24294,10 @@ SARI virological,Spain,2026-W08,RSV,RSV-B,NA,detections,total,17
 SARI virological,Spain,2026-W08,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,5
 SARI virological,Spain,2026-W08,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.9
 SARI virological,Spain,2026-W08,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,538
-SARI virological,Spain,2026-W07,Influenza,Influenza,total,detections,total,29
-SARI virological,Spain,2026-W07,Influenza,Influenza,total,positivity,total,5.1
+SARI virological,Spain,2026-W07,Influenza,Influenza,total,detections,total,30
+SARI virological,Spain,2026-W07,Influenza,Influenza,total,positivity,total,5.3
 SARI virological,Spain,2026-W07,Influenza,Influenza,total,tests,total,567
-SARI virological,Spain,2026-W07,Influenza,Influenza A,A (unknown),detections,total,6
+SARI virological,Spain,2026-W07,Influenza,Influenza A,A (unknown),detections,total,7
 SARI virological,Spain,2026-W07,Influenza,Influenza A,A(H1)pdm09,detections,total,1
 SARI virological,Spain,2026-W07,Influenza,Influenza A,A(H3),detections,total,6
 SARI virological,Spain,2026-W07,Influenza,Influenza untyped,Influenza untyped,detections,total,16
@@ -24226,10 +24326,10 @@ SARI virological,Spain,2026-W06,RSV,RSV-B,NA,detections,total,29
 SARI virological,Spain,2026-W06,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,5
 SARI virological,Spain,2026-W06,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.8
 SARI virological,Spain,2026-W06,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,624
-SARI virological,Spain,2026-W05,Influenza,Influenza,total,detections,total,70
-SARI virological,Spain,2026-W05,Influenza,Influenza,total,positivity,total,10.4
+SARI virological,Spain,2026-W05,Influenza,Influenza,total,detections,total,71
+SARI virological,Spain,2026-W05,Influenza,Influenza,total,positivity,total,10.6
 SARI virological,Spain,2026-W05,Influenza,Influenza,total,tests,total,671
-SARI virological,Spain,2026-W05,Influenza,Influenza A,A (unknown),detections,total,31
+SARI virological,Spain,2026-W05,Influenza,Influenza A,A (unknown),detections,total,32
 SARI virological,Spain,2026-W05,Influenza,Influenza A,A(H1)pdm09,detections,total,8
 SARI virological,Spain,2026-W05,Influenza,Influenza A,A(H3),detections,total,18
 SARI virological,Spain,2026-W05,Influenza,Influenza B,B (unknown),detections,total,1
@@ -24247,9 +24347,9 @@ SARI virological,Spain,2026-W04,Influenza,Influenza,total,detections,total,123
 SARI virological,Spain,2026-W04,Influenza,Influenza,total,positivity,total,16
 SARI virological,Spain,2026-W04,Influenza,Influenza,total,tests,total,769
 SARI virological,Spain,2026-W04,Influenza,Influenza A,A (unknown),detections,total,47
-SARI virological,Spain,2026-W04,Influenza,Influenza A,A(H1)pdm09,detections,total,26
-SARI virological,Spain,2026-W04,Influenza,Influenza A,A(H3),detections,total,26
-SARI virological,Spain,2026-W04,Influenza,Influenza untyped,Influenza untyped,detections,total,24
+SARI virological,Spain,2026-W04,Influenza,Influenza A,A(H1)pdm09,detections,total,24
+SARI virological,Spain,2026-W04,Influenza,Influenza A,A(H3),detections,total,25
+SARI virological,Spain,2026-W04,Influenza,Influenza untyped,Influenza untyped,detections,total,27
 SARI virological,Spain,2026-W04,RSV,RSV,RSV,detections,total,164
 SARI virological,Spain,2026-W04,RSV,RSV,RSV,positivity,total,22
 SARI virological,Spain,2026-W04,RSV,RSV,RSV,tests,total,747
@@ -24259,28 +24359,28 @@ SARI virological,Spain,2026-W04,RSV,RSV-B,NA,detections,total,40
 SARI virological,Spain,2026-W04,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,2
 SARI virological,Spain,2026-W04,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.3
 SARI virological,Spain,2026-W04,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,768
-SARI virological,Spain,2026-W03,Influenza,Influenza,total,detections,total,250
-SARI virological,Spain,2026-W03,Influenza,Influenza,total,positivity,total,28.2
+SARI virological,Spain,2026-W03,Influenza,Influenza,total,detections,total,251
+SARI virological,Spain,2026-W03,Influenza,Influenza,total,positivity,total,28.3
 SARI virological,Spain,2026-W03,Influenza,Influenza,total,tests,total,887
-SARI virological,Spain,2026-W03,Influenza,Influenza A,A (unknown),detections,total,101
-SARI virological,Spain,2026-W03,Influenza,Influenza A,A(H1)pdm09,detections,total,41
-SARI virological,Spain,2026-W03,Influenza,Influenza A,A(H3),detections,total,63
-SARI virological,Spain,2026-W03,Influenza,Influenza untyped,Influenza untyped,detections,total,45
+SARI virological,Spain,2026-W03,Influenza,Influenza A,A (unknown),detections,total,103
+SARI virological,Spain,2026-W03,Influenza,Influenza A,A(H1)pdm09,detections,total,39
+SARI virological,Spain,2026-W03,Influenza,Influenza A,A(H3),detections,total,61
+SARI virological,Spain,2026-W03,Influenza,Influenza untyped,Influenza untyped,detections,total,48
 SARI virological,Spain,2026-W03,RSV,RSV,RSV,detections,total,136
 SARI virological,Spain,2026-W03,RSV,RSV,RSV,positivity,total,15.9
 SARI virological,Spain,2026-W03,RSV,RSV,RSV,tests,total,858
 SARI virological,Spain,2026-W03,RSV,RSV untyped,NA,detections,total,69
 SARI virological,Spain,2026-W03,RSV,RSV-A,NA,detections,total,29
 SARI virological,Spain,2026-W03,RSV,RSV-B,NA,detections,total,38
-SARI virological,Spain,2026-W03,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,6
-SARI virological,Spain,2026-W03,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.7
+SARI virological,Spain,2026-W03,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,5
+SARI virological,Spain,2026-W03,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.6
 SARI virological,Spain,2026-W03,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,882
 SARI virological,Spain,2026-W02,Influenza,Influenza,total,detections,total,312
 SARI virological,Spain,2026-W02,Influenza,Influenza,total,positivity,total,35.6
 SARI virological,Spain,2026-W02,Influenza,Influenza,total,tests,total,876
-SARI virological,Spain,2026-W02,Influenza,Influenza A,A (unknown),detections,total,138
-SARI virological,Spain,2026-W02,Influenza,Influenza A,A(H1)pdm09,detections,total,52
-SARI virological,Spain,2026-W02,Influenza,Influenza A,A(H3),detections,total,90
+SARI virological,Spain,2026-W02,Influenza,Influenza A,A (unknown),detections,total,141
+SARI virological,Spain,2026-W02,Influenza,Influenza A,A(H1)pdm09,detections,total,50
+SARI virological,Spain,2026-W02,Influenza,Influenza A,A(H3),detections,total,89
 SARI virological,Spain,2026-W02,Influenza,Influenza untyped,Influenza untyped,detections,total,32
 SARI virological,Spain,2026-W02,RSV,RSV,RSV,detections,total,111
 SARI virological,Spain,2026-W02,RSV,RSV,RSV,positivity,total,13
@@ -24291,13 +24391,13 @@ SARI virological,Spain,2026-W02,RSV,RSV-B,NA,detections,total,18
 SARI virological,Spain,2026-W02,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,8
 SARI virological,Spain,2026-W02,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.9
 SARI virological,Spain,2026-W02,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,875
-SARI virological,Spain,2026-W01,Influenza,Influenza,total,detections,total,434
-SARI virological,Spain,2026-W01,Influenza,Influenza,total,positivity,total,41.5
+SARI virological,Spain,2026-W01,Influenza,Influenza,total,detections,total,433
+SARI virological,Spain,2026-W01,Influenza,Influenza,total,positivity,total,41.4
 SARI virological,Spain,2026-W01,Influenza,Influenza,total,tests,total,1047
-SARI virological,Spain,2026-W01,Influenza,Influenza A,A (unknown),detections,total,208
-SARI virological,Spain,2026-W01,Influenza,Influenza A,A(H1)pdm09,detections,total,63
-SARI virological,Spain,2026-W01,Influenza,Influenza A,A(H3),detections,total,127
-SARI virological,Spain,2026-W01,Influenza,Influenza untyped,Influenza untyped,detections,total,36
+SARI virological,Spain,2026-W01,Influenza,Influenza A,A (unknown),detections,total,219
+SARI virological,Spain,2026-W01,Influenza,Influenza A,A(H1)pdm09,detections,total,55
+SARI virological,Spain,2026-W01,Influenza,Influenza A,A(H3),detections,total,117
+SARI virological,Spain,2026-W01,Influenza,Influenza untyped,Influenza untyped,detections,total,42
 SARI virological,Spain,2026-W01,RSV,RSV,RSV,detections,total,129
 SARI virological,Spain,2026-W01,RSV,RSV,RSV,positivity,total,13
 SARI virological,Spain,2026-W01,RSV,RSV,RSV,tests,total,993
@@ -24307,13 +24407,13 @@ SARI virological,Spain,2026-W01,RSV,RSV-B,NA,detections,total,34
 SARI virological,Spain,2026-W01,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,9
 SARI virological,Spain,2026-W01,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.9
 SARI virological,Spain,2026-W01,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,1042
-SARI virological,Spain,2025-W52,Influenza,Influenza,total,detections,total,343
-SARI virological,Spain,2025-W52,Influenza,Influenza,total,positivity,total,38.3
+SARI virological,Spain,2025-W52,Influenza,Influenza,total,detections,total,342
+SARI virological,Spain,2025-W52,Influenza,Influenza,total,positivity,total,38.2
 SARI virological,Spain,2025-W52,Influenza,Influenza,total,tests,total,896
-SARI virological,Spain,2025-W52,Influenza,Influenza A,A (unknown),detections,total,149
-SARI virological,Spain,2025-W52,Influenza,Influenza A,A(H1)pdm09,detections,total,56
-SARI virological,Spain,2025-W52,Influenza,Influenza A,A(H3),detections,total,120
-SARI virological,Spain,2025-W52,Influenza,Influenza untyped,Influenza untyped,detections,total,18
+SARI virological,Spain,2025-W52,Influenza,Influenza A,A (unknown),detections,total,162
+SARI virological,Spain,2025-W52,Influenza,Influenza A,A(H1)pdm09,detections,total,44
+SARI virological,Spain,2025-W52,Influenza,Influenza A,A(H3),detections,total,105
+SARI virological,Spain,2025-W52,Influenza,Influenza untyped,Influenza untyped,detections,total,31
 SARI virological,Spain,2025-W52,RSV,RSV,RSV,detections,total,111
 SARI virological,Spain,2025-W52,RSV,RSV,RSV,positivity,total,13
 SARI virological,Spain,2025-W52,RSV,RSV,RSV,tests,total,853
@@ -24326,11 +24426,11 @@ SARI virological,Spain,2025-W52,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,889
 SARI virological,Spain,2025-W51,Influenza,Influenza,total,detections,total,369
 SARI virological,Spain,2025-W51,Influenza,Influenza,total,positivity,total,39.3
 SARI virological,Spain,2025-W51,Influenza,Influenza,total,tests,total,938
-SARI virological,Spain,2025-W51,Influenza,Influenza A,A (unknown),detections,total,179
-SARI virological,Spain,2025-W51,Influenza,Influenza A,A(H1)pdm09,detections,total,40
-SARI virological,Spain,2025-W51,Influenza,Influenza A,A(H3),detections,total,121
+SARI virological,Spain,2025-W51,Influenza,Influenza A,A (unknown),detections,total,185
+SARI virological,Spain,2025-W51,Influenza,Influenza A,A(H1)pdm09,detections,total,36
+SARI virological,Spain,2025-W51,Influenza,Influenza A,A(H3),detections,total,116
 SARI virological,Spain,2025-W51,Influenza,Influenza B,B (unknown),detections,total,1
-SARI virological,Spain,2025-W51,Influenza,Influenza untyped,Influenza untyped,detections,total,28
+SARI virological,Spain,2025-W51,Influenza,Influenza untyped,Influenza untyped,detections,total,31
 SARI virological,Spain,2025-W51,RSV,RSV,RSV,detections,total,101
 SARI virological,Spain,2025-W51,RSV,RSV,RSV,positivity,total,11
 SARI virological,Spain,2025-W51,RSV,RSV,RSV,tests,total,921
@@ -24340,13 +24440,13 @@ SARI virological,Spain,2025-W51,RSV,RSV-B,NA,detections,total,26
 SARI virological,Spain,2025-W51,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,6
 SARI virological,Spain,2025-W51,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,0.6
 SARI virological,Spain,2025-W51,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,933
-SARI virological,Spain,2025-W50,Influenza,Influenza,total,detections,total,369
-SARI virological,Spain,2025-W50,Influenza,Influenza,total,positivity,total,40.8
+SARI virological,Spain,2025-W50,Influenza,Influenza,total,detections,total,370
+SARI virological,Spain,2025-W50,Influenza,Influenza,total,positivity,total,40.9
 SARI virological,Spain,2025-W50,Influenza,Influenza,total,tests,total,905
-SARI virological,Spain,2025-W50,Influenza,Influenza A,A (unknown),detections,total,150
-SARI virological,Spain,2025-W50,Influenza,Influenza A,A(H1)pdm09,detections,total,54
-SARI virological,Spain,2025-W50,Influenza,Influenza A,A(H3),detections,total,123
-SARI virological,Spain,2025-W50,Influenza,Influenza untyped,Influenza untyped,detections,total,42
+SARI virological,Spain,2025-W50,Influenza,Influenza A,A (unknown),detections,total,154
+SARI virological,Spain,2025-W50,Influenza,Influenza A,A(H1)pdm09,detections,total,46
+SARI virological,Spain,2025-W50,Influenza,Influenza A,A(H3),detections,total,121
+SARI virological,Spain,2025-W50,Influenza,Influenza untyped,Influenza untyped,detections,total,49
 SARI virological,Spain,2025-W50,RSV,RSV,RSV,detections,total,84
 SARI virological,Spain,2025-W50,RSV,RSV,RSV,positivity,total,9.9
 SARI virological,Spain,2025-W50,RSV,RSV,RSV,tests,total,851
@@ -24359,10 +24459,10 @@ SARI virological,Spain,2025-W50,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,896
 SARI virological,Spain,2025-W49,Influenza,Influenza,total,detections,total,265
 SARI virological,Spain,2025-W49,Influenza,Influenza,total,positivity,total,35.8
 SARI virological,Spain,2025-W49,Influenza,Influenza,total,tests,total,740
-SARI virological,Spain,2025-W49,Influenza,Influenza A,A (unknown),detections,total,98
-SARI virological,Spain,2025-W49,Influenza,Influenza A,A(H1)pdm09,detections,total,55
-SARI virological,Spain,2025-W49,Influenza,Influenza A,A(H3),detections,total,85
-SARI virological,Spain,2025-W49,Influenza,Influenza untyped,Influenza untyped,detections,total,27
+SARI virological,Spain,2025-W49,Influenza,Influenza A,A (unknown),detections,total,106
+SARI virological,Spain,2025-W49,Influenza,Influenza A,A(H1)pdm09,detections,total,49
+SARI virological,Spain,2025-W49,Influenza,Influenza A,A(H3),detections,total,80
+SARI virological,Spain,2025-W49,Influenza,Influenza untyped,Influenza untyped,detections,total,30
 SARI virological,Spain,2025-W49,RSV,RSV,RSV,detections,total,58
 SARI virological,Spain,2025-W49,RSV,RSV,RSV,positivity,total,8.3
 SARI virological,Spain,2025-W49,RSV,RSV,RSV,tests,total,702
@@ -24375,10 +24475,10 @@ SARI virological,Spain,2025-W49,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,735
 SARI virological,Spain,2025-W48,Influenza,Influenza,total,detections,total,141
 SARI virological,Spain,2025-W48,Influenza,Influenza,total,positivity,total,25.1
 SARI virological,Spain,2025-W48,Influenza,Influenza,total,tests,total,561
-SARI virological,Spain,2025-W48,Influenza,Influenza A,A (unknown),detections,total,46
-SARI virological,Spain,2025-W48,Influenza,Influenza A,A(H1)pdm09,detections,total,31
-SARI virological,Spain,2025-W48,Influenza,Influenza A,A(H3),detections,total,45
-SARI virological,Spain,2025-W48,Influenza,Influenza untyped,Influenza untyped,detections,total,19
+SARI virological,Spain,2025-W48,Influenza,Influenza A,A (unknown),detections,total,51
+SARI virological,Spain,2025-W48,Influenza,Influenza A,A(H1)pdm09,detections,total,26
+SARI virological,Spain,2025-W48,Influenza,Influenza A,A(H3),detections,total,44
+SARI virological,Spain,2025-W48,Influenza,Influenza untyped,Influenza untyped,detections,total,20
 SARI virological,Spain,2025-W48,RSV,RSV,RSV,detections,total,53
 SARI virological,Spain,2025-W48,RSV,RSV,RSV,positivity,total,9.7
 SARI virological,Spain,2025-W48,RSV,RSV,RSV,tests,total,545
@@ -24391,9 +24491,9 @@ SARI virological,Spain,2025-W48,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,558
 SARI virological,Spain,2025-W47,Influenza,Influenza,total,detections,total,89
 SARI virological,Spain,2025-W47,Influenza,Influenza,total,positivity,total,18.5
 SARI virological,Spain,2025-W47,Influenza,Influenza,total,tests,total,481
-SARI virological,Spain,2025-W47,Influenza,Influenza A,A (unknown),detections,total,32
-SARI virological,Spain,2025-W47,Influenza,Influenza A,A(H1)pdm09,detections,total,24
-SARI virological,Spain,2025-W47,Influenza,Influenza A,A(H3),detections,total,28
+SARI virological,Spain,2025-W47,Influenza,Influenza A,A (unknown),detections,total,36
+SARI virological,Spain,2025-W47,Influenza,Influenza A,A(H1)pdm09,detections,total,22
+SARI virological,Spain,2025-W47,Influenza,Influenza A,A(H3),detections,total,26
 SARI virological,Spain,2025-W47,Influenza,Influenza untyped,Influenza untyped,detections,total,5
 SARI virological,Spain,2025-W47,RSV,RSV,RSV,detections,total,26
 SARI virological,Spain,2025-W47,RSV,RSV,RSV,positivity,total,5.6
@@ -24407,9 +24507,9 @@ SARI virological,Spain,2025-W47,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,481
 SARI virological,Spain,2025-W46,Influenza,Influenza,total,detections,total,88
 SARI virological,Spain,2025-W46,Influenza,Influenza,total,positivity,total,18.9
 SARI virological,Spain,2025-W46,Influenza,Influenza,total,tests,total,465
-SARI virological,Spain,2025-W46,Influenza,Influenza A,A (unknown),detections,total,38
-SARI virological,Spain,2025-W46,Influenza,Influenza A,A(H1)pdm09,detections,total,21
-SARI virological,Spain,2025-W46,Influenza,Influenza A,A(H3),detections,total,15
+SARI virological,Spain,2025-W46,Influenza,Influenza A,A (unknown),detections,total,42
+SARI virological,Spain,2025-W46,Influenza,Influenza A,A(H1)pdm09,detections,total,18
+SARI virological,Spain,2025-W46,Influenza,Influenza A,A(H3),detections,total,14
 SARI virological,Spain,2025-W46,Influenza,Influenza B,B (unknown),detections,total,1
 SARI virological,Spain,2025-W46,Influenza,Influenza untyped,Influenza untyped,detections,total,13
 SARI virological,Spain,2025-W46,RSV,RSV,RSV,detections,total,15
@@ -24440,10 +24540,10 @@ SARI virological,Spain,2025-W45,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,394
 SARI virological,Spain,2025-W44,Influenza,Influenza,total,detections,total,55
 SARI virological,Spain,2025-W44,Influenza,Influenza,total,positivity,total,14
 SARI virological,Spain,2025-W44,Influenza,Influenza,total,tests,total,394
-SARI virological,Spain,2025-W44,Influenza,Influenza A,A (unknown),detections,total,18
-SARI virological,Spain,2025-W44,Influenza,Influenza A,A(H1)pdm09,detections,total,20
+SARI virological,Spain,2025-W44,Influenza,Influenza A,A (unknown),detections,total,21
+SARI virological,Spain,2025-W44,Influenza,Influenza A,A(H1)pdm09,detections,total,14
 SARI virological,Spain,2025-W44,Influenza,Influenza A,A(H3),detections,total,4
-SARI virological,Spain,2025-W44,Influenza,Influenza untyped,Influenza untyped,detections,total,13
+SARI virological,Spain,2025-W44,Influenza,Influenza untyped,Influenza untyped,detections,total,16
 SARI virological,Spain,2025-W44,RSV,RSV,RSV,detections,total,7
 SARI virological,Spain,2025-W44,RSV,RSV,RSV,positivity,total,1.8
 SARI virological,Spain,2025-W44,RSV,RSV,RSV,tests,total,379
@@ -24469,11 +24569,11 @@ SARI virological,Spain,2025-W43,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,423
 SARI virological,Spain,2025-W42,Influenza,Influenza,total,detections,total,46
 SARI virological,Spain,2025-W42,Influenza,Influenza,total,positivity,total,10.2
 SARI virological,Spain,2025-W42,Influenza,Influenza,total,tests,total,449
-SARI virological,Spain,2025-W42,Influenza,Influenza A,A (unknown),detections,total,20
-SARI virological,Spain,2025-W42,Influenza,Influenza A,A(H1)pdm09,detections,total,11
+SARI virological,Spain,2025-W42,Influenza,Influenza A,A (unknown),detections,total,22
+SARI virological,Spain,2025-W42,Influenza,Influenza A,A(H1)pdm09,detections,total,8
 SARI virological,Spain,2025-W42,Influenza,Influenza A,A(H3),detections,total,4
 SARI virological,Spain,2025-W42,Influenza,Influenza B,B (unknown),detections,total,1
-SARI virological,Spain,2025-W42,Influenza,Influenza untyped,Influenza untyped,detections,total,10
+SARI virological,Spain,2025-W42,Influenza,Influenza untyped,Influenza untyped,detections,total,11
 SARI virological,Spain,2025-W42,RSV,RSV,RSV,detections,total,4
 SARI virological,Spain,2025-W42,RSV,RSV,RSV,positivity,total,0.9
 SARI virological,Spain,2025-W42,RSV,RSV,RSV,tests,total,432
@@ -24486,8 +24586,8 @@ SARI virological,Spain,2025-W42,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,451
 SARI virological,Spain,2025-W41,Influenza,Influenza,total,detections,total,60
 SARI virological,Spain,2025-W41,Influenza,Influenza,total,positivity,total,13.5
 SARI virological,Spain,2025-W41,Influenza,Influenza,total,tests,total,445
-SARI virological,Spain,2025-W41,Influenza,Influenza A,A (unknown),detections,total,27
-SARI virological,Spain,2025-W41,Influenza,Influenza A,A(H1)pdm09,detections,total,10
+SARI virological,Spain,2025-W41,Influenza,Influenza A,A (unknown),detections,total,29
+SARI virological,Spain,2025-W41,Influenza,Influenza A,A(H1)pdm09,detections,total,8
 SARI virological,Spain,2025-W41,Influenza,Influenza A,A(H3),detections,total,6
 SARI virological,Spain,2025-W41,Influenza,Influenza untyped,Influenza untyped,detections,total,17
 SARI virological,Spain,2025-W41,RSV,RSV,RSV,detections,total,0
@@ -24508,8 +24608,8 @@ SARI virological,Spain,2025-W40,RSV,RSV,RSV,detections,total,1
 SARI virological,Spain,2025-W40,RSV,RSV,RSV,positivity,total,0.3
 SARI virological,Spain,2025-W40,RSV,RSV,RSV,tests,total,369
 SARI virological,Spain,2025-W40,RSV,RSV-A,NA,detections,total,1
-SARI virological,Spain,2025-W40,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,57
-SARI virological,Spain,2025-W40,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,14.8
+SARI virological,Spain,2025-W40,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,detections,total,56
+SARI virological,Spain,2025-W40,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,positivity,total,14.6
 SARI virological,Spain,2025-W40,SARS-CoV-2,SARS-CoV-2,SARS-CoV-2,tests,total,384
 SARI virological,Spain,2025-W39,Influenza,Influenza,total,detections,total,14
 SARI virological,Spain,2025-W39,Influenza,Influenza,total,positivity,total,5.3
