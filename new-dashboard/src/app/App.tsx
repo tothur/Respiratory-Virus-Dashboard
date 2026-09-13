@@ -7,6 +7,7 @@ import { loadRuntimeDataSource } from "../data/runtime-source";
 import { buildIliTrendOption } from "../charts/iliTrend";
 import { buildHistoricalTrendOption, formatSignedPercent } from "../charts/historicalTrend";
 import { buildVirologyDetectionsOption, buildVirologyPositivityOption, displayVirusLabel } from "../charts/virologyTrend";
+import { buildWastewaterTrendOption } from "../charts/wastewaterTrend";
 import { EChartsPanel } from "../components/EChartsPanel";
 
 const DEFAULT_DATASET = "NNGYK";
@@ -95,7 +96,7 @@ const STRINGS = {
     sectionCollapse: "Collapse",
     sectionExpand: "Expand",
     sourceTitle: "Data source",
-    sourceLive: "Live source: nngyk_all.json",
+    sourceLive: "Live sources: NNGYK bulletins + wastewater, ECDC ERVISS",
     sourceFallback: "Fallback source: bundled sample",
     sourceLoading: "loading",
     sectionKicker: "Section",
@@ -124,16 +125,28 @@ const STRINGS = {
     decisionStableHigh: "Influenza pressure remains high",
     decisionRisingBelow: "Influenza activity is rising",
     decisionStableLow: "No influenza epidemic",
+    decisionWastewater: "Wastewater monitoring is the current Hungarian signal",
+    decisionAwaitingSentinel: "2026/2027 sentinel surveillance is not yet available",
     decisionFreshness: "Updated",
     decisionEvidenceIli: "View ILI and SARI charts",
     decisionEvidenceHuPositivity: "View sentinel positivity",
     decisionEvidenceEuPositivity: "View EU positivity",
+    decisionEvidenceWastewater: "View wastewater trends",
+    wastewaterTitle: "Wastewater monitoring",
+    wastewaterNote: "Provisional NNGYK national weighted concentrations; these cannot be converted directly into case counts.",
+    wastewaterChart: "Respiratory-virus concentration in wastewater",
+    wastewaterChartSubtitle: "Logarithmic scale · genome copies per litre (GC/L)",
+    wastewaterLatest: "Latest national concentrations",
+    wastewaterSource: "Official NNGYK report",
+    wastewaterPreseason: "Pre-season signal for 2026/2027",
+    wastewaterUnavailable: "No wastewater measurements are available for this season.",
     coverageNngyk: "Coverage · NNGYK",
     coverageNngykNote: "Latest ILI week in selected season",
     coverageSari: "Coverage · SARI",
     coverageSariNote: "Latest SARI week in selected season",
     coverageErviss: "Coverage · ERVISS",
     coverageErvissNote: "Latest EU/EEA reporting week",
+    coverageWastewater: "Coverage · wastewater",
     coverageMissing: "Missing weeks (ILI/SARI)",
     coverageMissingNote: "Gaps within each season timeline",
     coverageAria: "Data coverage indicators",
@@ -264,7 +277,7 @@ const STRINGS = {
     sectionCollapse: "Összecsuk",
     sectionExpand: "Kinyit",
     sourceTitle: "Adatforrás",
-    sourceLive: "Élő forrás: nngyk_all.json",
+    sourceLive: "Élő források: NNGYK jelentések + szennyvíz, ECDC ERVISS",
     sourceFallback: "Tartalék forrás: beépített minta",
     sourceLoading: "betöltés",
     sectionKicker: "Szekció",
@@ -293,16 +306,28 @@ const STRINGS = {
     decisionStableHigh: "Az influenzaaktivitás továbbra is magas",
     decisionRisingBelow: "Az influenzaaktivitás emelkedik",
     decisionStableLow: "Nincs influenza járvány",
+    decisionWastewater: "Jelenleg a szennyvíz-monitoring ad friss magyarországi jelzést",
+    decisionAwaitingSentinel: "A 2026/2027-es figyelőszolgálati adatok még nem érhetők el",
     decisionFreshness: "Frissítés",
     decisionEvidenceIli: "ILI és SARI grafikon",
     decisionEvidenceHuPositivity: "Sentinel pozitivitás",
     decisionEvidenceEuPositivity: "EU pozitivitás",
+    decisionEvidenceWastewater: "Szennyvíztrendek megnyitása",
+    wastewaterTitle: "Szennyvíz-monitoring",
+    wastewaterNote: "Előzetes, lakosságszámmal súlyozott országos NNGYK-koncentrációk; az értékekből nem számítható közvetlenül esetszám.",
+    wastewaterChart: "Légúti vírusok koncentrációja a szennyvízben",
+    wastewaterChartSubtitle: "Logaritmikus skála · genomkópia/liter (GC/L)",
+    wastewaterLatest: "Legfrissebb országos koncentrációk",
+    wastewaterSource: "Hivatalos NNGYK-jelentés",
+    wastewaterPreseason: "Előszezoni jelzés a 2026/2027-es szezonhoz",
+    wastewaterUnavailable: "Ehhez a szezonhoz nincs elérhető szennyvízadat.",
     coverageNngyk: "Lefedettség · NNGYK",
     coverageNngykNote: "A kiválasztott szezon legfrissebb ILI hete",
     coverageSari: "Lefedettség · SARI",
     coverageSariNote: "A kiválasztott szezon legfrissebb SARI hete",
     coverageErviss: "Lefedettség · ERVISS",
     coverageErvissNote: "Legfrissebb EU/EGT jelentési hét",
+    coverageWastewater: "Lefedettség · szennyvíz",
     coverageMissing: "Hiányzó hetek (ILI/SARI)",
     coverageMissingNote: "Rések az egyes szezonidősorokban",
     coverageAria: "Adatlefedettségi jelzők",
@@ -911,10 +936,11 @@ export function App() {
   const snapshot = useMemo(() => buildDashboardSnapshot(dataSource, selectedYear), [dataSource, selectedYear]);
 
   useEffect(() => {
+    if (isDataLoading) return;
     if (selectedYear == null || !snapshot.availableYears.includes(selectedYear)) {
       setSelectedYear(snapshot.selectedYear);
     }
-  }, [selectedYear, snapshot.availableYears, snapshot.selectedYear]);
+  }, [isDataLoading, selectedYear, snapshot.availableYears, snapshot.selectedYear]);
 
   useEffect(() => {
     if (
@@ -1140,6 +1166,11 @@ export function App() {
         dark: isDark,
       }),
     [compact, isDark, language, snapshot.virology.positivityRows]
+  );
+
+  const wastewaterOption = useMemo<EChartsOption>(
+    () => buildWastewaterTrendOption({ points: snapshot.wastewater.points, language, dark: isDark }),
+    [isDark, language, snapshot.wastewater.points]
   );
 
   const euDetectionsOption = useMemo<EChartsOption>(
@@ -1612,10 +1643,19 @@ export function App() {
     setTableSortDirection("asc");
   };
 
-  const isAboveThreshold = snapshot.stats.latestIliCases >= snapshot.iliThreshold;
+  const hasIliData = snapshot.iliSeries.length > 0;
+  const isAboveThreshold = hasIliData && snapshot.stats.latestIliCases >= snapshot.iliThreshold;
   const signalClassName = isAboveThreshold ? "critical" : "ok";
   const latestIliCasesLabel = snapshot.stats.latestIliCases.toLocaleString();
   const iliThresholdLabel = snapshot.iliThreshold.toLocaleString();
+  const latestWastewaterRows = snapshot.wastewater.latestWeek == null
+    ? []
+    : snapshot.wastewater.points
+        .filter((point) => point.year === snapshot.wastewater.latestYear && point.week === snapshot.wastewater.latestWeek)
+        .slice()
+        .sort((a, b) => b.concentration - a.concentration);
+  const leadingWastewater = latestWastewaterRows[0] ?? null;
+  const wastewaterWeekLabel = formatYearWeek(snapshot.wastewater.latestYear, snapshot.wastewater.latestWeek);
   const huIliUpdatedYearWeekLabel =
     snapshot.stats.latestWeek == null
       ? "–"
@@ -1626,6 +1666,7 @@ export function App() {
     ? surgeSignals.filter((signal) => signal !== primaryTrendSignal).slice(0, 3)
     : [];
   const weeklySituationHeadline = (() => {
+    if (!hasIliData) return snapshot.wastewater.available ? t.decisionWastewater : t.decisionAwaitingSentinel;
     const delta = iliTrendSignal?.change;
     if (isAboveThreshold) {
       if (delta != null && delta >= 8) return t.decisionIncreasing;
@@ -1650,7 +1691,12 @@ export function App() {
     window.setTimeout(() => queueEvidenceScroll(targetId, attempt + 1), 80);
   };
 
-  const jumpToEvidence = (target: "hu-ili-sari-charts" | "hu-sentinel-positivity" | "eu-positivity-chart") => {
+  const jumpToEvidence = (target: "hu-ili-sari-charts" | "hu-sentinel-positivity" | "hu-wastewater" | "eu-positivity-chart") => {
+    if (target === "hu-wastewater") {
+      setIsHungarySectionOpen(true);
+      queueEvidenceScroll(target);
+      return;
+    }
     if (target === "hu-ili-sari-charts") {
       setIsHungarySectionOpen(true);
       queueEvidenceScroll(target);
@@ -1676,12 +1722,17 @@ export function App() {
         ? `${calendarYearFromNhSeasonWeek(snapshot.euVirology.targetYear, snapshot.euVirology.latestWeek)} · ${formatWeek(snapshot.euVirology.latestWeek, language)}`
         : `${calendarYearFromNhSeasonWeek(snapshot.euVirology.targetYear, snapshot.euVirology.latestWeek)}-${formatWeek(snapshot.euVirology.latestWeek, language)}`
       : "–";
-  const huLeaderVirus = huLeader ? displayVirusLabel(huLeader.virus, language) : t.noDataShort;
-  const huLeaderClass = virusClassName(huLeader?.virus);
-  const huLeaderPositivityLabel = huLeader ? `${huLeader.positivity.toFixed(1)}%` : "–";
+  const huAlertVirus = huLeader?.virus ?? leadingWastewater?.virus;
+  const huLeaderVirus = huAlertVirus ? displayVirusLabel(huAlertVirus, language) : t.noDataShort;
+  const huLeaderClass = virusClassName(huAlertVirus);
+  const huLeaderPositivityLabel = huLeader
+    ? `${huLeader.positivity.toFixed(1)}%`
+    : leadingWastewater
+      ? `${leadingWastewater.concentration.toLocaleString(language === "hu" ? "hu-HU" : "en-US", { maximumFractionDigits: 0 })} GC/L`
+      : "–";
   const huLeaderUpdatedYearWeekLabel = huLeader
     ? formatYearWeek(calendarYearFromNhSeasonWeek(snapshot.selectedYear, huLeader.week), huLeader.week)
-    : "–";
+    : wastewaterWeekLabel;
   const euLeaderVirus = euLeader ? displayVirusLabel(euLeader.virus, language) : t.noDataShort;
   const euLeaderClass = virusClassName(euLeader?.virus);
   const euLeaderPositivityLabel = euLeader ? `${euLeader.positivity.toFixed(1)}%` : "–";
@@ -1758,7 +1809,7 @@ export function App() {
         >
           <div className="alert-topline">
             <span className="alert-region-badge">{t.alertRegionHu}</span>
-            <span className="alert-updated-chip">{huIliUpdatedYearWeekLabel}</span>
+            <span className="alert-updated-chip">{hasIliData ? huIliUpdatedYearWeekLabel : wastewaterWeekLabel}</span>
           </div>
           <div className="alert-main">
             <h2>
@@ -1771,18 +1822,37 @@ export function App() {
             </h2>
           </div>
           <div className="alert-metric-line">
-            <span className="alert-metric">
-              <strong>{latestIliCasesLabel}</strong>
-              <span>{t.statsTotalIli}</span>
-            </span>
-            <span className="alert-metric">
-              <strong>{iliThresholdLabel}</strong>
-              <span>{t.alertThreshold}</span>
-            </span>
+            {hasIliData ? (
+              <>
+                <span className="alert-metric">
+                  <strong>{latestIliCasesLabel}</strong>
+                  <span>{t.statsTotalIli}</span>
+                </span>
+                <span className="alert-metric">
+                  <strong>{iliThresholdLabel}</strong>
+                  <span>{t.alertThreshold}</span>
+                </span>
+              </>
+            ) : (
+              <>
+                <span className="alert-metric">
+                  <strong>{wastewaterWeekLabel}</strong>
+                  <span>{t.wastewaterLatest}</span>
+                </span>
+                <span className="alert-metric">
+                  <strong>{snapshot.wastewater.sourceUpdatedAt ?? "–"}</strong>
+                  <span>{t.wastewaterPreseason}</span>
+                </span>
+              </>
+            )}
           </div>
           <div className="alert-actions-row single-action">
-            <button type="button" className="alert-evidence-btn" onClick={() => jumpToEvidence("hu-ili-sari-charts")}>
-              {t.decisionEvidenceIli}
+            <button
+              type="button"
+              className="alert-evidence-btn"
+              onClick={() => jumpToEvidence(hasIliData ? "hu-ili-sari-charts" : "hu-wastewater")}
+            >
+              {hasIliData ? t.decisionEvidenceIli : t.decisionEvidenceWastewater}
             </button>
           </div>
         </article>
@@ -1793,21 +1863,25 @@ export function App() {
             <span className="alert-updated-chip">{huLeaderUpdatedYearWeekLabel}</span>
           </div>
           <div className="alert-virus-readout">
-            <VirusIcon virus={huLeader?.virus} />
+            <VirusIcon virus={huAlertVirus} />
             <div>
-              <span className="alert-scope">{t.alertHuVirusPositivity}</span>
+              <span className="alert-scope">{huLeader ? t.alertHuVirusPositivity : t.wastewaterLatest}</span>
               <strong className="alert-virus-name">{huLeaderVirus}</strong>
             </div>
           </div>
           <div className="alert-metric-line single">
             <span className="alert-metric pathogen-metric">
               <strong>{huLeaderPositivityLabel}</strong>
-              <span>{t.alertMetricPositivity}</span>
+              <span>{huLeader ? t.alertMetricPositivity : t.wastewaterChartSubtitle}</span>
             </span>
           </div>
           <div className="alert-actions-row single-action">
-            <button type="button" className="alert-evidence-btn" onClick={() => jumpToEvidence("hu-sentinel-positivity")}>
-              {t.decisionEvidenceHuPositivity}
+            <button
+              type="button"
+              className="alert-evidence-btn"
+              onClick={() => jumpToEvidence(huLeader ? "hu-sentinel-positivity" : "hu-wastewater")}
+            >
+              {huLeader ? t.decisionEvidenceHuPositivity : t.decisionEvidenceWastewater}
             </button>
           </div>
         </article>
@@ -1864,6 +1938,47 @@ export function App() {
 
         {isHungarySectionOpen ? (
           <div id="hu-region-content" className="region-content">
+            <section id="hu-wastewater" className="wastewater-section" aria-label={t.wastewaterTitle}>
+              <header className="virology-header wastewater-header">
+                <div>
+                  <h2>{t.wastewaterTitle}</h2>
+                  <p>{t.wastewaterNote}</p>
+                </div>
+                {snapshot.wastewater.sourceUrl ? (
+                  <a className="source-link" href={snapshot.wastewater.sourceUrl} target="_blank" rel="noreferrer">
+                    {t.wastewaterSource}
+                  </a>
+                ) : null}
+              </header>
+              {snapshot.wastewater.available ? (
+                <div className="wastewater-content">
+                  <EChartsPanel
+                    title={t.wastewaterChart}
+                    subtitle={`${t.wastewaterChartSubtitle} · ${wastewaterWeekLabel}`}
+                    option={wastewaterOption}
+                  />
+                  <article className="virology-list-card wastewater-latest">
+                    <h3>{t.wastewaterLatest}</h3>
+                    <ul>
+                      {latestWastewaterRows.map((row) => (
+                        <li key={`${row.year}-${row.week}-${row.virus}`} className={virusClassName(row.virus)}>
+                          <span className="pathogen-name">
+                            <span className="virus-dot" aria-hidden="true" />
+                            {displayVirusLabel(row.virus, language)}
+                          </span>
+                          <strong>
+                            {row.concentration.toLocaleString(language === "hu" ? "hu-HU" : "en-US", { maximumFractionDigits: 0 })} GC/L
+                          </strong>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="wastewater-caveat">{t.wastewaterPreseason}</p>
+                  </article>
+                </div>
+              ) : (
+                <p className="virology-empty">{t.wastewaterUnavailable}</p>
+              )}
+            </section>
             <section className="briefing-grid">
               <section className="stats-grid briefing-stats-grid">
                 <article
@@ -1911,7 +2026,7 @@ export function App() {
                     <h3>{t.statsTotalIli}</h3>
                     <span className="stat-week-chip">{formatWeek(snapshot.stats.latestWeek, language)}</span>
                   </div>
-                  <strong>{snapshot.stats.latestIliCases.toLocaleString()}</strong>
+                  <strong>{hasIliData ? snapshot.stats.latestIliCases.toLocaleString() : "–"}</strong>
                 </article>
                 <article className="stat-card stat-card-hospital">
                   <div className="stat-card-ili-head">
@@ -2542,6 +2657,9 @@ export function App() {
           </span>
           <span className="footer-chip">
             {t.coverageErviss}: {latestEuWeekLabel}
+          </span>
+          <span className="footer-chip">
+            {t.coverageWastewater}: {wastewaterWeekLabel}
           </span>
           <span className={`footer-chip ${iliMissingWeeks.length + sariMissingWeeks.length ? "warn" : "ok"}`}>
             {t.coverageMissing}: {iliMissingWeeks.length}/{sariMissingWeeks.length}

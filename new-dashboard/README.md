@@ -13,6 +13,7 @@ This folder contains a parallel React + TypeScript + Vite scaffold for the next 
 - Load runtime bulletin extraction (`nngyk_all.json`) with safe fallback to bundled sample data.
 - Add sentinel virology module (detections + positivity trends, latest-week summary, virus filter).
 - Add EU/EEA ERVISS virology module (detections + positivity trends and latest-week summaries).
+- Add NNGYK national wastewater monitoring as a separate, provisional signal for influenza A/B, SARS-CoV-2 and RSV.
 
 ## Run (when Node.js is available)
 
@@ -40,6 +41,6 @@ Then open the local URL shown by Vite (typically `http://localhost:5173`).
 - The legacy dashboard remains unchanged and continues to run from the repo root.
 - This phase is intentionally additive; no routing/cutover yet.
 - Runtime load order:
-  1. `./nngyk_all.json` and `./erviss_data/erviss_sari.json` (or root variants)
+  1. `./nngyk_all.json`, `./wastewater.json` and `./erviss_data/erviss_sari.json` (or root variants)
   2. Vite dev `@fs` path (workspace root files)
   3. bundled import alias fallback

@@ -23,6 +23,7 @@ from urllib.error import HTTPError, URLError
 from nngyk_monitor import MonitorState, _download_pdf, discover_category_urls, fetch_pdf_links
 from erviss_sari_fetch import DEFAULT_URL as ERVISS_URL, DEFAULT_OUTPUT as ERVISS_OUTPUT, DEFAULT_CSV_COPY, main as fetch_erviss
 from nngyk_extract import ExtractionResult, extract_text, infer_season_year_from_filename, parse_bulletin
+from wastewater_fetch import DEFAULT_OUTPUT as WASTEWATER_OUTPUT, DEFAULT_URL as WASTEWATER_URL, main as fetch_wastewater
 
 DEFAULT_INTERVAL_HOURS = 3
 
@@ -154,6 +155,8 @@ def check_and_extract(
     fetch_erviss_url: str | None = None,
     erviss_output: Path | None = None,
     erviss_csv_copy: Path | None = None,
+    fetch_wastewater_url: str | None = None,
+    wastewater_output: Path | None = None,
 ) -> int:
     state = MonitorState.load(state_path)
     all_urls = fetch_pdf_links()
@@ -213,6 +216,12 @@ def check_and_extract(
             fetch_erviss(args)
         except Exception as exc:  # noqa: BLE001
             print(f"[warn] Failed to fetch ERVISS SARI data: {exc}", file=sys.stderr)
+    if fetch_wastewater_url and wastewater_output:
+        try:
+            print(f"Fetching NNGYK wastewater data: {fetch_wastewater_url}")
+            fetch_wastewater(["--url", fetch_wastewater_url, "--output", str(wastewater_output)])
+        except Exception as exc:  # noqa: BLE001
+            print(f"[warn] Failed to fetch NNGYK wastewater data: {exc}", file=sys.stderr)
     return result
 
 
@@ -255,6 +264,18 @@ def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:
         default=Path(DEFAULT_CSV_COPY),
         help="Where to save a copy of the downloaded ERVISS CSV",
     )
+    parser.add_argument(
+        "--skip-wastewater",
+        action="store_true",
+        help="Disable fetching the NNGYK wastewater snapshot during this run (defaults to on).",
+    )
+    parser.add_argument("--wastewater-url", default=WASTEWATER_URL, help="NNGYK wastewater report URL")
+    parser.add_argument(
+        "--wastewater-output",
+        type=Path,
+        default=Path(WASTEWATER_OUTPUT),
+        help="Where to write the wastewater JSON snapshot",
+    )
     return parser.parse_args(argv)
 
 
@@ -266,6 +287,7 @@ def main(argv: Iterable[str] | None = None) -> int:
         for url in discover_category_urls():
             print(f"- {url}")
         fetch_url = None if args.skip_erviss else (args.erviss_url or None)
+        wastewater_url = None if args.skip_wastewater else (args.wastewater_url or None)
         if fetch_url:
             args.erviss_output.parent.mkdir(parents=True, exist_ok=True)
             args.erviss_csv_copy.parent.mkdir(parents=True, exist_ok=True)
@@ -278,6 +300,8 @@ def main(argv: Iterable[str] | None = None) -> int:
             fetch_erviss_url=fetch_url,
             erviss_output=args.erviss_output if fetch_url else None,
             erviss_csv_copy=args.erviss_csv_copy if fetch_url else None,
+            fetch_wastewater_url=wastewater_url,
+            wastewater_output=args.wastewater_output if wastewater_url else None,
         )
 
     if args.once:

@@ -60,7 +60,7 @@ jobs:
           }
 
           commit_changes() {
-            git add -A nngyk_all.json nngyk_seen.json erviss_data
+            git add -A nngyk_all.json nngyk_seen.json erviss_data wastewater.json
 
             if git diff --cached --quiet; then
               echo "No data changes to commit."

@@ -26,6 +26,7 @@ export default defineConfig({
             "@legacy-data": resolve(__dirname, "../data.js"),
             "@nngyk-all": resolve(__dirname, "../nngyk_all.json"),
             "@erviss-sari": resolve(__dirname, "../erviss_data/erviss_sari.json"),
+            "@wastewater": resolve(__dirname, "../wastewater.json"),
         },
     },
     server: {

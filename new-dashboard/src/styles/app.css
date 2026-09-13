@@ -1471,6 +1471,63 @@ h3 {
   background: linear-gradient(180deg, rgba(16, 185, 129, 0.06), rgba(16, 185, 129, 0.01));
 }
 
+.wastewater-section {
+  display: grid;
+  gap: 16px;
+  padding: 12px;
+  border-radius: calc(var(--radius) + 2px);
+  border: 1px solid rgba(14, 116, 144, 0.24);
+  background: linear-gradient(180deg, rgba(14, 116, 144, 0.08), rgba(14, 116, 144, 0.015));
+}
+
+.wastewater-header {
+  align-items: center;
+}
+
+.source-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, var(--accent) 36%, var(--border));
+  border-radius: 999px;
+  padding: 7px 11px;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, var(--panel));
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.source-link:hover {
+  text-decoration: underline;
+}
+
+.source-link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.wastewater-content {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 0.8fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.wastewater-latest {
+  align-content: start;
+}
+
+.wastewater-caveat {
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+  color: var(--muted);
+  font-size: var(--type-body-size);
+  line-height: 1.4;
+}
+
 .virology-header {
   background: var(--panel);
   border: 1px solid var(--border);
@@ -2000,6 +2057,22 @@ h3 {
 [data-theme="dark"] .virology-section {
   border-color: rgba(74, 222, 128, 0.3);
   background: linear-gradient(180deg, rgba(22, 163, 74, 0.16), rgba(30, 41, 59, 0.32));
+}
+
+[data-theme="dark"] .wastewater-section {
+  border-color: rgba(34, 211, 238, 0.3);
+  background: linear-gradient(180deg, rgba(14, 116, 144, 0.2), rgba(30, 41, 59, 0.32));
+}
+
+@media (max-width: 900px) {
+  .wastewater-content {
+    grid-template-columns: 1fr;
+  }
+
+  .wastewater-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 [data-theme="dark"] .glance-section {

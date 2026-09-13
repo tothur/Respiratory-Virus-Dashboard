@@ -8,6 +8,8 @@ import {
   VirologyDetectionRow,
   VirologyPositivityRow,
   VirologySnapshot,
+  WastewaterSnapshot,
+  WastewaterSourceData,
   WeeklyIliPoint,
   WeeklySariPoint,
 } from "../domain/model";
@@ -38,6 +40,7 @@ export interface DashboardDataSource {
   respiratoryData: RespiratoryData;
   seasonLabels: Record<string, string>;
   iliAgeSplits: IliAgeSplitPoint[];
+  wastewater: WastewaterSourceData;
   note?: string;
 }
 
@@ -47,6 +50,13 @@ export function createBundledDataSource(note?: string): DashboardDataSource {
     respiratoryData: bundledRespiratoryData,
     seasonLabels: bundledSeasonLabels,
     iliAgeSplits: [],
+    wastewater: {
+      available: false,
+      sourceUrl: null,
+      sourceUpdatedAt: null,
+      provisional: true,
+      points: [],
+    },
     note,
   };
 }
@@ -395,14 +405,35 @@ function aggregateSariSeries(respiratoryData: RespiratoryData, year: number): We
     }));
 }
 
-function pickAvailableYears(respiratoryData: RespiratoryData): number[] {
+function pickAvailableYears(respiratoryData: RespiratoryData, wastewater: WastewaterSourceData): number[] {
   const sourceYears = new Set<number>(respiratoryData.years);
   for (const row of respiratoryData.weekly) sourceYears.add(Number(row.year));
   for (const row of respiratoryData.sariWeekly) sourceYears.add(Number(row.year));
+  for (const row of wastewater.points) {
+    sourceYears.add(row.week <= NH_RESP_SEASON_END_WEEK ? Number(row.year) - 1 : Number(row.year));
+  }
 
   return Array.from(sourceYears)
     .filter((year) => Number.isFinite(year))
     .sort((a, b) => a - b);
+}
+
+function buildWastewaterSnapshot(source: WastewaterSourceData, seasonStartYear: number): WastewaterSnapshot {
+  const points = source.points
+    .filter((row) => row.year === seasonStartYear || (row.year === seasonStartYear + 1 && row.week <= NH_RESP_SEASON_END_WEEK))
+    .slice()
+    .sort((a, b) => a.year - b.year || a.week - b.week || a.virus.localeCompare(b.virus));
+  const latest = points.reduce<(typeof points)[number] | null>(
+    (best, point) => (!best || point.year > best.year || (point.year === best.year && point.week > best.week) ? point : best),
+    null
+  );
+  return {
+    ...source,
+    available: points.length > 0,
+    points,
+    latestYear: latest?.year ?? null,
+    latestWeek: latest?.week ?? null,
+  };
 }
 
 function buildWeekMap<T extends { week: number }>(rows: T[], valueGetter: (row: T) => number): Map<number, number> {
@@ -536,7 +567,7 @@ function buildHistoricalComparisonSnapshot(
 
 export function buildDashboardSnapshot(dataSource: DashboardDataSource, selectedYear?: number): DashboardSnapshot {
   const { respiratoryData, seasonLabels } = dataSource;
-  const availableYears = pickAvailableYears(respiratoryData);
+  const availableYears = pickAvailableYears(respiratoryData, dataSource.wastewater);
   const fallbackYear = availableYears.length ? availableYears[availableYears.length - 1] : new Date().getFullYear();
   const year =
     typeof selectedYear === "number" && Number.isFinite(selectedYear) && availableYears.includes(selectedYear)
@@ -547,6 +578,7 @@ export function buildDashboardSnapshot(dataSource: DashboardDataSource, selected
   const sariSeries = aggregateSariSeries(respiratoryData, year);
   const virology = buildVirologySnapshot(respiratoryData, year);
   const euVirology = buildEuVirologySnapshot(respiratoryData, year);
+  const wastewater = buildWastewaterSnapshot(dataSource.wastewater, year);
   const historical = buildHistoricalComparisonSnapshot(respiratoryData, seasonLabels, year, availableYears);
 
   const totalIliCases = iliSeries.reduce((sum, point) => sum + point.cases, 0);
@@ -568,6 +600,7 @@ export function buildDashboardSnapshot(dataSource: DashboardDataSource, selected
   if (!sariSeries.length) warnings.push("No SARI rows for this season in loaded source.");
   if (!virology.available) warnings.push("No virology rows for this season in loaded source.");
   if (!euVirology.available) warnings.push("No EU/EEA ERVISS rows available.");
+  if (!wastewater.available) warnings.push("No NNGYK wastewater rows for this season in loaded source.");
   if (dataSource.source === "bundled" && dataSource.note) warnings.push(dataSource.note);
 
   return {
@@ -579,6 +612,7 @@ export function buildDashboardSnapshot(dataSource: DashboardDataSource, selected
     sariSeries,
     virology,
     euVirology,
+    wastewater,
     historical,
     stats: {
       totalIliCases,

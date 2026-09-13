@@ -104,7 +104,15 @@ Shape of each row in `nngyk_all.json` payload:
 }
 ```
 
-The dashboard automatically recalculates totals, season-at-a-glance metrics, and all ILI/SARI charts when `nngyk_all.json` is present.
+The dashboard automatically recalculates totals, season-at-a-glance metrics, and all ILI/SARI charts when `nngyk_all.json` is present. It also loads `wastewater.json`, a separate NNGYK national wastewater snapshot for influenza A/B, SARS-CoV-2 and RSV. Wastewater concentrations remain distinct from clinical and sentinel indicators.
+
+The updater fetches all three runtime sources by default: NNGYK respiratory bulletins, ECDC ERVISS, and the NNGYK wastewater report. To refresh only the wastewater snapshot, run:
+
+```bash
+python3 wastewater_fetch.py --output wastewater.json
+```
+
+The wastewater values are provisional weekly results. The dashboard links to the official source and does not translate genome-copy concentrations into estimated case counts.
 
 ### Seasonal influenza alerting
 

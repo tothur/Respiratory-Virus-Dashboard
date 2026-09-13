@@ -52,6 +52,23 @@ export const RespiratoryDataSchema = z
 
 export const SeasonLabelsSchema = z.record(z.string()).default({});
 
+export const WastewaterPayloadSchema = z.object({
+  source: z.string().url().optional(),
+  source_updated_at: z.string().nullable().optional(),
+  provisional: z.boolean().default(true),
+  national: z
+    .array(
+      z.object({
+        year: z.coerce.number(),
+        week: z.coerce.number().min(1).max(53),
+        virus: z.string(),
+        concentration: z.coerce.number().nonnegative(),
+        unit: z.literal("GC/L").default("GC/L"),
+      })
+    )
+    .default([]),
+});
+
 export type RespiratoryData = z.infer<typeof RespiratoryDataSchema>;
 export type WeeklyRow = z.infer<typeof WeeklyRowSchema>;
 export type SariWeeklyRow = z.infer<typeof SariWeeklyRowSchema>;

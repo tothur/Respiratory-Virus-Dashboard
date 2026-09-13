@@ -1,6 +1,6 @@
 import type { DashboardDataSource, IliAgeSplitPoint } from "./adapter";
 import { createBundledDataSource } from "./adapter";
-import { RespiratoryDataSchema } from "./contracts";
+import { RespiratoryDataSchema, WastewaterPayloadSchema } from "./contracts";
 
 const DEFAULT_DATASET = "NNGYK";
 const DEFAULT_ILI_VIRUS = "ILI (flu-like illness)";
@@ -165,6 +165,49 @@ async function loadRawErvissPayload(): Promise<{ payload: unknown; location: str
   }
 }
 
+async function loadRawWastewaterPayload(): Promise<{ payload: unknown; location: string } | null> {
+  const fsCandidate = inferFsCandidate("../../wastewater.json");
+  const candidates = ["./wastewater.json", "/wastewater.json", ...(fsCandidate ? [fsCandidate] : [])];
+  for (const candidate of candidates) {
+    const payload = await fetchJson(candidate);
+    if (payload != null) return { payload, location: candidate };
+  }
+  try {
+    const mod = await import("@wastewater");
+    return { payload: mod.default, location: "@wastewater" };
+  } catch {
+    return null;
+  }
+}
+
+function applyWastewaterPayload(base: DashboardDataSource, payload: unknown, location: string): DashboardDataSource | null {
+  const parsed = WastewaterPayloadSchema.safeParse(payload);
+  if (!parsed.success || !parsed.data.national.length) return null;
+  const points = parsed.data.national
+    .map((row) => ({
+      year: row.year,
+      week: row.week,
+      label: `W${String(row.week).padStart(2, "0")}`,
+      virus: normalizeVirusName(row.virus),
+      concentration: row.concentration,
+      unit: row.unit,
+    }))
+    .sort((a, b) => a.year - b.year || a.week - b.week || a.virus.localeCompare(b.virus));
+  return withNote(
+    {
+      ...base,
+      wastewater: {
+        available: true,
+        sourceUrl: parsed.data.source ?? null,
+        sourceUpdatedAt: parsed.data.source_updated_at ?? null,
+        provisional: parsed.data.provisional,
+        points,
+      },
+    },
+    `Loaded NNGYK wastewater feed from ${location}.`
+  );
+}
+
 function buildDataSourceFromNngyk(payload: unknown, location: string): DashboardDataSource | null {
   if (!Array.isArray(payload)) return null;
 
@@ -307,6 +350,13 @@ function buildDataSourceFromNngyk(payload: unknown, location: string): Dashboard
     respiratoryData: candidate,
     seasonLabels: inferredSeasonLabels,
     iliAgeSplits: Array.from(iliAgeSplits.values()).sort((a, b) => a.year - b.year || weekCompare(a.week, b.week)),
+    wastewater: {
+      available: false,
+      sourceUrl: null,
+      sourceUpdatedAt: null,
+      provisional: true,
+      points: [],
+    },
     note: `Loaded live bulletin extract from ${location}.`,
   };
 }
@@ -386,6 +436,15 @@ export async function loadRuntimeDataSource(): Promise<DashboardDataSource> {
     base =
       parsed ??
       createBundledDataSource("nngyk_all.json present but invalid for weekly aggregation; using bundled sample.");
+  }
+
+  const loadedWastewater = await loadRawWastewaterPayload();
+  if (loadedWastewater) {
+    base =
+      applyWastewaterPayload(base, loadedWastewater.payload, loadedWastewater.location) ??
+      withNote(base, "Wastewater feed present but invalid.");
+  } else {
+    base = withNote(base, "Wastewater feed not found.");
   }
 
   const loadedErviss = await loadRawErvissPayload();

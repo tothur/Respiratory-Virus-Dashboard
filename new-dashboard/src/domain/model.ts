@@ -42,6 +42,28 @@ export interface EuVirologySnapshot {
   positivityRows: VirologyPositivityRow[];
 }
 
+export interface WastewaterPoint {
+  year: number;
+  week: number;
+  label: string;
+  virus: string;
+  concentration: number;
+  unit: "GC/L";
+}
+
+export interface WastewaterSourceData {
+  available: boolean;
+  sourceUrl: string | null;
+  sourceUpdatedAt: string | null;
+  provisional: boolean;
+  points: WastewaterPoint[];
+}
+
+export interface WastewaterSnapshot extends WastewaterSourceData {
+  latestYear: number | null;
+  latestWeek: number | null;
+}
+
 export interface HistoricalComparisonPoint {
   week: number;
   label: string;
@@ -86,6 +108,7 @@ export interface DashboardSnapshot {
   sariSeries: WeeklySariPoint[];
   virology: VirologySnapshot;
   euVirology: EuVirologySnapshot;
+  wastewater: WastewaterSnapshot;
   historical: HistoricalComparisonSnapshot;
   stats: DashboardStats;
   warnings: string[];
