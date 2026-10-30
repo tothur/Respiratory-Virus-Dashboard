@@ -1,41 +1,13 @@
 {
   "source": "https://jarvpub.nngyk.gov.hu/hu/szennyviz-jelentes",
   "source_updated_at": null,
-  "generated_at": "2026-10-29T09:56:19.624731+00:00",
+  "generated_at": "2026-10-30T00:58:04.289196+00:00",
   "latest_year": 2026,
-  "latest_week": 42,
+  "latest_week": 43,
   "provisional": true,
   "national": [
     {
       "year": 2026,
-      "week": 31,
-      "virus": "Influenza A",
-      "concentration": 1714.29,
-      "unit": "GC/L"
-    },
-    {
-      "year": 2026,
-      "week": 31,
-      "virus": "Influenza B",
-      "concentration": 2224.51,
-      "unit": "GC/L"
-    },
-    {
-      "year": 2026,
-      "week": 31,
-      "virus": "RSV",
-      "concentration": 1799.16,
-      "unit": "GC/L"
-    },
-    {
-      "year": 2026,
-      "week": 31,
-      "virus": "SARS-CoV-2",
-      "concentration": 1826.32,
-      "unit": "GC/L"
-    },
-    {
-      "year": 2026,
       "week": 32,
       "virus": "Influenza A",
       "concentration": 1714.29,
@@ -45,21 +17,21 @@
       "year": 2026,
       "week": 32,
       "virus": "Influenza B",
-      "concentration": 2121.81,
+      "concentration": 2098.84,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 32,
       "virus": "RSV",
-      "concentration": 1800.14,
+      "concentration": 1818.31,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 32,
       "virus": "SARS-CoV-2",
-      "concentration": 1506.61,
+      "concentration": 1506.6,
       "unit": "GC/L"
     },
     {
@@ -73,21 +45,21 @@
       "year": 2026,
       "week": 33,
       "virus": "Influenza B",
-      "concentration": 1973.91,
+      "concentration": 2010.6,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 33,
       "virus": "RSV",
-      "concentration": 1793.73,
+      "concentration": 1811.97,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 33,
       "virus": "SARS-CoV-2",
-      "concentration": 1570.42,
+      "concentration": 1570.33,
       "unit": "GC/L"
     },
     {
@@ -101,21 +73,21 @@
       "year": 2026,
       "week": 34,
       "virus": "Influenza B",
-      "concentration": 1868.55,
+      "concentration": 1908.21,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 34,
       "virus": "RSV",
-      "concentration": 1800.83,
+      "concentration": 1795.09,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 34,
       "virus": "SARS-CoV-2",
-      "concentration": 2249.26,
+      "concentration": 2249.75,
       "unit": "GC/L"
     },
     {
@@ -129,21 +101,21 @@
       "year": 2026,
       "week": 35,
       "virus": "Influenza B",
-      "concentration": 1821.64,
+      "concentration": 1835.92,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 35,
       "virus": "RSV",
-      "concentration": 1823.88,
+      "concentration": 1804.32,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 35,
       "virus": "SARS-CoV-2",
-      "concentration": 4696.76,
+      "concentration": 4700.46,
       "unit": "GC/L"
     },
     {
@@ -157,21 +129,21 @@
       "year": 2026,
       "week": 36,
       "virus": "Influenza B",
-      "concentration": 1791.35,
+      "concentration": 1801.01,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 36,
       "virus": "RSV",
-      "concentration": 1859.6,
+      "concentration": 1860.19,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 36,
       "virus": "SARS-CoV-2",
-      "concentration": 7527.79,
+      "concentration": 7536.75,
       "unit": "GC/L"
     },
     {
@@ -185,21 +157,21 @@
       "year": 2026,
       "week": 37,
       "virus": "Influenza B",
-      "concentration": 1764.8,
+      "concentration": 1777.92,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 37,
       "virus": "RSV",
-      "concentration": 1921.38,
+      "concentration": 1938.55,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 37,
       "virus": "SARS-CoV-2",
-      "concentration": 7584.46,
+      "concentration": 7595.51,
       "unit": "GC/L"
     },
     {
@@ -213,21 +185,21 @@
       "year": 2026,
       "week": 38,
       "virus": "Influenza B",
-      "concentration": 1741.53,
+      "concentration": 1756.62,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 38,
       "virus": "RSV",
-      "concentration": 2011.21,
+      "concentration": 2005.86,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 38,
       "virus": "SARS-CoV-2",
-      "concentration": 8046.83,
+      "concentration": 8059.5,
       "unit": "GC/L"
     },
     {
@@ -241,105 +213,133 @@
       "year": 2026,
       "week": 39,
       "virus": "Influenza B",
-      "concentration": 1726.94,
+      "concentration": 1736.35,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 39,
       "virus": "RSV",
-      "concentration": 2124.19,
+      "concentration": 2056.35,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 39,
       "virus": "SARS-CoV-2",
-      "concentration": 12062.37,
+      "concentration": 11907.24,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 40,
       "virus": "Influenza A",
-      "concentration": 1714.29,
+      "concentration": 1704.77,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 40,
       "virus": "Influenza B",
-      "concentration": 1717.78,
+      "concentration": 1721.79,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 40,
       "virus": "RSV",
-      "concentration": 2265.89,
+      "concentration": 2107.54,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 40,
       "virus": "SARS-CoV-2",
-      "concentration": 15096.52,
+      "concentration": 16602.34,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 41,
       "virus": "Influenza A",
-      "concentration": 1714.29,
+      "concentration": 1725.16,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 41,
       "virus": "Influenza B",
-      "concentration": 1712.16,
+      "concentration": 1711.59,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 41,
       "virus": "RSV",
-      "concentration": 2443.79,
+      "concentration": 2156.87,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 41,
       "virus": "SARS-CoV-2",
-      "concentration": 17654.29,
+      "concentration": 19006.12,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 42,
       "virus": "Influenza A",
-      "concentration": 1714.29,
+      "concentration": 1771.05,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 42,
       "virus": "Influenza B",
-      "concentration": 1711.91,
+      "concentration": 1705.33,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 42,
       "virus": "RSV",
-      "concentration": 2663.99,
+      "concentration": 2201.46,
       "unit": "GC/L"
     },
     {
       "year": 2026,
       "week": 42,
       "virus": "SARS-CoV-2",
-      "concentration": 18168.55,
+      "concentration": 18365.63,
+      "unit": "GC/L"
+    },
+    {
+      "year": 2026,
+      "week": 43,
+      "virus": "Influenza A",
+      "concentration": 1845.88,
+      "unit": "GC/L"
+    },
+    {
+      "year": 2026,
+      "week": 43,
+      "virus": "Influenza B",
+      "concentration": 1703.8,
+      "unit": "GC/L"
+    },
+    {
+      "year": 2026,
+      "week": 43,
+      "virus": "RSV",
+      "concentration": 2242.47,
+      "unit": "GC/L"
+    },
+    {
+      "year": 2026,
+      "week": 43,
+      "virus": "SARS-CoV-2",
+      "concentration": 14671.37,
       "unit": "GC/L"
     }
   ]
